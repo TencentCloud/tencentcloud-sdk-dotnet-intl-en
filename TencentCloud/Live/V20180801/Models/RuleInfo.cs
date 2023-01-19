@@ -25,13 +25,15 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// Rule creation time.
+        /// The rule creation time.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Rule update time.
+        /// The rule update time.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

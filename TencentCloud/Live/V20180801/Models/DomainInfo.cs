@@ -47,7 +47,8 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// The time when the domain was added.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -96,7 +97,8 @@ namespace TencentCloud.Live.V20180801.Models
         public long? RentTag{ get; set; }
 
         /// <summary>
-        /// Disused parameter, which can be ignored.
+        /// A disused parameter.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("RentExpireTime")]
         public string RentExpireTime{ get; set; }

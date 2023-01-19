@@ -89,11 +89,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
+
+        /// <summary>
+        /// The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [EditMedia](https://intl.cloud.tencent.com/document/api/266/34783?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoTaskId")]
+        public string ReviewAudioVideoTaskId{ get; set; }
 
         /// <summary>
         /// The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
@@ -125,6 +130,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+            this.SetParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }

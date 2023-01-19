@@ -31,13 +31,15 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// The creation time.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Forbidding expiration time.
+        /// The end time.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

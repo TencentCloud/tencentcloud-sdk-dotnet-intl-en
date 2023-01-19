@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Pull for upload task ID.
+        /// The task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -54,14 +54,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// ID of video generated after pull for upload is completed.
+        /// The ID of the uploaded file.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Basic information of media file generated after pull for upload is completed.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The basic information of the uploaded file.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MediaBasicInfo")]
         public MediaBasicInfo MediaBasicInfo{ get; set; }
@@ -73,19 +73,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// Playback address generated after pull for upload is completed.
+        /// The playback address of the uploaded file.
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
+        /// The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
 
         /// <summary>
-        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+        /// The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoTaskId")]
+        public string ReviewAudioVideoTaskId{ get; set; }
+
+        /// <summary>
+        /// The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
@@ -97,7 +103,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The progress of a pull and upload task. Value range: 0-100.
+        /// The progress of the pull and upload task. Value range: 1-100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
@@ -117,6 +123,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
             this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+            this.SetParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);

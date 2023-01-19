@@ -37,8 +37,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// The moderation template ID. Valid values:
-        /// <li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+        /// The type of moderated content. Valid values:
+        /// <li>`Media`: The original audio/video.</li>
+        /// <li>`Cover`: Thumbnails.</li>
+        /// If this parameter is not specified or an empty array is passed in, `Media` will be used.
+        /// </summary>
+        [JsonProperty("ReviewContents")]
+        public string[] ReviewContents{ get; set; }
+
+        /// <summary>
+        /// The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
@@ -75,6 +83,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);

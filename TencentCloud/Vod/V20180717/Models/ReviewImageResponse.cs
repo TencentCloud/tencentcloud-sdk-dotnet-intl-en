@@ -21,20 +21,21 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProcessMediaByProcedureResponse : AbstractModel
+    public class ReviewImageResponse : AbstractModel
     {
         
         /// <summary>
-        /// The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
+        /// The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("ReviewResultSet")]
+        public ContentReviewResult[] ReviewResultSet{ get; set; }
 
         /// <summary>
-        /// The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+        /// The image moderation result.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ReviewAudioVideoTaskId")]
-        public string ReviewAudioVideoTaskId{ get; set; }
+        [JsonProperty("MediaReviewResult")]
+        public ReviewImageResult MediaReviewResult{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +49,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
+            this.SetParamArrayObj(map, prefix + "ReviewResultSet.", this.ReviewResultSet);
+            this.SetParamObj(map, prefix + "MediaReviewResult.", this.MediaReviewResult);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

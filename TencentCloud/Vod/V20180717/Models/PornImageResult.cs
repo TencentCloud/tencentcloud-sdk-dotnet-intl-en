@@ -21,26 +21,33 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProcessMediaByProcedureResponse : AbstractModel
+    public class PornImageResult : AbstractModel
     {
         
         /// <summary>
-        /// The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
+        /// The confidence score for the moderation result. Value range: 0-100.
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("Confidence")]
+        public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+        /// The suggestion for handling the detected pornographic content. Valid values:
+        /// <li>pass/li>
+        /// <li>review</li>
+        /// <li>block</li>
         /// </summary>
-        [JsonProperty("ReviewAudioVideoTaskId")]
-        public string ReviewAudioVideoTaskId{ get; set; }
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The label for the detected pornographic content. Valid values:
+        /// <li>porn</li>
+        /// <li>sexy</li>
+        /// <li>vulgar</li>
+        /// <li>intimacy</li>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
 
 
         /// <summary>
@@ -48,9 +55,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

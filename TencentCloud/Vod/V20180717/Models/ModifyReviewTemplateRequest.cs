@@ -15,46 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CallBackRuleInfo : AbstractModel
+    public class ModifyReviewTemplateRequest : AbstractModel
     {
         
         /// <summary>
-        /// The rule creation time.
-        /// Note: Beijing time (UTC+8) is used.
+        /// 
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
 
         /// <summary>
-        /// The rule update time.
-        /// Note: Beijing time (UTC+8) is used.
+        /// 
         /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Template ID.
+        /// 
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Push domain name.
+        /// 
         /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
 
         /// <summary>
-        /// Push path.
+        /// The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>Polity: Politically sensitive content</li> <li>`Moan`: Moaning</li>
         /// </summary>
-        [JsonProperty("AppName")]
-        public string AppName{ get; set; }
+        [JsonProperty("Labels")]
+        public string[] Labels{ get; set; }
 
 
         /// <summary>
@@ -62,11 +60,11 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
         }
     }
 }

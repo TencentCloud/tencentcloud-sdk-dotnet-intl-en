@@ -21,40 +21,40 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProcedureTemplatesRequest : AbstractModel
+    public class DescribeReviewTemplatesRequest : AbstractModel
     {
         
         /// <summary>
         /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
+        public long? SubAppId{ get; set; }
 
         /// <summary>
-        /// Name filter of task flow template. Array length limit: 100.
+        /// The IDs of the moderation templates to query. Array length limit: 100.
         /// </summary>
-        [JsonProperty("Names")]
-        public string[] Names{ get; set; }
+        [JsonProperty("Definitions")]
+        public long?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Filter of task flow template types. Valid values:
-        /// <li>Preset: preset task flow template;</li>
-        /// <li>Custom: custom task flow template.</li>
+        /// The template type. Valid values:
+        /// <li>Preset</li>
+        /// <li>Custom</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Default value: 0.
+        /// The pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// The number of records to return. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
+            this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

@@ -65,6 +65,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CodecTag")]
         public string CodecTag{ get; set; }
 
+        /// <summary>
+        /// Dynamic range information.
+        /// <li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+        /// </summary>
+        [JsonProperty("DynamicRangeInfo")]
+        public DynamicRangeInfo DynamicRangeInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +84,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
             this.SetParamSimple(map, prefix + "CodecTag", this.CodecTag);
+            this.SetParamObj(map, prefix + "DynamicRangeInfo.", this.DynamicRangeInfo);
         }
     }
 }

@@ -21,15 +21,9 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReviewAudioVideoTaskInput : AbstractModel
+    public class ProcedureReviewAudioVideoTaskInput : AbstractModel
     {
         
-        /// <summary>
-        /// The ID of the media file.
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
-
         /// <summary>
         /// The moderation template ID.
         /// </summary>
@@ -40,6 +34,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// The type of moderated content. Valid values:
         /// <li>`Media`: The original audio/video.</li>
         /// <li>`Cover`: Thumbnails.</li>
+        /// If this parameter is not specified or an empty array is passed in, `Media` will be used.
         /// </summary>
         [JsonProperty("ReviewContents")]
         public string[] ReviewContents{ get; set; }
@@ -50,7 +45,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
         }

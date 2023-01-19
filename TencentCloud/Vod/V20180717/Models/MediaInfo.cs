@@ -107,6 +107,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
+        /// <summary>
+        /// Moderation details.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReviewInfo")]
+        public FileReviewInfo ReviewInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +132,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "MiniProgramReviewInfo.", this.MiniProgramReviewInfo);
             this.SetParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
         }
     }
 }

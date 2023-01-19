@@ -52,8 +52,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// Intelligent recognition task
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// The information of the intelligent moderation task\*.
+        /// <font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
@@ -78,6 +79,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("MiniProgramPublishTask")]
         public WechatMiniProgramPublishTaskInput MiniProgramPublishTask{ get; set; }
+
+        /// <summary>
+        /// The information of the moderation task.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoTask")]
+        public ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
         /// Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -105,6 +113,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
+            this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

@@ -21,28 +21,24 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReviewAudioVideoTaskInput : AbstractModel
+    public class DynamicRangeInfo : AbstractModel
     {
         
         /// <summary>
-        /// The ID of the media file.
+        /// The dynamic range information. Valid values:
+        /// <li>`SDR`: Standard Dynamic Range</li>
+        /// <li>`HDR`: High Dynamic Range</li>
         /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// The moderation template ID.
+        /// The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
+        /// <li>`hdr10`</li>
+        /// <li>`hlg`</li>
         /// </summary>
-        [JsonProperty("Definition")]
-        public ulong? Definition{ get; set; }
-
-        /// <summary>
-        /// The type of moderated content. Valid values:
-        /// <li>`Media`: The original audio/video.</li>
-        /// <li>`Cover`: Thumbnails.</li>
-        /// </summary>
-        [JsonProperty("ReviewContents")]
-        public string[] ReviewContents{ get; set; }
+        [JsonProperty("HDRType")]
+        public string HDRType{ get; set; }
 
 
         /// <summary>
@@ -50,9 +46,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamSimple(map, prefix + "Definition", this.Definition);
-            this.SetParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "HDRType", this.HDRType);
         }
     }
 }

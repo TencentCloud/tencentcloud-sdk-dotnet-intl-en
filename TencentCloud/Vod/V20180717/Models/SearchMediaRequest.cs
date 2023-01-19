@@ -39,16 +39,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-        /// <li>Filename length limit: 40 characters.</li>
-        /// <li>Array length limit: 10.</li>
+        /// The file names to use for fuzzy search, which are sorted by relevance in descending order.
+        /// <li>Name length limit: 100 characters.</li>
+        /// <li>Array length limit: 10</li>
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// Filename prefix, which matches the filenames of media files.
-        /// <li>Filename prefix length limit: 20 characters.</li>
+        /// The file name prefixes to search.
+        /// <li>Prefix length limit: 100 characters.</li>
         /// <li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("NamePrefixes")]
@@ -70,9 +70,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public long?[] ClassIds{ get; set; }
 
         /// <summary>
-        /// The tag set. A file is considered a match if it has any of the tags in the tag set.
-        /// <li>Tag length limit: 16 characters.</li>
-        /// <li>Array length limit: 10.</li>
+        /// The tags to search. A file is considered a match if it has any of the tags specified.
+        /// <li>Tag length limit: 32 characters.</li>
+        /// <li>Array length limit: 16.</li>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

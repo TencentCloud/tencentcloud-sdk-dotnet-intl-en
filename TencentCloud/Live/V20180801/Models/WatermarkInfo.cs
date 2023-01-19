@@ -61,7 +61,8 @@ namespace TencentCloud.Live.V20180801.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// The time when the watermark was added.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

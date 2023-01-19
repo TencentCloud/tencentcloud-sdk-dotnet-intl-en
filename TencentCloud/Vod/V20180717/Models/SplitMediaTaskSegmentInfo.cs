@@ -38,10 +38,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public TaskOutputMediaInfo Output{ get; set; }
 
         /// <summary>
-        /// If a video processing flow is specified when a video splitting task is initiated, this field will be the task flow ID.
+        /// The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
+
+        /// <summary>
+        /// The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoTaskId")]
+        public string ReviewAudioVideoTaskId{ get; set; }
 
 
         /// <summary>
@@ -52,6 +58,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+            this.SetParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
         }
     }
 }

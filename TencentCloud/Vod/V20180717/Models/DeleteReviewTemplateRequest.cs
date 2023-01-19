@@ -21,28 +21,20 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReviewAudioVideoTaskInput : AbstractModel
+    public class DeleteReviewTemplateRequest : AbstractModel
     {
         
         /// <summary>
-        /// The ID of the media file.
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
-
-        /// <summary>
-        /// The moderation template ID.
+        /// The unique ID of the moderation template.
         /// </summary>
         [JsonProperty("Definition")]
-        public ulong? Definition{ get; set; }
+        public long? Definition{ get; set; }
 
         /// <summary>
-        /// The type of moderated content. Valid values:
-        /// <li>`Media`: The original audio/video.</li>
-        /// <li>`Cover`: Thumbnails.</li>
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
         /// </summary>
-        [JsonProperty("ReviewContents")]
-        public string[] ReviewContents{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
-            this.SetParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

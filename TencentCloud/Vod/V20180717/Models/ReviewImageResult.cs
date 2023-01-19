@@ -21,11 +21,11 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReviewAudioVideoTaskOutput : AbstractModel
+    public class ReviewImageResult : AbstractModel
     {
         
         /// <summary>
-        /// The handling suggestion. Valid values:
+        /// The suggestion. Valid values:
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -34,19 +34,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-        /// <li>Porn</li>
-        /// <li>Terrorism</li>
+        /// The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-        /// <li>Image</li>
-        /// <li>OCR</li>
-        /// <li>ASR</li>
-        /// <li>Voice</li>
+        /// The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+        /// <li>`Image` (people or icons in images)</li>
+        /// <li>`OCR` (text in images)</li>
         /// </summary>
         [JsonProperty("Form")]
         public string Form{ get; set; }
@@ -56,7 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
         /// </summary>
         [JsonProperty("SegmentSet")]
-        public ReviewAudioVideoSegmentItem[] SegmentSet{ get; set; }
+        public ReviewImageSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
         /// The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
@@ -70,13 +66,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }
 
-        /// <summary>
-        /// The thumbnail moderation result.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("CoverReviewResult")]
-        public ReviewImageResult CoverReviewResult{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,7 +78,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
             this.SetParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
-            this.SetParamObj(map, prefix + "CoverReviewResult.", this.CoverReviewResult);
         }
     }
 }

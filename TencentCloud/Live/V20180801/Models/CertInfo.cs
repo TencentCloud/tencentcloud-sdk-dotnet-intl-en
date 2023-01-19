@@ -43,7 +43,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Creation time in UTC format.
+        /// The creation time in UTC format.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -63,7 +64,8 @@ namespace TencentCloud.Live.V20180801.Models
         public long? CertType{ get; set; }
 
         /// <summary>
-        /// Certificate expiration time in UTC format.
+        /// The certificate expiration time in UTC format.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("CertExpireTime")]
         public string CertExpireTime{ get; set; }

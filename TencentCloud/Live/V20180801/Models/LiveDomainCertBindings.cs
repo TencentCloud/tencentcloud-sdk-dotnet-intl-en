@@ -53,7 +53,8 @@ namespace TencentCloud.Live.V20180801.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// The expiration time of the certificate.
+        /// The certificate expiration time.
+        /// Note: Beijing time (UTC+8) is used.
         /// </summary>
         [JsonProperty("CertExpireTime")]
         public string CertExpireTime{ get; set; }
@@ -72,6 +73,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// The last updated time.
+        /// Note: Beijing time (UTC+8) is used.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]

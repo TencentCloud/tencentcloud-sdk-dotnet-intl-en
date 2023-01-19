@@ -31,26 +31,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// Specifies information entry that needs to be returned by all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-        /// <li>basicInfo (basic video information).</li>
-        /// <li>metaData (video metadata).</li>
-        /// <li>transcodeInfo (result information of video transcoding).</li>
-        /// <li>animatedGraphicsInfo (result information of animated image generating task).</li>
-        /// <li>imageSpriteInfo (image sprite information).</li>
-        /// <li>snapshotByTimeOffsetInfo (time point screenshot information).</li>
-        /// <li>sampleSnapshotInfo (sampled screenshot information).</li>
-        /// <li>keyFrameDescInfo (timestamp information).</li>
-        /// <li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-        /// <li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-        /// </summary>
-        [JsonProperty("Filters")]
-        public string[] Filters{ get; set; }
-
-        /// <summary>
-        /// [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+        /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
+
+        /// <summary>
+        /// The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
+        /// <li>`basicInfo` (basic information)</li>
+        /// <li>`metaData` (video metadata)</li>
+        /// <li>`transcodeInfo` (transcoding information)</li>
+        /// <li>`animatedGraphicsInfo` (animated image information)</li>
+        /// <li>`imageSpriteInfo` (image sprite information)</li>
+        /// <li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
+        /// <li>`sampleSnapshotInfo` (sampled screenshot information)</li>
+        /// <li>`keyFrameDescInfo` (timestamp information)</li>
+        /// <li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
+        /// <li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
+        /// <li>`subtitleInfo` (subtitle information)</li>
+        /// <li>`reviewInfo` (moderation information)</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public string[] Filters{ get; set; }
 
 
         /// <summary>
@@ -59,8 +61,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
-            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
         }
     }
 }

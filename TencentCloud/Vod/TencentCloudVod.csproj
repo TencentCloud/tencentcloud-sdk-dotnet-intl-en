@@ -183,6 +183,8 @@
     <Compile Include="V20180717\Models\ConcatTask2017.cs" />
     <Compile Include="V20180717\Models\ConfirmEventsRequest.cs" />
     <Compile Include="V20180717\Models\ConfirmEventsResponse.cs" />
+    <Compile Include="V20180717\Models\ContentReviewOcrResult.cs" />
+    <Compile Include="V20180717\Models\ContentReviewResult.cs" />
     <Compile Include="V20180717\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="V20180717\Models\CoverBySnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\CoverBySnapshotTaskOutput.cs" />
@@ -209,6 +211,8 @@
     <Compile Include="V20180717\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateReviewTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
@@ -249,6 +253,8 @@
     <Compile Include="V20180717\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\DeleteProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteProcedureTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteReviewTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteSnapshotByTimeOffsetTemplateRequest.cs" />
@@ -311,6 +317,8 @@
     <Compile Include="V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeReviewDetailsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeReviewDetailsResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeReviewTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeReviewTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSampleSnapshotTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
@@ -341,6 +349,7 @@
     <Compile Include="V20180717\Models\DomainHTTPSConfig.cs" />
     <Compile Include="V20180717\Models\DrmStreamingsInfo.cs" />
     <Compile Include="V20180717\Models\DrmStreamingsInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\DynamicRangeInfo.cs" />
     <Compile Include="V20180717\Models\EditMediaFileInfo.cs" />
     <Compile Include="V20180717\Models\EditMediaStreamInfo.cs" />
     <Compile Include="V20180717\Models\EditMediaTask.cs" />
@@ -359,6 +368,7 @@
     <Compile Include="V20180717\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\FileDeleteResultItem.cs" />
     <Compile Include="V20180717\Models\FileDeleteTask.cs" />
+    <Compile Include="V20180717\Models\FileReviewInfo.cs" />
     <Compile Include="V20180717\Models\FileUploadTask.cs" />
     <Compile Include="V20180717\Models\ForbidMediaDistributionRequest.cs" />
     <Compile Include="V20180717\Models\ForbidMediaDistributionResponse.cs" />
@@ -461,6 +471,8 @@
     <Compile Include="V20180717\Models\ModifyMediaStorageClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="V20180717\Models\ModifyPersonSampleResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyReviewTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyReviewTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifySampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifySampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifySnapshotByTimeOffsetTemplateRequest.cs" />
@@ -499,6 +511,7 @@
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PoliticalConfigureInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\PoliticalImageResult.cs" />
     <Compile Include="V20180717\Models\PoliticalImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PoliticalOcrReviewTemplateInfo.cs" />
@@ -507,10 +520,12 @@
     <Compile Include="V20180717\Models\PornAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PornConfigureInfo.cs" />
     <Compile Include="V20180717\Models\PornConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\PornImageResult.cs" />
     <Compile Include="V20180717\Models\PornImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PornImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PornOcrReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PornOcrReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\ProcedureReviewAudioVideoTaskInput.cs" />
     <Compile Include="V20180717\Models\ProcedureTask.cs" />
     <Compile Include="V20180717\Models\ProcedureTemplate.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureRequest.cs" />
@@ -557,6 +572,12 @@
     <Compile Include="V20180717\Models\ReviewAudioVideoTask.cs" />
     <Compile Include="V20180717\Models\ReviewAudioVideoTaskInput.cs" />
     <Compile Include="V20180717\Models\ReviewAudioVideoTaskOutput.cs" />
+    <Compile Include="V20180717\Models\ReviewImageRequest.cs" />
+    <Compile Include="V20180717\Models\ReviewImageResponse.cs" />
+    <Compile Include="V20180717\Models\ReviewImageResult.cs" />
+    <Compile Include="V20180717\Models\ReviewImageSegmentItem.cs" />
+    <Compile Include="V20180717\Models\ReviewInfo.cs" />
+    <Compile Include="V20180717\Models\ReviewTemplate.cs" />
     <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
@@ -597,6 +618,7 @@
     <Compile Include="V20180717\Models\TempCertificate.cs" />
     <Compile Include="V20180717\Models\TerrorismConfigureInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\TerrorismImageResult.cs" />
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\TerrorismOcrReviewTemplateInfo.cs" />
