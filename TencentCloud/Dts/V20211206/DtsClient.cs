@@ -1265,6 +1265,86 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used for the backend to skip a failed check item. Theoretically, to execute a migration task normally, any check step cannot be skipped, and the check must be passed. For products or links that support check item skipping, see [Check Item Overview](https://www.tencentcloud.com/document/product/571/42551).
+        /// </summary>
+        /// <param name="req"><see cref="SkipCheckItemRequest"/></param>
+        /// <returns><see cref="SkipCheckItemResponse"/></returns>
+        public async Task<SkipCheckItemResponse> SkipCheckItem(SkipCheckItemRequest req)
+        {
+             JsonResponseModel<SkipCheckItemResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SkipCheckItem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SkipCheckItemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for the backend to skip a failed check item. Theoretically, to execute a migration task normally, any check step cannot be skipped, and the check must be passed. For products or links that support check item skipping, see [Check Item Overview](https://www.tencentcloud.com/document/product/571/42551).
+        /// </summary>
+        /// <param name="req"><see cref="SkipCheckItemRequest"/></param>
+        /// <returns><see cref="SkipCheckItemResponse"/></returns>
+        public SkipCheckItemResponse SkipCheckItemSync(SkipCheckItemRequest req)
+        {
+             JsonResponseModel<SkipCheckItemResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SkipCheckItem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SkipCheckItemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for the backend to skip a failed check item. Theoretically, to execute a sync task normally, any check step cannot be skipped, and the check must be passed. For products or links that support check item skipping, see [Check Item Overview](https://www.tencentcloud.com/document/product/571/42551).
+        /// </summary>
+        /// <param name="req"><see cref="SkipSyncCheckItemRequest"/></param>
+        /// <returns><see cref="SkipSyncCheckItemResponse"/></returns>
+        public async Task<SkipSyncCheckItemResponse> SkipSyncCheckItem(SkipSyncCheckItemRequest req)
+        {
+             JsonResponseModel<SkipSyncCheckItemResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SkipSyncCheckItem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SkipSyncCheckItemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for the backend to skip a failed check item. Theoretically, to execute a sync task normally, any check step cannot be skipped, and the check must be passed. For products or links that support check item skipping, see [Check Item Overview](https://www.tencentcloud.com/document/product/571/42551).
+        /// </summary>
+        /// <param name="req"><see cref="SkipSyncCheckItemRequest"/></param>
+        /// <returns><see cref="SkipSyncCheckItemResponse"/></returns>
+        public SkipSyncCheckItemResponse SkipSyncCheckItemSync(SkipSyncCheckItemRequest req)
+        {
+             JsonResponseModel<SkipSyncCheckItemResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SkipSyncCheckItem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SkipSyncCheckItemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to start a data consistency check task after creating it by calling the `CreateCompareTask` API. After calling this API, you can call the `DescribeCompareTasks` API to query the latest task status.
         /// </summary>
         /// <param name="req"><see cref="StartCompareRequest"/></param>

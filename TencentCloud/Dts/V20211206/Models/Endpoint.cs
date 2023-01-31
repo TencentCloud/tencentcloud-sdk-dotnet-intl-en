@@ -32,6 +32,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Region{ get; set; }
 
         /// <summary>
+        /// Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
         /// Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -137,13 +144,6 @@ namespace TencentCloud.Dts.V20211206.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("AccountMode")]
-        public string AccountMode{ get; set; }
-
-        /// <summary>
         /// Instance account, which is required if the operation is performed across accounts.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -151,11 +151,25 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Account{ get; set; }
 
         /// <summary>
+        /// The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccountMode")]
+        public string AccountMode{ get; set; }
+
+        /// <summary>
         /// The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AccountRole")]
         public string AccountRole{ get; set; }
+
+        /// <summary>
+        /// External role ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RoleExternalId")]
+        public string RoleExternalId{ get; set; }
 
         /// <summary>
         /// ID of the temporary key, which is required if the operation is performed across accounts.
@@ -179,11 +193,11 @@ namespace TencentCloud.Dts.V20211206.Models
         public string TmpToken{ get; set; }
 
         /// <summary>
-        /// External role ID
+        /// Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RoleExternalId")]
-        public string RoleExternalId{ get; set; }
+        [JsonProperty("EncryptConn")]
+        public string EncryptConn{ get; set; }
 
 
         /// <summary>
@@ -192,6 +206,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "DbKernel", this.DbKernel);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
@@ -207,13 +222,14 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamSimple(map, prefix + "Supplier", this.Supplier);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-            this.SetParamSimple(map, prefix + "AccountMode", this.AccountMode);
             this.SetParamSimple(map, prefix + "Account", this.Account);
+            this.SetParamSimple(map, prefix + "AccountMode", this.AccountMode);
             this.SetParamSimple(map, prefix + "AccountRole", this.AccountRole);
+            this.SetParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
             this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
-            this.SetParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
+            this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+        /// Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -97,6 +97,24 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
 
+        /// <summary>
+        /// Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+        /// </summary>
+        [JsonProperty("MultiCertInfo")]
+        public MultiCertInfo MultiCertInfo{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MaxConn")]
+        public long? MaxConn{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MaxCps")]
+        public long? MaxCps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +133,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
+            this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
+            this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
+            this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
         }
     }
 }

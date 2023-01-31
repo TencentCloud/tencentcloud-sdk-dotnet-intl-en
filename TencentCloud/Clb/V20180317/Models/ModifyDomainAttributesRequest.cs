@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string NewDomain{ get; set; }
 
         /// <summary>
-        /// Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
+        /// Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("NewDomains")]
         public string[] NewDomains{ get; set; }
 
+        /// <summary>
+        /// Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+        /// </summary>
+        [JsonProperty("MultiCertInfo")]
+        public MultiCertInfo MultiCertInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
             this.SetParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
             this.SetParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
+            this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
         }
     }
 }

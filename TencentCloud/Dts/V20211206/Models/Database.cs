@@ -115,6 +115,34 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Procedures")]
         public string[] Procedures{ get; set; }
 
+        /// <summary>
+        /// Trigger migration mode (`all`: All objects; `partial`: Some objects)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TriggerMode")]
+        public string TriggerMode{ get; set; }
+
+        /// <summary>
+        /// This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Triggers")]
+        public string[] Triggers{ get; set; }
+
+        /// <summary>
+        /// Event migration mode (`all`: All objects; `partial`: Some objects)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EventMode")]
+        public string EventMode{ get; set; }
+
+        /// <summary>
+        /// This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Events")]
+        public string[] Events{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +162,10 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArraySimple(map, prefix + "Functions.", this.Functions);
             this.SetParamSimple(map, prefix + "ProcedureMode", this.ProcedureMode);
             this.SetParamArraySimple(map, prefix + "Procedures.", this.Procedures);
+            this.SetParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
+            this.SetParamArraySimple(map, prefix + "Triggers.", this.Triggers);
+            this.SetParamSimple(map, prefix + "EventMode", this.EventMode);
+            this.SetParamArraySimple(map, prefix + "Events.", this.Events);
         }
     }
 }

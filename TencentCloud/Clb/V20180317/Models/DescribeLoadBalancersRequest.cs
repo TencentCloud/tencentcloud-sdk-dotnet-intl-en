@@ -62,13 +62,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LoadBalancerVips{ get; set; }
 
         /// <summary>
-        /// Public IP of the real server bound to a CLB.
+        /// Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
         /// </summary>
         [JsonProperty("BackendPublicIps")]
         public string[] BackendPublicIps{ get; set; }
 
         /// <summary>
-        /// Private IP of the real server bound to a CLB.
+        /// Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
         /// </summary>
         [JsonProperty("BackendPrivateIps")]
         public string[] BackendPrivateIps{ get; set; }

@@ -128,6 +128,7 @@
     <Compile Include="V20211206\Models\ModifyMigrationJobRequest.cs" />
     <Compile Include="V20211206\Models\ModifyMigrationJobResponse.cs" />
     <Compile Include="V20211206\Models\Objects.cs" />
+    <Compile Include="V20211206\Models\OnlineDDL.cs" />
     <Compile Include="V20211206\Models\Options.cs" />
     <Compile Include="V20211206\Models\ProcessProgress.cs" />
     <Compile Include="V20211206\Models\ProcessStepTip.cs" />
@@ -142,6 +143,10 @@
     <Compile Include="V20211206\Models\ResumeSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\ResumeSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\RoleItem.cs" />
+    <Compile Include="V20211206\Models\SkipCheckItemRequest.cs" />
+    <Compile Include="V20211206\Models\SkipCheckItemResponse.cs" />
+    <Compile Include="V20211206\Models\SkipSyncCheckItemRequest.cs" />
+    <Compile Include="V20211206\Models\SkipSyncCheckItemResponse.cs" />
     <Compile Include="V20211206\Models\SkippedDetail.cs" />
     <Compile Include="V20211206\Models\SkippedItem.cs" />
     <Compile Include="V20211206\Models\StartCompareRequest.cs" />

@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// Certificate information
+        /// Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -109,6 +109,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
+        /// <summary>
+        /// Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+        /// </summary>
+        [JsonProperty("MultiCertInfo")]
+        public MultiCertInfo MultiCertInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
             this.SetParamSimple(map, prefix + "Quic", this.Quic);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
         }
     }
 }
