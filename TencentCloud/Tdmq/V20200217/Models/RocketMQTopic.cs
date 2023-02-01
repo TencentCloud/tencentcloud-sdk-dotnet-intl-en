@@ -31,6 +31,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// The number of subscription groups
+        /// </summary>
+        [JsonProperty("GroupNum")]
+        public ulong? GroupNum{ get; set; }
+
+        /// <summary>
         /// Description.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -62,6 +74,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "GroupNum", this.GroupNum);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

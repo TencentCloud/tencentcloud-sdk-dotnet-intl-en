@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Rum.V20210622.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SecretIdLastUsed : AbstractModel
+    public class DescribeRumGroupLogResponse : AbstractModel
     {
         
         /// <summary>
-        /// Key ID.
+        /// Response string
         /// </summary>
-        [JsonProperty("SecretId")]
-        public string SecretId{ get; set; }
+        [JsonProperty("Result")]
+        public string Result{ get; set; }
 
         /// <summary>
-        /// The date when the key ID was last used (the value is obtained one day later).
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("LastUsedDate")]
-        public string LastUsedDate{ get; set; }
-
-        /// <summary>
-        /// The most recent date the key was accessed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("LastSecretUsedDate")]
-        public ulong? LastSecretUsedDate{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
-            this.SetParamSimple(map, prefix + "LastUsedDate", this.LastUsedDate);
-            this.SetParamSimple(map, prefix + "LastSecretUsedDate", this.LastSecretUsedDate);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

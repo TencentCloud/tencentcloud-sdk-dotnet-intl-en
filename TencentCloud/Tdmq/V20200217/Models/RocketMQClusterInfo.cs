@@ -96,25 +96,29 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public bool? RocketMQFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Service suspension time in milliseconds
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolateTime")]
         public long? IsolateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// HTTP-based public network access address
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HttpPublicEndpoint")]
         public string HttpPublicEndpoint{ get; set; }
 
         /// <summary>
-        /// 
+        /// HTTP-based VPC access address
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HttpVpcEndpoint")]
         public string HttpVpcEndpoint{ get; set; }

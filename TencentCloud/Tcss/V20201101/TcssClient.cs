@@ -817,6 +817,86 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// This API is used to export abnormal process rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAbnormalProcessRulesExportJobRequest"/></param>
+        /// <returns><see cref="CreateAbnormalProcessRulesExportJobResponse"/></returns>
+        public async Task<CreateAbnormalProcessRulesExportJobResponse> CreateAbnormalProcessRulesExportJob(CreateAbnormalProcessRulesExportJobRequest req)
+        {
+             JsonResponseModel<CreateAbnormalProcessRulesExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAbnormalProcessRulesExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAbnormalProcessRulesExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to export abnormal process rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAbnormalProcessRulesExportJobRequest"/></param>
+        /// <returns><see cref="CreateAbnormalProcessRulesExportJobResponse"/></returns>
+        public CreateAbnormalProcessRulesExportJobResponse CreateAbnormalProcessRulesExportJobSync(CreateAbnormalProcessRulesExportJobRequest req)
+        {
+             JsonResponseModel<CreateAbnormalProcessRulesExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAbnormalProcessRulesExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAbnormalProcessRulesExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to export file tampering detection rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessControlsRuleExportJobRequest"/></param>
+        /// <returns><see cref="CreateAccessControlsRuleExportJobResponse"/></returns>
+        public async Task<CreateAccessControlsRuleExportJobResponse> CreateAccessControlsRuleExportJob(CreateAccessControlsRuleExportJobRequest req)
+        {
+             JsonResponseModel<CreateAccessControlsRuleExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccessControlsRuleExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessControlsRuleExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to export file tampering detection rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessControlsRuleExportJobRequest"/></param>
+        /// <returns><see cref="CreateAccessControlsRuleExportJobResponse"/></returns>
+        public CreateAccessControlsRuleExportJobResponse CreateAccessControlsRuleExportJobSync(CreateAccessControlsRuleExportJobRequest req)
+        {
+             JsonResponseModel<CreateAccessControlsRuleExportJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAccessControlsRuleExportJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessControlsRuleExportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an image scan task for an image repository.
         /// </summary>
         /// <param name="req"><see cref="CreateAssetImageRegistryScanTaskRequest"/></param>

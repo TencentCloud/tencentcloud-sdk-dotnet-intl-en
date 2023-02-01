@@ -53,7 +53,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API is used to add sub-users.
+        /// This API is used to create a sub-user.
         /// </summary>
         /// <param name="req"><see cref="AddUserRequest"/></param>
         /// <returns><see cref="AddUserResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// This API is used to add sub-users.
+        /// This API is used to create a sub-user.
         /// </summary>
         /// <param name="req"><see cref="AddUserRequest"/></param>
         /// <returns><see cref="AddUserResponse"/></returns>

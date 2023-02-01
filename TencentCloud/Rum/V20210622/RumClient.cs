@@ -1839,6 +1839,126 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to get the log aggregation information under a project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumGroupLogRequest"/></param>
+        /// <returns><see cref="DescribeRumGroupLogResponse"/></returns>
+        public async Task<DescribeRumGroupLogResponse> DescribeRumGroupLog(DescribeRumGroupLogRequest req)
+        {
+             JsonResponseModel<DescribeRumGroupLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRumGroupLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumGroupLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the log aggregation information under a project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumGroupLogRequest"/></param>
+        /// <returns><see cref="DescribeRumGroupLogResponse"/></returns>
+        public DescribeRumGroupLogResponse DescribeRumGroupLogSync(DescribeRumGroupLogRequest req)
+        {
+             JsonResponseModel<DescribeRumGroupLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRumGroupLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumGroupLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of logs in a project (created by an instance).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogListRequest"/></param>
+        /// <returns><see cref="DescribeRumLogListResponse"/></returns>
+        public async Task<DescribeRumLogListResponse> DescribeRumLogList(DescribeRumLogListRequest req)
+        {
+             JsonResponseModel<DescribeRumLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRumLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of logs in a project (created by an instance).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogListRequest"/></param>
+        /// <returns><see cref="DescribeRumLogListResponse"/></returns>
+        public DescribeRumLogListResponse DescribeRumLogListSync(DescribeRumLogListRequest req)
+        {
+             JsonResponseModel<DescribeRumLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRumLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of logs in a project every minute.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumStatsLogListRequest"/></param>
+        /// <returns><see cref="DescribeRumStatsLogListResponse"/></returns>
+        public async Task<DescribeRumStatsLogListResponse> DescribeRumStatsLogList(DescribeRumStatsLogListRequest req)
+        {
+             JsonResponseModel<DescribeRumStatsLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRumStatsLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumStatsLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of logs in a project every minute.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumStatsLogListRequest"/></param>
+        /// <returns><see cref="DescribeRumStatsLogListResponse"/></returns>
+        public DescribeRumStatsLogListResponse DescribeRumStatsLogListSync(DescribeRumStatsLogListRequest req)
+        {
+             JsonResponseModel<DescribeRumStatsLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRumStatsLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumStatsLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of homepage scores.
         /// </summary>
         /// <param name="req"><see cref="DescribeScoresRequest"/></param>
@@ -2190,6 +2310,46 @@ namespace TencentCloud.Rum.V20210622
              {
                  var strResp = this.InternalRequestSync(req, "StopInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop a project from reporting data.
+        /// </summary>
+        /// <param name="req"><see cref="StopProjectRequest"/></param>
+        /// <returns><see cref="StopProjectResponse"/></returns>
+        public async Task<StopProjectResponse> StopProject(StopProjectRequest req)
+        {
+             JsonResponseModel<StopProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop a project from reporting data.
+        /// </summary>
+        /// <param name="req"><see cref="StopProjectRequest"/></param>
+        /// <returns><see cref="StopProjectResponse"/></returns>
+        public StopProjectResponse StopProjectSync(StopProjectRequest req)
+        {
+             JsonResponseModel<StopProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopProjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

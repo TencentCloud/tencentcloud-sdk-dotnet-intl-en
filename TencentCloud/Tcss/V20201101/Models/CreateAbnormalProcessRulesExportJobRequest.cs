@@ -15,34 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Tcss.V20201101.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SecretIdLastUsed : AbstractModel
+    public class CreateAbnormalProcessRulesExportJobRequest : AbstractModel
     {
         
         /// <summary>
-        /// Key ID.
+        /// Filter conditions
+        /// <li>`RuleType` - String  - Optional - Rule type</li>
+        /// <li>`Status` - String - Optional - Status</li>
         /// </summary>
-        [JsonProperty("SecretId")]
-        public string SecretId{ get; set; }
+        [JsonProperty("Filters")]
+        public RunTimeFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// The date when the key ID was last used (the value is obtained one day later).
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Sorting order
         /// </summary>
-        [JsonProperty("LastUsedDate")]
-        public string LastUsedDate{ get; set; }
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
 
         /// <summary>
-        /// The most recent date the key was accessed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sorting field
         /// </summary>
-        [JsonProperty("LastSecretUsedDate")]
-        public ulong? LastSecretUsedDate{ get; set; }
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
+        /// <summary>
+        /// Fields to export
+        /// </summary>
+        [JsonProperty("ExportField")]
+        public string[] ExportField{ get; set; }
 
 
         /// <summary>
@@ -50,9 +56,10 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
-            this.SetParamSimple(map, prefix + "LastUsedDate", this.LastUsedDate);
-            this.SetParamSimple(map, prefix + "LastSecretUsedDate", this.LastSecretUsedDate);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         }
     }
 }

@@ -139,6 +139,10 @@
     <Compile Include="V20201101\Models\ContainerInfo.cs" />
     <Compile Include="V20201101\Models\ContainerMount.cs" />
     <Compile Include="V20201101\Models\ContainerNetwork.cs" />
+    <Compile Include="V20201101\Models\CreateAbnormalProcessRulesExportJobRequest.cs" />
+    <Compile Include="V20201101\Models\CreateAbnormalProcessRulesExportJobResponse.cs" />
+    <Compile Include="V20201101\Models\CreateAccessControlsRuleExportJobRequest.cs" />
+    <Compile Include="V20201101\Models\CreateAccessControlsRuleExportJobResponse.cs" />
     <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskOneKeyRequest.cs" />
     <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskOneKeyResponse.cs" />
     <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskRequest.cs" />
