@@ -31,7 +31,7 @@ Each API has a corresponding request structure and a response structure. For exa
 
 The following uses the API for querying CVM instance list as an example to describe the basic usage of the SDK. For the purpose of demonstration, some nonessential items have been added to show the common features of the SDK, which makes the example look bloated. When using the SDK to write code, you are recommended to keep it simple.
 
-```
+```C#
 using System;
 using System.Threading.Tasks;
 using TencentCloud.Common;
