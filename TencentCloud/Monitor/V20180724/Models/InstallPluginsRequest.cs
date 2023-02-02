@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public GrafanaPlugin[] Plugins{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// TCMG instance ID, such as “grafana-abcdefgh”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

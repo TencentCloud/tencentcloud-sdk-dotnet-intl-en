@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// TCMG instance ID, such as “grafana-abcdefgh”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Type
+        /// Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
 
         /// <summary>
-        /// Configuration
+        /// Integration configuration
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

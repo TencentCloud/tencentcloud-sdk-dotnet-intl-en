@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// TCMG instance ID, such as “grafana-kleu3gt0”.
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Enable or disable
+        /// Whether to enable public network access (`true`: Yes; `false`: No)
         /// </summary>
         [JsonProperty("EnableInternet")]
         public bool? EnableInternet{ get; set; }

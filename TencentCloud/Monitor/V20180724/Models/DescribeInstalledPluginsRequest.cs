@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// TCMG instance ID, such as “grafana-kleu3gt0”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Filter by plugin ID
+        /// Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
         /// </summary>
         [JsonProperty("PluginId")]
         public string PluginId{ get; set; }

@@ -72,6 +72,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("CLSNotices")]
         public CLSNotice[] CLSNotices{ get; set; }
 
+        /// <summary>
+        /// List of IDs of the alerting rules bound to an alarm notification template
+        /// </summary>
+        [JsonProperty("PolicyIds")]
+        public string[] PolicyIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
             this.SetParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
             this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
+            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         }
     }
 }

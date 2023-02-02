@@ -72,6 +72,30 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("LogAlarmReqInfo")]
         public LogAlarmReq LogAlarmReqInfo{ get; set; }
 
+        /// <summary>
+        /// Template ID, which is dedicated to TMP.
+        /// </summary>
+        [JsonProperty("NoticeIds")]
+        public string[] NoticeIds{ get; set; }
+
+        /// <summary>
+        /// Status (`0`: Disabled; `1`: Enabled)
+        /// </summary>
+        [JsonProperty("Enable")]
+        public long? Enable{ get; set; }
+
+        /// <summary>
+        /// Name of the policy dedicated to TMP
+        /// </summary>
+        [JsonProperty("PolicyName")]
+        public string PolicyName{ get; set; }
+
+        /// <summary>
+        /// The alert configured for an event
+        /// </summary>
+        [JsonProperty("EbSubject")]
+        public string EbSubject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +110,10 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
             this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
             this.SetParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
+            this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "EbSubject", this.EbSubject);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// TCMG instance ID, such as “grafana-12345678”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Channel name
+        /// Alert channel name, such as “test”.
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// Channel ID
+        /// Alert channel ID, such as “nchannel-abcd1234”.
         /// </summary>
         [JsonProperty("ChannelIDs")]
         public string[] ChannelIDs{ get; set; }
 
         /// <summary>
-        /// Status
+        /// Alert channel status
         /// </summary>
         [JsonProperty("ChannelState")]
         public long? ChannelState{ get; set; }

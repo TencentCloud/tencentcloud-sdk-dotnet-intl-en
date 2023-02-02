@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// TCMG instance ID, such as “grafana-12345678”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Integration ID
+        /// Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
         /// </summary>
         [JsonProperty("IntegrationId")]
         public string IntegrationId{ get; set; }

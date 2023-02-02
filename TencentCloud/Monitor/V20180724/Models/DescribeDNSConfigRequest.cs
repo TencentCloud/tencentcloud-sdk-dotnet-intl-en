@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// TCMG instance ID, such as “grafana-abcdefgh”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

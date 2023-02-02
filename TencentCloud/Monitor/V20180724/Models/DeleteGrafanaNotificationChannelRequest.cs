@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Array of channel IDs
+        /// Array of channel IDs, such as “nchannel-abcd1234”.
         /// </summary>
         [JsonProperty("ChannelIDs")]
         public string[] ChannelIDs{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// TCMG instance ID, such as “grafana-abcdefgh”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

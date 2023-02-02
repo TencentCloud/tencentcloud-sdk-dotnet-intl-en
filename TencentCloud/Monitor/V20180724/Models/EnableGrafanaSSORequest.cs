@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Whether to enable SSO
+        /// Whether to enable SSO (`true`: Yes; `false`: No)
         /// </summary>
         [JsonProperty("EnableSSO")]
         public bool? EnableSSO{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// TCMG instance ID, such as “grafana-abcdefgh”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

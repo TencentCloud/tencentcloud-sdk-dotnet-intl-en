@@ -42,6 +42,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
+        /// <summary>
+        /// The alert configured for an event
+        /// </summary>
+        [JsonProperty("EbSubject")]
+        public string EbSubject{ get; set; }
+
+        /// <summary>
+        /// Whether the event alert has been configured
+        /// </summary>
+        [JsonProperty("EbEventFlag")]
+        public long? EbEventFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "EbSubject", this.EbSubject);
+            this.SetParamSimple(map, prefix + "EbEventFlag", this.EbEventFlag);
         }
     }
 }

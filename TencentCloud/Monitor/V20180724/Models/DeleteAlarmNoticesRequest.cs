@@ -36,6 +36,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
 
+        /// <summary>
+        /// Binding between a notification template and a policy
+        /// </summary>
+        [JsonProperty("NoticeBindPolicys")]
+        public NoticeBindPolicys[] NoticeBindPolicys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+            this.SetParamArrayObj(map, prefix + "NoticeBindPolicys.", this.NoticeBindPolicys);
         }
     }
 }

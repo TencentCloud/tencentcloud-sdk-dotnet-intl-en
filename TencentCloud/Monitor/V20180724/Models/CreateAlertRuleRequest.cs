@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Prometheus instance ID
+        /// TMP instance ID, such as “prom-abcd1234”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Rule expression
+        /// Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
         /// </summary>
         [JsonProperty("Expr")]
         public string Expr{ get; set; }

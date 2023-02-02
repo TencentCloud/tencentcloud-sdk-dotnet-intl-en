@@ -92,6 +92,10 @@
     <Compile Include="V20180525\Models\CreateClusterResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterVirtualNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterVirtualNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterVirtualNodeRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\CreateECMInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateECMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\CreateEdgeCVMInstancesRequest.cs" />
@@ -120,6 +124,10 @@
     <Compile Include="V20180525\Models\DeleteClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterVirtualNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterVirtualNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterVirtualNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\DeleteECMInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteECMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteEdgeCVMInstancesRequest.cs" />
@@ -168,6 +176,10 @@
     <Compile Include="V20180525\Models\DescribeClusterSecurityResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterStatusRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterStatusResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterVirtualNodePoolsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterVirtualNodePoolsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterVirtualNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20180525\Models\DescribeECMInstancesRequest.cs" />
@@ -214,6 +226,8 @@
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
     <Compile Include="V20180525\Models\DisableClusterDeletionProtectionRequest.cs" />
     <Compile Include="V20180525\Models\DisableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="V20180525\Models\DrainClusterVirtualNodeRequest.cs" />
+    <Compile Include="V20180525\Models\DrainClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\DriverVersion.cs" />
     <Compile Include="V20180525\Models\ECMEnhancedService.cs" />
     <Compile Include="V20180525\Models\ECMRunMonitorServiceEnabled.cs" />
@@ -270,6 +284,8 @@
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterVirtualNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolInstanceTypesRequest.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolInstanceTypesResponse.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
@@ -315,5 +331,8 @@
     <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeNodeResetParam.cs" />
     <Compile Include="V20180525\Models\VersionInstance.cs" />
+    <Compile Include="V20180525\Models\VirtualNode.cs" />
+    <Compile Include="V20180525\Models\VirtualNodePool.cs" />
+    <Compile Include="V20180525\Models\VirtualNodeSpec.cs" />
   </ItemGroup>
 </Project>

@@ -2425,6 +2425,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        ///  This API is used to query the usage of a pay-as-you-go Tencent Managed Service for Prometheus (TMP) instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstanceUsageRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstanceUsageResponse"/></returns>
+        public async Task<DescribePrometheusInstanceUsageResponse> DescribePrometheusInstanceUsage(DescribePrometheusInstanceUsageRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstanceUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusInstanceUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstanceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  This API is used to query the usage of a pay-as-you-go Tencent Managed Service for Prometheus (TMP) instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstanceUsageRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstanceUsageResponse"/></returns>
+        public DescribePrometheusInstanceUsageResponse DescribePrometheusInstanceUsageSync(DescribePrometheusInstanceUsageRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstanceUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusInstanceUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstanceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the details of one or multiple instances.
         /// <ul>
         /// <li>You can query the details of an instance by its ID, name, or status.</li>

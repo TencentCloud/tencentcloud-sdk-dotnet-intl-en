@@ -37,13 +37,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Array of instance IDs
+        /// Array of TCMG instance IDs
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Instance name, which supports fuzzy search by prefix.
+        /// TCMG instance name, which can be fuzzily matched by prefix.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

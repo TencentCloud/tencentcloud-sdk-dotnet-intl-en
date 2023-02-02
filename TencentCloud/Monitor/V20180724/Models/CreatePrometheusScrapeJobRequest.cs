@@ -25,19 +25,19 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// TMP instance ID, such as “prom-abcd1234”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Agent ID
+        /// Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
         /// </summary>
         [JsonProperty("AgentId")]
         public string AgentId{ get; set; }
 
         /// <summary>
-        /// Task content
+        /// Scrape task ID in the format of “job_name:xx”
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }

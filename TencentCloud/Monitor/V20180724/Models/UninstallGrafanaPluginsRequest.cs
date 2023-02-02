@@ -25,13 +25,13 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Array of plugin IDs
+        /// Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
         /// </summary>
         [JsonProperty("PluginIds")]
         public string[] PluginIds{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// TCMG instance ID, such as “grafana-abcdefg”.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
