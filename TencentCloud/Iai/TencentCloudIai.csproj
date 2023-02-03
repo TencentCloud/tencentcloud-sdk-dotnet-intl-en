@@ -74,6 +74,8 @@
     <Compile Include="V20200303\Models\DetectFaceAttributesResponse.cs" />
     <Compile Include="V20200303\Models\DetectFaceRequest.cs" />
     <Compile Include="V20200303\Models\DetectFaceResponse.cs" />
+    <Compile Include="V20200303\Models\DetectLiveFaceAccurateRequest.cs" />
+    <Compile Include="V20200303\Models\DetectLiveFaceAccurateResponse.cs" />
     <Compile Include="V20200303\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="V20200303\Models\DetectLiveFaceResponse.cs" />
     <Compile Include="V20200303\Models\Eye.cs" />
@@ -107,8 +109,6 @@
     <Compile Include="V20200303\Models\HeadPose.cs" />
     <Compile Include="V20200303\Models\ModifyGroupRequest.cs" />
     <Compile Include="V20200303\Models\ModifyGroupResponse.cs" />
-    <Compile Include="V20200303\Models\ModifyPersonBaseInfoRequest.cs" />
-    <Compile Include="V20200303\Models\ModifyPersonBaseInfoResponse.cs" />
     <Compile Include="V20200303\Models\ModifyPersonGroupInfoRequest.cs" />
     <Compile Include="V20200303\Models\ModifyPersonGroupInfoResponse.cs" />
     <Compile Include="V20200303\Models\Mouth.cs" />

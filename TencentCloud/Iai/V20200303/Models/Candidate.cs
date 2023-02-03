@@ -31,7 +31,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// Face ID
+        /// Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
         /// </summary>
         [JsonProperty("FaceId")]
         public string FaceId{ get; set; }

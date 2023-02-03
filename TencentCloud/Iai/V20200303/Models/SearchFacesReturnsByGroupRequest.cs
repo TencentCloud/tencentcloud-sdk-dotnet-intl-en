@@ -66,7 +66,7 @@ namespace TencentCloud.Iai.V20200303.Models
 
         /// <summary>
         /// Detected faces, which is corresponding to the maximum number of returned most matching persons. Default value: 5. Maximum value: 10.  
-        /// For example, if `MaxFaceNum` is 3 and `MaxPersonNum` is 5, up to 15 (3 * 5) persons will be returned.
+        /// For example, if `MaxFaceNum` is 3, `MaxPersonNumPerGroup` is 5, and the `GroupIds` length is 3, up to 45 (3 * 5 * 3) persons will be returned.
         /// </summary>
         [JsonProperty("MaxPersonNumPerGroup")]
         public ulong? MaxPersonNumPerGroup{ get; set; }

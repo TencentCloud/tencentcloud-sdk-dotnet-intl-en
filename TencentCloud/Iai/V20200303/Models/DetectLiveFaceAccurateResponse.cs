@@ -21,26 +21,26 @@ namespace TencentCloud.Iai.V20200303.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyPersonBaseInfoRequest : AbstractModel
+    public class DetectLiveFaceAccurateResponse : AbstractModel
     {
         
         /// <summary>
-        /// Person ID, which is the `PersonId` in the `CreatePerson` API.
+        /// Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
         /// </summary>
-        [JsonProperty("PersonId")]
-        public string PersonId{ get; set; }
+        [JsonProperty("Score")]
+        public float? Score{ get; set; }
 
         /// <summary>
-        /// Name of the person to be modified
+        /// Algorithm model version used for face recognition.
         /// </summary>
-        [JsonProperty("PersonName")]
-        public string PersonName{ get; set; }
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
 
         /// <summary>
-        /// Gender of the person to be modified. 1: male; 2: female.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Gender")]
-        public long? Gender{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
-            this.SetParamSimple(map, prefix + "PersonName", this.PersonName);
-            this.SetParamSimple(map, prefix + "Gender", this.Gender);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

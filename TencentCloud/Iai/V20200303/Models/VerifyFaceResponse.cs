@@ -35,13 +35,13 @@ namespace TencentCloud.Iai.V20200303.Models
         public float? Score{ get; set; }
 
         /// <summary>
-        /// Whether the person in the image matches the `PersonId`.
+        /// Whether the person is the one in the image. The fixed threshold score is 60. If you want to adjust the threshold more flexibly, you can take the returned `Score` parameter value for judgment.
         /// </summary>
         [JsonProperty("IsMatch")]
         public bool? IsMatch{ get; set; }
 
         /// <summary>
-        /// Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
+        /// Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
         /// </summary>
         [JsonProperty("FaceModelVersion")]
         public string FaceModelVersion{ get; set; }
