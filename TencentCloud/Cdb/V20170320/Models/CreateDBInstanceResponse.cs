@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20210527.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProcessStatistic : AbstractModel
+    public class CreateDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// Array of session details
+        /// Short order ID
         /// </summary>
-        [JsonProperty("Items")]
-        public SessionItem[] Items{ get; set; }
+        [JsonProperty("DealIds")]
+        public string[] DealIds{ get; set; }
 
         /// <summary>
-        /// The total number of connections
+        /// List of instance IDs
         /// </summary>
-        [JsonProperty("AllConnSum")]
-        public long? AllConnSum{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// The total number of active connections
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("ActiveConnSum")]
-        public long? ActiveConnSum{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "AllConnSum", this.AllConnSum);
-            this.SetParamSimple(map, prefix + "ActiveConnSum", this.ActiveConnSum);
+            this.SetParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

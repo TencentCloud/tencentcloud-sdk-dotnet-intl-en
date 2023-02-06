@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSecurityPoliciesResponse : AbstractModel
+    public class DescribeTopicProduceConnectionResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Result set of returned connection information
         /// </summary>
-        [JsonProperty("RegistryId")]
-        public string RegistryId{ get; set; }
+        [JsonProperty("Result")]
+        public DescribeConnectInfoResultDTO[] Result{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +42,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamArrayObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

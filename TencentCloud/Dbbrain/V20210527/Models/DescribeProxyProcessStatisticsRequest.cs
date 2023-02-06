@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// `ProxyID` under the current instance.
+        /// The proxy ID you want to query under the instance
         /// </summary>
         [JsonProperty("InstanceProxyId")]
         public string InstanceProxyId{ get; set; }

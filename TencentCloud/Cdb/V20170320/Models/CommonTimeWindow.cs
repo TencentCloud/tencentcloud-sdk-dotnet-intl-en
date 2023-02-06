@@ -66,6 +66,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Sunday")]
         public string Sunday{ get; set; }
 
+        /// <summary>
+        /// Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+        /// </summary>
+        [JsonProperty("BackupPeriodStrategy")]
+        public string BackupPeriodStrategy{ get; set; }
+
+        /// <summary>
+        /// If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+        /// </summary>
+        [JsonProperty("Days")]
+        public long?[] Days{ get; set; }
+
+        /// <summary>
+        /// Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+        /// </summary>
+        [JsonProperty("BackupPeriodTime")]
+        public string BackupPeriodTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Friday", this.Friday);
             this.SetParamSimple(map, prefix + "Saturday", this.Saturday);
             this.SetParamSimple(map, prefix + "Sunday", this.Sunday);
+            this.SetParamSimple(map, prefix + "BackupPeriodStrategy", this.BackupPeriodStrategy);
+            this.SetParamArraySimple(map, prefix + "Days.", this.Days);
+            this.SetParamSimple(map, prefix + "BackupPeriodTime", this.BackupPeriodTime);
         }
     }
 }

@@ -1335,6 +1335,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to query the connection information of the topic producer.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicProduceConnectionRequest"/></param>
+        /// <returns><see cref="DescribeTopicProduceConnectionResponse"/></returns>
+        public async Task<DescribeTopicProduceConnectionResponse> DescribeTopicProduceConnection(DescribeTopicProduceConnectionRequest req)
+        {
+             JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicProduceConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicProduceConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the connection information of the topic producer.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicProduceConnectionRequest"/></param>
+        /// <returns><see cref="DescribeTopicProduceConnectionResponse"/></returns>
+        public DescribeTopicProduceConnectionResponse DescribeTopicProduceConnectionSync(DescribeTopicProduceConnectionRequest req)
+        {
+             JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicProduceConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicProduceConnectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to search and subscribe the message group information of a topic.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicSubscribeGroupRequest"/></param>

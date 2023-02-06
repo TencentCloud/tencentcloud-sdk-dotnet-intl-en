@@ -78,6 +78,8 @@
     <Compile Include="V20210125\Models\SQLTask.cs" />
     <Compile Include="V20210125\Models\SparkJobInfo.cs" />
     <Compile Include="V20210125\Models\StreamingStatistics.cs" />
+    <Compile Include="V20210125\Models\SuspendResumeDataEngineRequest.cs" />
+    <Compile Include="V20210125\Models\SuspendResumeDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\Task.cs" />
     <Compile Include="V20210125\Models\TaskResponseInfo.cs" />
     <Compile Include="V20210125\Models\TaskResultInfo.cs" />

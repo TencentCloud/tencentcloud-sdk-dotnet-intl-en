@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20210527.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProcessStatistic : AbstractModel
+    public class SuspendResumeDataEngineResponse : AbstractModel
     {
         
         /// <summary>
-        /// Array of session details
+        /// The details of the virtual cluster.
         /// </summary>
-        [JsonProperty("Items")]
-        public SessionItem[] Items{ get; set; }
+        [JsonProperty("DataEngineName")]
+        public string DataEngineName{ get; set; }
 
         /// <summary>
-        /// The total number of connections
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("AllConnSum")]
-        public long? AllConnSum{ get; set; }
-
-        /// <summary>
-        /// The total number of active connections
-        /// </summary>
-        [JsonProperty("ActiveConnSum")]
-        public long? ActiveConnSum{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "AllConnSum", this.AllConnSum);
-            this.SetParamSimple(map, prefix + "ActiveConnSum", this.ActiveConnSum);
+            this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

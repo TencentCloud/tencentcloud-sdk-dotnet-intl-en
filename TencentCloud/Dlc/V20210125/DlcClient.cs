@@ -532,5 +532,45 @@ namespace TencentCloud.Dlc.V20210125
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to suspend or resume a data engine.
+        /// </summary>
+        /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
+        /// <returns><see cref="SuspendResumeDataEngineResponse"/></returns>
+        public async Task<SuspendResumeDataEngineResponse> SuspendResumeDataEngine(SuspendResumeDataEngineRequest req)
+        {
+             JsonResponseModel<SuspendResumeDataEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SuspendResumeDataEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SuspendResumeDataEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to suspend or resume a data engine.
+        /// </summary>
+        /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
+        /// <returns><see cref="SuspendResumeDataEngineResponse"/></returns>
+        public SuspendResumeDataEngineResponse SuspendResumeDataEngineSync(SuspendResumeDataEngineRequest req)
+        {
+             JsonResponseModel<SuspendResumeDataEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SuspendResumeDataEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SuspendResumeDataEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

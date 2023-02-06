@@ -15,32 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Dbbrain.V20210527.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProcessStatistic : AbstractModel
+    public class DescribeConnectInfoResultDTO : AbstractModel
     {
         
         /// <summary>
-        /// Array of session details
+        /// IP address
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Items")]
-        public SessionItem[] Items{ get; set; }
+        [JsonProperty("IpAddr")]
+        public string IpAddr{ get; set; }
 
         /// <summary>
-        /// The total number of connections
+        /// Connection time
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("AllConnSum")]
-        public long? AllConnSum{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
         /// <summary>
-        /// The total number of active connections
+        /// Whether it is a supported version
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ActiveConnSum")]
-        public long? ActiveConnSum{ get; set; }
+        [JsonProperty("IsUnSupportVersion")]
+        public bool? IsUnSupportVersion{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
-            this.SetParamSimple(map, prefix + "AllConnSum", this.AllConnSum);
-            this.SetParamSimple(map, prefix + "ActiveConnSum", this.ActiveConnSum);
+            this.SetParamSimple(map, prefix + "IpAddr", this.IpAddr);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "IsUnSupportVersion", this.IsUnSupportVersion);
         }
     }
 }

@@ -106,6 +106,7 @@
     <Compile Include="V20190819\Models\DescribeAppInfoResponse.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneRequest.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeConnectInfoResultDTO.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupRequest.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupResponse.cs" />
     <Compile Include="V20190819\Models\DescribeGroup.cs" />
@@ -129,6 +130,8 @@
     <Compile Include="V20190819\Models\DescribeTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicProduceConnectionRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicProduceConnectionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicSubscribeGroupRequest.cs" />

@@ -493,46 +493,6 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// This API is used to create public network access allowlist policies for an instance.
-        /// </summary>
-        /// <param name="req"><see cref="CreateSecurityPoliciesRequest"/></param>
-        /// <returns><see cref="CreateSecurityPoliciesResponse"/></returns>
-        public async Task<CreateSecurityPoliciesResponse> CreateSecurityPolicies(CreateSecurityPoliciesRequest req)
-        {
-             JsonResponseModel<CreateSecurityPoliciesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateSecurityPolicies");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityPoliciesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to create public network access allowlist policies for an instance.
-        /// </summary>
-        /// <param name="req"><see cref="CreateSecurityPoliciesRequest"/></param>
-        /// <returns><see cref="CreateSecurityPoliciesResponse"/></returns>
-        public CreateSecurityPoliciesResponse CreateSecurityPoliciesSync(CreateSecurityPoliciesRequest req)
-        {
-             JsonResponseModel<CreateSecurityPoliciesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSecurityPolicies");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityPoliciesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to create a public network access allowlist policy for an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityPolicyRequest"/></param>

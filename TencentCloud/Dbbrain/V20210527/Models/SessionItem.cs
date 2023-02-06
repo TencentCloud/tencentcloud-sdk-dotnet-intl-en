@@ -25,19 +25,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 
+        /// Access source
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 
+        /// The number of active connections from the current access source
         /// </summary>
         [JsonProperty("ActiveConn")]
         public string ActiveConn{ get; set; }
 
         /// <summary>
-        /// 
+        /// The total number of connections from the current access source
         /// </summary>
         [JsonProperty("AllConn")]
         public long? AllConn{ get; set; }

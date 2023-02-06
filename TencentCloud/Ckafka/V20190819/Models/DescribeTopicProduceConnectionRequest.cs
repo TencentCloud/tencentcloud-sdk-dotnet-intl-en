@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSecurityPoliciesRequest : AbstractModel
+    public class DescribeTopicProduceConnectionRequest : AbstractModel
     {
         
         /// <summary>
         /// Instance ID
         /// </summary>
-        [JsonProperty("RegistryId")]
-        public string RegistryId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 192.168.0.0/24
+        /// Topic name
         /// </summary>
-        [JsonProperty("CidrBlock")]
-        public string CidrBlock{ get; set; }
-
-        /// <summary>
-        /// Description
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
-            this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

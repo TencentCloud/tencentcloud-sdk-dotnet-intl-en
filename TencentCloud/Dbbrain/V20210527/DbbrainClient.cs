@@ -853,7 +853,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// This API is used to get the session statistics of the current instance. Note that this API can be called only in certain environments.
+        /// This API is used to get the session statistics of a single proxy under the current instance, and can only be called in particular environments.
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyProcessStatisticsRequest"/></param>
         /// <returns><see cref="DescribeProxyProcessStatisticsResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// This API is used to get the session statistics of the current instance. Note that this API can be called only in certain environments.
+        /// This API is used to get the session statistics of a single proxy under the current instance, and can only be called in particular environments.
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyProcessStatisticsRequest"/></param>
         /// <returns><see cref="DescribeProxyProcessStatisticsResponse"/></returns>

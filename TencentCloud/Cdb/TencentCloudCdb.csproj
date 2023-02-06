@@ -92,6 +92,8 @@
     <Compile Include="V20170320\Models\CreateDBImportJobResponse.cs" />
     <Compile Include="V20170320\Models\CreateDBInstanceHourRequest.cs" />
     <Compile Include="V20170320\Models\CreateDBInstanceHourResponse.cs" />
+    <Compile Include="V20170320\Models\CreateDBInstanceRequest.cs" />
+    <Compile Include="V20170320\Models\CreateDBInstanceResponse.cs" />
     <Compile Include="V20170320\Models\CreateParamTemplateRequest.cs" />
     <Compile Include="V20170320\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="V20170320\Models\CreateRoInstanceIpRequest.cs" />
@@ -306,6 +308,8 @@
     <Compile Include="V20170320\Models\ReloadBalanceProxyNodeRequest.cs" />
     <Compile Include="V20170320\Models\ReloadBalanceProxyNodeResponse.cs" />
     <Compile Include="V20170320\Models\RemoteBackupInfo.cs" />
+    <Compile Include="V20170320\Models\RenewDBInstanceRequest.cs" />
+    <Compile Include="V20170320\Models\RenewDBInstanceResponse.cs" />
     <Compile Include="V20170320\Models\ResetRootAccountRequest.cs" />
     <Compile Include="V20170320\Models\ResetRootAccountResponse.cs" />
     <Compile Include="V20170320\Models\RestartDBInstancesRequest.cs" />
