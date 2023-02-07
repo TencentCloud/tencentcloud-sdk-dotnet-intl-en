@@ -15,26 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyK8sApiAbnormalRuleStatusRequest : AbstractModel
+    public class PrometheusAlertManagerConfig : AbstractModel
     {
         
         /// <summary>
-        /// Rule ID
+        /// AlertManager URL
         /// </summary>
-        [JsonProperty("RuleID")]
-        public string RuleID{ get; set; }
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
         /// <summary>
-        /// Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+        /// Type of the cluster where AlertManager is deployed
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// ID of the cluster where AlertManager is deployed
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +50,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

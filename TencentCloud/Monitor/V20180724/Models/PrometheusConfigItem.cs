@@ -15,26 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyK8sApiAbnormalRuleStatusRequest : AbstractModel
+    public class PrometheusConfigItem : AbstractModel
     {
         
         /// <summary>
-        /// Rule ID
+        /// Name
         /// </summary>
-        [JsonProperty("RuleID")]
-        public string RuleID{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+        /// Configuration content
         /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
+        [JsonProperty("Config")]
+        public string Config{ get; set; }
+
+        /// <summary>
+        /// If the configuration comes from a template, this parameter is the template ID, which is used as an output parameter.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

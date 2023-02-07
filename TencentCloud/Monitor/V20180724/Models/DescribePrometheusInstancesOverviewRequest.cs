@@ -15,26 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyK8sApiAbnormalRuleStatusRequest : AbstractModel
+    public class DescribePrometheusInstancesOverviewRequest : AbstractModel
     {
         
         /// <summary>
-        /// Rule ID
+        /// Page offset
         /// </summary>
-        [JsonProperty("RuleID")]
-        public string RuleID{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+        /// Number of results per page
         /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// Instance filter. Valid values:
+        /// `ID`: Filter by instance ID 
+        /// `Name`: Filter by instance name
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -42,8 +50,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

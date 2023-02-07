@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyK8sApiAbnormalRuleStatusRequest : AbstractModel
+    public class RunPrometheusInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Rule ID
+        /// Instance ID
         /// </summary>
-        [JsonProperty("RuleID")]
-        public string RuleID{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+        /// Subnet ID. Initialization is performed with the subnet used by the instance by default and can also be performed with the subnet passed in by this parameter.
         /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

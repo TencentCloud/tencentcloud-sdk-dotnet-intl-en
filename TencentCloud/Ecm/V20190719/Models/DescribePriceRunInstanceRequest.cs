@@ -48,6 +48,16 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DataDisk")]
         public DataDisk[] DataDisk{ get; set; }
 
+        /// <summary>
+        /// Instance billing type. Valid values:
+        /// `0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+        /// `1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+        /// `2`: Bill by usage month of an instance. It applies only to GNR models.
+        /// If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public long? InstanceChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +68,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         }
     }
 }

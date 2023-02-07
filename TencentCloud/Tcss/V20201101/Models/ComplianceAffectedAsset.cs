@@ -102,7 +102,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string VerifyInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance ID
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

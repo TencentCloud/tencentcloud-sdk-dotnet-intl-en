@@ -79,6 +79,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
+        /// <summary>
+        /// IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+        /// </summary>
+        [JsonProperty("AddressIPVersion")]
+        public string AddressIPVersion{ get; set; }
+
+        /// <summary>
+        /// Subnet ID. This parameter is required for IPv6 CLB instances.
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +106,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

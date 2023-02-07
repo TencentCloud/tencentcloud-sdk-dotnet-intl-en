@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyK8sApiAbnormalRuleStatusRequest : AbstractModel
+    public class DescribePrometheusAgentInstancesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Rule ID
+        /// Cluster ID
+        /// It can be the ID of a TKE, EKS, or edge cluster.
         /// </summary>
-        [JsonProperty("RuleID")]
-        public string RuleID{ get; set; }
-
-        /// <summary>
-        /// Status of the rule. Values: `true` (Enabled), `false` (Disabled)
-        /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

@@ -39,7 +39,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public InstancePrice InstancePrice{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiscountDetail")]
         public DiscountDetail[] DiscountDetail{ get; set; }

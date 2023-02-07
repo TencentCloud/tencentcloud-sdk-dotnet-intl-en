@@ -130,6 +130,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
+        /// <summary>
+        /// IPv6 address of a CLB instance
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AddressIPv6")]
+        public string AddressIPv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +158,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
             this.SetParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
         }
     }
 }

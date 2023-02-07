@@ -7339,7 +7339,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of ranges in K8sApi abnormal rules.
+        /// This API is used to query rules for K8s API exceptions. 
         /// </summary>
         /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleScopeListRequest"/></param>
         /// <returns><see cref="DescribeK8sApiAbnormalRuleScopeListResponse"/></returns>
@@ -7359,7 +7359,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of ranges in K8sApi abnormal rules.
+        /// This API is used to query rules for K8s API exceptions. 
         /// </summary>
         /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleScopeListRequest"/></param>
         /// <returns><see cref="DescribeK8sApiAbnormalRuleScopeListResponse"/></returns>

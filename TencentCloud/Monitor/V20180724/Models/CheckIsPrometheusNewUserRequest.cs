@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyK8sApiAbnormalRuleStatusRequest : AbstractModel
+    public class CheckIsPrometheusNewUserRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Rule ID
-        /// </summary>
-        [JsonProperty("RuleID")]
-        public string RuleID{ get; set; }
-
-        /// <summary>
-        /// Status of the rule. Values: `true` (Enabled), `false` (Disabled)
-        /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }
