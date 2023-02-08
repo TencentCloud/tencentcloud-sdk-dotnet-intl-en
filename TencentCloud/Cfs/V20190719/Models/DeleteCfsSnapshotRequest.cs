@@ -30,6 +30,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
+        /// <summary>
+        /// The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
+        /// </summary>
+        [JsonProperty("SnapshotIds")]
+        public string[] SnapshotIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         }
     }
 }
