@@ -31,7 +31,7 @@ namespace TencentCloud.Car.V20220110.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// The user’s IP address.
+        /// Public IP of user’s application client, which is used for nearby scheduling.
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Car.V20220110.Models
         [JsonProperty("ApplicationVersionId")]
         public string ApplicationVersionId{ get; set; }
 
+        /// <summary>
+        /// Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Car.V20220110.Models
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Car.V20220110.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// The user’s IP address.
+        /// Public IP of user’s application client, which is used for nearby scheduling.
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
