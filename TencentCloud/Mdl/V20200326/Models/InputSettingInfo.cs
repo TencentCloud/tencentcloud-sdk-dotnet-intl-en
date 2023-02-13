@@ -68,6 +68,27 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("DelayTime")]
         public long? DelayTime{ get; set; }
 
+        /// <summary>
+        /// The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("InputDomain")]
+        public string InputDomain{ get; set; }
+
+        /// <summary>
+        /// The username, which is used for authentication.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
+        /// <summary>
+        /// The password, which is used for authentication.
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +101,9 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "InputAddress", this.InputAddress);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
+            this.SetParamSimple(map, prefix + "InputDomain", this.InputDomain);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

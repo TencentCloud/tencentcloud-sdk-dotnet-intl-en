@@ -109,6 +109,24 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("WatermarkId")]
         public string WatermarkId{ get; set; }
 
+        /// <summary>
+        /// Whether to convert audio to text. `0` (default): No; `1`: Yes.
+        /// </summary>
+        [JsonProperty("SmartSubtitles")]
+        public ulong? SmartSubtitles{ get; set; }
+
+        /// <summary>
+        /// The subtitle settings. Currently, the following subtitles are supported:
+        /// `eng2eng`: English speech to English text.
+        /// `eng2chs`: English speech to Chinese text. 
+        /// `eng2chseng`: English speech to English and Chinese text. 
+        /// `chs2chs`: Chinese speech to Chinese text.   
+        /// `chs2eng`: Chinese speech to English text. 
+        /// `chs2chseng`: Chinese speech to Chinese and English text.
+        /// </summary>
+        [JsonProperty("SubtitleConfiguration")]
+        public string SubtitleConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +147,8 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
             this.SetParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
             this.SetParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
+            this.SetParamSimple(map, prefix + "SmartSubtitles", this.SmartSubtitles);
+            this.SetParamSimple(map, prefix + "SubtitleConfiguration", this.SubtitleConfiguration);
         }
     }
 }

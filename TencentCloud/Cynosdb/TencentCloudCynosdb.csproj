@@ -111,6 +111,8 @@
     <Compile Include="V20190107\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20190107\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeFlowRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeFlowResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceDetailRequest.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceDetailResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceSlowQueriesRequest.cs" />
@@ -187,6 +189,8 @@
     <Compile Include="V20190107\Models\RemoveClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20190107\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="V20190107\Models\RestartInstanceRequest.cs" />
+    <Compile Include="V20190107\Models\RestartInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ResumeServerlessRequest.cs" />
     <Compile Include="V20190107\Models\ResumeServerlessResponse.cs" />
     <Compile Include="V20190107\Models\RollbackTimeRange.cs" />

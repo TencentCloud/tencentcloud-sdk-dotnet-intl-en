@@ -21,32 +21,32 @@ namespace TencentCloud.Mdl.V20200326.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DashRemuxSettingsInfo : AbstractModel
+    public class InputStreamInfo : AbstractModel
     {
         
         /// <summary>
-        /// Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+        /// The input stream address.
         /// </summary>
-        [JsonProperty("SegmentDuration")]
-        public ulong? SegmentDuration{ get; set; }
+        [JsonProperty("InputAddress")]
+        public string InputAddress{ get; set; }
 
         /// <summary>
-        /// Number of segments. Value range: [1,30]. Default value: 5.
+        /// The input stream path.
         /// </summary>
-        [JsonProperty("SegmentNumber")]
-        public ulong? SegmentNumber{ get; set; }
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
 
         /// <summary>
-        /// Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
+        /// The input stream name.
         /// </summary>
-        [JsonProperty("PeriodTriggers")]
-        public string PeriodTriggers{ get; set; }
+        [JsonProperty("StreamName")]
+        public string StreamName{ get; set; }
 
         /// <summary>
-        /// The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+        /// The input stream status. `1` indicates the stream is active.
         /// </summary>
-        [JsonProperty("H265PackageType")]
-        public string H265PackageType{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SegmentDuration", this.SegmentDuration);
-            this.SetParamSimple(map, prefix + "SegmentNumber", this.SegmentNumber);
-            this.SetParamSimple(map, prefix + "PeriodTriggers", this.PeriodTriggers);
-            this.SetParamSimple(map, prefix + "H265PackageType", this.H265PackageType);
+            this.SetParamSimple(map, prefix + "InputAddress", this.InputAddress);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

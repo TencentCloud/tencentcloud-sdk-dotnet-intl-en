@@ -1213,6 +1213,46 @@ namespace TencentCloud.Mdl.V20200326
         }
 
         /// <summary>
+        /// This API is used to query the stream status of a StreamLive input.
+        /// </summary>
+        /// <param name="req"><see cref="QueryInputStreamStateRequest"/></param>
+        /// <returns><see cref="QueryInputStreamStateResponse"/></returns>
+        public async Task<QueryInputStreamStateResponse> QueryInputStreamState(QueryInputStreamStateRequest req)
+        {
+             JsonResponseModel<QueryInputStreamStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryInputStreamState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInputStreamStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the stream status of a StreamLive input.
+        /// </summary>
+        /// <param name="req"><see cref="QueryInputStreamStateRequest"/></param>
+        /// <returns><see cref="QueryInputStreamStateResponse"/></returns>
+        public QueryInputStreamStateResponse QueryInputStreamStateSync(QueryInputStreamStateRequest req)
+        {
+             JsonResponseModel<QueryInputStreamStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryInputStreamState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInputStreamStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to start a StreamLive channel.
         /// </summary>
         /// <param name="req"><see cref="StartStreamLiveChannelRequest"/></param>

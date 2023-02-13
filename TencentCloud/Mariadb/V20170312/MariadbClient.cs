@@ -497,6 +497,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the encryption status of the instance data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="DescribeDBEncryptAttributesResponse"/></returns>
+        public async Task<DescribeDBEncryptAttributesResponse> DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the encryption status of the instance data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="DescribeDBEncryptAttributesResponse"/></returns>
+        public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributesSync(DescribeDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the TencentDB instance list. It supports filtering instances by project ID, instance ID, private address, and instance name.
         /// If no filter is specified, 20 instances will be returned by default. Up to 100 instances can be returned for a single request.
         /// </summary>

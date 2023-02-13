@@ -57,6 +57,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Iv")]
         public string Iv{ get; set; }
 
+        /// <summary>
+        /// The URI of the license server when AES-128 is used. This parameter may be empty.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KeyUri")]
+        public string KeyUri{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "Track", this.Track);
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "Iv", this.Iv);
+            this.SetParamSimple(map, prefix + "KeyUri", this.KeyUri);
         }
     }
 }

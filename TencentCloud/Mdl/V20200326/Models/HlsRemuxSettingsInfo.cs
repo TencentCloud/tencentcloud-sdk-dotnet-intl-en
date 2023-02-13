@@ -54,6 +54,19 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
+        /// <summary>
+        /// The segment type. Valid values: `ts` (default), `fmp4`.
+        /// Currently, fMP4 segments do not support DRM or time shifting.
+        /// </summary>
+        [JsonProperty("SegmentType")]
+        public string SegmentType{ get; set; }
+
+        /// <summary>
+        /// The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+        /// </summary>
+        [JsonProperty("H265PackageType")]
+        public string H265PackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +78,8 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "PdtInsertion", this.PdtInsertion);
             this.SetParamSimple(map, prefix + "PdtDuration", this.PdtDuration);
             this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
+            this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
+            this.SetParamSimple(map, prefix + "H265PackageType", this.H265PackageType);
         }
     }
 }

@@ -86,6 +86,8 @@
     <Compile Include="V20170312\Models\DescribeAccountPrivilegesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBEncryptAttributesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBEncryptAttributesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBLogFilesRequest.cs" />

@@ -118,6 +118,7 @@
     <Compile Include="V20200326\Models\DestinationInfo.cs" />
     <Compile Include="V20200326\Models\DrmKey.cs" />
     <Compile Include="V20200326\Models\DrmSettingsInfo.cs" />
+    <Compile Include="V20200326\Models\EventNotifySetting.cs" />
     <Compile Include="V20200326\Models\EventSettingsDestinationReq.cs" />
     <Compile Include="V20200326\Models\EventSettingsDestinationResp.cs" />
     <Compile Include="V20200326\Models\EventSettingsReq.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="V20200326\Models\InputSecurityGroupInfo.cs" />
     <Compile Include="V20200326\Models\InputSettingInfo.cs" />
     <Compile Include="V20200326\Models\InputStatistics.cs" />
+    <Compile Include="V20200326\Models\InputStreamInfo.cs" />
     <Compile Include="V20200326\Models\LogInfo.cs" />
     <Compile Include="V20200326\Models\LogMessageInfo.cs" />
     <Compile Include="V20200326\Models\ModifyStreamLiveChannelRequest.cs" />
@@ -146,6 +148,10 @@
     <Compile Include="V20200326\Models\PlanReq.cs" />
     <Compile Include="V20200326\Models\PlanResp.cs" />
     <Compile Include="V20200326\Models\PlanSettings.cs" />
+    <Compile Include="V20200326\Models\PushEventSetting.cs" />
+    <Compile Include="V20200326\Models\QueryDispatchInputInfo.cs" />
+    <Compile Include="V20200326\Models\QueryInputStreamStateRequest.cs" />
+    <Compile Include="V20200326\Models\QueryInputStreamStateResponse.cs" />
     <Compile Include="V20200326\Models\RegionInfo.cs" />
     <Compile Include="V20200326\Models\SDMCSettingsInfo.cs" />
     <Compile Include="V20200326\Models\Scte35SettingsInfo.cs" />
