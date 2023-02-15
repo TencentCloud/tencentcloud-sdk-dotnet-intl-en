@@ -2074,5 +2074,45 @@ namespace TencentCloud.Dcdb.V20180411
              return rsp.Response;
         }
 
+        /// <summary>
+        /// This API is used to upgrade a pay-as-you-go TDSQL for MySQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeHourDCDBInstanceResponse"/></returns>
+        public async Task<UpgradeHourDCDBInstanceResponse> UpgradeHourDCDBInstance(UpgradeHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade a pay-as-you-go TDSQL for MySQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeHourDCDBInstanceResponse"/></returns>
+        public UpgradeHourDCDBInstanceResponse UpgradeHourDCDBInstanceSync(UpgradeHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

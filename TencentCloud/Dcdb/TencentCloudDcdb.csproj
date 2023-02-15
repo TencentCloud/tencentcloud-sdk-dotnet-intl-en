@@ -51,6 +51,7 @@
     <Compile Include="V20180411\Models\Account.cs" />
     <Compile Include="V20180411\Models\ActiveHourDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\ActiveHourDCDBInstanceResponse.cs" />
+    <Compile Include="V20180411\Models\AddShardConfig.cs" />
     <Compile Include="V20180411\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\BriefNodeInfo.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="V20180411\Models\DestroyHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20180411\Models\ExpandShardConfig.cs" />
     <Compile Include="V20180411\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20180411\Models\InitDCDBInstancesRequest.cs" />
@@ -169,12 +171,15 @@
     <Compile Include="V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="V20180411\Models\ShardInfo.cs" />
     <Compile Include="V20180411\Models\SlowLogData.cs" />
+    <Compile Include="V20180411\Models\SplitShardConfig.cs" />
     <Compile Include="V20180411\Models\SwitchDBInstanceHARequest.cs" />
     <Compile Include="V20180411\Models\SwitchDBInstanceHAResponse.cs" />
     <Compile Include="V20180411\Models\TableColumn.cs" />
     <Compile Include="V20180411\Models\TablePrivilege.cs" />
     <Compile Include="V20180411\Models\TerminateDedicatedDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\TerminateDedicatedDBInstanceResponse.cs" />
+    <Compile Include="V20180411\Models\UpgradeHourDCDBInstanceRequest.cs" />
+    <Compile Include="V20180411\Models\UpgradeHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\ViewPrivileges.cs" />
   </ItemGroup>
 </Project>
