@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] Vips{ get; set; }
 
         /// <summary>
-        /// Instance status. Value range: <br>0 - creating <br>1 - running <br>4 - isolating <br>5 - isolated (the instance can be restored and started in the recycle bin)
+        /// Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
         /// </summary>
         [JsonProperty("Status")]
         public ulong?[] Status{ get; set; }

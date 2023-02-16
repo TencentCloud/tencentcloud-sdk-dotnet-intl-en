@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// (Filter) filter by instance name. Fuzzy search is supported
+        /// Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }

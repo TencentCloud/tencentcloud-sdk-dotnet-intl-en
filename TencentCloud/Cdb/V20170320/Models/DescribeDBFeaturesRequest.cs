@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AiAnalysisTaskInput : AbstractModel
+    public class DescribeDBFeaturesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Video content analysis template ID.
+        /// Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
         /// </summary>
-        [JsonProperty("Definition")]
-        public ulong? Definition{ get; set; }
-
-        /// <summary>
-        /// An extended parameter, whose value is a stringfied JSON.
-        /// Note: This parameter is for customers with special requirements. It needs to be customized offline.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ExtendedParameter")]
-        public string ExtendedParameter{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Definition", this.Definition);
-            this.SetParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

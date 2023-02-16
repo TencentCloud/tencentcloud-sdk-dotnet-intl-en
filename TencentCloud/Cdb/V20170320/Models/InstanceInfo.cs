@@ -56,7 +56,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+        /// Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

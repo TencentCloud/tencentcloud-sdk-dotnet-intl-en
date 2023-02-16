@@ -38,6 +38,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("GroupList")]
         public DescribeGroup[] GroupList{ get; set; }
 
+        /// <summary>
+        /// Consumer group quota
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("GroupCountQuota")]
+        public ulong? GroupCountQuota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "GroupList.", this.GroupList);
+            this.SetParamSimple(map, prefix + "GroupCountQuota", this.GroupCountQuota);
         }
     }
 }
