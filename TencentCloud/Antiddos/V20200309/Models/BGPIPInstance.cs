@@ -187,6 +187,27 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("InstanceVersion")]
         public ulong? InstanceVersion{ get; set; }
 
+        /// <summary>
+        /// Convoy instance ID
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ConvoyId")]
+        public string ConvoyId{ get; set; }
+
+        /// <summary>
+        /// Pay-as-you-go bandwidth
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ElasticBandwidth")]
+        public ulong? ElasticBandwidth{ get; set; }
+
+        /// <summary>
+        /// Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EOFlag")]
+        public ulong? EOFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -216,6 +237,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
             this.SetParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
             this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+            this.SetParamSimple(map, prefix + "ConvoyId", this.ConvoyId);
+            this.SetParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
+            this.SetParamSimple(map, prefix + "EOFlag", this.EOFlag);
         }
     }
 }

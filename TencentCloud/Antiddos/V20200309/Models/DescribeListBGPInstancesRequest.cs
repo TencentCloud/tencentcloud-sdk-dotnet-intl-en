@@ -85,7 +85,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string[] FilterInstanceIdList{ get; set; }
 
         /// <summary>
-        /// Filters by Enterprise edition
+        /// Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
         /// </summary>
         [JsonProperty("FilterEnterpriseFlag")]
         public ulong? FilterEnterpriseFlag{ get; set; }
@@ -108,6 +108,24 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterTag")]
         public TagFilter FilterTag{ get; set; }
 
+        /// <summary>
+        /// Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+        /// </summary>
+        [JsonProperty("FilterTrialFlag")]
+        public ulong? FilterTrialFlag{ get; set; }
+
+        /// <summary>
+        /// Filters out Convoy instances
+        /// </summary>
+        [JsonProperty("FilterConvoy")]
+        public ulong? FilterConvoy{ get; set; }
+
+        /// <summary>
+        /// Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+        /// </summary>
+        [JsonProperty("ExcludeAdvancedInfo")]
+        public bool? ExcludeAdvancedInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +146,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterLightFlag", this.FilterLightFlag);
             this.SetParamSimple(map, prefix + "FilterChannelFlag", this.FilterChannelFlag);
             this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
+            this.SetParamSimple(map, prefix + "FilterTrialFlag", this.FilterTrialFlag);
+            this.SetParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
+            this.SetParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
         }
     }
 }

@@ -21,38 +21,14 @@ namespace TencentCloud.Antiddos.V20200309.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePendingRiskInfoResponse : AbstractModel
+    public class DescribeBizHttpStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// Whether the user is a paid user. Values: `true`, `false`.
+        /// Statistics on the HTTP status codes of business traffic
         /// </summary>
-        [JsonProperty("IsPaidUsr")]
-        public bool? IsPaidUsr{ get; set; }
-
-        /// <summary>
-        /// Number of resources being attacked
-        /// </summary>
-        [JsonProperty("AttackingCount")]
-        public long? AttackingCount{ get; set; }
-
-        /// <summary>
-        /// Number of resource blocked
-        /// </summary>
-        [JsonProperty("BlockingCount")]
-        public long? BlockingCount{ get; set; }
-
-        /// <summary>
-        /// Number of expired resources
-        /// </summary>
-        [JsonProperty("ExpiredCount")]
-        public long? ExpiredCount{ get; set; }
-
-        /// <summary>
-        /// Total pending risk events
-        /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
+        [JsonProperty("HttpStatusMap")]
+        public HttpStatusMap HttpStatusMap{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -66,11 +42,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsPaidUsr", this.IsPaidUsr);
-            this.SetParamSimple(map, prefix + "AttackingCount", this.AttackingCount);
-            this.SetParamSimple(map, prefix + "BlockingCount", this.BlockingCount);
-            this.SetParamSimple(map, prefix + "ExpiredCount", this.ExpiredCount);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamObj(map, prefix + "HttpStatusMap.", this.HttpStatusMap);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

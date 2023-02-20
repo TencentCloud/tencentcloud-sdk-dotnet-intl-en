@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SwitchWaterPrintConfigRequest : AbstractModel
+    public class HttpsBilling : AbstractModel
     {
         
         /// <summary>
-        /// Anti-DDoS instance ID
+        /// HTTPS Service
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// Watermark status. `1`: enabled; `0`: disabled.
-        /// </summary>
-        [JsonProperty("OpenStatus")]
-        public long? OpenStatus{ get; set; }
-
-        /// <summary>
-        /// Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
-        /// </summary>
-        [JsonProperty("CloudSdkProxy")]
-        public long? CloudSdkProxy{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "OpenStatus", this.OpenStatus);
-            this.SetParamSimple(map, prefix + "CloudSdkProxy", this.CloudSdkProxy);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

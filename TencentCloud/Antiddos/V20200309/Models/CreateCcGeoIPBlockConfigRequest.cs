@@ -49,7 +49,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+        /// CC regional blocking configuration
         /// </summary>
         [JsonProperty("CcGeoIPBlockConfig")]
         public CcGeoIPBlockConfig CcGeoIPBlockConfig{ get; set; }

@@ -58,9 +58,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public IpFilterPathRule[] FilterRules{ get; set; }
 
         /// <summary>
-        /// HTTP code returned when the IP allowlist/blocklist verification fails
-        /// Valid values: 400-499
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }

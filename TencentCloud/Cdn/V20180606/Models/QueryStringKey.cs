@@ -39,8 +39,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Reorder{ get; set; }
 
         /// <summary>
-        /// Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

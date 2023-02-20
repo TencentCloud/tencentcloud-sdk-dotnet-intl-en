@@ -136,6 +136,8 @@
     <Compile Include="V20200309\Models\DescribeBasicDeviceStatusResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBgpBizTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBgpBizTrendResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeBizHttpStatusRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeBizHttpStatusResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBizTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
@@ -200,6 +202,7 @@
     <Compile Include="V20200309\Models\EipAddressRelation.cs" />
     <Compile Include="V20200309\Models\EipProductInfo.cs" />
     <Compile Include="V20200309\Models\ForwardListener.cs" />
+    <Compile Include="V20200309\Models\HttpStatusMap.cs" />
     <Compile Include="V20200309\Models\IPAlarmThresholdRelation.cs" />
     <Compile Include="V20200309\Models\IPLineInfo.cs" />
     <Compile Include="V20200309\Models\InsL7Rules.cs" />

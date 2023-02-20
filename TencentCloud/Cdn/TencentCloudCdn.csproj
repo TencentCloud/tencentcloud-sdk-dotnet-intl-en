@@ -170,6 +170,7 @@
     <Compile Include="V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="V20180606\Models\HttpHeaderRule.cs" />
     <Compile Include="V20180606\Models\Https.cs" />
+    <Compile Include="V20180606\Models\HttpsBilling.cs" />
     <Compile Include="V20180606\Models\HwPrivateAccess.cs" />
     <Compile Include="V20180606\Models\ImageOptimization.cs" />
     <Compile Include="V20180606\Models\IpFilter.cs" />

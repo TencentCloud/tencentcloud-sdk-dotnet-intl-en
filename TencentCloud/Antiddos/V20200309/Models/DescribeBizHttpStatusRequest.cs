@@ -21,11 +21,11 @@ namespace TencentCloud.Antiddos.V20200309.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBizTrendRequest : AbstractModel
+    public class DescribeBizHttpStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+        /// Statistical mode. Value: `sum`.
         /// </summary>
         [JsonProperty("Statistics")]
         public string Statistics{ get; set; }
@@ -37,37 +37,31 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Business{ get; set; }
 
         /// <summary>
-        /// Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
+        /// Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
         /// </summary>
         [JsonProperty("Period")]
-        public ulong? Period{ get; set; }
+        public long? Period{ get; set; }
 
         /// <summary>
-        /// Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+        /// Statistics start time, such as `2020-02-01 12:04:12`
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End of the time range for the query, such as `2020-09-22 00:00:00`.
+        /// Statistics end time, such as `2020-02-03 18:03:23`
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// The resource ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-        /// </summary>
-        [JsonProperty("MetricName")]
-        public string MetricName{ get; set; }
-
-        /// <summary>
-        /// You can query data by specifying a domain name when the metric is `qps`.
+        /// Specific domain name query
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -90,7 +84,6 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamArrayObj(map, prefix + "ProtoInfo.", this.ProtoInfo);
         }

@@ -1333,6 +1333,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// This API is used to get the statistics on the status codes of business traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizHttpStatusRequest"/></param>
+        /// <returns><see cref="DescribeBizHttpStatusResponse"/></returns>
+        public async Task<DescribeBizHttpStatusResponse> DescribeBizHttpStatus(DescribeBizHttpStatusRequest req)
+        {
+             JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBizHttpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizHttpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the statistics on the status codes of business traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizHttpStatusRequest"/></param>
+        /// <returns><see cref="DescribeBizHttpStatusResponse"/></returns>
+        public DescribeBizHttpStatusResponse DescribeBizHttpStatusSync(DescribeBizHttpStatusRequest req)
+        {
+             JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBizHttpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizHttpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the traffic flow data collected in the specified period.
         /// </summary>
         /// <param name="req"><see cref="DescribeBizTrendRequest"/></param>
@@ -1853,7 +1893,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to get a list of Anti-DDoS Pro instances.
+        /// This API is used to get the list of Anti-DDoS Pro instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeListBGPInstancesRequest"/></param>
         /// <returns><see cref="DescribeListBGPInstancesResponse"/></returns>
@@ -1873,7 +1913,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// This API is used to get a list of Anti-DDoS Pro instances.
+        /// This API is used to get the list of Anti-DDoS Pro instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeListBGPInstancesRequest"/></param>
         /// <returns><see cref="DescribeListBGPInstancesResponse"/></returns>

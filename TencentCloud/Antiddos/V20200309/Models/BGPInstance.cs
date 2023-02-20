@@ -132,6 +132,19 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("VitalityVersion")]
         public ulong? VitalityVersion{ get; set; }
 
+        /// <summary>
+        /// Network line
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Line")]
+        public ulong? Line{ get; set; }
+
+        /// <summary>
+        /// Whether to enable elastic bandwidth
+        /// </summary>
+        [JsonProperty("ElasticServiceBandwidth")]
+        public ulong? ElasticServiceBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +167,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
             this.SetParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
             this.SetParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
+            this.SetParamSimple(map, prefix + "Line", this.Line);
+            this.SetParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
         }
     }
 }

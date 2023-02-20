@@ -60,6 +60,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Verify")]
         public string Verify{ get; set; }
 
+        /// <summary>
+        /// Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CloudSdkProxy")]
+        public long? CloudSdkProxy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +78,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamArrayObj(map, prefix + "Listeners.", this.Listeners);
             this.SetParamArrayObj(map, prefix + "Keys.", this.Keys);
             this.SetParamSimple(map, prefix + "Verify", this.Verify);
+            this.SetParamSimple(map, prefix + "CloudSdkProxy", this.CloudSdkProxy);
         }
     }
 }
