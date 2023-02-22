@@ -15,27 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScanVoiceResponse : AbstractModel
+    public class DeleteLiveTimeShiftTemplateRequest : AbstractModel
     {
         
         /// <summary>
-        /// Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-        /// <li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
+        /// The template ID.
         /// </summary>
-        [JsonProperty("Data")]
-        public ScanVoiceResult[] Data{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TemplateId")]
+        public long? TemplateId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +36,7 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

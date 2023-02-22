@@ -133,6 +133,8 @@
     <Compile Include="V20190107\Models\DescribeRollbackTimeRangeResponse.cs" />
     <Compile Include="V20190107\Models\DescribeRollbackTimeValidityRequest.cs" />
     <Compile Include="V20190107\Models\DescribeRollbackTimeValidityResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeZonesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesRequest.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesResponse.cs" />
     <Compile Include="V20190107\Models\InquirePriceCreateRequest.cs" />
@@ -168,6 +170,7 @@
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigResponse.cs" />
     <Compile Include="V20190107\Models\ModifyParamItem.cs" />
+    <Compile Include="V20190107\Models\Module.cs" />
     <Compile Include="V20190107\Models\NetAddr.cs" />
     <Compile Include="V20190107\Models\NewAccount.cs" />
     <Compile Include="V20190107\Models\ObjectTask.cs" />
@@ -195,6 +198,8 @@
     <Compile Include="V20190107\Models\ResumeServerlessResponse.cs" />
     <Compile Include="V20190107\Models\RollbackTimeRange.cs" />
     <Compile Include="V20190107\Models\RuleFilters.cs" />
+    <Compile Include="V20190107\Models\SaleRegion.cs" />
+    <Compile Include="V20190107\Models\SaleZone.cs" />
     <Compile Include="V20190107\Models\SearchClusterDatabasesRequest.cs" />
     <Compile Include="V20190107\Models\SearchClusterDatabasesResponse.cs" />
     <Compile Include="V20190107\Models\SearchClusterTablesRequest.cs" />
@@ -203,6 +208,8 @@
     <Compile Include="V20190107\Models\SetRenewFlagRequest.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagResponse.cs" />
     <Compile Include="V20190107\Models\SlowQueriesItem.cs" />
+    <Compile Include="V20190107\Models\SwitchClusterVpcRequest.cs" />
+    <Compile Include="V20190107\Models\SwitchClusterVpcResponse.cs" />
     <Compile Include="V20190107\Models\SwitchClusterZoneRequest.cs" />
     <Compile Include="V20190107\Models\SwitchClusterZoneResponse.cs" />
     <Compile Include="V20190107\Models\SwitchProxyVpcRequest.cs" />

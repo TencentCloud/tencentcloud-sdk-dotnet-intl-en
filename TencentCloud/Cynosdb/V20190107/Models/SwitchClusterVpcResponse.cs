@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeScanResultListRequest : AbstractModel
+    public class SwitchClusterVpcResponse : AbstractModel
     {
         
         /// <summary>
-        /// Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
+        /// Async task ID
         /// </summary>
-        [JsonProperty("BizId")]
-        public ulong? BizId{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
-        /// List of IDs of the tasks to be queried. Up to 100 entries can be added in the ID list.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("TaskIdList")]
-        public string[] TaskIdList{ get; set; }
-
-        /// <summary>
-        /// Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BizId", this.BizId);
-            this.SetParamArraySimple(map, prefix + "TaskIdList.", this.TaskIdList);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

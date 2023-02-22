@@ -41,8 +41,8 @@ namespace TencentCloud.Live.V20180801.Models
         public long? OutputStreamType{ get; set; }
 
         /// <summary>
-        /// Output stream bitrate. Value range: [1,50000].
-        /// If this parameter is left empty, the system will automatically determine.
+        /// The output bitrate. Value range: 1-10000.
+        /// If you do not specify this, the system will select a bitrate automatically.
         /// </summary>
         [JsonProperty("OutputStreamBitRate")]
         public long? OutputStreamBitRate{ get; set; }

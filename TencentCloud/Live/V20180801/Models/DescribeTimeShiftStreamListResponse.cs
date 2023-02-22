@@ -15,21 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeScanResultListResponse : AbstractModel
+    public class DescribeTimeShiftStreamListResponse : AbstractModel
     {
         
         /// <summary>
-        /// Result of the voice detection task to be queried
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// The total number of records in the specified time period.
         /// </summary>
-        [JsonProperty("Data")]
-        public DescribeScanResult[] Data{ get; set; }
+        [JsonProperty("TotalSize")]
+        public long? TotalSize{ get; set; }
+
+        /// <summary>
+        /// The information of the streams.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StreamList")]
+        public TimeShiftStreamInfo[] StreamList{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,7 +49,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "TotalSize", this.TotalSize);
+            this.SetParamArrayObj(map, prefix + "StreamList.", this.StreamList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

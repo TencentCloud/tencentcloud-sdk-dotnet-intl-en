@@ -1453,6 +1453,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to query the AZ information in a purchasable region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZonesRequest"/></param>
+        /// <returns><see cref="DescribeZonesResponse"/></returns>
+        public async Task<DescribeZonesResponse> DescribeZones(DescribeZonesRequest req)
+        {
+             JsonResponseModel<DescribeZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the AZ information in a purchasable region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZonesRequest"/></param>
+        /// <returns><see cref="DescribeZonesResponse"/></returns>
+        public DescribeZonesResponse DescribeZonesSync(DescribeZonesRequest req)
+        {
+             JsonResponseModel<DescribeZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to export the slow logs of an instance.
         /// </summary>
         /// <param name="req"><see cref="ExportInstanceSlowQueriesRequest"/></param>
@@ -2484,6 +2524,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "SetRenewFlag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the cluster VPC.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchClusterVpcRequest"/></param>
+        /// <returns><see cref="SwitchClusterVpcResponse"/></returns>
+        public async Task<SwitchClusterVpcResponse> SwitchClusterVpc(SwitchClusterVpcRequest req)
+        {
+             JsonResponseModel<SwitchClusterVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchClusterVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchClusterVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the cluster VPC.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchClusterVpcRequest"/></param>
+        /// <returns><see cref="SwitchClusterVpcResponse"/></returns>
+        public SwitchClusterVpcResponse SwitchClusterVpcSync(SwitchClusterVpcRequest req)
+        {
+             JsonResponseModel<SwitchClusterVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchClusterVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchClusterVpcResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

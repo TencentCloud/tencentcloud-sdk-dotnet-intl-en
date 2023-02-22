@@ -683,6 +683,88 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to create a time shifting rule. You need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/86169?from_cn_redirect=1) API to create a time shifting template, and then call this API to bind the template ID returned to a stream.
+        /// <br>More about time shifting: [Time Shifting](https://intl.cloud.tencent.com/document/product/267/86134?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveTimeShiftRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveTimeShiftRuleResponse"/></returns>
+        public async Task<CreateLiveTimeShiftRuleResponse> CreateLiveTimeShiftRule(CreateLiveTimeShiftRuleRequest req)
+        {
+             JsonResponseModel<CreateLiveTimeShiftRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveTimeShiftRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveTimeShiftRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a time shifting rule. You need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/86169?from_cn_redirect=1) API to create a time shifting template, and then call this API to bind the template ID returned to a stream.
+        /// <br>More about time shifting: [Time Shifting](https://intl.cloud.tencent.com/document/product/267/86134?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveTimeShiftRuleRequest"/></param>
+        /// <returns><see cref="CreateLiveTimeShiftRuleResponse"/></returns>
+        public CreateLiveTimeShiftRuleResponse CreateLiveTimeShiftRuleSync(CreateLiveTimeShiftRuleRequest req)
+        {
+             JsonResponseModel<CreateLiveTimeShiftRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLiveTimeShiftRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveTimeShiftRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a time shifting template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveTimeShiftTemplateResponse"/></returns>
+        public async Task<CreateLiveTimeShiftTemplateResponse> CreateLiveTimeShiftTemplate(CreateLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<CreateLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveTimeShiftTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a time shifting template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="CreateLiveTimeShiftTemplateResponse"/></returns>
+        public CreateLiveTimeShiftTemplateResponse CreateLiveTimeShiftTemplateSync(CreateLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<CreateLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveTimeShiftTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API to create a transcoding template and bind the returned template ID to the stream.
         /// <br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
         /// </summary>
@@ -1222,6 +1304,86 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a time shifting rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveTimeShiftRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveTimeShiftRuleResponse"/></returns>
+        public async Task<DeleteLiveTimeShiftRuleResponse> DeleteLiveTimeShiftRule(DeleteLiveTimeShiftRuleRequest req)
+        {
+             JsonResponseModel<DeleteLiveTimeShiftRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveTimeShiftRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveTimeShiftRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a time shifting rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveTimeShiftRuleRequest"/></param>
+        /// <returns><see cref="DeleteLiveTimeShiftRuleResponse"/></returns>
+        public DeleteLiveTimeShiftRuleResponse DeleteLiveTimeShiftRuleSync(DeleteLiveTimeShiftRuleRequest req)
+        {
+             JsonResponseModel<DeleteLiveTimeShiftRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLiveTimeShiftRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveTimeShiftRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a time shifting template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveTimeShiftTemplateResponse"/></returns>
+        public async Task<DeleteLiveTimeShiftTemplateResponse> DeleteLiveTimeShiftTemplate(DeleteLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveTimeShiftTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a time shifting template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLiveTimeShiftTemplateResponse"/></returns>
+        public DeleteLiveTimeShiftTemplateResponse DeleteLiveTimeShiftTemplateSync(DeleteLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveTimeShiftTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2759,7 +2921,87 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query the details of transcoding on a specified day or in a specified period of time.
+        /// This API is used to query time shifting rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftRulesResponse"/></returns>
+        public async Task<DescribeLiveTimeShiftRulesResponse> DescribeLiveTimeShiftRules(DescribeLiveTimeShiftRulesRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveTimeShiftRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query time shifting rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftRulesRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftRulesResponse"/></returns>
+        public DescribeLiveTimeShiftRulesResponse DescribeLiveTimeShiftRulesSync(DescribeLiveTimeShiftRulesRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveTimeShiftRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query time shifting templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftTemplatesResponse"/></returns>
+        public async Task<DescribeLiveTimeShiftTemplatesResponse> DescribeLiveTimeShiftTemplates(DescribeLiveTimeShiftTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveTimeShiftTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query time shifting templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftTemplatesResponse"/></returns>
+        public DescribeLiveTimeShiftTemplatesResponse DescribeLiveTimeShiftTemplatesSync(DescribeLiveTimeShiftTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveTimeShiftTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the transcoding details of a particular day or a specific time period. Querying may fail if the amount of data queried is too large. In such cases, try shortening the time period.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeDetailInfoRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeDetailInfoResponse"/></returns>
@@ -2779,7 +3021,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query the details of transcoding on a specified day or in a specified period of time.
+        /// This API is used to query the transcoding details of a particular day or a specific time period. Querying may fail if the amount of data queried is too large. In such cases, try shortening the time period.
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeDetailInfoRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeDetailInfoResponse"/></returns>
@@ -3360,6 +3602,86 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStreamPushInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPushInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the time shifting details of a specific time period (up to 24 hours). You need to call `DescribeTimeShiftStreamList` first to get the request parameters of this API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimeShiftRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeTimeShiftRecordDetailResponse"/></returns>
+        public async Task<DescribeTimeShiftRecordDetailResponse> DescribeTimeShiftRecordDetail(DescribeTimeShiftRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimeShiftRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the time shifting details of a specific time period (up to 24 hours). You need to call `DescribeTimeShiftStreamList` first to get the request parameters of this API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimeShiftRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeTimeShiftRecordDetailResponse"/></returns>
+        public DescribeTimeShiftRecordDetailResponse DescribeTimeShiftRecordDetailSync(DescribeTimeShiftRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimeShiftRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the time shifted streams in a specific time period (up to 24 hours).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimeShiftStreamListRequest"/></param>
+        /// <returns><see cref="DescribeTimeShiftStreamListResponse"/></returns>
+        public async Task<DescribeTimeShiftStreamListResponse> DescribeTimeShiftStreamList(DescribeTimeShiftStreamListRequest req)
+        {
+             JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimeShiftStreamList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeShiftStreamListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the time shifted streams in a specific time period (up to 24 hours).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimeShiftStreamListRequest"/></param>
+        /// <returns><see cref="DescribeTimeShiftStreamListResponse"/></returns>
+        public DescribeTimeShiftStreamListResponse DescribeTimeShiftStreamListSync(DescribeTimeShiftStreamListRequest req)
+        {
+             JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimeShiftStreamList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeShiftStreamListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4050,6 +4372,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLiveSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a standby stream template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveTimeShiftTemplateResponse"/></returns>
+        public async Task<ModifyLiveTimeShiftTemplateResponse> ModifyLiveTimeShiftTemplate(ModifyLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<ModifyLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveTimeShiftTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a standby stream template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveTimeShiftTemplateRequest"/></param>
+        /// <returns><see cref="ModifyLiveTimeShiftTemplateResponse"/></returns>
+        public ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplateSync(ModifyLiveTimeShiftTemplateRequest req)
+        {
+             JsonResponseModel<ModifyLiveTimeShiftTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveTimeShiftTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveTimeShiftTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

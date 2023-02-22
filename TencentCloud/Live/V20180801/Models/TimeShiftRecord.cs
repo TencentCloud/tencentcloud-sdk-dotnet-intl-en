@@ -15,44 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScanDetail : AbstractModel
+    public class TimeShiftRecord : AbstractModel
     {
         
         /// <summary>
-        /// Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
+        /// The session ID.
         /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
+        [JsonProperty("Sid")]
+        public string Sid{ get; set; }
 
         /// <summary>
-        /// Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
-        /// </summary>
-        [JsonProperty("Rate")]
-        public string Rate{ get; set; }
-
-        /// <summary>
-        /// Non-compliant keyword
-        /// </summary>
-        [JsonProperty("KeyWord")]
-        public string KeyWord{ get; set; }
-
-        /// <summary>
-        /// Start time offset of keyword from 0 in audio (in milliseconds)
+        /// The recording start time, which is a Unix timestamp.
         /// </summary>
         [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
+        public long? StartTime{ get; set; }
 
         /// <summary>
-        /// End time offset of keyword from 0 in audio (in milliseconds)
+        /// The recording end time, which is a Unix timestamp.
         /// </summary>
         [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
+        public long? EndTime{ get; set; }
 
 
         /// <summary>
@@ -60,9 +48,7 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Label", this.Label);
-            this.SetParamSimple(map, prefix + "Rate", this.Rate);
-            this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
+            this.SetParamSimple(map, prefix + "Sid", this.Sid);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }

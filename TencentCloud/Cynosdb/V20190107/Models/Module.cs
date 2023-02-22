@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Task : AbstractModel
+    public class Module : AbstractModel
     {
         
         /// <summary>
-        /// Unique data ID
+        /// Whether it is supported. Valid values: `yes`, `no`.
         /// </summary>
-        [JsonProperty("DataId")]
-        public string DataId{ get; set; }
+        [JsonProperty("IsDisable")]
+        public string IsDisable{ get; set; }
 
         /// <summary>
-        /// URL-encoded data file URL, which is a pull address if the detected voice is a stream.
+        /// Module name
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
-        /// </summary>
-        [JsonProperty("RoomId")]
-        public string RoomId{ get; set; }
-
-        /// <summary>
-        /// GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
-        /// </summary>
-        [JsonProperty("OpenId")]
-        public string OpenId{ get; set; }
+        [JsonProperty("ModuleName")]
+        public string ModuleName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DataId", this.DataId);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
-            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "IsDisable", this.IsDisable);
+            this.SetParamSimple(map, prefix + "ModuleName", this.ModuleName);
         }
     }
 }

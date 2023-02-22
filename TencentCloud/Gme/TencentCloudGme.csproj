@@ -62,9 +62,6 @@
     <Compile Include="V20180711\Models\DescribeAppStatisticsResponse.cs" />
     <Compile Include="V20180711\Models\DescribeApplicationDataRequest.cs" />
     <Compile Include="V20180711\Models\DescribeApplicationDataResponse.cs" />
-    <Compile Include="V20180711\Models\DescribeScanResult.cs" />
-    <Compile Include="V20180711\Models\DescribeScanResultListRequest.cs" />
-    <Compile Include="V20180711\Models\DescribeScanResultListResponse.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusRequest.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResp.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResponse.cs" />
@@ -72,15 +69,9 @@
     <Compile Include="V20180711\Models\RealTimeSpeechStatisticsItem.cs" />
     <Compile Include="V20180711\Models\RealtimeSpeechConf.cs" />
     <Compile Include="V20180711\Models\RealtimeTextStatisticsItem.cs" />
-    <Compile Include="V20180711\Models\ScanDetail.cs" />
-    <Compile Include="V20180711\Models\ScanPiece.cs" />
-    <Compile Include="V20180711\Models\ScanVoiceRequest.cs" />
-    <Compile Include="V20180711\Models\ScanVoiceResponse.cs" />
-    <Compile Include="V20180711\Models\ScanVoiceResult.cs" />
     <Compile Include="V20180711\Models\StatisticsItem.cs" />
     <Compile Include="V20180711\Models\StreamTextStatisticsItem.cs" />
     <Compile Include="V20180711\Models\Tag.cs" />
-    <Compile Include="V20180711\Models\Task.cs" />
     <Compile Include="V20180711\Models\VoiceFilterConf.cs" />
     <Compile Include="V20180711\Models\VoiceFilterStatisticsItem.cs" />
     <Compile Include="V20180711\Models\VoiceMessageConf.cs" />
