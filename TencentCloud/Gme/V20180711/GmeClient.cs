@@ -213,6 +213,86 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// This API is used to query a recording task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordInfoRequest"/></param>
+        /// <returns><see cref="DescribeRecordInfoResponse"/></returns>
+        public async Task<DescribeRecordInfoResponse> DescribeRecordInfo(DescribeRecordInfoRequest req)
+        {
+             JsonResponseModel<DescribeRecordInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query a recording task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordInfoRequest"/></param>
+        /// <returns><see cref="DescribeRecordInfoResponse"/></returns>
+        public DescribeRecordInfoResponse DescribeRecordInfoSync(DescribeRecordInfoRequest req)
+        {
+             JsonResponseModel<DescribeRecordInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the recording task in a room.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
+        public async Task<DescribeTaskInfoResponse> DescribeTaskInfo(DescribeTaskInfoRequest req)
+        {
+             JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the recording task in a room.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
+        public DescribeTaskInfoResponse DescribeTaskInfoSync(DescribeTaskInfoRequest req)
+        {
+             JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to change the status of an application.
         /// </summary>
         /// <param name="req"><see cref="ModifyAppStatusRequest"/></param>
@@ -244,6 +324,126 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAppStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify recording configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordInfoRequest"/></param>
+        /// <returns><see cref="ModifyRecordInfoResponse"/></returns>
+        public async Task<ModifyRecordInfoResponse> ModifyRecordInfo(ModifyRecordInfoRequest req)
+        {
+             JsonResponseModel<ModifyRecordInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRecordInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify recording configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordInfoRequest"/></param>
+        /// <returns><see cref="ModifyRecordInfoResponse"/></returns>
+        public ModifyRecordInfoResponse ModifyRecordInfoSync(ModifyRecordInfoRequest req)
+        {
+             JsonResponseModel<ModifyRecordInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRecordInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start recording.
+        /// </summary>
+        /// <param name="req"><see cref="StartRecordRequest"/></param>
+        /// <returns><see cref="StartRecordResponse"/></returns>
+        public async Task<StartRecordResponse> StartRecord(StartRecordRequest req)
+        {
+             JsonResponseModel<StartRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start recording.
+        /// </summary>
+        /// <param name="req"><see cref="StartRecordRequest"/></param>
+        /// <returns><see cref="StartRecordResponse"/></returns>
+        public StartRecordResponse StartRecordSync(StartRecordRequest req)
+        {
+             JsonResponseModel<StartRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop recording.
+        /// </summary>
+        /// <param name="req"><see cref="StopRecordRequest"/></param>
+        /// <returns><see cref="StopRecordResponse"/></returns>
+        public async Task<StopRecordResponse> StopRecord(StopRecordRequest req)
+        {
+             JsonResponseModel<StopRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop recording.
+        /// </summary>
+        /// <param name="req"><see cref="StopRecordRequest"/></param>
+        /// <returns><see cref="StopRecordResponse"/></returns>
+        public StopRecordResponse StopRecordSync(StopRecordRequest req)
+        {
+             JsonResponseModel<StopRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

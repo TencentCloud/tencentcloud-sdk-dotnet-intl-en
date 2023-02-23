@@ -44,8 +44,8 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// The Hive-shared metadatabase type. Valid values:
-        /// <li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-        /// <li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+        /// <li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+        /// <li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
         /// <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
         /// </summary>
         [JsonProperty("MetaType")]

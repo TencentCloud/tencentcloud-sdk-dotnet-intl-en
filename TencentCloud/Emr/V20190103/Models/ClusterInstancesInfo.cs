@@ -338,6 +338,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("IsMultiZoneCluster")]
         public bool? IsMultiZoneCluster{ get; set; }
 
+        /// <summary>
+        /// Whether the feature of automatic abnormal node replacement is enabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsCvmReplace")]
+        public bool? IsCvmReplace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -385,6 +392,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
             this.SetParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
+            this.SetParamSimple(map, prefix + "IsCvmReplace", this.IsCvmReplace);
         }
     }
 }
