@@ -1091,6 +1091,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the default encryption status of an instance backup.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeBackupEncryptionStatusResponse"/></returns>
+        public async Task<DescribeBackupEncryptionStatusResponse> DescribeBackupEncryptionStatus(DescribeBackupEncryptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeBackupEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the default encryption status of an instance backup.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeBackupEncryptionStatusResponse"/></returns>
+        public DescribeBackupEncryptionStatusResponse DescribeBackupEncryptionStatusSync(DescribeBackupEncryptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeBackupEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
@@ -3305,6 +3345,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to set the default encryption status of an instance backup. 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupEncryptionStatusRequest"/></param>
+        /// <returns><see cref="ModifyBackupEncryptionStatusResponse"/></returns>
+        public async Task<ModifyBackupEncryptionStatusResponse> ModifyBackupEncryptionStatus(ModifyBackupEncryptionStatusRequest req)
+        {
+             JsonResponseModel<ModifyBackupEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to set the default encryption status of an instance backup. 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupEncryptionStatusRequest"/></param>
+        /// <returns><see cref="ModifyBackupEncryptionStatusResponse"/></returns>
+        public ModifyBackupEncryptionStatusResponse ModifyBackupEncryptionStatusSync(ModifyBackupEncryptionStatusRequest req)
+        {
+             JsonResponseModel<ModifyBackupEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
@@ -4033,6 +4113,66 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to enable the encryption feature for instance data storage, and custom keys are supported.
+        /// 
+        /// Note: Before enabling data storage encryption for an instance, you need to perform the following operations:
+        /// 
+        /// 1. [Initialize an instance](https://intl.cloud.tencent.com/document/api/236/15873?from_cn_redirect=1).
+        /// 
+        /// 2. Enable [KMS service](https://console.cloud.tencent.com/kms2)
+        /// 
+        /// 3. [Grant permission to access KMS](https://console.cloud.tencent.com/cam/role) for TencentDB for MySQL. The role name is `MySQL_QCSRole`, and the preset policy name is `QcloudAccessForMySQLRole`.
+        /// 
+        /// This API calling may take up to 10 seconds, causing the client to time out. If it returns `InternalError`, call `DescribeDBInstanceInfo` to confirm whether the backend encryption is enabled successfully.
+        /// </summary>
+        /// <param name="req"><see cref="OpenDBInstanceEncryptionRequest"/></param>
+        /// <returns><see cref="OpenDBInstanceEncryptionResponse"/></returns>
+        public async Task<OpenDBInstanceEncryptionResponse> OpenDBInstanceEncryption(OpenDBInstanceEncryptionRequest req)
+        {
+             JsonResponseModel<OpenDBInstanceEncryptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenDBInstanceEncryption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenDBInstanceEncryptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the encryption feature for instance data storage, and custom keys are supported.
+        /// 
+        /// Note: Before enabling data storage encryption for an instance, you need to perform the following operations:
+        /// 
+        /// 1. [Initialize an instance](https://intl.cloud.tencent.com/document/api/236/15873?from_cn_redirect=1).
+        /// 
+        /// 2. Enable [KMS service](https://console.cloud.tencent.com/kms2)
+        /// 
+        /// 3. [Grant permission to access KMS](https://console.cloud.tencent.com/cam/role) for TencentDB for MySQL. The role name is `MySQL_QCSRole`, and the preset policy name is `QcloudAccessForMySQLRole`.
+        /// 
+        /// This API calling may take up to 10 seconds, causing the client to time out. If it returns `InternalError`, call `DescribeDBInstanceInfo` to confirm whether the backend encryption is enabled successfully.
+        /// </summary>
+        /// <param name="req"><see cref="OpenDBInstanceEncryptionRequest"/></param>
+        /// <returns><see cref="OpenDBInstanceEncryptionResponse"/></returns>
+        public OpenDBInstanceEncryptionResponse OpenDBInstanceEncryptionSync(OpenDBInstanceEncryptionRequest req)
+        {
+             JsonResponseModel<OpenDBInstanceEncryptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenDBInstanceEncryption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenDBInstanceEncryptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (OpenDBInstanceGTID) is used to enable GTID for a TencentDB instance. Only instances on or above version 5.6 are supported.
         /// </summary>
         /// <param name="req"><see cref="OpenDBInstanceGTIDRequest"/></param>
@@ -4716,50 +4856,6 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "SwitchForUpgrade");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchForUpgradeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
-        /// 
-        /// This API is used to upgrade the configuration of database proxy.
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeCDBProxyRequest"/></param>
-        /// <returns><see cref="UpgradeCDBProxyResponse"/></returns>
-        public async Task<UpgradeCDBProxyResponse> UpgradeCDBProxy(UpgradeCDBProxyRequest req)
-        {
-             JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpgradeCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
-        /// 
-        /// This API is used to upgrade the configuration of database proxy.
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeCDBProxyRequest"/></param>
-        /// <returns><see cref="UpgradeCDBProxyResponse"/></returns>
-        public UpgradeCDBProxyResponse UpgradeCDBProxySync(UpgradeCDBProxyRequest req)
-        {
-             JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpgradeCDBProxy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

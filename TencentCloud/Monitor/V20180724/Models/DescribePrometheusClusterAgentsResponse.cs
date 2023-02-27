@@ -21,20 +21,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusZonesRequest : AbstractModel
+    public class DescribePrometheusClusterAgentsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// Information of the associated cluster
         /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
+        [JsonProperty("Agents")]
+        public PrometheusAgentOverview[] Agents{ get; set; }
 
         /// <summary>
-        /// Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// The total number of the associated clusters
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamArrayObj(map, prefix + "Agents.", this.Agents);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

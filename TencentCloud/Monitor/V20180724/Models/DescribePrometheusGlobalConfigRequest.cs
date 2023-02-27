@@ -21,20 +21,20 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusZonesRequest : AbstractModel
+    public class DescribePrometheusGlobalConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// Instance-level scrape configuration
         /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// Whether to disable statistics
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("DisableStatistics")]
+        public bool? DisableStatistics{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "DisableStatistics", this.DisableStatistics);
         }
     }
 }

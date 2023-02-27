@@ -21,20 +21,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusZonesRequest : AbstractModel
+    public class PrometheusClusterAgentPodConfig : AbstractModel
     {
         
         /// <summary>
-        /// Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// Whether to use HostNetWork
         /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
+        [JsonProperty("HostNet")]
+        public bool? HostNet{ get; set; }
 
         /// <summary>
-        /// Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// A parameter used to specify the running nodes for a pod
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("NodeSelector")]
+        public Label[] NodeSelector{ get; set; }
+
+        /// <summary>
+        /// Tolerable taints
+        /// </summary>
+        [JsonProperty("Tolerations")]
+        public Toleration[] Tolerations{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "HostNet", this.HostNet);
+            this.SetParamArrayObj(map, prefix + "NodeSelector.", this.NodeSelector);
+            this.SetParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
         }
     }
 }

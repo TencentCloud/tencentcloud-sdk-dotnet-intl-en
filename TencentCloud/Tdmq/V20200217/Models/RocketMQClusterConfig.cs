@@ -78,6 +78,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxLatencyTime")]
         public ulong? MaxLatencyTime{ get; set; }
 
+        /// <summary>
+        /// The maximum number of queues in a single topic
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxQueuesPerTopic")]
+        public ulong? MaxQueuesPerTopic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "UsedGroupNum", this.UsedGroupNum);
             this.SetParamSimple(map, prefix + "MaxRetentionTime", this.MaxRetentionTime);
             this.SetParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
+            this.SetParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
         }
     }
 }

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusZonesRequest : AbstractModel
+    public class ModifyBackupEncryptionStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
         /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("EncryptionStatus")]
+        public string EncryptionStatus{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
         }
     }
 }

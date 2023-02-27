@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeCDBProxyRequest : AbstractModel
+    public class DeletePrometheusConfigRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,40 +31,34 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Database proxy ID
+        /// Cluster type
         /// </summary>
-        [JsonProperty("ProxyGroupId")]
-        public string ProxyGroupId{ get; set; }
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
 
         /// <summary>
-        /// Number of proxy nodes
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("ProxyCount")]
-        public long? ProxyCount{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores per proxy node
+        /// List of names of the service monitors to be deleted
         /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        [JsonProperty("ServiceMonitors")]
+        public string[] ServiceMonitors{ get; set; }
 
         /// <summary>
-        /// Memory per proxy node
+        /// List of names of the pod monitors to be deleted
         /// </summary>
-        [JsonProperty("Mem")]
-        public long? Mem{ get; set; }
+        [JsonProperty("PodMonitors")]
+        public string[] PodMonitors{ get; set; }
 
         /// <summary>
-        /// Load rebalance mode. Valid values: `auto`, `manual`
+        /// List of names of the raw jobs to be deleted
         /// </summary>
-        [JsonProperty("ReloadBalance")]
-        public string ReloadBalance{ get; set; }
-
-        /// <summary>
-        /// Upgrade time. Valid values: `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time)
-        /// </summary>
-        [JsonProperty("UpgradeTime")]
-        public string UpgradeTime{ get; set; }
+        [JsonProperty("RawJobs")]
+        public string[] RawJobs{ get; set; }
 
 
         /// <summary>
@@ -73,12 +67,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
-            this.SetParamSimple(map, prefix + "ProxyCount", this.ProxyCount);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
-            this.SetParamSimple(map, prefix + "Mem", this.Mem);
-            this.SetParamSimple(map, prefix + "ReloadBalance", this.ReloadBalance);
-            this.SetParamSimple(map, prefix + "UpgradeTime", this.UpgradeTime);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
+            this.SetParamArraySimple(map, prefix + "PodMonitors.", this.PodMonitors);
+            this.SetParamArraySimple(map, prefix + "RawJobs.", this.RawJobs);
         }
     }
 }

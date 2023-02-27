@@ -21,29 +21,15 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusZonesRequest : AbstractModel
+    public class PrometheusAgentInfo : AbstractModel
     {
         
-        /// <summary>
-        /// Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
-        /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
-
-        /// <summary>
-        /// Region name. You only need to specify the value of either `RegionId` or `RegionName`.
-        /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
         }
     }
 }

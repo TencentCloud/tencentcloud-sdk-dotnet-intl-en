@@ -15,61 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRabbitMQNodeListRequest : AbstractModel
+    public class DescribePrometheusClusterAgentsRequest : AbstractModel
     {
         
         /// <summary>
-        /// TDMQ for RabbitMQ cluster ID
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Page offset
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The maximum entries per page
+        /// Page limit
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// Node name for fuzzy search
-        /// </summary>
-        [JsonProperty("NodeName")]
-        public string NodeName{ get; set; }
-
-        /// <summary>
-        /// Name and value of a filter.
-        /// Currently, only the `nodeStatus` filter is supported.
-        /// Valid values: `running`, `down`.
-        /// It is an array type and can contain multiple filters.
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
-
-        /// <summary>
-        /// Sorting by a specified element.
-        /// Valid values: `cpuUsage`, `diskUsage`.
-        /// </summary>
-        [JsonProperty("SortElement")]
-        public string SortElement{ get; set; }
-
-        /// <summary>
-        /// Sorting order.
-        /// Valid values: `ascend`, `descend`.
-        /// </summary>
-        [JsonProperty("SortOrder")]
-        public string SortOrder{ get; set; }
 
 
         /// <summary>
@@ -80,10 +51,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "SortElement", this.SortElement);
-            this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
         }
     }
 }

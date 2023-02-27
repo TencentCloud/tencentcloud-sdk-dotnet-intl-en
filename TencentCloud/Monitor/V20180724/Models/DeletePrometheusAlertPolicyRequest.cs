@@ -21,20 +21,26 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrometheusZonesRequest : AbstractModel
+    public class DeletePrometheusAlertPolicyRequest : AbstractModel
     {
         
         /// <summary>
-        /// Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// Instance ID
         /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+        /// List of alerting rule IDs
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("AlertIds")]
+        public string[] AlertIds{ get; set; }
+
+        /// <summary>
+        /// Alerting rule name
+        /// </summary>
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "AlertIds.", this.AlertIds);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
         }
     }
 }

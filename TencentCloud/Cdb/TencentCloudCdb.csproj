@@ -124,6 +124,8 @@
     <Compile Include="V20170320\Models\DescribeBackupConfigResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupDownloadRestrictionRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupDownloadRestrictionResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupEncryptionStatusRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupEncryptionStatusResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupOverviewRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupOverviewResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupSummariesRequest.cs" />
@@ -249,6 +251,8 @@
     <Compile Include="V20170320\Models\ModifyBackupConfigResponse.cs" />
     <Compile Include="V20170320\Models\ModifyBackupDownloadRestrictionRequest.cs" />
     <Compile Include="V20170320\Models\ModifyBackupDownloadRestrictionResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyBackupEncryptionStatusRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyBackupEncryptionStatusResponse.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyConnectionPoolRequest.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyConnectionPoolResponse.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyDescRequest.cs" />
@@ -285,6 +289,8 @@
     <Compile Include="V20170320\Models\OfflineIsolatedInstancesResponse.cs" />
     <Compile Include="V20170320\Models\OpenAuditServiceRequest.cs" />
     <Compile Include="V20170320\Models\OpenAuditServiceResponse.cs" />
+    <Compile Include="V20170320\Models\OpenDBInstanceEncryptionRequest.cs" />
+    <Compile Include="V20170320\Models\OpenDBInstanceEncryptionResponse.cs" />
     <Compile Include="V20170320\Models\OpenDBInstanceGTIDRequest.cs" />
     <Compile Include="V20170320\Models\OpenDBInstanceGTIDResponse.cs" />
     <Compile Include="V20170320\Models\OpenWanServiceRequest.cs" />
@@ -360,8 +366,6 @@
     <Compile Include="V20170320\Models\TagInfoUnit.cs" />
     <Compile Include="V20170320\Models\TagsInfoOfInstance.cs" />
     <Compile Include="V20170320\Models\TaskDetail.cs" />
-    <Compile Include="V20170320\Models\UpgradeCDBProxyRequest.cs" />
-    <Compile Include="V20170320\Models\UpgradeCDBProxyResponse.cs" />
     <Compile Include="V20170320\Models\UpgradeCDBProxyVersionRequest.cs" />
     <Compile Include="V20170320\Models\UpgradeCDBProxyVersionResponse.cs" />
     <Compile Include="V20170320\Models\UpgradeDBInstanceEngineVersionRequest.cs" />

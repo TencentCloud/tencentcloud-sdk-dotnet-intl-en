@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+        /// Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateRocketMQTopicRequest : AbstractModel
+    public class ModifyPrometheusConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
+        /// Instance ID
         /// </summary>
-        [JsonProperty("Topic")]
-        public string Topic{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Topic namespace. Currently, you can create topics only in one single namespace.
+        /// Cluster type
         /// </summary>
-        [JsonProperty("Namespaces")]
-        public string[] Namespaces{ get; set; }
-
-        /// <summary>
-        /// Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
 
         /// <summary>
         /// Cluster ID
@@ -49,16 +43,22 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Topic remarks (up to 128 characters)
+        /// Configuration of service monitors
         /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("ServiceMonitors")]
+        public PrometheusConfigItem[] ServiceMonitors{ get; set; }
 
         /// <summary>
-        /// Number of partitions, which doesn't take effect for globally sequential messages
+        /// Configuration of pod monitors
         /// </summary>
-        [JsonProperty("PartitionNum")]
-        public long? PartitionNum{ get; set; }
+        [JsonProperty("PodMonitors")]
+        public PrometheusConfigItem[] PodMonitors{ get; set; }
+
+        /// <summary>
+        /// Configuration of Prometheus raw jobs
+        /// </summary>
+        [JsonProperty("RawJobs")]
+        public PrometheusConfigItem[] RawJobs{ get; set; }
 
 
         /// <summary>
@@ -66,12 +66,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Topic", this.Topic);
-            this.SetParamArraySimple(map, prefix + "Namespaces.", this.Namespaces);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
-            this.SetParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
+            this.SetParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
+            this.SetParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
+            this.SetParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
         }
     }
 }

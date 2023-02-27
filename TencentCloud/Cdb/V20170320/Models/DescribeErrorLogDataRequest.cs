@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start timestamp.
+        /// Start timestamp, such as 1585142640.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// End timestamp.
+        /// End timestamp, such as 1585142640.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

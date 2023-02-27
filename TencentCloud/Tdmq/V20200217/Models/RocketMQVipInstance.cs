@@ -44,7 +44,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string InstanceVersion{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal).
+        /// Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

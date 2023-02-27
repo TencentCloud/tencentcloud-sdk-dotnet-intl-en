@@ -110,6 +110,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
+        /// <summary>
+        /// Cluster exception
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExceptionInformation")]
+        public string ExceptionInformation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +137,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
+            this.SetParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
         }
     }
 }
