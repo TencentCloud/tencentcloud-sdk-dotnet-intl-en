@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Kms.V20190118.Models
+namespace TencentCloud.Rum.V20210622.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnableKeyRotationRequest : AbstractModel
+    public class DescribeRumLogExportsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Unique CMK ID
+        /// Page size
         /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
 
         /// <summary>
-        /// The interval between each key rotation in days. Value range: 7 - 365 (default).
+        /// Page number
         /// </summary>
-        [JsonProperty("RotateDays")]
-        public ulong? RotateDays{ get; set; }
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
+
+        /// <summary>
+        /// Project ID (required)
+        /// </summary>
+        [JsonProperty("ID")]
+        public long? ID{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "RotateDays", this.RotateDays);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
         }
     }
 }

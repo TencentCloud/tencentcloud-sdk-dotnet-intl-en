@@ -43,8 +43,8 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? UserLevel{ get; set; }
 
         /// <summary>
-        /// Ultimate Edition expiration time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProExpireTime")]
         public ulong? ProExpireTime{ get; set; }

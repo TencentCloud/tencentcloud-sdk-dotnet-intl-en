@@ -37,8 +37,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public FaceRect FaceRect{ get; set; }
 
         /// <summary>
-        /// Status return code of detected face image. 0: normal. 
-        /// -1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+        /// The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
         /// </summary>
         [JsonProperty("RetCode")]
         public long? RetCode{ get; set; }

@@ -21,32 +21,20 @@ namespace TencentCloud.Rum.V20210622.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRumLogListRequest : AbstractModel
+    public class DescribeRumLogExportRequest : AbstractModel
     {
         
         /// <summary>
-        /// Sorting order (required). Valid values: `desc`, `asc`.
+        /// Export identifier name
         /// </summary>
-        [JsonProperty("OrderBy")]
-        public string OrderBy{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Start time in milliseconds. It is in timestamp format and is required.
+        /// Start time (required)
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
-
-        /// <summary>
-        /// The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// Page number
-        /// </summary>
-        [JsonProperty("Page")]
-        public long? Page{ get; set; }
 
         /// <summary>
         /// Query statement, which is required and can contain up to 4,096 characters.
@@ -55,7 +43,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// End time in milliseconds. It is in timestamp format and is required.
+        /// End time (required)
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -66,19 +54,24 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
+        /// <summary>
+        /// Filter field
+        /// </summary>
+        [JsonProperty("Fields")]
+        public string[] Fields{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamArraySimple(map, prefix + "Fields.", this.Fields);
         }
     }
 }

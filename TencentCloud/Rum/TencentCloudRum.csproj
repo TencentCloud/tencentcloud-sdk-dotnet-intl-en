@@ -138,6 +138,10 @@
     <Compile Include="V20210622\Models\DescribeReleaseFilesResponse.cs" />
     <Compile Include="V20210622\Models\DescribeRumGroupLogRequest.cs" />
     <Compile Include="V20210622\Models\DescribeRumGroupLogResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogExportRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogExportResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogExportsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeRumLogExportsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeRumLogListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeRumLogListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeRumStatsLogListRequest.cs" />
@@ -162,6 +166,8 @@
     <Compile Include="V20210622\Models\ReleaseFile.cs" />
     <Compile Include="V20210622\Models\ResumeInstanceRequest.cs" />
     <Compile Include="V20210622\Models\ResumeInstanceResponse.cs" />
+    <Compile Include="V20210622\Models\ResumeProjectRequest.cs" />
+    <Compile Include="V20210622\Models\ResumeProjectResponse.cs" />
     <Compile Include="V20210622\Models\RumAreaInfo.cs" />
     <Compile Include="V20210622\Models\RumProject.cs" />
     <Compile Include="V20210622\Models\RumPvInfo.cs" />

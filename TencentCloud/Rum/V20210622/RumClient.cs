@@ -141,7 +141,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to create a project (owned by the specified team).
+        /// This API is used to create a RUM application which belongs to a specific team.
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
         /// <returns><see cref="CreateProjectResponse"/></returns>
@@ -161,7 +161,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to create a project (owned by the specified team).
+        /// This API is used to create a RUM application which belongs to a specific team.
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
         /// <returns><see cref="CreateProjectResponse"/></returns>
@@ -261,7 +261,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to create a RUM instance.
+        /// This API is used to create a RUM business system.
         /// </summary>
         /// <param name="req"><see cref="CreateTawInstanceRequest"/></param>
         /// <returns><see cref="CreateTawInstanceResponse"/></returns>
@@ -281,7 +281,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to create a RUM instance.
+        /// This API is used to create a RUM business system.
         /// </summary>
         /// <param name="req"><see cref="CreateTawInstanceRequest"/></param>
         /// <returns><see cref="CreateTawInstanceResponse"/></returns>
@@ -1479,7 +1479,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the list of logs in a project (created by an instance).
+        /// This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeLogListRequest"/></param>
         /// <returns><see cref="DescribeLogListResponse"/></returns>
@@ -1499,7 +1499,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the list of logs in a project (created by an instance).
+        /// This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeLogListRequest"/></param>
         /// <returns><see cref="DescribeLogListResponse"/></returns>
@@ -1639,7 +1639,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the list of project reporting rates.
+        /// This API is used to get the sampling information of an application’s reporting APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectLimitsRequest"/></param>
         /// <returns><see cref="DescribeProjectLimitsResponse"/></returns>
@@ -1659,7 +1659,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the list of project reporting rates.
+        /// This API is used to get the sampling information of an application’s reporting APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectLimitsRequest"/></param>
         /// <returns><see cref="DescribeProjectLimitsResponse"/></returns>
@@ -1799,7 +1799,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the list of sourcemap files of a project.
+        /// This API is used to get the list of source maps of an application.
         /// </summary>
         /// <param name="req"><see cref="DescribeReleaseFilesRequest"/></param>
         /// <returns><see cref="DescribeReleaseFilesResponse"/></returns>
@@ -1819,7 +1819,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the list of sourcemap files of a project.
+        /// This API is used to get the list of source maps of an application.
         /// </summary>
         /// <param name="req"><see cref="DescribeReleaseFilesRequest"/></param>
         /// <returns><see cref="DescribeReleaseFilesResponse"/></returns>
@@ -1870,6 +1870,86 @@ namespace TencentCloud.Rum.V20210622
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRumGroupLog");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumGroupLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of logs in a project (created by an instance).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportRequest"/></param>
+        /// <returns><see cref="DescribeRumLogExportResponse"/></returns>
+        public async Task<DescribeRumLogExportResponse> DescribeRumLogExport(DescribeRumLogExportRequest req)
+        {
+             JsonResponseModel<DescribeRumLogExportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRumLogExport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogExportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of logs in a project (created by an instance).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportRequest"/></param>
+        /// <returns><see cref="DescribeRumLogExportResponse"/></returns>
+        public DescribeRumLogExportResponse DescribeRumLogExportSync(DescribeRumLogExportRequest req)
+        {
+             JsonResponseModel<DescribeRumLogExportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRumLogExport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogExportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of exported logs in a project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportsRequest"/></param>
+        /// <returns><see cref="DescribeRumLogExportsResponse"/></returns>
+        public async Task<DescribeRumLogExportsResponse> DescribeRumLogExports(DescribeRumLogExportsRequest req)
+        {
+             JsonResponseModel<DescribeRumLogExportsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRumLogExports");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogExportsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of exported logs in a project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRumLogExportsRequest"/></param>
+        /// <returns><see cref="DescribeRumLogExportsResponse"/></returns>
+        public DescribeRumLogExportsResponse DescribeRumLogExportsSync(DescribeRumLogExportsRequest req)
+        {
+             JsonResponseModel<DescribeRumLogExportsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRumLogExports");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRumLogExportsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2119,7 +2199,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to modify an instance.
+        /// This API is used to modify a RUM business system.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -2139,7 +2219,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to modify an instance.
+        /// This API is used to modify a RUM business system.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
         /// <returns><see cref="ModifyInstanceResponse"/></returns>
@@ -2159,7 +2239,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to modify a RUM project.
+        /// This API is used to modify the RUM application information.
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectRequest"/></param>
         /// <returns><see cref="ModifyProjectResponse"/></returns>
@@ -2179,7 +2259,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to modify a RUM project.
+        /// This API is used to modify the RUM application information.
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectRequest"/></param>
         /// <returns><see cref="ModifyProjectResponse"/></returns>
@@ -2239,7 +2319,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to resume an instance.
+        /// This API is used to recover a RUM business system so that you can use the application to report data normally.
         /// </summary>
         /// <param name="req"><see cref="ResumeInstanceRequest"/></param>
         /// <returns><see cref="ResumeInstanceResponse"/></returns>
@@ -2259,7 +2339,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to resume an instance.
+        /// This API is used to recover a RUM business system so that you can use the application to report data normally.
         /// </summary>
         /// <param name="req"><see cref="ResumeInstanceRequest"/></param>
         /// <returns><see cref="ResumeInstanceResponse"/></returns>
@@ -2270,6 +2350,46 @@ namespace TencentCloud.Rum.V20210622
              {
                  var strResp = this.InternalRequestSync(req, "ResumeInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recover an application and resume data reporting.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeProjectRequest"/></param>
+        /// <returns><see cref="ResumeProjectResponse"/></returns>
+        public async Task<ResumeProjectResponse> ResumeProject(ResumeProjectRequest req)
+        {
+             JsonResponseModel<ResumeProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResumeProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recover an application and resume data reporting.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeProjectRequest"/></param>
+        /// <returns><see cref="ResumeProjectResponse"/></returns>
+        public ResumeProjectResponse ResumeProjectSync(ResumeProjectRequest req)
+        {
+             JsonResponseModel<ResumeProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResumeProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeProjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Kms.V20190118.Models
+namespace TencentCloud.Rum.V20210622.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnableKeyRotationRequest : AbstractModel
+    public class ResumeProjectRequest : AbstractModel
     {
         
         /// <summary>
-        /// Unique CMK ID
+        /// Project ID
         /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
-
-        /// <summary>
-        /// The interval between each key rotation in days. Value range: 7 - 365 (default).
-        /// </summary>
-        [JsonProperty("RotateDays")]
-        public ulong? RotateDays{ get; set; }
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "RotateDays", this.RotateDays);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }
