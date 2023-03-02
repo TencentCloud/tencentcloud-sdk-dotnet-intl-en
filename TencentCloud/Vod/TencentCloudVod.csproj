@@ -154,12 +154,14 @@
     <Compile Include="V20180717\Models\AnimatedGraphicsTemplate.cs" />
     <Compile Include="V20180717\Models\ApplyUploadRequest.cs" />
     <Compile Include="V20180717\Models\ApplyUploadResponse.cs" />
+    <Compile Include="V20180717\Models\ArtifactRepairInfo.cs" />
     <Compile Include="V20180717\Models\AsrFullTextConfigureInfo.cs" />
     <Compile Include="V20180717\Models\AsrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AsrWordsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\AsrWordsConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AttachMediaSubtitlesRequest.cs" />
     <Compile Include="V20180717\Models\AttachMediaSubtitlesResponse.cs" />
+    <Compile Include="V20180717\Models\AudioDenoiseInfo.cs" />
     <Compile Include="V20180717\Models\AudioTemplateInfo.cs" />
     <Compile Include="V20180717\Models\AudioTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AudioTrackItem.cs" />
@@ -171,6 +173,7 @@
     <Compile Include="V20180717\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\ClipFileInfo2017.cs" />
     <Compile Include="V20180717\Models\ClipTask2017.cs" />
+    <Compile Include="V20180717\Models\ColorEnhanceInfo.cs" />
     <Compile Include="V20180717\Models\CommitUploadRequest.cs" />
     <Compile Include="V20180717\Models\CommitUploadResponse.cs" />
     <Compile Include="V20180717\Models\ComposeMediaOutput.cs" />
@@ -213,6 +216,8 @@
     <Compile Include="V20180717\Models\CreateProcedureTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateRoundPlayRequest.cs" />
+    <Compile Include="V20180717\Models\CreateRoundPlayResponse.cs" />
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
@@ -255,6 +260,8 @@
     <Compile Include="V20180717\Models\DeleteProcedureTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteRoundPlayRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteRoundPlayResponse.cs" />
     <Compile Include="V20180717\Models\DeleteSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteSnapshotByTimeOffsetTemplateRequest.cs" />
@@ -319,6 +326,8 @@
     <Compile Include="V20180717\Models\DescribeReviewDetailsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeReviewTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeReviewTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeRoundPlaysRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeRoundPlaysResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSampleSnapshotTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
@@ -366,6 +375,7 @@
     <Compile Include="V20180717\Models\ExtractTraceWatermarkTaskOutput.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\FaceEnhanceInfo.cs" />
     <Compile Include="V20180717\Models\FileDeleteResultItem.cs" />
     <Compile Include="V20180717\Models\FileDeleteTask.cs" />
     <Compile Include="V20180717\Models\FileReviewInfo.cs" />
@@ -374,6 +384,7 @@
     <Compile Include="V20180717\Models\ForbidMediaDistributionResponse.cs" />
     <Compile Include="V20180717\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="V20180717\Models\FrameTagConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\HDRInfo.cs" />
     <Compile Include="V20180717\Models\HeadTailConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HeadTailConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\HeadTailTaskInput.cs" />
@@ -395,6 +406,7 @@
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipResponse.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipStreamInfo.cs" />
+    <Compile Include="V20180717\Models\LowLightEnhanceInfo.cs" />
     <Compile Include="V20180717\Models\ManageTaskRequest.cs" />
     <Compile Include="V20180717\Models\ManageTaskResponse.cs" />
     <Compile Include="V20180717\Models\MediaAdaptiveDynamicStreamingInfo.cs" />
@@ -473,6 +485,8 @@
     <Compile Include="V20180717\Models\ModifyPersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\ModifyReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyRoundPlayRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyRoundPlayResponse.cs" />
     <Compile Include="V20180717\Models\ModifySampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifySampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifySnapshotByTimeOffsetTemplateRequest.cs" />
@@ -547,6 +561,14 @@
     <Compile Include="V20180717\Models\PullUploadTask.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheResponse.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaRequest.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaResponse.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaTargetAudioStream.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaTargetInfo.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaTargetVideoStream.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaTask.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaTaskInput.cs" />
+    <Compile Include="V20180717\Models\RebuildMediaTaskOutput.cs" />
     <Compile Include="V20180717\Models\ReduceMediaBitrateAdaptiveDynamicStreamingResult.cs" />
     <Compile Include="V20180717\Models\ReduceMediaBitrateMediaProcessTaskResult.cs" />
     <Compile Include="V20180717\Models\ReduceMediaBitrateTask.cs" />
@@ -559,6 +581,7 @@
     <Compile Include="V20180717\Models\RemoveWatermarkRequest.cs" />
     <Compile Include="V20180717\Models\RemoveWatermarkResponse.cs" />
     <Compile Include="V20180717\Models\RemoveWatermarkTask.cs" />
+    <Compile Include="V20180717\Models\RepairInfo.cs" />
     <Compile Include="V20180717\Models\ResetProcedureTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ResolutionNameInfo.cs" />
@@ -578,15 +601,19 @@
     <Compile Include="V20180717\Models\ReviewImageSegmentItem.cs" />
     <Compile Include="V20180717\Models\ReviewInfo.cs" />
     <Compile Include="V20180717\Models\ReviewTemplate.cs" />
+    <Compile Include="V20180717\Models\RoundPlayInfo.cs" />
+    <Compile Include="V20180717\Models\RoundPlayListItemInfo.cs" />
     <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
+    <Compile Include="V20180717\Models\ScratchRepairInfo.cs" />
     <Compile Include="V20180717\Models\SearchMediaRequest.cs" />
     <Compile Include="V20180717\Models\SearchMediaResponse.cs" />
     <Compile Include="V20180717\Models\SegmentConfigureInfo.cs" />
     <Compile Include="V20180717\Models\SegmentConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\SetDrmKeyProviderInfoRequest.cs" />
     <Compile Include="V20180717\Models\SetDrmKeyProviderInfoResponse.cs" />
+    <Compile Include="V20180717\Models\SharpEnhanceInfo.cs" />
     <Compile Include="V20180717\Models\SimpleHlsClipRequest.cs" />
     <Compile Include="V20180717\Models\SimpleHlsClipResponse.cs" />
     <Compile Include="V20180717\Models\SnapshotByTimeOffset2017.cs" />
@@ -605,6 +632,7 @@
     <Compile Include="V20180717\Models\StorageStatData.cs" />
     <Compile Include="V20180717\Models\SubAppIdInfo.cs" />
     <Compile Include="V20180717\Models\SubtitleFormatsOperation.cs" />
+    <Compile Include="V20180717\Models\SuperResolutionInfo.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInput.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInputForUpdate.cs" />
     <Compile Include="V20180717\Models\TEHDConfig.cs" />
@@ -642,6 +670,8 @@
     <Compile Include="V20180717\Models\UserDefineFaceReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\UserDefineOcrTextReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\VideoDenoiseInfo.cs" />
+    <Compile Include="V20180717\Models\VideoFrameInterpolationInfo.cs" />
     <Compile Include="V20180717\Models\VideoTemplateInfo.cs" />
     <Compile Include="V20180717\Models\VideoTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\VideoTrackItem.cs" />

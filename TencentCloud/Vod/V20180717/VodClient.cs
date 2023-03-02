@@ -731,6 +731,50 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to create a playlist. You can create at most 100 playlists.
+        /// For each video on the list, you can either use the original file or a transcoding file.
+        /// The files must be in HLS format. Preferably, they should have the same bitrate and resolution.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoundPlayRequest"/></param>
+        /// <returns><see cref="CreateRoundPlayResponse"/></returns>
+        public async Task<CreateRoundPlayResponse> CreateRoundPlay(CreateRoundPlayRequest req)
+        {
+             JsonResponseModel<CreateRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a playlist. You can create at most 100 playlists.
+        /// For each video on the list, you can either use the original file or a transcoding file.
+        /// The files must be in HLS format. Preferably, they should have the same bitrate and resolution.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoundPlayRequest"/></param>
+        /// <returns><see cref="CreateRoundPlayResponse"/></returns>
+        public CreateRoundPlayResponse CreateRoundPlaySync(CreateRoundPlayRequest req)
+        {
+             JsonResponseModel<CreateRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a custom sampled screencapturing template. Up to 16 templates can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateSampleSnapshotTemplateRequest"/></param>
@@ -1584,6 +1628,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a playlist.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoundPlayRequest"/></param>
+        /// <returns><see cref="DeleteRoundPlayResponse"/></returns>
+        public async Task<DeleteRoundPlayResponse> DeleteRoundPlay(DeleteRoundPlayRequest req)
+        {
+             JsonResponseModel<DeleteRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a playlist.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoundPlayRequest"/></param>
+        /// <returns><see cref="DeleteRoundPlayResponse"/></returns>
+        public DeleteRoundPlayResponse DeleteRoundPlaySync(DeleteRoundPlayRequest req)
+        {
+             JsonResponseModel<DeleteRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoundPlayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2941,6 +3025,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to query playlists.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoundPlaysRequest"/></param>
+        /// <returns><see cref="DescribeRoundPlaysResponse"/></returns>
+        public async Task<DescribeRoundPlaysResponse> DescribeRoundPlays(DescribeRoundPlaysRequest req)
+        {
+             JsonResponseModel<DescribeRoundPlaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoundPlays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoundPlaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query playlists.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoundPlaysRequest"/></param>
+        /// <returns><see cref="DescribeRoundPlaysResponse"/></returns>
+        public DescribeRoundPlaysResponse DescribeRoundPlaysSync(DescribeRoundPlaysRequest req)
+        {
+             JsonResponseModel<DescribeRoundPlaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoundPlays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoundPlaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
         /// </summary>
         /// <param name="req"><see cref="DescribeSampleSnapshotTemplatesRequest"/></param>
@@ -4239,6 +4363,48 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to modify a playlist.
+        /// The modification will only take effect for new playback requests. For ongoing playback, the old playlist will be playable for seven days after the modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoundPlayRequest"/></param>
+        /// <returns><see cref="ModifyRoundPlayResponse"/></returns>
+        public async Task<ModifyRoundPlayResponse> ModifyRoundPlay(ModifyRoundPlayRequest req)
+        {
+             JsonResponseModel<ModifyRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a playlist.
+        /// The modification will only take effect for new playback requests. For ongoing playback, the old playlist will be playable for seven days after the modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoundPlayRequest"/></param>
+        /// <returns><see cref="ModifyRoundPlayResponse"/></returns>
+        public ModifyRoundPlayResponse ModifyRoundPlaySync(ModifyRoundPlayRequest req)
+        {
+             JsonResponseModel<ModifyRoundPlayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoundPlay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoundPlayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify a custom sampled screencapturing template.
         /// </summary>
         /// <param name="req"><see cref="ModifySampleSnapshotTemplateRequest"/></param>
@@ -4966,6 +5132,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "PushUrlCache");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PushUrlCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remaster audio/video.
+        /// </summary>
+        /// <param name="req"><see cref="RebuildMediaRequest"/></param>
+        /// <returns><see cref="RebuildMediaResponse"/></returns>
+        public async Task<RebuildMediaResponse> RebuildMedia(RebuildMediaRequest req)
+        {
+             JsonResponseModel<RebuildMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RebuildMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebuildMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remaster audio/video.
+        /// </summary>
+        /// <param name="req"><see cref="RebuildMediaRequest"/></param>
+        /// <returns><see cref="RebuildMediaResponse"/></returns>
+        public RebuildMediaResponse RebuildMediaSync(RebuildMediaRequest req)
+        {
+             JsonResponseModel<RebuildMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RebuildMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebuildMediaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -30,12 +30,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>`EditMedia`: Video editing</li>
         /// <li>`SplitMedia`: Video splitting</li>
         /// <li>`ComposeMedia`: Media file production</li>
-        /// <li>`WechatPublish`: WeChat publishing</li>
-        /// <li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+        /// <li>`WechatPublish`: Weixin publishing</li>
+        /// <li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
         /// <li>`PullUpload`: Pulling media files for upload</li>
         /// <li>`FastClipMedia`: Quick clipping</li>
         /// <li>`RemoveWatermarkTask`: Watermark removal</li>
         /// <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+        /// <li>`RebuildMedia`; Remastering audio/video</li>
         /// <li> `ReviewAudioVideo`: Moderation</li>
         /// </summary>
         [JsonProperty("TaskType")]
@@ -160,6 +161,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public RemoveWatermarkTask RemoveWatermarkTask{ get; set; }
 
         /// <summary>
+        /// The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RebuildMediaTask")]
+        public RebuildMediaTask RebuildMediaTask{ get; set; }
+
+        /// <summary>
         /// The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -217,6 +225,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
             this.SetParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
+            this.SetParamObj(map, prefix + "RebuildMediaTask.", this.RebuildMediaTask);
             this.SetParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);

@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string DBName{ get; set; }
 
         /// <summary>
-        /// Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+        /// Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }

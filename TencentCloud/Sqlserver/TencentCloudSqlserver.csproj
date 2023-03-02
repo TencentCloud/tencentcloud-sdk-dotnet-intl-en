@@ -88,6 +88,7 @@
     <Compile Include="V20180328\Models\DBPrivilege.cs" />
     <Compile Include="V20180328\Models\DBPrivilegeModifyInfo.cs" />
     <Compile Include="V20180328\Models\DBRemark.cs" />
+    <Compile Include="V20180328\Models\DBRenameRes.cs" />
     <Compile Include="V20180328\Models\DbNormalDetail.cs" />
     <Compile Include="V20180328\Models\DbRollbackTimeInfo.cs" />
     <Compile Include="V20180328\Models\DealInfo.cs" />

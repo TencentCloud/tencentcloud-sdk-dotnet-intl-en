@@ -35,13 +35,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>`NewFileUpload`: Video uploaded.</li>
         /// <li>`ProcedureStateChanged`: Task flow status changed.</li>
         /// <li>`FileDeleted`: Video deleted.</li>
+        /// <li>`RestoreMediaComplete`: Video retrieved.</li>
         /// <li>`PullComplete`: Finished video pulling.</li>
         /// <li>`EditMediaComplete`: Finished video editing.</li>
         /// <li>`SplitMediaComplete`: Finished video splitting.</li>
-        /// <li>`WechatPublishComplete`: Published to WeChat.</li>
         /// <li>`ComposeMediaComplete`: Finished producing the media file.</li>
-        /// <li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
-        /// <li>`FastClipMediaComplete`: Finished quick clipping.</li>
+        /// <li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li>
+        /// <li>`RemoveWatermark`: Watermark removed.</li>
+        /// <li>`RebuildMediaComplete`: Finished audio/video remastering.</li>
         /// <li>`ReviewAudioVideoComplete`: Finished moderation.</li>
         /// <li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
         /// <li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
@@ -91,8 +92,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaTask EditMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SplitMediaCompleteEvent")]
         public SplitMediaTask SplitMediaCompleteEvent{ get; set; }
@@ -154,21 +155,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RemoveWatermarkCompleteEvent")]
         public RemoveWatermarkTask RemoveWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RestoreMediaCompleteEvent")]
         public RestoreMediaTask RestoreMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+        /// The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RebuildMediaCompleteEvent")]
+        public RebuildMediaTask RebuildMediaCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExtractTraceWatermarkCompleteEvent")]
@@ -219,6 +227,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
             this.SetParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
+            this.SetParamObj(map, prefix + "RebuildMediaCompleteEvent.", this.RebuildMediaCompleteEvent);
             this.SetParamObj(map, prefix + "ExtractTraceWatermarkCompleteEvent.", this.ExtractTraceWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);

@@ -90,6 +90,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
+        /// <summary>
+        /// Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
             this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
             this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

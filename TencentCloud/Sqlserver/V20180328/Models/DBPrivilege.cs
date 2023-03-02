@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string DBName{ get; set; }
 
         /// <summary>
-        /// Database permissions. ReadWrite: read/write, ReadOnly: read-only
+        /// Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }

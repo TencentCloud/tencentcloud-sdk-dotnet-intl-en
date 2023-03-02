@@ -37,10 +37,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public DBPrivilegeModifyInfo[] DBPrivileges{ get; set; }
 
         /// <summary>
-        /// Whether it is an admin account
+        /// Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
         /// </summary>
         [JsonProperty("IsAdmin")]
         public bool? IsAdmin{ get; set; }
+
+        /// <summary>
+        /// Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

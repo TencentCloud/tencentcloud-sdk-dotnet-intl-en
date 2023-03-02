@@ -49,10 +49,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// `Label` indicates the violation label. Valid values:
         /// <li>`Porn` (pornographic content)</li>
         /// <li>`Terror` (terrorist content)</li>
-        /// <li>Polity (politically sensitive content)</li>
-        /// <li>`Ad`</li>
+        /// <li>`Polity` (politically sensitive content)</li>
+        /// <li>`Ad` (advertisement)</li>
         /// <li>`Illegal` (illegal content)</li>
-        /// <li>`Religion`</li>
         /// <li>`Abuse`</li>
         /// <li>`Moan`</li>
         /// </summary>

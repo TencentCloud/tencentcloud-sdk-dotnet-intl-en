@@ -31,10 +31,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Database permissions. ReadWrite: read/write, ReadOnly: read-only
+        /// Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
+
+        /// <summary>
+        /// Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }
