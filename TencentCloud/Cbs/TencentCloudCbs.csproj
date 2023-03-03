@@ -63,6 +63,8 @@
     <Compile Include="V20170312\Models\CopySnapshotCrossRegionsResponse.cs" />
     <Compile Include="V20170312\Models\CreateAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20170312\Models\CreateAutoSnapshotPolicyResponse.cs" />
+    <Compile Include="V20170312\Models\CreateDiskBackupRequest.cs" />
+    <Compile Include="V20170312\Models\CreateDiskBackupResponse.cs" />
     <Compile Include="V20170312\Models\CreateDisksRequest.cs" />
     <Compile Include="V20170312\Models\CreateDisksResponse.cs" />
     <Compile Include="V20170312\Models\CreateSnapshotRequest.cs" />

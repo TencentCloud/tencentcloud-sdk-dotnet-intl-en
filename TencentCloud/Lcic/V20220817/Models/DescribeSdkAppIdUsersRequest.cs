@@ -21,26 +21,26 @@ namespace TencentCloud.Lcic.V20220817.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAppRequest : AbstractModel
+    public class DescribeSdkAppIdUsersRequest : AbstractModel
     {
         
         /// <summary>
-        /// LCIC SdkAppId
+        /// The SDKAppID assigned by LCIC.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Callback URL. Currently, only port 80 and port 443 are supported.
+        /// The page to return records from. The default value is `1`.
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
 
         /// <summary>
-        /// The callback key.
+        /// The maximum number of records to return per page. The default value is `20`.
         /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

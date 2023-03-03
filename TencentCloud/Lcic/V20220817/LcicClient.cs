@@ -53,6 +53,286 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// This API is used to add users to a group.
+        /// </summary>
+        /// <param name="req"><see cref="AddGroupMemberRequest"/></param>
+        /// <returns><see cref="AddGroupMemberResponse"/></returns>
+        public async Task<AddGroupMemberResponse> AddGroupMember(AddGroupMemberRequest req)
+        {
+             JsonResponseModel<AddGroupMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddGroupMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddGroupMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add users to a group.
+        /// </summary>
+        /// <param name="req"><see cref="AddGroupMemberRequest"/></param>
+        /// <returns><see cref="AddGroupMemberResponse"/></returns>
+        public AddGroupMemberResponse AddGroupMemberSync(AddGroupMemberRequest req)
+        {
+             JsonResponseModel<AddGroupMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddGroupMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddGroupMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add users to multiple groups at a time.
+        /// </summary>
+        /// <param name="req"><see cref="BatchAddGroupMemberRequest"/></param>
+        /// <returns><see cref="BatchAddGroupMemberResponse"/></returns>
+        public async Task<BatchAddGroupMemberResponse> BatchAddGroupMember(BatchAddGroupMemberRequest req)
+        {
+             JsonResponseModel<BatchAddGroupMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchAddGroupMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchAddGroupMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add users to multiple groups at a time.
+        /// </summary>
+        /// <param name="req"><see cref="BatchAddGroupMemberRequest"/></param>
+        /// <returns><see cref="BatchAddGroupMemberResponse"/></returns>
+        public BatchAddGroupMemberResponse BatchAddGroupMemberSync(BatchAddGroupMemberRequest req)
+        {
+             JsonResponseModel<BatchAddGroupMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchAddGroupMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchAddGroupMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create multiple groups at a time.
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateGroupWithMembersRequest"/></param>
+        /// <returns><see cref="BatchCreateGroupWithMembersResponse"/></returns>
+        public async Task<BatchCreateGroupWithMembersResponse> BatchCreateGroupWithMembers(BatchCreateGroupWithMembersRequest req)
+        {
+             JsonResponseModel<BatchCreateGroupWithMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchCreateGroupWithMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateGroupWithMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create multiple groups at a time.
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateGroupWithMembersRequest"/></param>
+        /// <returns><see cref="BatchCreateGroupWithMembersResponse"/></returns>
+        public BatchCreateGroupWithMembersResponse BatchCreateGroupWithMembersSync(BatchCreateGroupWithMembersRequest req)
+        {
+             JsonResponseModel<BatchCreateGroupWithMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchCreateGroupWithMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateGroupWithMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create multiple rooms at a time.
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateRoomRequest"/></param>
+        /// <returns><see cref="BatchCreateRoomResponse"/></returns>
+        public async Task<BatchCreateRoomResponse> BatchCreateRoom(BatchCreateRoomRequest req)
+        {
+             JsonResponseModel<BatchCreateRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchCreateRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create multiple rooms at a time.
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateRoomRequest"/></param>
+        /// <returns><see cref="BatchCreateRoomResponse"/></returns>
+        public BatchCreateRoomResponse BatchCreateRoomSync(BatchCreateRoomRequest req)
+        {
+             JsonResponseModel<BatchCreateRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchCreateRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove users from multiple groups at a time.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteGroupMemberRequest"/></param>
+        /// <returns><see cref="BatchDeleteGroupMemberResponse"/></returns>
+        public async Task<BatchDeleteGroupMemberResponse> BatchDeleteGroupMember(BatchDeleteGroupMemberRequest req)
+        {
+             JsonResponseModel<BatchDeleteGroupMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeleteGroupMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteGroupMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove users from multiple groups at a time.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteGroupMemberRequest"/></param>
+        /// <returns><see cref="BatchDeleteGroupMemberResponse"/></returns>
+        public BatchDeleteGroupMemberResponse BatchDeleteGroupMemberSync(BatchDeleteGroupMemberRequest req)
+        {
+             JsonResponseModel<BatchDeleteGroupMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeleteGroupMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteGroupMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the recordings of multiple rooms.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteRecordRequest"/></param>
+        /// <returns><see cref="BatchDeleteRecordResponse"/></returns>
+        public async Task<BatchDeleteRecordResponse> BatchDeleteRecord(BatchDeleteRecordRequest req)
+        {
+             JsonResponseModel<BatchDeleteRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeleteRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the recordings of multiple rooms.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteRecordRequest"/></param>
+        /// <returns><see cref="BatchDeleteRecordResponse"/></returns>
+        public BatchDeleteRecordResponse BatchDeleteRecordSync(BatchDeleteRecordRequest req)
+        {
+             JsonResponseModel<BatchDeleteRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeleteRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+        /// </summary>
+        /// <param name="req"><see cref="BatchRegisterRequest"/></param>
+        /// <returns><see cref="BatchRegisterResponse"/></returns>
+        public async Task<BatchRegisterResponse> BatchRegister(BatchRegisterRequest req)
+        {
+             JsonResponseModel<BatchRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+        /// </summary>
+        /// <param name="req"><see cref="BatchRegisterRequest"/></param>
+        /// <returns><see cref="BatchRegisterResponse"/></returns>
+        public BatchRegisterResponse BatchRegisterSync(BatchRegisterRequest req)
+        {
+             JsonResponseModel<BatchRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to bind a document to a room.
         /// </summary>
         /// <param name="req"><see cref="BindDocumentToRoomRequest"/></param>
@@ -124,6 +404,86 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "CreateDocument");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a group and specify its members.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupWithMembersRequest"/></param>
+        /// <returns><see cref="CreateGroupWithMembersResponse"/></returns>
+        public async Task<CreateGroupWithMembersResponse> CreateGroupWithMembers(CreateGroupWithMembersRequest req)
+        {
+             JsonResponseModel<CreateGroupWithMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGroupWithMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGroupWithMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a group and specify its members.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupWithMembersRequest"/></param>
+        /// <returns><see cref="CreateGroupWithMembersResponse"/></returns>
+        public CreateGroupWithMembersResponse CreateGroupWithMembersSync(CreateGroupWithMembersRequest req)
+        {
+             JsonResponseModel<CreateGroupWithMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGroupWithMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGroupWithMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to merge groups.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupWithSubGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupWithSubGroupResponse"/></returns>
+        public async Task<CreateGroupWithSubGroupResponse> CreateGroupWithSubGroup(CreateGroupWithSubGroupRequest req)
+        {
+             JsonResponseModel<CreateGroupWithSubGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGroupWithSubGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGroupWithSubGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to merge groups.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupWithSubGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupWithSubGroupResponse"/></returns>
+        public CreateGroupWithSubGroupResponse CreateGroupWithSubGroupSync(CreateGroupWithSubGroupRequest req)
+        {
+             JsonResponseModel<CreateGroupWithSubGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGroupWithSubGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGroupWithSubGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,6 +573,166 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// This API is used to delete a document.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDocumentRequest"/></param>
+        /// <returns><see cref="DeleteDocumentResponse"/></returns>
+        public async Task<DeleteDocumentResponse> DeleteDocument(DeleteDocumentRequest req)
+        {
+             JsonResponseModel<DeleteDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a document.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDocumentRequest"/></param>
+        /// <returns><see cref="DeleteDocumentResponse"/></returns>
+        public DeleteDocumentResponse DeleteDocumentSync(DeleteDocumentRequest req)
+        {
+             JsonResponseModel<DeleteDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or multiple groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public async Task<DeleteGroupResponse> DeleteGroup(DeleteGroupRequest req)
+        {
+             JsonResponseModel<DeleteGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete one or multiple groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
+        {
+             JsonResponseModel<DeleteGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove users from a group.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupMemberRequest"/></param>
+        /// <returns><see cref="DeleteGroupMemberResponse"/></returns>
+        public async Task<DeleteGroupMemberResponse> DeleteGroupMember(DeleteGroupMemberRequest req)
+        {
+             JsonResponseModel<DeleteGroupMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGroupMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGroupMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove users from a group.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupMemberRequest"/></param>
+        /// <returns><see cref="DeleteGroupMemberResponse"/></returns>
+        public DeleteGroupMemberResponse DeleteGroupMemberSync(DeleteGroupMemberRequest req)
+        {
+             JsonResponseModel<DeleteGroupMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGroupMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGroupMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This example shows you how to delete the recording files of a specific room.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordRequest"/></param>
+        /// <returns><see cref="DeleteRecordResponse"/></returns>
+        public async Task<DeleteRecordResponse> DeleteRecord(DeleteRecordRequest req)
+        {
+             JsonResponseModel<DeleteRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This example shows you how to delete the recording files of a specific room.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordRequest"/></param>
+        /// <returns><see cref="DeleteRecordResponse"/></returns>
+        public DeleteRecordResponse DeleteRecordSync(DeleteRecordRequest req)
+        {
+             JsonResponseModel<DeleteRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a room.
         /// </summary>
         /// <param name="req"><see cref="DeleteRoomRequest"/></param>
@@ -244,6 +764,246 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "DeleteRoom");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentMemberListRequest"/></param>
+        /// <returns><see cref="DescribeCurrentMemberListResponse"/></returns>
+        public async Task<DescribeCurrentMemberListResponse> DescribeCurrentMemberList(DescribeCurrentMemberListRequest req)
+        {
+             JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCurrentMemberList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurrentMemberListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentMemberListRequest"/></param>
+        /// <returns><see cref="DescribeCurrentMemberListResponse"/></returns>
+        public DescribeCurrentMemberListResponse DescribeCurrentMemberListSync(DescribeCurrentMemberListRequest req)
+        {
+             JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCurrentMemberList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurrentMemberListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the information of a specific document.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocumentRequest"/></param>
+        /// <returns><see cref="DescribeDocumentResponse"/></returns>
+        public async Task<DescribeDocumentResponse> DescribeDocument(DescribeDocumentRequest req)
+        {
+             JsonResponseModel<DescribeDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the information of a specific document.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocumentRequest"/></param>
+        /// <returns><see cref="DescribeDocumentResponse"/></returns>
+        public DescribeDocumentResponse DescribeDocumentSync(DescribeDocumentRequest req)
+        {
+             JsonResponseModel<DescribeDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the document list of a specific room.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocumentsByRoomRequest"/></param>
+        /// <returns><see cref="DescribeDocumentsByRoomResponse"/></returns>
+        public async Task<DescribeDocumentsByRoomResponse> DescribeDocumentsByRoom(DescribeDocumentsByRoomRequest req)
+        {
+             JsonResponseModel<DescribeDocumentsByRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDocumentsByRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDocumentsByRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the document list of a specific room.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocumentsByRoomRequest"/></param>
+        /// <returns><see cref="DescribeDocumentsByRoomResponse"/></returns>
+        public DescribeDocumentsByRoomResponse DescribeDocumentsByRoomSync(DescribeDocumentsByRoomRequest req)
+        {
+             JsonResponseModel<DescribeDocumentsByRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDocumentsByRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDocumentsByRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of a group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupRequest"/></param>
+        /// <returns><see cref="DescribeGroupResponse"/></returns>
+        public async Task<DescribeGroupResponse> DescribeGroup(DescribeGroupRequest req)
+        {
+             JsonResponseModel<DescribeGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of a group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupRequest"/></param>
+        /// <returns><see cref="DescribeGroupResponse"/></returns>
+        public DescribeGroupResponse DescribeGroupSync(DescribeGroupRequest req)
+        {
+             JsonResponseModel<DescribeGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query groups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupListRequest"/></param>
+        /// <returns><see cref="DescribeGroupListResponse"/></returns>
+        public async Task<DescribeGroupListResponse> DescribeGroupList(DescribeGroupListRequest req)
+        {
+             JsonResponseModel<DescribeGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query groups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupListRequest"/></param>
+        /// <returns><see cref="DescribeGroupListResponse"/></returns>
+        public DescribeGroupListResponse DescribeGroupListSync(DescribeGroupListRequest req)
+        {
+             JsonResponseModel<DescribeGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the members of a group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupMemberListRequest"/></param>
+        /// <returns><see cref="DescribeGroupMemberListResponse"/></returns>
+        public async Task<DescribeGroupMemberListResponse> DescribeGroupMemberList(DescribeGroupMemberListRequest req)
+        {
+             JsonResponseModel<DescribeGroupMemberListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupMemberList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupMemberListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the members of a group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupMemberListRequest"/></param>
+        /// <returns><see cref="DescribeGroupMemberListResponse"/></returns>
+        public DescribeGroupMemberListResponse DescribeGroupMemberListSync(DescribeGroupMemberListRequest req)
+        {
+             JsonResponseModel<DescribeGroupMemberListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupMemberList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupMemberListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,6 +1093,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// This API is used to get the user list of a specific application.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSdkAppIdUsersRequest"/></param>
+        /// <returns><see cref="DescribeSdkAppIdUsersResponse"/></returns>
+        public async Task<DescribeSdkAppIdUsersResponse> DescribeSdkAppIdUsers(DescribeSdkAppIdUsersRequest req)
+        {
+             JsonResponseModel<DescribeSdkAppIdUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSdkAppIdUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSdkAppIdUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the user list of a specific application.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSdkAppIdUsersRequest"/></param>
+        /// <returns><see cref="DescribeSdkAppIdUsersResponse"/></returns>
+        public DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsersSync(DescribeSdkAppIdUsersRequest req)
+        {
+             JsonResponseModel<DescribeSdkAppIdUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSdkAppIdUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSdkAppIdUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain user profile.
         /// </summary>
         /// <param name="req"><see cref="DescribeUserRequest"/></param>
@@ -364,6 +1164,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get watermark settings.
+        /// </summary>
+        /// <param name="req"><see cref="GetWatermarkRequest"/></param>
+        /// <returns><see cref="GetWatermarkResponse"/></returns>
+        public async Task<GetWatermarkResponse> GetWatermark(GetWatermarkRequest req)
+        {
+             JsonResponseModel<GetWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get watermark settings.
+        /// </summary>
+        /// <param name="req"><see cref="GetWatermarkRequest"/></param>
+        /// <returns><see cref="GetWatermarkResponse"/></returns>
+        public GetWatermarkResponse GetWatermarkSync(GetWatermarkRequest req)
+        {
+             JsonResponseModel<GetWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWatermarkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,6 +1333,126 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// This API is used to modify a group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGroupRequest"/></param>
+        /// <returns><see cref="ModifyGroupResponse"/></returns>
+        public async Task<ModifyGroupResponse> ModifyGroup(ModifyGroupRequest req)
+        {
+             JsonResponseModel<ModifyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGroupRequest"/></param>
+        /// <returns><see cref="ModifyGroupResponse"/></returns>
+        public ModifyGroupResponse ModifyGroupSync(ModifyGroupRequest req)
+        {
+             JsonResponseModel<ModifyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a room.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoomRequest"/></param>
+        /// <returns><see cref="ModifyRoomResponse"/></returns>
+        public async Task<ModifyRoomResponse> ModifyRoom(ModifyRoomRequest req)
+        {
+             JsonResponseModel<ModifyRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a room.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoomRequest"/></param>
+        /// <returns><see cref="ModifyRoomResponse"/></returns>
+        public ModifyRoomResponse ModifyRoomSync(ModifyRoomRequest req)
+        {
+             JsonResponseModel<ModifyRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a user profile such as the nickname and profile photo.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserProfileRequest"/></param>
+        /// <returns><see cref="ModifyUserProfileResponse"/></returns>
+        public async Task<ModifyUserProfileResponse> ModifyUserProfile(ModifyUserProfileRequest req)
+        {
+             JsonResponseModel<ModifyUserProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUserProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a user profile such as the nickname and profile photo.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserProfileRequest"/></param>
+        /// <returns><see cref="ModifyUserProfileResponse"/></returns>
+        public ModifyUserProfileResponse ModifyUserProfileSync(ModifyUserProfileRequest req)
+        {
+             JsonResponseModel<ModifyUserProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUserProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to register a user.
         /// </summary>
         /// <param name="req"><see cref="RegisterUserRequest"/></param>
@@ -564,6 +1524,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "SetAppCustomContent");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAppCustomContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure watermarks.
+        /// </summary>
+        /// <param name="req"><see cref="SetWatermarkRequest"/></param>
+        /// <returns><see cref="SetWatermarkResponse"/></returns>
+        public async Task<SetWatermarkResponse> SetWatermark(SetWatermarkRequest req)
+        {
+             JsonResponseModel<SetWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to configure watermarks.
+        /// </summary>
+        /// <param name="req"><see cref="SetWatermarkRequest"/></param>
+        /// <returns><see cref="SetWatermarkResponse"/></returns>
+        public SetWatermarkResponse SetWatermarkSync(SetWatermarkRequest req)
+        {
+             JsonResponseModel<SetWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWatermarkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -21,26 +21,20 @@ namespace TencentCloud.Lcic.V20220817.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAppRequest : AbstractModel
+    public class BatchCreateRoomResponse : AbstractModel
     {
         
         /// <summary>
-        /// LCIC SdkAppId
+        /// The IDs of the rooms created, which are in the same order as they are passed in.
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("RoomIds")]
+        public ulong?[] RoomIds{ get; set; }
 
         /// <summary>
-        /// Callback URL. Currently, only port 80 and port 443 are supported.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
-
-        /// <summary>
-        /// The callback key.
-        /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamArraySimple(map, prefix + "RoomIds.", this.RoomIds);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

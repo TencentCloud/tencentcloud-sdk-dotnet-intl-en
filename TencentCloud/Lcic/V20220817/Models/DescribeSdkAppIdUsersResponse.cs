@@ -21,26 +21,27 @@ namespace TencentCloud.Lcic.V20220817.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAppRequest : AbstractModel
+    public class DescribeSdkAppIdUsersResponse : AbstractModel
     {
         
         /// <summary>
-        /// LCIC SdkAppId
+        /// The total number of users.
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// Callback URL. Currently, only port 80 and port 443 are supported.
+        /// The information of the users.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
+        [JsonProperty("Users")]
+        public UserInfo[] Users{ get; set; }
 
         /// <summary>
-        /// The callback key.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "Users.", this.Users);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

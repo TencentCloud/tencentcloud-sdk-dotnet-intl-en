@@ -21,26 +21,26 @@ namespace TencentCloud.Lcic.V20220817.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAppRequest : AbstractModel
+    public class DescribeCurrentMemberListRequest : AbstractModel
     {
         
         /// <summary>
-        /// LCIC SdkAppId
+        /// The room ID.
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("RoomId")]
+        public ulong? RoomId{ get; set; }
 
         /// <summary>
-        /// Callback URL. Currently, only port 80 and port 443 are supported.
+        /// The page to return records from. Pagination starts from 1.
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
+        [JsonProperty("Page")]
+        public ulong? Page{ get; set; }
 
         /// <summary>
-        /// The callback key.
+        /// The maximum number of records per page. The value of this parameter cannot exceed `1000`.
         /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

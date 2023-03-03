@@ -254,6 +254,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         public long? DeleteSnapshot{ get; set; }
 
         /// <summary>
+        /// Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public ulong? DiskBackupQuota{ get; set; }
+
+        /// <summary>
         /// Number of used cloud disk backups.
         /// </summary>
         [JsonProperty("DiskBackupCount")]
@@ -264,6 +270,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LastAttachInsId")]
+        public string LastAttachInsId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ErrorPrompt")]
+        public string ErrorPrompt{ get; set; }
 
 
         /// <summary>
@@ -307,8 +325,11 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
             this.SetParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
+            this.SetParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
         }
     }
 }

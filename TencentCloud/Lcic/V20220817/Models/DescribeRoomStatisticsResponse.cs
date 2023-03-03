@@ -49,6 +49,32 @@ namespace TencentCloud.Lcic.V20220817.Models
         public MemberRecord[] MemberRecords{ get; set; }
 
         /// <summary>
+        /// The actual start time of the room, in Unix timestamp, accurate to seconds.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RealStartTime")]
+        public ulong? RealStartTime{ get; set; }
+
+        /// <summary>
+        /// The actual end time of the room, in Unix timestamp, accurate to seconds.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RealEndTime")]
+        public ulong? RealEndTime{ get; set; }
+
+        /// <summary>
+        /// The total number of room messages.
+        /// </summary>
+        [JsonProperty("MessageCount")]
+        public ulong? MessageCount{ get; set; }
+
+        /// <summary>
+        /// The total number of mics in the room.
+        /// </summary>
+        [JsonProperty("MicCount")]
+        public ulong? MicCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +90,10 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "MemberNumber", this.MemberNumber);
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "MemberRecords.", this.MemberRecords);
+            this.SetParamSimple(map, prefix + "RealStartTime", this.RealStartTime);
+            this.SetParamSimple(map, prefix + "RealEndTime", this.RealEndTime);
+            this.SetParamSimple(map, prefix + "MessageCount", this.MessageCount);
+            this.SetParamSimple(map, prefix + "MicCount", this.MicCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

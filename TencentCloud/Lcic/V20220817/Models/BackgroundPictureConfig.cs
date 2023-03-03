@@ -21,26 +21,15 @@ namespace TencentCloud.Lcic.V20220817.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAppRequest : AbstractModel
+    public class BackgroundPictureConfig : AbstractModel
     {
         
         /// <summary>
-        /// LCIC SdkAppId
+        /// The URL of the background image.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
-
-        /// <summary>
-        /// Callback URL. Currently, only port 80 and port 443 are supported.
-        /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
-
-        /// <summary>
-        /// The callback key.
-        /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -48,9 +37,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

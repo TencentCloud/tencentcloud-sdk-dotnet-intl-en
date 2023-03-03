@@ -21,26 +21,26 @@ namespace TencentCloud.Lcic.V20220817.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAppRequest : AbstractModel
+    public class BatchCreateGroupWithMembersRequest : AbstractModel
     {
         
         /// <summary>
-        /// LCIC SdkAppId
+        /// The SDKAppID assigned by LCIC.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Callback URL. Currently, only port 80 and port 443 are supported.
+        /// The information of the groups to create. Array length limit: 256.
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
+        [JsonProperty("GroupBaseInfos")]
+        public GroupBaseInfo[] GroupBaseInfos{ get; set; }
 
         /// <summary>
-        /// The callback key.
+        /// The group members. Array length limit: 200.
         /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("MemberIds")]
+        public string[] MemberIds{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamArrayObj(map, prefix + "GroupBaseInfos.", this.GroupBaseInfos);
+            this.SetParamArraySimple(map, prefix + "MemberIds.", this.MemberIds);
         }
     }
 }

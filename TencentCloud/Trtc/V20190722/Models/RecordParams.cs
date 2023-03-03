@@ -72,6 +72,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MaxMediaFileDuration")]
         public ulong? MaxMediaFileDuration{ get; set; }
 
+        /// <summary>
+        /// The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MediaId")]
+        public ulong? MediaId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +92,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
             this.SetParamSimple(map, prefix + "AvMerge", this.AvMerge);
             this.SetParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
+            this.SetParamSimple(map, prefix + "MediaId", this.MediaId);
         }
     }
 }

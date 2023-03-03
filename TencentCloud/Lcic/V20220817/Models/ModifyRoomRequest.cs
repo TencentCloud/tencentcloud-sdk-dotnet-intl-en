@@ -21,59 +21,59 @@ namespace TencentCloud.Lcic.V20220817.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateRoomRequest : AbstractModel
+    public class ModifyRoomRequest : AbstractModel
     {
         
         /// <summary>
-        /// Room name
+        /// The room ID.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("RoomId")]
+        public ulong? RoomId{ get; set; }
 
         /// <summary>
-        /// Reserved room start time, in UNIX timestamp format
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
-
-        /// <summary>
-        /// Reserved room end time, in UNIX timestamp format
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
-
-        /// <summary>
-        /// LCIC SdkAppId
+        /// The SDKAppID assigned by LCIC.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
+        /// The room start time (Unix timestamp).
         /// </summary>
-        [JsonProperty("Resolution")]
-        public ulong? Resolution{ get; set; }
+        [JsonProperty("StartTime")]
+        public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
+        /// The room end time (Unix timestamp).
         /// </summary>
-        [JsonProperty("MaxMicNumber")]
-        public ulong? MaxMicNumber{ get; set; }
+        [JsonProperty("EndTime")]
+        public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
-        /// </summary>
-        [JsonProperty("SubType")]
-        public string SubType{ get; set; }
-
-        /// <summary>
-        /// The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
+        /// The user ID of the teacher. User IDs are returned by the user registration APIs.
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
 
         /// <summary>
-        /// Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
+        /// The room name.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public ulong? Resolution{ get; set; }
+
+        /// <summary>
+        /// The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
+        /// </summary>
+        [JsonProperty("MaxMicNumber")]
+        public ulong? MaxMicNumber{ get; set; }
+
+        /// <summary>
+        /// Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
         /// </summary>
         [JsonProperty("AutoMic")]
         public ulong? AutoMic{ get; set; }
@@ -85,25 +85,25 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? AudioQuality{ get; set; }
 
         /// <summary>
+        /// The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
+        /// </summary>
+        [JsonProperty("SubType")]
+        public string SubType{ get; set; }
+
+        /// <summary>
         /// Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
         /// </summary>
         [JsonProperty("DisableRecord")]
         public ulong? DisableRecord{ get; set; }
 
         /// <summary>
-        /// The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
+        /// The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
         /// </summary>
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }
 
         /// <summary>
-        /// Recording layout
-        /// </summary>
-        [JsonProperty("RecordLayout")]
-        public ulong? RecordLayout{ get; set; }
-
-        /// <summary>
-        /// The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+        /// The ID of the group to bind.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -114,19 +114,19 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "TeacherId", this.TeacherId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
-            this.SetParamSimple(map, prefix + "SubType", this.SubType);
-            this.SetParamSimple(map, prefix + "TeacherId", this.TeacherId);
             this.SetParamSimple(map, prefix + "AutoMic", this.AutoMic);
             this.SetParamSimple(map, prefix + "AudioQuality", this.AudioQuality);
+            this.SetParamSimple(map, prefix + "SubType", this.SubType);
             this.SetParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
             this.SetParamArraySimple(map, prefix + "Assistants.", this.Assistants);
-            this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }

@@ -25,32 +25,6 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// UIN of operator.
-        /// Note: This field may return null, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("Operator")]
-        public string Operator{ get; set; }
-
-        /// <summary>
-        /// Operation type. Value range:
-        /// SNAP_OPERATION_DELETE: Delete snapshot
-        /// SNAP_OPERATION_ROLLBACK: Roll back snapshot
-        /// SNAP_OPERATION_MODIFY: Modify snapshot attributes
-        /// SNAP_OPERATION_CREATE: Create snapshot
-        /// SNAP_OPERATION_COPY: Cross-region replication of snapshot
-        /// ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
-        /// ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
-        /// </summary>
-        [JsonProperty("Operation")]
-        public string Operation{ get; set; }
-
-        /// <summary>
-        /// ID of snapshot being operated.
-        /// </summary>
-        [JsonProperty("SnapshotId")]
-        public string SnapshotId{ get; set; }
-
-        /// <summary>
         /// Status of operation. Value range:
         /// SUCCESS: Operation successful 
         /// FAILED: Operation failed 
@@ -66,6 +40,32 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string StartTime{ get; set; }
 
         /// <summary>
+        /// UIN of operator.
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
+        /// <summary>
+        /// ID of snapshot being operated.
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
+        /// <summary>
+        /// Operation type. Value range:
+        /// SNAP_OPERATION_DELETE: Delete snapshot
+        /// SNAP_OPERATION_ROLLBACK: Roll back snapshot
+        /// SNAP_OPERATION_MODIFY: Modify snapshot attributes
+        /// SNAP_OPERATION_CREATE: Create snapshot
+        /// SNAP_OPERATION_COPY: Cross-region replication of snapshot
+        /// ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
+        /// ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
+        /// </summary>
+        [JsonProperty("Operation")]
+        public string Operation{ get; set; }
+
+        /// <summary>
         /// End time
         /// </summary>
         [JsonProperty("EndTime")]
@@ -77,11 +77,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
-            this.SetParamSimple(map, prefix + "Operation", this.Operation);
-            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "OperationState", this.OperationState);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }

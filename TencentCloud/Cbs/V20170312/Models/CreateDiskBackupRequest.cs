@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Lcic.V20220817.Models
+namespace TencentCloud.Cbs.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAppRequest : AbstractModel
+    public class CreateDiskBackupRequest : AbstractModel
     {
         
         /// <summary>
-        /// LCIC SdkAppId
+        /// Name of the cloud disk for which to create a backup point.
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
         /// <summary>
-        /// Callback URL. Currently, only port 80 and port 443 are supported.
+        /// Name of the cloud disk backup point, which can contain up to 100 characters.
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
-
-        /// <summary>
-        /// The callback key.
-        /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("DiskBackupName")]
+        public string DiskBackupName{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "DiskBackupName", this.DiskBackupName);
         }
     }
 }

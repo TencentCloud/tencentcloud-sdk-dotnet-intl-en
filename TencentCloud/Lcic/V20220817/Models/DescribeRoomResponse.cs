@@ -79,7 +79,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? AudioQuality{ get; set; }
 
         /// <summary>
-        /// Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	
+        /// The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
@@ -103,6 +103,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
+
+        /// <summary>
+        /// The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -129,6 +143,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
             this.SetParamArraySimple(map, prefix + "Assistants.", this.Assistants);
             this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

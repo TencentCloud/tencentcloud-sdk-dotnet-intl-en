@@ -21,26 +21,38 @@ namespace TencentCloud.Lcic.V20220817.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAppRequest : AbstractModel
+    public class DescribeGroupListRequest : AbstractModel
     {
         
         /// <summary>
-        /// LCIC SdkAppId
+        /// The SDKAppID assigned by LCIC.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Callback URL. Currently, only port 80 and port 443 are supported.
+        /// The page to return records from. Pagination starts from 1.
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
+        [JsonProperty("Page")]
+        public ulong? Page{ get; set; }
 
         /// <summary>
-        /// The callback key.
+        /// The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
         /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+        /// </summary>
+        [JsonProperty("TeacherId")]
+        public string TeacherId{ get; set; }
+
+        /// <summary>
+        /// The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string MemberId{ get; set; }
 
 
         /// <summary>
@@ -49,8 +61,10 @@ namespace TencentCloud.Lcic.V20220817.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "TeacherId", this.TeacherId);
+            this.SetParamSimple(map, prefix + "MemberId", this.MemberId);
         }
     }
 }

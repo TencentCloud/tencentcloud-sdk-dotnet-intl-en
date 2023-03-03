@@ -90,6 +90,36 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Rewords")]
         public ulong? Rewords{ get; set; }
 
+        /// <summary>
+        /// The user’s IP address.
+        /// </summary>
+        [JsonProperty("IPAddress")]
+        public string IPAddress{ get; set; }
+
+        /// <summary>
+        /// The user’s location.
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
+        /// <summary>
+        /// The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+        /// </summary>
+        [JsonProperty("Device")]
+        public long? Device{ get; set; }
+
+        /// <summary>
+        /// The number of times each member mics.
+        /// </summary>
+        [JsonProperty("PerMemberMicCount")]
+        public long? PerMemberMicCount{ get; set; }
+
+        /// <summary>
+        /// The number of messages sent by each member.
+        /// </summary>
+        [JsonProperty("PerMemberMessageCount")]
+        public long? PerMemberMessageCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +137,11 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "FirstJoinTimestamp", this.FirstJoinTimestamp);
             this.SetParamSimple(map, prefix + "LastQuitTimestamp", this.LastQuitTimestamp);
             this.SetParamSimple(map, prefix + "Rewords", this.Rewords);
+            this.SetParamSimple(map, prefix + "IPAddress", this.IPAddress);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "Device", this.Device);
+            this.SetParamSimple(map, prefix + "PerMemberMicCount", this.PerMemberMicCount);
+            this.SetParamSimple(map, prefix + "PerMemberMessageCount", this.PerMemberMessageCount);
         }
     }
 }
