@@ -138,6 +138,8 @@
     <Compile Include="V20170312\Models\ModifyAccountDescriptionResponse.cs" />
     <Compile Include="V20170312\Models\ModifyAccountPrivilegesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBEncryptAttributesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBEncryptAttributesResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBParametersRequest.cs" />

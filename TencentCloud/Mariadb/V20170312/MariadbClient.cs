@@ -1513,6 +1513,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the instance data encryption.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
+        public async Task<ModifyDBEncryptAttributesResponse> ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the instance data encryption.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
+        public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributesSync(ModifyDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the project to which TencentDB instances belong.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
