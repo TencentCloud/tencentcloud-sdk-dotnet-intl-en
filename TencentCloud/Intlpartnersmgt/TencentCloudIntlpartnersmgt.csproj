@@ -50,9 +50,14 @@
     <Compile Include="V20220928\IntlpartnersmgtClient.cs" />
     <Compile Include="V20220928\Models\AllocateCustomerCreditRequest.cs" />
     <Compile Include="V20220928\Models\AllocateCustomerCreditResponse.cs" />
+    <Compile Include="V20220928\Models\BillDetailData.cs" />
     <Compile Include="V20220928\Models\CountryCodeItem.cs" />
     <Compile Include="V20220928\Models\CreateAccountRequest.cs" />
     <Compile Include="V20220928\Models\CreateAccountResponse.cs" />
+    <Compile Include="V20220928\Models\DescribeCustomerBillDetailRequest.cs" />
+    <Compile Include="V20220928\Models\DescribeCustomerBillDetailResponse.cs" />
+    <Compile Include="V20220928\Models\DescribeCustomerBillSummaryRequest.cs" />
+    <Compile Include="V20220928\Models\DescribeCustomerBillSummaryResponse.cs" />
     <Compile Include="V20220928\Models\GetCountryCodesRequest.cs" />
     <Compile Include="V20220928\Models\GetCountryCodesResponse.cs" />
     <Compile Include="V20220928\Models\QueryCreditAllocationHistoryData.cs" />

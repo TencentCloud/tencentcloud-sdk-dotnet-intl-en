@@ -149,6 +149,86 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
+        /// This API is used to query the customer bill details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeCustomerBillDetailResponse"/></returns>
+        public async Task<DescribeCustomerBillDetailResponse> DescribeCustomerBillDetail(DescribeCustomerBillDetailRequest req)
+        {
+             JsonResponseModel<DescribeCustomerBillDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomerBillDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerBillDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the customer bill details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeCustomerBillDetailResponse"/></returns>
+        public DescribeCustomerBillDetailResponse DescribeCustomerBillDetailSync(DescribeCustomerBillDetailRequest req)
+        {
+             JsonResponseModel<DescribeCustomerBillDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomerBillDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerBillDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the total amount of customer bills.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerBillSummaryRequest"/></param>
+        /// <returns><see cref="DescribeCustomerBillSummaryResponse"/></returns>
+        public async Task<DescribeCustomerBillSummaryResponse> DescribeCustomerBillSummary(DescribeCustomerBillSummaryRequest req)
+        {
+             JsonResponseModel<DescribeCustomerBillSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomerBillSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerBillSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the total amount of customer bills.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerBillSummaryRequest"/></param>
+        /// <returns><see cref="DescribeCustomerBillSummaryResponse"/></returns>
+        public DescribeCustomerBillSummaryResponse DescribeCustomerBillSummarySync(DescribeCustomerBillSummaryRequest req)
+        {
+             JsonResponseModel<DescribeCustomerBillSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomerBillSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerBillSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain country/region codes.
         /// </summary>
         /// <param name="req"><see cref="GetCountryCodesRequest"/></param>
