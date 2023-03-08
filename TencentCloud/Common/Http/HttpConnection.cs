@@ -14,10 +14,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-using Pathoschild.Http.Client;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -28,84 +27,150 @@ namespace TencentCloud.Common.Http
 {
     public class HttpConnection
     {
-        private IClient client;
-
-        public HttpConnection(string baseUrl, int timeout,string proxy="")
+        private class HttpClientHolder
         {
-            if (!string.IsNullOrEmpty(proxy))
+            private static readonly ConcurrentDictionary<string, HttpClientHolder> httpclients = new ConcurrentDictionary<string, HttpClientHolder>();
+
+            public static HttpClient GetClient(string proxy)
             {
-                client = new FluentClient(baseUrl, new WebProxy(proxy));
+                string key = string.IsNullOrEmpty(proxy) ? "" : proxy;
+                HttpClientHolder result = httpclients.GetOrAdd(key, (k) =>
+                {
+                    return new HttpClientHolder(k);
+                });
+                TimeSpan timeSpan = DateTime.Now - result.createTime;
+
+                // 每5分钟创建一个新的连接，放弃旧连接，避免DNS刷新问题。
+                while (timeSpan.TotalSeconds > 300)
+                {
+                    ICollection<KeyValuePair<string, HttpClientHolder>> kv = httpclients;
+                    kv.Remove(new KeyValuePair<string, HttpClientHolder>(key, result));
+                    result = httpclients.GetOrAdd(key, (k) =>
+                    {
+                        return new HttpClientHolder(k);
+                    });
+                    timeSpan = DateTime.Now - result.createTime;
+                }
+                return result.client;
+            }
+
+            public readonly HttpClient client;
+
+            public readonly DateTime createTime;
+
+            public HttpClientHolder(string proxy)
+            {
+                string p = string.IsNullOrEmpty(proxy) ? "" : proxy;
+                if (p == "")
+                {
+                    this.client = new HttpClient();
+                }
+                else
+                {
+                    var httpClientHandler = new HttpClientHandler
+                    {
+                        Proxy = new WebProxy(proxy),
+                    };
+
+                    this.client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
+                }
+                this.client.Timeout = TimeSpan.FromSeconds(60);
+                this.createTime = DateTime.Now;
+            }
+        }
+
+        private readonly HttpClient http;
+
+        private readonly string baseUrl;
+
+        private readonly string proxy;
+
+        private readonly int timeout;
+
+        public HttpConnection(string baseUrl, int timeout, string proxy, HttpClient http)
+        {
+            this.proxy = string.IsNullOrEmpty(proxy) ? "" : proxy;
+            this.timeout = timeout;
+            this.baseUrl = baseUrl;
+            if (http != null)
+            {
+                this.http = http;
             }
             else
             {
-                client = new FluentClient(baseUrl);
+                this.http = HttpClientHolder.GetClient(this.proxy);
             }
-            client.BaseClient.Timeout = TimeSpan.FromSeconds(timeout);
-            client.SetOptions(new FluentClientOptions() { });
         }
 
-        public async Task<IResponse> GetRequest(string url, Dictionary<string, string> param)
-        {        
-            StringBuilder urlBuilder = new StringBuilder($"{client.BaseClient.BaseAddress.AbsoluteUri.TrimEnd('/')}{url}?");
-
+        private static string AppendQuery(StringBuilder builder, Dictionary<string, string> param)
+        {
             foreach (KeyValuePair<string, string> kvp in param)
             {
-                urlBuilder.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
+                builder.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
             }
-
-            IResponse response = await client.GetAsync(urlBuilder.ToString().TrimEnd('&'));
-            return response;
+            return builder.ToString().TrimEnd('&');
         }
 
-        public async Task<IResponse> GetRequest(string path, string queryString, Dictionary<string, string> headers)
+        public async Task<HttpResponseMessage> GetRequestAsync(string url, Dictionary<string, string> param)
         {
-            StringBuilder urlBuilder = new StringBuilder($"{client.BaseClient.BaseAddress.AbsoluteUri.TrimEnd('/')}{path}?{queryString}");
-            IRequest request = client.GetAsync(urlBuilder.ToString());
-            request = request.WithAuthentication("TC3-HMAC-SHA256", headers["Authorization"].Substring("TC3-HMAC-SHA256".Length));
-            headers.Remove("Authorization");
-            StringContent body = new StringContent("", Encoding.UTF8, headers["Content-Type"]);
-            request = request.WithBodyContent(body);
-            headers.Remove("Content-Type");
-            foreach (KeyValuePair<string, string> kvp in headers)
-            {
-                request = request.WithHeader(kvp.Key, kvp.Value);
-            }
-            return await request;
+            StringBuilder urlBuilder = new StringBuilder($"{baseUrl.TrimEnd('/')}{url}?");
+            string fullurl = AppendQuery(urlBuilder, param);
+            string payload = "";
+            Dictionary<string, string> headers = new Dictionary<string, string>();
+            return await this.Send(HttpMethod.Get, fullurl, payload, headers);
         }
 
-        public async Task<IResponse> PostRequest(string path, string payload, Dictionary<string, string> headers)
+        public async Task<HttpResponseMessage> GetRequestAsync(string path, string queryString, Dictionary<string, string> headers)
         {
-            StringBuilder urlBuilder = new StringBuilder($"{client.BaseClient.BaseAddress.AbsoluteUri.TrimEnd('/')}{path}");
-            IRequest request = client.PostAsync(urlBuilder.ToString());
-            request = request.WithAuthentication("TC3-HMAC-SHA256", headers["Authorization"].Substring("TC3-HMAC-SHA256".Length));
-            headers.Remove("Authorization");
-            StringContent body = new StringContent(payload, Encoding.UTF8, headers["Content-Type"]);
-            request = request.WithBodyContent(body);
-            headers.Remove("Content-Type");
-            foreach (KeyValuePair<string, string> kvp in headers)
-            {
-                request = request.WithHeader(kvp.Key, kvp.Value);
-            }
-            return await request.AsResponse();
+            string fullurl = $"{this.baseUrl.TrimEnd('/')}{path}?{queryString}";
+            string payload = "";
+            return await this.Send(HttpMethod.Get, fullurl, payload, headers);
         }
 
-        public async Task<IResponse> PostRequest(string url, Dictionary<string, string> param)
+        public async Task<HttpResponseMessage> PostRequestAsync(string path, string payload, Dictionary<string, string> headers)
         {
-            // set up
-            HttpMethod method = new HttpMethod("POST");
-            HttpRequestMessage message = new HttpRequestMessage(method, url);
-            // System.UriFormatException: Invalid URI: The Uri string is too long.
-            // var postbody = new FormUrlEncodedContent(param);
-            StringBuilder bodysb = new StringBuilder();
-            foreach (KeyValuePair<string, string> kvp in param)
-            {
-                bodysb.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
-            }
-            message.Content = new StringContent(bodysb.ToString().TrimEnd('&'), Encoding.UTF8, "application/x-www-form-urlencoded");
+            string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
+        }
 
-            IRequest request =  client.SendAsync(message);
-            var response = await request.AsResponse();
-            return response;
+        public async Task<HttpResponseMessage> PostRequestAsync(string url, Dictionary<string, string> param)
+        {
+            string fullurl = $"{this.baseUrl.TrimEnd('/')}{url}?";
+            StringBuilder payloadBuilder = new StringBuilder();
+            string payload = AppendQuery(payloadBuilder, param);
+            Dictionary<string, string> headers = new Dictionary<string, string>();
+            headers["Content-Type"] = "application/x-www-form-urlencoded";
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
+        }
+
+        private async Task<HttpResponseMessage> Send(HttpMethod method, string url, string payload, Dictionary<string, string> headers)
+        {
+            using (var cts = new System.Threading.CancellationTokenSource(timeout * 1000))
+            {
+                using (var msg = new HttpRequestMessage(method, url))
+                {
+                    foreach (KeyValuePair<string, string> kvp in headers)
+                    {
+                        if (kvp.Key.Equals("Content-Type"))
+                        {
+                            msg.Content = new StringContent(payload, Encoding.UTF8, kvp.Value);
+                        }
+                        else if (kvp.Key.Equals("Host"))
+                        {
+                            msg.Headers.Host = kvp.Value;
+                        }
+                        else if (kvp.Key.Equals("Authorization"))
+                        {
+                            msg.Headers.Authorization = new AuthenticationHeaderValue("TC3-HMAC-SHA256", kvp.Value.Substring("TC3-HMAC-SHA256".Length));
+                        }
+                        else
+                        {
+                            msg.Headers.Add(kvp.Key, kvp.Value);
+                        }
+                    }
+                    return await http.SendAsync(msg, cts.Token);
+                }
+            }
         }
     }
 }
