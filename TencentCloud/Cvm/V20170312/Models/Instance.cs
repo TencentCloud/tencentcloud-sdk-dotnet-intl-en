@@ -256,6 +256,25 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
 
+        /// <summary>
+        /// Default login user
+        /// </summary>
+        [JsonProperty("DefaultLoginUser")]
+        public string DefaultLoginUser{ get; set; }
+
+        /// <summary>
+        /// Default login port
+        /// </summary>
+        [JsonProperty("DefaultLoginPort")]
+        public long? DefaultLoginPort{ get; set; }
+
+        /// <summary>
+        /// Latest operation errors of the instance.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LatestOperationErrorMsg")]
+        public string LatestOperationErrorMsg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -299,6 +318,9 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
+            this.SetParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
+            this.SetParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
         }
     }
 }

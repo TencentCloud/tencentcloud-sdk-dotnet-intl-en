@@ -653,7 +653,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the download address of a backup RDB (it is in beta test and can be used only after you apply for the eligibility).
+        /// This API is used to query the download address of a backup RDB file.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupUrlResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the download address of a backup RDB (it is in beta test and can be used only after you apply for the eligibility).
+        /// This API is used to query the download address of a backup RDB file.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupUrlResponse"/></returns>
@@ -813,7 +813,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of Redis instance backups.
+        /// This API is used to query the backup list of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceBackupsRequest"/></param>
         /// <returns><see cref="DescribeInstanceBackupsResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of Redis instance backups.
+        /// This API is used to query the backup list of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceBackupsRequest"/></param>
         /// <returns><see cref="DescribeInstanceBackupsResponse"/></returns>
@@ -933,7 +933,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the big key of an instance.
+        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the big key of an instance.
+        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyResponse"/></returns>
@@ -973,7 +973,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the big key size distribution of an instance.
+        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeySizeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeySizeDistResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the big key size distribution of an instance.
+        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeySizeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeySizeDistResponse"/></returns>
@@ -1013,7 +1013,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the big key type distribution of an instance
+        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyTypeDistResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the big key type distribution of an instance
+        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyTypeDistResponse"/></returns>
@@ -1653,7 +1653,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the allowlist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
+        /// This API is used to query purchasable TencentDB for Redis specifications in all regions.
         /// </summary>
         /// <param name="req"><see cref="DescribeProductInfoRequest"/></param>
         /// <returns><see cref="DescribeProductInfoResponse"/></returns>
@@ -1673,7 +1673,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the allowlist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
+        /// This API is used to query purchasable TencentDB for Redis specifications in all regions.
         /// </summary>
         /// <param name="req"><see cref="DescribeProductInfoRequest"/></param>
         /// <returns><see cref="DescribeProductInfoResponse"/></returns>
@@ -1813,7 +1813,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the global replication group.
+        /// This API is used to query a replication group.
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationGroupRequest"/></param>
         /// <returns><see cref="DescribeReplicationGroupResponse"/></returns>
@@ -1833,7 +1833,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the global replication group.
+        /// This API is used to query a replication group.
         /// </summary>
         /// <param name="req"><see cref="DescribeReplicationGroupRequest"/></param>
         /// <returns><see cref="DescribeReplicationGroupResponse"/></returns>

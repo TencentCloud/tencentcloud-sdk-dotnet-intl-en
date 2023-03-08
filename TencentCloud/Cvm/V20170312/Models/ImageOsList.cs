@@ -26,14 +26,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// Supported Windows OS
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Windows")]
         public string[] Windows{ get; set; }
 
         /// <summary>
         /// Supported Linux OS
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Linux")]
         public string[] Linux{ get; set; }

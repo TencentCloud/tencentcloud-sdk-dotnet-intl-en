@@ -25,13 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 
+        /// Image ID
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

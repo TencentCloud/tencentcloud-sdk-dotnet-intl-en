@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Node type. 0: master node; 1: replica node
+        /// Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
         /// </summary>
         [JsonProperty("NodeType")]
         public long? NodeType{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node, which is not required during instance creation
+        /// Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
-        /// AZ ID of the master or replica node
+        /// ID of the AZ of the master or replica node
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// AZ name of the master or replica node
+        /// Name of the AZ of the master or replica node
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

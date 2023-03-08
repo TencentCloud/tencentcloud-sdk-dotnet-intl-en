@@ -56,6 +56,7 @@
     <Compile Include="V20180412\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180412\Models\BackupDownloadInfo.cs" />
+    <Compile Include="V20180412\Models\BackupLimitVpcItem.cs" />
     <Compile Include="V20180412\Models\BigKeyInfo.cs" />
     <Compile Include="V20180412\Models\BigKeyTypeInfo.cs" />
     <Compile Include="V20180412\Models\ChangeInstanceRoleRequest.cs" />

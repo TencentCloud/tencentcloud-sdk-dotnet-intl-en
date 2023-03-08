@@ -25,28 +25,34 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Execution status: true or false
+        /// Execution status. Ignore this parameter.
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// New subnet ID of the instance
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// New VPC ID of the instance
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VIP address
+        /// New private IPv4 address of the instance
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
+
+        /// <summary>
+        /// Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -64,6 +70,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

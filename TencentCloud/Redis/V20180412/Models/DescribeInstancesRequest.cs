@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Number of instances. Default value: 20. Maximum value: 1000.
+        /// Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`.
+        /// Pagination offset, which is an integral multiple of `Limit`.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

@@ -21,32 +21,20 @@ namespace TencentCloud.Redis.V20180412.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeReplicationGroupRequest : AbstractModel
+    public class BackupLimitVpcItem : AbstractModel
     {
         
         /// <summary>
-        /// Number of instances returned per page. Default value: `20`.
+        /// Region of the VPC of the custom backup file download address.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+        /// VPC list of the custom backup file download address.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// Replication group ID
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
-
-        /// <summary>
-        /// Keyword for fuzzy search, which can be an instance name or instance ID.
-        /// </summary>
-        [JsonProperty("SearchKey")]
-        public string SearchKey{ get; set; }
+        [JsonProperty("VpcList")]
+        public string[] VpcList{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArraySimple(map, prefix + "VpcList.", this.VpcList);
         }
     }
 }

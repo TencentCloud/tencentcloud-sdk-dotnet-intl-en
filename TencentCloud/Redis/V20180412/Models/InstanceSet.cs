@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// User's Appid
+        /// User AppID
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+        /// Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// VPC ID, such as 75101.
+        /// VPC ID, such as `75101`.
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID, such as 46315.
+        /// Subnet ID, such as `46315`.
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? Size{ get; set; }
 
         /// <summary>
-        /// This field has been disused
+        /// This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
         /// </summary>
         [JsonProperty("SizeUsed")]
         public float? SizeUsed{ get; set; }
@@ -300,8 +300,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }

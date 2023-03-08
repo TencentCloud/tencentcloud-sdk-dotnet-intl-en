@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 
+        /// ID of the image created in the destination region
         /// </summary>
         [JsonProperty("ImageSet")]
         public SyncImage[] ImageSet{ get; set; }

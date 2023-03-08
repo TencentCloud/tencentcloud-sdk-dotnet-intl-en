@@ -43,7 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] HostIds{ get; set; }
 
         /// <summary>
-        /// Master host IP used to create the CVM
+        /// IPs of the hosts to create CVMs
         /// </summary>
         [JsonProperty("HostIps")]
         public string[] HostIps{ get; set; }

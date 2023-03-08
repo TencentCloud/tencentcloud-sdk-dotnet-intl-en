@@ -58,7 +58,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Sysprep{ get; set; }
 
         /// <summary>
-        /// Specified data disk ID included in the full image created from the instance.
+        /// IDs of data disks included in the image. 
         /// </summary>
         [JsonProperty("DataDiskIds")]
         public string[] DataDiskIds{ get; set; }

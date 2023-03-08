@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// User App ID
+        /// User AppID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+        /// Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// Shard size
+        /// Shard memory size.
         /// </summary>
         [JsonProperty("RedisShardSize")]
         public long? RedisShardSize{ get; set; }
@@ -80,13 +80,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Engine: Redis community edition, Tencent Cloud CKV
+        /// Engine: Redis Community Edition, Tencent Cloud CKV.
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// Instance role. Valid values: `rw` (read-write), `r`( read-only)
+        /// Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
@@ -99,25 +99,25 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Internal parameter, which can be ignored.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// VPC ID, such as 75101
+        /// VPC ID, such as `75101`.
         /// </summary>
         [JsonProperty("VpcID")]
         public long? VpcID{ get; set; }
 
         /// <summary>
-        /// Instance Port
+        /// Instance port
         /// </summary>
         [JsonProperty("VPort")]
         public long? VPort{ get; set; }
 
         /// <summary>
-        /// Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+        /// Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -129,19 +129,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? GrocerySysId{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
+        /// Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// The time when the instance was added to the replication group.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// The time when instances in the replication group were updated.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

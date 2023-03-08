@@ -146,6 +146,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("GpuCount")]
+        public float? GpuCount{ get; set; }
+
+        /// <summary>
+        /// CPU clock rate of the instance
+        /// </summary>
+        [JsonProperty("Frequency")]
+        public string Frequency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +184,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
             this.SetParamSimple(map, prefix + "Fpga", this.Fpga);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "GpuCount", this.GpuCount);
+            this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
         }
     }
 }

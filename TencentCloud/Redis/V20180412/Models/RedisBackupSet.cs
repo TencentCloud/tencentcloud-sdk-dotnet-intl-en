@@ -37,13 +37,22 @@ namespace TencentCloud.Redis.V20180412.Models
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+        /// Backup type
+        /// 
+        /// - `1`: Manual backup initiated by the user.
+        /// - `0`: Automatic backup in the early morning initiated by the system.
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+        /// Backup status 
+        /// 
+        /// - `1`: The backup is locked by another process.
+        /// - `2`: The backup is normal and not locked by any process.
+        /// - `-1`: The backup expired.
+        /// - `3`: The backup is being exported.
+        /// - `4`: The backup was exported successfully.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -55,7 +64,10 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Whether a backup is locked. 0: no; 1: yes.
+        /// Whether the backup is locked
+        /// 
+        /// - `0`: Not locked.
+        /// - `1`: Locked.
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
@@ -81,6 +93,42 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
+        /// <summary>
+        /// Instance ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Instance name
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// The region where the local backup resides.
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// Backup end time
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// Backup file type
+        /// </summary>
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
+
+        /// <summary>
+        /// Backup file expiration time
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +144,12 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "BackupSize", this.BackupSize);
             this.SetParamSimple(map, prefix + "FullBackup", this.FullBackup);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

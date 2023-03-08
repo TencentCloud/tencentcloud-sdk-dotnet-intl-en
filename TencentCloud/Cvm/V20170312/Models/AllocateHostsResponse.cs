@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// The ID list of the CVM instances newly created on the CDH.
+        /// IDs of created instances
         /// </summary>
         [JsonProperty("HostIdSet")]
         public string[] HostIdSet{ get; set; }

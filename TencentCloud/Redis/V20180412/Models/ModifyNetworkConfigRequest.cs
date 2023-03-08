@@ -31,34 +31,48 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
+        /// Network change type. Valid values:
+        /// - `changeVip`: VPC change, including the private IPv4 address and port.
+        /// - `changeVpc`: Subnet change.
+        /// - `changeBaseToVpc`: Change from classic network to VPC.
+        /// - `changeVPort`: Port change.
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
+        /// Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
+        /// VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+        /// Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+        /// Retention period of the original private IPv4 address
+        /// - Unit: Days.
+        /// - Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
+        /// 
+        /// **Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Recycle")]
         public long? Recycle{ get; set; }
+
+        /// <summary>
+        /// Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
+        /// </summary>
+        [JsonProperty("VPort")]
+        public long? VPort{ get; set; }
 
 
         /// <summary>
@@ -72,6 +86,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Recycle", this.Recycle);
+            this.SetParamSimple(map, prefix + "VPort", this.VPort);
         }
     }
 }

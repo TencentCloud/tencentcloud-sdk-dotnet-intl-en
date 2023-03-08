@@ -62,8 +62,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// The operating system of the reserved instance, such as `linux`.
-        /// Valid value: linux.
+        /// The operating system of the reserved instance, such as `Linux`.
+        /// Valid value: `Linux`.
         /// </summary>
         [JsonProperty("ProductDescription")]
         public string ProductDescription{ get; set; }

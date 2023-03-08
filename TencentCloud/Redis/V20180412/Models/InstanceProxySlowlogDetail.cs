@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Slow query duration
+        /// Duration of the slow query in ms.
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }

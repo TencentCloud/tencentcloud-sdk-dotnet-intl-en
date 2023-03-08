@@ -31,6 +31,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? TaskId{ get; set; }
 
         /// <summary>
+        /// List of COS filenames of the exported images
+        /// </summary>
+        [JsonProperty("CosPaths")]
+        public string[] CosPaths{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArraySimple(map, prefix + "CosPaths.", this.CosPaths);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

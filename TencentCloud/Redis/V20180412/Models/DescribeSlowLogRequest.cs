@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The average execution time threshold of slow query in microseconds
+        /// The average execution time threshold of slow query in ms.
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
