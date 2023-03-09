@@ -293,54 +293,6 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 备份下载功能已调整，此接口即将下线
-        /// 
-        /// TencentDB will soon stop supporting this API as the backup download feature has been modified.
-        /// 
-        /// This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupAccessRequest"/></param>
-        /// <returns><see cref="DescribeBackupAccessResponse"/></returns>
-        public async Task<DescribeBackupAccessResponse> DescribeBackupAccess(DescribeBackupAccessRequest req)
-        {
-             JsonResponseModel<DescribeBackupAccessResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBackupAccess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupAccessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 备份下载功能已调整，此接口即将下线
-        /// 
-        /// TencentDB will soon stop supporting this API as the backup download feature has been modified.
-        /// 
-        /// This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupAccessRequest"/></param>
-        /// <returns><see cref="DescribeBackupAccessResponse"/></returns>
-        public DescribeBackupAccessResponse DescribeBackupAccessSync(DescribeBackupAccessRequest req)
-        {
-             JsonResponseModel<DescribeBackupAccessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBackupAccess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupAccessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query backup download task information.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>

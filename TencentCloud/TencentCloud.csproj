@@ -4,15 +4,15 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.638</VersionPrefix>
+    <VersionPrefix>3.0.639</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
-    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet-intl-en/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>TencentCloudSDK</PackageId>
-    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet-intl-en</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
     <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
     <SignAssembly>True</SignAssembly>
@@ -135,9 +135,5 @@
     <Compile Include="Vod\**\*.cs" />
     <Compile Include="Vpc\**\*.cs" />
     <Compile Include="Yunjing\**\*.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Common\TencentCloudCommon.csproj" />
   </ItemGroup>
 </Project>

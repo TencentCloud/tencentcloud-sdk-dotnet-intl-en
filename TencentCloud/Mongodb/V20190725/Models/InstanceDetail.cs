@@ -49,7 +49,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+        /// Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
         /// </summary>
         [JsonProperty("ClusterType")]
         public ulong? ClusterType{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+        /// Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ReplicationSetNum{ get; set; }
 
         /// <summary>
-        /// Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+        /// Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -169,13 +169,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? UsedVolume{ get; set; }
 
         /// <summary>
-        /// Start time of the maintenance time window
+        /// Start time of the maintenance time
         /// </summary>
         [JsonProperty("MaintenanceStart")]
         public string MaintenanceStart{ get; set; }
 
         /// <summary>
-        /// End time of the maintenance time window
+        /// End time of the maintenance time
         /// </summary>
         [JsonProperty("MaintenanceEnd")]
         public string MaintenanceEnd{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public DBInstanceInfo[] CloneInstances{ get; set; }
 
         /// <summary>
-        /// Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+        /// Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
         /// </summary>
         [JsonProperty("RelatedInstance")]
         public DBInstanceInfo RelatedInstance{ get; set; }
@@ -217,19 +217,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Instance version tag
+        /// Instance version
         /// </summary>
         [JsonProperty("InstanceVer")]
         public ulong? InstanceVer{ get; set; }
 
         /// <summary>
-        /// Instance version tag
+        /// Instance version
         /// </summary>
         [JsonProperty("ClusterVer")]
         public ulong? ClusterVer{ get; set; }
 
         /// <summary>
-        /// Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+        /// Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
         /// </summary>
         [JsonProperty("Protocol")]
         public ulong? Protocol{ get; set; }
@@ -251,6 +251,62 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         [JsonProperty("RealInstanceId")]
         public string RealInstanceId{ get; set; }
+
+        /// <summary>
+        /// Number of mongos nodes
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MongosNodeNum")]
+        public ulong? MongosNodeNum{ get; set; }
+
+        /// <summary>
+        /// mongos node memory
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MongosMemory")]
+        public ulong? MongosMemory{ get; set; }
+
+        /// <summary>
+        /// Number of mongos nodes
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MongosCpuNum")]
+        public ulong? MongosCpuNum{ get; set; }
+
+        /// <summary>
+        /// Number of ConfigServer nodes
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ConfigServerNodeNum")]
+        public ulong? ConfigServerNodeNum{ get; set; }
+
+        /// <summary>
+        /// Memory of ConfigServer node
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ConfigServerMemory")]
+        public ulong? ConfigServerMemory{ get; set; }
+
+        /// <summary>
+        /// Disk size of ConfigServer node
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ConfigServerVolume")]
+        public ulong? ConfigServerVolume{ get; set; }
+
+        /// <summary>
+        /// CPU number of ConfigServer node
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ConfigServerCpuNum")]
+        public ulong? ConfigServerCpuNum{ get; set; }
+
+        /// <summary>
+        /// Number of read-only nodes
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReadonlyNodeNum")]
+        public ulong? ReadonlyNodeNum{ get; set; }
 
 
         /// <summary>
@@ -296,6 +352,14 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
             this.SetParamSimple(map, prefix + "RealInstanceId", this.RealInstanceId);
+            this.SetParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
+            this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+            this.SetParamSimple(map, prefix + "MongosCpuNum", this.MongosCpuNum);
+            this.SetParamSimple(map, prefix + "ConfigServerNodeNum", this.ConfigServerNodeNum);
+            this.SetParamSimple(map, prefix + "ConfigServerMemory", this.ConfigServerMemory);
+            this.SetParamSimple(map, prefix + "ConfigServerVolume", this.ConfigServerVolume);
+            this.SetParamSimple(map, prefix + "ConfigServerCpuNum", this.ConfigServerCpuNum);
+            this.SetParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
         }
     }
 }

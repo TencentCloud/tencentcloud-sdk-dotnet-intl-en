@@ -103,7 +103,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+        /// Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -180,6 +180,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
 
+        /// <summary>
+        /// Number of read-only nodes. Value range: 2-7.
+        /// </summary>
+        [JsonProperty("ReadonlyNodeNum")]
+        public ulong? ReadonlyNodeNum{ get; set; }
+
+        /// <summary>
+        /// The AZ where the read-only node is deployed
+        /// </summary>
+        [JsonProperty("ReadonlyNodeAvailabilityZoneList")]
+        public string[] ReadonlyNodeAvailabilityZoneList{ get; set; }
+
+        /// <summary>
+        /// The AZ where the hidden node resides. It is required for cross-AZ instances.
+        /// </summary>
+        [JsonProperty("HiddenZone")]
+        public string HiddenZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +230,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
             this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
             this.SetParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
+            this.SetParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
+            this.SetParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
+            this.SetParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
         }
     }
 }

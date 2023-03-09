@@ -52,7 +52,6 @@
     <Compile Include="V20190725\Models\AssignProjectResponse.cs" />
     <Compile Include="V20190725\Models\BackupDownloadTask.cs" />
     <Compile Include="V20190725\Models\BackupDownloadTaskStatus.cs" />
-    <Compile Include="V20190725\Models\BackupFile.cs" />
     <Compile Include="V20190725\Models\BackupInfo.cs" />
     <Compile Include="V20190725\Models\ClientConnection.cs" />
     <Compile Include="V20190725\Models\CreateBackupDBInstanceRequest.cs" />
@@ -67,8 +66,6 @@
     <Compile Include="V20190725\Models\DBInstancePrice.cs" />
     <Compile Include="V20190725\Models\DescribeAsyncRequestInfoRequest.cs" />
     <Compile Include="V20190725\Models\DescribeAsyncRequestInfoResponse.cs" />
-    <Compile Include="V20190725\Models\DescribeBackupAccessRequest.cs" />
-    <Compile Include="V20190725\Models\DescribeBackupAccessResponse.cs" />
     <Compile Include="V20190725\Models\DescribeBackupDownloadTaskRequest.cs" />
     <Compile Include="V20190725\Models\DescribeBackupDownloadTaskResponse.cs" />
     <Compile Include="V20190725\Models\DescribeClientConnectionsRequest.cs" />

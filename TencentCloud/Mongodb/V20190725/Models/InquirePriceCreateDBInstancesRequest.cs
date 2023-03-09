@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+        /// Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance disk size in GB.
+        ///  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+        /// Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
@@ -67,12 +67,6 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-        /// </summary>
-        [JsonProperty("Period")]
-        public long? Period{ get; set; }
-
-        /// <summary>
         /// Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
         /// </summary>
         [JsonProperty("ClusterType")]
@@ -83,6 +77,54 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public long? ReplicateSetNum{ get; set; }
+
+        /// <summary>
+        /// Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MongosCpu")]
+        public ulong? MongosCpu{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MongosMemory")]
+        public ulong? MongosMemory{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MongosNum")]
+        public ulong? MongosNum{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ConfigServerCpu")]
+        public ulong? ConfigServerCpu{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ConfigServerMemory")]
+        public ulong? ConfigServerMemory{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ConfigServerVolume")]
+        public ulong? ConfigServerVolume{ get; set; }
 
 
         /// <summary>
@@ -97,9 +139,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "MongoVersion", this.MongoVersion);
             this.SetParamSimple(map, prefix + "MachineCode", this.MachineCode);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
-            this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
+            this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+            this.SetParamSimple(map, prefix + "MongosNum", this.MongosNum);
+            this.SetParamSimple(map, prefix + "ConfigServerCpu", this.ConfigServerCpu);
+            this.SetParamSimple(map, prefix + "ConfigServerMemory", this.ConfigServerMemory);
+            this.SetParamSimple(map, prefix + "ConfigServerVolume", this.ConfigServerVolume);
         }
     }
 }

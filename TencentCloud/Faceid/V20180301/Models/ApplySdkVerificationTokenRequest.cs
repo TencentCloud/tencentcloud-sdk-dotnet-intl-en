@@ -31,7 +31,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? NeedVerifyIdCard{ get; set; }
 
         /// <summary>
-        /// Card type. Valid values: `HK` (Hong Kong ID cards) (default), `ML` (Malaysian ID cards), `PhilippinesVoteID` (Philippine voters ID cards), and `PhilippinesDrivingLicense` (Philippine driving licenses).
+        /// The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), and `IndonesiaIDCard` (Indonesian identity card).
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
