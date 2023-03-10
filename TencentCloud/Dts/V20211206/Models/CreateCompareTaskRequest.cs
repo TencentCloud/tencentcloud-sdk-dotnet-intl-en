@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Migration task ID
+        /// Task ID
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Objects")]
         public CompareObject Objects{ get; set; }
 
+        /// <summary>
+        /// Consistency check options
+        /// </summary>
+        [JsonProperty("Options")]
+        public CompareOptions Options{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
             this.SetParamObj(map, prefix + "Objects.", this.Objects);
+            this.SetParamObj(map, prefix + "Options.", this.Options);
         }
     }
 }

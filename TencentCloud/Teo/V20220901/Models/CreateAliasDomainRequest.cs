@@ -44,9 +44,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Certificate configuration. Values:
-        /// <li>`none`: Off</li>
+        /// <li>`none`: (Default) Do not configure</li>
         /// <li>`hosting`: Managed SSL certificate</li>
-        /// <li>`apply`: Free certificate</li>Default value: none
         /// </summary>
         [JsonProperty("CertType")]
         public string CertType{ get; set; }

@@ -199,6 +199,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("EncryptConn")]
         public string EncryptConn{ get; set; }
 
+        /// <summary>
+        /// Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DatabaseNetEnv")]
+        public string DatabaseNetEnv{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +237,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
             this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
+            this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
         }
     }
 }

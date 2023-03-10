@@ -1093,6 +1093,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the time-series data of DDoS attacks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSAttackDataRequest"/></param>
+        /// <returns><see cref="DescribeDDoSAttackDataResponse"/></returns>
+        public async Task<DescribeDDoSAttackDataResponse> DescribeDDoSAttackData(DescribeDDoSAttackDataRequest req)
+        {
+             JsonResponseModel<DescribeDDoSAttackDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSAttackData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSAttackDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the time-series data of DDoS attacks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSAttackDataRequest"/></param>
+        /// <returns><see cref="DescribeDDoSAttackDataResponse"/></returns>
+        public DescribeDDoSAttackDataResponse DescribeDDoSAttackDataSync(DescribeDDoSAttackDataRequest req)
+        {
+             JsonResponseModel<DescribeDDoSAttackDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDoSAttackData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSAttackDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the top-ranked DDoS attack data.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackTopDataRequest"/></param>
@@ -1404,6 +1444,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeOriginGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the origin protection configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginProtectionRequest"/></param>
+        /// <returns><see cref="DescribeOriginProtectionResponse"/></returns>
+        public async Task<DescribeOriginProtectionResponse> DescribeOriginProtection(DescribeOriginProtectionRequest req)
+        {
+             JsonResponseModel<DescribeOriginProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOriginProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the origin protection configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginProtectionRequest"/></param>
+        /// <returns><see cref="DescribeOriginProtectionResponse"/></returns>
+        public DescribeOriginProtectionResponse DescribeOriginProtectionSync(DescribeOriginProtectionRequest req)
+        {
+             JsonResponseModel<DescribeOriginProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOriginProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginProtectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3164,6 +3244,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "ReclaimZone");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReclaimZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the list of intermediate IPs.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOriginProtectionIPWhitelistRequest"/></param>
+        /// <returns><see cref="UpdateOriginProtectionIPWhitelistResponse"/></returns>
+        public async Task<UpdateOriginProtectionIPWhitelistResponse> UpdateOriginProtectionIPWhitelist(UpdateOriginProtectionIPWhitelistRequest req)
+        {
+             JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateOriginProtectionIPWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the list of intermediate IPs.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOriginProtectionIPWhitelistRequest"/></param>
+        /// <returns><see cref="UpdateOriginProtectionIPWhitelistResponse"/></returns>
+        public UpdateOriginProtectionIPWhitelistResponse UpdateOriginProtectionIPWhitelistSync(UpdateOriginProtectionIPWhitelistRequest req)
+        {
+             JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateOriginProtectionIPWhitelist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,27 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SkipCheckItemResponse : AbstractModel
+    public class DescribeDatahubTopicsResp : AbstractModel
     {
         
         /// <summary>
-        /// Message prompted for skipping the check item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total count
         /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Topic list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TopicList")]
+        public DatahubTopicDTO[] TopicList{ get; set; }
 
 
         /// <summary>
@@ -43,8 +43,8 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "TopicList.", this.TopicList);
         }
     }
 }

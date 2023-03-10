@@ -42,10 +42,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public string MatchFrom{ get; set; }
 
         /// <summary>
-        /// The matching content.
+        /// Matching method. It defaults to `equal` if it’s left empty.
+        /// Values: 
+        /// <li>`is_empty`: The field is empty.</li>
+        /// <li>`not_exists`: The configuration item does not exist.</li>
+        /// <li>`include`: Include</li>
+        /// <li>`not_include`: Do not include</li>
+        /// <li>`equal`: Equal to</li>
+        /// <li>`not_equal`: Not equal to</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("MatchContent")]
-        public string MatchContent{ get; set; }
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
         /// <summary>
         /// The rule ID, which is only used as an output parameter.
@@ -68,6 +76,19 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// The rule name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
+
+        /// <summary>
+        /// Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+        /// </summary>
+        [JsonProperty("MatchContent")]
+        public string MatchContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,10 +97,12 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "MatchFrom", this.MatchFrom);
-            this.SetParamSimple(map, prefix + "MatchContent", this.MatchContent);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "MatchContent", this.MatchContent);
         }
     }
 }

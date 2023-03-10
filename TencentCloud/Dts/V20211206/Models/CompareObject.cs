@@ -25,18 +25,25 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Object migration mode. Valid values: `all`, `partial`.
+        /// Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ObjectMode")]
         public string ObjectMode{ get; set; }
 
         /// <summary>
-        /// Migration database/table configuration
+        /// Object list
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ObjectItems")]
         public CompareObjectItem[] ObjectItems{ get; set; }
+
+        /// <summary>
+        /// Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AdvancedObjects")]
+        public string[] AdvancedObjects{ get; set; }
 
 
         /// <summary>
@@ -46,6 +53,7 @@ namespace TencentCloud.Dts.V20211206.Models
         {
             this.SetParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
             this.SetParamArrayObj(map, prefix + "ObjectItems.", this.ObjectItems);
+            this.SetParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
         }
     }
 }

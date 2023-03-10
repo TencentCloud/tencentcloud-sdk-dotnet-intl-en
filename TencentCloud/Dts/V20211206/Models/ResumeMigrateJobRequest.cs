@@ -31,7 +31,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// Task resumption mode. Valid values: `clearData` (clear the target instance data); `overwrite` (execute the task in overwrite mode); `normal` (follow the normal process without performing additional operations).
+        /// Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
         /// </summary>
         [JsonProperty("ResumeOption")]
         public string ResumeOption{ get; set; }

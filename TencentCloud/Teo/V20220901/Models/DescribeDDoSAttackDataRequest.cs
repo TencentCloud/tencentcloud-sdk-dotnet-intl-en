@@ -21,69 +21,58 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTimingL4DataRequest : AbstractModel
+    public class DescribeDDoSAttackDataRequest : AbstractModel
     {
         
         /// <summary>
-        /// The start time.
+        /// Start time of the query period.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time.
+        /// End time of the query period.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Metric to query. Values:
-        /// <li>`l4Flow_connections`: Access connections;</li>
-        /// <li>`l4Flow_flux`: Access traffic;</li>
-        /// <li>`l4Flow_inFlux`: Inbound traffic;</li>
-        /// <li>`l4Flow_outFlux`: Outbound traffic;</li>
-        /// <li>`l4Flow_outPkt`: Outbound packets.</li>
+        /// Statistical metrics.
+        /// <li>`ddos_attackMaxBandwidth`: Peak attack bandwidth;</li>
+        /// <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
+        /// <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
+        /// <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// List of sites
-        /// If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-        /// Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+        /// List of sites to be queried. All sites will be selected if this field is not specified.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
+        /// IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
         /// </summary>
-        [JsonProperty("ProxyIds")]
-        public string[] ProxyIds{ get; set; }
+        [JsonProperty("PolicyIds")]
+        public long?[] PolicyIds{ get; set; }
 
         /// <summary>
         /// The query granularity. Values:
         /// <li>`min`: 1 minute;</li>
         /// <li>`5min`: 5 minutes;</li>
         /// <li>`hour`: 1 hour;</li>
-        /// <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+        /// <li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Filters
-        /// <li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-        /// <li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
-        /// </summary>
-        [JsonProperty("Filters")]
-        public QueryCondition[] Filters{ get; set; }
-
-        /// <summary>
         /// Geolocation scope. Values:
         /// <li>`overseas`: Regions outside the Chinese mainland</li>
         /// <li>`mainland`: Chinese mainland</li>
-        /// <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+        /// <li>`global`: Global </li>If this field is not specified, the default value `global` is used.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -98,9 +87,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
-            this.SetParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
+            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }

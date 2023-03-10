@@ -45,7 +45,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// List of sites
-        /// If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+        /// If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
         /// Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
         /// </summary>
         [JsonProperty("ZoneIds")]
@@ -53,11 +53,11 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Filters
-        /// <li>`country`:<br>   Filter by the specified <strong>country code</strong>. <a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a> country codes are used.</li>
-        /// <li>`domain`<br>   Filter by the specified <strong>sub-domain name</strong>, such as `test.example.com`</li>
-        /// <li>`protocol`:<br>   Filter by the specified <strong>HTTP protocol</strong><br>   Values:<br>   `HTTP/1.0`: HTTP 1.0<br>   `HTTP/1.1`: HTTP 1.1<br>   `HTTP/2.0`: HTTP 2.0<br>   `HTTP/3.0`: HTTP 3.0<br>   `WebSocket`: WebSocket</li>
-        /// <li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-        /// <li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+        /// <li>`country`:<br>   Filter by the specified <strong>country code</strong>. <a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a> country codes are used.</li>
+        /// <li>`domain`<br>   Filter by the specified <strong>sub-domain name</strong>, such as `test.example.com`</li>
+        /// <li>`protocol`:<br>   Filter by the specified <strong>HTTP protocol</strong><br>   Values:<br>   `HTTP/1.0`: HTTP 1.0<br>   `HTTP/1.1`: HTTP 1.1<br>   `HTTP/2.0`: HTTP 2.0<br>   `HTTP/3.0`: HTTP 3.0<br>   `WebSocket`: WebSocket</li>
+        /// <li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+        /// <li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`min`: 1 minute;</li>
         /// <li>`5min`: 5 minutes;</li>
         /// <li>`hour`: 1 hour;</li>
-        /// <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+        /// <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }

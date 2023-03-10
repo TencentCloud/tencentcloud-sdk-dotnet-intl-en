@@ -79,6 +79,36 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("AttackContent")]
         public string AttackContent{ get; set; }
 
+        /// <summary>
+        /// The rule type. Values:
+        /// <li>`waf`: Tencent Cloud-managed rule</li>
+        /// <li>`acl`: Custom rule</li>
+        /// <li>`rate`: Rate limiting rule</li>
+        /// <li>`bot`: Bot rule</li>
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the rule
+        /// </summary>
+        [JsonProperty("RuleEnabled")]
+        public bool? RuleEnabled{ get; set; }
+
+        /// <summary>
+        /// Whether the rule is deleted. Values: 
+        /// <li>`true`: The rule has been deleted (does not exist).</li>
+        /// <li>`false`: The rule is not deleted (exists).</li>
+        /// </summary>
+        [JsonProperty("RuleDeleted")]
+        public bool? RuleDeleted{ get; set; }
+
+        /// <summary>
+        /// Whether to enable alerting for this rule
+        /// </summary>
+        [JsonProperty("AlarmEnabled")]
+        public bool? AlarmEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +122,10 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
             this.SetParamSimple(map, prefix + "AttackContent", this.AttackContent);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "RuleEnabled", this.RuleEnabled);
+            this.SetParamSimple(map, prefix + "RuleDeleted", this.RuleDeleted);
+            this.SetParamSimple(map, prefix + "AlarmEnabled", this.AlarmEnabled);
         }
     }
 }

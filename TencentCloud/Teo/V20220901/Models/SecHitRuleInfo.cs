@@ -25,6 +25,12 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
+        /// The site ID.
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
         /// The rule ID.
         /// </summary>
         [JsonProperty("RuleId")]
@@ -35,19 +41,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("RuleTypeName")]
         public string RuleTypeName{ get; set; }
-
-        /// <summary>
-        /// Action. Values:
-        /// <li>`trans`: Allow;</li>
-        /// <li>`alg`: Algorithm challenge;</li>
-        /// <li>`drop`: Discard;</li>
-        /// <li>`ban`: Block the source IP;</li>
-        /// <li>`redirect`: Redirect;</li>
-        /// <li>`page`: Return to the specified page;</li>
-        /// <li>`monitor`: Observe.</li>
-        /// </summary>
-        [JsonProperty("Action")]
-        public string Action{ get; set; }
 
         /// <summary>
         /// The hit time recorded in seconds using UNIX timestamp.
@@ -74,6 +67,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Domain{ get; set; }
 
         /// <summary>
+        /// Action. Values:
+        /// <li>`trans`: Allow;</li>
+        /// <li>`alg`: Algorithm challenge;</li>
+        /// <li>`drop`: Discard;</li>
+        /// <li>`ban`: Block the source IP;</li>
+        /// <li>`redirect`: Redirect;</li>
+        /// <li>`page`: Return to the specified page;</li>
+        /// <li>`monitor`: Observe.</li>
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
+        /// <summary>
         /// The bot tag. Values:
         /// <li>`evil_bot`: Malicious bot</li>
         /// <li>`suspect_bot`: Suspected bot</li>
@@ -84,20 +90,44 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("BotLabel")]
         public string BotLabel{ get; set; }
 
+        /// <summary>
+        /// Whether to enable the rule
+        /// </summary>
+        [JsonProperty("RuleEnabled")]
+        public bool? RuleEnabled{ get; set; }
+
+        /// <summary>
+        /// Whether to enable alerting for this rule
+        /// </summary>
+        [JsonProperty("AlarmEnabled")]
+        public bool? AlarmEnabled{ get; set; }
+
+        /// <summary>
+        /// Whether the rule is deleted. Values: 
+        /// <li>`true`: The rule has been deleted (does not exist).</li>
+        /// <li>`false`: The rule is not deleted (exists).</li>
+        /// </summary>
+        [JsonProperty("RuleDeleted")]
+        public bool? RuleDeleted{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
-            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "HitTime", this.HitTime);
             this.SetParamSimple(map, prefix + "RequestNum", this.RequestNum);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "BotLabel", this.BotLabel);
+            this.SetParamSimple(map, prefix + "RuleEnabled", this.RuleEnabled);
+            this.SetParamSimple(map, prefix + "AlarmEnabled", this.AlarmEnabled);
+            this.SetParamSimple(map, prefix + "RuleDeleted", this.RuleDeleted);
         }
     }
 }

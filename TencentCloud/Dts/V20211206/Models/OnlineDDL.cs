@@ -24,12 +24,20 @@ namespace TencentCloud.Dts.V20211206.Models
     public class OnlineDDL : AbstractModel
     {
         
+        /// <summary>
+        /// Status
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

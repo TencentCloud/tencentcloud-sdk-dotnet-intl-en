@@ -42,6 +42,18 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// Check task ID
+        /// </summary>
+        [JsonProperty("CompareTaskId")]
+        public string CompareTaskId{ get; set; }
+
+        /// <summary>
+        /// Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string[] Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "CompareTaskId", this.CompareTaskId);
+            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
         }
     }
 }

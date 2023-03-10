@@ -21,21 +21,29 @@ namespace TencentCloud.Dts.V20211206.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SkipCheckItemResponse : AbstractModel
+    public class CompareOptions : AbstractModel
     {
         
         /// <summary>
-        /// Message prompted for skipping the check item
+        /// Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Sampling rate. Value range: 0-100%.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SampleRate")]
+        public long? SampleRate{ get; set; }
+
+        /// <summary>
+        /// The number of threads, which defaults to 1. Value range: 1-5.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ThreadCount")]
+        public long? ThreadCount{ get; set; }
 
 
         /// <summary>
@@ -43,8 +51,9 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
+            this.SetParamSimple(map, prefix + "ThreadCount", this.ThreadCount);
         }
     }
 }

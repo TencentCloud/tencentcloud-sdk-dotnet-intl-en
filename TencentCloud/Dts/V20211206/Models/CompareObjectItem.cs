@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// The database to be migrated
+        /// Database name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DbName")]
@@ -39,7 +39,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// The schema to be migrated
+        /// Schema name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SchemaName")]

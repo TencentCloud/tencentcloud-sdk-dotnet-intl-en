@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] StepIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
         /// </summary>
         [JsonProperty("ForeignKeyFlag")]
         public string ForeignKeyFlag{ get; set; }

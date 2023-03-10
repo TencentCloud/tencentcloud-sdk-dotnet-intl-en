@@ -48,7 +48,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// List of sites
-        /// Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+        /// Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`http`: HTTP protocol;</li>
         /// <li>`https`: HTTPS protocol;</li>
         /// <li>`http2`: HTTP2 protocol;</li>
-        /// <li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+        /// <li>`all`:   All protocols. </li>If it’s not specified, `all` is used. This parameter is not yet available now.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -74,15 +74,15 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`min`: 1 minute;</li>
         /// <li>`5min`: 5 minutes;</li>
         /// <li>`hour`: 1 hour;</li>
-        /// <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+        /// <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
         /// Filters
-        /// <li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-        /// <li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+        /// <li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+        /// <li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }

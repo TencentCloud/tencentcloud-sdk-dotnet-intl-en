@@ -137,6 +137,86 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to resume a paused migration task.
+        /// </summary>
+        /// <param name="req"><see cref="ContinueMigrateJobRequest"/></param>
+        /// <returns><see cref="ContinueMigrateJobResponse"/></returns>
+        public async Task<ContinueMigrateJobResponse> ContinueMigrateJob(ContinueMigrateJobRequest req)
+        {
+             JsonResponseModel<ContinueMigrateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ContinueMigrateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to resume a paused migration task.
+        /// </summary>
+        /// <param name="req"><see cref="ContinueMigrateJobRequest"/></param>
+        /// <returns><see cref="ContinueMigrateJobResponse"/></returns>
+        public ContinueMigrateJobResponse ContinueMigrateJobSync(ContinueMigrateJobRequest req)
+        {
+             JsonResponseModel<ContinueMigrateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ContinueMigrateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to resume a paused data sync task.
+        /// </summary>
+        /// <param name="req"><see cref="ContinueSyncJobRequest"/></param>
+        /// <returns><see cref="ContinueSyncJobResponse"/></returns>
+        public async Task<ContinueSyncJobResponse> ContinueSyncJob(ContinueSyncJobRequest req)
+        {
+             JsonResponseModel<ContinueSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ContinueSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to resume a paused data sync task.
+        /// </summary>
+        /// <param name="req"><see cref="ContinueSyncJobRequest"/></param>
+        /// <returns><see cref="ContinueSyncJobResponse"/></returns>
+        public ContinueSyncJobResponse ContinueSyncJobSync(ContinueSyncJobRequest req)
+        {
+             JsonResponseModel<ContinueSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ContinueSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to verify a sync task by checking required parameters and peripheral configuration.
         /// </summary>
         /// <param name="req"><see cref="CreateCheckSyncJobRequest"/></param>
@@ -1056,6 +1136,86 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMigrationJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrationJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pause a migration task.
+        /// </summary>
+        /// <param name="req"><see cref="PauseMigrateJobRequest"/></param>
+        /// <returns><see cref="PauseMigrateJobResponse"/></returns>
+        public async Task<PauseMigrateJobResponse> PauseMigrateJob(PauseMigrateJobRequest req)
+        {
+             JsonResponseModel<PauseMigrateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PauseMigrateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pause a migration task.
+        /// </summary>
+        /// <param name="req"><see cref="PauseMigrateJobRequest"/></param>
+        /// <returns><see cref="PauseMigrateJobResponse"/></returns>
+        public PauseMigrateJobResponse PauseMigrateJobSync(PauseMigrateJobRequest req)
+        {
+             JsonResponseModel<PauseMigrateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PauseMigrateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pause a data sync task.
+        /// </summary>
+        /// <param name="req"><see cref="PauseSyncJobRequest"/></param>
+        /// <returns><see cref="PauseSyncJobResponse"/></returns>
+        public async Task<PauseSyncJobResponse> PauseSyncJob(PauseSyncJobRequest req)
+        {
+             JsonResponseModel<PauseSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PauseSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to pause a data sync task.
+        /// </summary>
+        /// <param name="req"><see cref="PauseSyncJobRequest"/></param>
+        /// <returns><see cref="PauseSyncJobResponse"/></returns>
+        public PauseSyncJobResponse PauseSyncJobSync(PauseSyncJobRequest req)
+        {
+             JsonResponseModel<PauseSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PauseSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseSyncJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

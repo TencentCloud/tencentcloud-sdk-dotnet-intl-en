@@ -31,22 +31,16 @@ namespace TencentCloud.Dts.V20211206.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+        /// Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
         /// </summary>
         [JsonProperty("SrcAccessType")]
         public string SrcAccessType{ get; set; }
 
         /// <summary>
-        /// Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+        /// Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
         /// </summary>
         [JsonProperty("DstAccessType")]
         public string DstAccessType{ get; set; }
-
-        /// <summary>
-        /// Sync task options
-        /// </summary>
-        [JsonProperty("Options")]
-        public Options Options{ get; set; }
 
         /// <summary>
         /// Information of synced database/table objects
@@ -79,7 +73,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string ExpectRunTime{ get; set; }
 
         /// <summary>
-        /// Source database information. This parameter is used by single-node databases.
+        /// Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
         /// </summary>
         [JsonProperty("SrcInfo")]
         public Endpoint SrcInfo{ get; set; }
@@ -89,6 +83,12 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         [JsonProperty("DstInfo")]
         public Endpoint DstInfo{ get; set; }
+
+        /// <summary>
+        /// Sync task options
+        /// </summary>
+        [JsonProperty("Options")]
+        public Options Options{ get; set; }
 
         /// <summary>
         /// Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
@@ -105,7 +105,6 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
-            this.SetParamObj(map, prefix + "Options.", this.Options);
             this.SetParamObj(map, prefix + "Objects.", this.Objects);
             this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "JobMode", this.JobMode);
@@ -113,6 +112,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
             this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
+            this.SetParamObj(map, prefix + "Options.", this.Options);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }
     }

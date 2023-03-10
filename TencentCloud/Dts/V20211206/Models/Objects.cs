@@ -46,7 +46,8 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] AdvancedObjects{ get; set; }
 
         /// <summary>
-        /// 
+        /// A redundant field that specifies the online DDL type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OnlineDDL")]
         public OnlineDDL OnlineDDL{ get; set; }

@@ -86,6 +86,7 @@
     <Compile Include="V20190819\Models\CreateTopicResponse.cs" />
     <Compile Include="V20190819\Models\CreateUserRequest.cs" />
     <Compile Include="V20190819\Models\CreateUserResponse.cs" />
+    <Compile Include="V20190819\Models\DatahubTopicDTO.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePreRequest.cs" />
@@ -109,6 +110,12 @@
     <Compile Include="V20190819\Models\DescribeConnectInfoResultDTO.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupRequest.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicResp.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicsRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicsResp.cs" />
+    <Compile Include="V20190819\Models\DescribeDatahubTopicsResponse.cs" />
     <Compile Include="V20190819\Models\DescribeGroup.cs" />
     <Compile Include="V20190819\Models\DescribeGroupInfoRequest.cs" />
     <Compile Include="V20190819\Models\DescribeGroupInfoResponse.cs" />

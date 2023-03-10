@@ -127,6 +127,8 @@
     <Compile Include="V20220901\Models\DescribeClientRuleListResponse.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaRequest.cs" />
     <Compile Include="V20220901\Models\DescribeContentQuotaResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeDDoSAttackDataRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeDDoSAttackDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesRequest.cs" />
@@ -143,6 +145,8 @@
     <Compile Include="V20220901\Models\DescribeLogTopicTasksResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupRequest.cs" />
     <Compile Include="V20220901\Models\DescribeOriginGroupResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeOriginProtectionRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeOriginProtectionResponse.cs" />
     <Compile Include="V20220901\Models\DescribeOverviewL7DataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeOverviewL7DataResponse.cs" />
     <Compile Include="V20220901\Models\DescribePrefetchTasksRequest.cs" />
@@ -190,6 +194,7 @@
     <Compile Include="V20220901\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20220901\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20220901\Models\DetailHost.cs" />
+    <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
     <Compile Include="V20220901\Models\DistrictStatistics.cs" />
     <Compile Include="V20220901\Models\DnsData.cs" />
     <Compile Include="V20220901\Models\DownloadL4LogsRequest.cs" />
@@ -211,6 +216,7 @@
     <Compile Include="V20220901\Models\Header.cs" />
     <Compile Include="V20220901\Models\Hsts.cs" />
     <Compile Include="V20220901\Models\Https.cs" />
+    <Compile Include="V20220901\Models\IPWhitelist.cs" />
     <Compile Include="V20220901\Models\Identification.cs" />
     <Compile Include="V20220901\Models\IdentifyZoneRequest.cs" />
     <Compile Include="V20220901\Models\IdentifyZoneResponse.cs" />
@@ -261,6 +267,7 @@
     <Compile Include="V20220901\Models\OptimizeAction.cs" />
     <Compile Include="V20220901\Models\Origin.cs" />
     <Compile Include="V20220901\Models\OriginGroup.cs" />
+    <Compile Include="V20220901\Models\OriginProtectionInfo.cs" />
     <Compile Include="V20220901\Models\OriginRecord.cs" />
     <Compile Include="V20220901\Models\PartialModule.cs" />
     <Compile Include="V20220901\Models\PlanInfo.cs" />
@@ -325,6 +332,8 @@
     <Compile Include="V20220901\Models\TopDetailData.cs" />
     <Compile Include="V20220901\Models\TopEntry.cs" />
     <Compile Include="V20220901\Models\TopEntryValue.cs" />
+    <Compile Include="V20220901\Models\UpdateOriginProtectionIPWhitelistRequest.cs" />
+    <Compile Include="V20220901\Models\UpdateOriginProtectionIPWhitelistResponse.cs" />
     <Compile Include="V20220901\Models\UpstreamHttp2.cs" />
     <Compile Include="V20220901\Models\VanityNameServers.cs" />
     <Compile Include="V20220901\Models\VanityNameServersIps.cs" />

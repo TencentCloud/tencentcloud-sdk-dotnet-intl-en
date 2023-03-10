@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Migration task ID
+        /// Task ID
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+        /// Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
         /// </summary>
         [JsonProperty("ObjectMode")]
         public string ObjectMode{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         [JsonProperty("Objects")]
         public CompareObject Objects{ get; set; }
+
+        /// <summary>
+        /// Consistency check options
+        /// </summary>
+        [JsonProperty("Options")]
+        public CompareOptions Options{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
             this.SetParamObj(map, prefix + "Objects.", this.Objects);
+            this.SetParamObj(map, prefix + "Options.", this.Options);
         }
     }
 }

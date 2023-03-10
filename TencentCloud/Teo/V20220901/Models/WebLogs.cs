@@ -31,10 +31,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EventId{ get; set; }
 
         /// <summary>
-        /// The attacker IP.
+        /// The HTTP log content.
         /// </summary>
-        [JsonProperty("AttackIp")]
-        public string AttackIp{ get; set; }
+        [JsonProperty("HttpLog")]
+        public string HttpLog{ get; set; }
 
         /// <summary>
         /// The attacked subdomain name.
@@ -43,16 +43,28 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The HTTP log content.
+        /// The attacker IP.
         /// </summary>
-        [JsonProperty("HttpLog")]
-        public string HttpLog{ get; set; }
+        [JsonProperty("AttackIp")]
+        public string AttackIp{ get; set; }
 
         /// <summary>
         /// The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
         /// </summary>
         [JsonProperty("SipCountryCode")]
         public string SipCountryCode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RealClientIp")]
+        public string RealClientIp{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RealClientIpCountryCode")]
+        public string RealClientIpCountryCode{ get; set; }
 
         /// <summary>
         /// The attack time recorded in seconds using UNIX timestamp.
@@ -67,11 +79,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RequestUri{ get; set; }
 
         /// <summary>
-        /// The attack content.
+        /// The request type.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("AttackContent")]
-        public string AttackContent{ get; set; }
+        [JsonProperty("ReqMethod")]
+        public string ReqMethod{ get; set; }
 
         /// <summary>
         /// The security rule information.
@@ -81,11 +93,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public SecRuleRelatedInfo[] RuleDetailList{ get; set; }
 
         /// <summary>
-        /// The request type.
+        /// The attack content.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ReqMethod")]
-        public string ReqMethod{ get; set; }
+        [JsonProperty("AttackContent")]
+        public string AttackContent{ get; set; }
+
+        /// <summary>
+        /// Log region
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -94,15 +113,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
-            this.SetParamSimple(map, prefix + "AttackIp", this.AttackIp);
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "HttpLog", this.HttpLog);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "AttackIp", this.AttackIp);
             this.SetParamSimple(map, prefix + "SipCountryCode", this.SipCountryCode);
+            this.SetParamSimple(map, prefix + "RealClientIp", this.RealClientIp);
+            this.SetParamSimple(map, prefix + "RealClientIpCountryCode", this.RealClientIpCountryCode);
             this.SetParamSimple(map, prefix + "AttackTime", this.AttackTime);
             this.SetParamSimple(map, prefix + "RequestUri", this.RequestUri);
-            this.SetParamSimple(map, prefix + "AttackContent", this.AttackContent);
-            this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
             this.SetParamSimple(map, prefix + "ReqMethod", this.ReqMethod);
+            this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
+            this.SetParamSimple(map, prefix + "AttackContent", this.AttackContent);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

@@ -21,16 +21,9 @@ namespace TencentCloud.Dts.V20211206.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SkipCheckItemResponse : AbstractModel
+    public class ContinueMigrateJobResponse : AbstractModel
     {
         
-        /// <summary>
-        /// Message prompted for skipping the check item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -43,7 +36,6 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

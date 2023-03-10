@@ -54,6 +54,7 @@
     <Compile Include="V20211206\Models\CompareDetailInfo.cs" />
     <Compile Include="V20211206\Models\CompareObject.cs" />
     <Compile Include="V20211206\Models\CompareObjectItem.cs" />
+    <Compile Include="V20211206\Models\CompareOptions.cs" />
     <Compile Include="V20211206\Models\CompareTableItem.cs" />
     <Compile Include="V20211206\Models\CompareTaskInfo.cs" />
     <Compile Include="V20211206\Models\CompareTaskItem.cs" />
@@ -64,6 +65,10 @@
     <Compile Include="V20211206\Models\ConfigureSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\ConflictHandleOption.cs" />
     <Compile Include="V20211206\Models\ConsistencyOption.cs" />
+    <Compile Include="V20211206\Models\ContinueMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\ContinueMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\ContinueSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\ContinueSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\CreateCheckSyncJobRequest.cs" />
     <Compile Include="V20211206\Models\CreateCheckSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\CreateCompareTaskRequest.cs" />
@@ -130,6 +135,10 @@
     <Compile Include="V20211206\Models\Objects.cs" />
     <Compile Include="V20211206\Models\OnlineDDL.cs" />
     <Compile Include="V20211206\Models\Options.cs" />
+    <Compile Include="V20211206\Models\PauseMigrateJobRequest.cs" />
+    <Compile Include="V20211206\Models\PauseMigrateJobResponse.cs" />
+    <Compile Include="V20211206\Models\PauseSyncJobRequest.cs" />
+    <Compile Include="V20211206\Models\PauseSyncJobResponse.cs" />
     <Compile Include="V20211206\Models\ProcessProgress.cs" />
     <Compile Include="V20211206\Models\ProcessStepTip.cs" />
     <Compile Include="V20211206\Models\RecoverMigrateJobRequest.cs" />

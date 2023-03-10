@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Migration task ID
+        /// Task ID
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("JobId")]
@@ -101,6 +101,27 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("FinishedAt")]
         public string FinishedAt{ get; set; }
 
+        /// <summary>
+        /// Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
+        /// <summary>
+        /// Configuration information of the comparison task
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Options")]
+        public CompareOptions Options{ get; set; }
+
+        /// <summary>
+        /// Consistency check prompt message
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +139,9 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "StartedAt", this.StartedAt);
             this.SetParamSimple(map, prefix + "FinishedAt", this.FinishedAt);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamObj(map, prefix + "Options.", this.Options);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

@@ -21,30 +21,32 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RateLimitIntelligence : AbstractModel
+    public class DiffIPWhitelist : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable configuration. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// The latest intermediate IPs.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("LatestIPWhitelist")]
+        public IPWhitelist LatestIPWhitelist{ get; set; }
 
         /// <summary>
-        /// Action to be executed. Values:
-        /// <li>`monitor`: Observe</li>
-        /// <li>`alg`: Challenge</li>
+        /// The intermediate IPs added to the existing list.
         /// </summary>
-        [JsonProperty("Action")]
-        public string Action{ get; set; }
+        [JsonProperty("AddedIPWhitelist")]
+        public IPWhitelist AddedIPWhitelist{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as a response parameter.
+        /// The intermediate IPs removed from the existing list.
         /// </summary>
-        [JsonProperty("RuleId")]
-        public long? RuleId{ get; set; }
+        [JsonProperty("RemovedIPWhitelist")]
+        public IPWhitelist RemovedIPWhitelist{ get; set; }
+
+        /// <summary>
+        /// The intermediate IPs that remain unchanged.
+        /// </summary>
+        [JsonProperty("NoChangeIPWhitelist")]
+        public IPWhitelist NoChangeIPWhitelist{ get; set; }
 
 
         /// <summary>
@@ -52,9 +54,10 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Action", this.Action);
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamObj(map, prefix + "LatestIPWhitelist.", this.LatestIPWhitelist);
+            this.SetParamObj(map, prefix + "AddedIPWhitelist.", this.AddedIPWhitelist);
+            this.SetParamObj(map, prefix + "RemovedIPWhitelist.", this.RemovedIPWhitelist);
+            this.SetParamObj(map, prefix + "NoChangeIPWhitelist.", this.NoChangeIPWhitelist);
         }
     }
 }

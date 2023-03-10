@@ -80,6 +80,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("StepInfos")]
         public StepInfo[] StepInfos{ get; set; }
 
+        /// <summary>
+        /// Cause of the failure of initiating data consistency check
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CauseOfCompareDisable")]
+        public string CauseOfCompareDisable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SecondsBehindMaster", this.SecondsBehindMaster);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArrayObj(map, prefix + "StepInfos.", this.StepInfos);
+            this.SetParamSimple(map, prefix + "CauseOfCompareDisable", this.CauseOfCompareDisable);
         }
     }
 }
