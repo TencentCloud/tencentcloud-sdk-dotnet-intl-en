@@ -373,6 +373,68 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to create a scheme for media files uploaded to a specified COS bucket. A scheme may include the following tasks:
+        /// 1. Video transcoding (with watermark)
+        /// 2. Animated screenshot generating
+        /// 3. Time point screencapturing
+        /// 4. Sampled screencapturing
+        /// 5. Image sprite generating
+        /// 6. Adaptive bitrate streaming
+        /// 7. Intelligent content moderation (detection of pornographic and sensitive content)
+        /// 8. Intelligent content analysis (labeling, categorization, thumbnail generation, labeling by frame)
+        /// 9. Intelligent content recognition (face, full text, text keyword, full speech, and speech keyword)
+        /// 
+        /// Note: A scheme is disabled upon creation. You need to manually enable it.
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduleRequest"/></param>
+        /// <returns><see cref="CreateScheduleResponse"/></returns>
+        public async Task<CreateScheduleResponse> CreateSchedule(CreateScheduleRequest req)
+        {
+             JsonResponseModel<CreateScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a scheme for media files uploaded to a specified COS bucket. A scheme may include the following tasks:
+        /// 1. Video transcoding (with watermark)
+        /// 2. Animated screenshot generating
+        /// 3. Time point screencapturing
+        /// 4. Sampled screencapturing
+        /// 5. Image sprite generating
+        /// 6. Adaptive bitrate streaming
+        /// 7. Intelligent content moderation (detection of pornographic and sensitive content)
+        /// 8. Intelligent content analysis (labeling, categorization, thumbnail generation, labeling by frame)
+        /// 9. Intelligent content recognition (face, full text, text keyword, full speech, and speech keyword)
+        /// 
+        /// Note: A scheme is disabled upon creation. You need to manually enable it.
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduleRequest"/></param>
+        /// <returns><see cref="CreateScheduleResponse"/></returns>
+        public CreateScheduleResponse CreateScheduleSync(CreateScheduleRequest req)
+        {
+             JsonResponseModel<CreateScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a custom time point screencapturing template. Up to 16 templates can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateSnapshotByTimeOffsetTemplateRequest"/></param>
@@ -910,6 +972,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSampleSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduleRequest"/></param>
+        /// <returns><see cref="DeleteScheduleResponse"/></returns>
+        public async Task<DeleteScheduleResponse> DeleteSchedule(DeleteScheduleRequest req)
+        {
+             JsonResponseModel<DeleteScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduleRequest"/></param>
+        /// <returns><see cref="DeleteScheduleResponse"/></returns>
+        public DeleteScheduleResponse DeleteScheduleSync(DeleteScheduleRequest req)
+        {
+             JsonResponseModel<DeleteScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScheduleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1479,6 +1581,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to query a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchedulesRequest"/></param>
+        /// <returns><see cref="DescribeSchedulesResponse"/></returns>
+        public async Task<DescribeSchedulesResponse> DescribeSchedules(DescribeSchedulesRequest req)
+        {
+             JsonResponseModel<DescribeSchedulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSchedules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSchedulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchedulesRequest"/></param>
+        /// <returns><see cref="DescribeSchedulesResponse"/></returns>
+        public DescribeSchedulesResponse DescribeSchedulesSync(DescribeSchedulesRequest req)
+        {
+             JsonResponseModel<DescribeSchedulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSchedules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSchedulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
         /// </summary>
         /// <param name="req"><see cref="DescribeSnapshotByTimeOffsetTemplatesRequest"/></param>
@@ -1763,6 +1905,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to disable a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="DisableScheduleRequest"/></param>
+        /// <returns><see cref="DisableScheduleResponse"/></returns>
+        public async Task<DisableScheduleResponse> DisableSchedule(DisableScheduleRequest req)
+        {
+             JsonResponseModel<DisableScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="DisableScheduleRequest"/></param>
+        /// <returns><see cref="DisableScheduleResponse"/></returns>
+        public DisableScheduleResponse DisableScheduleSync(DisableScheduleRequest req)
+        {
+             JsonResponseModel<DisableScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to disable a workflow.
         /// </summary>
         /// <param name="req"><see cref="DisableWorkflowRequest"/></param>
@@ -1842,6 +2024,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "EditMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="EnableScheduleRequest"/></param>
+        /// <returns><see cref="EnableScheduleResponse"/></returns>
+        public async Task<EnableScheduleResponse> EnableSchedule(EnableScheduleRequest req)
+        {
+             JsonResponseModel<EnableScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="EnableScheduleRequest"/></param>
+        /// <returns><see cref="EnableScheduleResponse"/></returns>
+        public EnableScheduleResponse EnableScheduleSync(EnableScheduleRequest req)
+        {
+             JsonResponseModel<EnableScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableScheduleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2286,6 +2508,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "ModifySampleSnapshotTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduleRequest"/></param>
+        /// <returns><see cref="ModifyScheduleResponse"/></returns>
+        public async Task<ModifyScheduleResponse> ModifySchedule(ModifyScheduleRequest req)
+        {
+             JsonResponseModel<ModifyScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a scheme.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduleRequest"/></param>
+        /// <returns><see cref="ModifyScheduleResponse"/></returns>
+        public ModifyScheduleResponse ModifyScheduleSync(ModifyScheduleRequest req)
+        {
+             JsonResponseModel<ModifyScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyScheduleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -60,6 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>`TDMQ-CMQ`: Message queue</li>
         /// <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
         /// <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+        /// <li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
         /// <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
         /// </summary>
         [JsonProperty("NotifyType")]
@@ -70,6 +71,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
+
+        /// <summary>
+        /// The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AwsSQS")]
+        public AwsSQS AwsSQS{ get; set; }
 
 
         /// <summary>
@@ -84,6 +93,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NotifyMode", this.NotifyMode);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+            this.SetParamObj(map, prefix + "AwsSQS.", this.AwsSQS);
         }
     }
 }

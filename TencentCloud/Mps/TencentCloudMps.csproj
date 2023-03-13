@@ -50,6 +50,8 @@
     <Compile Include="V20190612\MpsClient.cs" />
     <Compile Include="V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20190612\Models\AIRecognitionTemplateItem.cs" />
+    <Compile Include="V20190612\Models\Activity.cs" />
+    <Compile Include="V20190612\Models\ActivityPara.cs" />
     <Compile Include="V20190612\Models\ActivityResItem.cs" />
     <Compile Include="V20190612\Models\ActivityResult.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingInfoItem.cs" />
@@ -148,6 +150,8 @@
     <Compile Include="V20190612\Models\AsrWordsConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\AudioTemplateInfo.cs" />
     <Compile Include="V20190612\Models\AudioTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\AwsS3FileUploadTrigger.cs" />
+    <Compile Include="V20190612\Models\AwsSQS.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="V20190612\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ColorEnhanceConfig.cs" />
@@ -173,6 +177,8 @@
     <Compile Include="V20190612\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\CreateScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\CreateScheduleResponse.cs" />
     <Compile Include="V20190612\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateTranscodeTemplateRequest.cs" />
@@ -199,6 +205,8 @@
     <Compile Include="V20190612\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteTranscodeTemplateRequest.cs" />
@@ -227,6 +235,8 @@
     <Compile Include="V20190612\Models\DescribePersonSamplesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSampleSnapshotTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeSchedulesRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeSchedulesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTaskDetailRequest.cs" />
@@ -241,6 +251,8 @@
     <Compile Include="V20190612\Models\DescribeWordSamplesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeWorkflowsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeWorkflowsResponse.cs" />
+    <Compile Include="V20190612\Models\DisableScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\DisableScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\EditMediaFileInfo.cs" />
@@ -250,6 +262,8 @@
     <Compile Include="V20190612\Models\EditMediaTask.cs" />
     <Compile Include="V20190612\Models\EditMediaTaskInput.cs" />
     <Compile Include="V20190612\Models\EditMediaTaskOutput.cs" />
+    <Compile Include="V20190612\Models\EnableScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\EnableScheduleResponse.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\EnhanceConfig.cs" />
@@ -332,6 +346,8 @@
     <Compile Include="V20190612\Models\ModifyPersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\ModifySampleSnapshotTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifySampleSnapshotTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyScheduleRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyScheduleResponse.cs" />
     <Compile Include="V20190612\Models\ModifySnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifySnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyTranscodeTemplateRequest.cs" />
@@ -382,12 +398,15 @@
     <Compile Include="V20190612\Models\RawWatermarkParameter.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowResponse.cs" />
+    <Compile Include="V20190612\Models\S3InputInfo.cs" />
+    <Compile Include="V20190612\Models\S3OutputStorage.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20190612\Models\ScheduleAnalysisTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleRecognitionTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleReviewTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleTask.cs" />
+    <Compile Include="V20190612\Models\SchedulesInfo.cs" />
     <Compile Include="V20190612\Models\ScratchRepairConfig.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />

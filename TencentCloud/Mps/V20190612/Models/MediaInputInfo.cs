@@ -25,7 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The input type, which can be `COS` or `URL`.
+        /// The input type. Valid values:
+        /// <li>`COS`: A COS bucket address.</li>
+        /// <li> `URL`: A URL.</li>
+        /// <li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -43,6 +46,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("UrlInputInfo")]
         public UrlInputInfo UrlInputInfo{ get; set; }
 
+        /// <summary>
+        /// The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("S3InputInfo")]
+        public S3InputInfo S3InputInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +62,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
             this.SetParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
+            this.SetParamObj(map, prefix + "S3InputInfo.", this.S3InputInfo);
         }
     }
 }

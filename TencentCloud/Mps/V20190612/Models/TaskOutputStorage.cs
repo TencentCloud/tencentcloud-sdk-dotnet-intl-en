@@ -25,7 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The type of storage location for the media processing output object. Only COS is supported currently.
+        /// The storage type for a media processing output file. Valid values:
+        /// <li>`COS`: Tencent Cloud COS</li>
+        /// <li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -37,6 +39,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("CosOutputStorage")]
         public CosOutputStorage CosOutputStorage{ get; set; }
 
+        /// <summary>
+        /// The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("S3OutputStorage")]
+        public S3OutputStorage S3OutputStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +54,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "CosOutputStorage.", this.CosOutputStorage);
+            this.SetParamObj(map, prefix + "S3OutputStorage.", this.S3OutputStorage);
         }
     }
 }

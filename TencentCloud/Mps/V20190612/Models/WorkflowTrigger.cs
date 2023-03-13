@@ -25,7 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Trigger type. Only `CosFileUpload` is supported currently.
+        /// The trigger type. Valid values:
+        /// <li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+        /// <li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -37,6 +40,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("CosFileUploadTrigger")]
         public CosFileUploadTrigger CosFileUploadTrigger{ get; set; }
 
+        /// <summary>
+        /// The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+        /// 
+        /// Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AwsS3FileUploadTrigger")]
+        public AwsS3FileUploadTrigger AwsS3FileUploadTrigger{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "CosFileUploadTrigger.", this.CosFileUploadTrigger);
+            this.SetParamObj(map, prefix + "AwsS3FileUploadTrigger.", this.AwsS3FileUploadTrigger);
         }
     }
 }
