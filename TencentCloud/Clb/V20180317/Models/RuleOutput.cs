@@ -167,6 +167,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
+        /// <summary>
+        /// List of bound target groups
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TargetGroupList")]
+        public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +202,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
             this.SetParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
         }
     }
 }

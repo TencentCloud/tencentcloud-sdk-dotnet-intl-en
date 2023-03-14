@@ -21,32 +21,33 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CertInfo : AbstractModel
+    public class FunctionInfo : AbstractModel
     {
         
         /// <summary>
-        /// ID of the certificate. If it's not specified, `CertContent` and `CertKey` are required. For a server certificate, you also need to specify `CertName`. 
+        /// Function namespace
         /// </summary>
-        [JsonProperty("CertId")]
-        public string CertId{ get; set; }
+        [JsonProperty("FunctionNamespace")]
+        public string FunctionNamespace{ get; set; }
 
         /// <summary>
-        /// Name of the uploaded certificate. It's required if `CertId` is not specified.
+        /// Function name
         /// </summary>
-        [JsonProperty("CertName")]
-        public string CertName{ get; set; }
+        [JsonProperty("FunctionName")]
+        public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Public key of the uploaded certificate. This is required if `CertId` is not specified.
+        /// Function version name or alias
         /// </summary>
-        [JsonProperty("CertContent")]
-        public string CertContent{ get; set; }
+        [JsonProperty("FunctionQualifier")]
+        public string FunctionQualifier{ get; set; }
 
         /// <summary>
-        /// Private key of the uploaded server certificate. This is required if `CertId` is not specified.
+        /// Function qualifier type. Values: `VERSION`, `ALIAS`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("CertKey")]
-        public string CertKey{ get; set; }
+        [JsonProperty("FunctionQualifierType")]
+        public string FunctionQualifierType{ get; set; }
 
 
         /// <summary>
@@ -54,10 +55,10 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
-            this.SetParamSimple(map, prefix + "CertName", this.CertName);
-            this.SetParamSimple(map, prefix + "CertContent", this.CertContent);
-            this.SetParamSimple(map, prefix + "CertKey", this.CertKey);
+            this.SetParamSimple(map, prefix + "FunctionNamespace", this.FunctionNamespace);
+            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "FunctionQualifier", this.FunctionQualifier);
+            this.SetParamSimple(map, prefix + "FunctionQualifierType", this.FunctionQualifierType);
         }
     }
 }

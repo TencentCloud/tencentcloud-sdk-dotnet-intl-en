@@ -262,6 +262,33 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Domains")]
         public string Domains{ get; set; }
 
+        /// <summary>
+        /// The secondary zone of multi-AZ CLB instance
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SlaveZone")]
+        public string[] SlaveZone{ get; set; }
+
+        /// <summary>
+        /// The AZ of private CLB instance. This is only available for beta users.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SniSwitch")]
+        public long? SniSwitch{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LoadBalancerDomain")]
+        public string LoadBalancerDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +329,10 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
             this.SetParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
             this.SetParamSimple(map, prefix + "Domains", this.Domains);
+            this.SetParamArraySimple(map, prefix + "SlaveZone.", this.SlaveZone);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+            this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         }
     }
 }

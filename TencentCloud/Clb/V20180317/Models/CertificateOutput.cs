@@ -43,6 +43,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
+        /// <summary>
+        /// IDs of extra server certificates
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtCertIds")]
+        public string[] ExtCertIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SSLMode", this.SSLMode);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
             this.SetParamSimple(map, prefix + "CertCaId", this.CertCaId);
+            this.SetParamArraySimple(map, prefix + "ExtCertIds.", this.ExtCertIds);
         }
     }
 }

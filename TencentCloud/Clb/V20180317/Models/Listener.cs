@@ -154,6 +154,27 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AttrFlags")]
         public string[] AttrFlags{ get; set; }
 
+        /// <summary>
+        /// List of bound target groups
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TargetGroupList")]
+        public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
+
+        /// <summary>
+        /// Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxConn")]
+        public long? MaxConn{ get; set; }
+
+        /// <summary>
+        /// Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxCps")]
+        public long? MaxCps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +200,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Toa", this.Toa);
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
             this.SetParamArraySimple(map, prefix + "AttrFlags.", this.AttrFlags);
+            this.SetParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
+            this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
+            this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
         }
     }
 }

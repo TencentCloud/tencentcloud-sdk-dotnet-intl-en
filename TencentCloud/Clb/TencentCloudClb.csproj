@@ -106,6 +106,8 @@
     <Compile Include="V20180317\Models\DeleteRuleResponse.cs" />
     <Compile Include="V20180317\Models\DeleteTargetGroupsRequest.cs" />
     <Compile Include="V20180317\Models\DeleteTargetGroupsResponse.cs" />
+    <Compile Include="V20180317\Models\DeregisterFunctionTargetsRequest.cs" />
+    <Compile Include="V20180317\Models\DeregisterFunctionTargetsResponse.cs" />
     <Compile Include="V20180317\Models\DeregisterTargetGroupInstancesRequest.cs" />
     <Compile Include="V20180317\Models\DeregisterTargetGroupInstancesResponse.cs" />
     <Compile Include="V20180317\Models\DeregisterTargetsFromClassicalLBRequest.cs" />
@@ -171,6 +173,8 @@
     <Compile Include="V20180317\Models\ExclusiveCluster.cs" />
     <Compile Include="V20180317\Models\ExtraInfo.cs" />
     <Compile Include="V20180317\Models\Filter.cs" />
+    <Compile Include="V20180317\Models\FunctionInfo.cs" />
+    <Compile Include="V20180317\Models\FunctionTarget.cs" />
     <Compile Include="V20180317\Models\HealthCheck.cs" />
     <Compile Include="V20180317\Models\IdleLoadBalancer.cs" />
     <Compile Include="V20180317\Models\InternetAccessible.cs" />
@@ -216,6 +220,8 @@
     <Compile Include="V20180317\Models\ModifyTargetWeightResponse.cs" />
     <Compile Include="V20180317\Models\MultiCertInfo.cs" />
     <Compile Include="V20180317\Models\Quota.cs" />
+    <Compile Include="V20180317\Models\RegisterFunctionTargetsRequest.cs" />
+    <Compile Include="V20180317\Models\RegisterFunctionTargetsResponse.cs" />
     <Compile Include="V20180317\Models\RegisterTargetGroupInstancesRequest.cs" />
     <Compile Include="V20180317\Models\RegisterTargetGroupInstancesResponse.cs" />
     <Compile Include="V20180317\Models\RegisterTargetsRequest.cs" />
@@ -225,6 +231,7 @@
     <Compile Include="V20180317\Models\ReplaceCertForLoadBalancersRequest.cs" />
     <Compile Include="V20180317\Models\ReplaceCertForLoadBalancersResponse.cs" />
     <Compile Include="V20180317\Models\Resource.cs" />
+    <Compile Include="V20180317\Models\ResourceAvailability.cs" />
     <Compile Include="V20180317\Models\RewriteLocationMap.cs" />
     <Compile Include="V20180317\Models\RewriteTarget.cs" />
     <Compile Include="V20180317\Models\RsWeightRule.cs" />

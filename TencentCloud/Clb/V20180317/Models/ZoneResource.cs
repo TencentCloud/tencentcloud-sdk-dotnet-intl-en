@@ -62,6 +62,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LocalZone")]
         public bool? LocalZone{ get; set; }
 
+        /// <summary>
+        /// Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+        /// </summary>
+        [JsonProperty("ZoneResourceType")]
+        public string ZoneResourceType{ get; set; }
+
+        /// <summary>
+        /// Whether the AZ is an edge zone. Values: `true`, `false`.
+        /// </summary>
+        [JsonProperty("EdgeZone")]
+        public bool? EdgeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +86,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "IPVersion", this.IPVersion);
             this.SetParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
             this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
+            this.SetParamSimple(map, prefix + "ZoneResourceType", this.ZoneResourceType);
+            this.SetParamSimple(map, prefix + "EdgeZone", this.EdgeZone);
         }
     }
 }

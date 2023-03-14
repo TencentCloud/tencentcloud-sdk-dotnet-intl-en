@@ -114,6 +114,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("PassiveStatusCode")]
         public ulong? PassiveStatusCode{ get; set; }
 
+        /// <summary>
+        /// Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+        /// </summary>
+        [JsonProperty("PassiveStatus")]
+        public ulong? PassiveStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
             this.SetParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
             this.SetParamSimple(map, prefix + "PassiveStatusCode", this.PassiveStatusCode);
+            this.SetParamSimple(map, prefix + "PassiveStatus", this.PassiveStatus);
         }
     }
 }

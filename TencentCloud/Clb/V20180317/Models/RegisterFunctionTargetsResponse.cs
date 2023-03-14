@@ -21,27 +21,14 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Resource : AbstractModel
+    public class RegisterFunctionTargetsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Type")]
-        public string[] Type{ get; set; }
-
-        /// <summary>
-        /// ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
-        /// </summary>
-        [JsonProperty("Isp")]
-        public string Isp{ get; set; }
-
-        /// <summary>
-        /// Available resources
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("AvailabilitySet")]
-        public ResourceAvailability[] AvailabilitySet{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -49,9 +36,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Type.", this.Type);
-            this.SetParamSimple(map, prefix + "Isp", this.Isp);
-            this.SetParamArrayObj(map, prefix + "AvailabilitySet.", this.AvailabilitySet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
