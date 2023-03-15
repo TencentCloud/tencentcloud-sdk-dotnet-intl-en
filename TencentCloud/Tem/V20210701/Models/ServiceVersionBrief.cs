@@ -159,6 +159,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("CreateDate")]
         public string CreateDate{ get; set; }
 
+        /// <summary>
+        /// Region ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public string RegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +192,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamObj(map, prefix + "PodList.", this.PodList);
             this.SetParamObj(map, prefix + "WorkloadInfo.", this.WorkloadInfo);
             this.SetParamSimple(map, prefix + "CreateDate", this.CreateDate);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

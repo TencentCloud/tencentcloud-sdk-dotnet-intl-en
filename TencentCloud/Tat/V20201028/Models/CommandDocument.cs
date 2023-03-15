@@ -54,6 +54,18 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
+        /// <summary>
+        /// URL of the COS bucket to store the output
+        /// </summary>
+        [JsonProperty("OutputCOSBucketUrl")]
+        public string OutputCOSBucketUrl{ get; set; }
+
+        /// <summary>
+        /// Prefix of the output file name 
+        /// </summary>
+        [JsonProperty("OutputCOSKeyPrefix")]
+        public string OutputCOSKeyPrefix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
             this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
+            this.SetParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);
         }
     }
 }

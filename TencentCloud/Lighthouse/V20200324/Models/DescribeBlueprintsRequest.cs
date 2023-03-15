@@ -43,12 +43,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter list
+        /// Filter list.
         /// <li>blueprint-id</li>Filter by the **image ID**.
         /// Type: String
         /// Required: no
         /// <li>blueprint-type</li>Filter by the **image type**.
-        /// Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+        /// Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
         /// Type: String
         /// Required: no
         /// <li>platform-type</li>Filter by the **image operating system**.
@@ -65,7 +65,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// Type: String
         /// Required: no
         /// 
-        /// Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+        /// Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

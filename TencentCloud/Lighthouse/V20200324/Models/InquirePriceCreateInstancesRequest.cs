@@ -31,16 +31,16 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string BundleId{ get; set; }
 
         /// <summary>
+        /// Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+        /// </summary>
+        [JsonProperty("InstanceChargePrepaid")]
+        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
+
+        /// <summary>
         /// Number of instances to be created. Default value: 1.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
-
-        /// <summary>
-        /// Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-        /// </summary>
-        [JsonProperty("InstanceChargePrepaid")]
-        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
         /// Application image ID, which is required if a paid application image is used and can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
@@ -55,8 +55,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BundleId", this.BundleId);
-            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "BlueprintId", this.BlueprintId);
         }
     }

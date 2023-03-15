@@ -26,7 +26,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         
         /// <summary>
         /// The cloud storage provider.
-        /// 0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+        /// `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
         /// </summary>
         [JsonProperty("Vendor")]
         public ulong? Vendor{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+        /// Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }

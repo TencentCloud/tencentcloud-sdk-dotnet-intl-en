@@ -2093,6 +2093,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to get the information of a specific TDMQ for RocketMQ exclusive cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQVipInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQVipInstanceDetailResponse"/></returns>
+        public async Task<DescribeRocketMQVipInstanceDetailResponse> DescribeRocketMQVipInstanceDetail(DescribeRocketMQVipInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQVipInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the information of a specific TDMQ for RocketMQ exclusive cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQVipInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQVipInstanceDetailResponse"/></returns>
+        public DescribeRocketMQVipInstanceDetailResponse DescribeRocketMQVipInstanceDetailSync(DescribeRocketMQVipInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQVipInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of the purchased TDMQ for RocketMQ exclusive instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQVipInstancesRequest"/></param>

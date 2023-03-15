@@ -70,7 +70,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MediaId{ get; set; }
 
         /// <summary>
-        /// The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+        /// The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
         /// </summary>
         [JsonProperty("BackgroundImageUrl")]
         public string BackgroundImageUrl{ get; set; }

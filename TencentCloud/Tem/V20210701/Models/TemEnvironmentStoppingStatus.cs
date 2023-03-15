@@ -38,6 +38,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("StoppedApplicationNum")]
         public long? StoppedApplicationNum{ get; set; }
 
+        /// <summary>
+        /// Number of applications failed to be stopped
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StopFailedApplicationNum")]
+        public long? StopFailedApplicationNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Tem.V20210701.Models
         {
             this.SetParamSimple(map, prefix + "ApplicationNumNeedToStop", this.ApplicationNumNeedToStop);
             this.SetParamSimple(map, prefix + "StoppedApplicationNum", this.StoppedApplicationNum);
+            this.SetParamSimple(map, prefix + "StopFailedApplicationNum", this.StopFailedApplicationNum);
         }
     }
 }

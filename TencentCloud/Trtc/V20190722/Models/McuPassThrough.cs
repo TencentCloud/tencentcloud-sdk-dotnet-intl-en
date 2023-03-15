@@ -42,6 +42,20 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("PayloadUuid")]
         public string PayloadUuid{ get; set; }
 
+        /// <summary>
+        /// The SEI sending interval (milliseconds). The default value is 1000.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Interval")]
+        public ulong? Interval{ get; set; }
+
+        /// <summary>
+        /// Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FollowIdr")]
+        public ulong? FollowIdr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +65,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "PayloadContent", this.PayloadContent);
             this.SetParamSimple(map, prefix + "PayloadType", this.PayloadType);
             this.SetParamSimple(map, prefix + "PayloadUuid", this.PayloadUuid);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamSimple(map, prefix + "FollowIdr", this.FollowIdr);
         }
     }
 }

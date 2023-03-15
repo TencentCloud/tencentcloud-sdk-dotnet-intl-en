@@ -97,6 +97,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// Snapshot creation time.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

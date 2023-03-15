@@ -44,6 +44,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// Image description information.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -142,6 +143,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("SceneIdSet")]
         public string[] SceneIdSet{ get; set; }
 
+        /// <summary>
+        /// Docker version.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DockerVersion")]
+        public string DockerVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +175,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "CommunityUrl", this.CommunityUrl);
             this.SetParamSimple(map, prefix + "GuideUrl", this.GuideUrl);
             this.SetParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
+            this.SetParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
         }
     }
 }

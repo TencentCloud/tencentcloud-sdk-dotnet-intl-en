@@ -127,6 +127,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// Creation time according to ISO 8601 standard. UTC time is used. 
         /// Format: YYYY-MM-DDThh:mm:ssZ.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
