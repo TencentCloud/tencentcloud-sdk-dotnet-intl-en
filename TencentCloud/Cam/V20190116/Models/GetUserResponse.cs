@@ -74,6 +74,20 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Email{ get; set; }
 
         /// <summary>
+        /// Last login IP
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RecentlyLoginIP")]
+        public string RecentlyLoginIP{ get; set; }
+
+        /// <summary>
+        /// Last login time
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RecentlyLoginTime")]
+        public string RecentlyLoginTime{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -93,6 +107,8 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
             this.SetParamSimple(map, prefix + "CountryCode", this.CountryCode);
             this.SetParamSimple(map, prefix + "Email", this.Email);
+            this.SetParamSimple(map, prefix + "RecentlyLoginIP", this.RecentlyLoginIP);
+            this.SetParamSimple(map, prefix + "RecentlyLoginTime", this.RecentlyLoginTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -46,14 +46,14 @@ namespace TencentCloud.Dts.V20211206.Models
         public string StepId{ get; set; }
 
         /// <summary>
-        /// Current status
+        /// Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Step start time
+        /// Step start time, which may be null.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
@@ -74,7 +74,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public StepTip[] Warnings{ get; set; }
 
         /// <summary>
-        /// Progress of the current step
+        /// Progress of the current step. Value range: 0-100.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Progress")]

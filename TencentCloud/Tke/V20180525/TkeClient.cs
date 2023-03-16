@@ -253,7 +253,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to check which nodes can be upgraded in the given node list. 
+        /// This API is used to query nodes eligible for an upgrade in the given node list.
         /// </summary>
         /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>
         /// <returns><see cref="CheckInstancesUpgradeAbleResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to check which nodes can be upgraded in the given node list. 
+        /// This API is used to query nodes eligible for an upgrade in the given node list.
         /// </summary>
         /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>
         /// <returns><see cref="CheckInstancesUpgradeAbleResponse"/></returns>
@@ -1773,7 +1773,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        ///  This API is used to query information of one or more instances in a cluster. 
+        /// This API is used to query information of node instances in a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstancesRequest"/></param>
         /// <returns><see cref="DescribeClusterInstancesResponse"/></returns>
@@ -1793,7 +1793,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        ///  This API is used to query information of one or more instances in a cluster. 
+        /// This API is used to query information of node instances in a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstancesRequest"/></param>
         /// <returns><see cref="DescribeClusterInstancesResponse"/></returns>
@@ -3373,7 +3373,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to obtain the current progress of the node upgrade. 
+        /// This API is used to obtain the current progress of the node upgrade.
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
         /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
@@ -3393,7 +3393,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to obtain the current progress of the node upgrade. 
+        /// This API is used to obtain the current progress of the node upgrade.
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
         /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
@@ -3773,7 +3773,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to modify an alarm rule. 
+        /// This API is used to modify an alert rule.
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
         /// <returns><see cref="ModifyPrometheusAlertRuleResponse"/></returns>
@@ -3793,7 +3793,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to modify an alarm rule. 
+        /// This API is used to modify an alert rule.
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
         /// <returns><see cref="ModifyPrometheusAlertRuleResponse"/></returns>

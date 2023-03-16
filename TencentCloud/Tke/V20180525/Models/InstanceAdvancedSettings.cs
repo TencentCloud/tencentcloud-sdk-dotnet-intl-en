@@ -25,6 +25,34 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DesiredPodNumber")]
+        public long? DesiredPodNumber{ get; set; }
+
+        /// <summary>
+        /// GPU driver parameters
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("GPUArgs")]
+        public GPUArgs GPUArgs{ get; set; }
+
+        /// <summary>
+        /// Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PreStartUserScript")]
+        public string PreStartUserScript{ get; set; }
+
+        /// <summary>
+        /// Node taint
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Taints")]
+        public Taint[] Taints{ get; set; }
+
+        /// <summary>
         /// Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
         /// Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -73,40 +101,16 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtraArgs")]
         public InstanceExtraArgs ExtraArgs{ get; set; }
 
-        /// <summary>
-        /// When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DesiredPodNumber")]
-        public long? DesiredPodNumber{ get; set; }
-
-        /// <summary>
-        /// GPU driver parameters
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("GPUArgs")]
-        public GPUArgs GPUArgs{ get; set; }
-
-        /// <summary>
-        /// Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("PreStartUserScript")]
-        public string PreStartUserScript{ get; set; }
-
-        /// <summary>
-        /// Node taint
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("Taints")]
-        public Taint[] Taints{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
+            this.SetParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+            this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
+            this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
             this.SetParamSimple(map, prefix + "MountTarget", this.MountTarget);
             this.SetParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
             this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
@@ -114,10 +118,6 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
-            this.SetParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
-            this.SetParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
-            this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
-            this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
         }
     }
 }

@@ -74,6 +74,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ExtraAttr")]
         public KeyValuePairOption[] ExtraAttr{ get; set; }
 
+        /// <summary>
+        /// Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DatabaseNetEnv")]
+        public string DatabaseNetEnv{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "Info.", this.Info);
             this.SetParamSimple(map, prefix + "Supplier", this.Supplier);
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+            this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
         }
     }
 }

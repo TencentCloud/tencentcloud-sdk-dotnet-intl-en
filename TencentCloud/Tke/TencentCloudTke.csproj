@@ -320,6 +320,7 @@
     <Compile Include="V20180525\Models\TagSpecification.cs" />
     <Compile Include="V20180525\Models\Taint.cs" />
     <Compile Include="V20180525\Models\TaskStepInfo.cs" />
+    <Compile Include="V20180525\Models\UnavailableReason.cs" />
     <Compile Include="V20180525\Models\UninstallEdgeLogAgentRequest.cs" />
     <Compile Include="V20180525\Models\UninstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />

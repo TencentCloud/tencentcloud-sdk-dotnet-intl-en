@@ -85,6 +85,8 @@
     <Compile Include="V20180412\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20180412\Models\DescribeBackupUrlRequest.cs" />
     <Compile Include="V20180412\Models\DescribeBackupUrlResponse.cs" />
     <Compile Include="V20180412\Models\DescribeCommonDBInstancesRequest.cs" />
@@ -194,6 +196,8 @@
     <Compile Include="V20180412\Models\ModfiyInstancePasswordResponse.cs" />
     <Compile Include="V20180412\Models\ModifyAutoBackupConfigRequest.cs" />
     <Compile Include="V20180412\Models\ModifyAutoBackupConfigResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20180412\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceAccountRequest.cs" />

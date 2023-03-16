@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Check result
+        /// Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
@@ -46,7 +46,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public ulong? StepCur{ get; set; }
 
         /// <summary>
-        /// Overall progress
+        /// Overall progress. Value range: 0-100.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Progress")]

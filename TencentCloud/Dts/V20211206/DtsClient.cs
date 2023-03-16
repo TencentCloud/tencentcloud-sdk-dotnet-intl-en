@@ -461,7 +461,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to query the result of a sync check task.
+        /// This API is used to query the result of the sync check task and check the required parameters and peripheral configurations.
         /// </summary>
         /// <param name="req"><see cref="DescribeCheckSyncJobResultRequest"/></param>
         /// <returns><see cref="DescribeCheckSyncJobResultResponse"/></returns>
@@ -481,7 +481,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to query the result of a sync check task.
+        /// This API is used to query the result of the sync check task and check the required parameters and peripheral configurations.
         /// </summary>
         /// <param name="req"><see cref="DescribeCheckSyncJobResultRequest"/></param>
         /// <returns><see cref="DescribeCheckSyncJobResultResponse"/></returns>

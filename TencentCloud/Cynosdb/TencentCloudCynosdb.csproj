@@ -143,6 +143,7 @@
     <Compile Include="V20190107\Models\InquirePriceRenewResponse.cs" />
     <Compile Include="V20190107\Models\InstanceAuditRule.cs" />
     <Compile Include="V20190107\Models\InstanceInitInfo.cs" />
+    <Compile Include="V20190107\Models\InstanceNetInfo.cs" />
     <Compile Include="V20190107\Models\InstanceSpec.cs" />
     <Compile Include="V20190107\Models\IsolateClusterRequest.cs" />
     <Compile Include="V20190107\Models\IsolateClusterResponse.cs" />

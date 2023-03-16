@@ -39,7 +39,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string NewDbName{ get; set; }
 
         /// <summary>
-        /// Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+        /// Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DbMode")]
@@ -60,7 +60,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string NewSchemaName{ get; set; }
 
         /// <summary>
-        /// Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+        /// Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TableMode")]
@@ -74,7 +74,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public Table[] Tables{ get; set; }
 
         /// <summary>
-        /// View selection mode. Valid values: `All`, `Partial`.
+        /// View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ViewMode")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public View[] Views{ get; set; }
 
         /// <summary>
-        /// Sync mode. Valid values: `Partial`, `All`.
+        /// Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FunctionMode")]
@@ -102,7 +102,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] Functions{ get; set; }
 
         /// <summary>
-        /// Sync mode. Valid values: `Partial`, `All`.
+        /// Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProcedureMode")]
@@ -116,7 +116,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] Procedures{ get; set; }
 
         /// <summary>
-        /// Trigger migration mode (`all`: All objects; `partial`: Some objects)
+        /// Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TriggerMode")]
@@ -130,7 +130,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] Triggers{ get; set; }
 
         /// <summary>
-        /// Event migration mode (`all`: All objects; `partial`: Some objects)
+        /// Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EventMode")]

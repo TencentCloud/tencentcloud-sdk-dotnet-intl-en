@@ -15,28 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCheckSyncJobResultRequest : AbstractModel
+    public class DescribeBackupDownloadRestrictionRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
-        /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
         }
     }
 }

@@ -145,6 +145,8 @@
     <Compile Include="V20180411\Models\ModifyAccountDescriptionResponse.cs" />
     <Compile Include="V20180411\Models\ModifyAccountPrivilegesRequest.cs" />
     <Compile Include="V20180411\Models\ModifyAccountPrivilegesResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyDBEncryptAttributesRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyDBEncryptAttributesResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />

@@ -653,6 +653,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query the download address for a database backup file in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public async Task<DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the download address for a database backup file in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestrictionSync(DescribeBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the download address of a backup RDB file.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
@@ -2444,6 +2484,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAutoBackupConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAutoBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the network information and address for downloading a backup file.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public async Task<ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the network information and address for downloading a backup file.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestrictionSync(ModifyBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

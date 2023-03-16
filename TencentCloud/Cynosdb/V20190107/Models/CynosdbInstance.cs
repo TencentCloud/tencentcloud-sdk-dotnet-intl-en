@@ -313,6 +313,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// Source AZ
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public string MasterZone{ get; set; }
+
+        /// <summary>
+        /// Replica AZ
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SlaveZones")]
+        public string[] SlaveZones{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceNetInfo")]
+        public InstanceNetInfo[] InstanceNetInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -366,6 +386,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
+            this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
         }
     }
 }

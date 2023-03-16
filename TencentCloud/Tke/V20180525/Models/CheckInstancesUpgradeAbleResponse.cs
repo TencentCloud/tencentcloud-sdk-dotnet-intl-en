@@ -51,6 +51,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Total{ get; set; }
 
         /// <summary>
+        /// Reason why the upgrade is not available
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("UnavailableVersionReason")]
+        public UnavailableReason[] UnavailableVersionReason{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -66,6 +73,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
             this.SetParamArrayObj(map, prefix + "UpgradeAbleInstances.", this.UpgradeAbleInstances);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "UnavailableVersionReason.", this.UnavailableVersionReason);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -21,39 +21,22 @@ namespace TencentCloud.Tke.V20180525.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeAbleInstancesItem : AbstractModel
+    public class UnavailableReason : AbstractModel
     {
         
         /// <summary>
-        /// Node ID
+        /// Instance ID
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The current version of the node
+        /// Reason
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Version")]
-        public string Version{ get; set; }
-
-        /// <summary>
-        /// The latest minor version of the current version
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
-        /// </summary>
-        [JsonProperty("LatestVersion")]
-        public string LatestVersion{ get; set; }
-
-        /// <summary>
-        /// RuntimeVersion
-        /// </summary>
-        [JsonProperty("RuntimeVersion")]
-        public string RuntimeVersion{ get; set; }
-
-        /// <summary>
-        /// RuntimeLatestVersion
-        /// </summary>
-        [JsonProperty("RuntimeLatestVersion")]
-        public string RuntimeLatestVersion{ get; set; }
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
 
         /// <summary>
@@ -62,10 +45,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Version", this.Version);
-            this.SetParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
-            this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
-            this.SetParamSimple(map, prefix + "RuntimeLatestVersion", this.RuntimeLatestVersion);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }
