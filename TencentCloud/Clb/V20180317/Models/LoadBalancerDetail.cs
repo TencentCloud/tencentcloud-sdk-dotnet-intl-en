@@ -144,8 +144,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public ExtraInfo ExtraInfo{ get; set; }
 
         /// <summary>
-        /// Custom configuration ID at the CLB instance level.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
@@ -284,7 +284,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SniSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Domain name of the CLB instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }

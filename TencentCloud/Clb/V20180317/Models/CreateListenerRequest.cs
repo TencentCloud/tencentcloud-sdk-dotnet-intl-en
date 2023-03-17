@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long?[] Ports{ get; set; }
 
         /// <summary>
-        /// Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+        /// Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

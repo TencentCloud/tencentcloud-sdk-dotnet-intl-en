@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// Region information of the real server bound to a CLB.
+        /// The backend service information of cross-region binding 1.0
         /// </summary>
         [JsonProperty("TargetRegionInfo")]
         public TargetRegionInfo TargetRegionInfo{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
-        /// Whether to enable SnatPro
+        /// Whether to enable cross-region binding 2.0
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }

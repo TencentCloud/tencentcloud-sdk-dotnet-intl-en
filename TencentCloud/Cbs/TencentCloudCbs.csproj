@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20170312\CbsClient.cs" />
+    <Compile Include="V20170312\Models\AdvancedRetentionPolicy.cs" />
     <Compile Include="V20170312\Models\ApplyDiskBackupRequest.cs" />
     <Compile Include="V20170312\Models\ApplyDiskBackupResponse.cs" />
     <Compile Include="V20170312\Models\ApplySnapshotRequest.cs" />

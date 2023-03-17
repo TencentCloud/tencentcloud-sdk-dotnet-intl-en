@@ -50,7 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Forward{ get; set; }
 
         /// <summary>
-        /// CLB instance domain name. This field is provided only to public network classic CLB instance.
+        /// Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Domain")]
@@ -309,8 +309,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
-        /// Performance guarantee specification
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specification of the LCU-supported instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
@@ -378,7 +378,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string HealthLogTopicId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }
@@ -389,6 +390,13 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("AttributeFlags")]
         public string[] AttributeFlags{ get; set; }
+
+        /// <summary>
+        /// Domain name of the CLB instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LoadBalancerDomain")]
+        public string LoadBalancerDomain{ get; set; }
 
 
         /// <summary>
@@ -449,6 +457,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
             this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
             this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+            this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         }
     }
 }

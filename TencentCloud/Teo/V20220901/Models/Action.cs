@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Common feature operation. Features of this type include:
+        /// Common feature operation. Values:
         /// <li>`AccessUrlRedirect`: Access URL rewrite</li>
         /// <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
         /// <li>`QUIC`: QUIC</li>
@@ -49,7 +49,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`TlsVersion`</li>
         /// <li>`OcspStapling`</li>
         /// <li>`Http2`: HTTP/2 access</li>
-        /// <li>`UpstreamFollowRedirect: Follow origin redirect</li>
+        /// <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+        /// <li>`Origin`: Origin</li>
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("NormalAction")]

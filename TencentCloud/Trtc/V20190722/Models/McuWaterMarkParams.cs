@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The watermark type. The default is 0, which indicates an image watermark.
+        /// The watermark type. Valid values: `0` (default): Image; `1`: Text.
         /// </summary>
         [JsonProperty("WaterMarkType")]
         public ulong? WaterMarkType{ get; set; }
@@ -36,6 +36,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("WaterMarkImage")]
         public McuWaterMarkImage WaterMarkImage{ get; set; }
 
+        /// <summary>
+        /// The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WaterMarkText")]
+        public McuWaterMarkText WaterMarkText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
             this.SetParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+            this.SetParamObj(map, prefix + "WaterMarkText.", this.WaterMarkText);
         }
     }
 }

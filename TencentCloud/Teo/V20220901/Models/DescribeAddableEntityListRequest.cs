@@ -42,6 +42,14 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("EntityType")]
         public string EntityType{ get; set; }
 
+        /// <summary>
+        /// The service region. Values:
+        /// <li>`mainland`: Chinese mainland.</li>
+        /// <li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,6 +58,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "EntityType", this.EntityType);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

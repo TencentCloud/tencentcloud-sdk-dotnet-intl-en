@@ -200,6 +200,8 @@
     <Compile Include="V20180317\Models\ModifyDomainAttributesResponse.cs" />
     <Compile Include="V20180317\Models\ModifyDomainRequest.cs" />
     <Compile Include="V20180317\Models\ModifyDomainResponse.cs" />
+    <Compile Include="V20180317\Models\ModifyFunctionTargetsRequest.cs" />
+    <Compile Include="V20180317\Models\ModifyFunctionTargetsResponse.cs" />
     <Compile Include="V20180317\Models\ModifyListenerRequest.cs" />
     <Compile Include="V20180317\Models\ModifyListenerResponse.cs" />
     <Compile Include="V20180317\Models\ModifyLoadBalancerAttributesRequest.cs" />

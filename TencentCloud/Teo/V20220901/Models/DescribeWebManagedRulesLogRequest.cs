@@ -61,18 +61,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The key of the parameter QueryCondition, which is used to specify a filter. Values:
-        /// <li>`attackType`: Attack type;</li>
-        /// <li>`riskLevel`: Risk level;</li>
-        /// <li>`action`: Action;</li>
-        /// <li>`ruleId`: Rule ID;</li>
-        /// <li>`sipCountryCode`: Country code of the attacker IP;</li>
-        /// <li>`attackIp`: Attacker IP;</li>
-        /// <li>`oriDomain`: Attacked subdomain name;</li>
-        /// <li>`eventId`: Event ID;</li>
-        /// <li>`ua`: User agent;</li>
-        /// <li>`requestMethod`: Request method;</li>
-        /// <li>`uri`: Uniform resource identifier.</li>
+        /// Filters for the query. Values:
+        /// <li>`attackType`: Attack type</li>
+        /// <li>`riskLevel`: Risk level</li>
+        /// <li>`action`: Action</li>
+        /// <li>`ruleId`: Rule ID</li>
+        /// <li>`sipCountryCode`: Country code of the attacker IP</li>
+        /// <li>`attackIp`: Attacker IP</li>
+        /// <li>`realClientIp`: Real client IP</li>
+        /// <li>`oriDomain`: Attacked subdomain name</li>
+        /// <li>`eventId`: Event ID</li>
+        /// <li>`ua`: User agent</li>
+        /// <li>`requestMethod`: Request method</li>
+        /// <li>`uri`: Uniform resource identifier</li>
         /// </summary>
         [JsonProperty("QueryCondition")]
         public QueryCondition[] QueryCondition{ get; set; }

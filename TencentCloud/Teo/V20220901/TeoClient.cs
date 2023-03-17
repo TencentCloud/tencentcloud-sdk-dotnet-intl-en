@@ -133,6 +133,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to connect a domain to EdgeOne.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccelerationDomainRequest"/></param>
+        /// <returns><see cref="CreateAccelerationDomainResponse"/></returns>
+        public async Task<CreateAccelerationDomainResponse> CreateAccelerationDomain(CreateAccelerationDomainRequest req)
+        {
+             JsonResponseModel<CreateAccelerationDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccelerationDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccelerationDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to connect a domain to EdgeOne.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccelerationDomainRequest"/></param>
+        /// <returns><see cref="CreateAccelerationDomainResponse"/></returns>
+        public CreateAccelerationDomainResponse CreateAccelerationDomainSync(CreateAccelerationDomainRequest req)
+        {
+             JsonResponseModel<CreateAccelerationDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAccelerationDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccelerationDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an alias domain name.
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
@@ -613,6 +653,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to batch remove accelerated domain names.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccelerationDomainsRequest"/></param>
+        /// <returns><see cref="DeleteAccelerationDomainsResponse"/></returns>
+        public async Task<DeleteAccelerationDomainsResponse> DeleteAccelerationDomains(DeleteAccelerationDomainsRequest req)
+        {
+             JsonResponseModel<DeleteAccelerationDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAccelerationDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccelerationDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch remove accelerated domain names.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccelerationDomainsRequest"/></param>
+        /// <returns><see cref="DeleteAccelerationDomainsResponse"/></returns>
+        public DeleteAccelerationDomainsResponse DeleteAccelerationDomainsSync(DeleteAccelerationDomainsRequest req)
+        {
+             JsonResponseModel<DeleteAccelerationDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccelerationDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccelerationDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete an alias domain name.
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
@@ -844,6 +924,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DeleteZone");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query accelerated domain names. Paging, sorting and filtering are supported.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccelerationDomainsRequest"/></param>
+        /// <returns><see cref="DescribeAccelerationDomainsResponse"/></returns>
+        public async Task<DescribeAccelerationDomainsResponse> DescribeAccelerationDomains(DescribeAccelerationDomainsRequest req)
+        {
+             JsonResponseModel<DescribeAccelerationDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccelerationDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccelerationDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query accelerated domain names. Paging, sorting and filtering are supported.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccelerationDomainsRequest"/></param>
+        /// <returns><see cref="DescribeAccelerationDomainsResponse"/></returns>
+        public DescribeAccelerationDomainsResponse DescribeAccelerationDomainsSync(DescribeAccelerationDomainsRequest req)
+        {
+             JsonResponseModel<DescribeAccelerationDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccelerationDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccelerationDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1973,6 +2093,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the L7 time-series data of origin-pull.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7SourceDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7SourceDataResponse"/></returns>
+        public async Task<DescribeTimingL7SourceDataResponse> DescribeTimingL7SourceData(DescribeTimingL7SourceDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7SourceDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimingL7SourceData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7SourceDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the L7 time-series data of origin-pull.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7SourceDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7SourceDataResponse"/></returns>
+        public DescribeTimingL7SourceDataResponse DescribeTimingL7SourceDataSync(DescribeTimingL7SourceDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7SourceDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimingL7SourceData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7SourceDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the top-ranked L7 traffic data.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
@@ -2524,6 +2684,86 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "IdentifyZone");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<IdentifyZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an accelerated domain name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccelerationDomainRequest"/></param>
+        /// <returns><see cref="ModifyAccelerationDomainResponse"/></returns>
+        public async Task<ModifyAccelerationDomainResponse> ModifyAccelerationDomain(ModifyAccelerationDomainRequest req)
+        {
+             JsonResponseModel<ModifyAccelerationDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccelerationDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccelerationDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an accelerated domain name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccelerationDomainRequest"/></param>
+        /// <returns><see cref="ModifyAccelerationDomainResponse"/></returns>
+        public ModifyAccelerationDomainResponse ModifyAccelerationDomainSync(ModifyAccelerationDomainRequest req)
+        {
+             JsonResponseModel<ModifyAccelerationDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccelerationDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccelerationDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch modify the status of accelerated domains.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccelerationDomainStatusesRequest"/></param>
+        /// <returns><see cref="ModifyAccelerationDomainStatusesResponse"/></returns>
+        public async Task<ModifyAccelerationDomainStatusesResponse> ModifyAccelerationDomainStatuses(ModifyAccelerationDomainStatusesRequest req)
+        {
+             JsonResponseModel<ModifyAccelerationDomainStatusesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccelerationDomainStatuses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccelerationDomainStatusesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch modify the status of accelerated domains.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccelerationDomainStatusesRequest"/></param>
+        /// <returns><see cref="ModifyAccelerationDomainStatusesResponse"/></returns>
+        public ModifyAccelerationDomainStatusesResponse ModifyAccelerationDomainStatusesSync(ModifyAccelerationDomainStatusesRequest req)
+        {
+             JsonResponseModel<ModifyAccelerationDomainStatusesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccelerationDomainStatuses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccelerationDomainStatusesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

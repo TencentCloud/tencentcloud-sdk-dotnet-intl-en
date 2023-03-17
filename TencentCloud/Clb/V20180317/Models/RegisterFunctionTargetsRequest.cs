@@ -25,37 +25,37 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 
+        /// CLB instance ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 
+        /// CLB listener ID.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 
+        /// SCF functions to be bound.
         /// </summary>
         [JsonProperty("FunctionTargets")]
         public FunctionTarget[] FunctionTargets{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL of the target forwarding rule. It is ignored if `LocationId` is specified.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

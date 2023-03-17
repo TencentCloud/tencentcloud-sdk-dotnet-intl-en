@@ -48,6 +48,14 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
+        /// <summary>
+        /// Query the list of backend services associated with a load balancer
+        /// <li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+        /// <li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +66,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "ListenerIds.", this.ListenerIds);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

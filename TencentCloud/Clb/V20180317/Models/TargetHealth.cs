@@ -49,7 +49,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+        /// Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+        /// </summary>
+        [JsonProperty("HealthStatusDetail")]
+        public string HealthStatusDetail{ get; set; }
+
+        /// <summary>
+        /// Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
         /// </summary>
         [JsonProperty("HealthStatusDetial")]
         public string HealthStatusDetial{ get; set; }
@@ -64,6 +70,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
             this.SetParamSimple(map, prefix + "TargetId", this.TargetId);
+            this.SetParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
             this.SetParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
         }
     }

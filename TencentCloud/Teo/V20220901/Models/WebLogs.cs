@@ -55,13 +55,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string SipCountryCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// The real client IP.
         /// </summary>
         [JsonProperty("RealClientIp")]
         public string RealClientIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// The ISO-3166 alpha-2 country code of the real client IP.
         /// </summary>
         [JsonProperty("RealClientIpCountryCode")]
         public string RealClientIpCountryCode{ get; set; }

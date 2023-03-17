@@ -151,6 +151,15 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }
 
+        /// <summary>
+        /// Whether it’s a fake site. Values:
+        /// <li>`0`: Non-fake site</li>
+        /// <li>`1`: Fake site</li>
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("IsFake")]
+        public long? IsFake{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +184,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
             this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
             this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+            this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
         }
     }
 }

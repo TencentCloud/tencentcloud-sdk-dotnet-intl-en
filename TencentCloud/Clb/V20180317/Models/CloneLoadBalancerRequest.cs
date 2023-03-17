@@ -118,7 +118,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// Guaranteed performance specification.
+        /// Specification of the LCU-supported instance.
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }

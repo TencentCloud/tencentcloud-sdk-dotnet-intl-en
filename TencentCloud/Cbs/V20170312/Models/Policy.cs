@@ -36,6 +36,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DayOfWeek")]
         public ulong?[] DayOfWeek{ get; set; }
 
+        /// <summary>
+        /// Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+        /// </summary>
+        [JsonProperty("DayOfMonth")]
+        public ulong?[] DayOfMonth{ get; set; }
+
+        /// <summary>
+        /// Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+        /// </summary>
+        [JsonProperty("IntervalDays")]
+        public ulong? IntervalDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "Hour.", this.Hour);
             this.SetParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
+            this.SetParamArraySimple(map, prefix + "DayOfMonth.", this.DayOfMonth);
+            this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
         }
     }
 }

@@ -197,6 +197,206 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
+        /// - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+        /// - The period queried per request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+        /// - The rate limit of this API is five calls per second.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMixTranscodingUsageRequest"/></param>
+        /// <returns><see cref="DescribeMixTranscodingUsageResponse"/></returns>
+        public async Task<DescribeMixTranscodingUsageResponse> DescribeMixTranscodingUsage(DescribeMixTranscodingUsageRequest req)
+        {
+             JsonResponseModel<DescribeMixTranscodingUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMixTranscodingUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMixTranscodingUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
+        /// - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+        /// - The period queried per request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+        /// - The rate limit of this API is five calls per second.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMixTranscodingUsageRequest"/></param>
+        /// <returns><see cref="DescribeMixTranscodingUsageResponse"/></returns>
+        public DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsageSync(DescribeMixTranscodingUsageRequest req)
+        {
+             JsonResponseModel<DescribeMixTranscodingUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMixTranscodingUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMixTranscodingUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your TRTC recording usage.
+        /// - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+        /// - The period queried per request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+        /// - The rate limit of this API is five calls per second.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingUsageRequest"/></param>
+        /// <returns><see cref="DescribeRecordingUsageResponse"/></returns>
+        public async Task<DescribeRecordingUsageResponse> DescribeRecordingUsage(DescribeRecordingUsageRequest req)
+        {
+             JsonResponseModel<DescribeRecordingUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordingUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordingUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your TRTC recording usage.
+        /// - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+        /// - The period queried per request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+        /// - The rate limit of this API is five calls per second.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingUsageRequest"/></param>
+        /// <returns><see cref="DescribeRecordingUsageResponse"/></returns>
+        public DescribeRecordingUsageResponse DescribeRecordingUsageSync(DescribeRecordingUsageRequest req)
+        {
+             JsonResponseModel<DescribeRecordingUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordingUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordingUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your usage of TRTC’s relay to CDN service.
+        /// - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+        /// - The period queried per request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+        /// - The rate limit of this API is five calls per second.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelayUsageRequest"/></param>
+        /// <returns><see cref="DescribeRelayUsageResponse"/></returns>
+        public async Task<DescribeRelayUsageResponse> DescribeRelayUsage(DescribeRelayUsageRequest req)
+        {
+             JsonResponseModel<DescribeRelayUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRelayUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRelayUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your usage of TRTC’s relay to CDN service.
+        /// - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+        /// - The period queried per request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+        /// - The rate limit of this API is five calls per second.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelayUsageRequest"/></param>
+        /// <returns><see cref="DescribeRelayUsageResponse"/></returns>
+        public DescribeRelayUsageResponse DescribeRelayUsageSync(DescribeRelayUsageRequest req)
+        {
+             JsonResponseModel<DescribeRelayUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRelayUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRelayUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your TRTC audio/video duration.
+        /// - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+        /// - The period queried per request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+        /// - The rate limit of this API is five calls per second.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcUsageRequest"/></param>
+        /// <returns><see cref="DescribeTrtcUsageResponse"/></returns>
+        public async Task<DescribeTrtcUsageResponse> DescribeTrtcUsage(DescribeTrtcUsageRequest req)
+        {
+             JsonResponseModel<DescribeTrtcUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrtcUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query your TRTC audio/video duration.
+        /// - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+        /// - The period queried per request cannot be longer than 31 days.
+        /// - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+        /// - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+        /// - The rate limit of this API is five calls per second.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcUsageRequest"/></param>
+        /// <returns><see cref="DescribeTrtcUsageResponse"/></returns>
+        public DescribeTrtcUsageResponse DescribeTrtcUsageSync(DescribeTrtcUsageRequest req)
+        {
+             JsonResponseModel<DescribeTrtcUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTrtcUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
         /// </summary>
         /// <param name="req"><see cref="DismissRoomRequest"/></param>

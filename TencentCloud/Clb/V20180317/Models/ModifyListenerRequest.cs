@@ -104,13 +104,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public MultiCertInfo MultiCertInfo{ get; set; }
 
         /// <summary>
-        /// Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+        /// The maximum number of concurrent connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum concurrency of the instance. -1 indicates that no limit is set on concurrent connections.
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
-        /// Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+        /// The maximum number of new connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum number of new connections of the instance. -1 indicates that no limit is set on concurrent connections.
         /// </summary>
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }

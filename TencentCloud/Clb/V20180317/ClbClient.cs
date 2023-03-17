@@ -2415,6 +2415,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to modify the cloud functions associated with a load balancing forwarding rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionTargetsRequest"/></param>
+        /// <returns><see cref="ModifyFunctionTargetsResponse"/></returns>
+        public async Task<ModifyFunctionTargetsResponse> ModifyFunctionTargets(ModifyFunctionTargetsRequest req)
+        {
+             JsonResponseModel<ModifyFunctionTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFunctionTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFunctionTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the cloud functions associated with a load balancing forwarding rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionTargetsRequest"/></param>
+        /// <returns><see cref="ModifyFunctionTargetsResponse"/></returns>
+        public ModifyFunctionTargetsResponse ModifyFunctionTargetsSync(ModifyFunctionTargetsRequest req)
+        {
+             JsonResponseModel<ModifyFunctionTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFunctionTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFunctionTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (ModifyListener) is used to modify the attributes of a CLB listener, such as listener name, health check parameter, certificate information, and forwarding policy.
         /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
         /// </summary>
@@ -2499,7 +2539,12 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to upgrade shared CLB instances to LCU-supported CLB instances.
+        /// This API is used to upgrade a pay-as-you-go shared CLB instance to an LCU-supported CLB instance.<br/>
+        /// Limits
+        /// - This API can be used to upgrade only a pay-as-you-go shared instance. A monthly subscription shared instance must be upgraded in the console.
+        /// - An LCU-supported instance cannot be rolled back to a shared instance.
+        /// - LCU-supported instances are in beta testing. To upgrade to an LCU-supported instance, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.
+        /// - Classic CLB instances cannot be upgraded to LCU-supported instances.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerSlaResponse"/></returns>
@@ -2519,7 +2564,12 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API is used to upgrade shared CLB instances to LCU-supported CLB instances.
+        /// This API is used to upgrade a pay-as-you-go shared CLB instance to an LCU-supported CLB instance.<br/>
+        /// Limits
+        /// - This API can be used to upgrade only a pay-as-you-go shared instance. A monthly subscription shared instance must be upgraded in the console.
+        /// - An LCU-supported instance cannot be rolled back to a shared instance.
+        /// - LCU-supported instances are in beta testing. To upgrade to an LCU-supported instance, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.
+        /// - Classic CLB instances cannot be upgraded to LCU-supported instances.
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerSlaResponse"/></returns>

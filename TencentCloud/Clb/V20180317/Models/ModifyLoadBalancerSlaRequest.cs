@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB instance information
+        /// CLB instance information.
         /// </summary>
         [JsonProperty("LoadBalancerSla")]
         public SlaUpdateParam[] LoadBalancerSla{ get; set; }

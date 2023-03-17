@@ -105,6 +105,39 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }
 
+        /// <summary>
+        /// The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RetentionMonths")]
+        public ulong? RetentionMonths{ get; set; }
+
+        /// <summary>
+        /// The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RetentionAmount")]
+        public ulong? RetentionAmount{ get; set; }
+
+        /// <summary>
+        /// Retention policy for scheduled snapshots.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AdvancedRetentionPolicy")]
+        public AdvancedRetentionPolicy AdvancedRetentionPolicy{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CopyFromAccountUin")]
+        public string CopyFromAccountUin{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +157,11 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
             this.SetParamSimple(map, prefix + "CopyToAccountUin", this.CopyToAccountUin);
             this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+            this.SetParamSimple(map, prefix + "RetentionMonths", this.RetentionMonths);
+            this.SetParamSimple(map, prefix + "RetentionAmount", this.RetentionAmount);
+            this.SetParamObj(map, prefix + "AdvancedRetentionPolicy.", this.AdvancedRetentionPolicy);
+            this.SetParamSimple(map, prefix + "CopyFromAccountUin", this.CopyFromAccountUin);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
