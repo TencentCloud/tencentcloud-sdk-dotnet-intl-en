@@ -1,0 +1,13 @@
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/bin/Debug/netstandard2.0/TencentCloudMps.deps.json
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/bin/Debug/netstandard2.0/TencentCloudMps.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/bin/Debug/netstandard2.0/TencentCloudMps.pdb
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/bin/Debug/netstandard2.0/TencentCloudMps.xml
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/bin/Debug/netstandard2.0/TencentCloudCommon.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/bin/Debug/netstandard2.0/TencentCloudCommon.pdb
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/obj/Debug/netstandard2.0/TencentCloudMps.csproj.CoreCompileInputs.cache
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/obj/Debug/netstandard2.0/TencentCloudMps.AssemblyInfoInputs.cache
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/obj/Debug/netstandard2.0/TencentCloudMps.AssemblyInfo.cs
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/obj/Debug/netstandard2.0/TencentCloudMps.csproj.CopyComplete
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/obj/Debug/netstandard2.0/TencentCloudMps.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/obj/Debug/netstandard2.0/TencentCloudMps.xml
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mps/obj/Debug/netstandard2.0/TencentCloudMps.pdb

@@ -1,0 +1,13 @@
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/bin/Debug/netstandard2.0/TencentCloudCfw.deps.json
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/bin/Debug/netstandard2.0/TencentCloudCfw.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/bin/Debug/netstandard2.0/TencentCloudCfw.pdb
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/bin/Debug/netstandard2.0/TencentCloudCfw.xml
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/bin/Debug/netstandard2.0/TencentCloudCommon.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/bin/Debug/netstandard2.0/TencentCloudCommon.pdb
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/obj/Debug/netstandard2.0/TencentCloudCfw.csproj.CoreCompileInputs.cache
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/obj/Debug/netstandard2.0/TencentCloudCfw.AssemblyInfoInputs.cache
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/obj/Debug/netstandard2.0/TencentCloudCfw.AssemblyInfo.cs
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/obj/Debug/netstandard2.0/TencentCloudCfw.csproj.CopyComplete
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/obj/Debug/netstandard2.0/TencentCloudCfw.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/obj/Debug/netstandard2.0/TencentCloudCfw.xml
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Cfw/obj/Debug/netstandard2.0/TencentCloudCfw.pdb

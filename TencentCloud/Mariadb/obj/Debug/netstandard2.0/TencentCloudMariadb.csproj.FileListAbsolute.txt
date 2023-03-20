@@ -1,0 +1,13 @@
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/bin/Debug/netstandard2.0/TencentCloudMariadb.deps.json
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/bin/Debug/netstandard2.0/TencentCloudMariadb.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/bin/Debug/netstandard2.0/TencentCloudMariadb.pdb
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/bin/Debug/netstandard2.0/TencentCloudMariadb.xml
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/bin/Debug/netstandard2.0/TencentCloudCommon.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/bin/Debug/netstandard2.0/TencentCloudCommon.pdb
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/obj/Debug/netstandard2.0/TencentCloudMariadb.csproj.CoreCompileInputs.cache
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/obj/Debug/netstandard2.0/TencentCloudMariadb.AssemblyInfoInputs.cache
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/obj/Debug/netstandard2.0/TencentCloudMariadb.AssemblyInfo.cs
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/obj/Debug/netstandard2.0/TencentCloudMariadb.csproj.CopyComplete
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/obj/Debug/netstandard2.0/TencentCloudMariadb.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/obj/Debug/netstandard2.0/TencentCloudMariadb.xml
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Mariadb/obj/Debug/netstandard2.0/TencentCloudMariadb.pdb

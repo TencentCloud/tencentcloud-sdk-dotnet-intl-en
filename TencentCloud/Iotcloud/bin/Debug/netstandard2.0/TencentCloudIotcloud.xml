@@ -1,0 +1,1509 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudIotcloud</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.CreateDevice(TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest)">
+            <summary>
+            This API is used to create an IoT Hub device. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.CreateDeviceSync(TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest)">
+            <summary>
+            This API is used to create an IoT Hub device. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.CreatePrivateCA(TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCARequest)">
+            <summary>
+            This API is used to create a private CA certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.CreatePrivateCASync(TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCARequest)">
+            <summary>
+            This API is used to create a private CA certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.CreateProduct(TencentCloud.Iotcloud.V20210408.Models.CreateProductRequest)">
+            <summary>
+            This API is used to create a new IoT communication product. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreateProductRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreateProductResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.CreateProductSync(TencentCloud.Iotcloud.V20210408.Models.CreateProductRequest)">
+            <summary>
+            This API is used to create a new IoT communication product. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreateProductRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.CreateProductResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DeleteDevice(TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceRequest)">
+            <summary>
+            This API is used to delete an IoT Hub device. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DeleteDeviceSync(TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceRequest)">
+            <summary>
+            This API is used to delete an IoT Hub device. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DeleteDeviceShadow(TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowRequest)">
+            <summary>
+            This API is used to delete a device shadow. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DeleteDeviceShadowSync(TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowRequest)">
+            <summary>
+            This API is used to delete a device shadow. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DeletePrivateCA(TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCARequest)">
+            <summary>
+            This API is used to delete a private CA certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DeletePrivateCASync(TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCARequest)">
+            <summary>
+            This API is used to delete a private CA certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DeleteProduct(TencentCloud.Iotcloud.V20210408.Models.DeleteProductRequest)">
+            <summary>
+            This API is used to delete an IoT Hub product.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteProductRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteProductResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DeleteProductSync(TencentCloud.Iotcloud.V20210408.Models.DeleteProductRequest)">
+            <summary>
+            This API is used to delete an IoT Hub product.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteProductRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DeleteProductResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeDevice(TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceRequest)">
+            <summary>
+            This API is used to query device details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeDeviceSync(TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceRequest)">
+            <summary>
+            This API is used to query device details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeDevices(TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest)">
+            <summary>
+            This API is used to get the list of IoT Hub devices. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeDevicesSync(TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest)">
+            <summary>
+            This API is used to get the list of IoT Hub devices. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribePrivateCA(TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCARequest)">
+            <summary>
+            This API is used to query private CA certificate details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribePrivateCASync(TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCARequest)">
+            <summary>
+            This API is used to query private CA certificate details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribePrivateCABindedProducts(TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsRequest)">
+            <summary>
+            This API is used to query the products bound to a private CA certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribePrivateCABindedProductsSync(TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsRequest)">
+            <summary>
+            This API is used to query the products bound to a private CA certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribePrivateCAs(TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsRequest)">
+            <summary>
+            This API is used to get the list of private CA certificates.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribePrivateCAsSync(TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsRequest)">
+            <summary>
+            This API is used to get the list of private CA certificates.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeProduct(TencentCloud.Iotcloud.V20210408.Models.DescribeProductRequest)">
+            <summary>
+            This API is used to query product details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeProductSync(TencentCloud.Iotcloud.V20210408.Models.DescribeProductRequest)">
+            <summary>
+            This API is used to query product details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeProductCA(TencentCloud.Iotcloud.V20210408.Models.DescribeProductCARequest)">
+            <summary>
+            This API is used to query the CA certificates bound to a product.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeProductCASync(TencentCloud.Iotcloud.V20210408.Models.DescribeProductCARequest)">
+            <summary>
+            This API is used to query the CA certificates bound to a product.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeProducts(TencentCloud.Iotcloud.V20210408.Models.DescribeProductsRequest)">
+            <summary>
+            This API is used to obtain the product list. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.DescribeProductsSync(TencentCloud.Iotcloud.V20210408.Models.DescribeProductsRequest)">
+            <summary>
+            This API is used to obtain the product list. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.SetProductsForbiddenStatus(TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusRequest)">
+            <summary>
+            This API is used to enable or disable multiple products at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.SetProductsForbiddenStatusSync(TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusRequest)">
+            <summary>
+            This API is used to enable or disable multiple products at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.UpdateDeviceLogLevel(TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelRequest)">
+            <summary>
+            This API is used to set the device log level.  
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.UpdateDeviceLogLevelSync(TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelRequest)">
+            <summary>
+            This API is used to set the device log level.  
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.UpdateDevicesEnableState(TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateRequest)">
+            <summary>
+            This API is used to enable or disable multiple devices. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.UpdateDevicesEnableStateSync(TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateRequest)">
+            <summary>
+            This API is used to enable or disable multiple devices. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.UpdatePrivateCA(TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCARequest)">
+            <summary>
+            This API is used to update a private CA certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.UpdatePrivateCASync(TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCARequest)">
+            <summary>
+            This API is used to update a private CA certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCARequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCAResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.UpdateProductDynamicRegister(TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterRequest)">
+            <summary>
+            This API is used to update the configuration of product dynamic registration. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.IotcloudClient.UpdateProductDynamicRegisterSync(TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterRequest)">
+            <summary>
+            This API is used to update the configuration of product dynamic registration. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterRequest"/></param>
+            <returns><see cref="T:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.Attribute.Tags">
+            <summary>
+            Attribute list
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.Attribute.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.BindProductInfo.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.BindProductInfo.ProductName">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.BindProductInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CertInfo.CertName">
+            <summary>
+            Certificate name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CertInfo.CertSN">
+            <summary>
+            Hex sequence number of a certificate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CertInfo.IssuerName">
+            <summary>
+            Certificate issuer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CertInfo.Subject">
+            <summary>
+            Certificate subject
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CertInfo.CreateTime">
+            <summary>
+            Certificate creation time (timestamp in milliseconds)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CertInfo.EffectiveTime">
+            <summary>
+            Certificate effective time (timestamp in milliseconds)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CertInfo.ExpireTime">
+            <summary>
+            Certificate expiration time (timestamp in milliseconds)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CertInfo.CertText">
+            <summary>
+            X.509 certificate content
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.CertInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.ProductId">
+            <summary>
+            Product ID, globally unique ID assigned by Tencent Cloud during product creation
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.DeviceName">
+            <summary>
+            Device name. It is a string of 1 to 48 characters. Letters, digits, and :_- are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.Attribute">
+            <summary>
+            Device attribute
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.DefinedPsk">
+            <summary>
+            Whether to use custom PSK, no by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.Isp">
+            <summary>
+            ISP, required for a NB-IoT product. `1`: China Telecom; `2`: China Mobile; `3`: China Unicom
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.Imei">
+            <summary>
+            IMEI, required for a NB-IoT product
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.LoraDevEui">
+            <summary>
+            DevEUI of a LoRa device, required when you create a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.LoraMoteType">
+            <summary>
+            MoteType of a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.Skey">
+            <summary>
+            Skey, required when you create a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.LoraAppKey">
+            <summary>
+            AppKey of a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.TlsCrt">
+            <summary>
+            Private CA certificate
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.DeviceName">
+            <summary>
+            Device name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.DevicePsk">
+            <summary>
+            Base64-encoded symmetric encryption key, which is returned if symmetric encryption is used
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.DeviceCert">
+            <summary>
+            Device certificate, which authenticates client identity during TLS connection establishment and is returned if asymmetric encryption is used
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.DevicePrivateKey">
+            <summary>
+            Device private key, which authenticates client identity during TLS connection establishment and is returned if asymmetric encryption is used. Tencent Cloud does not store the key. Please store it by yourself properly.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.LoraDevEui">
+            <summary>
+            DevEUI of a LoRa device, which is returned for a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.LoraMoteType">
+            <summary>
+            MoteType of a LoRa device, which is returned for a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.LoraAppKey">
+            <summary>
+            AppKey of a LoRa device, which is returned for a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.LoraNwkKey">
+            <summary>
+            NwkKey of a LoRa device, which is returned for a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.CreateDeviceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCARequest.CertName">
+            <summary>
+            CA certificate name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCARequest.CertText">
+            <summary>
+            CA certificate content
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCARequest.VerifyCertText">
+            <summary>
+            Content verifying the CA certificate
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCARequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCAResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.CreatePrivateCAResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateProductRequest.ProductName">
+            <summary>
+            Product name, which cannot be same as that of an existing product. Naming rule: [a-zA-Z0-9:_-]{1,32}.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateProductRequest.ProductProperties">
+            <summary>
+            Product properties
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateProductRequest.Skey">
+            <summary>
+            Skey, which is required to create a CLAA product.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.CreateProductRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateProductResponse.ProductName">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateProductResponse.ProductId">
+            <summary>
+            Product ID, the globally unique ID assigned by Tencent Cloud.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateProductResponse.ProductProperties">
+            <summary>
+            Product properties
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.CreateProductResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.CreateProductResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceRequest.ProductId">
+            <summary>
+            ID of the product to which the device belongs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceRequest.DeviceName">
+            <summary>
+            Name of the device to delete
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceRequest.Skey">
+            <summary>
+            Skey, which is required to delete a LoRa device or LoRa gateway device
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowRequest.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowRequest.DeviceName">
+            <summary>
+            Device name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeleteDeviceShadowResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCARequest.CertName">
+            <summary>
+            Private CA certificate name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCARequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCAResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeletePrivateCAResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteProductRequest.ProductId">
+            <summary>
+            ID of the product to delete
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteProductRequest.Skey">
+            <summary>
+            Skey, which is required to delete a LoRa product
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeleteProductRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeleteProductResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeleteProductResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceRequest.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceRequest.DeviceName">
+            <summary>
+            Device name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.DeviceName">
+            <summary>
+            Device name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.Online">
+            <summary>
+            Whether the device is online. `0`: offline; `1`: online
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.LoginTime">
+            <summary>
+            Device login time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.Version">
+            <summary>
+            Device firmware version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.LastUpdateTime">
+            <summary>
+            Last updated time of the device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.DeviceCert">
+            <summary>
+            Device certificate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.DevicePsk">
+            <summary>
+            Device key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.Tags">
+            <summary>
+            Device attribute
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.DeviceType">
+            <summary>
+            Device type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.Imei">
+            <summary>
+            International Mobile Equipment Identity (IMEI)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.Isp">
+            <summary>
+            ISP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.ConnIP">
+            <summary>
+            IP address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.NbiotDeviceID">
+            <summary>
+            Device ID at the NB-IoT ISP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.LoraDevEui">
+            <summary>
+            DevEUI of a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.LoraMoteType">
+            <summary>
+            MoteType of a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.LogLevel">
+            <summary>
+            SDK log level of the device
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.FirstOnlineTime">
+            <summary>
+            The first time when the device went online
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.LastOfflineTime">
+            <summary>
+            The last time when the device went offline
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.CreateTime">
+            <summary>
+            Device creation time
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.CertState">
+            <summary>
+            Whether the device certificate has been obtained. `0`: no; `1`: yes
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.EnableState">
+            <summary>
+            Whether the device is enabled
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.Labels">
+            <summary>
+            Device tags
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.ClientIP">
+            <summary>
+            IP address of the MQTT client
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.FirmwareUpdateTime">
+            <summary>
+            Firmware update time of the device
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.CreateUserId">
+            <summary>
+            Account ID of the creator
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeDeviceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest.ProductId">
+            <summary>
+            ID of the product whose devices are queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest.Offset">
+            <summary>
+            Offset, which starts from 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest.Limit">
+            <summary>
+            Page size. Value range: 10-250
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest.FirmwareVersion">
+            <summary>
+            Device firmware version. If no value is passed in, devices of all firmware versions are returned. If `None-FirmwareVersion` is passed in, devices without version numbers are returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest.DeviceName">
+            <summary>
+            Device name to query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest.EnableState">
+            <summary>
+            Whether to query enabled or disabled devices. `0`: disabled devices; `1`: enabled devices. By default, both enabled and disabled devices are queried.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesResponse.TotalCount">
+            <summary>
+            Total number of the devices returned
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesResponse.Devices">
+            <summary>
+            List of device details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeDevicesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsRequest.CertName">
+            <summary>
+            Certificate name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsRequest.Offset">
+            <summary>
+            Offset for query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsRequest.Limit">
+            <summary>
+            Maximum number of records to return, which is 20 by default and cannot exceed 200
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsResponse.Products">
+            <summary>
+            List of the products bound to the private CA certificate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCABindedProductsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCARequest.CertName">
+            <summary>
+            Name of the private CA certificate to query
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCARequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAResponse.CA">
+            <summary>
+            Details of the private CA certificate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsResponse.CAs">
+            <summary>
+            List of private CA certificates
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribePrivateCAsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCARequest.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCARequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCAResponse.CAs">
+            <summary>
+            List of CA certificates bound to the product
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCAResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeProductCAResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductRequest.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeProductRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductResponse.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductResponse.ProductName">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductResponse.ProductMetadata">
+            <summary>
+            Product metadata
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductResponse.ProductProperties">
+            <summary>
+            Product properties
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeProductResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsRequest.Offset">
+            <summary>
+            Offset, starting from 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsRequest.Limit">
+            <summary>
+            Number of entries returned per page. Valid range: 10–250.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsResponse.TotalCount">
+            <summary>
+            Total number of products
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsResponse.Products">
+            <summary>
+            List of product details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DescribeProductsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.DeviceName">
+            <summary>
+            Device name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.Online">
+            <summary>
+            Whether the device is online. `0`: offline; `1`: online
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.LoginTime">
+            <summary>
+            Device login time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.Version">
+            <summary>
+            Device version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.DeviceCert">
+            <summary>
+            Device certificate, which is returned for devices that use certificates for authentication
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.DevicePsk">
+            <summary>
+            Device key, which is returned for devices that use keys for authentication
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.Tags">
+            <summary>
+            Device attribute
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.DeviceType">
+            <summary>
+            Device type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.Imei">
+            <summary>
+            International Mobile Equipment Identity (IMEI)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.Isp">
+            <summary>
+            ISP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.NbiotDeviceID">
+            <summary>
+            Device ID at the NB-IoT ISP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.ConnIP">
+            <summary>
+            IP address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.LastUpdateTime">
+            <summary>
+            Last updated time of the device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.LoraDevEui">
+            <summary>
+            DevEUI of a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.LoraMoteType">
+            <summary>
+            MoteType of a LoRa device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.FirstOnlineTime">
+            <summary>
+            The first time when the device went online
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.LastOfflineTime">
+            <summary>
+            The last time when the device went offline
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.CreateTime">
+            <summary>
+            Device creation time
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.LogLevel">
+            <summary>
+            Device log level
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.CertState">
+            <summary>
+            Whether the device certificate has been obtained. `0`: no; `1`: yes
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.EnableState">
+            <summary>
+            Whether the device is enabled. `0`: disabled; `1`: enabled
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.Labels">
+            <summary>
+            Device tags
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.ClientIP">
+            <summary>
+            IP address of the MQTT client
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.FirmwareUpdateTime">
+            <summary>
+            Time of last OTA update
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeviceInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceLabel.Key">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceLabel.Value">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeviceLabel.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceTag.Tag">
+            <summary>
+            Attribute name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceTag.Type">
+            <summary>
+            Attribute value type. `1`: integer; `2`: string
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceTag.Value">
+            <summary>
+            Attribute value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.DeviceTag.Name">
+            <summary>
+            Attribute description
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.DeviceTag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductInfo.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductInfo.ProductName">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductInfo.ProductMetadata">
+            <summary>
+            Product metadata
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductInfo.ProductProperties">
+            <summary>
+            Product properties
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.ProductInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductMetadata.CreationDate">
+            <summary>
+            Product creation time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.ProductMetadata.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.ProductDescription">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.EncryptionType">
+            <summary>
+            Authentication type. `1` (default): certificate; `2`: signature
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.Region">
+            <summary>
+            Product region. Valid value: `gz` (Guangzhou)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.ProductType">
+            <summary>
+            Product type. Valid values:
+            `0` (default): general; `2`: NB-IoT; `3`: LoRa gateway; `4`: LoRa; `5`: general gateway
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.Format">
+            <summary>
+            Data format. Valid values: `json` (default), `custom`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.Platform">
+            <summary>
+            Platform of the product. Default value: `0`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.Appeui">
+            <summary>
+            AppEUI at the LoRa product operator, required only for LoRa products
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.ModelId">
+            <summary>
+            ID of the Thing Specification Language (TSL) model bound to the product. `-1` means no models are bound.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.ModelName">
+            <summary>
+            Name of the TSL model bound to the product
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.ProductKey">
+            <summary>
+            Product key, which is specific to suite products
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.RegisterType">
+            <summary>
+            Dynamic registration type. `0`: disable; `1`: preset device names; `2`: generate device names dynamically
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.ProductSecret">
+            <summary>
+            Dynamic registration product key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.RegisterLimit">
+            <summary>
+            The maximum number of devices that can be dynamically created when `RegisterType` is set to `2`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.OriginProductId">
+            <summary>
+            Original product ID of a transferred product. This parameter is empty for products that are not transferred.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.PrivateCAName">
+            <summary>
+            Private CA certificate name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.OriginUserId">
+            <summary>
+            Original user ID of a transferred product. This parameter is empty for products that are not transferred.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.ProductProperties.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusRequest.ProductId">
+            <summary>
+            List of products to enable or disable
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusRequest.Status">
+            <summary>
+            `0`: enable; `1`: disable
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.SetProductsForbiddenStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelRequest.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelRequest.DeviceName">
+            <summary>
+            Device name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelRequest.LogLevel">
+            <summary>
+            Log level. `0`: disable; `1`: error; `2`: warning; `3`: information; `4`: debugging
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.UpdateDeviceLogLevelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateRequest.ProductId">
+            <summary>
+            ID of the product to which the device belongs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateRequest.DeviceNames">
+            <summary>
+            Device names
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateRequest.Status">
+            <summary>
+            New status of the devices. `0`: disabled; `1`: enabled
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.UpdateDevicesEnableStateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCARequest.CertName">
+            <summary>
+            CA certificate name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCARequest.CertText">
+            <summary>
+            CA certificate content
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCARequest.VerifyCertText">
+            <summary>
+            Content verifying the CA certificate
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCARequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCAResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.UpdatePrivateCAResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterRequest.ProductId">
+            <summary>
+            Product ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterRequest.RegisterType">
+            <summary>
+            Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterRequest.RegisterLimit">
+            <summary>
+            Maximum dynamically registered devices
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterResponse.RegisterType">
+            <summary>
+            Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterResponse.ProductSecret">
+            <summary>
+            Product key for dynamic registration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterResponse.RegisterLimit">
+            <summary>
+            Maximum dynamically registered devices
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Iotcloud.V20210408.Models.UpdateProductDynamicRegisterResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

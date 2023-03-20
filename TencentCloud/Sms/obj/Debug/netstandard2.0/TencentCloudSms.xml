@@ -1,0 +1,2662 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudSms</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.AddSmsSign(TencentCloud.Sms.V20190711.Models.AddSmsSignRequest)">
+            <summary>
+            This API is used to add an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://intl.cloud.tencent.com/document/product/382/39022?from_cn_redirect=1) before starting an application.
+            > Note: individual users cannot use this API to apply for SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, please log in to the console to apply for SMS signatures. For detailed directions, please see [Creating SMS Signatures](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Sign).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.AddSmsSignResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.AddSmsSignSync(TencentCloud.Sms.V20190711.Models.AddSmsSignRequest)">
+            <summary>
+            This API is used to add an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://intl.cloud.tencent.com/document/product/382/39022?from_cn_redirect=1) before starting an application.
+            > Note: individual users cannot use this API to apply for SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, please log in to the console to apply for SMS signatures. For detailed directions, please see [Creating SMS Signatures](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Sign).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.AddSmsSignResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.AddSmsTemplate(TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest)">
+            <summary>
+            This API is used to add an SMS template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://intl.cloud.tencent.com/document/product/382/39023?from_cn_redirect=1) before starting an application.
+            > Note: individual users cannot use this API to apply for SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, please log in to the console to apply for SMS body templates. For detailed directions, please see [Creating SMS Body Templates](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Template).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.AddSmsTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.AddSmsTemplateSync(TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest)">
+            <summary>
+            This API is used to add an SMS template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://intl.cloud.tencent.com/document/product/382/39023?from_cn_redirect=1) before starting an application.
+            > Note: individual users cannot use this API to apply for SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, please log in to the console to apply for SMS body templates. For detailed directions, please see [Creating SMS Body Templates](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Template).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.AddSmsTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.CallbackStatusStatistics(TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest)">
+            <summary>
+            This API is used to collect statistics on user receipts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.CallbackStatusStatisticsSync(TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest)">
+            <summary>
+            This API is used to collect statistics on user receipts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.DeleteSmsSign(TencentCloud.Sms.V20190711.Models.DeleteSmsSignRequest)">
+            <summary>
+            > Note: individual users cannot use this API to delete SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). You can log in to the console to delete SMS signatures. For detailed directions, please see the notes on deleting SMS signatures in [SMS Signature Operations](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Sign).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.DeleteSmsSignRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.DeleteSmsSignResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.DeleteSmsSignSync(TencentCloud.Sms.V20190711.Models.DeleteSmsSignRequest)">
+            <summary>
+            > Note: individual users cannot use this API to delete SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). You can log in to the console to delete SMS signatures. For detailed directions, please see the notes on deleting SMS signatures in [SMS Signature Operations](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Sign).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.DeleteSmsSignRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.DeleteSmsSignResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.DeleteSmsTemplate(TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateRequest)">
+            <summary>
+            > Note: individual users cannot use this API to delete SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). You can log in to the console to delete SMS body templates. For detailed directions, please see the notes on deleting SMS body templates in [SMS Body Template Operations](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Template).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.DeleteSmsTemplateSync(TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateRequest)">
+            <summary>
+            > Note: individual users cannot use this API to delete SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). You can log in to the console to delete SMS body templates. For detailed directions, please see the notes on deleting SMS body templates in [SMS Body Template Operations](https://intl.cloud.tencent.com/document/product/382/36136?from_cn_redirect=1#Template).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.DescribeSmsSignList(TencentCloud.Sms.V20190711.Models.DescribeSmsSignListRequest)">
+            <summary>
+            > Note: individual users cannot use this API to query SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.DescribeSmsSignListSync(TencentCloud.Sms.V20190711.Models.DescribeSmsSignListRequest)">
+            <summary>
+            > Note: individual users cannot use this API to query SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.DescribeSmsTemplateList(TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListRequest)">
+            <summary>
+            > Note: individual users cannot use this API to query SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.DescribeSmsTemplateListSync(TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListRequest)">
+            <summary>
+            > Note: individual users cannot use this API to query SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.ModifySmsSign(TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest)">
+            <summary>
+            This API is used to modify an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://intl.cloud.tencent.com/document/product/382/39022?from_cn_redirect=1) before making a modification.
+            >-  Note: individual users cannot use this API to modify SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, you can log in to the console to modify SMS signatures.
+            >- Modifications can be made only if the signature status is **pending review** or **rejected**. **Approved** signatures cannot be modified.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.ModifySmsSignResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.ModifySmsSignSync(TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest)">
+            <summary>
+            This API is used to modify an SMS signature. Please read the [Tencent Cloud SMS Signature Review Standards](https://intl.cloud.tencent.com/document/product/382/39022?from_cn_redirect=1) before making a modification.
+            >-  Note: individual users cannot use this API to modify SMS signatures. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, you can log in to the console to modify SMS signatures.
+            >- Modifications can be made only if the signature status is **pending review** or **rejected**. **Approved** signatures cannot be modified.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.ModifySmsSignResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.ModifySmsTemplate(TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest)">
+            <summary>
+            This API is used to modify an SMS body template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://intl.cloud.tencent.com/document/product/382/39023?from_cn_redirect=1) before making a modification.
+            >-  Note: individual users cannot use this API to modify SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, you can log in to the console to modify SMS body templates.
+            >- Modifications can be made only if the body template status is **pending review** or **rejected**. **Approved** body templates cannot be modified.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.ModifySmsTemplateSync(TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest)">
+            <summary>
+            This API is used to modify an SMS body template. Please read the [Tencent Cloud SMS Body Template Review Standards](https://intl.cloud.tencent.com/document/product/382/39023?from_cn_redirect=1) before making a modification.
+            >-  Note: individual users cannot use this API to modify SMS body templates. For more information, please see [Identity Verification Overview](https://intl.cloud.tencent.com/document/product/378/3629?from_cn_redirect=1). If your account identity is individual, you can log in to the console to modify SMS body templates.
+            >- Modifications can be made only if the body template status is **pending review** or **rejected**. **Approved** body templates cannot be modified.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.PullSmsReplyStatus(TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusRequest)">
+            <summary>
+            This API is used to pull SMS reply status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.PullSmsReplyStatusSync(TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusRequest)">
+            <summary>
+            This API is used to pull SMS reply status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.PullSmsReplyStatusByPhoneNumber(TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest)">
+            <summary>
+            This API is used to pull SMS reply status for one single number.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.PullSmsReplyStatusByPhoneNumberSync(TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest)">
+            <summary>
+            This API is used to pull SMS reply status for one single number.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.PullSmsSendStatus(TencentCloud.Sms.V20190711.Models.PullSmsSendStatusRequest)">
+            <summary>
+            This API is used to pull SMS delivery status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.PullSmsSendStatusSync(TencentCloud.Sms.V20190711.Models.PullSmsSendStatusRequest)">
+            <summary>
+            This API is used to pull SMS delivery status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.PullSmsSendStatusByPhoneNumber(TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest)">
+            <summary>
+            This API is used to pull SMS delivery status for one single number.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.PullSmsSendStatusByPhoneNumberSync(TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest)">
+            <summary>
+            This API is used to pull SMS delivery status for one single number.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.SendSms(TencentCloud.Sms.V20190711.Models.SendSmsRequest)">
+            <summary>
+            This API is used to send SMS verification codes, notification, or marketing messages to users.
+            
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.SendSmsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.SendSmsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.SendSmsSync(TencentCloud.Sms.V20190711.Models.SendSmsRequest)">
+            <summary>
+            This API is used to send SMS verification codes, notification, or marketing messages to users.
+            
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.SendSmsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.SendSmsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.SendStatusStatistics(TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest)">
+            <summary>
+            This API is used to collect statistics on SMS sent by users.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.SendStatusStatisticsSync(TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest)">
+            <summary>
+            This API is used to collect statistics on SMS sent by users.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.SmsPackagesStatistics(TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsRequest)">
+            <summary>
+            This API is used to collect statistics on user's packages.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.SmsClient.SmsPackagesStatisticsSync(TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsRequest)">
+            <summary>
+            This API is used to collect statistics on user's packages.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSignStatus.SignId">
+            <summary>
+            Signature ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSignStatus.SignApplyId">
+            <summary>
+            Signature application ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.AddSignStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.SignName">
+            <summary>
+            Signature name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.SignType">
+            <summary>
+            Signature type. Each of these types is followed by their `DocumentType` (identity document type) option:
+            0: company (0, 1, 2, 3).
+            1: app (0, 1, 2, 3, 4).
+            2: website (0, 1, 2, 3, 5).
+            3: WeChat Official Account or WeChat Mini Program (0, 1, 2, 3, 6).
+            4: trademark (7).
+            5: governmental/public institution or others (2, 3).
+            Note: the identity document type must be selected according to the correspondence; otherwise, the review will fail.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.DocumentType">
+            <summary>
+            Identity document type:
+            0: 3-in-1 license.
+            1: business license.
+            2: organization code certificate.
+            3: certificate of unified social credit code.
+            4: screenshot of application backend management (for personal app).
+            5: screenshot of website ICP filing backend (for personal website).
+            6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
+            7: trademark registration certificate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.UsedMethod">
+            <summary>
+            Signature use:
+            0: for self-use.
+            1: for others.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.ProofImage">
+            <summary>
+            You should Base64-encode the image of the identity document corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.CommissionImage">
+            <summary>
+            Authorization letter, which should be submitted if `UsedMethod` is for others.
+            You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+            Note: this field will take effect only when `UsedMethod` is 1 (for others).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.Remark">
+            <summary>
+            Signature application remarks.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.AddSmsSignRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignResponse.AddSignStatus">
+            <summary>
+            Signature addition response
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsSignResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.AddSmsSignResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest.TemplateName">
+            <summary>
+            Template name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest.TemplateContent">
+            <summary>
+            Template content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest.SmsType">
+            <summary>
+            SMS type. 0: ordinary SMS, 1: marketing SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest.Remark">
+            <summary>
+            Template remarks, such as reason for application and use case.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.AddSmsTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsTemplateResponse.AddTemplateStatus">
+            <summary>
+            SMS template addition response packet body
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddSmsTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.AddSmsTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.AddTemplateStatus.TemplateId">
+            <summary>
+            Template parameter
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.AddTemplateStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.CallbackCount">
+            <summary>
+            SMS receipts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.RequestSuccessCount">
+            <summary>
+            Successfully submitted SMS messages.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.CallbackFailCount">
+            <summary>
+            Failed SMS receipts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.CallbackSuccessCount">
+            <summary>
+            Successful SMS receipts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.InternalErrorCount">
+            <summary>
+            Internal carrier errors.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.InvalidNumberCount">
+            <summary>
+            Invalid or empty mobile numbers.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.ShutdownErrorCount">
+            <summary>
+            Errors such as out-of-service or power-off.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.BlackListCount">
+            <summary>
+            Blacklisted mobile numbers.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.FrequencyLimitCount">
+            <summary>
+            Carrier frequency limit hits.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.CallbackStatusStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest.StartDateTime">
+            <summary>
+            Start time of pull in the format of `yyyymmddhh` accurate to the hour.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest.EndDataTime">
+            <summary>
+            End time of pull in the format of `yyyymmddhh` accurate to the hour.
+            Note: `EndDataTime` must be later than `StartDateTime`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest.SmsSdkAppid">
+            <summary>
+            SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest.Limit">
+            <summary>
+            Upper limit.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsResponse.CallbackStatusStatistics">
+            <summary>
+            Receipt statistics response packet body.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.CallbackStatusStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteSignStatus.DeleteStatus">
+            <summary>
+            Deletion status information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteSignStatus.DeleteTime">
+            <summary>
+            Deletion time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DeleteSignStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteSmsSignRequest.SignId">
+            <summary>
+            ID of signature to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DeleteSmsSignRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteSmsSignResponse.DeleteSignStatus">
+            <summary>
+            Signature deletion response.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteSmsSignResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DeleteSmsSignResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateRequest.TemplateId">
+            <summary>
+            ID of template to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateResponse.DeleteTemplateStatus">
+            <summary>
+            Template deletion response.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DeleteSmsTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteTemplateStatus.DeleteStatus">
+            <summary>
+            Deletion status information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DeleteTemplateStatus.DeleteTime">
+            <summary>
+            Deletion time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DeleteTemplateStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSignListStatus.SignId">
+            <summary>
+            Signature ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSignListStatus.International">
+            <summary>
+            Whether it is Global SMS. Valid values:
+            0: Mainland China SMS.
+            1: Global SMS
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSignListStatus.StatusCode">
+            <summary>
+            Signature application status. Valid values:
+            0: approved.
+            -1: rejected or failed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSignListStatus.ReviewReply">
+            <summary>
+            Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSignListStatus.SignName">
+            <summary>
+            Signature name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSignListStatus.CreateTime">
+            <summary>
+            Application submission time in the format of UNIX timestamp in seconds.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DescribeSignListStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListRequest.SignIdSet">
+            <summary>
+            Signature ID array.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListResponse.DescribeSignListStatusSet">
+            <summary>
+            Response for getting signature information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DescribeSmsSignListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListRequest.TemplateIdSet">
+            <summary>
+            Template ID array.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListResponse.DescribeTemplateStatusSet">
+            <summary>
+            Response for getting SMS signature information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DescribeSmsTemplateListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeTemplateListStatus.TemplateId">
+            <summary>
+            Template ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeTemplateListStatus.International">
+            <summary>
+            Whether it is Global SMS. Valid values:
+            0: Mainland China SMS.
+            1: Global SMS
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeTemplateListStatus.StatusCode">
+            <summary>
+            Signature application status. Valid values:
+            0: approved.
+            -1: rejected or failed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeTemplateListStatus.ReviewReply">
+            <summary>
+            Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeTemplateListStatus.TemplateName">
+            <summary>
+            Template name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.DescribeTemplateListStatus.CreateTime">
+            <summary>
+            Application submission time in the format of UNIX timestamp in seconds.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.DescribeTemplateListStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySignStatus.SignId">
+            <summary>
+            Signature ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySignStatus.SignApplyId">
+            <summary>
+            Signature modification application ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.ModifySignStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.SignId">
+            <summary>
+            ID of signature to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.SignName">
+            <summary>
+            Signature name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.SignType">
+            <summary>
+            Signature type. Each of these types is followed by their `DocumentType` (identity document type) option:
+            0: company (0, 1, 2, 3).
+            1: app (0, 1, 2, 3, 4).
+            2: website (0, 1, 2, 3, 5).
+            3: WeChat Official Account or WeChat Mini Program (0, 1, 2, 3, 6).
+            4: trademark (7).
+            5: governmental/public institution or others (2, 3).
+            Note: the identity document type must be selected according to the correspondence; otherwise, the review will fail.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.DocumentType">
+            <summary>
+            Identity document type:
+            0: 3-in-1 license.
+            1: business license.
+            2: organization code certificate.
+            3: certificate of unified social credit code.
+            4: screenshot of application backend management (for personal app).
+            5: screenshot of website ICP filing backend (for personal website).
+            6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
+            7: trademark registration certificate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.UsedMethod">
+            <summary>
+            Signature use:
+            0: for self-use.
+            1: for others.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.ProofImage">
+            <summary>
+            You should Base64-encode the image of the identity document corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.CommissionImage">
+            <summary>
+            Authorization letter, which should be submitted if `UsedMethod` is for others.
+            You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+            Note: this field will take effect only when `UsedMethod` is 1 (for others).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.Remark">
+            <summary>
+            Signature application remarks.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.ModifySmsSignRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignResponse.ModifySignStatus">
+            <summary>
+            Signature modification response
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsSignResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.ModifySmsSignResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest.TemplateId">
+            <summary>
+            ID of template to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest.TemplateName">
+            <summary>
+            New template name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest.TemplateContent">
+            <summary>
+            New template content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest.SmsType">
+            <summary>
+            SMS type. 0: ordinary SMS, 1: marketing SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest.Remark">
+            <summary>
+            Template remarks, such as reason for application and use case.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateResponse.ModifyTemplateStatus">
+            <summary>
+            Template parameter modification response
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.ModifySmsTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.ModifyTemplateStatus.TemplateId">
+            <summary>
+            Template parameter
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.ModifyTemplateStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatus.ExtendCode">
+            <summary>
+            SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatus.NationCode">
+            <summary>
+            Country (or region) code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatus.PhoneNumber">
+            <summary>
+            Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatus.Sign">
+            <summary>
+            SMS signature.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatus.ReplyContent">
+            <summary>
+            User reply.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatus.ReplyTime">
+            <summary>
+            Reply time (e.g., 2019-10-08 17:18:37).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatus.ReplyUnixTime">
+            <summary>
+            Reply time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest.SendDateTime">
+            <summary>
+            Pull start time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest.PhoneNumber">
+            <summary>
+            Target mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest.SmsSdkAppid">
+            <summary>
+            SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest.EndDateTime">
+            <summary>
+            Pull end time in UNIX timestamp accurate to seconds.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberResponse.PullSmsReplyStatusSet">
+            <summary>
+            Reply status response set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusByPhoneNumberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusRequest.SmsSdkAppid">
+            <summary>
+            SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusResponse.PullSmsReplyStatusSet">
+            <summary>
+            Reply status response set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsReplyStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.UserReceiveTime">
+            <summary>
+            Actual time of SMS receipt by user.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.UserReceiveUnixTime">
+            <summary>
+            Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.NationCode">
+            <summary>
+            Country (or region) code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.PurePhoneNumber">
+            <summary>
+            Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.PhoneNumber">
+            <summary>
+            Mobile number in a common format such as 13711112222.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.SerialNo">
+            <summary>
+            ID of the current delivery.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.ReportStatus">
+            <summary>
+            Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.Description">
+            <summary>
+            Description of SMS receipt by user.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsSendStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest.SendDateTime">
+            <summary>
+            Pull start time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest.PhoneNumber">
+            <summary>
+            Target mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest.SmsSdkAppid">
+            <summary>
+            SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest.EndDateTime">
+            <summary>
+            Pull end time in UNIX timestamp accurate to seconds.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberResponse.PullSmsSendStatusSet">
+            <summary>
+            Delivery status response set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusByPhoneNumberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusRequest.SmsSdkAppid">
+            <summary>
+            SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusResponse.PullSmsSendStatusSet">
+            <summary>
+            Delivery status response set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.PullSmsSendStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsRequest.PhoneNumberSet">
+            <summary>
+            Target mobile number in the e.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Mainland China mobile numbers or all global mobile numbers).
+            Example: +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsRequest.TemplateID">
+            <summary>
+            Template ID. You must enter the ID of an approved template, which can be viewed in the [SMS Console](https://console.cloud.tencent.com/sms/smslist).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsRequest.SmsSdkAppid">
+            <summary>
+            SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsRequest.Sign">
+            <summary>
+            The content of SMS signature should be encoded in UTF-8. You must enter an approved signature, which can be viewed in the [SMS Console](https://console.cloud.tencent.com/sms/smslist). Note: this parameter is required for Mainland China SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsRequest.TemplateParamSet">
+            <summary>
+            Template parameter. If there is no template parameter, leave this parameter blank.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsRequest.ExtendCode">
+            <summary>
+            SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsRequest.SessionContext">
+            <summary>
+            User session content, which can carry context information such as user-side ID and will be returned as-is by the server.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsRequest.SenderId">
+            <summary>
+            `senderid` for Global SMS, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1) for assistance. This parameter should be empty for Mainland China SMS.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SendSmsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsResponse.SendStatusSet">
+            <summary>
+            SMS delivery status.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendSmsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SendSmsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatus.SerialNo">
+            <summary>
+            Delivery serial number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatus.PhoneNumber">
+            <summary>
+            Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatus.Fee">
+            <summary>
+            Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatus.SessionContext">
+            <summary>
+            User session content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatus.Code">
+            <summary>
+            SMS request error code. For specific meanings, please see Error Codes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatus.Message">
+            <summary>
+            SMS request error message.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatus.IsoCode">
+            <summary>
+            Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SendStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatistics.FeeCount">
+            <summary>
+            Billable SMS message quantity; for example, in 100 successfully submitted SMS messages, if 20 are long messages (over 80 characters) and split into two messages each, then the billable quantity will be 80 * 1 + 20 * 2 = 120.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatistics.RequestCount">
+            <summary>
+            Submitted SMS messages.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatistics.RequestSuccessCount">
+            <summary>
+            Successfully submitted SMS messages.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SendStatusStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest.StartDateTime">
+            <summary>
+            Start time of pull in the format of `yyyymmddhh` accurate to the hour.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest.EndDataTime">
+            <summary>
+            End time of pull in the format of `yyyymmddhh` accurate to the hour
+            Note: `EndDataTime` must be later than `StartDateTime`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest.SmsSdkAppid">
+            <summary>
+            SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest.Limit">
+            <summary>
+            Upper limit.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsResponse.SendStatusStatistics">
+            <summary>
+            Delivery statistics response packet.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SendStatusStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.PackageCreateTime">
+            <summary>
+            Package creation time in standard time format, such as 2019-10-08 17:18:37.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.PackageCreateUnixTime">
+            <summary>
+            Package creation time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.PackageEffectiveTime">
+            <summary>
+            Package effective time in standard time format, such as 2019-10-08 17:18:37.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.PackageEffectiveUnixTime">
+            <summary>
+            Package effective time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.PackageExpiredTime">
+            <summary>
+            Package expiration time in standard time format, such as 2019-10-08 17:18:37.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.PackageExpiredUnixTime">
+            <summary>
+            Package expiration time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.AmountOfPackage">
+            <summary>
+            Number of SMS messages in package.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.TypeOfPackage">
+            <summary>
+            0: gifted package. 1: purchased package.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.PackageId">
+            <summary>
+            Package ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.CurrentUsage">
+            <summary>
+            Current usage.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SmsPackagesStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsRequest.SmsSdkAppid">
+            <summary>
+            SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsRequest.Limit">
+            <summary>
+            Upper limit (number of packages to be pulled).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsResponse.SmsPackagesStatisticsSet">
+            <summary>
+            Delivery statistics response packet body.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20190711.Models.SmsPackagesStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.SmsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.SmsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.AddSmsSign(TencentCloud.Sms.V20210111.Models.AddSmsSignRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.AddSmsSignSync(TencentCloud.Sms.V20210111.Models.AddSmsSignRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.AddSmsTemplate(TencentCloud.Sms.V20210111.Models.AddSmsTemplateRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.AddSmsTemplateSync(TencentCloud.Sms.V20210111.Models.AddSmsTemplateRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.CallbackStatusStatistics(TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.CallbackStatusStatisticsSync(TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.DeleteSmsSign(TencentCloud.Sms.V20210111.Models.DeleteSmsSignRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.DeleteSmsSignSync(TencentCloud.Sms.V20210111.Models.DeleteSmsSignRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.DeleteSmsTemplate(TencentCloud.Sms.V20210111.Models.DeleteSmsTemplateRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.DeleteSmsTemplateSync(TencentCloud.Sms.V20210111.Models.DeleteSmsTemplateRequest)" -->
+        <member name="M:TencentCloud.Sms.V20210111.SmsClient.DescribePhoneNumberInfo(TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoRequest)">
+            <summary>
+            This API is used to query the information of a phone number, including country/region code and standardized E.164 format number.
+            >- For example, if you query the number +86018845720123, you can get the country/region code 86 and the standardized E.164 number +8618845720123.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.SmsClient.DescribePhoneNumberInfoSync(TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoRequest)">
+            <summary>
+            This API is used to query the information of a phone number, including country/region code and standardized E.164 format number.
+            >- For example, if you query the number +86018845720123, you can get the country/region code 86 and the standardized E.164 number +8618845720123.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoResponse"/></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.DescribeSmsSignList(TencentCloud.Sms.V20210111.Models.DescribeSmsSignListRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.DescribeSmsSignListSync(TencentCloud.Sms.V20210111.Models.DescribeSmsSignListRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.DescribeSmsTemplateList(TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.DescribeSmsTemplateListSync(TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.ModifySmsSign(TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.ModifySmsSignSync(TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.ModifySmsTemplate(TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.ModifySmsTemplateSync(TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.PullSmsReplyStatus(TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.PullSmsReplyStatusSync(TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.PullSmsReplyStatusByPhoneNumber(TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.PullSmsReplyStatusByPhoneNumberSync(TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.PullSmsSendStatus(TencentCloud.Sms.V20210111.Models.PullSmsSendStatusRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.PullSmsSendStatusSync(TencentCloud.Sms.V20210111.Models.PullSmsSendStatusRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.PullSmsSendStatusByPhoneNumber(TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.PullSmsSendStatusByPhoneNumberSync(TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest)" -->
+        <member name="M:TencentCloud.Sms.V20210111.SmsClient.ReportConversion(TencentCloud.Sms.V20210111.Models.ReportConversionRequest)">
+            <summary>
+            This API is used to report the SMS conversion rate (SMS conversion rate = the number of returned verification codes / the number of verification codes sent) and report the serial numbers of received SMS messages to Tencent Cloud SMS.
+            >- Note: To call this API, you need to be added to the allowlist first. If you have any questions, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20210111.Models.ReportConversionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20210111.Models.ReportConversionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.SmsClient.ReportConversionSync(TencentCloud.Sms.V20210111.Models.ReportConversionRequest)">
+            <summary>
+            This API is used to report the SMS conversion rate (SMS conversion rate = the number of returned verification codes / the number of verification codes sent) and report the serial numbers of received SMS messages to Tencent Cloud SMS.
+            >- Note: To call this API, you need to be added to the allowlist first. If you have any questions, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Sms.V20210111.Models.ReportConversionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Sms.V20210111.Models.ReportConversionResponse"/></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.SendSms(TencentCloud.Sms.V20210111.Models.SendSmsRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.SendSmsSync(TencentCloud.Sms.V20210111.Models.SendSmsRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.SendStatusStatistics(TencentCloud.Sms.V20210111.Models.SendStatusStatisticsRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Sms.V20210111.SmsClient.SendStatusStatisticsSync(TencentCloud.Sms.V20210111.Models.SendStatusStatisticsRequest)" -->
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSignStatus.SignId">
+            <summary>
+            Signature ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.AddSignStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.SignName">
+            <summary>
+            Signature name.
+            Note: you cannot apply for an approved or pending signature again.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.SignType">
+            <summary>
+            Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
+            0: company. Valid values of `DocumentType` include 0 and 1.
+            1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
+            2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
+            3: WeChat Official Account. Valid values of `DocumentType` include 0, 1, 2, 3, and 8.
+            4: trademark. Valid values of `DocumentType` include 7.
+            5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
+            6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
+            Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.DocumentType">
+            <summary>
+            Identity certificate type:
+            0: three-in-one licence.
+            1: business license.
+            2: organization code certificate.
+            3: social credit code certificate.
+            4: screenshot of application backend management (for personal app).
+            5: screenshot of website ICP filing backend (for personal website).
+            6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
+            7: trademark registration certificate.
+            8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.SignPurpose">
+            <summary>
+            Signature purpose:
+            0: for personal use.
+            1: for others.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.ProofImage">
+            <summary>
+            You should Base64-encode the image of the identity certificate corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.CommissionImage">
+            <summary>
+            Power of attorney, which should be submitted if `SignPurpose` is for use by others.
+            You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+            Note: this field will take effect only when `SignPurpose` is 1 (for user by others).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.Remark">
+            <summary>
+            Signature application remarks.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.AddSmsSignRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignResponse.AddSignStatus">
+            <summary>
+            Signature addition response
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsSignResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.AddSmsSignResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsTemplateRequest.TemplateName">
+            <summary>
+            Template name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsTemplateRequest.TemplateContent">
+            <summary>
+            Template content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsTemplateRequest.SmsType">
+            <summary>
+            SMS type. 0: regular SMS, 1: marketing SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsTemplateRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsTemplateRequest.Remark">
+            <summary>
+            Template remarks, such as reason for application and use case.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.AddSmsTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsTemplateResponse.AddTemplateStatus">
+            <summary>
+            SMS template addition response body
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddSmsTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.AddSmsTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.AddTemplateStatus.TemplateId">
+            <summary>
+            Template ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.AddTemplateStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.CallbackCount">
+            <summary>
+            Messages with receipt.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.RequestSuccessCount">
+            <summary>
+            Successfully submitted SMS messages.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.CallbackFailCount">
+            <summary>
+            Failed receipts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.CallbackSuccessCount">
+            <summary>
+            Successful receipts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.InternalErrorCount">
+            <summary>
+            Carrier's internal error.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.InvalidNumberCount">
+            <summary>
+            Invalid numbers.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.ShutdownErrorCount">
+            <summary>
+            Errors such as out-of-service or power-off.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.BlackListCount">
+            <summary>
+            Blocked mobile numbers.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.FrequencyLimitCount">
+            <summary>
+            Carrier rate limit hits.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.CallbackStatusStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsRequest.BeginTime">
+            <summary>
+            Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsRequest.EndTime">
+            <summary>
+            End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
+            Note: `EndTime` must be after `BeginTime`, and the difference should not exceed 32 days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsRequest.SmsSdkAppId">
+            <summary>
+            The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsRequest.Limit">
+            <summary>
+            Upper limit.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsResponse.CallbackStatusStatistics">
+            <summary>
+            Receipt statistics response body.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.CallbackStatusStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteSignStatus.DeleteStatus">
+            <summary>
+            Deletion status information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteSignStatus.DeleteTime">
+            <summary>
+            Deleted time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DeleteSignStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteSmsSignRequest.SignId">
+            <summary>
+            ID of the signature to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DeleteSmsSignRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteSmsSignResponse.DeleteSignStatus">
+            <summary>
+            Signature deletion response
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteSmsSignResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DeleteSmsSignResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteSmsTemplateRequest.TemplateId">
+            <summary>
+            ID of the template to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DeleteSmsTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteSmsTemplateResponse.DeleteTemplateStatus">
+            <summary>
+            Template deletion response
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteSmsTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DeleteSmsTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteTemplateStatus.DeleteStatus">
+            <summary>
+            Deletion status information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DeleteTemplateStatus.DeleteTime">
+            <summary>
+            Deleted time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DeleteTemplateStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoRequest.PhoneNumberSet">
+            <summary>
+            A parameter used to query mobile numbers in E.164 format (+[country/region code][subscriber number]). Up to 200 mobile numbers can be queried at a time.
+            Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoResponse.PhoneNumberInfoSet">
+            <summary>
+            A parameter used to obtain mobile number information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DescribePhoneNumberInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSignListStatus.SignId">
+            <summary>
+            Signature ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSignListStatus.International">
+            <summary>
+            Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSignListStatus.StatusCode">
+            <summary>
+            Signature application status. Valid values: 0: approved; 1: under review.
+            -1: application rejected or failed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSignListStatus.ReviewReply">
+            <summary>
+            Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSignListStatus.SignName">
+            <summary>
+            Signature name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSignListStatus.CreateTime">
+            <summary>
+            Application submission time in the format of UNIX timestamp in seconds.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DescribeSignListStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsSignListRequest.SignIdSet">
+            <summary>
+            Signature ID array.
+            Note: the maximum length of the array is 100 by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsSignListRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DescribeSmsSignListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsSignListResponse.DescribeSignListStatusSet">
+            <summary>
+            Response for getting signature information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsSignListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DescribeSmsSignListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListRequest.TemplateIdSet">
+            <summary>
+            Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+            <dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListRequest.Limit">
+            <summary>
+            Upper limit. Maximum value: 100.
+            Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListRequest.Offset">
+            <summary>
+            Offset.
+            Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListResponse.DescribeTemplateStatusSet">
+            <summary>
+            Response for getting SMS template information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DescribeSmsTemplateListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeTemplateListStatus.TemplateId">
+            <summary>
+            Template ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeTemplateListStatus.International">
+            <summary>
+            Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeTemplateListStatus.StatusCode">
+            <summary>
+            Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeTemplateListStatus.ReviewReply">
+            <summary>
+            Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeTemplateListStatus.TemplateName">
+            <summary>
+            Template name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeTemplateListStatus.CreateTime">
+            <summary>
+            Application submission time in the format of UNIX timestamp in seconds.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.DescribeTemplateListStatus.TemplateContent">
+            <summary>
+            Template content.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.DescribeTemplateListStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySignStatus.SignId">
+            <summary>
+            Signature ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ModifySignStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.SignId">
+            <summary>
+            ID of the signature to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.SignName">
+            <summary>
+            Signature name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.SignType">
+            <summary>
+            Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
+            0: company. Valid values of `DocumentType` include 0 and 1.
+            1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
+            2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
+            3: WeChat Official Account. Valid values of `DocumentType` include 0, 1, 2, 3, and 8.
+            4: trademark. Valid values of `DocumentType` include 7.
+            5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
+            6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
+            Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.DocumentType">
+            <summary>
+            Identity certificate type:
+            0: three-in-one.
+            1: business license.
+            2: organization code certificate.
+            3: social credit code certificate.
+            4: screenshot of application backend management (for personal app).
+            5: screenshot of website ICP filing backend (for personal website).
+            6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
+            7: trademark registration certificate.
+            8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.International">
+            <summary>
+            A parameter used to specify whether it is Global SMS:
+            `0`: Chinese mainland SMS.
+            `1`: Global SMS.
+            Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.SignPurpose">
+            <summary>
+            Signature purpose:
+            0: for personal use.
+            1: for others.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.ProofImage">
+            <summary>
+            You should Base64-encode the image of the identity certificate corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.CommissionImage">
+            <summary>
+            Power of attorney, which should be submitted if `SignPurpose` is for use by others.
+            You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+            Note: this field will take effect only when `SignPurpose` is 1 (for user by others).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.Remark">
+            <summary>
+            Signature application remarks.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ModifySmsSignRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignResponse.ModifySignStatus">
+            <summary>
+            Signature modification response
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsSignResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ModifySmsSignResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest.TemplateId">
+            <summary>
+            ID of the template to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest.TemplateName">
+            <summary>
+            New template name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest.TemplateContent">
+            <summary>
+            New template content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest.SmsType">
+            <summary>
+            SMS type. 0: regular SMS, 1: marketing SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest.International">
+            <summary>
+            Whether it is Global SMS:
+            0: Mainland China SMS.
+            1: Global SMS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest.Remark">
+            <summary>
+            Template remarks, such as reason for application and use case.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateResponse.ModifyTemplateStatus">
+            <summary>
+            Template parameter modification response
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ModifySmsTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ModifyTemplateStatus.TemplateId">
+            <summary>
+            Template ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ModifyTemplateStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PhoneNumberInfo.Code">
+            <summary>
+            Error code for mobile number information query. `Ok` will be returned if the query is successful.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PhoneNumberInfo.Message">
+            <summary>
+            Description of the error code for mobile number information query.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PhoneNumberInfo.NationCode">
+            <summary>
+            Country (or region) code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PhoneNumberInfo.SubscriberNumber">
+            <summary>
+            Subscriber number in normal format such as 13711112222, without any prefix (country or region code).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PhoneNumberInfo.PhoneNumber">
+            <summary>
+            The standardized mobile number in E.164 format after parsing, which is consistent with the parsed number for SMS message delivery. If the parsing fails, the original number will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PhoneNumberInfo.IsoCode">
+            <summary>
+            Country or region code such as CN and US. If the country or region code cannot be identified, `DEF` will be returned by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PhoneNumberInfo.IsoName">
+            <summary>
+            Country code or region name such as China. For more information, see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PhoneNumberInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatus.ExtendCode">
+            <summary>
+            SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatus.CountryCode">
+            <summary>
+            Country (or region) code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatus.PhoneNumber">
+            <summary>
+            Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatus.SignName">
+            <summary>
+            SMS signature name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatus.ReplyContent">
+            <summary>
+            User reply.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatus.ReplyTime">
+            <summary>
+            Reply time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatus.SubscriberNumber">
+            <summary>
+            User's mobile number in a common format such as 13711112222.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest.BeginTime">
+            <summary>
+            Pull start time in seconds in the format of UNIX timestamp.
+            Note: the data for the last 7 days can be pulled at most.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest.PhoneNumber">
+            <summary>
+            Target mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest.SmsSdkAppId">
+            <summary>
+            The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest.EndTime">
+            <summary>
+            Pull end time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberResponse.PullSmsReplyStatusSet">
+            <summary>
+            Reply status response set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusByPhoneNumberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusRequest.SmsSdkAppId">
+            <summary>
+            The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusResponse.PullSmsReplyStatusSet">
+            <summary>
+            Reply status response set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsReplyStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.UserReceiveTime">
+            <summary>
+            Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.CountryCode">
+            <summary>
+            Country (or region) code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.SubscriberNumber">
+            <summary>
+            User's mobile number in a common format such as 13711112222.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.PhoneNumber">
+            <summary>
+            Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.SerialNo">
+            <summary>
+            ID of the current delivery.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.ReportStatus">
+            <summary>
+            Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.Description">
+            <summary>
+            Description of SMS receipt by user.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.SessionContext">
+            <summary>
+            User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsSendStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest.BeginTime">
+            <summary>
+            Pull start time in seconds in the format of UNIX timestamp.
+            Note: the data for the last 7 days can be pulled at most.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest.PhoneNumber">
+            <summary>
+            Target mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest.SmsSdkAppId">
+            <summary>
+            The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest.EndTime">
+            <summary>
+            Pull end time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberResponse.PullSmsSendStatusSet">
+            <summary>
+            Delivery status response set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusByPhoneNumberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusRequest.SmsSdkAppId">
+            <summary>
+            The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusResponse.PullSmsSendStatusSet">
+            <summary>
+            Delivery status response set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.PullSmsSendStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ReportConversionRequest.SmsSdkAppId">
+            <summary>
+            The SMS SdkAppId generated after an application is created in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as “1400006666”.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ReportConversionRequest.SerialNo">
+            <summary>
+            The serial number returned for a message sent.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ReportConversionRequest.ConversionTime">
+            <summary>
+            The recipient’s reply time in seconds in the format of UNIX timestamp.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ReportConversionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ReportConversionResponse.ReportConversionStatus">
+            <summary>
+            Response packet for conversion rate reporting.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ReportConversionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ReportConversionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ReportConversionStatus.Code">
+            <summary>
+            Error code. `ok` is returned if the conversion rate is successfully reported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.ReportConversionStatus.Message">
+            <summary>
+            Error code description.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.ReportConversionStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsRequest.PhoneNumberSet">
+            <summary>
+            Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Chinese mainland mobile numbers or all global mobile numbers).
+            For example, +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsRequest.SmsSdkAppId">
+            <summary>
+            The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsRequest.TemplateId">
+            <summary>
+            Template ID, which can be viewed on the **Body Templates** page in [Global SMS](https://console.cloud.tencent.com/smsv2/isms-template). You must enter the ID of an approved template.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsRequest.SignName">
+            <summary>
+            SMS signature information which is encoded in UTF-8. You must enter an approved signature (such as Tencent Cloud). The signing information can be viewed on the **Signatures** page in [Global SMS](https://console.cloud.tencent.com/smsv2/isms-sign).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsRequest.TemplateParamSet">
+            <summary>
+            Template parameter. If there is no template parameter, leave this field empty.
+            <dx-alert infotype="notice" title="Note">The number of template parameters should be consistent with that of the template variables of `TemplateId`.</dx-alert>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsRequest.ExtendCode">
+            <summary>
+            SMS code number extension, which is not activated by default. If you need to activate it, you can contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsRequest.SessionContext">
+            <summary>
+            User session content, which can carry context information such as user-side ID and will be returned as-is by the server.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsRequest.SenderId">
+            <summary>
+            For Global SMS, if you have applied for a separate `SenderId`, this parameter is required. By default, the public `SenderId` is used, in which case you don't need to enter this parameter.
+            Note: If your monthly usage reaches the specified threshold, you can apply for an independent `SenderId`. For more information, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.SendSmsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsResponse.SendStatusSet">
+            <summary>
+            SMS delivery status.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendSmsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.SendSmsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatus.SerialNo">
+            <summary>
+            Delivery serial number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatus.PhoneNumber">
+            <summary>
+            Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatus.Fee">
+            <summary>
+            Number of billable SMS messages. For billing rules, see Billing Policy.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatus.SessionContext">
+            <summary>
+            User session content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatus.Code">
+            <summary>
+            SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatus.Message">
+            <summary>
+            SMS request error message.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatus.IsoCode">
+            <summary>
+            Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.SendStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatistics.FeeCount">
+            <summary>
+            Billable SMS message quantity; for example, in 100 successfully submitted SMS messages, if 20 ones are long messages (over 80 characters) and split into two messages each, then the billable quantity will be 80 * 1 + 20 * 2 = 120.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatistics.RequestCount">
+            <summary>
+            Submitted SMS messages.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatistics.RequestSuccessCount">
+            <summary>
+            Successfully submitted SMS messages.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.SendStatusStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsRequest.BeginTime">
+            <summary>
+            Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsRequest.EndTime">
+            <summary>
+            End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
+            Note: `EndTime` must be after `BeginTime`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsRequest.SmsSdkAppId">
+            <summary>
+            The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsRequest.Limit">
+            <summary>
+            Upper limit.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsRequest.Offset">
+            <summary>
+            Offset.
+            Note: this parameter is currently fixed at 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsResponse.SendStatusStatistics">
+            <summary>
+            Delivery statistics response body.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Sms.V20210111.Models.SendStatusStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

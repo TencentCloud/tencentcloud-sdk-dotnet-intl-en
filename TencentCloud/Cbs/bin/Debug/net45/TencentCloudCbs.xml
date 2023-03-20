@@ -1,0 +1,2866 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudCbs</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ApplyDiskBackup(TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupRequest)">
+            <summary>
+            This API is used to roll back a backup point to the original cloud disk.
+            
+            * Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
+            * Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
+            * For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ApplyDiskBackupSync(TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupRequest)">
+            <summary>
+            This API is used to roll back a backup point to the original cloud disk.
+            
+            * Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
+            * Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
+            * For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ApplySnapshot(TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest)">
+            <summary>
+            This API (ApplySnapshot) is used to roll back a snapshot to the original cloud disk.
+            
+            * The snapshot can only be rolled back to the original cloud disk. For data disk snapshots, if you need to copy the snapshot data to other cloud disks, use the API [CreateDisks](https://intl.cloud.tencent.com/document/product/362/16312?from_cn_redirect=1) to create an elastic cloud disk and then copy the snapshot data to the created cloud disk. 
+            * The snapshot for rollback must be in NORMAL status. The snapshot status can be queried in the SnapshotState field in the output parameters through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+            * For elastic cloud disks, the cloud disk must be in UNMOUNTED status. The cloud disk status can be queried in the Attached field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). For non-elastic cloud disks purchased together with instances, the instance must be in SHUTDOWN status. The instance status can be queried through the API [DescribeInstancesStatus](https://intl.cloud.tencent.com/document/product/213/15738?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ApplySnapshotResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ApplySnapshotSync(TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest)">
+            <summary>
+            This API (ApplySnapshot) is used to roll back a snapshot to the original cloud disk.
+            
+            * The snapshot can only be rolled back to the original cloud disk. For data disk snapshots, if you need to copy the snapshot data to other cloud disks, use the API [CreateDisks](https://intl.cloud.tencent.com/document/product/362/16312?from_cn_redirect=1) to create an elastic cloud disk and then copy the snapshot data to the created cloud disk. 
+            * The snapshot for rollback must be in NORMAL status. The snapshot status can be queried in the SnapshotState field in the output parameters through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+            * For elastic cloud disks, the cloud disk must be in UNMOUNTED status. The cloud disk status can be queried in the Attached field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). For non-elastic cloud disks purchased together with instances, the instance must be in SHUTDOWN status. The instance status can be queried through the API [DescribeInstancesStatus](https://intl.cloud.tencent.com/document/product/213/15738?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ApplySnapshotResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.AttachDisks(TencentCloud.Cbs.V20170312.Models.AttachDisksRequest)">
+            <summary>
+            This API is used to mount one or more cloud disks.
+             
+            * Batch operation is supported. You can mount multiple cloud disks to one CVM in a single request. If any of these cloud disks cannot be mounted, the operation fails and a specific error code returns.
+            * This is an async API. A successful request indicates that the mounting is initiated. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. If the status changes from `ATTACHING` to `ATTACHED`, the mounting is successful.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.AttachDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.AttachDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.AttachDisksSync(TencentCloud.Cbs.V20170312.Models.AttachDisksRequest)">
+            <summary>
+            This API is used to mount one or more cloud disks.
+             
+            * Batch operation is supported. You can mount multiple cloud disks to one CVM in a single request. If any of these cloud disks cannot be mounted, the operation fails and a specific error code returns.
+            * This is an async API. A successful request indicates that the mounting is initiated. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. If the status changes from `ATTACHING` to `ATTACHED`, the mounting is successful.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.AttachDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.AttachDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.BindAutoSnapshotPolicy(TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyRequest)">
+            <summary>
+            This API (BindAutoSnapshotPolicy) is used to bind the cloud disk to the specified scheduled snapshot policy.
+            
+            * For the scheduled snapshot policy limit of each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
+            * When a cloud disk that is bound to a scheduled snapshot policy is in the unused state (that is, an elastic cloud disk has not been mounted or the server of an inelastic disk is powered off) scheduled snapshots are not created.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.BindAutoSnapshotPolicySync(TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyRequest)">
+            <summary>
+            This API (BindAutoSnapshotPolicy) is used to bind the cloud disk to the specified scheduled snapshot policy.
+            
+            * For the scheduled snapshot policy limit of each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
+            * When a cloud disk that is bound to a scheduled snapshot policy is in the unused state (that is, an elastic cloud disk has not been mounted or the server of an inelastic disk is powered off) scheduled snapshots are not created.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CopySnapshotCrossRegions(TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsRequest)">
+            <summary>
+            This API is used to replicate a snapshot to another region.
+            
+            * This is an async API. A new snapshot ID is issued when the cross-region replication task is generated. It does not mean that the snapshot has been replicated successfully. You can all the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API in the destination region to check for this snapshot. If the snapshot status is `NORMAL`, the snapshot is replicated successfully.
+            * The snapshot cross-region replication service will be commercialized in the Q3 of 2022. We will notify users about the commercialization in advance. Please check your messages in the Message Center.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CopySnapshotCrossRegionsSync(TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsRequest)">
+            <summary>
+            This API is used to replicate a snapshot to another region.
+            
+            * This is an async API. A new snapshot ID is issued when the cross-region replication task is generated. It does not mean that the snapshot has been replicated successfully. You can all the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API in the destination region to check for this snapshot. If the snapshot status is `NORMAL`, the snapshot is replicated successfully.
+            * The snapshot cross-region replication service will be commercialized in the Q3 of 2022. We will notify users about the commercialization in advance. Please check your messages in the Message Center.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CreateAutoSnapshotPolicy(TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest)">
+            <summary>
+            This API (CreateAutoSnapshotPolicy) is used to create a scheduled snapshot policy.
+            
+            * For the limits on the number of scheduled snapshot policies that can be created in each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
+            * The quantity and capacity of the snapshots that can be created in each region are limited. For more information, see the **Snapshots** page on the Tencent Cloud Console. If the number of snapshots exceeds the quota, the creation of the scheduled snapshots will fail.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CreateAutoSnapshotPolicySync(TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest)">
+            <summary>
+            This API (CreateAutoSnapshotPolicy) is used to create a scheduled snapshot policy.
+            
+            * For the limits on the number of scheduled snapshot policies that can be created in each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
+            * The quantity and capacity of the snapshots that can be created in each region are limited. For more information, see the **Snapshots** page on the Tencent Cloud Console. If the number of snapshots exceeds the quota, the creation of the scheduled snapshots will fail.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CreateDiskBackup(TencentCloud.Cbs.V20170312.Models.CreateDiskBackupRequest)">
+            <summary>
+            This API is used to create a backup point for a cloud disk.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CreateDiskBackupSync(TencentCloud.Cbs.V20170312.Models.CreateDiskBackupRequest)">
+            <summary>
+            This API is used to create a backup point for a cloud disk.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CreateDisks(TencentCloud.Cbs.V20170312.Models.CreateDisksRequest)">
+            <summary>
+            This API is used to create cloud disks.
+            
+            * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
+            * This API is async. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its status is `UNATTACHED` or `ATTACHED`, the cloud disk has been created successfully.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CreateDisksSync(TencentCloud.Cbs.V20170312.Models.CreateDisksRequest)">
+            <summary>
+            This API is used to create cloud disks.
+            
+            * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
+            * This API is async. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its status is `UNATTACHED` or `ATTACHED`, the cloud disk has been created successfully.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CreateSnapshot(TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest)">
+            <summary>
+            This API is used to create a snapshot for the specified cloud disk.
+            
+            * You can only create snapshots for cloud disks with the snapshot capability. To check whether a cloud disk is snapshot-enabled, call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API and see the `SnapshotAbility` field in the response.
+            * For the maximum number of snapshots that can be created, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+            * Currently, you can convert backup points into general snapshots. After the conversion, snapshot usage fees may be charged, backup points will not be retained, and the occupied backup point quota will be released.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateSnapshotResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.CreateSnapshotSync(TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest)">
+            <summary>
+            This API is used to create a snapshot for the specified cloud disk.
+            
+            * You can only create snapshots for cloud disks with the snapshot capability. To check whether a cloud disk is snapshot-enabled, call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API and see the `SnapshotAbility` field in the response.
+            * For the maximum number of snapshots that can be created, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+            * Currently, you can convert backup points into general snapshots. After the conversion, snapshot usage fees may be charged, backup points will not be retained, and the occupied backup point quota will be released.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.CreateSnapshotResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DeleteAutoSnapshotPolicies(TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesRequest)">
+            <summary>
+            This API (DeleteAutoSnapshotPolicies) is used to delete scheduled snapshot policies.
+            
+            * Batch operations are supported. If one of the scheduled snapshot policies in a batch cannot be deleted, the operation is not performed and a specific error code is returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DeleteAutoSnapshotPoliciesSync(TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesRequest)">
+            <summary>
+            This API (DeleteAutoSnapshotPolicies) is used to delete scheduled snapshot policies.
+            
+            * Batch operations are supported. If one of the scheduled snapshot policies in a batch cannot be deleted, the operation is not performed and a specific error code is returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DeleteDiskBackups(TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsRequest)">
+            <summary>
+            This API is used to delete the backup points of the specified cloud disk in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DeleteDiskBackupsSync(TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsRequest)">
+            <summary>
+            This API is used to delete the backup points of the specified cloud disk in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DeleteSnapshots(TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsRequest)">
+            <summary>
+            This API is used to delete snapshots.
+            
+            * Only snapshots in the `NORMAL` state can be deleted. To query the state of a snapshot, you can call the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API and check the `SnapshotState` field in the response.
+            * Batch operations are supported. If there is any snapshot that cannot be deleted, the operation will not be performed and a specific error code will be returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DeleteSnapshotsSync(TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsRequest)">
+            <summary>
+            This API is used to delete snapshots.
+            
+            * Only snapshots in the `NORMAL` state can be deleted. To query the state of a snapshot, you can call the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API and check the `SnapshotState` field in the response.
+            * Batch operations are supported. If there is any snapshot that cannot be deleted, the operation will not be performed and a specific error code will be returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeAutoSnapshotPolicies(TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest)">
+            <summary>
+            This API (DescribeAutoSnapshotPolicies) is used to query scheduled snapshot policies.
+            
+            * You can query the detailed information of scheduled snapshot policies by ID, name, or status. Insert `AND` between different values. For details on filtering information, see `Filter`.
+            * If the parameter is empty, a certain number (specified by `Limit`; the default is 20) of the scheduled snapshot policy lists are returned to the current user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeAutoSnapshotPoliciesSync(TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest)">
+            <summary>
+            This API (DescribeAutoSnapshotPolicies) is used to query scheduled snapshot policies.
+            
+            * You can query the detailed information of scheduled snapshot policies by ID, name, or status. Insert `AND` between different values. For details on filtering information, see `Filter`.
+            * If the parameter is empty, a certain number (specified by `Limit`; the default is 20) of the scheduled snapshot policy lists are returned to the current user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDiskAssociatedAutoSnapshotPolicy(TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyRequest)">
+            <summary>
+            This API (DescribeDiskAssociatedAutoSnapshotPolicy) is used to query the scheduled snapshot policy bound to a cloud disk.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDiskAssociatedAutoSnapshotPolicySync(TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyRequest)">
+            <summary>
+            This API (DescribeDiskAssociatedAutoSnapshotPolicy) is used to query the scheduled snapshot policy bound to a cloud disk.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDiskBackups(TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest)">
+            <summary>
+            This API is used to query the details of backup points.
+            
+            You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
+            If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDiskBackupsSync(TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest)">
+            <summary>
+            This API is used to query the details of backup points.
+            
+            You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
+            If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDiskConfigQuota(TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest)">
+            <summary>
+            This API (DescribeDiskConfigQuota) is used to query the cloud disk quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDiskConfigQuotaSync(TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest)">
+            <summary>
+            This API (DescribeDiskConfigQuota) is used to query the cloud disk quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDiskOperationLogs(TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsRequest)">
+            <summary>
+            接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
+            
+            This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
+            
+            This API is used to query the operation logs of a cloud disk. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDiskOperationLogsSync(TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsRequest)">
+            <summary>
+            接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
+            
+            This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
+            
+            This API is used to query the operation logs of a cloud disk. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDisks(TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest)">
+            <summary>
+            This API (DescribeDisks) is used to query the list of cloud disks.
+            
+            * The details of the cloud disk can be queried based on the ID, type or status of the cloud disk. The relationship between different conditions is AND. For more information about filtering, please see the `Filter`.
+            * If the parameter is empty, a certain number (specified by `Limit`; the default is 20) of cloud disk lists are returned to the current user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeDisksSync(TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest)">
+            <summary>
+            This API (DescribeDisks) is used to query the list of cloud disks.
+            
+            * The details of the cloud disk can be queried based on the ID, type or status of the cloud disk. The relationship between different conditions is AND. For more information about filtering, please see the `Filter`.
+            * If the parameter is empty, a certain number (specified by `Limit`; the default is 20) of cloud disk lists are returned to the current user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeInstancesDiskNum(TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumRequest)">
+            <summary>
+            This API (DescribeInstancesDiskNum) is used to query the number of cloud disks mounted in the instance.
+            
+            * Batch operations are supported. If multiple CVM instance IDs are specified, the returned results will list the number of cloud disks mounted on each CVM.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeInstancesDiskNumSync(TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumRequest)">
+            <summary>
+            This API (DescribeInstancesDiskNum) is used to query the number of cloud disks mounted in the instance.
+            
+            * Batch operations are supported. If multiple CVM instance IDs are specified, the returned results will list the number of cloud disks mounted on each CVM.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeSnapshotOperationLogs(TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsRequest)">
+            <summary>
+            接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
+            
+            This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
+            
+            This API is used to query the operation logs of a snapshot. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeSnapshotOperationLogsSync(TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsRequest)">
+            <summary>
+            接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
+            
+            This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
+            
+            This API is used to query the operation logs of a snapshot. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeSnapshotSharePermission(TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionRequest)">
+            <summary>
+            This API is used to query the sharing information of snapshots.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeSnapshotSharePermissionSync(TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionRequest)">
+            <summary>
+            This API is used to query the sharing information of snapshots.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeSnapshots(TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest)">
+            <summary>
+            This API (DescribeSnapshots) is used to query the details of snapshots.
+            
+            * Filter the results by the snapshot ID, the ID of cloud disk, for which the snapshot is created, and the type of cloud disk, for which the snapshot is created. The relationship between different conditions is AND. For more information about filtering, please see `Filter`.
+            * If the parameter is empty, a certain number (specified by `Limit`; the default is 20) of snapshot lists are returned to the current user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DescribeSnapshotsSync(TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest)">
+            <summary>
+            This API (DescribeSnapshots) is used to query the details of snapshots.
+            
+            * Filter the results by the snapshot ID, the ID of cloud disk, for which the snapshot is created, and the type of cloud disk, for which the snapshot is created. The relationship between different conditions is AND. For more information about filtering, please see `Filter`.
+            * If the parameter is empty, a certain number (specified by `Limit`; the default is 20) of snapshot lists are returned to the current user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DetachDisks(TencentCloud.Cbs.V20170312.Models.DetachDisksRequest)">
+            <summary>
+            This API is used to unmount one or more cloud disks.
+            
+            * Batch operation is supported. You can unmount multiple cloud disks from the same CVM in a single request. If any of these cloud disks cannot be unmounted, the operation fails and a specific error code returns.
+            * This is an async API. A successful request does not mean that the cloud disks have been unmounted successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. When the status changes from `ATTACHED` to `UNATTACHED`, the unmounting is successful.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DetachDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DetachDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.DetachDisksSync(TencentCloud.Cbs.V20170312.Models.DetachDisksRequest)">
+            <summary>
+            This API is used to unmount one or more cloud disks.
+            
+            * Batch operation is supported. You can unmount multiple cloud disks from the same CVM in a single request. If any of these cloud disks cannot be unmounted, the operation fails and a specific error code returns.
+            * This is an async API. A successful request does not mean that the cloud disks have been unmounted successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. When the status changes from `ATTACHED` to `UNATTACHED`, the unmounting is successful.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.DetachDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.DetachDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.GetSnapOverview(TencentCloud.Cbs.V20170312.Models.GetSnapOverviewRequest)">
+            <summary>
+            This API is used to get snapshot overview information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.GetSnapOverviewSync(TencentCloud.Cbs.V20170312.Models.GetSnapOverviewRequest)">
+            <summary>
+            This API is used to get snapshot overview information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InitializeDisks(TencentCloud.Cbs.V20170312.Models.InitializeDisksRequest)">
+            <summary>
+            This API is used to reinitialize the cloud disks. Note the following when reinitializing the cloud disks:
+            1. For a cloud disk created from a snapshot, it is rolled back to the state of the snapshot;
+            2. For a cloud disk created from the scratch, all data are cleared. Please check and back up the necessary data before the reinitialization;
+            3. Currently, you can only re-initialize a cloud disk when it’s not attached to a resource and not shared by others;
+            4. For a cloud disk created from a snapshot, if the snapshot has been deleted, it cannot be reinitialized.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InitializeDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InitializeDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InitializeDisksSync(TencentCloud.Cbs.V20170312.Models.InitializeDisksRequest)">
+            <summary>
+            This API is used to reinitialize the cloud disks. Note the following when reinitializing the cloud disks:
+            1. For a cloud disk created from a snapshot, it is rolled back to the state of the snapshot;
+            2. For a cloud disk created from the scratch, all data are cleared. Please check and back up the necessary data before the reinitialization;
+            3. Currently, you can only re-initialize a cloud disk when it’s not attached to a resource and not shared by others;
+            4. For a cloud disk created from a snapshot, if the snapshot has been deleted, it cannot be reinitialized.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InitializeDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InitializeDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InquirePriceModifyDiskBackupQuota(TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaRequest)">
+            <summary>
+            This API is used to query the price of a cloud disk after its backup point quota is modified.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InquirePriceModifyDiskBackupQuotaSync(TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaRequest)">
+            <summary>
+            This API is used to query the price of a cloud disk after its backup point quota is modified.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InquirePriceModifyDiskExtraPerformance(TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceRequest)">
+            <summary>
+            This API is used to query the price for adjusting the cloud disk’s extra performance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InquirePriceModifyDiskExtraPerformanceSync(TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceRequest)">
+            <summary>
+            This API is used to query the price for adjusting the cloud disk’s extra performance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InquiryPriceCreateDisks(TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest)">
+            <summary>
+            This API is used to query the price of creating cloud disks.
+            
+            * You can query the price of creating multiple cloud disks in a single request. In this case, the price returned will be the total price.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InquiryPriceCreateDisksSync(TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest)">
+            <summary>
+            This API is used to query the price of creating cloud disks.
+            
+            * You can query the price of creating multiple cloud disks in a single request. In this case, the price returned will be the total price.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InquiryPriceResizeDisk(TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskRequest)">
+            <summary>
+            This API is used to query the price for expanding cloud disks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.InquiryPriceResizeDiskSync(TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskRequest)">
+            <summary>
+            This API is used to query the price for expanding cloud disks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifyAutoSnapshotPolicyAttribute(TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest)">
+            <summary>
+            This API (ModifyAutoSnapshotPolicyAttribute) is used to modify the attributes of an automatic snapshot policy.
+            
+            * You can use this API to modify the attributes of a scheduled snapshot policy, including the execution policy, name, and activation.
+            * When modifying the number of days for retention, you must ensure that there is no clash with the permanent retention attribute. Otherwise, the entire operation will fail and a specific error code will be returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifyAutoSnapshotPolicyAttributeSync(TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest)">
+            <summary>
+            This API (ModifyAutoSnapshotPolicyAttribute) is used to modify the attributes of an automatic snapshot policy.
+            
+            * You can use this API to modify the attributes of a scheduled snapshot policy, including the execution policy, name, and activation.
+            * When modifying the number of days for retention, you must ensure that there is no clash with the permanent retention attribute. Otherwise, the entire operation will fail and a specific error code will be returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifyDiskAttributes(TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest)">
+            <summary>
+            * Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+            * "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
+            * Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifyDiskAttributesSync(TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest)">
+            <summary>
+            * Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+            * "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
+            * Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifyDiskBackupQuota(TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaRequest)">
+            <summary>
+            This API is used to modify the cloud disk backup point quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifyDiskBackupQuotaSync(TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaRequest)">
+            <summary>
+            This API is used to modify the cloud disk backup point quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifyDiskExtraPerformance(TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceRequest)">
+            <summary>
+            This API is used to adjust the cloud disk’s extra performance.
+            
+            * Currently, only Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD) support extra performance adjustment.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifyDiskExtraPerformanceSync(TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceRequest)">
+            <summary>
+            This API is used to adjust the cloud disk’s extra performance.
+            
+            * Currently, only Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD) support extra performance adjustment.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifySnapshotAttribute(TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest)">
+            <summary>
+            This API (ModifySnapshotAttribute) is used to modify the attributes of a specified snapshot.
+            
+            * Currently, you can only modify snapshot name and change non-permanent snapshots into permanent snapshots.
+            * "Snapshot name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or snapshot management.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifySnapshotAttributeSync(TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest)">
+            <summary>
+            This API (ModifySnapshotAttribute) is used to modify the attributes of a specified snapshot.
+            
+            * Currently, you can only modify snapshot name and change non-permanent snapshots into permanent snapshots.
+            * "Snapshot name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or snapshot management.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifySnapshotsSharePermission(TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionRequest)">
+            <summary>
+            This API is used to modify snapshot sharing information.
+            
+            After snapshots are shared, the accounts they are shared to can use the snapshot to create cloud disks.
+            * Each snapshot can be shared to at most 50 accounts.
+            * You can use a shared snapshot to create cloud disks, but you cannot change its name or description.
+            * Snapshots can only be shared with accounts in the same region.
+            * Only data disk snapshots can be shared.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ModifySnapshotsSharePermissionSync(TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionRequest)">
+            <summary>
+            This API is used to modify snapshot sharing information.
+            
+            After snapshots are shared, the accounts they are shared to can use the snapshot to create cloud disks.
+            * Each snapshot can be shared to at most 50 accounts.
+            * You can use a shared snapshot to create cloud disks, but you cannot change its name or description.
+            * Snapshots can only be shared with accounts in the same region.
+            * Only data disk snapshots can be shared.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ResizeDisk(TencentCloud.Cbs.V20170312.Models.ResizeDiskRequest)">
+            <summary>
+            This API is used to expand the capacity of a cloud disk.
+            
+            * This API supports only the expansion of elastic cloud disks. To query the type of a cloud disk, you can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API and check the `Portable` field in the response. To expand non-elastic cloud disks, you can call the [ResizeInstanceDisks](https://intl.cloud.tencent.com/document/product/213/15731?from_cn_redirect=1) API.
+            * This is an async API. A successful return of this API does not mean that the cloud disk has been expanded successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API to query the status of a cloud disk. `EXPANDING` indicates that the expansion is in process. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ResizeDiskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ResizeDiskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.ResizeDiskSync(TencentCloud.Cbs.V20170312.Models.ResizeDiskRequest)">
+            <summary>
+            This API is used to expand the capacity of a cloud disk.
+            
+            * This API supports only the expansion of elastic cloud disks. To query the type of a cloud disk, you can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API and check the `Portable` field in the response. To expand non-elastic cloud disks, you can call the [ResizeInstanceDisks](https://intl.cloud.tencent.com/document/product/213/15731?from_cn_redirect=1) API.
+            * This is an async API. A successful return of this API does not mean that the cloud disk has been expanded successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1?from_cn_redirect=1) API to query the status of a cloud disk. `EXPANDING` indicates that the expansion is in process. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.ResizeDiskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.ResizeDiskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.TerminateDisks(TencentCloud.Cbs.V20170312.Models.TerminateDisksRequest)">
+            <summary>
+            This API is used to return cloud disks.
+            
+            * You can use this API to return cloud disks you no longer need.
+            * This API can be used to return pay-as-you-go cloud disks billed on hourly basis. 
+            * Batch operations are supported. The maximum number of cloud disks in each request is 50. If there is any specified cloud disk that cannot be returned, an error code will be returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.TerminateDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.TerminateDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.TerminateDisksSync(TencentCloud.Cbs.V20170312.Models.TerminateDisksRequest)">
+            <summary>
+            This API is used to return cloud disks.
+            
+            * You can use this API to return cloud disks you no longer need.
+            * This API can be used to return pay-as-you-go cloud disks billed on hourly basis. 
+            * Batch operations are supported. The maximum number of cloud disks in each request is 50. If there is any specified cloud disk that cannot be returned, an error code will be returned.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.TerminateDisksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.TerminateDisksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.UnbindAutoSnapshotPolicy(TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyRequest)">
+            <summary>
+            This API (UnbindAutoSnapshotPolicy) is used to unbind the cloud disk from the specified scheduled snapshot policy.
+            
+            * Batch operations are supported. Multiple cloud disks can be unbound from a snapshot policy at one time. 
+            * If the passed-in cloud disks are not bound to the current scheduled snapshot policy, they will be skipped. Only cloud disks that are bound to the current scheduled snapshot policy are processed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.CbsClient.UnbindAutoSnapshotPolicySync(TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyRequest)">
+            <summary>
+            This API (UnbindAutoSnapshotPolicy) is used to unbind the cloud disk from the specified scheduled snapshot policy.
+            
+            * Batch operations are supported. Multiple cloud disks can be unbound from a snapshot policy at one time. 
+            * If the passed-in cloud disks are not bound to the current scheduled snapshot policy, they will be skipped. Only cloud disks that are bound to the current scheduled snapshot policy are processed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AdvancedRetentionPolicy.Days">
+            <summary>
+            Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AdvancedRetentionPolicy.Weeks">
+            <summary>
+            Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AdvancedRetentionPolicy.Months">
+            <summary>
+            Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AdvancedRetentionPolicy.Years">
+            <summary>
+            Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.AdvancedRetentionPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupRequest.DiskBackupId">
+            <summary>
+            ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupRequest.DiskId">
+            <summary>
+            ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ApplyDiskBackupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest.SnapshotId">
+            <summary>
+            Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest.DiskId">
+            <summary>
+            ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest.AutoStopInstance">
+            <summary>
+            Specifies whether to shut down a CVM automatically before a rollback
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest.AutoStartInstance">
+            <summary>
+            Specifies whether to start up a CVM automatically after a rollback
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ApplySnapshotRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ApplySnapshotResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ApplySnapshotResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AttachDetail.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AttachDetail.AttachedDiskCount">
+            <summary>
+            The number of instances mounted to data disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AttachDetail.MaxAttachCount">
+            <summary>
+            The maximum number of instances that can be mounted to data disk.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.AttachDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AttachDisksRequest.InstanceId">
+            <summary>
+            ID of the CVM instance on which the cloud disk will be mounted. It can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AttachDisksRequest.DiskIds">
+            <summary>
+            ID of the elastic cloud disk to be mounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be mounted in a single request.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AttachDisksRequest.DeleteWithInstance">
+            <summary>
+            Optional parameter. If this is not passed only the mount operation is executed. If `True` is passed, the cloud disk will be configured to be terminated when the server it is mounted to is terminated. This is only valid for pay-as-you-go cloud disks.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.AttachDisksRequest.AttachMode" -->
+        <member name="M:TencentCloud.Cbs.V20170312.Models.AttachDisksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AttachDisksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.AttachDisksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoMountConfiguration.InstanceId">
+            <summary>
+            ID of the instance to which the cloud disk is attached.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoMountConfiguration.MountPoint">
+            <summary>
+            Mount point in the instance.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoMountConfiguration.FileSystemType">
+            <summary>
+            File system type. Valid values: `ext4`, `xfs`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.AutoMountConfiguration.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.DiskIdSet">
+            <summary>
+            The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.IsActivated">
+            <summary>
+            Whether scheduled snapshot policy is activated.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.AutoSnapshotPolicyState" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.IsCopyToRemote">
+            <summary>
+            Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.IsPermanent">
+            <summary>
+            Whether the snapshot created by this scheduled snapshot policy is retained permanently.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.NextTriggerTime">
+            <summary>
+            The time the scheduled snapshot will be triggered again.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.AutoSnapshotPolicyName">
+            <summary>
+            Scheduled snapshot policy name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.AutoSnapshotPolicyId">
+            <summary>
+            Scheduled snapshot policy ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.Policy">
+            <summary>
+            The policy for executing the scheduled snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.CreateTime">
+            <summary>
+            The time the scheduled snapshot policy was created.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.RetentionDays">
+            <summary>
+            Number of days the snapshot created by this scheduled snapshot policy is retained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.CopyToAccountUin">
+            <summary>
+            ID of the replication target account
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.InstanceIdSet">
+            <summary>
+            List of IDs of the instances associated with the scheduled snapshot policy.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.RetentionMonths">
+            <summary>
+            The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.RetentionAmount">
+            <summary>
+            The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.AdvancedRetentionPolicy">
+            <summary>
+            Retention policy for scheduled snapshots.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.CopyFromAccountUin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.Tags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.AutoSnapshotPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyRequest.AutoSnapshotPolicyId">
+            <summary>
+            ID of scheduled snapshot policy to be bound.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyRequest.DiskIds">
+            <summary>
+            List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.BindAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsRequest.DestinationRegions">
+            <summary>
+            Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsRequest.SnapshotId">
+            <summary>
+            Snapshot ID, which can be queried via the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsRequest.SnapshotName">
+            <summary>
+            Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsResponse.SnapshotCopyResultSet">
+            <summary>
+            Result of the cross-region replication task. The ID of the new snapshot replica is returned if the request succeeds. Otherwise `Error` is returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CopySnapshotCrossRegionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest.Policy">
+            <summary>
+            The policy for executing the scheduled snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest.AutoSnapshotPolicyName">
+            <summary>
+            The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest.IsActivated">
+            <summary>
+            Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest.IsPermanent">
+            <summary>
+            Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest.RetentionDays">
+            <summary>
+            The number of days that a snapshot created by this scheduled snapshot policy is retained. The default value is 7. If this parameter is specified, the IsPermanent input parameter can not be TRUE, otherwise a conflict will occur.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest.DryRun">
+            <summary>
+            Whether to create an execution policy for the scheduled snapshot. TRUE: Only the time of the initial backup needs to be obtained, and no scheduled snapshot policy is actually created. FALSE: Create. The default value is FALSE.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyResponse.AutoSnapshotPolicyId">
+            <summary>
+            The ID of the newly created scheduled snapshot policy.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyResponse.NextTriggerTime">
+            <summary>
+            The time that initial backup will start.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CreateAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupRequest.DiskId">
+            <summary>
+            Name of the cloud disk for which to create a backup point.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupRequest.DiskBackupName">
+            <summary>
+            Name of the cloud disk backup point, which can contain up to 100 characters.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupResponse.DiskBackupId">
+            <summary>
+            ID of the cloud disk backup point.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CreateDiskBackupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.Placement">
+            <summary>
+            Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project. If no project is specified, the default project will be used.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.DiskChargeType" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.DiskType" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.DiskName">
+            <summary>
+            Cloud disk name. If it is not specified, "Unnamed" will be used by default. The maximum length is 60 bytes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.Tags">
+            <summary>
+            Tags bound to the cloud disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.SnapshotId">
+            <summary>
+            Snapshot ID. If this parameter is specified, the cloud disk will be created based on the snapshot. The snapshot must be a data disk snapshot. To query the type of a snapshot, call the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API and see the `DiskUsage` field in the response.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.DiskCount">
+            <summary>
+            Number of cloud disks to be created. If it is not specified, `1` will be used by default. There is an upper limit on the maximum number of cloud disks that can be created in a single request. For more information, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.ThroughputPerformance" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.DiskSize" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.Shareable">
+            <summary>
+            Optional parameter. Default value: `False`. If `True` is specified, the new cloud disk will be shared.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.ClientToken">
+            <summary>
+            A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.Encrypt">
+            <summary>
+            This parameter is used to create encrypted cloud disks. It is fixed at `ENCRYPT`.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.DiskChargePrepaid" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.DeleteSnapshot">
+            <summary>
+            Whether to delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default value). `1`: Yes. To check whether a snapshot is permanently reserved, see the `IsPermanent` field returned by the `DescribeSnapshots` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.AutoMountConfiguration">
+            <summary>
+            Specifies whether to automatically attach and initialize the newly created data disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.DiskBackupQuota">
+            <summary>
+            Specifies the cloud disk backup point quota.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CreateDisksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksResponse.DiskIdSet">
+            <summary>
+            List of IDs of the created cloud disks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateDisksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CreateDisksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest.DiskId">
+            <summary>
+            ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest.SnapshotName">
+            <summary>
+            Snapshot name. If it is not specified, "Unnamed" will be used by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest.Deadline">
+            <summary>
+            Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest.DiskBackupId">
+            <summary>
+            ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest.Tags">
+            <summary>
+            Tags bound to the snapshot.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CreateSnapshotRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateSnapshotResponse.SnapshotId">
+            <summary>
+            ID of the new snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.CreateSnapshotResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.CreateSnapshotResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesRequest.AutoSnapshotPolicyIds">
+            <summary>
+            List of scheduled snapshot policy IDs to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DeleteAutoSnapshotPoliciesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsRequest.DiskBackupIds">
+            <summary>
+            ID of the cloud disk backup point to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DeleteDiskBackupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsRequest.SnapshotIds">
+            <summary>
+            List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsRequest.DeleteBindImages">
+            <summary>
+            Whether to forcibly delete the image associated with the snapshot
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DeleteSnapshotsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest.AutoSnapshotPolicyIds">
+            <summary>
+            List of scheduled snapshot policy IDs to be queried. The parameter does not support specifying both `SnapshotIds` and `Filters`.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest.Filters" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest.Limit">
+            <summary>
+            Number of results to be returned. Default is 20. Maximum is 100. For more information on `Limit`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest.Offset">
+            <summary>
+            Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest.Order" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest.OrderField" -->
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesResponse.TotalCount">
+            <summary>
+            The quantity of valid scheduled snapshot policies.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesResponse.AutoSnapshotPolicySet">
+            <summary>
+            List of scheduled snapshot policies.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeAutoSnapshotPoliciesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyRequest.DiskId">
+            <summary>
+            The ID of the queried cloud disk.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyResponse.TotalCount">
+            <summary>
+            The quantity of scheduled snapshots binded to cloud disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyResponse.AutoSnapshotPolicySet">
+            <summary>
+            List of scheduled snapshots bound to cloud disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDiskAssociatedAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest.DiskBackupIds">
+            <summary>
+            List of IDs of the backup points to be queried. `DiskBackupIds` and `Filters` cannot be specified at the same time.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest.Filters" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest.Offset">
+            <summary>
+            Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API [Overview](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API [Overview](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest.Order" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest.OrderField" -->
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsResponse.TotalCount">
+            <summary>
+            Number of eligible cloud disk backup points.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsResponse.DiskBackupSet">
+            <summary>
+            List of details of cloud disk backup points.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDiskBackupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.InquiryType" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.Zones">
+            <summary>
+            Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.DiskChargeType" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.DiskTypes" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.DiskUsage" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.InstanceFamilies">
+            <summary>
+            Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.CPU">
+            <summary>
+            Instance CPU cores.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.Memory">
+            <summary>
+            Instance memory size.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaResponse.DiskConfigSet">
+            <summary>
+            List of cloud disk configurations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDiskConfigQuotaResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsRequest.Filters" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsRequest.BeginTime">
+            <summary>
+            The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsRequest.EndTime">
+            <summary>
+            The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsResponse.DiskOperationLogSet">
+            <summary>
+            List of cloud disk operation logs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDiskOperationLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest.DiskIds">
+            <summary>
+            Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest.Filters" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest.Offset">
+            <summary>
+            Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest.Limit">
+            <summary>
+            Number of results to be returned. Default is 20. Maximum is 100. For more information on `Limit`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest.Order" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest.OrderField" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest.ReturnBindAutoSnapshotPolicy">
+            <summary>
+            Whether the ID of the periodic snapshot policy bound to the cloud disk needs to be returned in the cloud disk details. TRUE: return; FALSE: do not return.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDisksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDisksResponse.TotalCount">
+            <summary>
+            The quantity of cloud disks meeting the conditions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDisksResponse.DiskSet">
+            <summary>
+            List of cloud disk details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeDisksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeDisksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumRequest.InstanceIds">
+            <summary>
+            ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumResponse.AttachDetail">
+            <summary>
+            The quantity of mounted and mountable elastic cloud disks for each cloud virtual machine
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeInstancesDiskNumResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsRequest.Filters" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsRequest.BeginTime">
+            <summary>
+            The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsRequest.EndTime">
+            <summary>
+            The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsResponse.SnapshotOperationLogSet">
+            <summary>
+            List of snapshot operation logs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotOperationLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionRequest.SnapshotId">
+            <summary>
+            The ID of the snapshot to be queried. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionResponse.SharePermissionSet">
+            <summary>
+            The set of snapshot sharing information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotSharePermissionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest.SnapshotIds">
+            <summary>
+            List of snapshot IDs to be queried. The parameter does not support specifying both `SnapshotIds` and `Filters`.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest.Filters" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest.Offset">
+            <summary>
+            Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest.Limit">
+            <summary>
+            Number of results to be returned. Default is 20. Maximum is 100. For more information on `Limit`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest.Order" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest.OrderField" -->
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsResponse.TotalCount">
+            <summary>
+            Number of snapshots.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsResponse.SnapshotSet">
+            <summary>
+            List of snapshot details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DescribeSnapshotsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DetachDisksRequest.DiskIds">
+            <summary>
+            IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DetachDisksRequest.InstanceId">
+            <summary>
+            Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DetachDisksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DetachDisksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DetachDisksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.DeleteWithInstance" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.RenewFlag" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.DiskType" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.DiskState" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.SnapshotCount">
+            <summary>
+            The total number of snapshots of the cloud disk.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.AutoRenewFlagError" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.Rollbacking" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.InstanceIdList">
+            <summary>
+            For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.Encrypt" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.DiskName">
+            <summary>
+            Cloud disk name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.BackupDisk">
+            <summary>
+            Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.Tags">
+            <summary>
+            The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.InstanceId">
+            <summary>
+            ID of the CVM to which the cloud disk is mounted.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.AttachMode" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.AutoSnapshotPolicyIds">
+            <summary>
+            ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.ThroughputPerformance">
+            <summary>
+            Extra performance for a cloud disk, in MB/sec.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.Migrating" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.DiskId">
+            <summary>
+            Cloud disk ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.SnapshotSize">
+            <summary>
+            The total capacity of the snapshots of the cloud disk. Unit: MB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.Placement">
+            <summary>
+            Location of the cloud disk.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.IsReturnable" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.DeadlineTime">
+            <summary>
+            Expiration time of the cloud disk.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.Attached" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.DiskSize">
+            <summary>
+            Cloud disk size (in GB).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.MigratePercent">
+            <summary>
+            Migration progress of cloud disk type change, from 0 to 100.
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.DiskUsage" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.DiskChargeType" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.Portable">
+            <summary>
+            Whether it is an elastic cloud disk. false: Non-elastic cloud disk; true: Elastic cloud disk.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.SnapshotAbility" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.DeadlineError" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.RollbackPercent">
+            <summary>
+            Rollback progress of a cloud disk snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.DifferDaysOfDeadline">
+            <summary>
+            Number of days from current time until disk expiration (only applicable for prepaid disks).
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.ReturnFailCode" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.Shareable">
+            <summary>
+            Whether or not cloud disk is shareable cloud disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.CreateTime">
+            <summary>
+            Creation time of the cloud disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.DeleteSnapshot">
+            <summary>
+            Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.DiskBackupQuota">
+            <summary>
+            Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.DiskBackupCount">
+            <summary>
+            Number of used cloud disk backups.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Disk.InstanceType" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.LastAttachInsId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Disk.ErrorPrompt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.Disk.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskBackup.DiskBackupId">
+            <summary>
+            Cloud disk backup point ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskBackup.DiskId">
+            <summary>
+            ID of the cloud disk with which the backup point is associated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskBackup.DiskSize">
+            <summary>
+            Cloud disk size in GB.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DiskBackup.DiskUsage" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskBackup.DiskBackupName">
+            <summary>
+            Backup point name.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DiskBackup.DiskBackupState" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskBackup.Percent">
+            <summary>
+            Cloud disk creation progress in percentage.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskBackup.CreateTime">
+            <summary>
+            Creation time of the cloud disk backup point.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DiskBackup.Encrypt" -->
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DiskBackup.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskChargePrepaid.Period">
+            <summary>
+            Subscription period of the cloud disk in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DiskChargePrepaid.RenewFlag" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskChargePrepaid.CurInstanceDeadline">
+            <summary>
+            You can specify this parameter when you need to ensure that a cloud disk and the CVM instance to which it is attached have the same expiration time. This parameter represents the current expiration time of the instance. In this case, if you specify `Period`, `Period` will represent how long you want to renew the instance, and the cloud disk will be renewed based on the new expiration time of the instance. For example, the value of this parameter can be `2018-03-30 20:15:03`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DiskChargePrepaid.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskConfig.Available">
+            <summary>
+            Whether the configuration is available.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DiskConfig.DiskChargeType" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskConfig.Zone">
+            <summary>
+            The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskConfig.InstanceFamily">
+            <summary>
+            Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DiskConfig.DiskType" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskConfig.StepSize">
+            <summary>
+            Minimum increment of cloud disk size adjustment in GB.
+            Note: This field might return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskConfig.ExtraPerformanceRange">
+            <summary>
+            Additional performance range.
+            Note: This field might return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskConfig.DeviceClass">
+            <summary>
+            Instance model.
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.DiskConfig.DiskUsage" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskConfig.MinDiskSize">
+            <summary>
+            The minimum configurable cloud disk size (in GB).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskConfig.MaxDiskSize">
+            <summary>
+            The maximum configurable cloud disk size (in GB).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DiskConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskOperationLog.Operator">
+            <summary>
+            UIN of operator.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskOperationLog.Operation">
+            <summary>
+            Operation type. Value range:
+            CBS_OPERATION_ATTACH: Mount cloud disk
+            CBS_OPERATION_DETACH: Unmount cloud disk
+            CBS_OPERATION_RENEW: Renew
+            CBS_OPERATION_EXPAND: Expand
+            CBS_OPERATION_CREATE: Create
+            CBS_OPERATION_ISOLATE: Isolate
+            CBS_OPERATION_MODIFY: Modify cloud disk attributes
+            ASP_OPERATION_BIND: Associate scheduled snapshot policy
+            ASP_OPERATION_UNBIND: Cancel associated scheduled snapshot policy
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskOperationLog.DiskId">
+            <summary>
+            Cloud disk ID of operation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskOperationLog.OperationState">
+            <summary>
+            Status of operation. Value range:
+            SUCCESS: Operation successful 
+            FAILED: Operation failed 
+            PROCESSING: Operation in process
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskOperationLog.StartTime">
+            <summary>
+            Start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.DiskOperationLog.EndTime">
+            <summary>
+            End time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.DiskOperationLog.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Filter.Name">
+            <summary>
+            Name of filter key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Filter.Values">
+            <summary>
+            One or more filter values.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewResponse.TotalSize">
+            <summary>
+            The total snapshot size of the user
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewResponse.RealTradeSize">
+            <summary>
+            The total billed snapshot size of the user
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewResponse.FreeQuota">
+            <summary>
+            Free tier of snapshot
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewResponse.TotalNums">
+            <summary>
+            Total number of snapshots
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.GetSnapOverviewResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Image.ImageId">
+            <summary>
+            Image instance ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Image.ImageName">
+            <summary>
+            Image name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.Image.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InitializeDisksRequest.DiskIds">
+            <summary>
+            ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InitializeDisksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InitializeDisksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InitializeDisksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaRequest.DiskId">
+            <summary>
+            Cloud disk ID, which can be queried through the `DescribeDisks` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaRequest.DiskBackupQuota">
+            <summary>
+            Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaResponse.DiskPrice">
+            <summary>
+            Price of the cloud disk after its backup point quota is modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskBackupQuotaResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceRequest.DiskId">
+            <summary>
+            Cloud disk ID, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceRequest.ThroughputPerformance">
+            <summary>
+            The extra throughput to purchase, in MB/s
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceResponse.DiskPrice">
+            <summary>
+            Price for purchasing the extra performance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InquirePriceModifyDiskExtraPerformanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.DiskChargeType" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.DiskType" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.DiskSize">
+            <summary>
+            Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.ProjectId">
+            <summary>
+            ID of the project to which the cloud disk belongs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.DiskCount">
+            <summary>
+            Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.ThroughputPerformance" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.DiskChargePrepaid" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.DiskBackupQuota">
+            <summary>
+            Specifies the cloud disk backup point quota.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksResponse.DiskPrice">
+            <summary>
+            Describes the price of newly purchased cloud disks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InquiryPriceCreateDisksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskRequest.DiskId">
+            <summary>
+            ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskRequest.DiskSize">
+            <summary>
+            Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskRequest.ProjectId">
+            <summary>
+            ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskResponse.DiskPrice">
+            <summary>
+            Describes the price of expanding the cloud disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.InquiryPriceResizeDiskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest.AutoSnapshotPolicyId">
+            <summary>
+            Scheduled snapshot policy ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest.IsActivated">
+            <summary>
+            Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest.IsPermanent">
+            <summary>
+            Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest.AutoSnapshotPolicyName">
+            <summary>
+            The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest.Policy">
+            <summary>
+            The policy for executing the scheduled snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest.RetentionDays">
+            <summary>
+            Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifyAutoSnapshotPolicyAttributeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest.DiskIds">
+            <summary>
+            IDs of one or more cloud disks to be operated. If multiple cloud disk IDs are selected, it only supports modifying all cloud disks with the same attributes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest.ProjectId">
+            <summary>
+            The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest.DiskName">
+            <summary>
+            Name of new cloud disk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest.Portable">
+            <summary>
+            Whether it is an elastic cloud disk. FALSE: non-elastic cloud disk; TRUE: elastic cloud disk. You can only modify non-elastic cloud disks to elastic cloud disks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest.DeleteWithInstance">
+            <summary>
+            Whether the cloud disk is terminated with the CVM after it has been successfully mounted. `TRUE` indicates that it is terminated with the CVM. `FALSE` indicates that it is not terminated with the CVM. This is only supported for cloud disks and data disks that are pay-as-you-go.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest.DiskType" -->
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifyDiskAttributesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaRequest.DiskId">
+            <summary>
+            Cloud disk ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaRequest.DiskBackupQuota">
+            <summary>
+            Cloud disk backup point quota after the adjustment
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifyDiskBackupQuotaResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceRequest.DiskId">
+            <summary>
+            ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceRequest.ThroughputPerformance">
+            <summary>
+            The extra throughput to purchase, in MB/s
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifyDiskExtraPerformanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest.SnapshotId">
+            <summary>
+            Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest.SnapshotName">
+            <summary>
+            Name of new snapshot. Maximum length is 60 bytes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest.IsPermanent">
+            <summary>
+            Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest.Deadline">
+            <summary>
+            Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifySnapshotAttributeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionRequest.AccountIds">
+            <summary>
+            List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionRequest.Permission">
+            <summary>
+            Operations. Valid values: `SHARE`, sharing an image; `CANCEL`, cancelling the sharing of an image.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionRequest.SnapshotIds">
+            <summary>
+            The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ModifySnapshotsSharePermissionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Placement.Zone">
+            <summary>
+            The ID of the [Availability Zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) to which the cloud disk belongs. This parameter can be obtained from the Zone field in the returned values of [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Placement.CageId">
+            <summary>
+            Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Placement.ProjectId">
+            <summary>
+            ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Placement.CdcName">
+            <summary>
+            Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Placement.CdcId">
+            <summary>
+            ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Placement.DedicatedClusterId">
+            <summary>
+            Dedicated cluster ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.Placement.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Policy.Hour">
+            <summary>
+            Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Policy.DayOfWeek">
+            <summary>
+            Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Policy.DayOfMonth">
+            <summary>
+            Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Policy.IntervalDays">
+            <summary>
+            Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.Policy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.OriginalPrice">
+            <summary>
+            Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.DiscountPrice">
+            <summary>
+            Discounted price of a monthly-subscribed cloud disk or a snapshot, in USD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.OriginalPriceHigh">
+            <summary>
+            Original payment of a monthly-subscribed cloud disk or a snapshot, in USD, with six decimal places.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.DiscountPriceHigh">
+            <summary>
+            Discounted price of a monthly-subscribed cloud disk or a snapshot, in USD, with six decimal places.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.UnitPrice">
+            <summary>
+            Original unit price of a pay-as-you-go cloud disk, in USD.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.ChargeUnit" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.UnitPriceDiscount">
+            <summary>
+            Discount unit price of a pay-as-you-go cloud disk, in USD.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.UnitPriceHigh">
+            <summary>
+            Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.PrepayPrice.UnitPriceDiscountHigh">
+            <summary>
+            Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.PrepayPrice.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Price.OriginalPrice">
+            <summary>
+            Original price of a monthly-subscribed cloud disk, in USD.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Price.DiscountPrice">
+            <summary>
+            Discounted price of a monthly-subscribed cloud disk, in USD.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Price.UnitPrice">
+            <summary>
+            Original unit price of a pay-as-you-go cloud disk, in USD.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Price.ChargeUnit" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Price.UnitPriceDiscount">
+            <summary>
+            Discount unit price of a pay-as-you-go cloud disk, in USD.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Price.OriginalPriceHigh">
+            <summary>
+            Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Price.DiscountPriceHigh">
+            <summary>
+            Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Price.UnitPriceHigh">
+            <summary>
+            Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Price.UnitPriceDiscountHigh">
+            <summary>
+            Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.Price.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ResizeDiskRequest.DiskId">
+            <summary>
+            ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ResizeDiskRequest.DiskSize">
+            <summary>
+            Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ResizeDiskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.ResizeDiskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.ResizeDiskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SharePermission.CreatedTime">
+            <summary>
+            Snapshot sharing time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SharePermission.AccountId">
+            <summary>
+            ID of the shared account
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.SharePermission.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.Placement">
+            <summary>
+            Location of the snapshot.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Snapshot.CopyFromRemote" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Snapshot.SnapshotState" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Snapshot.IsPermanent" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.SnapshotName">
+            <summary>
+            Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.DeadlineTime">
+            <summary>
+            The expiration time of the snapshot. If the snapshot is permanently retained, this field is blank.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.Percent">
+            <summary>
+            The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.Images">
+            <summary>
+            List of images associated with snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.ShareReference">
+            <summary>
+            Number of snapshots currently shared
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.SnapshotType">
+            <summary>
+            Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.DiskSize">
+            <summary>
+            Size of the cloud disk used to create this snapshot (in GB).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.DiskId">
+            <summary>
+            ID of the cloud disk used to create this snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.CopyingToRegions">
+            <summary>
+            The destination region to which the snapshot is being replicated. Default value is [ ].
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Snapshot.Encrypt" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.CreateTime">
+            <summary>
+            Creation time of the snapshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.ImageCount">
+            <summary>
+            Number of images associated with snapshot.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cbs.V20170312.Models.Snapshot.DiskUsage" -->
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.SnapshotId">
+            <summary>
+            Snapshot ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.TimeStartShare">
+            <summary>
+            The time when the snapshot sharing starts
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Snapshot.Tags">
+            <summary>
+            List of tags associated with the snapshot.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.Snapshot.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotCopyResult.SnapshotId">
+            <summary>
+            ID of the snapshot replica
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotCopyResult.Message">
+            <summary>
+            Error message. It’s null if the request succeeds.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotCopyResult.Code">
+            <summary>
+            Error code. It’s `Success` if the request succeeds.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotCopyResult.DestinationRegion">
+            <summary>
+            Destination region of the replication task
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.SnapshotCopyResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotOperationLog.OperationState">
+            <summary>
+            Status of operation. Value range:
+            SUCCESS: Operation successful 
+            FAILED: Operation failed 
+            PROCESSING: Operation in process
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotOperationLog.StartTime">
+            <summary>
+            Start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotOperationLog.Operator">
+            <summary>
+            UIN of operator.
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotOperationLog.SnapshotId">
+            <summary>
+            ID of snapshot being operated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotOperationLog.Operation">
+            <summary>
+            Operation type. Value range:
+            SNAP_OPERATION_DELETE: Delete snapshot
+            SNAP_OPERATION_ROLLBACK: Roll back snapshot
+            SNAP_OPERATION_MODIFY: Modify snapshot attributes
+            SNAP_OPERATION_CREATE: Create snapshot
+            SNAP_OPERATION_COPY: Cross-region replication of snapshot
+            ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
+            ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.SnapshotOperationLog.EndTime">
+            <summary>
+            End time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.SnapshotOperationLog.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Tag.Key">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.Tag.Value">
+            <summary>
+            Tag value.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.TerminateDisksRequest.DiskIds">
+            <summary>
+            List of cloud disk IDs required to be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.TerminateDisksRequest.DeleteSnapshot">
+            <summary>
+            Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.TerminateDisksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.TerminateDisksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.TerminateDisksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyRequest.DiskIds">
+            <summary>
+            List of cloud disk IDs scheduled snapshot policy to be unbound from.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyRequest.AutoSnapshotPolicyId">
+            <summary>
+            ID of scheduled snapshot policy to be unbound.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cbs.V20170312.Models.UnbindAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

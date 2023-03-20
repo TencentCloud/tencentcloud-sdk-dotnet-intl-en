@@ -1,0 +1,13 @@
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/bin/Debug/netstandard2.0/TencentCloudLighthouse.deps.json
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/bin/Debug/netstandard2.0/TencentCloudLighthouse.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/bin/Debug/netstandard2.0/TencentCloudLighthouse.pdb
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/bin/Debug/netstandard2.0/TencentCloudLighthouse.xml
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/bin/Debug/netstandard2.0/TencentCloudCommon.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/bin/Debug/netstandard2.0/TencentCloudCommon.pdb
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/obj/Debug/netstandard2.0/TencentCloudLighthouse.csproj.CoreCompileInputs.cache
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/obj/Debug/netstandard2.0/TencentCloudLighthouse.AssemblyInfoInputs.cache
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/obj/Debug/netstandard2.0/TencentCloudLighthouse.AssemblyInfo.cs
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/obj/Debug/netstandard2.0/TencentCloudLighthouse.csproj.CopyComplete
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/obj/Debug/netstandard2.0/TencentCloudLighthouse.dll
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/obj/Debug/netstandard2.0/TencentCloudLighthouse.xml
+/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Lighthouse/obj/Debug/netstandard2.0/TencentCloudLighthouse.pdb

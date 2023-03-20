@@ -1,0 +1,1925 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudBilling</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeAccountBalance(TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceRequest)">
+            <summary>
+            This API is used to check the Tencent Cloud account balance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeAccountBalanceSync(TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceRequest)">
+            <summary>
+            This API is used to check the Tencent Cloud account balance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillDetail(TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest)">
+            <summary>
+            This API is used to query bill details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillDetailSync(TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest)">
+            <summary>
+            This API is used to query bill details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillResourceSummary(TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest)">
+            <summary>
+            This API is used to query bill resources summary. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillResourceSummarySync(TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest)">
+            <summary>
+            This API is used to query bill resources summary. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByPayMode(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeRequest)">
+            <summary>
+            Gets the bill summarized according to billing mode
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByPayModeSync(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeRequest)">
+            <summary>
+            Gets the bill summarized according to billing mode
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByProduct(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest)">
+            <summary>
+            Gets the bill summarized according to product
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByProductSync(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest)">
+            <summary>
+            Gets the bill summarized according to product
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByProject(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectRequest)">
+            <summary>
+            Gets the bill summarized according to project
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByProjectSync(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectRequest)">
+            <summary>
+            Gets the bill summarized according to project
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByRegion(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionRequest)">
+            <summary>
+            Gets the bill summarized according to region
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByRegionSync(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionRequest)">
+            <summary>
+            Gets the bill summarized according to region
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByTag(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest)">
+            <summary>
+            This API is used to get the cost distribution over different tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeBillSummaryByTagSync(TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest)">
+            <summary>
+            This API is used to get the cost distribution over different tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeDosageCosDetailByDate(TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateRequest)">
+            <summary>
+            This API is used to query COS usage details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeDosageCosDetailByDateSync(TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateRequest)">
+            <summary>
+            This API is used to query COS usage details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeVoucherInfo(TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest)">
+            <summary>
+            This API is used to query vouchers.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeVoucherInfoSync(TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest)">
+            <summary>
+            This API is used to query vouchers.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeVoucherUsageDetails(TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest)">
+            <summary>
+            This API is used to query voucher usage details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.BillingClient.DescribeVoucherUsageDetailsSync(TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest)">
+            <summary>
+            This API is used to query voucher usage details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.ActionType">
+            <summary>
+            Transaction type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.ActionTypeName">
+            <summary>
+            Transaction type name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.RealTotalCost">
+            <summary>
+            Actual cost
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.RealTotalCostRatio">
+            <summary>
+            Cost ratio, to two decimal points
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.CashPayAmount">
+            <summary>
+            Cash amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.IncentivePayAmount">
+            <summary>
+            Trial credit amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.VoucherPayAmount">
+            <summary>
+            Voucher amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.BillMonth">
+            <summary>
+            Billing month, e.g. `2019-08`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.TotalCost">
+            <summary>
+            The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.ActionSummaryOverviewItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ApplicableProducts.GoodsName">
+            <summary>
+            Valid values: `all products` or names of the applicable products (string). Multiple names are separated by commas.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ApplicableProducts.PayMode">
+            <summary>
+            Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If `GoodsName` contains multiple product names and `PayMode` is `*`, it indicates that the voucher can be used in all billing modes for each of the products.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.ApplicableProducts.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.BusinessCodeName">
+            <summary>
+            Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ProductCodeName">
+            <summary>
+            Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.PayModeName">
+            <summary>
+            Billing mode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ProjectName">
+            <summary>
+            Project: project of a resource
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.RegionName">
+            <summary>
+            Region: region of a resource, e.g. South China (Guangzhou)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ZoneName">
+            <summary>
+            Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ResourceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ResourceName">
+            <summary>
+            Instance name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ActionTypeName">
+            <summary>
+            Transaction type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.OrderId">
+            <summary>
+            Order ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.BillId">
+            <summary>
+            Transaction ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.PayTime">
+            <summary>
+            Payment time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.FeeBeginTime">
+            <summary>
+            Service start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.FeeEndTime">
+            <summary>
+            Service end time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ComponentSet">
+            <summary>
+            Component list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.PayerUin">
+            <summary>
+            Payer's UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.OwnerUin">
+            <summary>
+            User's UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.OperateUin">
+            <summary>
+            Operator's UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.Tags">
+            <summary>
+            Tag information
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.BusinessCode">
+            <summary>
+            Product code
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ProductCode">
+            <summary>
+            Subproduct code
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ActionType">
+            <summary>
+            Transaction type
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.RegionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetail.ProjectId">
+            <summary>
+            Project ID: ID of the project to which the resource belongs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.BillDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.ComponentCodeName">
+            <summary>
+            Component type: type of a resource component, e.g. memory, disk, etc.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.ItemCodeName">
+            <summary>
+            Component name: name of a resource component, e.g. TencentDB for MySQL-memory
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.SinglePrice">
+            <summary>
+            Component published price: original price of a resource component with the original granularity
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.SpecifiedPrice">
+            <summary>
+            Specified price of the component
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.PriceUnit">
+            <summary>
+            Price unit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.UsedAmount">
+            <summary>
+            Component usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.UsedAmountUnit">
+            <summary>
+            Component usage unit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.TimeSpan">
+            <summary>
+            Usage period
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.TimeUnitName">
+            <summary>
+            Time unit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.Cost">
+            <summary>
+            Original price of the component
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.Discount">
+            <summary>
+            Discount rate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.ReduceType">
+            <summary>
+            Offer type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.RealCost">
+            <summary>
+            Total discounted price
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.VoucherPayAmount">
+            <summary>
+            Amount paid in voucher
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.CashPayAmount">
+            <summary>
+            Amount paid in cash
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.IncentivePayAmount">
+            <summary>
+            Amount paid in trial credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.ItemCode">
+            <summary>
+            Component type code
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.ComponentCode">
+            <summary>
+            Component code
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.ContractPrice">
+            <summary>
+            Contract price
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.InstanceType">
+            <summary>
+            The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.RiTimeSpan">
+            <summary>
+            The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.OriginalCostWithRI">
+            <summary>
+            The amount deducted by a reserved instance based on the original component cost.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.SPDeductionRate">
+            <summary>
+            The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.SPDeduction">
+            <summary>
+            The savings plan deduction amount.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.OriginalCostWithSP">
+            <summary>
+            The amount deducted by a savings plan based on the original component cost.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillDetailComponent.BlendedDiscount">
+            <summary>
+            The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.BillDetailComponent.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.BusinessCodeName">
+            <summary>
+            Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ProductCodeName">
+            <summary>
+            Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.PayModeName">
+            <summary>
+            Billing mode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ProjectName">
+            <summary>
+            Project
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.RegionName">
+            <summary>
+            Region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ZoneName">
+            <summary>
+            Availability zone
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ResourceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ResourceName">
+            <summary>
+            Resource instance namDeduction timee
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ActionTypeName">
+            <summary>
+            Transaction type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.OrderId">
+            <summary>
+            Order ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.PayTime">
+            <summary>
+            Payment time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.FeeBeginTime">
+            <summary>
+            Service start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.FeeEndTime">
+            <summary>
+            Service end time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ConfigDesc">
+            <summary>
+            Configuration description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ExtendField1">
+            <summary>
+            Extension field 1
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ExtendField2">
+            <summary>
+            Extension field 2
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.TotalCost">
+            <summary>
+            Cost, in USD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.Discount">
+            <summary>
+            Discount
+            If different discounts or contract prices are applied, `-` will be returned for this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ReduceType">
+            <summary>
+            Offer type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.RealTotalCost">
+            <summary>
+            Total cost after discount, in USD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.VoucherPayAmount">
+            <summary>
+            Amount paid in voucher, in USD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.CashPayAmount">
+            <summary>
+            Amount paid in cash, in USD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.IncentivePayAmount">
+            <summary>
+            Amount paid in trial credit, in USD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ExtendField3">
+            <summary>
+            Extension field 3
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ExtendField4">
+            <summary>
+            Extension field 4
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ExtendField5">
+            <summary>
+            Extension field 5
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.Tags">
+            <summary>
+            Tag information
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.PayerUin">
+            <summary>
+            Payer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.OwnerUin">
+            <summary>
+            Resource owner UIN; '-' is returned if no value is obtained
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.OperateUin">
+            <summary>
+            Operator UIN; '-' is returned if no value is obtained
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.BusinessCode">
+            <summary>
+            Product code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ProductCode">
+            <summary>
+            Subproduct code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.RegionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.InstanceType">
+            <summary>
+            The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+            
+            ri=Standard RI
+            
+            svp=Savings Plan
+            
+            si=Spot Instances
+            
+            rp=Resource Pack
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.OriginalCostWithRI">
+            <summary>
+            The amount deducted by a reserved instance based on the original component cost.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.SPDeduction">
+            <summary>
+            The savings plan deduction amount.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillResourceSummary.OriginalCostWithSP">
+            <summary>
+            The amount deducted by a savings plan based on the original component cost.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.BillResourceSummary.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillTagInfo.TagKey">
+            <summary>
+            Cost allocation tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BillTagInfo.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.BillTagInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.BusinessCode">
+            <summary>
+            Product code
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.BusinessCodeName">
+            <summary>
+            Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.RealTotalCost">
+            <summary>
+            Actual cost
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.RealTotalCostRatio">
+            <summary>
+            Cost ratio, to two decimal points
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.CashPayAmount">
+            <summary>
+            Cash amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.IncentivePayAmount">
+            <summary>
+            Trial credit amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.VoucherPayAmount">
+            <summary>
+            Voucher amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.BillMonth">
+            <summary>
+            Billing month, e.g. `2019-08`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.TotalCost">
+            <summary>
+            The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.TransferPayAmount">
+            <summary>
+            Payment by commission credits
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.BusinessSummaryOverviewItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryTotal.RealTotalCost">
+            <summary>
+            Total cost
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryTotal.VoucherPayAmount">
+            <summary>
+            Voucher amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryTotal.IncentivePayAmount">
+            <summary>
+            Trial credit amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryTotal.CashPayAmount">
+            <summary>
+            Cash amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryTotal.TotalCost">
+            <summary>
+            The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.BusinessSummaryTotal.TransferPayAmount">
+            <summary>
+            Payment by commission credits
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.BusinessSummaryTotal.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.CosDetailSets.BucketName">
+            <summary>
+            Bucket name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.CosDetailSets.DosageBeginTime">
+            <summary>
+            The start time of the usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.CosDetailSets.DosageEndTime">
+            <summary>
+            The end time of the usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.CosDetailSets.SubProductCodeName">
+            <summary>
+            Sub-product name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.CosDetailSets.BillingItemCodeName">
+            <summary>
+            Billable item name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.CosDetailSets.DosageValue">
+            <summary>
+            Usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.CosDetailSets.Unit">
+            <summary>
+            Unit of the billable item
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.CosDetailSets.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.Balance">
+            <summary>
+            Available account balance in cents, which takes the same calculation rules as `RealBalance`, `CreditBalance`, and `RealCreditBalance`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.Uin">
+            <summary>
+            The UIN to query.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.RealBalance">
+            <summary>
+            Available account balance in cents, which takes the same calculation rules as `Balance`, `CreditBalance`, and `RealCreditBalance`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.CashAccountBalance">
+            <summary>
+            Cash account balance in cents. Currently, this field is not applied.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.IncomeIntoAccountBalance">
+            <summary>
+            Income account balance in cents. Currently, this field is not applied.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.PresentAccountBalance">
+            <summary>
+            Present account balance in cents. Currently, this field is not applied.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.FreezeAmount">
+            <summary>
+            Frozen amount in cents.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.OweAmount">
+            <summary>
+            Overdue amount in cents, which is when the available credit balance is negative.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.IsAllowArrears">
+            <summary>
+            Whether overdue payments are allowed. Currently, this field is not applied.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.IsCreditLimited">
+            <summary>
+            Whether you have a credit limit. Currently, this field is not applied.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.CreditAmount">
+            <summary>
+            Credit limit. Credit limit－available credit balance = consumption amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.CreditBalance">
+            <summary>
+            Available credit balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `RealCreditBalance`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.RealCreditBalance">
+            <summary>
+            Available account balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `CreditBalance`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeAccountBalanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.Offset">
+            <summary>
+            Offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.Limit">
+            <summary>
+            Quantity, maximum is 100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.PeriodType">
+            <summary>
+            The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.Month">
+            <summary>
+            Month; format: yyyy-mm. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.BeginTime">
+            <summary>
+            The start time of the period; format: Y-m-d H:i:s. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. BeginTime and EndTime must be inputted as a pair. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.EndTime">
+            <summary>
+            The end time of the period; format: Y-m-d H:i:s. You only have to enter either Month or BeginTime and EndTime. When you enter values for BeginTime and EndTime, Month becomes invalid. BeginTime and EndTime must be inputted as a pair. This value must be no earlier than the month when Bill 2.0 is activated; last 24 months data are available.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.NeedRecordNum">
+            <summary>
+            Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
+            1 = yes, 0 = no
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.ProductCode">
+            <summary>
+            Queries information on a specified product
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.PayMode">
+            <summary>
+            Billing mode: prePay/postPay
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.ResourceId">
+            <summary>
+            Queries information on a specified resource
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.ActionType">
+            <summary>
+            Action type to query. Valid values:
+            Purchase
+            Renewal
+            Modify
+            Refund
+            Deduction
+            Hourly settlement
+            Daily settlement
+            Monthly settlement
+            Offline project deduction
+            Offline deduction
+            adjust-CR
+            adjust-DR
+            One-off RI Fee
+            Spot
+            Hourly RI fee
+            New monthly subscription
+            Monthly subscription renewal
+            Monthly subscription specification adjustment
+            Monthly subscription specification adjustment
+            Monthly subscription refund
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.ProjectId">
+            <summary>
+            Project ID: ID of the project to which the resource belongs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.BusinessCode">
+            <summary>
+            Product code
+            Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillDetailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailResponse.DetailSet">
+            <summary>
+            Details list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailResponse.Total">
+            <summary>
+            Total number of records
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillDetailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillDetailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.Offset">
+            <summary>
+            Offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.Limit">
+            <summary>
+            Quantity, maximum is 1000
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.Month">
+            <summary>
+            Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.PeriodType">
+            <summary>
+            The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.NeedRecordNum">
+            <summary>
+            Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
+            1 = yes, 0 = no
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.ActionType">
+            <summary>
+            Action type to query. Valid values:
+            Purchase
+            Renewal
+            Modify
+            Refund
+            Deduction
+            Hourly settlement
+            Daily settlement
+            Monthly settlement
+            Offline project deduction
+            Offline deduction
+            adjust-CR
+            adjust-DR
+            One-off RI Fee
+            Spot
+            Hourly RI fee
+            New monthly subscription
+            Monthly subscription renewal
+            Monthly subscription specification adjustment
+            Monthly subscription refund
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.ResourceId">
+            <summary>
+            ID of the instance to be queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.PayMode">
+            <summary>
+            Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.BusinessCode">
+            <summary>
+            Product code
+            Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryResponse.ResourceSummarySet">
+            <summary>
+            Resource summary list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryResponse.Total">
+            <summary>
+            Total number of resource summary lists
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillResourceSummaryResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeRequest.BeginTime">
+            <summary>
+            The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeRequest.EndTime">
+            <summary>
+            The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeRequest.PayerUin">
+            <summary>
+            Query bill data user's UIN
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeResponse.Ready">
+            <summary>
+            Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeResponse.SummaryOverview">
+            <summary>
+            Detailed cost distribution for all billing modes
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByPayModeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest.BeginTime">
+            <summary>
+            The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest.EndTime">
+            <summary>
+            The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest.PayerUin">
+            <summary>
+            Queries bill data user's UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest.PayType">
+            <summary>
+            A bill type, which corresponds to a subtotal type of L0 bills.
+            This parameter has become valid since v3.0 bills took effect in May 2021.
+            Valid values:
+            `consume`: consumption
+            `refund`: refund
+            `adjustment`: bill adjustment
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductResponse.Ready">
+            <summary>
+            Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductResponse.SummaryTotal">
+            <summary>
+            Total cost details
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductResponse.SummaryOverview">
+            <summary>
+            Cost distribution of all products
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProductResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectRequest.BeginTime">
+            <summary>
+            The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectRequest.EndTime">
+            <summary>
+            The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectRequest.PayerUin">
+            <summary>
+            Queries bill data user's UIN
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectResponse.Ready">
+            <summary>
+            Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectResponse.SummaryOverview">
+            <summary>
+            Detailed cost distribution for all projects
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByProjectResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionRequest.BeginTime">
+            <summary>
+            The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionRequest.EndTime">
+            <summary>
+            The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionRequest.PayerUin">
+            <summary>
+            Queries bill data user's UIN
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionResponse.Ready">
+            <summary>
+            Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionResponse.SummaryOverview">
+            <summary>
+            Detailed cost distribution for all regions
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByRegionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest.BeginTime">
+            <summary>
+            The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest.EndTime">
+            <summary>
+            The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest.TagKey">
+            <summary>
+            Cost allocation tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest.PayerUin">
+            <summary>
+            Payer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest.TagValue">
+            <summary>
+            Resource tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagResponse.Ready">
+            <summary>
+            Indicates whether or not the data is ready. `0`: not ready; `1`: ready.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagResponse.SummaryOverview">
+            <summary>
+            Details about cost distribution over different tags
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagResponse.SummaryTotal">
+            <summary>
+            Total cost
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeBillSummaryByTagResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateRequest.StartDate">
+            <summary>
+            The start date of the usage query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateRequest.EndDate">
+            <summary>
+            The end date of the usage query (end date must be in the same month as the start date)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateRequest.BucketName">
+            <summary>
+            Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateResponse.DetailSets">
+            <summary>
+            Array of usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeDosageCosDetailByDateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.Limit">
+            <summary>
+            The number of records per page. The default is 20, and the maximum is 1,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.Offset">
+            <summary>
+            The page number the records start from. The default is 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.Status">
+            <summary>
+            The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.VoucherId">
+            <summary>
+            The voucher ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.CodeId">
+            <summary>
+            The voucher order ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.ProductCode">
+            <summary>
+            The product code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.ActivityId">
+            <summary>
+            The campaign ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.VoucherName">
+            <summary>
+            The voucher name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.TimeFrom">
+            <summary>
+            The start time of the promotional campaign.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.TimeTo">
+            <summary>
+            The end time of the promotional campaign.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.SortField">
+            <summary>
+            The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.SortOrder">
+            <summary>
+            Whether to sort the records in ascending or descending order. Valid values: desc, asc.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.PayMode">
+            <summary>
+            The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.PayScene">
+            <summary>
+            If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.Operator">
+            <summary>
+            The operator. The default is the UIN of the current user.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoResponse.TotalCount">
+            <summary>
+            The total number of vouchers.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoResponse.TotalBalance">
+            <summary>
+            The total voucher balance. The value of this parameter is the total balance (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoResponse.VoucherInfos">
+            <summary>
+            The voucher information.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeVoucherInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest.Limit">
+            <summary>
+            The number of records per page. The default is 20, and the maximum is 1,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest.Offset">
+            <summary>
+            The page number the records start from. The default is 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest.VoucherId">
+            <summary>
+            The voucher ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest.Operator">
+            <summary>
+            The operator. The default is the UIN of the current.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsResponse.TotalCount">
+            <summary>
+            The total number of vouchers.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsResponse.TotalUsedAmount">
+            <summary>
+            The total amount used. The value of this parameter is the total amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsResponse.UsageRecords">
+            <summary>
+            The usage details.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.DescribeVoucherUsageDetailsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ExcludedProducts.GoodsName">
+            <summary>
+            The names of non-applicable products.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ExcludedProducts.PayMode">
+            <summary>
+            `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.ExcludedProducts.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.PayMode">
+            <summary>
+            Billing mode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.PayModeName">
+            <summary>
+            Billing mode name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.RealTotalCost">
+            <summary>
+            Actual cost
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.RealTotalCostRatio">
+            <summary>
+            Cost ratio, to two decimal points
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.Detail">
+            <summary>
+            Detailed summary of purchases by transaction type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.CashPayAmount">
+            <summary>
+            Cash amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.IncentivePayAmount">
+            <summary>
+            Trial credit amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.VoucherPayAmount">
+            <summary>
+            Voucher amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.TotalCost">
+            <summary>
+            The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.TransferPayAmount">
+            <summary>
+            Payment by commission credits
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.PayModeSummaryOverviewItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.ProjectName">
+            <summary>
+            Project name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.RealTotalCost">
+            <summary>
+            Actual cost
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.RealTotalCostRatio">
+            <summary>
+            Cost ratio, to two decimal points
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.CashPayAmount">
+            <summary>
+            Cash amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.IncentivePayAmount">
+            <summary>
+            Trial credit amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.VoucherPayAmount">
+            <summary>
+            Voucher amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.BillMonth">
+            <summary>
+            Billing month, e.g. `2019-08`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.TotalCost">
+            <summary>
+            The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.TransferPayAmount">
+            <summary>
+            Payment by commission credits
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.ProjectSummaryOverviewItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.RegionId">
+            <summary>
+            Region ID
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.RegionName">
+            <summary>
+            Region name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.RealTotalCost">
+            <summary>
+            Actual cost
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.RealTotalCostRatio">
+            <summary>
+            Cost ratio, to two decimal points
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.CashPayAmount">
+            <summary>
+            Cash amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.IncentivePayAmount">
+            <summary>
+            Trial credit amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.VoucherPayAmount">
+            <summary>
+            Voucher amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.BillMonth">
+            <summary>
+            Billing month, e.g. `2019-08`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.TotalCost">
+            <summary>
+            The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.TransferPayAmount">
+            <summary>
+            Payment by commission credits
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.RegionSummaryOverviewItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.SummaryTotal.RealTotalCost">
+            <summary>
+            Total cost
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.SummaryTotal.TotalCost">
+            <summary>
+            The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.SummaryTotal.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.TagValue">
+            <summary>
+            Tag value
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.RealTotalCost">
+            <summary>
+            Actual cost
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.RealTotalCostRatio">
+            <summary>
+            Cost percentage rounded to two decimal places
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.TotalCost">
+            <summary>
+            The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.CashPayAmount">
+            <summary>
+            Payment by cash credits
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.IncentivePayAmount">
+            <summary>
+            Payment by free credits
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.VoucherPayAmount">
+            <summary>
+            Payment by vouchers
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.TransferPayAmount">
+            <summary>
+            Payment by commission credits
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.TagSummaryOverviewItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.UsageDetails.ProductName">
+            <summary>
+            The name of the product.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.UsageDetails.SubProductName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.UsageDetails.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.UsageRecords.UsedAmount">
+            <summary>
+            The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.UsageRecords.UsedTime">
+            <summary>
+            The time when the voucher was used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.UsageRecords.UsageDetails">
+            <summary>
+            The details of the product purchased.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.UsageRecords.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.OwnerUin">
+            <summary>
+            The owner of the voucher.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.Status">
+            <summary>
+            The status of the voucher: `unUsed`, `used`, `delivered`, `cancel`, `overdue`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.NominalValue">
+            <summary>
+            The value of the voucher. The value of this parameter is the voucher value (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.Balance">
+            <summary>
+            The balance left. The value of this parameter is the balance left (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.VoucherId">
+            <summary>
+            The voucher ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.PayMode">
+            <summary>
+            `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.PayScene">
+            <summary>
+            If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.BeginTime">
+            <summary>
+            The start time of the validity period.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.EndTime">
+            <summary>
+            The end time of the validity period.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.ApplicableProducts">
+            <summary>
+            The products that are applicable.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Billing.V20180709.Models.VoucherInfos.ExcludedProducts">
+            <summary>
+            The products that are not applicable.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Billing.V20180709.Models.VoucherInfos.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

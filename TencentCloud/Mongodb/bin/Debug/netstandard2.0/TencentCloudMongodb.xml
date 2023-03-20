@@ -1,0 +1,2760 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudMongodb</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.AssignProject(TencentCloud.Mongodb.V20190725.Models.AssignProjectRequest)">
+            <summary>
+            This API is used to specify the project to which a TencentDB instance belongs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.AssignProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.AssignProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.AssignProjectSync(TencentCloud.Mongodb.V20190725.Models.AssignProjectRequest)">
+            <summary>
+            This API is used to specify the project to which a TencentDB instance belongs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.AssignProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.AssignProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.CreateBackupDBInstance(TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceRequest)">
+            <summary>
+            This API is used to create instance backups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.CreateBackupDBInstanceSync(TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceRequest)">
+            <summary>
+            This API is used to create instance backups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.CreateBackupDownloadTask(TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskRequest)">
+            <summary>
+            This API is used to create a backup download task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.CreateBackupDownloadTaskSync(TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskRequest)">
+            <summary>
+            This API is used to create a backup download task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.CreateDBInstance(TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest)">
+            <summary>
+            This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.CreateDBInstanceSync(TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest)">
+            <summary>
+            This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.CreateDBInstanceHour(TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest)">
+            <summary>
+            This API is used to create a pay-as-you-go TencentDB for MongoDB instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.CreateDBInstanceHourSync(TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest)">
+            <summary>
+            This API is used to create a pay-as-you-go TencentDB for MongoDB instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeAsyncRequestInfo(TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoRequest)">
+            <summary>
+            This API is used to query async task status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeAsyncRequestInfoSync(TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoRequest)">
+            <summary>
+            This API is used to query async task status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeBackupDownloadTask(TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest)">
+            <summary>
+            This API is used to query backup download task information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeBackupDownloadTaskSync(TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest)">
+            <summary>
+            This API is used to query backup download task information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeClientConnections(TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsRequest)">
+            <summary>
+            This API is used to query the client connection information of an instance, including the IP and number of connections. Currently, only instances of MongoDB 3.2 are supported.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeClientConnectionsSync(TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsRequest)">
+            <summary>
+            This API is used to query the client connection information of an instance, including the IP and number of connections. Currently, only instances of MongoDB 3.2 are supported.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeDBBackups(TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest)">
+            <summary>
+            This API is used to query the list of instance backups. Currently, only backups created in the last seven days can be queried.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeDBBackupsSync(TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest)">
+            <summary>
+            This API is used to query the list of instance backups. Currently, only backups created in the last seven days can be queried.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeDBInstanceDeal(TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealRequest)">
+            <summary>
+            This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeDBInstanceDealSync(TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealRequest)">
+            <summary>
+            This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeDBInstances(TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest)">
+            <summary>
+            This API is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, and instance status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeDBInstancesSync(TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest)">
+            <summary>
+            This API is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, and instance status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeInstanceParams(TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsRequest)">
+            <summary>
+            This API is used to query the modifiable parameter list of an instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeInstanceParamsSync(TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsRequest)">
+            <summary>
+            This API is used to query the modifiable parameter list of an instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeSecurityGroup(TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupRequest)">
+            <summary>
+            This API is used to query the security groups associated with an instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeSecurityGroupSync(TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupRequest)">
+            <summary>
+            This API is used to query the security groups associated with an instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeSlowLogPatterns(TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest)">
+            <summary>
+            This API is used to get the slow log statistics of a database instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeSlowLogPatternsSync(TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest)">
+            <summary>
+            This API is used to get the slow log statistics of a database instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeSlowLogs(TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest)">
+            <summary>
+            This API is used to get the slow log information of a TencentDB instance. Only slow logs for the last 7 days can be queried.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeSlowLogsSync(TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest)">
+            <summary>
+            This API is used to get the slow log information of a TencentDB instance. Only slow logs for the last 7 days can be queried.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeSpecInfo(TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoRequest)">
+            <summary>
+            This API is used to query the purchasable instance specifications.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.DescribeSpecInfoSync(TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoRequest)">
+            <summary>
+            This API is used to query the purchasable instance specifications.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.FlushInstanceRouterConfig(TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigRequest)">
+            <summary>
+            This API is used to run the `FlushRouterConfig` command on all mongos instances.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.FlushInstanceRouterConfigSync(TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigRequest)">
+            <summary>
+            This API is used to run the `FlushRouterConfig` command on all mongos instances.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.InquirePriceCreateDBInstances(TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest)">
+            <summary>
+            This API is used to query price of instance creation. The `region` parameter must be passed in this API, otherwise verification will fail. This API allows queries only for purchasable instance specifications.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.InquirePriceCreateDBInstancesSync(TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest)">
+            <summary>
+            This API is used to query price of instance creation. The `region` parameter must be passed in this API, otherwise verification will fail. This API allows queries only for purchasable instance specifications.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.InquirePriceModifyDBInstanceSpec(TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest)">
+            <summary>
+            This API is used to query price of instance specification adjustment.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.InquirePriceModifyDBInstanceSpecSync(TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest)">
+            <summary>
+            This API is used to query price of instance specification adjustment.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.InquirePriceRenewDBInstances(TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesRequest)">
+            <summary>
+            This API is used to query the renewal price of a monthly subscription instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.InquirePriceRenewDBInstancesSync(TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesRequest)">
+            <summary>
+            This API is used to query the renewal price of a monthly subscription instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.IsolateDBInstance(TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceRequest)">
+            <summary>
+            This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. An isolated instance is retained in the recycle bin and data can no longer be written to it. After it is isolated for a certain period of time, it will be completely deleted. For the retention period in the recycle bin, please see the terms of service for pay-as-you-go billing. Isolated pay-as-you-go instances cannot be recovered, so please proceed with caution.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.IsolateDBInstanceSync(TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceRequest)">
+            <summary>
+            This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. An isolated instance is retained in the recycle bin and data can no longer be written to it. After it is isolated for a certain period of time, it will be completely deleted. For the retention period in the recycle bin, please see the terms of service for pay-as-you-go billing. Isolated pay-as-you-go instances cannot be recovered, so please proceed with caution.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.ModifyDBInstanceNetworkAddress(TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest)">
+            <summary>
+            This API is used to modify the network settings of a TencentDB instance, such as switching its network type from classic network to VPC or between VPCs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.ModifyDBInstanceNetworkAddressSync(TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest)">
+            <summary>
+            This API is used to modify the network settings of a TencentDB instance, such as switching its network type from classic network to VPC or between VPCs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.ModifyDBInstanceSecurityGroup(TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupRequest)">
+            <summary>
+            This API is used to modify the security groups associated with an instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.ModifyDBInstanceSecurityGroupSync(TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupRequest)">
+            <summary>
+            This API is used to modify the security groups associated with an instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.ModifyDBInstanceSpec(TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest)">
+            <summary>
+            This API is used to adjust the specification configuration of a TencentDB for MongoDB. The purchasable specifications supported by the API can be obtained through the DescribeSpecInfo API.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.ModifyDBInstanceSpecSync(TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest)">
+            <summary>
+            This API is used to adjust the specification configuration of a TencentDB for MongoDB. The purchasable specifications supported by the API can be obtained through the DescribeSpecInfo API.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.OfflineIsolatedDBInstance(TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceRequest)">
+            <summary>
+            This API is used to deactivate isolated TencentDB instances immediately. The instances must be in isolated status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.OfflineIsolatedDBInstanceSync(TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceRequest)">
+            <summary>
+            This API is used to deactivate isolated TencentDB instances immediately. The instances must be in isolated status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.RenameInstance(TencentCloud.Mongodb.V20190725.Models.RenameInstanceRequest)">
+            <summary>
+            This API is used to rename a TencentDB instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.RenameInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.RenameInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.RenameInstanceSync(TencentCloud.Mongodb.V20190725.Models.RenameInstanceRequest)">
+            <summary>
+            This API is used to rename a TencentDB instance.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.RenameInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.RenameInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.RenewDBInstances(TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesRequest)">
+            <summary>
+            This API is used to renew a monthly subscription TencentDB instance. Only monthly subscription instances are supported, while pay-as-you-go instances do not need to be renewed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.RenewDBInstancesSync(TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesRequest)">
+            <summary>
+            This API is used to renew a monthly subscription TencentDB instance. Only monthly subscription instances are supported, while pay-as-you-go instances do not need to be renewed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.ResetDBInstancePassword(TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordRequest)">
+            <summary>
+            This API is used to modify instance password.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.MongodbClient.ResetDBInstancePasswordSync(TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordRequest)">
+            <summary>
+            This API is used to modify instance password.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.AssignProjectRequest.InstanceIds">
+            <summary>
+            List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.AssignProjectRequest.ProjectId">
+            <summary>
+            Unique ID of an existing project (instead of a new project).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.AssignProjectRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.AssignProjectResponse.FlowIds">
+            <summary>
+            List of the returned async task IDs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.AssignProjectResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.AssignProjectResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.CreateTime">
+            <summary>
+            Task creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.BackupName">
+            <summary>
+            Backup name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.ReplicaSetId">
+            <summary>
+            Shard name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.BackupSize">
+            <summary>
+            Backup size in bytes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.Status">
+            <summary>
+            Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.Percent">
+            <summary>
+            Task progress in percentage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.TimeSpend">
+            <summary>
+            Task duration in seconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.Url">
+            <summary>
+            Backup download address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.BackupMethod">
+            <summary>
+            Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.BackupDesc">
+            <summary>
+            Backup description you set when starting a backup task
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTask.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTaskStatus.ReplicaSetId">
+            <summary>
+            Shard name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTaskStatus.Status">
+            <summary>
+            Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.BackupDownloadTaskStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.BackupType">
+            <summary>
+            Backup mode. 0: automatic backup; 1: manual backup
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.BackupName">
+            <summary>
+            Backup name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.BackupDesc">
+            <summary>
+            Backup remarks
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.BackupSize">
+            <summary>
+            Backup file size in KB
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.StartTime">
+            <summary>
+            Backup start time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.EndTime">
+            <summary>
+            Backup end time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.Status">
+            <summary>
+            Backup status. 1: backing up; 2: backed up successful
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.BackupInfo.BackupMethod">
+            <summary>
+            Backup method. 0: logical backup; 1: physical backup
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.BackupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ClientConnection.IP">
+            <summary>
+            Client IP of a connection
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ClientConnection.Count">
+            <summary>
+            Number of connections corresponding to a client IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ClientConnection.InternalService">
+            <summary>
+            Whether it is the Tencent Cloud IP for automated testing
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ClientConnection.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceRequest.BackupMethod">
+            <summary>
+            Valid values: 0 (logical backup), 1 (physical backup)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceRequest.BackupRemark">
+            <summary>
+            Backup remarks
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceResponse.AsyncRequestId">
+            <summary>
+            The status of the queried backup process.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.CreateBackupDBInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskRequest.InstanceId">
+            <summary>
+            Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskRequest.BackupName">
+            <summary>
+            The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskRequest.BackupSets" -->
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskResponse.Tasks">
+            <summary>
+            Download task status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.CreateBackupDownloadTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.Memory">
+            <summary>
+            Instance memory size in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.Volume">
+            <summary>
+            Instance disk size in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.ReplicateSetNum">
+            <summary>
+            Number of replica sets. When a replica set instance is created, this parameter must be set to 1. When a sharding instance is created, please see the parameters returned by the DescribeSpecInfo API
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.NodeNum">
+            <summary>
+            The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.MongoVersion">
+            <summary>
+            Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.MachineCode">
+            <summary>
+            Server type. HIO: high IO; HIO10G: 10-Gigabit high IO
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.GoodsNum">
+            <summary>
+            Number of instances. Minimum value: 1. Maximum value: 10
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.Zone">
+            <summary>
+            AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.ClusterType">
+            <summary>
+            Instance type. REPLSET: replica set; SHARD: sharding cluster
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.VpcId">
+            <summary>
+            VPC ID. If this parameter is not set, the basic network will be selected by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.SubnetId">
+            <summary>
+            VPC subnet ID. If VpcId is set, then SubnetId will be required
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.Password">
+            <summary>
+            Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.ProjectId">
+            <summary>
+            Project ID. If this parameter is not set, the default project will be used
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.Tags">
+            <summary>
+            Instance tag information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.Clone">
+            <summary>
+            Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.Father">
+            <summary>
+            Parent instance ID. It is required if the `Clone` is 3 or 4.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.SecurityGroup">
+            <summary>
+            Security group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.RestoreTime">
+            <summary>
+            The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.InstanceName">
+            <summary>
+            Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.AvailabilityZoneList">
+            <summary>
+            AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.MongosCpu">
+            <summary>
+            The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.MongosMemory">
+            <summary>
+            The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.MongosNodeNum">
+            <summary>
+            The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourResponse.DealId">
+            <summary>
+            Order ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourResponse.InstanceIds">
+            <summary>
+            List of IDs of created instances
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceHourResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.NodeNum">
+            <summary>
+            The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.Memory">
+            <summary>
+            Instance memory size in GB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.Volume">
+            <summary>
+            Instance disk size in GB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.MongoVersion">
+            <summary>
+            Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.GoodsNum">
+            <summary>
+            Number of instances. Minimum value: 1. Maximum value: 10.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.Zone">
+            <summary>
+            AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.Period">
+            <summary>
+            Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.MachineCode">
+            <summary>
+            Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.ClusterType">
+            <summary>
+            Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.ReplicateSetNum">
+            <summary>
+            Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.ProjectId">
+            <summary>
+            Project ID. If this parameter is not set, the default project will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.VpcId">
+            <summary>
+            VPC ID. If this parameter is not set, the classic network will be used. Please use the `DescribeVpcs` API to query the VPC list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.SubnetId">
+            <summary>
+            VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. Please use the `DescribeSubnets` API to query the subnet list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.Password">
+            <summary>
+            Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.Tags">
+            <summary>
+            Instance tag information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.AutoRenewFlag">
+            <summary>
+            Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.AutoVoucher">
+            <summary>
+            Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.Clone">
+            <summary>
+            Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.Father">
+            <summary>
+            Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.SecurityGroup">
+            <summary>
+            Security group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.RestoreTime">
+            <summary>
+            The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.InstanceName">
+            <summary>
+            Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.AvailabilityZoneList">
+            <summary>
+            AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.MongosCpu">
+            <summary>
+            The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.MongosMemory">
+            <summary>
+            The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.MongosNodeNum">
+            <summary>
+            The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.ReadonlyNodeNum">
+            <summary>
+            Number of read-only nodes. Value range: 2-7.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.ReadonlyNodeAvailabilityZoneList">
+            <summary>
+            The AZ where the read-only node is deployed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.HiddenZone">
+            <summary>
+            The AZ where the hidden node resides. It is required for cross-AZ instances.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceResponse.DealId">
+            <summary>
+            Order ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceResponse.InstanceIds">
+            <summary>
+            List of IDs of created instances.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.CreateDBInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DBInstanceInfo.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DBInstanceInfo.Region">
+            <summary>
+            Region information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DBInstanceInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DBInstancePrice.UnitPrice">
+            <summary>
+            Unit price.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DBInstancePrice.OriginalPrice">
+            <summary>
+            Original price.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DBInstancePrice.DiscountPrice">
+            <summary>
+            Discounted price.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DBInstancePrice.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoRequest.AsyncRequestId">
+            <summary>
+            Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoResponse.Status">
+            <summary>
+            Status. Valid values: `initial` (initializing), `running`, `paused` (paused due to failure), `undoed` (rolled back due to failure), `failed` (ended due to failure), `success`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeAsyncRequestInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.InstanceId">
+            <summary>
+            Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.BackupName">
+            <summary>
+            The name of a backup file with download tasks to be queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.StartTime">
+            <summary>
+            The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.EndTime">
+            <summary>
+            The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.Limit">
+            <summary>
+            The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.Offset">
+            <summary>
+            Offset for pagination. Default value: `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.OrderBy">
+            <summary>
+            The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.OrderByType">
+            <summary>
+            Sort order. Valid values: `asc`, `desc` (default).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.Status">
+            <summary>
+            The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskResponse.Tasks">
+            <summary>
+            The list of download tasks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeBackupDownloadTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsRequest.InstanceId">
+            <summary>
+            Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsRequest.Limit">
+            <summary>
+            Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsResponse.Clients">
+            <summary>
+            Client connection information, including client IP and number of connections
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsResponse.TotalCount">
+            <summary>
+            The total number of records that meet the query condition, which can be used for paginated queries.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeClientConnectionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest.InstanceId">
+            <summary>
+            Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest.BackupMethod">
+            <summary>
+            Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest.Limit">
+            <summary>
+            Number of entries per page. Maximum value: `100`. If this parameter is left empty, all entries will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest.Offset">
+            <summary>
+            Pagination offset, starting from `0`. Default value: `0`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsResponse.BackupList">
+            <summary>
+            Backup list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsResponse.TotalCount">
+            <summary>
+            Total number of backups
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeDBBackupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealRequest.DealId">
+            <summary>
+            Order ID. It is returned by the `CreateDBInstance` and other APIs.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealResponse.Status">
+            <summary>
+            Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealResponse.OriginalPrice">
+            <summary>
+            Original price of the order.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealResponse.DiscountPrice">
+            <summary>
+            Discounted price of the order.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealResponse.Action">
+            <summary>
+            Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstanceDealResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.InstanceIds">
+            <summary>
+            List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.InstanceType">
+            <summary>
+            Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.ClusterType">
+            <summary>
+            Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.Status">
+            <summary>
+            Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.VpcId">
+            <summary>
+            VPC ID. This parameter can be left empty for the basic network
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.SubnetId">
+            <summary>
+            Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.PayMode">
+            <summary>
+            Billing type. Valid value: 0 (pay-as-you-go)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.Limit">
+            <summary>
+            Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.Offset">
+            <summary>
+            Offset. Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.OrderBy">
+            <summary>
+            Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.OrderByType">
+            <summary>
+            Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.ProjectIds">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.SearchKey">
+            <summary>
+            Search keyword, which can be instance ID, instance name, or complete IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.Tags">
+            <summary>
+            Tag information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesResponse.TotalCount">
+            <summary>
+            Number of eligible instances.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesResponse.InstanceDetails">
+            <summary>
+            List of instance details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeDBInstancesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse.InstanceEnumParam">
+            <summary>
+            The collection of enum parameters
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse.InstanceIntegerParam">
+            <summary>
+            The collection of integer parameters
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse.InstanceTextParam">
+            <summary>
+            The collection of text parameters
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse.InstanceMultiParam">
+            <summary>
+            The collection of string parameters used to represent time ranges
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse.TotalCount">
+            <summary>
+            The total number of modifiable parameters of the instance, such as 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeInstanceParamsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupRequest.InstanceId">
+            <summary>
+            Instance ID in the format of "cmgo-p8vnipr5"
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupResponse.Groups">
+            <summary>
+            Security groups associated with the instance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeSecurityGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest.InstanceId">
+            <summary>
+            Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest.StartTime">
+            <summary>
+            Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest.EndTime">
+            <summary>
+            End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest.SlowMS">
+            <summary>
+            Threshold of slow log execution time in milliseconds. Minimum value: 100. Slow logs whose execution time exceeds the threshold will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest.Offset">
+            <summary>
+            Offset. Minimum value: 0. Maximum value: 10000. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest.Limit">
+            <summary>
+            Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest.Format">
+            <summary>
+            Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsResponse.Count">
+            <summary>
+            Total number of slow logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsResponse.SlowLogPatterns">
+            <summary>
+            Slow log statistics
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogPatternsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest.InstanceId">
+            <summary>
+            Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest.StartTime">
+            <summary>
+            Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest.EndTime">
+            <summary>
+            End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest.SlowMS">
+            <summary>
+            Threshold of slow log execution time in milliseconds. Minimum value: 100. Slow logs whose execution time exceeds the threshold will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest.Offset">
+            <summary>
+            Offset. Minimum value: 0. Maximum value: 10000. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest.Limit">
+            <summary>
+            Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest.Format">
+            <summary>
+            Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsResponse.Count">
+            <summary>
+            Total number of slow logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsResponse.SlowLogs">
+            <summary>
+            Slow log details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeSlowLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoRequest.Zone">
+            <summary>
+            AZ to be queried
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoResponse.SpecInfoList">
+            <summary>
+            List of purchasable instance specifications
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.DescribeSpecInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.FlushInstanceRouterConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.Zone">
+            <summary>
+            Instance region name in the format of ap-guangzhou-2.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.NodeNum" -->
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.Memory">
+            <summary>
+            Instance memory size in GB.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.Volume" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.MongoVersion" -->
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.MachineCode">
+            <summary>
+            Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.GoodsNum">
+            <summary>
+            Number of instances. Minimum value: 1. Maximum value: 10.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.ClusterType">
+            <summary>
+            Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.ReplicateSetNum">
+            <summary>
+            Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.Period">
+            <summary>
+            Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.InstanceChargeType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.MongosCpu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.MongosMemory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.MongosNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.ConfigServerCpu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.ConfigServerMemory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.ConfigServerVolume">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesResponse.Price">
+            <summary>
+            Price.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InquirePriceCreateDBInstancesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest.InstanceId">
+            <summary>
+            Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest.Memory">
+            <summary>
+            Instance memory size in GB after specification adjustment.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest.Volume">
+            <summary>
+            Instance disk size in GB after specification adjustment.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest.NodeNum">
+            <summary>
+            Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest.ReplicateSetNum">
+            <summary>
+            Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecResponse.Price">
+            <summary>
+            Price.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InquirePriceModifyDBInstanceSpecResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesRequest.InstanceIds">
+            <summary>
+            Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console. This API supports operations on up to 5 instances at a time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesRequest.InstanceChargePrepaid">
+            <summary>
+            The parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set automatic renewal, and other attributes of the monthly subscription instance.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesResponse.Price">
+            <summary>
+            Price.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InquirePriceRenewDBInstancesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceChargePrepaid.Period">
+            <summary>
+            Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
+            (This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceChargePrepaid.RenewFlag">
+            <summary>
+            Auto-renewal flag. Valid values:
+            `NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
+            `NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
+            `DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
+            
+            Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+            (This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InstanceChargePrepaid.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.InstanceName">
+            <summary>
+            Instance name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.PayMode">
+            <summary>
+            Billing type. Valid value: 0 (pay-as-you-go)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ClusterType">
+            <summary>
+            Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Region">
+            <summary>
+            Region information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Zone">
+            <summary>
+            AZ information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.NetType">
+            <summary>
+            Network type. Valid values: 0 (basic network), 1 (VPC)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.VpcId">
+            <summary>
+            VPC ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.SubnetId">
+            <summary>
+            Subnet ID of VPC
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Status">
+            <summary>
+            Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Vip">
+            <summary>
+            Instance IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Vport">
+            <summary>
+            Port number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.CreateTime">
+            <summary>
+            Instance creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.DeadLine">
+            <summary>
+            Instance expiration time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.MongoVersion">
+            <summary>
+            Instance version information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Memory">
+            <summary>
+            Instance memory size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Volume">
+            <summary>
+            Instance disk size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.CpuNum">
+            <summary>
+            Number of CPU cores of an instance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.MachineType">
+            <summary>
+            Instance machine type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.SecondaryNum">
+            <summary>
+            Number of secondary nodes of an instance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ReplicationSetNum">
+            <summary>
+            Number of instance shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.AutoRenewFlag">
+            <summary>
+            Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.UsedVolume">
+            <summary>
+            Used capacity in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.MaintenanceStart">
+            <summary>
+            Start time of the maintenance time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.MaintenanceEnd">
+            <summary>
+            End time of the maintenance time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ReplicaSets">
+            <summary>
+            Shard information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ReadonlyInstances">
+            <summary>
+            Information of read-only instances
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.StandbyInstances">
+            <summary>
+            Information of disaster recovery instances
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.CloneInstances">
+            <summary>
+            Information of temp instances
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.RelatedInstance">
+            <summary>
+            Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Tags">
+            <summary>
+            Instance tag information set
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.InstanceVer">
+            <summary>
+            Instance version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ClusterVer">
+            <summary>
+            Instance version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.Protocol">
+            <summary>
+            Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.InstanceType">
+            <summary>
+            Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.InstanceStatusDesc">
+            <summary>
+            Instance status description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.RealInstanceId">
+            <summary>
+            Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.MongosNodeNum">
+            <summary>
+            Number of mongos nodes
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.MongosMemory">
+            <summary>
+            mongos node memory
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.MongosCpuNum">
+            <summary>
+            Number of mongos nodes
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ConfigServerNodeNum">
+            <summary>
+            Number of ConfigServer nodes
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ConfigServerMemory">
+            <summary>
+            Memory of ConfigServer node
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ConfigServerVolume">
+            <summary>
+            Disk size of ConfigServer node
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ConfigServerCpuNum">
+            <summary>
+            CPU number of ConfigServer node
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ReadonlyNodeNum">
+            <summary>
+            Number of read-only nodes
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InstanceDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.CurrentValue">
+            <summary>
+            Current value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.DefaultValue">
+            <summary>
+            Default value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.EnumValue">
+            <summary>
+            Acceptable values
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.NeedRestart">
+            <summary>
+            Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.ParamName">
+            <summary>
+            Parameter name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.Tips">
+            <summary>
+            Parameter description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.ValueType">
+            <summary>
+            Data type of the parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.Status">
+            <summary>
+            Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InstanceEnumParam.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.CurrentValue">
+            <summary>
+            Current value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.DefaultValue">
+            <summary>
+            Default value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.Max">
+            <summary>
+            Maximum value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.Min">
+            <summary>
+            Minimum value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.NeedRestart">
+            <summary>
+            Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.ParamName">
+            <summary>
+            Parameter name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.Tips">
+            <summary>
+            Parameter description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.ValueType">
+            <summary>
+            Data type of the parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.Status">
+            <summary>
+            Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.Unit">
+            <summary>
+            Redundant field which can be ignored
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InstanceIntegerParam.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.CurrentValue">
+            <summary>
+            Current value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.DefaultValue">
+            <summary>
+            Default value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.EnumValue">
+            <summary>
+            Acceptable values
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.NeedRestart">
+            <summary>
+            Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.ParamName">
+            <summary>
+            Parameter name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.Status">
+            <summary>
+            Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.Tips">
+            <summary>
+            Parameter description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.ValueType">
+            <summary>
+            Data type of the current value. Default value: `multi`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InstanceMultiParam.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.CurrentValue">
+            <summary>
+            Current value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.DefaultValue">
+            <summary>
+            Default value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.NeedRestart">
+            <summary>
+            Whether to restart the instance for the parameter to take effect
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.ParamName">
+            <summary>
+            Parameter name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.TextValue">
+            <summary>
+            Value of a text parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.Tips">
+            <summary>
+            Parameter description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.ValueType">
+            <summary>
+            Value type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.Status">
+            <summary>
+            Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.InstanceTextParam.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceRequest.InstanceId">
+            <summary>
+            Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceResponse.AsyncRequestId">
+            <summary>
+            Async task request ID, which can be used to query the execution result of an async task.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.IsolateDBInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest.OldIpExpiredTime">
+            <summary>
+            Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest.NewUniqVpcId">
+            <summary>
+            ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest.NewUniqSubnetId">
+            <summary>
+            ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest.NetworkAddresses">
+            <summary>
+            IP information to be modified
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceNetworkAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupRequest.SecurityGroupIds">
+            <summary>
+            Target security group IDs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSecurityGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest.InstanceId">
+            <summary>
+            Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest.Memory">
+            <summary>
+            Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest.Volume">
+            <summary>
+            Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest.OplogSize">
+            <summary>
+            Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest.NodeNum">
+            <summary>
+            Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest.ReplicateSetNum">
+            <summary>
+            Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest.InMaintenance">
+            <summary>
+            Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecResponse.DealId">
+            <summary>
+            Order ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ModifyDBInstanceSpecResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyNetworkAddress.NewIPAddress">
+            <summary>
+            New IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ModifyNetworkAddress.OldIpAddress">
+            <summary>
+            Old IP
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ModifyNetworkAddress.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceRequest.InstanceId">
+            <summary>
+            Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceResponse.AsyncRequestId">
+            <summary>
+            Async task request ID, which can be used to query the execution result of an async task.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.OfflineIsolatedDBInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.RenameInstanceRequest.InstanceId">
+            <summary>
+            Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.RenameInstanceRequest.NewName">
+            <summary>
+            Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.RenameInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.RenameInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.RenameInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesRequest.InstanceIds">
+            <summary>
+            IDs of one or more instances to be operated. The value can be obtained from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 100 instances can be requested at a time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesRequest.InstanceChargePrepaid">
+            <summary>
+            The parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set automatic renewal, and other attributes of the monthly subscription instance. This parameter is mandatory in monthly subscription.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.RenewDBInstancesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ReplicaSetInfo.ReplicaSetId">
+            <summary>
+            Replica set ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ReplicaSetInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordRequest.UserName">
+            <summary>
+            Instance account name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordRequest.Password">
+            <summary>
+            New password, which must contain at least eight characters
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordResponse.AsyncRequestId">
+            <summary>
+            Async request ID, which is used to query the running status of the process.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ResetDBInstancePasswordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroup.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroup.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroup.Inbound">
+            <summary>
+            Inbound rule
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroup.Outbound">
+            <summary>
+            Outbound rule
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroup.SecurityGroupId">
+            <summary>
+            Security group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroup.SecurityGroupName">
+            <summary>
+            Security group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroup.SecurityGroupRemark">
+            <summary>
+            Security group remarks
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.SecurityGroup.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.Action">
+            <summary>
+            Execution rule. Valid values: `ACCEPT`, `DROP`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.CidrIp">
+            <summary>
+            IP range
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.PortRange">
+            <summary>
+            Port range
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.IpProtocol">
+            <summary>
+            Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.Id">
+            <summary>
+            All the addresses that the security group ID represents
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.AddressModule">
+            <summary>
+            All the addresses that the address group ID represents
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.ServiceModule">
+            <summary>
+            All the protocols and ports that the service group ID represents
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.Desc">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.SecurityGroupBound.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ShardInfo.UsedVolume">
+            <summary>
+            Used shard capacity
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ShardInfo.ReplicaSetId">
+            <summary>
+            Shard ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ShardInfo.ReplicaSetName">
+            <summary>
+            Shard name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ShardInfo.Memory">
+            <summary>
+            Shard memory size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ShardInfo.Volume">
+            <summary>
+            Shard disk size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ShardInfo.OplogSize">
+            <summary>
+            Shard oplog size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ShardInfo.SecondaryNum">
+            <summary>
+            Number of secondary nodes of a shard
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.ShardInfo.RealReplicaSetId">
+            <summary>
+            Shard physical ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.ShardInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SlowLogPattern.Pattern">
+            <summary>
+            Slow log pattern
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SlowLogPattern.MaxTime">
+            <summary>
+            Maximum execution time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SlowLogPattern.AverageTime">
+            <summary>
+            Average execution time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SlowLogPattern.Total">
+            <summary>
+            Number of slow logs in this pattern
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.SlowLogPattern.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.SpecCode">
+            <summary>
+            Specification information identifier
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.Status">
+            <summary>
+            Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.Cpu">
+            <summary>
+            Computing resource specification in terms of CPU core
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.Memory">
+            <summary>
+            Memory size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.DefaultStorage">
+            <summary>
+            Default disk size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MaxStorage">
+            <summary>
+            Maximum disk size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MinStorage">
+            <summary>
+            Minimum disk size in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.Qps">
+            <summary>
+            Maximum QPS
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.Conns">
+            <summary>
+            Maximum number of connections
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MongoVersionCode">
+            <summary>
+            MongoDB version information of an instance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MongoVersionValue">
+            <summary>
+            MongoDB version number of an instance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.Version">
+            <summary>
+            MongoDB version number of an instance (short)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.EngineName">
+            <summary>
+            Storage engine
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.ClusterType">
+            <summary>
+            Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MinNodeNum">
+            <summary>
+            Minimum number of secondary nodes in a replica set
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MaxNodeNum">
+            <summary>
+            Maximum number of secondary nodes in a replica set
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MinReplicateSetNum">
+            <summary>
+            Minimum number of shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MaxReplicateSetNum">
+            <summary>
+            Maximum number of shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MinReplicateSetNodeNum">
+            <summary>
+            Minimum number of secondary nodes in a shard
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MaxReplicateSetNodeNum">
+            <summary>
+            Maximum number of secondary nodes in a shard
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecItem.MachineType">
+            <summary>
+            Server type. Valid values: 0 (HIO), 4 (HIO10G)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.SpecItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecificationInfo.Region">
+            <summary>
+            Region information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecificationInfo.Zone">
+            <summary>
+            AZ information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecificationInfo.SpecItems">
+            <summary>
+            Purchasable specification information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.SpecificationInfo.SupportMultiAZ">
+            <summary>
+            Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.SpecificationInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.TagInfo.TagKey">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mongodb.V20190725.Models.TagInfo.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mongodb.V20190725.Models.TagInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

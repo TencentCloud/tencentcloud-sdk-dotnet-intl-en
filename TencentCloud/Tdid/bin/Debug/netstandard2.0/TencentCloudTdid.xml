@@ -1,0 +1,3371 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudTdid</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.AddLabel(TencentCloud.Tdid.V20210519.Models.AddLabelRequest)">
+            <summary>
+            This API is used to add a label to a DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.AddLabelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.AddLabelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.AddLabelSync(TencentCloud.Tdid.V20210519.Models.AddLabelRequest)">
+            <summary>
+            This API is used to add a label to a DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.AddLabelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.AddLabelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CancelAuthorityIssuer(TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerRequest)">
+            <summary>
+            This API is used to revoke the certification of an issuing authority.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CancelAuthorityIssuerSync(TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerRequest)">
+            <summary>
+            This API is used to revoke the certification of an issuing authority.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CheckChain(TencentCloud.Tdid.V20210519.Models.CheckChainRequest)">
+            <summary>
+            This API is used to get blockchain information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CheckChainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CheckChainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CheckChainSync(TencentCloud.Tdid.V20210519.Models.CheckChainRequest)">
+            <summary>
+            This API is used to get blockchain information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CheckChainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CheckChainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CheckDidDeploy(TencentCloud.Tdid.V20210519.Models.CheckDidDeployRequest)">
+            <summary>
+            This API is used to query a deployment task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CheckDidDeployRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CheckDidDeployResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CheckDidDeploySync(TencentCloud.Tdid.V20210519.Models.CheckDidDeployRequest)">
+            <summary>
+            This API is used to query a deployment task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CheckDidDeployRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CheckDidDeployResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateCredential(TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest)">
+            <summary>
+            This API is used to create a credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateCredentialResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateCredentialSync(TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest)">
+            <summary>
+            This API is used to create a credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateCredentialResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateDidService(TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest)">
+            <summary>
+            This API is used to create a DID service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateDidServiceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateDidServiceSync(TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest)">
+            <summary>
+            This API is used to create a DID service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateDidServiceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateLabel(TencentCloud.Tdid.V20210519.Models.CreateLabelRequest)">
+            <summary>
+            This API is used to create a label.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateLabelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateLabelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateLabelSync(TencentCloud.Tdid.V20210519.Models.CreateLabelRequest)">
+            <summary>
+            This API is used to create a label.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateLabelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateLabelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateSelectiveCredential(TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialRequest)">
+            <summary>
+            This API is used to create a selective disclosure credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateSelectiveCredentialSync(TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialRequest)">
+            <summary>
+            This API is used to create a selective disclosure credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateTDid(TencentCloud.Tdid.V20210519.Models.CreateTDidRequest)">
+            <summary>
+            This API is used to create an organization DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateTDidSync(TencentCloud.Tdid.V20210519.Models.CreateTDidRequest)">
+            <summary>
+            This API is used to create an organization DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateTDidByPrivateKey(TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyRequest)">
+            <summary>
+            This API is used to generate a TDID by private key.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateTDidByPrivateKeySync(TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyRequest)">
+            <summary>
+            This API is used to generate a TDID by private key.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateTDidByPublicKey(TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest)">
+            <summary>
+             This API is used to generate a TDID by public key.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.CreateTDidByPublicKeySync(TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest)">
+            <summary>
+             This API is used to generate a TDID by public key.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.DeployByName(TencentCloud.Tdid.V20210519.Models.DeployByNameRequest)">
+            <summary>
+            This API is used to deploy a TDID contract by name.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.DeployByNameRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.DeployByNameResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.DeployByNameSync(TencentCloud.Tdid.V20210519.Models.DeployByNameRequest)">
+            <summary>
+            This API is used to deploy a TDID contract by name.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.DeployByNameRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.DeployByNameResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.DownCpt(TencentCloud.Tdid.V20210519.Models.DownCptRequest)">
+            <summary>
+            This API is used to download a claim protocol type (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.DownCptRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.DownCptResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.DownCptSync(TencentCloud.Tdid.V20210519.Models.DownCptRequest)">
+            <summary>
+            This API is used to download a claim protocol type (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.DownCptRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.DownCptResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.EnableHash(TencentCloud.Tdid.V20210519.Models.EnableHashRequest)">
+            <summary>
+            This API is used to enable a contract.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.EnableHashRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.EnableHashResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.EnableHashSync(TencentCloud.Tdid.V20210519.Models.EnableHashRequest)">
+            <summary>
+            This API is used to enable a contract.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.EnableHashRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.EnableHashResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetAgencyTDid(TencentCloud.Tdid.V20210519.Models.GetAgencyTDidRequest)">
+            <summary>
+            该接口已废弃
+            
+            This API is used to get the DID details of the current organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetAgencyTDidSync(TencentCloud.Tdid.V20210519.Models.GetAgencyTDidRequest)">
+            <summary>
+            该接口已废弃
+            
+            This API is used to get the DID details of the current organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetAuthoritiesList(TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest)">
+            <summary>
+            This API is used to query authorities.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetAuthoritiesListSync(TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest)">
+            <summary>
+            This API is used to query authorities.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetAuthorityIssuer(TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerRequest)">
+            <summary>
+            This API is used to get the information of an issuing authority.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetAuthorityIssuerSync(TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerRequest)">
+            <summary>
+            This API is used to get the information of an issuing authority.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetConsortiumClusterList(TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListRequest)">
+            <summary>
+            This API is used to query the BCOS networks of a consortium.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetConsortiumClusterListSync(TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListRequest)">
+            <summary>
+            This API is used to query the BCOS networks of a consortium.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetConsortiumList(TencentCloud.Tdid.V20210519.Models.GetConsortiumListRequest)">
+            <summary>
+            This API is used to query consortiums.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetConsortiumListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetConsortiumListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetConsortiumListSync(TencentCloud.Tdid.V20210519.Models.GetConsortiumListRequest)">
+            <summary>
+            This API is used to query consortiums.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetConsortiumListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetConsortiumListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCptInfo(TencentCloud.Tdid.V20210519.Models.GetCptInfoRequest)">
+            <summary>
+            This API is used to get the information of a claim protocol type (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCptInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCptInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCptInfoSync(TencentCloud.Tdid.V20210519.Models.GetCptInfoRequest)">
+            <summary>
+            This API is used to get the information of a claim protocol type (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCptInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCptInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCptList(TencentCloud.Tdid.V20210519.Models.GetCptListRequest)">
+            <summary>
+            This API is used to query claim protocol types (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCptListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCptListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCptListSync(TencentCloud.Tdid.V20210519.Models.GetCptListRequest)">
+            <summary>
+            This API is used to query claim protocol types (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCptListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCptListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCredentialCptRank(TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankRequest)">
+            <summary>
+            This API is used to get the rankings of claim protocol types (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCredentialCptRankSync(TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankRequest)">
+            <summary>
+            This API is used to get the rankings of claim protocol types (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCredentialIssueRank(TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankRequest)">
+            <summary>
+            This API is used to get the rankings of issuers.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCredentialIssueRankSync(TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankRequest)">
+            <summary>
+            This API is used to get the rankings of issuers.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCredentialIssueTrend(TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendRequest)">
+            <summary>
+            This API is used to query credential issuing trends.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCredentialIssueTrendSync(TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendRequest)">
+            <summary>
+            This API is used to query credential issuing trends.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCredentialStatus(TencentCloud.Tdid.V20210519.Models.GetCredentialStatusRequest)">
+            <summary>
+            This API is used to query the on-chain status of a credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetCredentialStatusSync(TencentCloud.Tdid.V20210519.Models.GetCredentialStatusRequest)">
+            <summary>
+            This API is used to query the on-chain status of a credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDataPanel(TencentCloud.Tdid.V20210519.Models.GetDataPanelRequest)">
+            <summary>
+            This API is used to query the overall statistics of a network.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDataPanelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDataPanelSync(TencentCloud.Tdid.V20210519.Models.GetDataPanelRequest)">
+            <summary>
+            This API is used to query the overall statistics of a network.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDataPanelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDeployInfo(TencentCloud.Tdid.V20210519.Models.GetDeployInfoRequest)">
+            <summary>
+            This API is used to query the deployment information of a contract.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDeployInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDeployInfoSync(TencentCloud.Tdid.V20210519.Models.GetDeployInfoRequest)">
+            <summary>
+            This API is used to query the deployment information of a contract.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDeployInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDeployList(TencentCloud.Tdid.V20210519.Models.GetDeployListRequest)">
+            <summary>
+            This API is used to query deployed contracts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDeployListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDeployListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDeployListSync(TencentCloud.Tdid.V20210519.Models.GetDeployListRequest)">
+            <summary>
+            This API is used to query deployed contracts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDeployListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDeployListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidClusterDetail(TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailRequest)">
+            <summary>
+            This API is used to get the information of a DID blockchain network.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidClusterDetailSync(TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailRequest)">
+            <summary>
+            This API is used to get the information of a DID blockchain network.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidClusterList(TencentCloud.Tdid.V20210519.Models.GetDidClusterListRequest)">
+            <summary>
+            This API is used to query your DID networks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidClusterListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidClusterListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidClusterListSync(TencentCloud.Tdid.V20210519.Models.GetDidClusterListRequest)">
+            <summary>
+            This API is used to query your DID networks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidClusterListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidClusterListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidDetail(TencentCloud.Tdid.V20210519.Models.GetDidDetailRequest)">
+            <summary>
+            This API is used to get the information of a DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidDetailSync(TencentCloud.Tdid.V20210519.Models.GetDidDetailRequest)">
+            <summary>
+            This API is used to get the information of a DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidDocument(TencentCloud.Tdid.V20210519.Models.GetDidDocumentRequest)">
+            <summary>
+            This API is used to get the document of a DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidDocumentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidDocumentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidDocumentSync(TencentCloud.Tdid.V20210519.Models.GetDidDocumentRequest)">
+            <summary>
+            This API is used to get the document of a DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidDocumentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidDocumentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidList(TencentCloud.Tdid.V20210519.Models.GetDidListRequest)">
+            <summary>
+            This API is used to query DIDs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidListSync(TencentCloud.Tdid.V20210519.Models.GetDidListRequest)">
+            <summary>
+            This API is used to query DIDs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidRegisterTrend(TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendRequest)">
+            <summary>
+            This API is used to query DID registration trends.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidRegisterTrendSync(TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendRequest)">
+            <summary>
+            This API is used to query DID registration trends.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidServiceDetail(TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailRequest)">
+            <summary>
+            This API is used to get the information of a DID service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidServiceDetailSync(TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailRequest)">
+            <summary>
+            This API is used to get the information of a DID service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidServiceList(TencentCloud.Tdid.V20210519.Models.GetDidServiceListRequest)">
+            <summary>
+            This API is used to query DID services.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidServiceListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidServiceListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetDidServiceListSync(TencentCloud.Tdid.V20210519.Models.GetDidServiceListRequest)">
+            <summary>
+            This API is used to query DID services.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidServiceListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetDidServiceListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetGroupList(TencentCloud.Tdid.V20210519.Models.GetGroupListRequest)">
+            <summary>
+            This API is used to query main groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetGroupListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetGroupListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetGroupListSync(TencentCloud.Tdid.V20210519.Models.GetGroupListRequest)">
+            <summary>
+            This API is used to query main groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetGroupListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetGroupListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetLabelList(TencentCloud.Tdid.V20210519.Models.GetLabelListRequest)">
+            <summary>
+            This API is used to query labels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetLabelListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetLabelListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetLabelListSync(TencentCloud.Tdid.V20210519.Models.GetLabelListRequest)">
+            <summary>
+            This API is used to query labels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetLabelListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetLabelListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetPolicyList(TencentCloud.Tdid.V20210519.Models.GetPolicyListRequest)">
+            <summary>
+            This API is used to query disclosure policies.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetPolicyListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetPolicyListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetPolicyListSync(TencentCloud.Tdid.V20210519.Models.GetPolicyListRequest)">
+            <summary>
+            This API is used to query disclosure policies.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetPolicyListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetPolicyListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetPublicKey(TencentCloud.Tdid.V20210519.Models.GetPublicKeyRequest)">
+            <summary>
+            This API is used to get the public key of a DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetPublicKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetPublicKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.GetPublicKeySync(TencentCloud.Tdid.V20210519.Models.GetPublicKeyRequest)">
+            <summary>
+            This API is used to get the public key of a DID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.GetPublicKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.GetPublicKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.QueryPolicy(TencentCloud.Tdid.V20210519.Models.QueryPolicyRequest)">
+            <summary>
+            This API is used to get the information of a disclosure policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.QueryPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.QueryPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.QueryPolicySync(TencentCloud.Tdid.V20210519.Models.QueryPolicyRequest)">
+            <summary>
+            This API is used to get the information of a disclosure policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.QueryPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.QueryPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RecognizeAuthorityIssuer(TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerRequest)">
+            <summary>
+            This API is used to certify an issuing authority.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RecognizeAuthorityIssuerSync(TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerRequest)">
+            <summary>
+            This API is used to certify an issuing authority.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RegisterClaimPolicy(TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyRequest)">
+            <summary>
+            This API is used to register a disclosure policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RegisterClaimPolicySync(TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyRequest)">
+            <summary>
+            This API is used to register a disclosure policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RegisterCpt(TencentCloud.Tdid.V20210519.Models.RegisterCptRequest)">
+            <summary>
+            This API is used to create a claim protocol type (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterCptRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterCptResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RegisterCptSync(TencentCloud.Tdid.V20210519.Models.RegisterCptRequest)">
+            <summary>
+            This API is used to create a claim protocol type (CPT).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterCptRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterCptResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RegisterIssuer(TencentCloud.Tdid.V20210519.Models.RegisterIssuerRequest)">
+            <summary>
+            This API is used to register an issuing authority.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterIssuerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterIssuerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RegisterIssuerSync(TencentCloud.Tdid.V20210519.Models.RegisterIssuerRequest)">
+            <summary>
+            This API is used to register an issuing authority.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterIssuerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RegisterIssuerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RemoveHash(TencentCloud.Tdid.V20210519.Models.RemoveHashRequest)">
+            <summary>
+            This API is used to delete a contract.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RemoveHashRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RemoveHashResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.RemoveHashSync(TencentCloud.Tdid.V20210519.Models.RemoveHashRequest)">
+            <summary>
+            This API is used to delete a contract.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.RemoveHashRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.RemoveHashResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.SetCredentialStatus(TencentCloud.Tdid.V20210519.Models.SetCredentialStatusRequest)">
+            <summary>
+            This API is used to change the on-chain status of a credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.SetCredentialStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.SetCredentialStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.SetCredentialStatusSync(TencentCloud.Tdid.V20210519.Models.SetCredentialStatusRequest)">
+            <summary>
+            This API is used to change the on-chain status of a credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.SetCredentialStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.SetCredentialStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.VerifyCredential(TencentCloud.Tdid.V20210519.Models.VerifyCredentialRequest)">
+            <summary>
+            This API is used to verify a credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.VerifyCredentialRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.VerifyCredentialResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.TdidClient.VerifyCredentialSync(TencentCloud.Tdid.V20210519.Models.VerifyCredentialRequest)">
+            <summary>
+            This API is used to verify a credential.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tdid.V20210519.Models.VerifyCredentialRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tdid.V20210519.Models.VerifyCredentialResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.AddLabelRequest.LabelId">
+            <summary>
+            The label ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.AddLabelRequest.Did">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.AddLabelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.AddLabelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.AddLabelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.Id">
+            <summary>
+            The authority ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.DidId">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.Did">
+            <summary>
+            The details of the DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.Name">
+            <summary>
+            The authority name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.Status">
+            <summary>
+            Whether the authority is certified. `1`: Yes; `2`: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.DidServiceId">
+            <summary>
+            The DID service ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.ContractAppId">
+            <summary>
+            The application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.Remark">
+            <summary>
+            Remarks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.RegisterTime">
+            <summary>
+            The registration time.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.RecognizeTime">
+            <summary>
+            The recognition time.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.CreateTime">
+            <summary>
+            The creation time.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.UpdateTime">
+            <summary>
+            The last updated time.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.AppName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Authority.LabelName">
+            <summary>
+            The on-chain label.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Authority.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ChainId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ChainName">
+            <summary>
+            The network name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.AgencyCount">
+            <summary>
+            The number of organizations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ConsortiumId">
+            <summary>
+            The consortium ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.CreateTime">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ExpireTime">
+            <summary>
+            The expiration time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ChainStatus">
+            <summary>
+            The network status.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ResourceId">
+            <summary>
+            The resource ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ClusterId">
+            <summary>
+            The cluster ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ConsortiumName">
+            <summary>
+            The consortium name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.AgencyId">
+            <summary>
+            The organization ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.AutoRenewFlag">
+            <summary>
+            The renewal status.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.TotalNetworkNode">
+            <summary>
+            The network mode.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.TotalCreateNode">
+            <summary>
+            The number of nodes created.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.TotalGroups">
+            <summary>
+            The total number of groups.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.BcosClusterItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerRequest.Did">
+            <summary>
+            The details of the DID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CancelAuthorityIssuerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckChainRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckChainRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckChainRequest.AgencyName">
+            <summary>
+            The name of the DID organization.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CheckChainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckChainResponse.RoleType">
+            <summary>
+            Whether you are the owner of the consortium. `1`: Yes; `0`: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckChainResponse.ChainId">
+            <summary>
+            The chain ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckChainResponse.AppName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckChainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CheckChainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckDidDeployRequest.TaskId">
+            <summary>
+            The task ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CheckDidDeployRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckDidDeployResponse.Task">
+            <summary>
+            The service information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CheckDidDeployResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CheckDidDeployResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.ConsortiumItem.Id">
+            <summary>
+            The consortium ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.ConsortiumItem.Name">
+            <summary>
+            The consortium name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.ConsortiumItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Contract.ApplyName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Contract.Enable">
+            <summary>
+            The contract status. `true`: Enabled; `false`: Not enabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Contract.Hash">
+            <summary>
+            The CNS address of the contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Contract.HashShow">
+            <summary>
+            The desensitized CNS address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Contract.WeId">
+            <summary>
+            The DID of the organization that deployed the contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Contract.DeployName">
+            <summary>
+            The name of the organization that deployed the contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Contract.GroupId">
+            <summary>
+            The group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Contract.CreateTime">
+            <summary>
+            The deployment time.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Contract.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptIssueRank.CptName">
+            <summary>
+            The (claim protocol type) CPT name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptIssueRank.Rank">
+            <summary>
+            The ranking.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptIssueRank.Count">
+            <summary>
+            The number of credentials issued.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptIssueRank.ApplyName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptIssueRank.ApplyId">
+            <summary>
+            The application ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CptIssueRank.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.Id">
+            <summary>
+            The CPT ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.Name">
+            <summary>
+            The name of the claim protocol type (CPT).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.ServiceId">
+            <summary>
+            The service ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.ContractAppId">
+            <summary>
+            The application ID of the contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.CptId">
+            <summary>
+            The claim protocol type (CPT) ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.CptType">
+            <summary>
+            The type. `1`: System CPTs; `2`: Authorization CPTs; `3`: General CPTs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.Description">
+            <summary>
+            The description of the claim protocol type (CPT).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.CptJson">
+            <summary>
+            The JSON file of the claim protocol type (CPT).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.CreateTime">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.UpdateTime">
+            <summary>
+            The last updated time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.CreatorDid">
+            <summary>
+            The DID of the creator.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CptListData.AppName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CptListData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest.FunctionArg">
+            <summary>
+            A parameter set. For details, see the example.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest.TransactionArg">
+            <summary>
+            A parameter set. For details, see the example.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest.VersionCredential">
+            <summary>
+            The version.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest.UnSigned">
+            <summary>
+            Whether the credential is unsigned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateCredentialRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateCredentialResponse.CredentialData">
+            <summary>
+            The information of the credential.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateCredentialResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateCredentialResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest.ConsortiumName">
+            <summary>
+            The consortium name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest.ConsortiumId">
+            <summary>
+            The consortium ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest.AgencyName">
+            <summary>
+            The organization name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest.AppName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest.GroupName">
+            <summary>
+            The group name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateDidServiceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceResponse.Task">
+            <summary>
+            The service information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateDidServiceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateDidServiceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateLabelRequest.LabelName">
+            <summary>
+            The label name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateLabelRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateLabelRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateLabelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateLabelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateLabelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialRequest.FunctionArg">
+            <summary>
+            A parameter set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialRequest.PolicyId">
+            <summary>
+            The disclosure policy ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialResponse.CredentialData">
+            <summary>
+            The credential string.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateSelectiveCredentialResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyRequest.PrivateKey">
+            <summary>
+            The private key.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyResponse.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateTDidByPrivateKeyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest.PublicKey">
+            <summary>
+            The public key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest.EncryptPubKey">
+            <summary>
+            The encrypted public key.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyResponse.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateTDidByPublicKeyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidRequest.Relegation">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateTDidRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidResponse.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CreateTDidResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CreateTDidResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CredentialStatus.CredentialId">
+            <summary>
+            The credential ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CredentialStatus.Status">
+            <summary>
+            The credential status. `0`: Invalid; `1`: Valid.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CredentialStatus.Issuer">
+            <summary>
+            The DID of the issuer.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CredentialStatus.Digest">
+            <summary>
+            A summary of the credential.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CredentialStatus.Signature">
+            <summary>
+            The credential signature.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.CredentialStatus.TimeStamp">
+            <summary>
+            The last updated timestamp.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.CredentialStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DeployByNameRequest.ApplicationName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DeployByNameRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DeployByNameRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.DeployByNameRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DeployByNameResponse.Hash">
+            <summary>
+            The hash value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DeployByNameResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.DeployByNameResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.ChainId">
+            <summary>
+            The chain ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.ChainName">
+            <summary>
+            The chain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.AgencyCount">
+            <summary>
+            The number of organizations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.ConsortiumId">
+            <summary>
+            The consortium ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.CreateTime">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.ExpireTime">
+            <summary>
+            The expiration time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.ChainStatus">
+            <summary>
+            The network status.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.ResourceId">
+            <summary>
+            The resource ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.ConsortiumName">
+            <summary>
+            The consortium name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.AgencyId">
+            <summary>
+            The organization ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.AutoRenewFlag">
+            <summary>
+            Whether auto-renewal is enabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.TotalNetworkNode">
+            <summary>
+            The total number of network nodes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.TotalCreateNode">
+            <summary>
+            The number of nodes of the current organization.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.TotalGroups">
+            <summary>
+            The total number of groups.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidCluster.DidCount">
+            <summary>
+            The total number of DIDs.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.DidCluster.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.ServiceId">
+            <summary>
+            The service ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.AppName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.Remark">
+            <summary>
+            Remarks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.AuthorityState">
+            <summary>
+            The status of the authority. `1`: Not registered; `2`: Not certified; `3`: Certified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.LabelName">
+            <summary>
+            The label of the DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.CreatedAt">
+            <summary>
+            The DID creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.AllianceName">
+            <summary>
+            The consortium name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidData.LabelId">
+            <summary>
+            The label ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.DidData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.Id">
+            <summary>
+            The DID service ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.Appid">
+            <summary>
+            The application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.Uin">
+            <summary>
+            The account ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.ConsortiumId">
+            <summary>
+            The consortium ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.ConsortiumName">
+            <summary>
+            The consortium name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.ChainId">
+            <summary>
+            The chain ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.RoleType">
+            <summary>
+            Whether you are the owner of the consortium. `1`: Yes; `0`: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.AgencyDid">
+            <summary>
+            The organization DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.CreateOrg">
+            <summary>
+            The organization name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.Endpoint">
+            <summary>
+            The endpoint.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.CreateTime">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.UpdateTime">
+            <summary>
+            The last updated time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.GroupName">
+            <summary>
+            The group name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.DidServiceInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DownCptRequest.CptIndex">
+            <summary>
+            The claim protocol type (CPT) index.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.DownCptRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.DownCptResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.DownCptResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.EnableHashRequest.Hash">
+            <summary>
+            The CNS address of the contract.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.EnableHashRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.EnableHashResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.EnableHashResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.FunctionArg.CptId">
+            <summary>
+            The claim protocol type (CPT) ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.FunctionArg.Issuer">
+            <summary>
+            The DID of the issuer.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.FunctionArg.ExpirationDate">
+            <summary>
+            The expiration time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.FunctionArg.ClaimJson">
+            <summary>
+            The claim.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.FunctionArg.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidResponse.Prefix">
+            <summary>
+            The prefix (fixed).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidResponse.Identity">
+            <summary>
+            The details of the DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetAgencyTDidResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest.PageNumber">
+            <summary>
+            The page number, beginning from 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest.PageSize">
+            <summary>
+            The number of records per page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest.Status">
+            <summary>
+            Whether to query certified or uncertified authorities. `1`: Certified; `2`: Uncertified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListResponse.ResultList">
+            <summary>
+            A data set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListResponse.AllCount">
+            <summary>
+            The total number of records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetAuthoritiesListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerRequest.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.Name">
+            <summary>
+            The authority name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.ClusterId">
+            <summary>
+            The blockchain network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.GroupId">
+            <summary>
+            The blockchain group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.Did">
+            <summary>
+            The DID of the authority.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.Remark">
+            <summary>
+            Remarks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.RegisterTime">
+            <summary>
+            The registration time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.RecognizeTime">
+            <summary>
+            The recognition time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetAuthorityIssuerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListRequest.ConsortiumId">
+            <summary>
+            The consortium ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListResponse.ClusterList">
+            <summary>
+            A list of networks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetConsortiumClusterListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetConsortiumListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetConsortiumListResponse.ConsortiumList">
+            <summary>
+            A list of the consortiums.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetConsortiumListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetConsortiumListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptInfoRequest.CptIndex">
+            <summary>
+            The claim protocol type (CPT) index.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCptInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptInfoResponse.CptJsonData">
+            <summary>
+            The JSON data of the claim protocol type (CPT).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCptInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptListRequest.DisplayStart">
+            <summary>
+            The start.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptListRequest.DisplayLength">
+            <summary>
+            The maximum number of records to return.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptListRequest.CptType">
+            <summary>
+            The type. `0`: All CPTs; `1`: System CPTs; `2`: Authorization CPTs; `3`: General CPTs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCptListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptListResponse.CptDataList">
+            <summary>
+            The information of claim protocol types (CPT).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptListResponse.AllCount">
+            <summary>
+            The total number of claim protocol types (CPT).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCptListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCptListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankRequest.StartTime">
+            <summary>
+            The start date (as early as 2021-4-23).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankRequest.EndTime">
+            <summary>
+            The end date (as early as 2021-4-23).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankResponse.RankIssueResult">
+            <summary>
+            The rankings.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCredentialCptRankResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankRequest.StartTime">
+            <summary>
+            The start date (as early as 2021-4-23).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankRequest.EndTime">
+            <summary>
+            The end date (as early as 2021-4-23).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankResponse.RankIssueResult">
+            <summary>
+            The rankings.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueRankResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendRequest.StartTime">
+            <summary>
+            The start date (as early as 2021-4-23).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendRequest.EndTime">
+            <summary>
+            The end date (as early as 2021-4-23).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendResponse.Trend">
+            <summary>
+            The trend information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCredentialIssueTrendResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusRequest.CredentialId">
+            <summary>
+            The credential ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusResponse.CredentialStatus">
+            <summary>
+            The credential status.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetCredentialStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDataPanelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.BlockNetworkCount">
+            <summary>
+            The number of blockchain networks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.BlockNetworkName">
+            <summary>
+            The blockchain network name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.BlockHeight">
+            <summary>
+            The current block height.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.BlockNetworkType">
+            <summary>
+            The blockchain network type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.DidCount">
+            <summary>
+            The number of DIDs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.CptCount">
+            <summary>
+            The number of claim protocol types (CPT).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.CertificatedAuthCount">
+            <summary>
+            The number of certified authorities.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.IssueCptCount">
+            <summary>
+            The number of credentials issued.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.NewDidCount">
+            <summary>
+            The number of new DIDs in the current week.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.BcosCount">
+            <summary>
+            The number of BCOS networks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.FabricCount">
+            <summary>
+            The number of Fabric networks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.ChainMakerCount">
+            <summary>
+            The number of ChainMaker networks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDataPanelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoRequest.Hash">
+            <summary>
+            The CNS address of the contract.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDeployInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.Hash">
+            <summary>
+            The CNS address of the contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.GroupId">
+            <summary>
+            The main group ID of the contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.DeployDid">
+            <summary>
+            The DID of the organization that deployed the contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.SdkVersion">
+            <summary>
+            The TDID SDK version.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.ContractVersion">
+            <summary>
+            The TDID contract version.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.BlockVersion">
+            <summary>
+            The blockchain node version.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.BlockIp">
+            <summary>
+            The IP address of the blockchain node.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.DidAddress">
+            <summary>
+            The address of the DID contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.CptAddress">
+            <summary>
+            The address of the claim protocol type (CPT) contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.AuthorityAddress">
+            <summary>
+            The address of the authority.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.EvidenceAddress">
+            <summary>
+            The evidence contract address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.SpecificAddress">
+            <summary>
+            The contract address of the specific issuer.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.ChainId">
+            <summary>
+            The chain ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDeployInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployListRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployListRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployListRequest.DisplayStart">
+            <summary>
+            The start.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployListRequest.DisplayLength">
+            <summary>
+            The maximum number of records to return.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDeployListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployListResponse.AllCount">
+            <summary>
+            The total number of contracts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployListResponse.Result">
+            <summary>
+            A list of deployed contracts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDeployListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDeployListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailRequest.ClusterId">
+            <summary>
+            The DID network ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailResponse.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailResponse.ConsortiumName">
+            <summary>
+            The consortium name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailResponse.ChainAgency">
+            <summary>
+            The name of the blockchain organization.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidClusterDetailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidClusterListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidClusterListResponse.DidClusterList">
+            <summary>
+            A list of the DID networks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidClusterListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidClusterListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailRequest.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidDetailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.Remark">
+            <summary>
+            Remarks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.PublicKey">
+            <summary>
+            The public key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.AuthorityState">
+            <summary>
+            Whether the DID is a certified authority.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.ConsortiumId">
+            <summary>
+            The consortium ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.ConsortiumName">
+            <summary>
+            The consortium name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.ResChainId">
+            <summary>
+            The BCOS resource ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.CreateTime">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidDetailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDocumentRequest.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidDocumentRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDocumentResponse.Name">
+            <summary>
+            The name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDocumentResponse.Document">
+            <summary>
+            The DID document.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidDocumentResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidDocumentResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidListRequest.PageSize">
+            <summary>
+            The number of records per page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidListRequest.PageNumber">
+            <summary>
+            The page number, beginning from 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidListRequest.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidListRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidListRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidListResponse.DataList">
+            <summary>
+            A list of DIDs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidListResponse.AllCount">
+            <summary>
+            The total number of records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendRequest.StartTime">
+            <summary>
+            The start date (as early as 2021-4-23).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendRequest.EndTime">
+            <summary>
+            The end date (as early as 2021-4-23).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendResponse.Trend">
+            <summary>
+            The trend information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidRegisterTrendResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailRequest.ServiceId">
+            <summary>
+            The DID service ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailResponse.DidService">
+            <summary>
+            The DID service information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidServiceDetailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidServiceListRequest.Type">
+            <summary>
+            `1`: Return results at the network level; `0`: Return results at the service level.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidServiceListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidServiceListResponse.DidServiceList">
+            <summary>
+            A list of DID services.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetDidServiceListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetDidServiceListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetGroupListRequest.Status">
+            <summary>
+            `0`: Groups with no DID services; `1`: Groups with DID services.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetGroupListRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetGroupListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetGroupListResponse.Result">
+            <summary>
+            A list of groups.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetGroupListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetGroupListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetLabelListRequest.PageSize">
+            <summary>
+            The number of records per page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetLabelListRequest.PageNumber">
+            <summary>
+            The page number, beginning from 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetLabelListRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetLabelListRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetLabelListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetLabelListResponse.Result">
+            <summary>
+            A data set.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetLabelListResponse.TotalCount">
+            <summary>
+            The total number of records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetLabelListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetLabelListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPolicyListRequest.DisplayStart">
+            <summary>
+            The start.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPolicyListRequest.DisplayLength">
+            <summary>
+            The maximum number of records to return.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetPolicyListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPolicyListResponse.PolicyDataList">
+            <summary>
+            A list of disclosure policies.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPolicyListResponse.AllCount">
+            <summary>
+            The total number of records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPolicyListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetPolicyListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPublicKeyRequest.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetPublicKeyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPublicKeyResponse.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPublicKeyResponse.PublicKey">
+            <summary>
+            The public key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.GetPublicKeyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.GetPublicKeyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Group.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Group.NodeCount">
+            <summary>
+            The number of nodes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Group.NodeCountOfAgency">
+            <summary>
+            The number of nodes of the organization.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Group.Description">
+            <summary>
+            The description of the group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Group.RoleType">
+            <summary>
+            Whether you are the owner of the consortium or not.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Group.ChainId">
+            <summary>
+            The chain ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Group.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Identity.AccountIdentifier">
+            <summary>
+            The account identifier.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Identity.ChainID">
+            <summary>
+            The chain ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Identity.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Identity.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Identity.GroupName">
+            <summary>
+            The group name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Identity.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Label.LabelId">
+            <summary>
+            The label ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Label.LabelName">
+            <summary>
+            The label name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Label.DidCount">
+            <summary>
+            The number of DIDs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Label.Did">
+            <summary>
+            The DID of the creator.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Label.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Label.CreateTime">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Label.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Label.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.Id">
+            <summary>
+            The policy index.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.Name">
+            <summary>
+            The policy name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.ServiceId">
+            <summary>
+            The service ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.ContractAppId">
+            <summary>
+            The application ID of the contract.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.PolicyId">
+            <summary>
+            The policy ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.CptId">
+            <summary>
+            The claim protocol type (CPT) ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.PolicyJson">
+            <summary>
+            The JSON data.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.CreateTime">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.UpdateTime">
+            <summary>
+            The last updated time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.CreatorDid">
+            <summary>
+            The DID of the creator.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.AppName">
+            <summary>
+            The application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Policy.CptIndex">
+            <summary>
+            The claim protocol type (CPT) index.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Policy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Proof.Created">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Proof.Creator">
+            <summary>
+            The DID of the creator.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Proof.SaltJson">
+            <summary>
+            The salt value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Proof.SignatureValue">
+            <summary>
+            The signature.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Proof.Type">
+            <summary>
+            The type.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Proof.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.QueryPolicyRequest.PolicyIndex">
+            <summary>
+            The policy index.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.QueryPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.QueryPolicyResponse.Id">
+            <summary>
+            The policy index.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.QueryPolicyResponse.PolicyId">
+            <summary>
+            The policy ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.QueryPolicyResponse.CptId">
+            <summary>
+            The claim protocol type (CPT) ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.QueryPolicyResponse.PolicyData">
+            <summary>
+            The content of the policy.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.QueryPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.QueryPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerRequest.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RecognizeAuthorityIssuerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyRequest.CptIndex">
+            <summary>
+            The claim protocol type (CPT) index.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyRequest.Policy">
+            <summary>
+            The disclosure policy.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyResponse.Id">
+            <summary>
+            The policy index.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyResponse.PolicyId">
+            <summary>
+            The policy ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RegisterClaimPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterCptRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterCptRequest.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterCptRequest.CptJson">
+            <summary>
+            The JSON data of the credential claim type (CPT).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterCptRequest.CptId">
+            <summary>
+            If you do not specify this, the ID will auto increment.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RegisterCptRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterCptResponse.Id">
+            <summary>
+            The claim protocol type (CPT) index.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterCptResponse.CptId">
+            <summary>
+            The claim protocol type (CPT) ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterCptResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RegisterCptResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterIssuerRequest.Did">
+            <summary>
+            The DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterIssuerRequest.Name">
+            <summary>
+            The issuing authority name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterIssuerRequest.Description">
+            <summary>
+            Remarks
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RegisterIssuerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RegisterIssuerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RegisterIssuerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RemoveHashRequest.Hash">
+            <summary>
+            The CNS address of the contract.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RemoveHashRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.RemoveHashResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.RemoveHashResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.SetCredentialStatusRequest.CredentialStatus">
+            <summary>
+            The credential status.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.SetCredentialStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.SetCredentialStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.SetCredentialStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.Id">
+            <summary>
+            The task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.AppId">
+            <summary>
+            The application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.ClusterId">
+            <summary>
+            The network ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.ServiceId">
+            <summary>
+            The service ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.Status">
+            <summary>
+            `0`: Under deployment; `1`: Deployed successfully; other values: Deployment failed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.ErrorCode">
+            <summary>
+            The error code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.ErrorMsg">
+            <summary>
+            The error message.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.CreateTime">
+            <summary>
+            The creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Task.UpdateTime">
+            <summary>
+            The last updated time.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Task.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.TransactionArg.InvokerTDid">
+            <summary>
+            The credential ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.TransactionArg.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Trend.Time">
+            <summary>
+            The time point.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.Trend.Count">
+            <summary>
+            The count.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.Trend.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyCredentialRequest.FunctionArg">
+            <summary>
+            A parameter set.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.VerifyCredentialRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyCredentialResponse.Result">
+            <summary>
+            Whether the verification is successful.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyCredentialResponse.VerifyCode">
+            <summary>
+            The verification code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyCredentialResponse.VerifyMessage">
+            <summary>
+            The verification message.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyCredentialResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.VerifyCredentialResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.CptId">
+            <summary>
+            The claim protocol type (CPT) ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.Issuer">
+            <summary>
+            The issuer DID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.ExpirationDate">
+            <summary>
+            The expiration time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.ClaimJson">
+            <summary>
+            The claim.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.IssuanceDate">
+            <summary>
+            The time when the credential was issued.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.Context">
+            <summary>
+            The context.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.Id">
+            <summary>
+            The ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.Proof">
+            <summary>
+            The signature.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.Type">
+            <summary>
+            The type.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tdid.V20210519.Models.VerifyFunctionArg.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

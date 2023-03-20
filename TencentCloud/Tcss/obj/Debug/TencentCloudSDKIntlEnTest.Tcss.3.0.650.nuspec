@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>TencentCloudSDKIntlEnTest.Tcss</id>
+    <version>3.0.650</version>
+    <authors>Tencent Cloud API Team</authors>
+    <owners>Tencent Cloud API Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</projectUrl>
+    <iconUrl>https://avatars3.githubusercontent.com/u/20101770</iconUrl>
+    <description>Tencent Cloud API 3.0 SDK for .NET</description>
+    <copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</copyright>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="TencentCloudSDKIntlEnTest.Common" version="3.0.650" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.2" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encodings.Web" version="4.5.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="TencentCloudSDKIntlEnTest.Common" version="3.0.650" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.2" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encodings.Web" version="4.5.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework=".NETFramework4.5" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Tcss/bin/Debug/net45/TencentCloudTcss.dll" target="lib/net45/TencentCloudTcss.dll" />
+    <file src="/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Tcss/bin/Debug/net45/TencentCloudTcss.xml" target="lib/net45/TencentCloudTcss.xml" />
+    <file src="/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Tcss/bin/Debug/netstandard2.0/TencentCloudTcss.dll" target="lib/netstandard2.0/TencentCloudTcss.dll" />
+    <file src="/data/__qci/root-workspaces/__qci-pipeline-1236735-1/INTL_EN/dotnet_intl_en_sdk/tencentcloud-sdk-dotnet-intl-en/TencentCloud/Tcss/bin/Debug/netstandard2.0/TencentCloudTcss.xml" target="lib/netstandard2.0/TencentCloudTcss.xml" />
+  </files>
+</package>

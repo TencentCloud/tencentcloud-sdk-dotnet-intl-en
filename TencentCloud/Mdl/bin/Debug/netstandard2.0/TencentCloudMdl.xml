@@ -1,0 +1,3126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudMdl</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLiveChannel(TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest)">
+            <summary>
+            This API is used to create a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLiveChannelSync(TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest)">
+            <summary>
+            This API is used to create a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLiveInput(TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest)">
+            <summary>
+            This API is used to create a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLiveInputSync(TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest)">
+            <summary>
+            This API is used to create a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLiveInputSecurityGroup(TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupRequest)">
+            <summary>
+            This API is used to create an input security group. Up to 5 security groups are allowed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLiveInputSecurityGroupSync(TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupRequest)">
+            <summary>
+            This API is used to create an input security group. Up to 5 security groups are allowed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLivePlan(TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanRequest)">
+            <summary>
+            This API is used to create an event in the plan.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLivePlanSync(TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanRequest)">
+            <summary>
+            This API is used to create an event in the plan.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLiveWatermark(TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest)">
+            <summary>
+            This API is used to add a watermark.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.CreateStreamLiveWatermarkSync(TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest)">
+            <summary>
+            This API is used to add a watermark.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLiveChannel(TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelRequest)">
+            <summary>
+            This API is used to delete a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLiveChannelSync(TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelRequest)">
+            <summary>
+            This API is used to delete a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLiveInput(TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputRequest)">
+            <summary>
+            This API is used to delete a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLiveInputSync(TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputRequest)">
+            <summary>
+            This API is used to delete a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLiveInputSecurityGroup(TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupRequest)">
+            <summary>
+            This API is used to delete an input security group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLiveInputSecurityGroupSync(TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupRequest)">
+            <summary>
+            This API is used to delete an input security group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLivePlan(TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanRequest)">
+            <summary>
+            This API is used to delete a StreamLive event.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLivePlanSync(TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanRequest)">
+            <summary>
+            This API is used to delete a StreamLive event.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLiveWatermark(TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkRequest)">
+            <summary>
+            This API is used to delete a watermark.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DeleteStreamLiveWatermarkSync(TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkRequest)">
+            <summary>
+            This API is used to delete a watermark.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannel(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelRequest)">
+            <summary>
+            This API is used to query a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelRequest)">
+            <summary>
+            This API is used to query a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelAlerts(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsRequest)">
+            <summary>
+            This API is used to query the alarm information of a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelAlertsSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsRequest)">
+            <summary>
+            This API is used to query the alarm information of a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelInputStatistics(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest)">
+            <summary>
+            This API is used to query input statistics.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelInputStatisticsSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest)">
+            <summary>
+            This API is used to query input statistics.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelLogs(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsRequest)">
+            <summary>
+            This API is used to query StreamLive channel logs, such as push event logs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelLogsSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsRequest)">
+            <summary>
+            This API is used to query StreamLive channel logs, such as push event logs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelOutputStatistics(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest)">
+            <summary>
+            This API is used to query the output statistics of a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelOutputStatisticsSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest)">
+            <summary>
+            This API is used to query the output statistics of a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannels(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsRequest)">
+            <summary>
+            This API is used to query StreamLive channels in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveChannelsSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsRequest)">
+            <summary>
+            This API is used to query StreamLive channels in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveInput(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputRequest)">
+            <summary>
+            This API is used to query a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveInputSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputRequest)">
+            <summary>
+            This API is used to query a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveInputSecurityGroup(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupRequest)">
+            <summary>
+            This API is used to query an input security group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveInputSecurityGroupSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupRequest)">
+            <summary>
+            This API is used to query an input security group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveInputSecurityGroups(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsRequest)">
+            <summary>
+            This API is used to query input security groups in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveInputSecurityGroupsSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsRequest)">
+            <summary>
+            This API is used to query input security groups in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveInputs(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsRequest)">
+            <summary>
+            This API is used to query StreamLive inputs in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveInputsSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsRequest)">
+            <summary>
+            This API is used to query StreamLive inputs in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLivePlans(TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansRequest)">
+            <summary>
+            This API is used to query the events in the plan in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLivePlansSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansRequest)">
+            <summary>
+            This API is used to query the events in the plan in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveRegions(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsRequest)">
+            <summary>
+            This API is used to query all StreamLive regions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveRegionsSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsRequest)">
+            <summary>
+            This API is used to query all StreamLive regions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveTranscodeDetail(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest)">
+            <summary>
+            This API is used to query the transcoding information of StreamLive streams.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveTranscodeDetailSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest)">
+            <summary>
+            This API is used to query the transcoding information of StreamLive streams.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveWatermark(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkRequest)">
+            <summary>
+            This API is used to query a watermark.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveWatermarkSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkRequest)">
+            <summary>
+            This API is used to query a watermark.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveWatermarks(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksRequest)">
+            <summary>
+            This API is used to query multiple watermarks at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.DescribeStreamLiveWatermarksSync(TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksRequest)">
+            <summary>
+            This API is used to query multiple watermarks at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.ModifyStreamLiveChannel(TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest)">
+            <summary>
+            This API is used to modify a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.ModifyStreamLiveChannelSync(TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest)">
+            <summary>
+            This API is used to modify a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.ModifyStreamLiveInput(TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest)">
+            <summary>
+            This API is used to modify a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.ModifyStreamLiveInputSync(TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest)">
+            <summary>
+            This API is used to modify a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.ModifyStreamLiveInputSecurityGroup(TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupRequest)">
+            <summary>
+            This API is used to modify an input security group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.ModifyStreamLiveInputSecurityGroupSync(TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupRequest)">
+            <summary>
+            This API is used to modify an input security group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.ModifyStreamLiveWatermark(TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest)">
+            <summary>
+            This API is used to modify a watermark.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.ModifyStreamLiveWatermarkSync(TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest)">
+            <summary>
+            This API is used to modify a watermark.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.QueryInputStreamState(TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateRequest)">
+            <summary>
+            This API is used to query the stream status of a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.QueryInputStreamStateSync(TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateRequest)">
+            <summary>
+            This API is used to query the stream status of a StreamLive input.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.StartStreamLiveChannel(TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelRequest)">
+            <summary>
+            This API is used to start a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.StartStreamLiveChannelSync(TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelRequest)">
+            <summary>
+            This API is used to start a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.StopStreamLiveChannel(TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelRequest)">
+            <summary>
+            This API is used to stop a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.MdlClient.StopStreamLiveChannelSync(TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelRequest)">
+            <summary>
+            This API is used to stop a StreamLive channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.Name">
+            <summary>
+            Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.NeedVideo">
+            <summary>
+            Whether video is needed. `0`: not needed; `1`: needed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.Vcodec">
+            <summary>
+            Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.Width">
+            <summary>
+            Video width. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video width will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.Height">
+            <summary>
+            Video height. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video height will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.Fps">
+            <summary>
+            Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.TopSpeed">
+            <summary>
+            Whether to enable top speed codec transcoding. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.BitrateCompressionRatio">
+            <summary>
+            Compression ratio for top speed codec transcoding. Value range: [0, 50]. The lower the compression ratio, the higher the image quality.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.NeedAudio">
+            <summary>
+            Whether audio is needed. `0`: not needed; `1`: needed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.Acodec">
+            <summary>
+            Audio codec. Valid value: `AAC` (default)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.AudioBitrate">
+            <summary>
+            Audio bitrate. If this parameter is left empty, the original bitrate will be used.
+            Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000`, `24000`, `28000`, `32000`, `40000`, `48000`, `56000`, `64000`, `80000`, `96000`, `112000`, `128000`, `160000`, `192000`, `224000`, `256000`, `288000`, `320000`, `384000`, `448000`, `512000`, `576000`, `640000`, `768000`, `896000`, `1024000`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.VideoBitrate">
+            <summary>
+            Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.RateControlMode">
+            <summary>
+            Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.WatermarkId">
+            <summary>
+            Watermark ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.SmartSubtitles">
+            <summary>
+            Whether to convert audio to text. `0` (default): No; `1`: Yes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AVTemplate.SubtitleConfiguration">
+            <summary>
+            The subtitle settings. Currently, the following subtitles are supported:
+            `eng2eng`: English speech to English text.
+            `eng2chs`: English speech to Chinese text. 
+            `eng2chseng`: English speech to English and Chinese text. 
+            `chs2chs`: Chinese speech to Chinese text.   
+            `chs2eng`: Chinese speech to English text. 
+            `chs2chseng`: Chinese speech to Chinese and English text.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.AVTemplate.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AttachedInput.Id">
+            <summary>
+            Input ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AttachedInput.AudioSelectors">
+            <summary>
+            Audio selector for the input. There can be 0 to 20 audio selectors.
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AttachedInput.PullBehavior">
+            <summary>
+            Pull mode. If the input type is `HLS_PULL` or `MP4_PULL`, you can set this parameter to `LOOP` or `ONCE`. `LOOP` is the default value.
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AttachedInput.FailOverSettings">
+            <summary>
+            Input failover configuration
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.AttachedInput.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioPidSelectionInfo.Pid">
+            <summary>
+            Audio `Pid`. Default value: 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.AudioPidSelectionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioPipelineInputStatistics.Fps">
+            <summary>
+            Audio FPS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioPipelineInputStatistics.Rate">
+            <summary>
+            Audio bitrate in bps.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioPipelineInputStatistics.Pid">
+            <summary>
+            Audio `Pid`, which is available only if the input is `rtp/udp`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.AudioPipelineInputStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioSelectorInfo.Name">
+            <summary>
+            Audio name, which can contain 1-32 letters, digits, and underscores.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioSelectorInfo.AudioPidSelection">
+            <summary>
+            Audio `Pid` selection.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.AudioSelectorInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioTemplateInfo.AudioSelectorName">
+            <summary>
+            Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioTemplateInfo.Name">
+            <summary>
+            Audio transcoding template name, which can contain 1-20 letters and digits.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioTemplateInfo.Acodec">
+            <summary>
+            Audio codec. Valid value: AAC. Default value: AAC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioTemplateInfo.AudioBitrate">
+            <summary>
+            Audio bitrate. If this parameter is left empty, the original value will be used.
+            Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.AudioTemplateInfo.LanguageCode">
+            <summary>
+            Audio language code, whose length is always 3 characters.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.AudioTemplateInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelAlertInfos.Pipeline0">
+            <summary>
+            Alarm details of pipeline 0 under this channel.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelAlertInfos.Pipeline1">
+            <summary>
+            Alarm details of pipeline 1 under this channel.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ChannelAlertInfos.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelInputStatistics.InputId">
+            <summary>
+            Input ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelInputStatistics.Statistics">
+            <summary>
+            Input statistics.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ChannelInputStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelOutputsStatistics.OutputGroupName">
+            <summary>
+            Output group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelOutputsStatistics.Statistics">
+            <summary>
+            Output group statistics.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ChannelOutputsStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelPipelineAlerts.SetTime">
+            <summary>
+            Alarm start time in UTC time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelPipelineAlerts.ClearTime">
+            <summary>
+            Alarm end time in UTC time.
+            This time is available only after the alarm ends.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelPipelineAlerts.Type">
+            <summary>
+            Alarm type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ChannelPipelineAlerts.Message">
+            <summary>
+            Alarm details.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ChannelPipelineAlerts.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateImageSettings.ImageType">
+            <summary>
+            Image file format. Valid values: png, jpg.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateImageSettings.ImageContent">
+            <summary>
+            Base64 encoded image content
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateImageSettings.Location">
+            <summary>
+            Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateImageSettings.XPos">
+            <summary>
+            The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateImageSettings.YPos">
+            <summary>
+            The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateImageSettings.Width">
+            <summary>
+            The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+            `0` means to scale the width proportionally to the height.
+            You cannot set both `Width` and `Height` to `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateImageSettings.Height">
+            <summary>
+            The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+            `0` means to scale the height proportionally to the width.
+            You cannot set both `Width` and `Height` to `0`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateImageSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.Name">
+            <summary>
+            Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.AttachedInputs">
+            <summary>
+            Inputs to attach. You can attach 1 to 5 inputs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.OutputGroups">
+            <summary>
+            Configuration information of the channel’s output groups. Quantity: [1, 10]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.AudioTemplates">
+            <summary>
+            Audio transcoding templates. Quantity: [1, 20]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.VideoTemplates">
+            <summary>
+            Video transcoding templates. Quantity: [1, 10]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.AVTemplates">
+            <summary>
+            Audio/Video transcoding templates. Quantity: [1, 10]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.PlanSettings">
+            <summary>
+            Event settings
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.EventNotifySettings">
+            <summary>
+            The callback settings.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelResponse.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest.Name">
+            <summary>
+            Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest.Type">
+            <summary>
+            Input type
+            Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest.SecurityGroupIds">
+            <summary>
+            ID of the input security group to attach
+            You can attach only one security group to an input.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest.InputSettings">
+            <summary>
+            Input settings. For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputResponse.Id">
+            <summary>
+            Input ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupRequest.Name">
+            <summary>
+            Input security group name, which can contain case-sensitive letters, digits, and underscores and must be unique at the region level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupRequest.Whitelist">
+            <summary>
+            Allowlist entries. Quantity: [1, 10]
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupResponse.Id">
+            <summary>
+            Security group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveInputSecurityGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanRequest.ChannelId">
+            <summary>
+            ID of the channel for which you want to configure an event
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanRequest.Plan">
+            <summary>
+            Event configuration
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLivePlanResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest.Name">
+            <summary>
+            Watermark name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest.Type">
+            <summary>
+            Watermark type. Valid values: STATIC_IMAGE, TEXT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest.ImageSettings">
+            <summary>
+            Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest.TextSettings">
+            <summary>
+            Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkResponse.Id">
+            <summary>
+            Watermark ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateStreamLiveWatermarkResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateTextSettings.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateTextSettings.Location">
+            <summary>
+            Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateTextSettings.XPos">
+            <summary>
+            The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateTextSettings.YPos">
+            <summary>
+            The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateTextSettings.FontSize">
+            <summary>
+            Font size. Value range: 25-50.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.CreateTextSettings.FontColor">
+            <summary>
+            Font color, which is an RGB color value. Default value: 0x000000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.CreateTextSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DashRemuxSettingsInfo.SegmentDuration">
+            <summary>
+            Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DashRemuxSettingsInfo.SegmentNumber">
+            <summary>
+            Number of segments. Value range: [1,30]. Default value: 5.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DashRemuxSettingsInfo.PeriodTriggers">
+            <summary>
+            Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DashRemuxSettingsInfo.H265PackageType">
+            <summary>
+            The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DashRemuxSettingsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputRequest.Id">
+            <summary>
+            Input ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupRequest.Id">
+            <summary>
+            Input security group ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveInputSecurityGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanRequest.ChannelId">
+            <summary>
+            ID of the channel whose event is to be deleted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanRequest.EventName">
+            <summary>
+            Name of the event to delete
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLivePlanResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkRequest.Id">
+            <summary>
+            Watermark ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DeleteStreamLiveWatermarkResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeImageSettings.Location">
+            <summary>
+            Origin
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeImageSettings.XPos">
+            <summary>
+            The watermark image’s horizontal distance from the origin as a percentage of the video width
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeImageSettings.YPos">
+            <summary>
+            The watermark image’s vertical distance from the origin as a percentage of the video height
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeImageSettings.Width">
+            <summary>
+            The watermark image’s width as a percentage of the video width
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeImageSettings.Height">
+            <summary>
+            The watermark image’s height as a percentage of the video height
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeImageSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsRequest.ChannelId">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsResponse.Infos">
+            <summary>
+            Alarm information of the channel’s two pipelines
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelAlertsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest.ChannelId">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest.StartTime">
+            <summary>
+            Start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
+            UTC time, such as `2020-01-01T12:00:00Z`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest.EndTime">
+            <summary>
+            End time for query, which is 1 hour after `StartTime` by default
+            UTC time, such as `2020-01-01T12:00:00Z`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest.Period">
+            <summary>
+            Data collection interval. Valid values: `5s`, `1min` (default), `5min`, `15min`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsResponse.Infos">
+            <summary>
+            Channel input statistics
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelInputStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsRequest.ChannelId">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsRequest.StartTime">
+            <summary>
+            Start time for query, which is 1 hour ago by default. You can query logs in the last 7 days.
+            UTC time, such as `2020-01-01T12:00:00Z`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsRequest.EndTime">
+            <summary>
+            End time for query, which is 1 hour after `StartTime` by default
+            UTC time, such as `2020-01-01T12:00:00Z`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsResponse.Infos">
+            <summary>
+            Pipeline push information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest.ChannelId">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest.StartTime">
+            <summary>
+            Start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
+            UTC time, such as `2020-01-01T12:00:00Z`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest.EndTime">
+            <summary>
+            End time for query, which is 1 hour after `StartTime` by default
+            UTC time, such as `2020-01-01T12:00:00Z`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest.Period">
+            <summary>
+            Data collection interval. Valid values: `5s`, `1min` (default), `5min`, `15min`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsResponse.Infos">
+            <summary>
+            Channel output information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelOutputStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelResponse.Info">
+            <summary>
+            Channel information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsResponse.Infos">
+            <summary>
+            List of channel information
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveChannelsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputRequest.Id">
+            <summary>
+            Input ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputResponse.Info">
+            <summary>
+            Input information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupRequest.Id">
+            <summary>
+            Input security group ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupResponse.Info">
+            <summary>
+            Input security group information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsResponse.Infos">
+            <summary>
+            List of input security group information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputSecurityGroupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsResponse.Infos">
+            <summary>
+            List of input information
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveInputsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansRequest.ChannelId">
+            <summary>
+            ID of the channel whose events you want to query
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansResponse.Infos">
+            <summary>
+            List of event information
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLivePlansResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsResponse.Info">
+            <summary>
+            StreamLive region information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveRegionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest.StartDayTime">
+            <summary>
+            The query start time (UTC+8) in the format of yyyy-MM-dd.
+            You can only query data in the last month (not including the current day).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest.EndDayTime">
+            <summary>
+            The query end time (UTC+8) in the format of yyyy-MM-dd.
+            You can only query data in the last month (not including the current day).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest.ChannelId">
+            <summary>
+            The channel ID (optional).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest.PageNum">
+            <summary>
+            The number of pages. Default value: 1.
+            The value cannot exceed 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest.PageSize">
+            <summary>
+            The number of records per page. Default value: 10.
+            Value range: 1-1000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse.Infos">
+            <summary>
+            A list of the transcoding information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse.PageNum">
+            <summary>
+            The number of the current page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse.PageSize">
+            <summary>
+            The number of records per page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse.TotalNum">
+            <summary>
+            The total number of records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse.TotalPage">
+            <summary>
+            The total number of pages.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveTranscodeDetailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkRequest.Id">
+            <summary>
+            Watermark ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkResponse.Info">
+            <summary>
+            Watermark information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarkResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksResponse.Infos">
+            <summary>
+            List of watermark information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeStreamLiveWatermarksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTextSettings.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTextSettings.Location">
+            <summary>
+            Origin
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTextSettings.XPos">
+            <summary>
+            The watermark image’s horizontal distance from the origin as a percentage of the video width
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTextSettings.YPos">
+            <summary>
+            The watermark image’s vertical distance from the origin as a percentage of the video height
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTextSettings.FontSize">
+            <summary>
+            Font size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTextSettings.FontColor">
+            <summary>
+            Font color
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeTextSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.ChannelId">
+            <summary>
+            The channel ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.StartTime">
+            <summary>
+            The start time (UTC+8) of transcoding in the format of yyyy-MM-dd HH:mm:ss.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.EndTime">
+            <summary>
+            The end time (UTC+8) of transcoding in the format of yyyy-MM-dd HH:mm:ss.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.Duration">
+            <summary>
+            The duration (s) of transcoding.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.ModuleCodec">
+            <summary>
+            The encoding method.
+            Examples:
+            `liveprocessor_H264`: Live transcoding-H264
+            `liveprocessor_H265`: Live transcoding-H265
+            `topspeed_H264`: Top speed codec-H264
+            `topspeed_H265`: Top speed codec-H265
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.Bitrate">
+            <summary>
+            The target bitrate (Kbps).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.Type">
+            <summary>
+            The transcoding type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.PushDomain">
+            <summary>
+            The push domain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.Resolution">
+            <summary>
+            The target resolution.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeTranscodeDetailInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeWatermarkInfo.Id">
+            <summary>
+            Watermark ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeWatermarkInfo.Name">
+            <summary>
+            Watermark name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeWatermarkInfo.Type">
+            <summary>
+            Watermark type. Valid values: STATIC_IMAGE, TEXT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeWatermarkInfo.ImageSettings">
+            <summary>
+            Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeWatermarkInfo.TextSettings">
+            <summary>
+            Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeWatermarkInfo.UpdateTime">
+            <summary>
+            Last modified time (UTC+0) of the watermark, in the format of `2020-01-01T12:00:00Z`
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DescribeWatermarkInfo.AttachedChannels">
+            <summary>
+            List of channel IDs the watermark is bound to
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DescribeWatermarkInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DestinationInfo.OutputUrl">
+            <summary>
+            Relay destination address. Length limit: [1,512].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DestinationInfo.AuthKey">
+            <summary>
+            Authentication key. Length limit: [1,128].
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DestinationInfo.Username">
+            <summary>
+            Authentication username. Length limit: [1,128].
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DestinationInfo.Password">
+            <summary>
+            Authentication password. Length limit: [1,128].
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DestinationInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmKey.Key">
+            <summary>
+            DRM key, which is a 32-bit hexadecimal string.
+            Note: uppercase letters in the string will be automatically converted to lowercase ones.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmKey.Track">
+            <summary>
+            Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
+            ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmKey.KeyId">
+            <summary>
+            Required for Widevine encryption. It is a 32-bit hexadecimal string.
+            Note: uppercase letters in the string will be automatically converted to lowercase ones.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmKey.Iv">
+            <summary>
+            Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
+            For more information about this parameter, please see: 
+            https://tools.ietf.org/html/rfc3826
+            Note: uppercase letters in the string will be automatically converted to lowercase ones.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmKey.KeyUri">
+            <summary>
+            The URI of the license server when AES-128 is used. This parameter may be empty.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DrmKey.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmSettingsInfo.State">
+            <summary>
+            Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+            DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmSettingsInfo.Scheme">
+            <summary>
+            Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+            `CustomDRMKeys` means encryption keys customized by users.
+            `SDMCDRM` means the DRM key management system of SDMC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmSettingsInfo.ContentId">
+            <summary>
+            If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+            If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmSettingsInfo.Keys">
+            <summary>
+            The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmSettingsInfo.SDMCSettings">
+            <summary>
+            SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.DrmSettingsInfo.DrmType">
+            <summary>
+            The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.DrmSettingsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventNotifySetting.PushEventSettings">
+            <summary>
+            The callback configuration for push events.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.EventNotifySetting.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsDestinationReq.Url">
+            <summary>
+            URL of the COS bucket to save recording files
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.EventSettingsDestinationReq.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsDestinationResp.Url">
+            <summary>
+            URL of the COS bucket where recording files are saved
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.EventSettingsDestinationResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsReq.EventType">
+            <summary>
+            Valid values: `INPUT_SWITCH`, `TIMED_RECORD`. If it is not specified, `INPUT_SWITCH` will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsReq.InputAttachment">
+            <summary>
+            ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsReq.OutputGroupName">
+            <summary>
+            Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsReq.ManifestName">
+            <summary>
+            Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsReq.Destinations">
+            <summary>
+            URL of the COS bucket to save recording files. This parameter is required if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.EventSettingsReq.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsResp.EventType">
+            <summary>
+            Only `INPUT_SWITCH` is supported currently.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsResp.InputAttachment">
+            <summary>
+            ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsResp.OutputGroupName">
+            <summary>
+            Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsResp.ManifestName">
+            <summary>
+            Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.EventSettingsResp.Destinations">
+            <summary>
+            URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.EventSettingsResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.FailOverSettings.SecondaryInputId">
+            <summary>
+            ID of the backup input
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.FailOverSettings.LossThreshold">
+            <summary>
+            The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.FailOverSettings.RecoverBehavior">
+            <summary>
+            Failover policy. Valid values: `CURRENT_PREFERRED` (default), `PRIMARY_PREFERRED`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.FailOverSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.HlsRemuxSettingsInfo.SegmentDuration">
+            <summary>
+            Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.HlsRemuxSettingsInfo.SegmentNumber">
+            <summary>
+            Number of segments. Value range: [1,30]. Default value: 5.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.HlsRemuxSettingsInfo.PdtInsertion">
+            <summary>
+            Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.HlsRemuxSettingsInfo.PdtDuration">
+            <summary>
+            PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.HlsRemuxSettingsInfo.Scheme">
+            <summary>
+            Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.HlsRemuxSettingsInfo.SegmentType">
+            <summary>
+            The segment type. Valid values: `ts` (default), `fmp4`.
+            Currently, fMP4 segments do not support DRM or time shifting.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.HlsRemuxSettingsInfo.H265PackageType">
+            <summary>
+            The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.HlsRemuxSettingsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputInfo.Region">
+            <summary>
+            Input region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputInfo.Id">
+            <summary>
+            Input ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputInfo.Name">
+            <summary>
+            Input name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputInfo.Type">
+            <summary>
+            Input type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputInfo.SecurityGroupIds">
+            <summary>
+            Array of security groups associated with input.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputInfo.AttachedChannels">
+            <summary>
+            Array of channels associated with input.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputInfo.InputSettings">
+            <summary>
+            Input configuration array.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.InputInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSecurityGroupInfo.Id">
+            <summary>
+            Input security group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSecurityGroupInfo.Name">
+            <summary>
+            Input security group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSecurityGroupInfo.Whitelist">
+            <summary>
+            List of allowlist entries.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSecurityGroupInfo.OccupiedInputs">
+            <summary>
+            List of bound input streams.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSecurityGroupInfo.Region">
+            <summary>
+            Input security group address.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.InputSecurityGroupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.AppName">
+            <summary>
+            Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.StreamName">
+            <summary>
+            Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.SourceUrl">
+            <summary>
+            Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.InputAddress">
+            <summary>
+            RTP/UDP input address, which does not need to be entered for the input parameter.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.SourceType">
+            <summary>
+            Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.DelayTime">
+            <summary>
+            Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+            Value range: 0 (default) or 10000-600000
+            The value must be a multiple of 1,000.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.InputDomain">
+            <summary>
+            The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.UserName">
+            <summary>
+            The username, which is used for authentication.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.Password">
+            <summary>
+            The password, which is used for authentication.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.InputSettingInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputStatistics.Pipeline0">
+            <summary>
+            Input statistics of pipeline 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputStatistics.Pipeline1">
+            <summary>
+            Input statistics of pipeline 1.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.InputStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputStreamInfo.InputAddress">
+            <summary>
+            The input stream address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputStreamInfo.AppName">
+            <summary>
+            The input stream path.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputStreamInfo.StreamName">
+            <summary>
+            The input stream name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.InputStreamInfo.Status">
+            <summary>
+            The input stream status. `1` indicates the stream is active.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.InputStreamInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.LogInfo.Type">
+            <summary>
+            Log type.
+            It contains the value of `StreamStart` which refers to the push information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.LogInfo.Time">
+            <summary>
+            Time when the log is printed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.LogInfo.Message">
+            <summary>
+            Log details.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.LogInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.LogMessageInfo.StreamInfo">
+            <summary>
+            Push information.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.LogMessageInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.Name">
+            <summary>
+            Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.AttachedInputs">
+            <summary>
+            Inputs to attach. You can attach 1 to 5 inputs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.OutputGroups">
+            <summary>
+            Configuration information of the channel’s output groups. Quantity: [1, 10]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.AudioTemplates">
+            <summary>
+            Audio transcoding templates. Quantity: [1, 20]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.VideoTemplates">
+            <summary>
+            Video transcoding templates. Quantity: [1, 10]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.AVTemplates">
+            <summary>
+            Audio/Video transcoding templates. Quantity: [1, 10]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.PlanSettings">
+            <summary>
+            Event settings
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.EventNotifySettings">
+            <summary>
+            The callback settings.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest.Id">
+            <summary>
+            Input ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest.Name">
+            <summary>
+            Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest.SecurityGroupIds">
+            <summary>
+            List of the IDs of the security groups to attach
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest.InputSettings">
+            <summary>
+            Input settings
+            For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+            This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+            Note: If this parameter is not specified or empty, the original input settings will be used.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupRequest.Id">
+            <summary>
+            Input security group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupRequest.Name">
+            <summary>
+            Input security group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupRequest.Whitelist">
+            <summary>
+            Allowlist entries (max: 10)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveInputSecurityGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest.Id">
+            <summary>
+            Watermark ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest.Name">
+            <summary>
+            Watermark name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest.ImageSettings">
+            <summary>
+            Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest.TextSettings">
+            <summary>
+            Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.ModifyStreamLiveWatermarkResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.OutputInfo.Name">
+            <summary>
+            Output name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.OutputInfo.AudioTemplateNames">
+            <summary>
+            Audio transcoding template name array.
+            Quantity limit: [0,1] for RTMP; [0,20] for others.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.OutputInfo.VideoTemplateNames">
+            <summary>
+            Video transcoding template name array. Quantity limit: [0,1].
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.OutputInfo.Scte35Settings">
+            <summary>
+            SCTE-35 information configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.OutputInfo.AVTemplateNames">
+            <summary>
+            Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.OutputInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.OutputsStatistics.Pipeline0">
+            <summary>
+            Output information of pipeline 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.OutputsStatistics.Pipeline1">
+            <summary>
+            Output information of pipeline 1.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.OutputsStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PipelineInputStatistics.Timestamp">
+            <summary>
+            Data timestamp in seconds.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PipelineInputStatistics.NetworkIn">
+            <summary>
+            Input bandwidth in bps.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PipelineInputStatistics.Video">
+            <summary>
+            Video information array.
+            For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
+            For other inputs, the quantity is 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PipelineInputStatistics.Audio">
+            <summary>
+            Audio information array.
+            For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
+            For other inputs, the quantity is 1.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.PipelineInputStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PipelineLogInfo.Pipeline0">
+            <summary>
+            Log information of pipeline 0.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PipelineLogInfo.Pipeline1">
+            <summary>
+            Log information of pipeline 1.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.PipelineLogInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PipelineOutputStatistics.Timestamp">
+            <summary>
+            Timestamp.
+            In seconds, indicating data time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PipelineOutputStatistics.NetworkOut">
+            <summary>
+            Output bandwidth in bps.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.PipelineOutputStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PlanReq.EventName">
+            <summary>
+            Event name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PlanReq.TimingSettings">
+            <summary>
+            Event trigger time settings
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PlanReq.EventSettings">
+            <summary>
+            Event configuration
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.PlanReq.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PlanResp.EventName">
+            <summary>
+            Event name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PlanResp.TimingSettings">
+            <summary>
+            Event trigger time settings
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PlanResp.EventSettings">
+            <summary>
+            Event configuration
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.PlanResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PlanSettings.TimedRecordSettings">
+            <summary>
+            Timed recording settings
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.PlanSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PushEventSetting.NotifyUrl">
+            <summary>
+            The callback URL (required).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.PushEventSetting.NotifyKey">
+            <summary>
+            The callback key (optional).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.PushEventSetting.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.QueryDispatchInputInfo.InputID">
+            <summary>
+            The input ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.QueryDispatchInputInfo.InputName">
+            <summary>
+            The input name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.QueryDispatchInputInfo.Protocol">
+            <summary>
+            The input protocol.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.QueryDispatchInputInfo.InputStreamInfoList">
+            <summary>
+            The stream status of the input.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.QueryDispatchInputInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateRequest.Id">
+            <summary>
+            The StreamLive input ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateResponse.Info">
+            <summary>
+            The information of the StreamLive input queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.QueryInputStreamStateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.RegionInfo.Name">
+            <summary>
+            Region name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.RegionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.SDMCSettingsInfo.Uid">
+            <summary>
+            User ID in the SDMC DRM system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.SDMCSettingsInfo.Tracks">
+            <summary>
+            Tracks of the SDMC DRM system. This parameter is valid for DASH output groups.
+            `1`: audio
+            `2`: SD
+            `4`: HD
+            `8`: UHD1
+            `16`: UHD2
+            
+            Default value: `31` (audio + SD + HD + UHD1 + UHD2)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.SDMCSettingsInfo.SecretId">
+            <summary>
+            Key ID in the SDMC DRM system; required
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.SDMCSettingsInfo.SecretKey">
+            <summary>
+            Key in the SDMC DRM system; required
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.SDMCSettingsInfo.Url">
+            <summary>
+            Key request URL of the SDMC DRM system, which is `https://uat.multidrm.tv/cpix/2.2/getcontentkey` by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.SDMCSettingsInfo.TokenName">
+            <summary>
+            Token name in an SDMC key request URL, which is `token` by default
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.SDMCSettingsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.Scte35SettingsInfo.Behavior">
+            <summary>
+            Whether to pass through SCTE-35 information. Valid values: NO_PASSTHROUGH/PASSTHROUGH. Default value: NO_PASSTHROUGH.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.Scte35SettingsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StartStreamLiveChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StopStreamLiveChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamAudioInfo.Pid">
+            <summary>
+            Audio `Pid`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamAudioInfo.Codec">
+            <summary>
+            Audio codec.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamAudioInfo.Fps">
+            <summary>
+            Audio frame rate.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamAudioInfo.Rate">
+            <summary>
+            Audio bitrate.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamAudioInfo.SampleRate">
+            <summary>
+            Audio sample rate.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StreamAudioInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamInfo.ClientIp">
+            <summary>
+            Client IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamInfo.Video">
+            <summary>
+            Video information of pushed streams.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamInfo.Audio">
+            <summary>
+            Audio information of pushed streams.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamInfo.Scte35">
+            <summary>
+            SCTE-35 information of pushed streams.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StreamInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.State">
+            <summary>
+            Channel status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.AttachedInputs">
+            <summary>
+            Information of attached inputs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.OutputGroups">
+            <summary>
+            Information of output groups
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.Name">
+            <summary>
+            Channel name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.AudioTemplates">
+            <summary>
+            Audio transcoding templates
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.VideoTemplates">
+            <summary>
+            Video transcoding templates
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.AVTemplates">
+            <summary>
+            Audio/Video transcoding templates
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.PlanSettings">
+            <summary>
+            Event settings
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.EventNotifySettings">
+            <summary>
+            The callback settings.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StreamLiveChannelInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.Name">
+            <summary>
+            Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.Type">
+            <summary>
+            Output protocol
+            Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.Outputs">
+            <summary>
+            Output information
+            If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.Destinations">
+            <summary>
+            Relay destinations. Quantity: [1, 2]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.HlsRemuxSettings">
+            <summary>
+            HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.DrmSettings">
+            <summary>
+            DRM configuration information
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.DashRemuxSettings">
+            <summary>
+            DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.StreamPackageSettings">
+            <summary>
+            StreamPackage configuration information, which is required if the output type is StreamPackage
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.TimeShiftSettings">
+            <summary>
+            Time-shift configuration information
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StreamLiveOutputGroupsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamLiveRegionInfo.Regions">
+            <summary>
+            List of StreamLive regions
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StreamLiveRegionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamPackageSettingsInfo.Id">
+            <summary>
+            Channel ID in StreamPackage
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StreamPackageSettingsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamScte35Info.Pid">
+            <summary>
+            SCTE-35 `Pid`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StreamScte35Info.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamVideoInfo.Pid">
+            <summary>
+            Video `Pid`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamVideoInfo.Codec">
+            <summary>
+            Video codec.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamVideoInfo.Fps">
+            <summary>
+            Video frame rate.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamVideoInfo.Rate">
+            <summary>
+            Video bitrate.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamVideoInfo.Width">
+            <summary>
+            Video width.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.StreamVideoInfo.Height">
+            <summary>
+            Video height.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.StreamVideoInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimeShiftSettingsInfo.State">
+            <summary>
+            Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimeShiftSettingsInfo.PlayDomain">
+            <summary>
+            Domain name bound for time shifting
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimeShiftSettingsInfo.StartoverWindow">
+            <summary>
+            Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.TimeShiftSettingsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimedRecordSettings.AutoClear">
+            <summary>
+            Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
+            If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.TimedRecordSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimingSettingsReq.StartType">
+            <summary>
+            Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimingSettingsReq.Time">
+            <summary>
+            This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+            It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimingSettingsReq.StartTime">
+            <summary>
+            This parameter is required if `EventType` is `TIMED_RECORD`.
+            It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimingSettingsReq.EndTime">
+            <summary>
+            This parameter is required if `EventType` is `TIMED_RECORD`.
+            It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.TimingSettingsReq.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimingSettingsResp.StartType">
+            <summary>
+            Event trigger type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimingSettingsResp.Time">
+            <summary>
+            Not empty if `StartType` is `FIXED_TIME`
+            UTC time, such as `2020-01-01T12:00:00Z`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimingSettingsResp.StartTime">
+            <summary>
+            This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+            It indicates the start time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.TimingSettingsResp.EndTime">
+            <summary>
+            This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+            It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the start time for recording.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.TimingSettingsResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoPipelineInputStatistics.Fps">
+            <summary>
+            Video FPS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoPipelineInputStatistics.Rate">
+            <summary>
+            Video bitrate in bps.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoPipelineInputStatistics.Pid">
+            <summary>
+            Video `Pid`, which is available only if the input is `rtp/udp`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.VideoPipelineInputStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.Name">
+            <summary>
+            Video transcoding template name, which can contain 1-20 letters and digits.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.Vcodec">
+            <summary>
+            Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.VideoBitrate">
+            <summary>
+            Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.Width">
+            <summary>
+            Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.Height">
+            <summary>
+            Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.Fps">
+            <summary>
+            Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.TopSpeed">
+            <summary>
+            Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.BitrateCompressionRatio">
+            <summary>
+            Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.RateControlMode">
+            <summary>
+            Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.WatermarkId">
+            <summary>
+            Watermark ID
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdl.V20200326.Models.VideoTemplateInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

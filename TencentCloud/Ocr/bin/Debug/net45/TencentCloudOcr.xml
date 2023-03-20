@@ -1,0 +1,940 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudOcr</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.BankCardOCR(TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest)">
+            <summary>
+            This API is used to detect and recognize key fields such as the card number, bank information, and expiration date on mainstream bank cards in Mainland China.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.BankCardOCRSync(TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest)">
+            <summary>
+            This API is used to detect and recognize key fields such as the card number, bank information, and expiration date on mainstream bank cards in Mainland China.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.GeneralAccurateOCR(TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest)">
+            <summary>
+            This API is used to detect and recognize characters in an image. It can recognize Chinese, English, Chinese-English, digits, and special symbols and return the text box positions and characters.
+            
+            It is suitable for scenarios with a lot of characters in complex layouts and requiring high recognition accuracy, such as examination papers, online images, signboards, and legal documents.
+            
+            Strengths: compared with general print recognition, it provides higher-precision character recognition services. Its accuracy and recall rate are higher in difficult scenarios such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.GeneralAccurateOCRSync(TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest)">
+            <summary>
+            This API is used to detect and recognize characters in an image. It can recognize Chinese, English, Chinese-English, digits, and special symbols and return the text box positions and characters.
+            
+            It is suitable for scenarios with a lot of characters in complex layouts and requiring high recognition accuracy, such as examination papers, online images, signboards, and legal documents.
+            
+            Strengths: compared with general print recognition, it provides higher-precision character recognition services. Its accuracy and recall rate are higher in difficult scenarios such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.GeneralBasicOCR(TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest)">
+            <summary>
+            This API is used to detect and recognize characters in an image in the following 20 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, and Arabic. Mixed characters in English and each supported language can be recognized together.
+            
+            It can recognize printed text in paper documents, online images, ads, signboards, menus, video titles, profile photos, etc.
+            
+            Strengths: it can automatically recognize the text language, return the text box coordinate information, and automatically rotate tilted text to the upright direction.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.GeneralBasicOCRSync(TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest)">
+            <summary>
+            This API is used to detect and recognize characters in an image in the following 20 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, and Arabic. Mixed characters in English and each supported language can be recognized together.
+            
+            It can recognize printed text in paper documents, online images, ads, signboards, menus, video titles, profile photos, etc.
+            
+            Strengths: it can automatically recognize the text language, return the text box coordinate information, and automatically rotate tilted text to the upright direction.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.HKIDCardOCR(TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest)">
+            <summary>
+            This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. It can check for card authenticity and crop the identity photo.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.HKIDCardOCRSync(TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest)">
+            <summary>
+            This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. It can check for card authenticity and crop the identity photo.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.MLIDCardOCR(TencentCloud.Ocr.V20181119.Models.MLIDCardOCRRequest)">
+            <summary>
+            This API is used to recognize a Malaysian identity card, including identity card number, name, gender, and address. It is also used to crop identity photos and give alarms for photographed or photocopied certificates.
+            
+            This API is not fully available for the time being. For more information, contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.MLIDCardOCRSync(TencentCloud.Ocr.V20181119.Models.MLIDCardOCRRequest)">
+            <summary>
+            This API is used to recognize a Malaysian identity card, including identity card number, name, gender, and address. It is also used to crop identity photos and give alarms for photographed or photocopied certificates.
+            
+            This API is not fully available for the time being. For more information, contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.MLIDPassportOCR(TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRRequest)">
+            <summary>
+            This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.MLIDPassportOCRSync(TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRRequest)">
+            <summary>
+            This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.TableOCR(TencentCloud.Ocr.V20181119.Models.TableOCRRequest)">
+            <summary>
+            This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.TableOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.TableOCRResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.OcrClient.TableOCRSync(TencentCloud.Ocr.V20181119.Models.TableOCRRequest)">
+            <summary>
+            This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
+            
+            This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ocr.V20181119.Models.TableOCRRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ocr.V20181119.Models.TableOCRResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.ImageBase64">
+            <summary>
+            Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+            Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.ImageUrl">
+            <summary>
+            URL address of image. (This field is not supported outside Chinese mainland)
+            Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+            Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+            We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+            The download speed and stability of non-Tencent Cloud URLs may be low.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.RetBorderCutImage">
+            <summary>
+            Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.RetCardNoImage">
+            <summary>
+            Whether to return the card number image data after slicing. Default value: `false`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.EnableCopyCheck">
+            <summary>
+            Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.EnableReshootCheck">
+            <summary>
+            Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.EnableBorderCheck">
+            <summary>
+            Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.EnableQualityValue">
+            <summary>
+            Whether to return the image quality value, which measures how clear an image is. Default value: `false`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.BankCardOCRRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.CardNo">
+            <summary>
+            Card number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.BankInfo">
+            <summary>
+            Bank information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.ValidDate">
+            <summary>
+            Expiration date. Format: 07/2023
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.CardType">
+            <summary>
+            Card type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.CardName">
+            <summary>
+            Card name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.BorderCutImage">
+            <summary>
+            Sliced image data
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.CardNoImage">
+            <summary>
+            Card number image data
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.WarningCode">
+            <summary>
+            Warning code:
+            -9110: the bank card date is invalid. 
+            -9111: the bank card border is incomplete. 
+            -9112: the bank card image is reflective.
+            -9113: the bank card image is a photocopy.
+            -9114: the bank card image is a photograph.
+            Multiple warning codes may be returned at a time.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.QualityValue">
+            <summary>
+            Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.BankCardOCRResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.Coord.X">
+            <summary>
+            Horizontal coordinate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.Coord.Y">
+            <summary>
+            Vertical coordinate
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.Coord.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.DetectedWordCoordPoint.WordCoordinate">
+            <summary>
+            Coordinates of a word’s four corners in a clockwise order on the input image, starting from the upper-left corner
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.DetectedWordCoordPoint.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.DetectedWords.Confidence">
+            <summary>
+            Confidence. Value range: 0–100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.DetectedWords.Character">
+            <summary>
+            A possible character
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.DetectedWords.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest.ImageBase64">
+            <summary>
+            Base64-encoded value of image.
+            The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+            Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest.ImageUrl">
+            <summary>
+            URL address of image. (This field is not supported outside Chinese mainland)
+            The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+            We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest.IsWords">
+            <summary>
+            Whether to return the character information. Default value: `false`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest.EnableDetectSplit">
+            <summary>
+            Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest.IsPdf">
+            <summary>
+            Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest.PdfPageNumber">
+            <summary>
+            Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRResponse.TextDetections">
+            <summary>
+            Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRResponse.Angel">
+            <summary>
+            Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.GeneralAccurateOCRResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest.ImageBase64">
+            <summary>
+            Base64-encoded value of image/PDF.
+            The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest.ImageUrl">
+            <summary>
+            URL address of image/PDF. (This field is not supported outside Chinese mainland)
+            The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+            We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest.Scene">
+            <summary>
+            Reserved field.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest.LanguageType">
+            <summary>
+            Language to recognize
+            The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
+            Valid values:
+            `zh`: Chinese-English mix
+            `zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+            `auto`
+            `mix`: language mix
+            `jap`: Japanese
+            `kor`: Korean
+            `spa`: Spanish
+            `fre`: French
+            `ger`: German
+            `por`: Portuguese
+            `vie`: Vietnamese
+            `may`: Malay
+            `rus`: Russian
+            `ita`: Italian
+            `hol`: Dutch
+            `swe`: Swedish
+            `fin`: Finnish
+            `dan`: Danish
+            `nor`: Norwegian
+            `hun`: Hungarian
+            `tha`: Thai
+            `hi`: Hindi
+            `ara`: Arabic
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest.IsPdf">
+            <summary>
+            Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest.PdfPageNumber">
+            <summary>
+            Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest.IsWords">
+            <summary>
+            Whether to return the character information. Default value: `false`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRResponse.TextDetections">
+            <summary>
+            Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRResponse.Language">
+            <summary>
+            Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRResponse.Angel">
+            <summary>
+            Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRResponse.PdfPageSize">
+            <summary>
+            Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.GeneralBasicOCRResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest.DetectFake">
+            <summary>
+            Whether to check for authenticity.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest.ReturnHeadImage">
+            <summary>
+            Whether to return identity photo.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest.ImageBase64">
+            <summary>
+            Base64 string of the image
+            Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+            Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest.ImageUrl">
+            <summary>
+            URL address of image. (This field is not supported outside Chinese mainland)
+            Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+            Supported image size: the downloaded image cannot exceed 3 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+            We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+            The download speed and stability of non-Tencent Cloud URLs may be low.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.CnName">
+            <summary>
+            Name in Chinese
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.EnName">
+            <summary>
+            Name in English
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.TelexCode">
+            <summary>
+            Telecode for the name in Chinese
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.Sex">
+            <summary>
+            Gender. Valid values: Male, Female
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.Birthday">
+            <summary>
+            Date of birth
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.Permanent">
+            <summary>
+            Permanent identity card.
+            0: non-permanent;
+            1: permanent;
+            -1: unknown.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.IdNum">
+            <summary>
+            Identity card number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.Symbol">
+            <summary>
+            Document symbol, i.e., the symbol under the date of birth, such as "***AZ"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.FirstIssueDate">
+            <summary>
+            First issue date
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.CurrentIssueDate">
+            <summary>
+            Last receipt date
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.FakeDetectResult">
+            <summary>
+            Authenticity check.
+            0: unable to judge (because the image is blurred, incomplete, reflective, too dark, etc.);
+            1: forged;
+            2: authentic.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.HeadImage">
+            <summary>
+            Base64-encoded identity photo
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.WarningCode">
+            <summary>
+            Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
+            -9102: Alarm for photocopied document
+            -9103: Alarm for spoofed document
+            -9104: Alarm for photoshopped document
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.HKIDCardOCRResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.ItemCoord.X">
+            <summary>
+            X-coordinate of top-left point.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.ItemCoord.Y">
+            <summary>
+            Y-coordinate of top-left point.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.ItemCoord.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.ItemCoord.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.ItemCoord.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRRequest.ImageBase64">
+            <summary>
+            The Base64-encoded value of an image.
+            Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
+            Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRRequest.ImageUrl">
+            <summary>
+            The URL of an image. (This field is not available outside the Chinese mainland.)
+            Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
+            Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
+            We recommend that you store the image in Tencent Cloud for higher download speed and stability.
+            For a non-Tencent Cloud URL, the download speed and stability may be low.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRRequest.RetImage">
+            <summary>
+            Whether to return an image. Default value: `false`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.ID">
+            <summary>
+            ID number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.Name">
+            <summary>
+            Full name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.Sex">
+            <summary>
+            Gender
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.Warn">
+            <summary>
+            Alarm codes
+            -9103 Alarm for photographed certificate
+            -9102 Alarm for photocopied certificate
+            -9106 Alarm for covered certificate
+            -9107 Alarm for blurry image
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.Image">
+            <summary>
+            Identity photo
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.AdvancedInfo">
+            <summary>
+            This is an extended field, 
+            with the confidence of a field recognition result returned in the following format.
+            {
+              Field name:{
+                Confidence:0.9999
+              }
+            }
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.Type">
+            <summary>
+            Certificate type
+            MyKad  ID card
+            MyPR    Permanent resident card
+            MyTentera   Military identity card
+            MyKAS    Temporary ID card
+            POLIS  Police card
+            IKAD   Work permit
+            MyKid   Kid card
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.Birthday">
+            <summary>
+            Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.MLIDCardOCRResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRRequest.ImageBase64">
+            <summary>
+            Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRRequest.RetImage">
+            <summary>
+            Whether to return an image. Default value: false.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.ID">
+            <summary>
+            Passport ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.DateOfBirth">
+            <summary>
+            Date of birth
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.Sex">
+            <summary>
+            Gender (F: female, M: male)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.DateOfExpiration">
+            <summary>
+            Expiration date
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.IssuingCountry">
+            <summary>
+            Issuing country
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.Nationality">
+            <summary>
+            Country/region code
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.Warn" -->
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.Image">
+            <summary>
+            Identity photo
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.AdvancedInfo">
+            <summary>
+            Extended field:
+            {
+                ID:{
+                    Confidence:0.9999
+                },
+                Name:{
+                    Confidence:0.9996
+                }
+            }
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.CodeSet">
+            <summary>
+            The first row of the machine-readable zone (MRZ) at the bottom
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.CodeCrc">
+            <summary>
+            The second row of the MRZ at the bottom
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.MLIDPassportOCRResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TableOCRRequest.ImageBase64">
+            <summary>
+            Base64-encoded value of image.
+            Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
+            Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+            Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TableOCRRequest.ImageUrl">
+            <summary>
+            URL address of image. (This field is not supported outside Chinese mainland)
+            Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
+            Supported image size: the downloaded image cannot exceed 3 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+            We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+            The download speed and stability of non-Tencent Cloud URLs may be low.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.TableOCRRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TableOCRResponse.TextDetections">
+            <summary>
+            Recognized text. For more information, please click the link on the left
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TableOCRResponse.Data">
+            <summary>
+            Base64-encoded Excel data.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TableOCRResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.TableOCRResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextDetection.DetectedText">
+            <summary>
+            Recognized text line content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextDetection.Confidence">
+            <summary>
+            Confidence. Value range: 0–100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextDetection.Polygon">
+            <summary>
+            Text line coordinates, which are represented as 4 vertex coordinates.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextDetection.AdvancedInfo">
+            <summary>
+            Extended field.
+            The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextDetection.ItemPolygon">
+            <summary>
+            Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextDetection.Words">
+            <summary>
+            Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextDetection.WordCoordPoint">
+            <summary>
+            Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.TextDetection.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.ColTl">
+            <summary>
+            Column index of the top-left corner of the cell.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.RowTl">
+            <summary>
+            Row index of the top-left corner of the cell.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.ColBr">
+            <summary>
+            Column index of the bottom-right corner of the cell.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.RowBr">
+            <summary>
+            Row index of the bottom-right corner of the cell.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.Text">
+            <summary>
+            Cell text
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.Type">
+            <summary>
+            Cell type. Valid values: body, header, footer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.Confidence">
+            <summary>
+            Confidence. Value range: 0–100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.Polygon">
+            <summary>
+            Text line coordinates, which are represented as 4 vertex coordinates.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ocr.V20181119.Models.TextTable.AdvancedInfo">
+            <summary>
+            Extended field
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ocr.V20181119.Models.TextTable.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

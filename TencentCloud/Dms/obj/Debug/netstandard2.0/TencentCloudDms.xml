@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudDms</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Dms.V20200819.DmsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.DmsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.DmsClient.SendEmail(TencentCloud.Dms.V20200819.Models.SendEmailRequest)">
+            <summary>
+            This API is used to send regular emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dms.V20200819.Models.SendEmailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dms.V20200819.Models.SendEmailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.DmsClient.SendEmailSync(TencentCloud.Dms.V20200819.Models.SendEmailRequest)">
+            <summary>
+            This API is used to send regular emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dms.V20200819.Models.SendEmailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dms.V20200819.Models.SendEmailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.DmsClient.SendTemplatedEmail(TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest)">
+            <summary>
+            This API is used to send template emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.DmsClient.SendTemplatedEmailSync(TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest)">
+            <summary>
+            This API is used to send template emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailRequest.FromAddress">
+            <summary>
+            Sender
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailRequest.ToAddress">
+            <summary>
+            Recipient
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailRequest.Subject">
+            <summary>
+            Email summary
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailRequest.FromName">
+            <summary>
+            Sender name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailRequest.ReplyAddress">
+            <summary>
+            Reply-to address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailRequest.HtmlContent">
+            <summary>
+            The body of an HTML email
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailRequest.TextContent">
+            <summary>
+            The body of a plain-text email
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.Models.SendEmailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailResponse.Result">
+            <summary>
+            The result of creating an email task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendEmailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.Models.SendEmailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest.FromAddress">
+            <summary>
+            Sender address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest.ToAddress">
+            <summary>
+            Recipient address. Up to 100 recipient addresses are supported. Multiple addresses should be separated by semicolons (;).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest.TemplateName">
+            <summary>
+            The name of the template created in advance.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest.TemplateValue">
+            <summary>
+            Template variable value, which is a JSON string.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest.FromName">
+            <summary>
+            Sender name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest.ReplyAddress">
+            <summary>
+            Reply-to address.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailResponse.Result">
+            <summary>
+            The result of creating a template email task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dms.V20200819.Models.SendTemplatedEmailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

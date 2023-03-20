@@ -1,0 +1,3113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudEs</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.CreateIndex(TencentCloud.Es.V20180416.Models.CreateIndexRequest)">
+            <summary>
+            This API is used to create indices.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.CreateIndexRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.CreateIndexResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.CreateIndexSync(TencentCloud.Es.V20180416.Models.CreateIndexRequest)">
+            <summary>
+            This API is used to create indices.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.CreateIndexRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.CreateIndexResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.CreateInstance(TencentCloud.Es.V20180416.Models.CreateInstanceRequest)">
+            <summary>
+            This API is used to create an ES cluster instance with the specified specification.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.CreateInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.CreateInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.CreateInstanceSync(TencentCloud.Es.V20180416.Models.CreateInstanceRequest)">
+            <summary>
+            This API is used to create an ES cluster instance with the specified specification.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.CreateInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.CreateInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DeleteIndex(TencentCloud.Es.V20180416.Models.DeleteIndexRequest)">
+            <summary>
+            This API is used to delete indices.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DeleteIndexRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DeleteIndexResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DeleteIndexSync(TencentCloud.Es.V20180416.Models.DeleteIndexRequest)">
+            <summary>
+            This API is used to delete indices.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DeleteIndexRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DeleteIndexResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DeleteInstance(TencentCloud.Es.V20180416.Models.DeleteInstanceRequest)">
+            <summary>
+            This API is used to terminate a cluster instance. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DeleteInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DeleteInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DeleteInstanceSync(TencentCloud.Es.V20180416.Models.DeleteInstanceRequest)">
+            <summary>
+            This API is used to terminate a cluster instance. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DeleteInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DeleteInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeIndexList(TencentCloud.Es.V20180416.Models.DescribeIndexListRequest)">
+            <summary>
+            This API is used to obtain the index list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeIndexListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeIndexListSync(TencentCloud.Es.V20180416.Models.DescribeIndexListRequest)">
+            <summary>
+            This API is used to obtain the index list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeIndexListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeIndexMeta(TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest)">
+            <summary>
+            This API is used to obtain index metadata.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeIndexMetaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeIndexMetaSync(TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest)">
+            <summary>
+            This API is used to obtain index metadata.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeIndexMetaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeInstanceLogs(TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest)">
+            <summary>
+            This API is used to query the eligible ES cluster logs in the current region.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeInstanceLogsSync(TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest)">
+            <summary>
+            This API is used to query the eligible ES cluster logs in the current region.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeInstanceOperations(TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest)">
+            <summary>
+            This API is used to query the operation history of an instance by specified criteria.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeInstanceOperationsSync(TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest)">
+            <summary>
+            This API is used to query the operation history of an instance by specified criteria.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeInstances(TencentCloud.Es.V20180416.Models.DescribeInstancesRequest)">
+            <summary>
+            This API is used to query all eligible instances in the current region under the current account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeInstancesSync(TencentCloud.Es.V20180416.Models.DescribeInstancesRequest)">
+            <summary>
+            This API is used to query all eligible instances in the current region under the current account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeInstancesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeViews(TencentCloud.Es.V20180416.Models.DescribeViewsRequest)">
+            <summary>
+            This API is used to query view data from three dimensions: cluster, node, and Kibana.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeViewsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeViewsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.DescribeViewsSync(TencentCloud.Es.V20180416.Models.DescribeViewsRequest)">
+            <summary>
+            This API is used to query view data from three dimensions: cluster, node, and Kibana.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.DescribeViewsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.DescribeViewsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.GetRequestTargetNodeTypes(TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesRequest)">
+            <summary>
+            This API is used to get the node types used to receive client requests.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.GetRequestTargetNodeTypesSync(TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesRequest)">
+            <summary>
+            This API is used to get the node types used to receive client requests.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.RestartInstance(TencentCloud.Es.V20180416.Models.RestartInstanceRequest)">
+            <summary>
+            This API is used to restart an ES cluster instance (for operations such as system update). 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.RestartInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.RestartInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.RestartInstanceSync(TencentCloud.Es.V20180416.Models.RestartInstanceRequest)">
+            <summary>
+            This API is used to restart an ES cluster instance (for operations such as system update). 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.RestartInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.RestartInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.RestartKibana(TencentCloud.Es.V20180416.Models.RestartKibanaRequest)">
+            <summary>
+            This API is used to restart Kibana. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.RestartKibanaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.RestartKibanaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.RestartKibanaSync(TencentCloud.Es.V20180416.Models.RestartKibanaRequest)">
+            <summary>
+            This API is used to restart Kibana. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.RestartKibanaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.RestartKibanaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.RestartNodes(TencentCloud.Es.V20180416.Models.RestartNodesRequest)">
+            <summary>
+            This API is used to restart cluster nodes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.RestartNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.RestartNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.RestartNodesSync(TencentCloud.Es.V20180416.Models.RestartNodesRequest)">
+            <summary>
+            This API is used to restart cluster nodes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.RestartNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.RestartNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdateDictionaries(TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest)">
+            <summary>
+            This API is used to update ES cluster dictionaries.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdateDictionariesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdateDictionariesSync(TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest)">
+            <summary>
+            This API is used to update ES cluster dictionaries.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdateDictionariesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdateIndex(TencentCloud.Es.V20180416.Models.UpdateIndexRequest)">
+            <summary>
+            This API is used to update indices.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdateIndexRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdateIndexResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdateIndexSync(TencentCloud.Es.V20180416.Models.UpdateIndexRequest)">
+            <summary>
+            This API is used to update indices.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdateIndexRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdateIndexResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdateInstance(TencentCloud.Es.V20180416.Models.UpdateInstanceRequest)">
+            <summary>
+            This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
+            - InstanceName: renames an instance (only for instance identification)
+            - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)
+            - EsConfig: modifies cluster configuration
+            - Password: changes the password of the default user "elastic"
+            - EsAcl: modifies the ACL
+            - CosBackUp: sets auto-backup to COS for a cluster
+            Only one of the parameters or parameter combinations above can be passed in at a time, while passing fewer or more ones will cause the request to fail.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdateInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdateInstanceSync(TencentCloud.Es.V20180416.Models.UpdateInstanceRequest)">
+            <summary>
+            This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
+            - InstanceName: renames an instance (only for instance identification)
+            - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)
+            - EsConfig: modifies cluster configuration
+            - Password: changes the password of the default user "elastic"
+            - EsAcl: modifies the ACL
+            - CosBackUp: sets auto-backup to COS for a cluster
+            Only one of the parameters or parameter combinations above can be passed in at a time, while passing fewer or more ones will cause the request to fail.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdateInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdatePlugins(TencentCloud.Es.V20180416.Models.UpdatePluginsRequest)">
+            <summary>
+            This API is used to change the list of plugins.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdatePluginsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdatePluginsSync(TencentCloud.Es.V20180416.Models.UpdatePluginsRequest)">
+            <summary>
+            This API is used to change the list of plugins.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdatePluginsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdateRequestTargetNodeTypes(TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesRequest)">
+            <summary>
+            This API is used to update the node types used to receive client requests.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpdateRequestTargetNodeTypesSync(TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesRequest)">
+            <summary>
+            This API is used to update the node types used to receive client requests.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpgradeInstance(TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest)">
+            <summary>
+            This API is used to upgrade ES cluster version
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpgradeInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpgradeInstanceSync(TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest)">
+            <summary>
+            This API is used to upgrade ES cluster version
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpgradeInstanceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpgradeLicense(TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest)">
+            <summary>
+            This API is used to upgrade ES X-Pack.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpgradeLicenseResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.EsClient.UpgradeLicenseSync(TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest)">
+            <summary>
+            This API is used to upgrade ES X-Pack.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest"/></param>
+            <returns><see cref="T:TencentCloud.Es.V20180416.Models.UpgradeLicenseResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.BackingIndexMetaField.IndexName">
+            <summary>
+            Backing index name
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.BackingIndexMetaField.IndexStatus">
+            <summary>
+            Backing index status
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.BackingIndexMetaField.IndexStorage">
+            <summary>
+            Backing index size
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.BackingIndexMetaField.IndexPhrase">
+            <summary>
+            Current lifecycle phase of backing index
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.BackingIndexMetaField.IndexCreateTime">
+            <summary>
+            Backing index creation time
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.BackingIndexMetaField.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.Health">
+            <summary>
+            Cluster health status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.Visible">
+            <summary>
+            Whether the cluster is visible
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.Break">
+            <summary>
+            Whether the cluster encounters circuit breaking
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.AvgDiskUsage">
+            <summary>
+            Average disk usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.AvgMemUsage">
+            <summary>
+            Average memory usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.AvgCpuUsage">
+            <summary>
+            Average CPU usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.TotalDiskSize">
+            <summary>
+            Total disk size of the cluster
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.TargetNodeTypes">
+            <summary>
+            Types of nodes to receive client requests
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.NodeNum">
+            <summary>
+            Number of online nodes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.TotalNodeNum">
+            <summary>
+            Total number of nodes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.DataNodeNum">
+            <summary>
+            Number of data nodes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.IndexNum">
+            <summary>
+            Number of indices
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.DocNum">
+            <summary>
+            Number of documents
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.DiskUsedInBytes">
+            <summary>
+            Used disk size (in bytes)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.ShardNum">
+            <summary>
+            Number of shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.PrimaryShardNum">
+            <summary>
+            Number of primary shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.RelocatingShardNum">
+            <summary>
+            Number of relocating shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.InitializingShardNum">
+            <summary>
+            Number of initializing shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.UnassignedShardNum">
+            <summary>
+            Number of unassigned shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.TotalCosStorage">
+            <summary>
+            Total COS storage of an enterprise cluster, in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.SearchableSnapshotCosBucket">
+            <summary>
+            Name of the COS bucket that stores searchable snapshots of an enterprise cluster
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ClusterView.SearchableSnapshotCosAppId">
+            <summary>
+            COS app ID of the searchable snapshots of an enterprise cluster
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.ClusterView.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CosBackup.IsAutoBackup">
+            <summary>
+            Whether to enable auto-backup to COS
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CosBackup.BackupTime">
+            <summary>
+            Auto-backup time (accurate down to the hour), such as "22:00"
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.CosBackup.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateIndexRequest.InstanceId">
+            <summary>
+            ES cluster ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateIndexRequest.IndexType">
+            <summary>
+            Type of the index to create. `auto`: Automated; `normal`: General.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateIndexRequest.IndexName">
+            <summary>
+            Name of the index to create
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateIndexRequest.IndexMetaJson">
+            <summary>
+            JSON-formatted index metadata to create, such as `mappings` and `settings`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateIndexRequest.Username">
+            <summary>
+            Username for cluster access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateIndexRequest.Password">
+            <summary>
+            Password for cluster access
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.CreateIndexRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateIndexResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.CreateIndexResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.Zone">
+            <summary>
+            Availability Zone
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.EsVersion">
+            <summary>
+            Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.VpcId">
+            <summary>
+            VPC ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.SubnetId">
+            <summary>
+            Subnet ID
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.Password" -->
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.InstanceName">
+            <summary>
+            Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.NodeNum">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Number of nodes (2-50)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.ChargeType">
+            <summary>
+            Billing mode <li>POSTPAID_BY_HOUR: Pay-as-you-go hourly </li>Default value: POSTPAID_BY_HOUR
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.ChargePeriod">
+            <summary>
+            This parameter is not used on the global website
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.RenewFlag">
+            <summary>
+            This parameter is not used on the global website
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.NodeType">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.DiskType">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.DiskSize">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Node disk size in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.TimeUnit">
+            <summary>
+            This parameter is not used on the global website
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.AutoVoucher">
+            <summary>
+            Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.VoucherIds">
+            <summary>
+            List of voucher IDs (only one voucher can be specified at a time currently)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.EnableDedicatedMaster">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.MasterNodeNum">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.MasterNodeType">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.MasterNodeDiskSize">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.ClusterNameInConf">
+            <summary>
+            ClusterName in the cluster configuration file, which is the instance ID by default and currently cannot be customized
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.DeployMode">
+            <summary>
+            Cluster deployment mode <li>0: single-AZ deployment </li><li>1: multi-AZ deployment </li>Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.MultiZoneInfo">
+            <summary>
+            Details of AZs in multi-AZ deployment mode (which is required when DeployMode is 1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.LicenseType">
+            <summary>
+            License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.NodeInfoList">
+            <summary>
+            Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.TagList">
+            <summary>
+            Node tag information list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.BasicSecurityType">
+            <summary>
+            Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.SceneType">
+            <summary>
+            Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.WebNodeTypeInfo">
+            <summary>
+            Visual node configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.Protocol">
+            <summary>
+            Valid values: `https`, `http` (default)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.OperationDuration">
+            <summary>
+            The maintenance time slot
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.EnableHybridStorage">
+            <summary>
+            Whether to enable the storage-computing separation feature.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.DiskEnhance">
+            <summary>
+            Whether to enable enhanced SSD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.EnableDiagnose">
+            <summary>
+            Whether to enable smart inspection.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.CreateInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceResponse.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceResponse.DealName">
+            <summary>
+            Order ID
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.CreateInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.CreateInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteIndexRequest.InstanceId">
+            <summary>
+            ES cluster ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteIndexRequest.IndexType">
+            <summary>
+            Type of the index to delete. `auto`: Automated; `normal`: General.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteIndexRequest.IndexName">
+            <summary>
+            Name of the index to delete
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteIndexRequest.Username">
+            <summary>
+            Username for cluster access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteIndexRequest.Password">
+            <summary>
+            Password for cluster access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteIndexRequest.BackingIndexName">
+            <summary>
+            Backing index name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DeleteIndexRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteIndexResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DeleteIndexResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteInstanceRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DeleteInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DeleteInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DeleteInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.IndexType">
+            <summary>
+            Index type. `auto`: Automated; `normal`: General.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.InstanceId">
+            <summary>
+            ES cluster ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.IndexName">
+            <summary>
+            Index name. `null` indicates that all indexes are requested.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.Username">
+            <summary>
+            Username for cluster access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.Password">
+            <summary>
+            Password for cluster access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.Offset">
+            <summary>
+            The starting position of paging
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.Limit">
+            <summary>
+            The number of results per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.OrderBy">
+            <summary>
+            Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.IndexStatusList">
+            <summary>
+            Filtering by index status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.Order">
+            <summary>
+            Sorting mode, which can be `asc` and `desc`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeIndexListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListResponse.IndexMetaFields">
+            <summary>
+            Index metadata field
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListResponse.TotalCount">
+            <summary>
+            Total number of results
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeIndexListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest.InstanceId">
+            <summary>
+            ES cluster ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest.IndexType">
+            <summary>
+            Index type. `auto`: Automated; `normal`: General.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest.IndexName">
+            <summary>
+            Index name. `null` indicates that all indexes are requested.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest.Username">
+            <summary>
+            Username for cluster access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest.Password">
+            <summary>
+            Password for cluster access
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeIndexMetaRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexMetaResponse.IndexMetaField">
+            <summary>
+            Index metadata field
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeIndexMetaResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeIndexMetaResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.InstanceId">
+            <summary>
+            Cluster instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.LogType">
+            <summary>
+            Log type. Default value: 1
+            <li>1: primary log</li>
+            <li>2: search slow log</li>
+            <li>3: index slow log</li>
+            <li>4: GC log</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.SearchKey">
+            <summary>
+            Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.StartTime">
+            <summary>
+            Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.EndTime">
+            <summary>
+            Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.Offset">
+            <summary>
+            Pagination start value. Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: 100. Maximum value: 100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.OrderByType">
+            <summary>
+            Time sorting order. Default value: 0
+            <li>0: descending</li>
+            <li>1: ascending</li>
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsResponse.TotalCount">
+            <summary>
+            Number of returned logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsResponse.InstanceLogList">
+            <summary>
+            Log details list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeInstanceLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest.InstanceId">
+            <summary>
+            Cluster instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest.StartTime">
+            <summary>
+            Start time, such as "2019-03-07 16:30:39"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest.EndTime">
+            <summary>
+            End time, such as "2019-03-30 20:18:03"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest.Offset">
+            <summary>
+            Pagination start value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest.Limit">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsResponse.TotalCount">
+            <summary>
+            Total number of operation records
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsResponse.Operations">
+            <summary>
+            Operation history
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeInstanceOperationsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.Zone">
+            <summary>
+            AZ of the cluster instance. If this is not passed in, all AZs are used by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.InstanceIds">
+            <summary>
+            List of cluster instance IDs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.InstanceNames">
+            <summary>
+            List of cluster instance names
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.Offset">
+            <summary>
+            Pagination start value. Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: 20
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.OrderByKey">
+            <summary>
+            The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.OrderByType">
+            <summary>
+            Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.TagList">
+            <summary>
+            Node tag information list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.IpList">
+            <summary>
+            VPC VIP list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.ZoneList">
+            <summary>
+            List of availability zones
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.HealthStatus">
+            <summary>
+            The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.VpcIds">
+            <summary>
+            VPC IDs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeInstancesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesResponse.TotalCount">
+            <summary>
+            Number of returned instances
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesResponse.InstanceList">
+            <summary>
+            List of instance details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeInstancesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeInstancesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeViewsRequest.InstanceId">
+            <summary>
+            Cluster instance ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeViewsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeViewsResponse.ClusterView">
+            <summary>
+            Cluster view
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeViewsResponse.NodesView">
+            <summary>
+            Node view
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeViewsResponse.KibanasView">
+            <summary>
+            Kibana view
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DescribeViewsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DescribeViewsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DictInfo.Key">
+            <summary>
+            Dictionary key value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DictInfo.Name">
+            <summary>
+            Dictionary name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.DictInfo.Size">
+            <summary>
+            Dictionary size in B
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.DictInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsAcl.BlackIpList">
+            <summary>
+            Kibana access blocklist
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsAcl.WhiteIpList">
+            <summary>
+            Kibana access allowlist
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.EsAcl.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsConfigSetInfo.Type">
+            <summary>
+            Configuration set type, such as `LDAP` and `AD`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsConfigSetInfo.EsConfig">
+            <summary>
+            "{\"order\":0,\"url\":\"ldap://10.0.1.72:389\",\"bind_dn\":\"cn=admin,dc=tencent,dc=com\",\"user_search.base_dn\":\"dc=tencent,dc=com\",\"user_search.filter\":\"(cn={0})\",\"group_search.base_dn\":\"dc=tencent,dc=com\"}"
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.EsConfigSetInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsDictionaryInfo.MainDict">
+            <summary>
+            List of non-stop words
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsDictionaryInfo.Stopwords">
+            <summary>
+            List of stop words
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsDictionaryInfo.QQDict">
+            <summary>
+            QQ dictionary list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsDictionaryInfo.Synonym">
+            <summary>
+            Synonym dictionary list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsDictionaryInfo.UpdateType">
+            <summary>
+            Update dictionary type
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.EsDictionaryInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsPublicAcl.BlackIpList">
+            <summary>
+            Access blocklist
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.EsPublicAcl.WhiteIpList">
+            <summary>
+            Access allowlist
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.EsPublicAcl.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesRequest.InstanceId">
+            <summary>
+            Instance ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesResponse.TargetNodeTypes">
+            <summary>
+            A list of node types used to receive requests.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.GetRequestTargetNodeTypesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexType">
+            <summary>
+            Index type
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexName">
+            <summary>
+            Index name
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexStatus">
+            <summary>
+            Index status
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexStorage">
+            <summary>
+            Index size (in byte)
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexCreateTime">
+            <summary>
+            Index creation time
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.BackingIndices">
+            <summary>
+            Backing index
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.ClusterId">
+            <summary>
+            Cluster ID
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.ClusterName">
+            <summary>
+            Cluster name
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.ClusterVersion">
+            <summary>
+            Cluster version
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexPolicyField">
+            <summary>
+            Index lifecycle policy field
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexOptionsField">
+            <summary>
+            Index automation field
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexSettingsField">
+            <summary>
+            Index setting field
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.AppId">
+            <summary>
+            Cluster APP ID
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexMetaField.IndexDocs">
+            <summary>
+            The number of index docs.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.IndexMetaField.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexOptionsField.ExpireMaxAge">
+            <summary>
+            Max age for expiry purpose
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexOptionsField.ExpireMaxSize">
+            <summary>
+            Max size for expiry purpose
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexOptionsField.RolloverMaxAge">
+            <summary>
+            Rollover cycle
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexOptionsField.RolloverDynamic">
+            <summary>
+            Whether to enable the dynamic rollover
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexOptionsField.ShardNumDynamic">
+            <summary>
+            Whether to enable dynamic sharding
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexOptionsField.TimestampField">
+            <summary>
+            Timestamp field
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexOptionsField.WriteMode">
+            <summary>
+            Write mode
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.IndexOptionsField.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexPolicyField.WarmEnable">
+            <summary>
+            Whether to enable the warm phase
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexPolicyField.WarmMinAge">
+            <summary>
+            Min age before data transitions to the warm phase
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexPolicyField.ColdEnable">
+            <summary>
+            Whether to enable the cold phase
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexPolicyField.ColdMinAge">
+            <summary>
+            Min age before data transitions to the cold phase
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexPolicyField.FrozenEnable">
+            <summary>
+            Whether to enable the frozen phase
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexPolicyField.FrozenMinAge">
+            <summary>
+            Min age before data transitions to the frozen phase
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexPolicyField.ColdAction">
+            <summary>
+            /
+            Note: This field may return null, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.IndexPolicyField.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexSettingsField.NumberOfShards">
+            <summary>
+            Number of primary shards
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexSettingsField.NumberOfReplicas">
+            <summary>
+            Number of replica shards
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.IndexSettingsField.RefreshInterval">
+            <summary>
+            Index refresh interval
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.IndexSettingsField.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.InstanceName">
+            <summary>
+            Instance name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.Region">
+            <summary>
+            Region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.Zone">
+            <summary>
+            Availability Zone
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.AppId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.Uin">
+            <summary>
+            User UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.VpcUid">
+            <summary>
+            UID of the VPC where the instance resides
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.SubnetUid">
+            <summary>
+            UID of the subnet where the instance resides
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.Status">
+            <summary>
+            Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.RenewFlag">
+            <summary>
+            This parameter is not used on the global website
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ChargeType">
+            <summary>
+            Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ChargePeriod">
+            <summary>
+            This parameter is not used on the global website
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.NodeType">
+            <summary>
+            Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.NodeNum">
+            <summary>
+            Number of nodes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.CpuNum">
+            <summary>
+            Number of CPU cores of the node
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.MemSize">
+            <summary>
+            Node memory size in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.DiskType">
+            <summary>
+            Node disk type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.DiskSize">
+            <summary>
+            Node disk size in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsDomain">
+            <summary>
+            ES domain name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsVip">
+            <summary>
+            ES VIP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsPort">
+            <summary>
+            ES port
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.KibanaUrl">
+            <summary>
+            Kibana access URL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsVersion">
+            <summary>
+            ES version number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsConfig">
+            <summary>
+            ES configuration item
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsAcl">
+            <summary>
+            Kibana access control configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.CreateTime">
+            <summary>
+            Instance creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.UpdateTime">
+            <summary>
+            Last modified time of the instance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.Deadline">
+            <summary>
+            This parameter is not used on the global website
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.InstanceType">
+            <summary>
+            Instance type (instance type identifier, which can be only 1 or 2 currently)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.IkConfig">
+            <summary>
+            IK analyzer configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.MasterNodeInfo">
+            <summary>
+            Dedicated primary node configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.CosBackup">
+            <summary>
+            Auto-backup to COS configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.AllowCosBackup">
+            <summary>
+            Whether to allow auto-backup to COS
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.TagList">
+            <summary>
+            List of tags owned by the instance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.LicenseType">
+            <summary>
+            License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EnableHotWarmMode">
+            <summary>
+            Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.WarmNodeType">
+            <summary>
+            Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.WarmNodeNum">
+            <summary>
+            Number of warm nodes
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.WarmCpuNum">
+            <summary>
+            Number of warm node CPU cores
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.WarmMemSize">
+            <summary>
+            Warm node memory size (in GB)
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.WarmDiskType">
+            <summary>
+            Warm node disk type
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.WarmDiskSize">
+            <summary>
+            Warm node disk size (in GB)
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.NodeInfoList">
+            <summary>
+            Cluster node information list
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsPublicUrl">
+            <summary>
+            ES public IP address
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.MultiZoneInfo">
+            <summary>
+            Multi-AZ network information
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.DeployMode">
+            <summary>
+            Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Es.V20180416.Models.InstanceInfo.PublicAccess" -->
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsPublicAcl">
+            <summary>
+            ES public access control configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.KibanaPrivateUrl">
+            <summary>
+            Kibana private IP address
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Es.V20180416.Models.InstanceInfo.KibanaPublicAccess" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Es.V20180416.Models.InstanceInfo.KibanaPrivateAccess" -->
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.SecurityType">
+            <summary>
+            Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.SceneType">
+            <summary>
+            Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.KibanaConfig">
+            <summary>
+            Kibana configuration item.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.KibanaNodeInfo">
+            <summary>
+            Kibana node information
+            Note: this field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.WebNodeTypeInfo">
+            <summary>
+            Visual node configuration
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.Jdk">
+            <summary>
+            JDK type. Valid values: `oracle`, `kona`
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.Protocol">
+            <summary>
+            Cluster network communication protocol
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.SecurityGroups">
+            <summary>
+            Security group ID
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ColdNodeType">
+            <summary>
+            Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ColdNodeNum">
+            <summary>
+            Number of cold nodes
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ColdCpuNum">
+            <summary>
+            Number of cold node CPU cores
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ColdMemSize">
+            <summary>
+            Cold node memory size (in GB)
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ColdDiskType">
+            <summary>
+            Cold node disk type
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ColdDiskSize">
+            <summary>
+            Cold node disk size (in GB)
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.FrozenNodeType">
+            <summary>
+            Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.FrozenNodeNum">
+            <summary>
+            Number of frozen nodes
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.FrozenCpuNum">
+            <summary>
+            Number of frozen node CPU cores
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.FrozenMemSize">
+            <summary>
+            Frozen node memory size (GB)
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.FrozenDiskType">
+            <summary>
+            Frozen node disk type
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.FrozenDiskSize">
+            <summary>
+            Frozen node disk size (in GB)
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.HealthStatus">
+            <summary>
+            Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsPrivateUrl">
+            <summary>
+            Private URL of the HTTPS cluster
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsPrivateDomain">
+            <summary>
+            Private domain of the HTTPS cluster
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EsConfigSets">
+            <summary>
+            Configuration set info of the cluster.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.OperationDuration">
+            <summary>
+            The maintenance time slot of the cluster
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.OptionalWebServiceInfos">
+            <summary>
+            Web node list
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.AutoIndexEnabled">
+            <summary>
+            Autonomous index option
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.EnableHybridStorage">
+            <summary>
+            Whether the storage-computing separation feature is enabled.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceInfo.ProcessPercent">
+            <summary>
+            The process progress
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Es.V20180416.Models.InstanceInfo.KibanaAlteringPublicAccess" -->
+        <member name="M:TencentCloud.Es.V20180416.Models.InstanceInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceLog.Time">
+            <summary>
+            Log time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceLog.Level">
+            <summary>
+            Log level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceLog.Ip">
+            <summary>
+            Cluster node IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.InstanceLog.Message">
+            <summary>
+            Log content
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.InstanceLog.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KeyValue.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KeyValue.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.KeyValue.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaNodeInfo.KibanaNodeType">
+            <summary>
+            Kibana node specification
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaNodeInfo.KibanaNodeNum">
+            <summary>
+            Number of Kibana nodes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaNodeInfo.KibanaNodeCpuNum">
+            <summary>
+            Number of Kibana node's CPUs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaNodeInfo.KibanaNodeMemSize">
+            <summary>
+            Kibana node's memory in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaNodeInfo.KibanaNodeDiskType">
+            <summary>
+            Kibana node's disk type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaNodeInfo.KibanaNodeDiskSize">
+            <summary>
+            Kibana node's disk size
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.KibanaNodeInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaView.Ip">
+            <summary>
+            Kibana node IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaView.DiskSize">
+            <summary>
+            Node disk size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaView.DiskUsage">
+            <summary>
+            Disk usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaView.MemSize">
+            <summary>
+            Node memory size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaView.MemUsage">
+            <summary>
+            Memory usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaView.CpuNum">
+            <summary>
+            Number of node CPUs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaView.CpuUsage">
+            <summary>
+            CPU usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.KibanaView.Zone">
+            <summary>
+            Availability zone
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.KibanaView.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.LocalDiskInfo.LocalDiskType">
+            <summary>
+            Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.LocalDiskInfo.LocalDiskSize">
+            <summary>
+            Size of a single local disk
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.LocalDiskInfo.LocalDiskCount">
+            <summary>
+            Number of local disks
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.LocalDiskInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.MasterNodeInfo.EnableDedicatedMaster">
+            <summary>
+            Whether to enable the dedicated primary node
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.MasterNodeInfo.MasterNodeType">
+            <summary>
+            Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.MasterNodeInfo.MasterNodeNum">
+            <summary>
+            Number of dedicated primary nodes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.MasterNodeInfo.MasterNodeCpuNum">
+            <summary>
+            Number of CPU cores of the dedicated primary node
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.MasterNodeInfo.MasterNodeMemSize">
+            <summary>
+            Memory size of the dedicated primary node in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.MasterNodeInfo.MasterNodeDiskSize">
+            <summary>
+            Disk size of the dedicated primary node in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.MasterNodeInfo.MasterNodeDiskType">
+            <summary>
+            Disk type of the dedicated primary node
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.MasterNodeInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.NodeNum">
+            <summary>
+            Number of nodes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.NodeType">
+            <summary>
+            Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.Type">
+            <summary>
+            Node type<li>`hotData`: hot data node</li>
+            <li>`warmData`: warm data node</li>
+            <li>`dedicatedMaster`: dedicated master node</li>
+            Default value: `hotData`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.DiskType">
+            <summary>
+            Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.DiskSize">
+            <summary>
+            Node disk size in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.LocalDiskInfo">
+            <summary>
+            Local disk information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.DiskCount">
+            <summary>
+            Number of node disks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.DiskEncrypt">
+            <summary>
+            Whether to encrypt node disk. 0: no (default); 1: yes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.CpuNum">
+            <summary>
+            CPU number
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.MemSize">
+            <summary>
+            Memory size in GB
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeInfo.DiskEnhance">
+            <summary>
+            /
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.NodeInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.NodeId">
+            <summary>
+            Node ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.NodeIp">
+            <summary>
+            Node IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.Visible">
+            <summary>
+            Whether the node is visible
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.Break">
+            <summary>
+            Whether the node encounters circuit breaking
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.DiskSize">
+            <summary>
+            Node disk size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.DiskUsage">
+            <summary>
+            Disk usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.MemSize">
+            <summary>
+            Node memory size (in GB)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.MemUsage">
+            <summary>
+            Memory usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.CpuNum">
+            <summary>
+            Number of node CPUs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.CpuUsage">
+            <summary>
+            CPU usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.Zone">
+            <summary>
+            Availability zone
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.NodeRole">
+            <summary>
+            Node role
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.NodeHttpIp">
+            <summary>
+            Node HTTP IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.JvmMemUsage">
+            <summary>
+            JVM memory usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.ShardNum">
+            <summary>
+            Number of node shards
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.DiskIds">
+            <summary>
+            ID list of node disks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.NodeView.Hidden">
+            <summary>
+            Whether a hidden availability zone
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.NodeView.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.Operation.Id">
+            <summary>
+            Unique operation ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.Operation.StartTime">
+            <summary>
+            Operation start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.Operation.Type">
+            <summary>
+            Operation type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.Operation.Detail">
+            <summary>
+            Operation details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.Operation.Result">
+            <summary>
+            Operation result
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.Operation.Tasks">
+            <summary>
+            Workflow task information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.Operation.Progress">
+            <summary>
+            Operation progress
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.Operation.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDetail.OldInfo">
+            <summary>
+            Original instance configuration information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDetail.NewInfo">
+            <summary>
+            Updated instance configuration information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.OperationDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDuration.Periods">
+            <summary>
+            Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDuration.TimeStart">
+            <summary>
+            The maintenance start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDuration.TimeEnd">
+            <summary>
+            The maintenance end time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDuration.TimeZone">
+            <summary>
+            The time zone expressed in UTC.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.OperationDuration.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDurationUpdated.Periods">
+            <summary>
+            Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDurationUpdated.TimeStart">
+            <summary>
+            The maintenance start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDurationUpdated.TimeEnd">
+            <summary>
+            The maintenance end time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDurationUpdated.TimeZone">
+            <summary>
+            The time zone expressed in UTC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OperationDurationUpdated.MoreInstances">
+            <summary>
+            The array of ES cluster IDs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.OperationDurationUpdated.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OptionalWebServiceInfo.Type">
+            <summary>
+            Type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OptionalWebServiceInfo.Status">
+            <summary>
+            Status
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OptionalWebServiceInfo.PublicUrl">
+            <summary>
+            Public URL
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OptionalWebServiceInfo.PrivateUrl">
+            <summary>
+            Private URL
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OptionalWebServiceInfo.PublicAccess">
+            <summary>
+            Public network access
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OptionalWebServiceInfo.PrivateAccess">
+            <summary>
+            Private network access
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.OptionalWebServiceInfo.Version">
+            <summary>
+            Version
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.OptionalWebServiceInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartInstanceRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartInstanceRequest.ForceRestart">
+            <summary>
+            Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartInstanceRequest.RestartMode">
+            <summary>
+            Restart mode. `0`: rolling restart; `1`: full restart
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.RestartInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.RestartInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartKibanaRequest.InstanceId">
+            <summary>
+            ES instance ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.RestartKibanaRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartKibanaResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.RestartKibanaResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartNodesRequest.InstanceId">
+            <summary>
+            Cluster instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartNodesRequest.NodeNames">
+            <summary>
+            Node name list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartNodesRequest.ForceRestart">
+            <summary>
+            Whether to force restart
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartNodesRequest.RestartMode">
+            <summary>
+            The restart mode. Valid values: `in-place` (default), `blue-green`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartNodesRequest.IsOffline">
+            <summary>
+            The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.RestartNodesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.RestartNodesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.RestartNodesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.SubTaskDetail.Name">
+            <summary>
+            Subtask name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.SubTaskDetail.Result">
+            <summary>
+            Subtask result
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.SubTaskDetail.ErrMsg">
+            <summary>
+            Subtask error message
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.SubTaskDetail.Type">
+            <summary>
+            Subtask type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.SubTaskDetail.Status">
+            <summary>
+            Subtask status. 0: processing, 1: succeeded, -1: failed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.SubTaskDetail.FailedIndices">
+            <summary>
+            Name of the index for which the check for upgrade failed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.SubTaskDetail.FinishTime">
+            <summary>
+            Subtask end time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.SubTaskDetail.Level">
+            <summary>
+            Subtask level. 1: warning, 2: failed
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.SubTaskDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.TagInfo.TagKey">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.TagInfo.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.TagInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.TaskDetail.Name">
+            <summary>
+            Task name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.TaskDetail.Progress">
+            <summary>
+            Task progress
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.TaskDetail.FinishTime">
+            <summary>
+            Task completion time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.TaskDetail.SubTasks">
+            <summary>
+            Subtask
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.TaskDetail.ElapsedTime">
+            <summary>
+            The task time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.TaskDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest.InstanceId">
+            <summary>
+            ES instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest.IkMainDicts">
+            <summary>
+            COS address of the main dictionary for the IK analyzer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest.IkStopwords">
+            <summary>
+            COS address of the stopword dictionary for the IK analyzer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest.Synonym">
+            <summary>
+            COS address of the synonym dictionary
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest.QQDict">
+            <summary>
+            COS address of the QQ dictionary
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest.UpdateType">
+            <summary>
+            `0` (default): Install, `1`: Delete
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest.ForceRestart">
+            <summary>
+            Whether to force restart the cluster. The default value is `false`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdateDictionariesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateDictionariesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdateDictionariesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateIndexRequest.InstanceId">
+            <summary>
+            ES cluster ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateIndexRequest.IndexType">
+            <summary>
+            Type of the index to update. `auto`: Automated; `normal`: General.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateIndexRequest.IndexName">
+            <summary>
+            Name of the index to update
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateIndexRequest.UpdateMetaJson">
+            <summary>
+            JSON-formatted index metadata to update, such as `mappings` and `settings`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateIndexRequest.Username">
+            <summary>
+            Username for cluster access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateIndexRequest.Password">
+            <summary>
+            Password for cluster access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateIndexRequest.RolloverBackingIndex">
+            <summary>
+            Whether to roll over the backup index
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdateIndexRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateIndexResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdateIndexResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.InstanceName">
+            <summary>
+            Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.NodeNum">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Number of nodes (2-50)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.EsConfig">
+            <summary>
+            ES configuration item (JSON string)
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.Password" -->
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.EsAcl">
+            <summary>
+            The policy for visual component (Kibana and Cerebro) access over public network.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.DiskSize">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Disk size in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.NodeType">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.MasterNodeNum">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Number of dedicated primary nodes (only 3 and 5 are supported)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.MasterNodeType">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.MasterNodeDiskSize">
+            <summary>
+            This parameter has been disused. Please use `NodeInfoList`
+            Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.ForceRestart">
+            <summary>
+            Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.CosBackup">
+            <summary>
+            Auto-backup to COS
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.NodeInfoList">
+            <summary>
+            Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.PublicAccess">
+            <summary>
+            The status of ES cluster access over public network.
+            `OPEN`: Enabled.
+            `CLOSE`: Disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.EsPublicAcl">
+            <summary>
+            Public network ACL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.KibanaPublicAccess">
+            <summary>
+            The status of Kibana access over public network.
+            `OPEN`: Enabled.
+            `CLOSE`: Disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.KibanaPrivateAccess">
+            <summary>
+            The status of Kibana access over private network.
+            `OPEN`: Enabled.
+            `CLOSE`: Disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.BasicSecurityType">
+            <summary>
+            Enables or disables user authentication for ES Basic Edition v6.8 and above
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.KibanaPrivatePort">
+            <summary>
+            Kibana private port
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.ScaleType">
+            <summary>
+            0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.MultiZoneInfo">
+            <summary>
+            Multi-AZ deployment
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.SceneType">
+            <summary>
+            Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.KibanaConfig">
+            <summary>
+            Kibana configuration item (JSON string)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.WebNodeTypeInfo">
+            <summary>
+            Visual node configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.SwitchPrivateLink">
+            <summary>
+            Whether to switch to the new network architecture
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.EnableCerebro">
+            <summary>
+            Whether to enable Cerebro
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.CerebroPublicAccess">
+            <summary>
+            The status of Cerebro access over public network.
+            `OPEN`: Enabled.
+            `CLOSE`: Disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.CerebroPrivateAccess">
+            <summary>
+            The status of Cerebro access over private network.
+            `OPEN`: Enabled.
+            `CLOSE`: Disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.EsConfigSet">
+            <summary>
+            Added or modified configuration set information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.OperationDuration">
+            <summary>
+            The maintenance time slot
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.KibanaAlteringPublicAccess">
+            <summary>
+            Whether to enable the option for sending alerting messages over the public network.
+            `OPEN`: Enabled.
+            `CLOSE`: Disabled.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdateInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceResponse.DealName">
+            <summary>
+            Order ID
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdateInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest.InstallPluginList">
+            <summary>
+            List of names of the plugins to be installed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest.RemovePluginList">
+            <summary>
+            List of names of the plugins to be uninstalled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest.ForceRestart">
+            <summary>
+            Whether to force restart the cluster. The default value is `false`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest.ForceUpdate">
+            <summary>
+            Whether to reinstall the cluster. The default value is `false`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest.PluginType">
+            <summary>
+            0: system plugin
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdatePluginsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdatePluginsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdatePluginsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesRequest.InstanceId">
+            <summary>
+            Instance ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesRequest.TargetNodeTypes">
+            <summary>
+            A list of node types used to receive requests.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpdateRequestTargetNodeTypesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.EsVersion">
+            <summary>
+            Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.CheckOnly">
+            <summary>
+            Whether to check for upgrade only. Default value: false
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.LicenseType">
+            <summary>
+            Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.BasicSecurityType">
+            <summary>
+            Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.UpgradeMode">
+            <summary>
+            Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.CosBackup">
+            <summary>
+            Whether to back up the cluster before version upgrade (no backup by default)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.SkipCheckForceRestart">
+            <summary>
+            Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpgradeInstanceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeInstanceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpgradeInstanceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest.LicenseType">
+            <summary>
+            License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest.AutoVoucher">
+            <summary>
+            Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest.VoucherIds">
+            <summary>
+            List of voucher IDs (only one voucher can be specified at a time currently)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest.BasicSecurityType">
+            <summary>
+            Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest.ForceRestart">
+            <summary>
+            Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpgradeLicenseRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeLicenseResponse.DealName">
+            <summary>
+            Order ID
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.UpgradeLicenseResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.UpgradeLicenseResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.WebNodeTypeInfo.NodeNum">
+            <summary>
+            Number of visual nodes. The value is always `1`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.WebNodeTypeInfo.NodeType">
+            <summary>
+            Visual node specification
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.WebNodeTypeInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ZoneDetail.Zone">
+            <summary>
+            AZ
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Es.V20180416.Models.ZoneDetail.SubnetId">
+            <summary>
+            Subnet ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Es.V20180416.Models.ZoneDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

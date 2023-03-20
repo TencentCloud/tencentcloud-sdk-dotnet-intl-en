@@ -1,0 +1,2745 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudLcic</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.AddGroupMember(TencentCloud.Lcic.V20220817.Models.AddGroupMemberRequest)">
+            <summary>
+            This API is used to add users to a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.AddGroupMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.AddGroupMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.AddGroupMemberSync(TencentCloud.Lcic.V20220817.Models.AddGroupMemberRequest)">
+            <summary>
+            This API is used to add users to a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.AddGroupMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.AddGroupMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchAddGroupMember(TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberRequest)">
+            <summary>
+            This API is used to add users to multiple groups at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchAddGroupMemberSync(TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberRequest)">
+            <summary>
+            This API is used to add users to multiple groups at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchCreateGroupWithMembers(TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersRequest)">
+            <summary>
+            This API is used to create multiple groups at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchCreateGroupWithMembersSync(TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersRequest)">
+            <summary>
+            This API is used to create multiple groups at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchCreateRoom(TencentCloud.Lcic.V20220817.Models.BatchCreateRoomRequest)">
+            <summary>
+            This API is used to create multiple rooms at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchCreateRoomSync(TencentCloud.Lcic.V20220817.Models.BatchCreateRoomRequest)">
+            <summary>
+            This API is used to create multiple rooms at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchDeleteGroupMember(TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberRequest)">
+            <summary>
+            This API is used to remove users from multiple groups at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchDeleteGroupMemberSync(TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberRequest)">
+            <summary>
+            This API is used to remove users from multiple groups at a time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchDeleteRecord(TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordRequest)">
+            <summary>
+            This API is used to delete the recordings of multiple rooms.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchDeleteRecordSync(TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordRequest)">
+            <summary>
+            This API is used to delete the recordings of multiple rooms.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchRegister(TencentCloud.Lcic.V20220817.Models.BatchRegisterRequest)">
+            <summary>
+            This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchRegisterRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchRegisterResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BatchRegisterSync(TencentCloud.Lcic.V20220817.Models.BatchRegisterRequest)">
+            <summary>
+            This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchRegisterRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BatchRegisterResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BindDocumentToRoom(TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomRequest)">
+            <summary>
+            This API is used to bind a document to a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.BindDocumentToRoomSync(TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomRequest)">
+            <summary>
+            This API is used to bind a document to a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateDocument(TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest)">
+            <summary>
+            This API is used to create a document to be used in a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateDocumentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateDocumentSync(TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest)">
+            <summary>
+            This API is used to create a document to be used in a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateDocumentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateGroupWithMembers(TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest)">
+            <summary>
+            This API is used to create a group and specify its members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateGroupWithMembersSync(TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest)">
+            <summary>
+            This API is used to create a group and specify its members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateGroupWithSubGroup(TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest)">
+            <summary>
+            This API is used to merge groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateGroupWithSubGroupSync(TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest)">
+            <summary>
+            This API is used to merge groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateRoom(TencentCloud.Lcic.V20220817.Models.CreateRoomRequest)">
+            <summary>
+            This API is used to create a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateRoomSync(TencentCloud.Lcic.V20220817.Models.CreateRoomRequest)">
+            <summary>
+            This API is used to create a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateSupervisor(TencentCloud.Lcic.V20220817.Models.CreateSupervisorRequest)">
+            <summary>
+            This API is used to create a spectator.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateSupervisorRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateSupervisorResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.CreateSupervisorSync(TencentCloud.Lcic.V20220817.Models.CreateSupervisorRequest)">
+            <summary>
+            This API is used to create a spectator.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateSupervisorRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.CreateSupervisorResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteDocument(TencentCloud.Lcic.V20220817.Models.DeleteDocumentRequest)">
+            <summary>
+            This API is used to delete a document.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteDocumentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteDocumentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteDocumentSync(TencentCloud.Lcic.V20220817.Models.DeleteDocumentRequest)">
+            <summary>
+            This API is used to delete a document.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteDocumentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteDocumentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteGroup(TencentCloud.Lcic.V20220817.Models.DeleteGroupRequest)">
+            <summary>
+            This API is used to delete one or multiple groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteGroupSync(TencentCloud.Lcic.V20220817.Models.DeleteGroupRequest)">
+            <summary>
+            This API is used to delete one or multiple groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteGroupMember(TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberRequest)">
+            <summary>
+            This API is used to remove users from a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteGroupMemberSync(TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberRequest)">
+            <summary>
+            This API is used to remove users from a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteRecord(TencentCloud.Lcic.V20220817.Models.DeleteRecordRequest)">
+            <summary>
+            This example shows you how to delete the recording files of a specific room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteRecordSync(TencentCloud.Lcic.V20220817.Models.DeleteRecordRequest)">
+            <summary>
+            This example shows you how to delete the recording files of a specific room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteRoom(TencentCloud.Lcic.V20220817.Models.DeleteRoomRequest)">
+            <summary>
+            This API is used to delete a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DeleteRoomSync(TencentCloud.Lcic.V20220817.Models.DeleteRoomRequest)">
+            <summary>
+            This API is used to delete a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DeleteRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeCurrentMemberList(TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListRequest)">
+            <summary>
+            This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeCurrentMemberListSync(TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListRequest)">
+            <summary>
+            This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeDocument(TencentCloud.Lcic.V20220817.Models.DescribeDocumentRequest)">
+            <summary>
+            This API is used to get the information of a specific document.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeDocumentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeDocumentSync(TencentCloud.Lcic.V20220817.Models.DescribeDocumentRequest)">
+            <summary>
+            This API is used to get the information of a specific document.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeDocumentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeDocumentsByRoom(TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest)">
+            <summary>
+            This API is used to get the document list of a specific room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeDocumentsByRoomSync(TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest)">
+            <summary>
+            This API is used to get the document list of a specific room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeGroup(TencentCloud.Lcic.V20220817.Models.DescribeGroupRequest)">
+            <summary>
+            This API is used to get the details of a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeGroupSync(TencentCloud.Lcic.V20220817.Models.DescribeGroupRequest)">
+            <summary>
+            This API is used to get the details of a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeGroupList(TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest)">
+            <summary>
+            This API is used to query groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeGroupListSync(TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest)">
+            <summary>
+            This API is used to query groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeGroupMemberList(TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest)">
+            <summary>
+            This API is used to get the members of a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeGroupMemberListSync(TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest)">
+            <summary>
+            This API is used to get the members of a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeRoom(TencentCloud.Lcic.V20220817.Models.DescribeRoomRequest)">
+            <summary>
+            This API is used to get room information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeRoomSync(TencentCloud.Lcic.V20220817.Models.DescribeRoomRequest)">
+            <summary>
+            This API is used to get room information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeRoomStatistics(TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsRequest)">
+            <summary>
+            This API is used to obtain the statistics of a room. It can be called only after the room is ended.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeRoomStatisticsSync(TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsRequest)">
+            <summary>
+            This API is used to obtain the statistics of a room. It can be called only after the room is ended.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeSdkAppIdUsers(TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersRequest)">
+            <summary>
+            This API is used to get the user list of a specific application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeSdkAppIdUsersSync(TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersRequest)">
+            <summary>
+            This API is used to get the user list of a specific application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeUser(TencentCloud.Lcic.V20220817.Models.DescribeUserRequest)">
+            <summary>
+            This API is used to obtain user profile.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.DescribeUserSync(TencentCloud.Lcic.V20220817.Models.DescribeUserRequest)">
+            <summary>
+            This API is used to obtain user profile.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.DescribeUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.GetWatermark(TencentCloud.Lcic.V20220817.Models.GetWatermarkRequest)">
+            <summary>
+            This API is used to get watermark settings.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.GetWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.GetWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.GetWatermarkSync(TencentCloud.Lcic.V20220817.Models.GetWatermarkRequest)">
+            <summary>
+            This API is used to get watermark settings.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.GetWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.GetWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.LoginOriginId(TencentCloud.Lcic.V20220817.Models.LoginOriginIdRequest)">
+            <summary>
+            This API is used to log in with an origin account, which is the `originId` entered during registration.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.LoginOriginIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.LoginOriginIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.LoginOriginIdSync(TencentCloud.Lcic.V20220817.Models.LoginOriginIdRequest)">
+            <summary>
+            This API is used to log in with an origin account, which is the `originId` entered during registration.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.LoginOriginIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.LoginOriginIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.LoginUser(TencentCloud.Lcic.V20220817.Models.LoginUserRequest)">
+            <summary>
+            This API is used to log in.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.LoginUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.LoginUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.LoginUserSync(TencentCloud.Lcic.V20220817.Models.LoginUserRequest)">
+            <summary>
+            This API is used to log in.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.LoginUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.LoginUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.ModifyApp(TencentCloud.Lcic.V20220817.Models.ModifyAppRequest)">
+            <summary>
+            This API is used to modify an application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.ModifyAppSync(TencentCloud.Lcic.V20220817.Models.ModifyAppRequest)">
+            <summary>
+            This API is used to modify an application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.ModifyGroup(TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest)">
+            <summary>
+            This API is used to modify a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.ModifyGroupSync(TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest)">
+            <summary>
+            This API is used to modify a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.ModifyRoom(TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest)">
+            <summary>
+            This API is used to modify a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.ModifyRoomSync(TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest)">
+            <summary>
+            This API is used to modify a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.ModifyUserProfile(TencentCloud.Lcic.V20220817.Models.ModifyUserProfileRequest)">
+            <summary>
+            This API is used to modify a user profile such as the nickname and profile photo.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.ModifyUserProfileSync(TencentCloud.Lcic.V20220817.Models.ModifyUserProfileRequest)">
+            <summary>
+            This API is used to modify a user profile such as the nickname and profile photo.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.RegisterUser(TencentCloud.Lcic.V20220817.Models.RegisterUserRequest)">
+            <summary>
+            This API is used to register a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.RegisterUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.RegisterUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.RegisterUserSync(TencentCloud.Lcic.V20220817.Models.RegisterUserRequest)">
+            <summary>
+            This API is used to register a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.RegisterUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.RegisterUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.SetAppCustomContent(TencentCloud.Lcic.V20220817.Models.SetAppCustomContentRequest)">
+            <summary>
+            This API is used to set or update the custom content of an application, including the application icon and custom code. After you update JS and CSS content, you also need to call this API for the updates to take effect.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.SetAppCustomContentSync(TencentCloud.Lcic.V20220817.Models.SetAppCustomContentRequest)">
+            <summary>
+            This API is used to set or update the custom content of an application, including the application icon and custom code. After you update JS and CSS content, you also need to call this API for the updates to take effect.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.SetWatermark(TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest)">
+            <summary>
+            This API is used to configure watermarks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.SetWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.SetWatermarkSync(TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest)">
+            <summary>
+            This API is used to configure watermarks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.SetWatermarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.UnbindDocumentFromRoom(TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomRequest)">
+            <summary>
+            This API is used to unbind a document from a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.LcicClient.UnbindDocumentFromRoomSync(TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomRequest)">
+            <summary>
+            This API is used to unbind a document from a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AddGroupMemberRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AddGroupMemberRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AddGroupMemberRequest.MemberIds">
+            <summary>
+            The users. Array length limit: 200.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.AddGroupMemberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AddGroupMemberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.AddGroupMemberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AppCustomContent.Scene">
+            <summary>
+            Multiple scenarios can be set for an application.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AppCustomContent.LogoUrl">
+            <summary>
+            Logo URL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AppCustomContent.HomeUrl">
+            <summary>
+            Homepage URL, which can be used for redirection
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AppCustomContent.JsUrl">
+            <summary>
+            Custom JS URL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.AppCustomContent.CssUrl">
+            <summary>
+            Custom CSS URL
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.AppCustomContent.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BackgroundPictureConfig.Url">
+            <summary>
+            The URL of the background image.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BackgroundPictureConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberRequest.GroupIds">
+            <summary>
+            The target group IDs. Array length limit: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberRequest.MemberIds">
+            <summary>
+            The users to add. Array length limit: 200.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchAddGroupMemberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersRequest.GroupBaseInfos">
+            <summary>
+            The information of the groups to create. Array length limit: 256.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersRequest.MemberIds">
+            <summary>
+            The group members. Array length limit: 200.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersResponse.GroupIds">
+            <summary>
+            The IDs of the groups created, which are in the same order as the elements in the request parameter `GroupBaseInfos.N`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchCreateGroupWithMembersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomRequest.RoomInfos">
+            <summary>
+            The information of the rooms to create.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomResponse.RoomIds">
+            <summary>
+            The IDs of the rooms created, which are in the same order as they are passed in.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchCreateRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberRequest.GroupIds">
+            <summary>
+            The target group IDs. Array length limit: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberRequest.MemberIds">
+            <summary>
+            The users to remove. Array length limit: 256.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchDeleteGroupMemberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordRequest.RoomIds">
+            <summary>
+            The room IDs.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.	
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordResponse.RoomIds">
+            <summary>
+            The IDs of the rooms whose recordings are deleted.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchDeleteRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchRegisterRequest.Users">
+            <summary>
+            The information of the users to register.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchRegisterRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchRegisterResponse.Users">
+            <summary>
+            The information of the successfully registered users.	
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchRegisterResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchRegisterResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchUserInfo.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchUserInfo.UserId">
+            <summary>
+            The user ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchUserInfo.OriginId">
+            <summary>
+            The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchUserInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchUserRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchUserRequest.Name">
+            <summary>
+            The username.
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchUserRequest.OriginId">
+            <summary>
+            The user’s ID in your system, which must be unique across the same application.
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BatchUserRequest.Avatar">
+            <summary>
+            The user’s profile photo.
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BatchUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomRequest.RoomId">
+            <summary>
+            Room ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomRequest.DocumentId">
+            <summary>
+            Document ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomRequest.BindType">
+            <summary>
+            Binding type. The default value is `0`. The backend passes through this parameter to clients so that the clients can implement business logic based on this parameter.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.BindDocumentToRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.SdkAppId">
+            <summary>
+            LCIC SdkAppId
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.DocumentUrl">
+            <summary>
+            Document URL	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.DocumentName">
+            <summary>
+            Document name	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.Owner">
+            <summary>
+            Document owner ID	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.TranscodeType">
+            <summary>
+            Transcoding type. Valid values: `0`: No transcoding required (default); `1`: Documents that need to be transcoded: ppt, pptx, pdf, doc, docx; `2`: Videos that need to be transcoded: mp4, 3pg, mpeg, avi, flv, wmv, rm, h264, etc.; `2`: Audio that needs to be transcoded: mp3, wav, wma, aac, flac, opus
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.Permission">
+            <summary>
+            Permission. Valid values: `0`: Private document (default); `1`: Public document
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.DocumentType">
+            <summary>
+            Document extension
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.DocumentSize">
+            <summary>
+            Document size, in bytes
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateDocumentRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentResponse.DocumentId">
+            <summary>
+            Document ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateDocumentResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateDocumentResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest.GroupName">
+            <summary>
+            The group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest.TeacherId">
+            <summary>
+            The user ID of the teacher.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest.MemberIds">
+            <summary>
+            The group members. Array length limit: 200.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersResponse.GroupId">
+            <summary>
+            The ID of the successfully created group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateGroupWithMembersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest.GroupName">
+            <summary>
+            The group name after merging.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest.SubGroupIds">
+            <summary>
+            The IDs of the groups to merge. Duplicate group IDs are not allowed. Array length limit: 40.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest.TeacherId">
+            <summary>
+            The user ID of the teacher.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupResponse.GroupId">
+            <summary>
+            The ID of the merged group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateGroupWithSubGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.Name">
+            <summary>
+            Room name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.StartTime">
+            <summary>
+            Reserved room start time, in UNIX timestamp format
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.EndTime">
+            <summary>
+            Reserved room end time, in UNIX timestamp format
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.SdkAppId">
+            <summary>
+            LCIC SdkAppId
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.Resolution">
+            <summary>
+            Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.MaxMicNumber">
+            <summary>
+            Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.SubType">
+            <summary>
+            The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.TeacherId">
+            <summary>
+            The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.AutoMic">
+            <summary>
+            Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.AudioQuality">
+            <summary>
+            Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.DisableRecord">
+            <summary>
+            Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.Assistants">
+            <summary>
+            The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.RecordLayout">
+            <summary>
+            Recording layout
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.GroupId">
+            <summary>
+            The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomResponse.RoomId">
+            <summary>
+            Room ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateSupervisorRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.CreateSupervisorResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.CreateSupervisorResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteDocumentRequest.DocumentId">
+            <summary>
+            The document ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteDocumentRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteDocumentResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteDocumentResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberRequest.GroupId">
+            <summary>
+            The group ID. You cannot remove members from a merged group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberRequest.MemberIds">
+            <summary>
+            The users. Array length limit: 200.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteGroupMemberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteGroupRequest.GroupIds">
+            <summary>
+            The IDs of the groups to delete.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteGroupRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteRecordRequest.RoomId">
+            <summary>
+            The room ID.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteRecordRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteRoomRequest.RoomId">
+            <summary>
+            Room ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DeleteRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DeleteRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListRequest.RoomId">
+            <summary>
+            The room ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListRequest.Page">
+            <summary>
+            The page to return records from. Pagination starts from 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListRequest.Limit">
+            <summary>
+            The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListResponse.Total">
+            <summary>
+            The total number of records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListResponse.MemberRecords">
+            <summary>
+            The user list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeCurrentMemberListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentRequest.DocumentId">
+            <summary>
+            The (unique) document ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeDocumentRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.DocumentId">
+            <summary>
+            The document ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.DocumentUrl">
+            <summary>
+            The document’s original URL.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.DocumentName">
+            <summary>
+            The document title.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.Owner">
+            <summary>
+            The user ID of the document’s owner.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.SdkAppId">
+            <summary>
+            The application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.Permission">
+            <summary>
+            The document access type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.TranscodeResult">
+            <summary>
+            The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.TranscodeType">
+            <summary>
+            The transcoding type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.TranscodeProgress">
+            <summary>
+            The transcoding progress. Value range: 0-100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.TranscodeState">
+            <summary>
+            The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.TranscodeInfo">
+            <summary>
+            The error message for failed transcoding.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.DocumentType">
+            <summary>
+            The document type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.DocumentSize">
+            <summary>
+            The document size (bytes).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.UpdateTime">
+            <summary>
+            The time (Unix timestamp) when the document was last updated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeDocumentResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest.RoomId">
+            <summary>
+            The room ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest.Page">
+            <summary>
+            The page to return records from. Pagination starts from 1, which is also the default value of this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest.Limit">
+            <summary>
+            The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest.Permission">
+            <summary>
+            The document access type.
+            [0]: The private documents of the owner.
+            [1]: The public documents of the owner.
+            [0,1]: The private and public documents of the owner.
+            [2]: The private and public documents of all users (including the owner).
+            Default value: [2].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest.Owner">
+            <summary>
+            The user ID of the document owner. If you do not specify this, the information of all documents under the application will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomResponse.Documents">
+            <summary>
+            The information of the documents.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomResponse.Total">
+            <summary>
+            The total number of records that meet the conditions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeDocumentsByRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest.Page">
+            <summary>
+            The page to return records from. Pagination starts from 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest.Limit">
+            <summary>
+            The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest.TeacherId">
+            <summary>
+            The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest.MemberId">
+            <summary>
+            The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeGroupListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupListResponse.Total">
+            <summary>
+            The total number of groups that meet the conditions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupListResponse.GroupInfos">
+            <summary>
+            The information of the groups.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeGroupListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest.Page">
+            <summary>
+            The page to return records from. The default value is `1`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest.Limit">
+            <summary>
+            The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListResponse.Total">
+            <summary>
+            The total number of records that meet the conditions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListResponse.MemberIds">
+            <summary>
+            The user IDs of the members.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeGroupMemberListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupRequest.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse.GroupId">
+            <summary>
+            The group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse.GroupName">
+            <summary>
+            The group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse.TeacherId">
+            <summary>
+            The user ID of the group’s teacher.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse.GroupType">
+            <summary>
+            The group type.
+            `0`: Ordinary group.
+            `1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse.SubGroupIds">
+            <summary>
+            The IDs of the sub-groups.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomRequest.RoomId">
+            <summary>
+            Room ID	
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.Name">
+            <summary>
+            Room name	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.StartTime">
+            <summary>
+            Reserved room start time, in UNIX timestamp format	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.EndTime">
+            <summary>
+            Reserved room end time, in UNIX timestamp format	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.TeacherId">
+            <summary>
+            Teacher ID	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.SdkAppId">
+            <summary>
+            LCIC SdkAppId	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.Resolution">
+            <summary>
+            Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.MaxMicNumber">
+            <summary>
+            Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.AutoMic">
+            <summary>
+            Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.AudioQuality">
+            <summary>
+            Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.SubType">
+            <summary>
+            The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.DisableRecord">
+            <summary>
+            Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.Assistants">
+            <summary>
+            Assistant ID list	
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.RecordUrl">
+            <summary>
+            Recording URL. This parameter exists only after a room is ended.	
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.Status">
+            <summary>
+            The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.GroupId">
+            <summary>
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsRequest.RoomId">
+            <summary>
+            Room ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsRequest.Page">
+            <summary>
+            Current page in pagination, which starts from 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsRequest.Limit">
+            <summary>
+            Number of data entries to return per page. Maximum value: 1000
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.PeakMemberNumber">
+            <summary>
+            Peak number of online members
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.MemberNumber">
+            <summary>
+            Accumulated number of online members
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.Total">
+            <summary>
+            Total number of records, including members who entered the room and members who should attend the class but did not
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.MemberRecords">
+            <summary>
+            Member record list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.RealStartTime">
+            <summary>
+            The actual start time of the room, in Unix timestamp, accurate to seconds.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.RealEndTime">
+            <summary>
+            The actual end time of the room, in Unix timestamp, accurate to seconds.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.MessageCount">
+            <summary>
+            The total number of room messages.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.MicCount">
+            <summary>
+            The total number of mics in the room.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeRoomStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersRequest.Page">
+            <summary>
+            The page to return records from. The default value is `1`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersRequest.Limit">
+            <summary>
+            The maximum number of records to return per page. The default value is `20`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersResponse.Total">
+            <summary>
+            The total number of users.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersResponse.Users">
+            <summary>
+            The information of the users.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeSdkAppIdUsersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeUserRequest.UserId">
+            <summary>
+            User ID	
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeUserResponse.SdkAppId">
+            <summary>
+            The application ID.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeUserResponse.UserId">
+            <summary>
+            User ID	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeUserResponse.Name">
+            <summary>
+            Username	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeUserResponse.Avatar">
+            <summary>
+            URL of user profile photo.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DescribeUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DescribeUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.DocumentId">
+            <summary>
+            The document ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.DocumentUrl">
+            <summary>
+            The document’s original URL.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.DocumentName">
+            <summary>
+            The document title.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.Owner">
+            <summary>
+            The user ID of the document’s owner.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.SdkAppId">
+            <summary>
+            The application ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.Permission">
+            <summary>
+            The document access type. `0`: Private; `1`: Public.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.TranscodeResult">
+            <summary>
+            The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.TranscodeType">
+            <summary>
+            The transcoding type.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.TranscodeProgress">
+            <summary>
+            The transcoding progress. Value range: 0-100.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.TranscodeState">
+            <summary>
+            The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.TranscodeInfo">
+            <summary>
+            The error message for failed transcoding.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.DocumentType">
+            <summary>
+            The document type.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.DocumentSize">
+            <summary>
+            The document size (bytes).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.DocumentInfo.UpdateTime">
+            <summary>
+            The time (Unix timestamp) when the document was last updated.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.DocumentInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GetWatermarkRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.	
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.GetWatermarkRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GetWatermarkResponse.TeacherLogo">
+            <summary>
+            The watermark settings for the teacher’s video.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GetWatermarkResponse.BoardLogo">
+            <summary>
+            The watermark settings for the whiteboard.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GetWatermarkResponse.BackgroundPicture">
+            <summary>
+            The background image.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GetWatermarkResponse.Text">
+            <summary>
+            The watermark text.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GetWatermarkResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.GetWatermarkResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GroupBaseInfo.GroupName">
+            <summary>
+            The group names.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GroupBaseInfo.TeacherId">
+            <summary>
+            The user ID of the teacher.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.GroupBaseInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GroupInfo.GroupId">
+            <summary>
+            Group ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GroupInfo.GroupName">
+            <summary>
+            The group name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GroupInfo.TeacherId">
+            <summary>
+            The user ID of the teacher.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GroupInfo.GroupType">
+            <summary>
+            The group type. 
+            `0`: Ordinary group. 
+            `1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.GroupInfo.SubGroupIds">
+            <summary>
+            The IDs of the sub-groups.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.GroupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginOriginIdRequest.SdkAppId">
+            <summary>
+            LCIC SdkAppId
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginOriginIdRequest.OriginId">
+            <summary>
+            User's ID in the customer system, which should be unique under the same application
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.LoginOriginIdRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginOriginIdResponse.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginOriginIdResponse.Token">
+            <summary>
+            Login status token returned after successful login or registration. The token is valid for seven days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginOriginIdResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.LoginOriginIdResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginUserRequest.UserId">
+            <summary>
+            User ID obtained during registration
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.LoginUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginUserResponse.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginUserResponse.Token">
+            <summary>
+            Login status token returned after successful login or registration. The token is valid for seven days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.LoginUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.LoginUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.UserName">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.PresentTime">
+            <summary>
+            Online duration, in seconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.Camera">
+            <summary>
+            Whether the camera is enabled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.Mic">
+            <summary>
+            Whether the mic is enabled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.Silence">
+            <summary>
+            Whether the user is muted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.AnswerQuestions">
+            <summary>
+            Number of questions answered by the user
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.HandUps">
+            <summary>
+            Number of hand raising times
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.FirstJoinTimestamp">
+            <summary>
+            First time that the user entered the room, in UNIX timestamp format
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.LastQuitTimestamp">
+            <summary>
+            Last time that the user left the room, in UNIX timestamp format
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.Rewords">
+            <summary>
+            Number of rewards received
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.IPAddress">
+            <summary>
+            The user’s IP address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.Location">
+            <summary>
+            The user’s location.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.Device">
+            <summary>
+            The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.PerMemberMicCount">
+            <summary>
+            The number of times each member mics.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.MemberRecord.PerMemberMessageCount">
+            <summary>
+            The number of messages sent by each member.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.MemberRecord.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyAppRequest.SdkAppId">
+            <summary>
+            LCIC SdkAppId
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyAppRequest.Callback">
+            <summary>
+            Callback URL. Currently, only port 80 and port 443 are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyAppRequest.CallbackKey">
+            <summary>
+            The callback key.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.ModifyAppRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyAppResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.ModifyAppResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest.GroupId">
+            <summary>
+            The ID of the group to modify.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest.TeacherId">
+            <summary>
+            The user ID of the teacher.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest.GroupName">
+            <summary>
+            The new group name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.ModifyGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.ModifyGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.RoomId">
+            <summary>
+            The room ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.StartTime">
+            <summary>
+            The room start time (Unix timestamp).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.EndTime">
+            <summary>
+            The room end time (Unix timestamp).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.TeacherId">
+            <summary>
+            The user ID of the teacher. User IDs are returned by the user registration APIs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.Name">
+            <summary>
+            The room name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.Resolution">
+            <summary>
+            The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.MaxMicNumber">
+            <summary>
+            The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.AutoMic">
+            <summary>
+            Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.AudioQuality">
+            <summary>
+            Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.SubType">
+            <summary>
+            The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.DisableRecord">
+            <summary>
+            Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.Assistants">
+            <summary>
+            The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.GroupId">
+            <summary>
+            The ID of the group to bind.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.ModifyRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.ModifyRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileRequest.UserId">
+            <summary>
+            The ID of the user whose profile will be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileRequest.Nickname">
+            <summary>
+            The new username to use.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileRequest.Avatar">
+            <summary>
+            The URL of the new profile photo.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.ModifyUserProfileResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RegisterUserRequest.SdkAppId">
+            <summary>
+            LCIC SdkAppId	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RegisterUserRequest.Name">
+            <summary>
+            Username	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RegisterUserRequest.OriginId">
+            <summary>
+            User's ID in the customer system, which should be unique under the same application	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RegisterUserRequest.Avatar">
+            <summary>
+            User's profile photo	
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.RegisterUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RegisterUserResponse.UserId">
+            <summary>
+            User ID	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RegisterUserResponse.Token">
+            <summary>
+            Login status token returned after successful login or registration. The token is valid for seven days.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RegisterUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.RegisterUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.Name">
+            <summary>
+            The room name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.StartTime">
+            <summary>
+            The room start time (Unix timestamp).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.EndTime">
+            <summary>
+            The room end time (Unix timestamp).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.Resolution">
+            <summary>
+            The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.MaxMicNumber">
+            <summary>
+            The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.SubType">
+            <summary>
+            The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.TeacherId">
+            <summary>
+            The user ID of the teacher. User IDs are returned by the user registration APIs.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.AutoMic">
+            <summary>
+            Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.TurnOffMic">
+            <summary>
+            Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0`: Yes (default value); `1`: No.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.AudioQuality">
+            <summary>
+            Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.DisableRecord">
+            <summary>
+            Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.Assistants">
+            <summary>
+            The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.RTCAudienceNumber">
+            <summary>
+            The number of RTC users.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.AudienceType">
+            <summary>
+            The audience type.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.RecordLayout">
+            <summary>
+            The recording layout.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.RoomInfo.GroupId">
+            <summary>
+            The ID of the group to bind.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.RoomInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentRequest.CustomContent">
+            <summary>
+            Custom content
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentRequest.SdkAppId">
+            <summary>
+            Application ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.SetAppCustomContentResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.SdkAppId">
+            <summary>
+            The SDKAppID assigned by LCIC.	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.TeacherUrl">
+            <summary>
+            The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.BoardUrl">
+            <summary>
+            The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.VideoUrl">
+            <summary>
+            The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.BoardW">
+            <summary>
+            The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.BoardH">
+            <summary>
+            The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.BoardX">
+            <summary>
+            The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.BoardY">
+            <summary>
+            The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.TeacherW">
+            <summary>
+            The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.TeacherH">
+            <summary>
+            The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.TeacherX">
+            <summary>
+            The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.TeacherY">
+            <summary>
+            The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.Text">
+            <summary>
+            The watermark text. If you pass in an empty string, there will be no text.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.TextColor">
+            <summary>
+            The watermark text color.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.SetWatermarkRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.SetWatermarkResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.SetWatermarkResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.TextMarkConfig.Text">
+            <summary>
+            The watermark text.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.TextMarkConfig.Color">
+            <summary>
+            The watermark text color.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.TextMarkConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomRequest.RoomId">
+            <summary>
+            Room ID	
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomRequest.DocumentId">
+            <summary>
+            Document ID	
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.UnbindDocumentFromRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.UserInfo.SdkAppId">
+            <summary>
+            The application ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.UserInfo.UserId">
+            <summary>
+            The user ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.UserInfo.Name">
+            <summary>
+            The username.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.UserInfo.Avatar">
+            <summary>
+            The URL of profile photo.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.UserInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.WatermarkConfig.Url">
+            <summary>
+            The URL of the watermark image.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.WatermarkConfig.Width">
+            <summary>
+            The watermark width, which is expressed as a percentage of the video width.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.WatermarkConfig.Height">
+            <summary>
+            The watermark height, which is expressed as a percentage of the video height.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.WatermarkConfig.LocationX">
+            <summary>
+            The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Lcic.V20220817.Models.WatermarkConfig.LocationY">
+            <summary>
+            The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Lcic.V20220817.Models.WatermarkConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

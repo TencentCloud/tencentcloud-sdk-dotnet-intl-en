@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudTts</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Tts.V20190823.TtsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Tts.V20190823.TtsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Tts.V20190823.TtsClient.TextToVoice(TencentCloud.Tts.V20190823.Models.TextToVoiceRequest)">
+            <summary>
+            This API is used to convert any text to speech, allowing your devices and applications to talk to users.
+            ​Tencent Cloud Text To Speech (TTS) can synthesize speech from text in real time for many use cases, such as audiobook and news apps, voice reminders on smart devices, quick synthesis of a celebrity's voice based on existing programs or certain voice records available on the Internet, and personalized vehicle navigation systems.
+            It is free for use in beta.
+            It supports SSML. For syntax details, see [SSML](https://intl.cloud.tencent.com/document/product/1073/49575?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tts.V20190823.Models.TextToVoiceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tts.V20190823.TtsClient.TextToVoiceSync(TencentCloud.Tts.V20190823.Models.TextToVoiceRequest)">
+            <summary>
+            This API is used to convert any text to speech, allowing your devices and applications to talk to users.
+            ​Tencent Cloud Text To Speech (TTS) can synthesize speech from text in real time for many use cases, such as audiobook and news apps, voice reminders on smart devices, quick synthesis of a celebrity's voice based on existing programs or certain voice records available on the Internet, and personalized vehicle navigation systems.
+            It is free for use in beta.
+            It supports SSML. For syntax details, see [SSML](https://intl.cloud.tencent.com/document/product/1073/49575?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tts.V20190823.Models.TextToVoiceResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.Subtitle.Text">
+            <summary>
+            The word in the text that is sent.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.Subtitle.BeginTime">
+            <summary>
+            The start timestamp of the word in the synthesized audio data, in milliseconds.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.Subtitle.EndTime">
+            <summary>
+            The end timestamp of the word in the synthesized audio data, in milliseconds.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.Subtitle.BeginIndex">
+            <summary>
+            The start index of the character in the whole sentence, starting from 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.Subtitle.EndIndex">
+            <summary>
+            The end index of the character in the whole sentence, starting from 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tts.V20190823.Models.Subtitle.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.Text">
+            <summary>
+            The source text for synthesizing speech, which is encoded in UTF-8.
+            It can contain up to 150 Chinese characters (a full-width punctuation as a Chinese character) or 500 letters ( a half-width punctuation as a letter).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.SessionId">
+            <summary>
+            The `SessionId` of a request, which will be returned as-is. We recommend that you pass characters like uuid to prevent repetition.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.Volume">
+            <summary>
+            Volume range: [0, 10], corresponding to 11 volume levels. 0 is the default value, indicating the normal volume. There is no mute option.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.Speed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.ProjectId">
+            <summary>
+            Project ID, which defaults to 0 and can be customized.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.ModelType">
+            <summary>
+            Model type, with `1` for the default model.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.VoiceType" -->
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.PrimaryLanguage">
+            <summary>
+            Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.SampleRate">
+            <summary>
+            Audio sample rate: <li>16000: 16k (default)</li><li>8000: 8k</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.Codec">
+            <summary>
+            Format of returned audio. Valid values: WAV (default), MP3, and PCM.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.EnableSubtitle">
+            <summary>
+            Whether to enable the timestamp feature. Default value: `false`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.SegmentRate">
+            <summary>
+            Segmentation rate. Valid range: [0,1,2]; default value: `0`. The higher the value, the lower the rate, and the easier the segmentation. It is recommended not to change this parameter to ensure better synthesis quality.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tts.V20190823.Models.TextToVoiceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceResponse.Audio">
+            <summary>
+            Base64-encoded WAV/MP3 audio data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceResponse.SessionId">
+            <summary>
+            The `SessionId` of a request
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceResponse.Subtitles">
+            <summary>
+            Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tts.V20190823.Models.TextToVoiceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tts.V20190823.Models.TextToVoiceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>
