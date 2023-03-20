@@ -162,6 +162,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("AppArchives")]
         public string AppArchives{ get; set; }
 
+        /// <summary>
+        /// The Spark image version.
+        /// </summary>
+        [JsonProperty("SparkImage")]
+        public string SparkImage{ get; set; }
+
+        /// <summary>
+        /// The Spark image version name.
+        /// </summary>
+        [JsonProperty("SparkImageVersion")]
+        public string SparkImageVersion{ get; set; }
+
+        /// <summary>
+        /// The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+        /// </summary>
+        [JsonProperty("AppExecutorMaxNumbers")]
+        public long? AppExecutorMaxNumbers{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +209,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
             this.SetParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
             this.SetParamSimple(map, prefix + "AppArchives", this.AppArchives);
+            this.SetParamSimple(map, prefix + "SparkImage", this.SparkImage);
+            this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
+            this.SetParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
         }
     }
 }

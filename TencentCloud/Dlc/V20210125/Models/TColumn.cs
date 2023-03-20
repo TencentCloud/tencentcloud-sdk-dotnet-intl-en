@@ -21,21 +21,38 @@ namespace TencentCloud.Dlc.V20210125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSparkAppResponse : AbstractModel
+    public class TColumn : AbstractModel
     {
         
         /// <summary>
-        /// The unique ID of the application.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The field name.
         /// </summary>
-        [JsonProperty("SparkAppId")]
-        public string SparkAppId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The field type.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// The field description.
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
+        /// The default field value.
+        /// </summary>
+        [JsonProperty("Default")]
+        public string Default{ get; set; }
+
+        /// <summary>
+        /// Whether the field is not null.
+        /// </summary>
+        [JsonProperty("NotNull")]
+        public bool? NotNull{ get; set; }
 
 
         /// <summary>
@@ -43,8 +60,11 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SparkAppId", this.SparkAppId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "Default", this.Default);
+            this.SetParamSimple(map, prefix + "NotNull", this.NotNull);
         }
     }
 }

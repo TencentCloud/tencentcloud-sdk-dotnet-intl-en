@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+        /// Key-value pair information of the index to be created
         /// </summary>
         [JsonProperty("KeyValues")]
         public KeyValueInfo[] KeyValues{ get; set; }

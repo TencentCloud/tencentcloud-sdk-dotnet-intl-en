@@ -21,21 +21,32 @@ namespace TencentCloud.Dlc.V20210125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSparkAppResponse : AbstractModel
+    public class CreateInternalTableRequest : AbstractModel
     {
         
         /// <summary>
-        /// The unique ID of the application.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The basic table information.
         /// </summary>
-        [JsonProperty("SparkAppId")]
-        public string SparkAppId{ get; set; }
+        [JsonProperty("TableBaseInfo")]
+        public TableBaseInfo TableBaseInfo{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// The table fields.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Columns")]
+        public TColumn[] Columns{ get; set; }
+
+        /// <summary>
+        /// The table partitions.
+        /// </summary>
+        [JsonProperty("Partitions")]
+        public TPartition[] Partitions{ get; set; }
+
+        /// <summary>
+        /// The table properties.
+        /// </summary>
+        [JsonProperty("Properties")]
+        public Property[] Properties{ get; set; }
 
 
         /// <summary>
@@ -43,8 +54,10 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SparkAppId", this.SparkAppId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
+            this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
+            this.SetParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+            this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
         }
     }
 }

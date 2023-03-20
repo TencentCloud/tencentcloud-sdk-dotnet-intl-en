@@ -25,22 +25,22 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Full-Text index configuration
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FullText")]
         public FullTextInfo FullText{ get; set; }
 
         /// <summary>
-        /// Key-Value index configuration
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeyValue")]
         public RuleKeyValueInfo KeyValue{ get; set; }
 
         /// <summary>
-        /// Metafield index configuration
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tag")]
         public RuleTagInfo Tag{ get; set; }

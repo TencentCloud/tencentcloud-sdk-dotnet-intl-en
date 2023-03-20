@@ -15,58 +15,55 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIndexResponse : AbstractModel
+    public class DescribeResultDownloadResponse : AbstractModel
     {
         
         /// <summary>
-        /// Log topic ID
+        /// The file save path.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
         /// <summary>
-        /// Whether it takes effect
+        /// The task status. Valid values: `init`, `queue`, `format`, `compress`, `success`, `timeout`, and `error`.
         /// </summary>
         [JsonProperty("Status")]
-        public bool? Status{ get; set; }
+        public string Status{ get; set; }
 
         /// <summary>
-        /// Index configuration information
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Rule")]
-        public RuleInfo Rule{ get; set; }
-
-        /// <summary>
-        /// Index modification time. The default value is the index creation time.
-        /// </summary>
-        [JsonProperty("ModifyTime")]
-        public string ModifyTime{ get; set; }
-
-        /// <summary>
-        /// Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
-        /// * `false`: Full-text indexing does not include internal fields.
-        /// * `true`: Full-text indexing includes internal fields.
+        /// The task exception cause.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IncludeInternalFields")]
-        public bool? IncludeInternalFields{ get; set; }
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
         /// <summary>
-        /// Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
-        /// * `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
-        /// * `1`: Full-text indexing includes all metadata fields.
-        /// * `2`: Full-text indexing does not include metadata fields.
+        /// The temporary secret ID.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("MetadataFlag")]
-        public ulong? MetadataFlag{ get; set; }
+        [JsonProperty("SecretId")]
+        public string SecretId{ get; set; }
+
+        /// <summary>
+        /// The temporary secret key.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecretKey")]
+        public string SecretKey{ get; set; }
+
+        /// <summary>
+        /// The temporary token.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -80,12 +77,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamObj(map, prefix + "Rule.", this.Rule);
-            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
-            this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
-            this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
+            this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

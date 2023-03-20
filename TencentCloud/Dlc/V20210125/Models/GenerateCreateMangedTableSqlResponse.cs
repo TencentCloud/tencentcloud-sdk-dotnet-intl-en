@@ -21,15 +21,14 @@ namespace TencentCloud.Dlc.V20210125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSparkAppResponse : AbstractModel
+    public class GenerateCreateMangedTableSqlResponse : AbstractModel
     {
         
         /// <summary>
-        /// The unique ID of the application.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The SQL statements for creating the managed internal table.
         /// </summary>
-        [JsonProperty("SparkAppId")]
-        public string SparkAppId{ get; set; }
+        [JsonProperty("Execution")]
+        public Execution Execution{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,7 +42,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SparkAppId", this.SparkAppId);
+            this.SetParamObj(map, prefix + "Execution.", this.Execution);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

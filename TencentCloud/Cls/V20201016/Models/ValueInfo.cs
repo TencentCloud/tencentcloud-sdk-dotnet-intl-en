@@ -46,8 +46,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? SqlFlag{ get; set; }
 
         /// <summary>
-        /// Whether Chinese characters are contained
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContainZH")]
         public bool? ContainZH{ get; set; }

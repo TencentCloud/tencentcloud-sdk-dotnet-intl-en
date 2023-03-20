@@ -21,15 +21,14 @@ namespace TencentCloud.Dlc.V20210125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSparkAppResponse : AbstractModel
+    public class CreateResultDownloadResponse : AbstractModel
     {
         
         /// <summary>
-        /// The unique ID of the application.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The download task ID.
         /// </summary>
-        [JsonProperty("SparkAppId")]
-        public string SparkAppId{ get; set; }
+        [JsonProperty("DownloadId")]
+        public string DownloadId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,7 +42,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SparkAppId", this.SparkAppId);
+            this.SetParamSimple(map, prefix + "DownloadId", this.DownloadId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

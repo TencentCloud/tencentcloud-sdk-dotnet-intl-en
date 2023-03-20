@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class KeyValueInfo : AbstractModel
+    public class Property : AbstractModel
     {
         
         /// <summary>
-        /// Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
-        /// 
-        /// Note:
-        /// For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
-        /// 2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
-        /// 3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
-        /// 4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
+        /// The property key name.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Field index description information
+        /// The property value.
         /// </summary>
         [JsonProperty("Value")]
-        public ValueInfo Value{ get; set; }
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -49,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

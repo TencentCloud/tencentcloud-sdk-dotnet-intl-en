@@ -93,6 +93,86 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to create a managed internal table. It has been disused.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInternalTableRequest"/></param>
+        /// <returns><see cref="CreateInternalTableResponse"/></returns>
+        public async Task<CreateInternalTableResponse> CreateInternalTable(CreateInternalTableRequest req)
+        {
+             JsonResponseModel<CreateInternalTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInternalTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInternalTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a managed internal table. It has been disused.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInternalTableRequest"/></param>
+        /// <returns><see cref="CreateInternalTableResponse"/></returns>
+        public CreateInternalTableResponse CreateInternalTableSync(CreateInternalTableRequest req)
+        {
+             JsonResponseModel<CreateInternalTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInternalTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInternalTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a query result download task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateResultDownloadRequest"/></param>
+        /// <returns><see cref="CreateResultDownloadResponse"/></returns>
+        public async Task<CreateResultDownloadResponse> CreateResultDownload(CreateResultDownloadRequest req)
+        {
+             JsonResponseModel<CreateResultDownloadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateResultDownload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResultDownloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a query result download task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateResultDownloadRequest"/></param>
+        /// <returns><see cref="CreateResultDownloadResponse"/></returns>
+        public CreateResultDownloadResponse CreateResultDownloadSync(CreateResultDownloadRequest req)
+        {
+             JsonResponseModel<CreateResultDownloadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateResultDownload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResultDownloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a Spark application.
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppRequest"/></param>
@@ -293,6 +373,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to get a query result download task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResultDownloadRequest"/></param>
+        /// <returns><see cref="DescribeResultDownloadResponse"/></returns>
+        public async Task<DescribeResultDownloadResponse> DescribeResultDownload(DescribeResultDownloadRequest req)
+        {
+             JsonResponseModel<DescribeResultDownloadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResultDownload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResultDownloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get a query result download task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResultDownloadRequest"/></param>
+        /// <returns><see cref="DescribeResultDownloadResponse"/></returns>
+        public DescribeResultDownloadResponse DescribeResultDownloadSync(DescribeResultDownloadRequest req)
+        {
+             JsonResponseModel<DescribeResultDownloadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResultDownload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResultDownloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query a specific Spark application.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobRequest"/></param>
@@ -484,6 +604,86 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to generate SQL statements for creating a managed table.
+        /// </summary>
+        /// <param name="req"><see cref="GenerateCreateMangedTableSqlRequest"/></param>
+        /// <returns><see cref="GenerateCreateMangedTableSqlResponse"/></returns>
+        public async Task<GenerateCreateMangedTableSqlResponse> GenerateCreateMangedTableSql(GenerateCreateMangedTableSqlRequest req)
+        {
+             JsonResponseModel<GenerateCreateMangedTableSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateCreateMangedTableSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateCreateMangedTableSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to generate SQL statements for creating a managed table.
+        /// </summary>
+        /// <param name="req"><see cref="GenerateCreateMangedTableSqlRequest"/></param>
+        /// <returns><see cref="GenerateCreateMangedTableSqlResponse"/></returns>
+        public GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSqlSync(GenerateCreateMangedTableSqlRequest req)
+        {
+             JsonResponseModel<GenerateCreateMangedTableSqlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateCreateMangedTableSql");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateCreateMangedTableSqlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to change data governance event thresholds.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernEventRuleRequest"/></param>
+        /// <returns><see cref="ModifyGovernEventRuleResponse"/></returns>
+        public async Task<ModifyGovernEventRuleResponse> ModifyGovernEventRule(ModifyGovernEventRuleRequest req)
+        {
+             JsonResponseModel<ModifyGovernEventRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGovernEventRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGovernEventRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to change data governance event thresholds.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGovernEventRuleRequest"/></param>
+        /// <returns><see cref="ModifyGovernEventRuleResponse"/></returns>
+        public ModifyGovernEventRuleResponse ModifyGovernEventRuleSync(ModifyGovernEventRuleRequest req)
+        {
+             JsonResponseModel<ModifyGovernEventRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGovernEventRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGovernEventRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

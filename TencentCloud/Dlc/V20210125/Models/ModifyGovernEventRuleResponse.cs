@@ -21,16 +21,9 @@ namespace TencentCloud.Dlc.V20210125.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSparkAppResponse : AbstractModel
+    public class ModifyGovernEventRuleResponse : AbstractModel
     {
         
-        /// <summary>
-        /// The unique ID of the application.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("SparkAppId")]
-        public string SparkAppId{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -43,7 +36,6 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SparkAppId", this.SparkAppId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

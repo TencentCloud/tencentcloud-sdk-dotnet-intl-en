@@ -211,6 +211,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string JobArchives{ get; set; }
 
         /// <summary>
+        /// The Spark image version.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SparkImage")]
+        public string SparkImage{ get; set; }
+
+        /// <summary>
         /// PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -230,6 +237,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("DataEngineStatus")]
         public long? DataEngineStatus{ get; set; }
+
+        /// <summary>
+        /// The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("JobExecutorMaxNumbers")]
+        public long? JobExecutorMaxNumbers{ get; set; }
 
 
         /// <summary>
@@ -267,9 +281,11 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
             this.SetParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
             this.SetParamSimple(map, prefix + "JobArchives", this.JobArchives);
+            this.SetParamSimple(map, prefix + "SparkImage", this.SparkImage);
             this.SetParamSimple(map, prefix + "JobPythonFiles", this.JobPythonFiles);
             this.SetParamSimple(map, prefix + "TaskNum", this.TaskNum);
             this.SetParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
+            this.SetParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
         }
     }
 }

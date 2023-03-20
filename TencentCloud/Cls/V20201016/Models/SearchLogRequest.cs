@@ -25,12 +25,6 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// ID of the log topic to be searched
-        /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
-
-        /// <summary>
         /// Start time of the log to be searched, which is a Unix timestamp in milliseconds
         /// </summary>
         [JsonProperty("From")]
@@ -43,11 +37,18 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? To{ get; set; }
 
         /// <summary>
-        /// Statement for search and analysis. Maximum length: 12 KB
-        /// A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+        /// Search and analysis statement. Maximum length: 12 KB
+        /// A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+        /// Queries all logs using * or an empty string
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
+
+        /// <summary>
+        /// ID of the log topic to be searched
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
 
         /// <summary>
         /// The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
@@ -101,10 +102,10 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
