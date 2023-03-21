@@ -21,29 +21,29 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AlarmPolicyCondition : AbstractModel
+    public class DescribePolicyConditionListResponseDeprecatingInfo : AbstractModel
     {
         
         /// <summary>
-        /// Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+        /// Whether to hide
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IsUnionRule")]
-        public long? IsUnionRule{ get; set; }
+        [JsonProperty("Hidden")]
+        public bool? Hidden{ get; set; }
 
         /// <summary>
-        /// Alarm trigger condition list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Rules")]
-        public AlarmPolicyRule[] Rules{ get; set; }
-
-        /// <summary>
-        /// The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+        /// Names of new views
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ComplexExpression")]
-        public string ComplexExpression{ get; set; }
+        [JsonProperty("NewViewNames")]
+        public string[] NewViewNames{ get; set; }
+
+        /// <summary>
+        /// Description
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
-            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
-            this.SetParamSimple(map, prefix + "ComplexExpression", this.ComplexExpression);
+            this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
+            this.SetParamArraySimple(map, prefix + "NewViewNames.", this.NewViewNames);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

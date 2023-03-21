@@ -4,14 +4,14 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.654</VersionPrefix>
+    <VersionPrefix>3.0.655</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageId>TencentCloudSDKIntlEnTest.Monitor</PackageId>
+    <PackageId>TencentCloudSDKIntlEN.Monitor</PackageId>
     <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
     <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
@@ -220,6 +220,7 @@
     <Compile Include="V20180724\Models\DescribePolicyConditionListMetric.cs" />
     <Compile Include="V20180724\Models\DescribePolicyConditionListRequest.cs" />
     <Compile Include="V20180724\Models\DescribePolicyConditionListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListResponseDeprecatingInfo.cs" />
     <Compile Include="V20180724\Models\DescribePolicyGroupInfoCallback.cs" />
     <Compile Include="V20180724\Models\DescribePolicyGroupInfoCondition.cs" />
     <Compile Include="V20180724\Models\DescribePolicyGroupInfoConditionTpl.cs" />

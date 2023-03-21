@@ -67,7 +67,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? ContinuePeriod{ get; set; }
 
         /// <summary>
-        /// If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+        /// If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

@@ -85,7 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public CreatePolicyGroupEventCondition[] EventConditions{ get; set; }
 
         /// <summary>
-        /// Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+        /// Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
         /// </summary>
         [JsonProperty("BackEndCall")]
         public long? BackEndCall{ get; set; }

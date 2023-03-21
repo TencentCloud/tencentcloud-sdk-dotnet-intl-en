@@ -31,19 +31,19 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+        /// Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
         /// </summary>
         [JsonProperty("ProductName")]
         public string[] ProductName{ get; set; }
 
         /// <summary>
-        /// Filter by product name. For example, "guest_reboot" indicates server restart.
+        /// Filter by event name. For example, "guest_reboot" indicates instance restart.
         /// </summary>
         [JsonProperty("EventName")]
         public string[] EventName{ get; set; }
 
         /// <summary>
-        /// Affected object, such as "ins-19708ino"
+        /// Affected object, such as "ins-19708ino".
         /// </summary>
         [JsonProperty("InstanceId")]
         public string[] InstanceId{ get; set; }
