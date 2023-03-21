@@ -4,14 +4,14 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EC1C9319-2699-3A07-894D-C447D5406FD9}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionPrefix>3.0.654</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
     <Company>Tencent Ltd.</Company>
     <Product />
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageId>TencentCloudSDK.Msp</PackageId>
+    <PackageId>TencentCloudSDKIntlEnTest.Msp</PackageId>
     <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
     <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>

@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string DealId{ get; set; }
 
         /// <summary>
-        /// List of IDs of created instances
+        /// List of IDs of the created instances
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

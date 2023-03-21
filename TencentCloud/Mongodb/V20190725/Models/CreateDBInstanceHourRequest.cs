@@ -37,67 +37,81 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// Number of replica sets. When a replica set instance is created, this parameter must be set to 1. When a sharding instance is created, please see the parameters returned by the DescribeSpecInfo API
+        /// Number of replica sets
+        /// - Number of the replica set instances to be created. Valid value: `1`.
+        /// - Number of sharded cluster instances to be created. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public ulong? ReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+        /// The number of nodes in each replica set. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
+        /// Version information. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+        /// - MONGO_36_WT：MongoDB 3.6 WiredTiger storage engine
+        /// - MONGO_40_WT：MongoDB 4.0 WiredTiger storage engine
+        /// - MONGO_42_WT：MongoDB 4.2 WiredTiger storage engine
+        /// - MONGO_44_WT：MongoDB 4.4 WiredTiger storage engine
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// Server type. HIO: high IO; HIO10G: 10-Gigabit high IO
+        /// Machine type
+        /// - HIO: High IO
+        /// - HIO10G: 10-Gigabit high IO
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
 
         /// <summary>
-        /// Number of instances. Minimum value: 1. Maximum value: 10
+        /// Number of instances. Value range: 1-10.
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
+        /// AZ information in the format of ap-guangzhou-2
+        /// - For more information, query through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+        /// - If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance type. REPLSET: replica set; SHARD: sharding cluster
+        /// Instance architecture type
+        /// - REPLSET: Replica set
+        /// - SHARD: Sharded cluster
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// VPC ID. If this parameter is not set, the basic network will be selected by default
+        /// VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID. If VpcId is set, then SubnetId will be required
+        /// VPC subnet ID. If `VpcId` is set, then `SubnetId` will be required.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+        /// Instance password
+        /// - If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". 
+        /// - The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Project ID. If this parameter is not set, the default project will be used
+        /// Project ID. If it is left empty, `Default project` will be used.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -109,58 +123,91 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
+        /// Instance type. Valid values:
+        /// - `1`: Primary instance
+        /// - `3`: Read-only instance
+        /// - `4`: Disaster recovery instance
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
 
         /// <summary>
-        /// Parent instance ID. It is required if the `Clone` is 3 or 4.
+        /// Parent instance ID. It is required if the `Clone` is `3` or `4`, that is, read-only instance or disaster recovery instance
         /// </summary>
         [JsonProperty("Father")]
         public string Father{ get; set; }
 
         /// <summary>
-        /// Security group.
+        /// Security group
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+        /// Rollback time of the cloned instance
+        /// - This parameter is required for a cloned instance in the format of 2021-08-13 16:30:00.
+        /// - Time range for rollback: You can roll back data in the last 7 days.
         /// </summary>
         [JsonProperty("RestoreTime")]
         public string RestoreTime{ get; set; }
 
         /// <summary>
-        /// Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+        /// Instance name, which can contain up to 60 letters, digits, and symbols (_-).
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+        /// List of multi-AZ deployed nodes. For more information, query through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+        /// - Nodes of a multi-AZ instance must be deployed across three AZs. Most nodes of the cluster can’t be deployed in the same AZ. For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.
+        /// - MongoDB 4.2 and later versions do not support multi-AZ deployment.
+        /// - Read-only and disaster recovery instances do not support multi-AZ deployment.
+        /// -Instances in the classic network do not support multi-AZ deployment.
         /// </summary>
         [JsonProperty("AvailabilityZoneList")]
         public string[] AvailabilityZoneList{ get; set; }
 
         /// <summary>
-        /// The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+        /// Number of Mongos CPU cores
+        /// - This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
+        /// - If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
         /// </summary>
         [JsonProperty("MongosCpu")]
         public ulong? MongosCpu{ get; set; }
 
         /// <summary>
-        /// The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+        /// Mongos memory size
+        /// - This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
+        /// - If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
 
         /// <summary>
-        /// The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+        /// Number of Monogs
+        /// - This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
+        /// - If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
         /// </summary>
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
+
+        /// <summary>
+        /// Number of read-only nodes. Value range: 0-5.
+        /// </summary>
+        [JsonProperty("ReadonlyNodeNum")]
+        public ulong? ReadonlyNodeNum{ get; set; }
+
+        /// <summary>
+        /// AZ of read-only nodes, which is required when `ReadonlyNodeNum` is not `0` in cross-AZ instance deployment.
+        /// </summary>
+        [JsonProperty("ReadonlyNodeAvailabilityZoneList")]
+        public string[] ReadonlyNodeAvailabilityZoneList{ get; set; }
+
+        /// <summary>
+        /// AZ where the hidden node resides, which is required in cross-AZ instance deployment.
+        /// </summary>
+        [JsonProperty("HiddenZone")]
+        public string HiddenZone{ get; set; }
 
 
         /// <summary>
@@ -191,6 +238,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
             this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
             this.SetParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
+            this.SetParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
+            this.SetParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
+            this.SetParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
         }
     }
 }
