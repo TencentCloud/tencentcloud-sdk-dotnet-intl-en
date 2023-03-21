@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudCar</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Car.V20220110.CarClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.CarClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.CarClient.ApplyConcurrent(TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest)">
+            <summary>
+            This API is used to request concurrency quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Car.V20220110.Models.ApplyConcurrentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.CarClient.ApplyConcurrentSync(TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest)">
+            <summary>
+            This API is used to request concurrency quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Car.V20220110.Models.ApplyConcurrentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.CarClient.CreateSession(TencentCloud.Car.V20220110.Models.CreateSessionRequest)">
+            <summary>
+            This API is used to create a session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Car.V20220110.Models.CreateSessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Car.V20220110.Models.CreateSessionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.CarClient.CreateSessionSync(TencentCloud.Car.V20220110.Models.CreateSessionRequest)">
+            <summary>
+            This API is used to create a session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Car.V20220110.Models.CreateSessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Car.V20220110.Models.CreateSessionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.CarClient.DestroySession(TencentCloud.Car.V20220110.Models.DestroySessionRequest)">
+            <summary>
+            This API is used to terminate a session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Car.V20220110.Models.DestroySessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Car.V20220110.Models.DestroySessionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.CarClient.DestroySessionSync(TencentCloud.Car.V20220110.Models.DestroySessionRequest)">
+            <summary>
+            This API is used to terminate a session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Car.V20220110.Models.DestroySessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Car.V20220110.Models.DestroySessionResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest.UserId">
+            <summary>
+            The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest.UserIp">
+            <summary>
+            Public IP of user’s application client, which is used for nearby scheduling.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest.ProjectId">
+            <summary>
+            The project ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest.ApplicationVersionId">
+            <summary>
+            The application version ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest.ApplicationId">
+            <summary>
+            Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.Models.ApplyConcurrentRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.ApplyConcurrentResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.Models.ApplyConcurrentResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.CreateSessionRequest.UserId">
+            <summary>
+            The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.CreateSessionRequest.UserIp">
+            <summary>
+            Public IP of user’s application client, which is used for nearby scheduling.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.CreateSessionRequest.ClientSession">
+            <summary>
+            The client-side session data, which is obtained from the SDK.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.CreateSessionRequest.RunMode">
+            <summary>
+            The on-cloud running mode.
+            `RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
+            Empty string (default): Keep the application running on the cloud only when there are client connections.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.Models.CreateSessionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.CreateSessionResponse.ServerSession">
+            <summary>
+            The server-side session data, which is returned to the SDK.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.CreateSessionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.Models.CreateSessionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.DestroySessionRequest.UserId">
+            <summary>
+            The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.Models.DestroySessionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Car.V20220110.Models.DestroySessionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Car.V20220110.Models.DestroySessionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

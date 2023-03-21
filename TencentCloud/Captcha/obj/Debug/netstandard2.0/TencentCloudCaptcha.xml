@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudCaptcha</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Captcha.V20190722.CaptchaClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Captcha.V20190722.CaptchaClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Captcha.V20190722.CaptchaClient.DescribeCaptchaResult(TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest)">
+            <summary>
+            This API is used to query the result of CAPTCHA ticket verification (web and app).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Captcha.V20190722.CaptchaClient.DescribeCaptchaResultSync(TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest)">
+            <summary>
+            This API is used to query the result of CAPTCHA ticket verification (web and app).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.CaptchaType">
+            <summary>
+            It must be `9` here. You can configure the CAPTCHA types in the console.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.Ticket">
+            <summary>
+            The user verification ticket returned by the frontend callback function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.UserIp">
+            <summary>
+            The user public IP obtained from the customer backend server
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.Randstr">
+            <summary>
+            A random string returned by the frontend callback function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.CaptchaAppId">
+            <summary>
+            CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.AppSecretKey">
+            <summary>
+            CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.BusinessId">
+            <summary>
+            Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.SceneId">
+            <summary>
+            Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.MacAddress">
+            <summary>
+            MAC address or unique identifier of a device
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.Imei">
+            <summary>
+            Mobile equipment identity number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.NeedGetCaptchaTime">
+            <summary>
+            Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultResponse.CaptchaCode">
+            <summary>
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+              
+              
+             
+             
+             
+             
+             
+              
+             
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultResponse.CaptchaMsg">
+            <summary>
+            Status description and verification error message
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultResponse.EvilLevel">
+            <summary>
+            This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+            `0`: The request is trusted.
+            `100`: The request is malicious.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultResponse.GetCaptchaTime">
+            <summary>
+            The timestamp when the frontend obtains the CAPTCHA.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Captcha.V20190722.Models.DescribeCaptchaResultResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

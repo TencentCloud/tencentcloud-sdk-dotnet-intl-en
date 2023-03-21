@@ -1,0 +1,692 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudMdp</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.BindNewLVBDomainWithChannel(TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelRequest)">
+            <summary>
+            This API is used to bind an LVB domain name to a channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.BindNewLVBDomainWithChannelSync(TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelRequest)">
+            <summary>
+            This API is used to bind an LVB domain name to a channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.CreateStreamPackageChannel(TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelRequest)">
+            <summary>
+            This API is used to create a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.CreateStreamPackageChannelSync(TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelRequest)">
+            <summary>
+            This API is used to create a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.CreateStreamPackageChannelEndpoint(TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointRequest)">
+            <summary>
+            This API is used to create an endpoint on a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.CreateStreamPackageChannelEndpointSync(TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointRequest)">
+            <summary>
+            This API is used to create an endpoint on a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.DeleteStreamPackageChannelEndpoints(TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsRequest)">
+            <summary>
+            This API is used to delete endpoints from a StreamPackage channel in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.DeleteStreamPackageChannelEndpointsSync(TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsRequest)">
+            <summary>
+            This API is used to delete endpoints from a StreamPackage channel in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.DeleteStreamPackageChannels(TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsRequest)">
+            <summary>
+            This API is used to delete StreamPackage channels in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.DeleteStreamPackageChannelsSync(TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsRequest)">
+            <summary>
+            This API is used to delete StreamPackage channels in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.DescribeStreamPackageChannel(TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelRequest)">
+            <summary>
+            This API is used to query the information of a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.DescribeStreamPackageChannelSync(TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelRequest)">
+            <summary>
+            This API is used to query the information of a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.DescribeStreamPackageChannels(TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsRequest)">
+            <summary>
+            This API is used to query the information of multiple StreamPackage channels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.DescribeStreamPackageChannelsSync(TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsRequest)">
+            <summary>
+            This API is used to query the information of multiple StreamPackage channels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.ModifyStreamPackageChannel(TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest)">
+            <summary>
+            This API is used to modify a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.ModifyStreamPackageChannelSync(TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest)">
+            <summary>
+            This API is used to modify a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.ModifyStreamPackageChannelEndpoint(TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest)">
+            <summary>
+            This API is used to modify an endpoint of a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.ModifyStreamPackageChannelEndpointSync(TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest)">
+            <summary>
+            This API is used to modify an endpoint of a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.ModifyStreamPackageChannelInputAuthInfo(TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoRequest)">
+            <summary>
+            This API is used to modify the input authentication information of a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.ModifyStreamPackageChannelInputAuthInfoSync(TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoRequest)">
+            <summary>
+            This API is used to modify the input authentication information of a StreamPackage channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.UnbindCdnDomainWithChannel(TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelRequest)">
+            <summary>
+            This API is used to unbind a CDN playback domain name from a channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.MdpClient.UnbindCdnDomainWithChannelSync(TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelRequest)">
+            <summary>
+            This API is used to unbind a CDN playback domain name from a channel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelRequest.ChannelId">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelRequest.LVBDomain">
+            <summary>
+            The LVB domain name to bind
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelResponse.LVBDomain">
+            <summary>
+            The LVB domain name bound successfully
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.BindNewLVBDomainWithChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CacheInfo.Info">
+            <summary>
+            List of timeout parameter configuration
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.CacheInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CacheInfoInfo.Timeout">
+            <summary>
+            Timeout period (ms), which must be an integer multiple of 1000
+            .m3u8/.mpd: [1000, 60000]
+            .ts/.m4s/.mp4: [10000, 1800000]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CacheInfoInfo.Ext">
+            <summary>
+            File extension. Valid values: .m3u8, .ts, .mpd, .m4s, .mp4
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.CacheInfoInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ChannelInfo.Id">
+            <summary>
+            Channel ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ChannelInfo.Name">
+            <summary>
+            Channel name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ChannelInfo.Protocol">
+            <summary>
+            Channel protocol.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ChannelInfo.Points">
+            <summary>
+            Channel input and output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ChannelInfo.CacheInfo">
+            <summary>
+            Cache configuration
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.ChannelInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointRequest.Name">
+            <summary>
+            Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointRequest.AuthInfo">
+            <summary>
+            Authentication information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointResponse.Info">
+            <summary>
+            Information of the created channel endpoint
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelEndpointResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelRequest.Name">
+            <summary>
+            Channel name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelRequest.Protocol">
+            <summary>
+            Channel protocol. Valid values: HLS, DASH
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelRequest.CacheInfo">
+            <summary>
+            Cache configuration
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelResponse.Info">
+            <summary>
+            Channel information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.CreateStreamPackageChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsRequest.Urls">
+            <summary>
+            List of the URLs of the endpoints to delete
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelEndpointsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsRequest.Ids">
+            <summary>
+            List of the IDs of the channels to delete
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsResponse.SuccessInfos">
+            <summary>
+            List of the information of successfully deleted channels
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsResponse.FailInfos">
+            <summary>
+            List of the information of the channels that failed to be deleted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.DeleteStreamPackageChannelsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelResponse.Info">
+            <summary>
+            Channel information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsRequest.PageNum">
+            <summary>
+            Page number. Value range: [1, 1000]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsRequest.PageSize">
+            <summary>
+            Number of entries per page. Value range: [1, 1000]
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse.Infos">
+            <summary>
+            List of channel information
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse.PageNum">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse.PageSize">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse.TotalNum">
+            <summary>
+            Total number of entries
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse.TotalPage">
+            <summary>
+            Total number of pages
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.DescribeStreamPackageChannelsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.EndpointAuthInfo.WhiteIpList">
+            <summary>
+            The security group allowlist in CIDR format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.EndpointAuthInfo.BlackIpList">
+            <summary>
+            The security group blocklist in CIDR format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.EndpointAuthInfo.AuthKey">
+            <summary>
+            The authentication key. Its value is same as `X-TENCENT-PACKAGE` set in the HTTP request header.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.EndpointAuthInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.EndpointInfo.Name">
+            <summary>
+            Endpoint name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.EndpointInfo.Url">
+            <summary>
+            Endpoint URL.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.EndpointInfo.AuthInfo">
+            <summary>
+            Endpoint authentication information.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.EndpointInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.InputAuthInfo.Username">
+            <summary>
+            Username.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.InputAuthInfo.Password">
+            <summary>
+            Password.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.InputAuthInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.InputInfo.Url">
+            <summary>
+            Channel input URL.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.InputInfo.AuthInfo">
+            <summary>
+            Channel input authentication information.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.InputInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest.Url">
+            <summary>
+            Channel endpoint URL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest.Name">
+            <summary>
+            New endpoint name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest.AuthInfo">
+            <summary>
+            New channel authentication information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelEndpointResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoRequest.Url">
+            <summary>
+            Channel input URL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoRequest.ActionType">
+            <summary>
+            Authentication configuration. Valid values: `CLOSE`, `UPDATE`
+            `CLOSE`: disable authentication
+            `UPDATE`: update authentication information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoResponse.AuthInfo">
+            <summary>
+            Channel input authentication information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelInputAuthInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest.Id">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest.Name">
+            <summary>
+            New channel name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest.Protocol">
+            <summary>
+            New channel protocol. Valid values: HLS, DASH
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest.CacheInfo">
+            <summary>
+            Cache configuration
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.ModifyStreamPackageChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.PointInfo.Inputs">
+            <summary>
+            Channel input list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.PointInfo.Endpoints">
+            <summary>
+            Channel output list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.PointInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelRequest.ChannelId">
+            <summary>
+            Channel ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelRequest.CdnDomain">
+            <summary>
+            CDN playback domain name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdp.V20200527.Models.UnbindCdnDomainWithChannelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

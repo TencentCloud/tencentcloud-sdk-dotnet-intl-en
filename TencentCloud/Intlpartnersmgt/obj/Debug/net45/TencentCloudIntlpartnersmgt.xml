@@ -1,0 +1,1145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudIntlpartnersmgt</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.AllocateCustomerCredit(TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditRequest)">
+            <summary>
+            This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
+            1. The credit is valid permanently and will not be zeroed regularly.
+            2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.
+            3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
+            4. The set credit is an increment of the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates that it will be repossessed. The available credit can be set to 0 at the minimum.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.AllocateCustomerCreditSync(TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditRequest)">
+            <summary>
+            This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
+            1. The credit is valid permanently and will not be zeroed regularly.
+            2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.
+            3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
+            4. The set credit is an increment of the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates that it will be repossessed. The available credit can be set to 0 at the minimum.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditResponse"/></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.CreateAccount(TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.CreateAccountSync(TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest)" -->
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.DescribeCustomerBillDetail(TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest)">
+            <summary>
+            This API is used to query the customer bill details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.DescribeCustomerBillDetailSync(TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest)">
+            <summary>
+            This API is used to query the customer bill details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.DescribeCustomerBillSummary(TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest)">
+            <summary>
+            This API is used to query the total amount of customer bills.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.DescribeCustomerBillSummarySync(TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest)">
+            <summary>
+            This API is used to query the total amount of customer bills.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.GetCountryCodes(TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesRequest)">
+            <summary>
+            This API is used to obtain country/region codes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.GetCountryCodesSync(TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesRequest)">
+            <summary>
+            This API is used to obtain country/region codes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryCreditAllocationHistory(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryRequest)">
+            <summary>
+            This API is used to query all the credit allocation records of a single customer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryCreditAllocationHistorySync(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryRequest)">
+            <summary>
+            This API is used to query all the credit allocation records of a single customer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryCreditByUinList(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListRequest)">
+            <summary>
+            This API is used to query the credit of users in the list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryCreditByUinListSync(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListRequest)">
+            <summary>
+            This API is used to query the credit of users in the list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryCustomersCredit(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest)">
+            <summary>
+            This API is used for a partner to the credits and basic information of cutomers.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryCustomersCreditSync(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest)">
+            <summary>
+            This API is used for a partner to the credits and basic information of cutomers.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryDirectCustomersCredit(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditRequest)">
+            <summary>
+            This API is used to query the credits of direct customers.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryDirectCustomersCreditSync(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditRequest)">
+            <summary>
+            This API is used to query the credits of direct customers.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryPartnerCredit(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditRequest)">
+            <summary>
+            This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryPartnerCreditSync(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditRequest)">
+            <summary>
+            This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryVoucherAmountByUin(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinRequest)">
+            <summary>
+            This API is used to query the voucher quota based on the customer UIN.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryVoucherAmountByUinSync(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinRequest)">
+            <summary>
+            This API is used to query the voucher quota based on the customer UIN.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryVoucherListByUin(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinRequest)">
+            <summary>
+            This API is used to query the voucher list based on the customer UIN.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryVoucherListByUinSync(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinRequest)">
+            <summary>
+            This API is used to query the voucher list based on the customer UIN.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryVoucherPool(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolRequest)">
+            <summary>
+            This API is used to query the voucher quota pool.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.IntlpartnersmgtClient.QueryVoucherPoolSync(TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolRequest)">
+            <summary>
+            This API is used to query the voucher quota pool.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolRequest"/></param>
+            <returns><see cref="T:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditRequest.AddedCredit">
+            <summary>
+            Specific value of the credit allocated to the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditRequest.ClientUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditResponse.TotalCredit">
+            <summary>
+            The updated total credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditResponse.RemainingCredit">
+            <summary>
+            The updated available credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.AllocateCustomerCreditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.PayerAccountId">
+            <summary>
+            Reseller account
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.OwnerAccountId">
+            <summary>
+            Customer account
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.OperatorAccountId">
+            <summary>
+            Operator account
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ProductName">
+            <summary>
+            Product name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.BillingMode">
+            <summary>
+            Billing mode
+            `Monthly subscription` (Monthly subscription)
+            `Pay-As-You-Go resources` (Pay-as-you-go)
+            `Standard RI` (Reserved instance)
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ProjectName">
+            <summary>
+            Project name
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.Region">
+            <summary>
+            Resource region
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.AvailabilityZone">
+            <summary>
+            Resource AZ
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.InstanceId">
+            <summary>
+            Instance ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.InstanceName">
+            <summary>
+            Instance name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.SubProductName">
+            <summary>
+            Subproduct name
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.TransactionType">
+            <summary>
+            Settlement type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.TransactionId">
+            <summary>
+            Transaction ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.TransactionTime">
+            <summary>
+            Settlement time
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.UsageStartTime">
+            <summary>
+            Start time of resource use
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.UsageEndTime">
+            <summary>
+            End time of resource use
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ComponentType">
+            <summary>
+            Component
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ComponentName">
+            <summary>
+            Component name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ComponentListPrice">
+            <summary>
+            Component list price
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ComponentPriceMeasurementUnit">
+            <summary>
+            Price unit
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ComponentUsage">
+            <summary>
+            Component usage
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ComponentUsageUnit">
+            <summary>
+            Component usage unit
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.UsageDuration">
+            <summary>
+            Resource usage duration
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.DurationUnit">
+            <summary>
+            Duration unit
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.OriginalCost">
+            <summary>
+            Original cost
+            Original cost = component list price * component usage * usage duration
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.DiscountRate">
+            <summary>
+            Discount, which defaults to `1`, indicating there is no discount.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.Currency">
+            <summary>
+            Currency
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.TotalAmountAfterDiscount">
+            <summary>
+            Discounted total
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.VoucherDeduction">
+            <summary>
+            Voucher deduction
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.TotalCost">
+            <summary>
+            Total cost = discounted total - voucher deduction
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.BillDetailData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CountryCodeItem.EnName">
+            <summary>
+            Country/region name in English
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CountryCodeItem.Name">
+            <summary>
+            Country/region name in Chinese
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CountryCodeItem.IOS2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CountryCodeItem.IOS3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CountryCodeItem.Code">
+            <summary>
+            International dialing code
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.CountryCodeItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.AccountType">
+            <summary>
+            Account type of a new customer. Valid values: `personal`, `company`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.Mail">
+            <summary>
+            Registered email address, which should be valid and correct.
+            For example, account@qq.com.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.Password" -->
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.ConfirmPassword">
+            <summary>
+            The confirmed password, which must be the same as that entered in the `Password` field.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.PhoneNum">
+            <summary>
+            Customer mobile number, which should be valid and correct.
+            A global mobile number within 1-32 digits is allowed, such as 18888888888.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.CountryCode">
+            <summary>
+            Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.Area">
+            <summary>
+            Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.Extended">
+            <summary>
+            Extension field, which is left empty by default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountResponse.Uin">
+            <summary>
+            Account UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.CreateAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest.CustomerUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest.Month">
+            <summary>
+            The queried month in “YYYY-MM” format, such as 2023-01.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest.PageSize">
+            <summary>
+            A pagination parameter that specifies the number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest.Page">
+            <summary>
+            A pagination parameter that specifies the current page number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest.PayMode">
+            <summary>
+            Billing mode. Valid values:
+            `prePay` (Monthly subscription)
+            `postPay` (Pay-as-you-go)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest.ActionType">
+            <summary>
+            Transaction type. Valid values:
+            `prepay_purchase` (Purchase)
+            `prepay_renew` (Renewal)
+            `prepay_modify` (Upgrade/Downgrade)
+            `prepay_return` ( Monthly subscription refund)
+            `postpay_deduct` (Pay-as-you-go)
+            `postpay_deduct_h` (Hourly settlement)
+            `postpay_deduct_d` (Daily settlement)
+            `postpay_deduct_m` (Monthly settlement)
+            `offline_deduct` (Offline project deduction)
+            `online_deduct` (Offline product deduction)
+            `recon_deduct` (Adjustment - deduction)
+            `recon_increase` (Adjustment - compensation)
+            `ripay_purchase` (One-off RI Fee)
+            `postpay_deduct_s` (Spot)
+            `ri_hour_pay` (Hourly RI fee)
+            `prePurchase` (New monthly subscription)
+            `preRenew` (Monthly subscription renewal)
+            `preUpgrade` (Upgrade/Downgrade)
+            `preDowngrade` (Upgrade/Downgrade)
+            `svp_hour_pay` (Hourly Savings Plan fee)
+            `recon_guarantee` (Minimum spend deduction)
+            `pre_purchase` (New monthly subscription)
+            `pre_renew` (Monthly subscription renewal)
+            `pre_upgrade` (Upgrade/Downgrade)
+            `pre_downgrade` (Upgrade/Downgrade)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest.IsConfirmed">
+            <summary>
+            Payment status
+            `0`: N/A
+            `1`: Paid
+            `2`: Unpaid
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailResponse.Total">
+            <summary>
+            Total number of data entries
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailResponse.DetailSet">
+            <summary>
+            Data details
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillDetailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest.CustomerUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest.Month">
+            <summary>
+            The queried month in “YYYY-MM” format, such as 2023-01.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest.PayMode">
+            <summary>
+            Billing mode. Valid values:
+            `prePay` (Monthly subscription)
+            `postPay` (Pay-as-you-go)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest.ActionType">
+            <summary>
+            Transaction type. Valid values:
+            `prepay_purchase` (Purchase)
+            `prepay_renew` (Renewal)
+            `prepay_modify` (Upgrade/Downgrade)
+            `prepay_return` (Monthly subscription refund)
+            `postpay_deduct` (Pay-as-you-go)
+            `postpay_deduct_h` (Hourly settlement)
+            `postpay_deduct_d` (Daily settlement)
+            `postpay_deduct_m` (Monthly settlement)
+            `offline_deduct` (Offline project deduction)
+            `online_deduct` (Offline product deduction)
+            `recon_deduct` (Adjustment - deduction)
+            `recon_increase` (Adjustment - compensation)
+            `ripay_purchase` (One-off RI Fee)
+            `postpay_deduct_s` (Spot)
+            `ri_hour_pay` (Hourly RI fee)
+            `prePurchase` (New monthly subscription)
+            `preRenew` (Monthly subscription renewal)
+            `preUpgrade` (Upgrade/Downgrade)
+            `preDowngrade` (Upgrade/Downgrade)
+            `svp_hour_pay` (Hourly Savings Plan fee)
+            `recon_guarantee` (Minimum spend deduction)
+            `pre_purchase` (New monthly subscription)
+            `pre_renew` (Monthly subscription renewal)
+            `pre_upgrade` (Upgrade/Downgrade)
+            `pre_downgrade` (Upgrade/Downgrade)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest.IsConfirmed">
+            <summary>
+            Payment status
+            `0`: N/A
+            `1`: Paid
+            `2`: Unpaid
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryResponse.TotalCost">
+            <summary>
+            Total amount
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.DescribeCustomerBillSummaryResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesResponse.Data">
+            <summary>
+            List of country/region codes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.GetCountryCodesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryData.AllocatedTime">
+            <summary>
+            Allocation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryData.Operator">
+            <summary>
+            Operator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryData.Credit">
+            <summary>
+            Allocated credit value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryData.AllocatedCredit">
+            <summary>
+            The allocated total credit
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryRequest.ClientUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryRequest.Page">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryRequest.PageSize">
+            <summary>
+            Number of data entries per page
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryResponse.Total">
+            <summary>
+            Total number of records
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryResponse.History">
+            <summary>
+            List of record details
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditAllocationHistoryResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListRequest.UinList">
+            <summary>
+            User list
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListResponse.Data">
+            <summary>
+            User information list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCreditByUinListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.Mobile">
+            <summary>
+            Mobile number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.Arrears">
+            <summary>
+            Overdue payment flag
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.AssociationTime">
+            <summary>
+            Binding time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.RecentExpiry">
+            <summary>
+            Expiration time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.ClientUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.Credit">
+            <summary>
+            Credit allocated to a customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.RemainingCredit">
+            <summary>
+            The remaining credit of a customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.IdentifyType">
+            <summary>
+            `0`: Identity not verified; `1`: Individual identity verified; `2`: Enterprise identity verified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.Remark">
+            <summary>
+            Customer remarks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.Force">
+            <summary>
+            Forced status
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest.FilterType">
+            <summary>
+            Search condition type. You can only search by customer ID, name, remarks, or email.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest.Filter">
+            <summary>
+            Search condition
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest.Page">
+            <summary>
+            A pagination parameter that specifies the current page number, with a value starting from 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest.PageSize">
+            <summary>
+            A pagination parameter that specifies the number of entries per page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest.Order">
+            <summary>
+            A sort parameter that specifies the sort order. Valid values: `desc` (descending order), or `asc` (ascending order) based on `AssociationTime`. The value will be `desc` if left empty.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditResponse.Data">
+            <summary>
+            The list of queried customers
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditResponse.Total">
+            <summary>
+            Number of customers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryCustomersCreditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditData.Uin">
+            <summary>
+            User UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditData.TotalCredit">
+            <summary>
+            Total credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditData.RemainingCredit">
+            <summary>
+            Remaining credit
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditResponse.Data">
+            <summary>
+            Direct customer information list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryDirectCustomersCreditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditResponse.AllocatedCredit">
+            <summary>
+            Allocated credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditResponse.TotalCredit">
+            <summary>
+            Total credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditResponse.RemainingCredit">
+            <summary>
+            Remaining credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryPartnerCreditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinItem.ClientUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinItem.TotalAmount">
+            <summary>
+            Voucher quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinItem.RemainAmount">
+            <summary>
+            Voucher amount
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinRequest.ClientUins">
+            <summary>
+            Customer UIN list
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinResponse.Data">
+            <summary>
+            Customer voucher quota information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherAmountByUinResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinItem.ClientUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinItem.TotalCount">
+            <summary>
+            The total number of vouchers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinItem.Data">
+            <summary>
+            Voucher details
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinRequest.ClientUins">
+            <summary>
+            Customer UIN list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinRequest.Status">
+            <summary>
+            Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinResponse.Data">
+            <summary>
+            Customer voucher information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinVoucherItem.VoucherId">
+            <summary>
+            Voucher ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinVoucherItem.VoucherStatus">
+            <summary>
+            Voucher status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinVoucherItem.TotalAmount">
+            <summary>
+            Voucher value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinVoucherItem.RemainAmount">
+            <summary>
+            Balance
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherListByUinVoucherItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse.AgentName">
+            <summary>
+            Reseller name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse.AccountType">
+            <summary>
+            Reseller role type (1: Reseller; 2: Distributor; 3: Second-level reseller)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse.TotalQuota">
+            <summary>
+            Total quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse.RemainingQuota">
+            <summary>
+            Remaining quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse.IssuedNum">
+            <summary>
+            The number of issued vouchers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Intlpartnersmgt.V20220928.Models.QueryVoucherPoolResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

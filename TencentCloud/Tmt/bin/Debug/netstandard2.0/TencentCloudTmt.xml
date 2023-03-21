@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudTmt</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Tmt.V20180321.TmtClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Tmt.V20180321.TmtClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Tmt.V20180321.TmtClient.TextTranslate(TencentCloud.Tmt.V20180321.Models.TextTranslateRequest)">
+            <summary>
+            This API is used to translate text in multiple language pairs, such as Chinese-English.<br />
+            Note: We recommend that you simplify your development with the SDK integration mode. For how to use the SDK, see Section 5 "Developer Resources".
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tmt.V20180321.Models.TextTranslateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tmt.V20180321.Models.TextTranslateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tmt.V20180321.TmtClient.TextTranslateSync(TencentCloud.Tmt.V20180321.Models.TextTranslateRequest)">
+            <summary>
+            This API is used to translate text in multiple language pairs, such as Chinese-English.<br />
+            Note: We recommend that you simplify your development with the SDK integration mode. For how to use the SDK, see Section 5 "Developer Resources".
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tmt.V20180321.Models.TextTranslateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tmt.V20180321.Models.TextTranslateResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Tmt.V20180321.Models.TextTranslateRequest.SourceText">
+            <summary>
+            The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tmt.V20180321.Models.TextTranslateRequest.Source">
+            <summary>
+            Supported source languages:
+            auto: Automatic language detection
+            zh: Simplified Chinese
+            zh_TW: Traditional Chinese
+            en: English
+            ja: Japanese
+            ko: Korean
+            fr: French
+            es: Spanish
+            it: Italian
+            de: German
+            tr: Turkish
+            ru: Russian
+            pt: Portuguese
+            vi: Vietnamese
+            id: Bahasa Indonesian
+            th: Thai
+            ms: Malay
+            ar: Arabic
+            hi: Hindi
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tmt.V20180321.Models.TextTranslateRequest.Target" -->
+        <member name="P:TencentCloud.Tmt.V20180321.Models.TextTranslateRequest.ProjectId">
+            <summary>
+            The project ID, which can be obtained from **Console -> Account Center -> Project Management**. If no one is set, enter the default project ID `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tmt.V20180321.Models.TextTranslateRequest.UntranslatedText">
+            <summary>
+            The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tmt.V20180321.Models.TextTranslateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tmt.V20180321.Models.TextTranslateResponse.TargetText">
+            <summary>
+            The translation outcome.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tmt.V20180321.Models.TextTranslateResponse.Source">
+            <summary>
+            The source language. See the request parameter `Source` for details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tmt.V20180321.Models.TextTranslateResponse.Target">
+            <summary>
+            The target language. See the request parameter `Target` for details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tmt.V20180321.Models.TextTranslateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tmt.V20180321.Models.TextTranslateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

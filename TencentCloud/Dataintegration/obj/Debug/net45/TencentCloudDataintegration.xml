@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudDataintegration</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Dataintegration.V20220613.DataintegrationClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Dataintegration.V20220613.DataintegrationClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Dataintegration.V20220613.DataintegrationClient.SendMessage(TencentCloud.Dataintegration.V20220613.Models.SendMessageRequest)">
+            <summary>
+            This API is used to report data to DIP via SDK.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dataintegration.V20220613.Models.SendMessageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dataintegration.V20220613.Models.SendMessageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dataintegration.V20220613.DataintegrationClient.SendMessageSync(TencentCloud.Dataintegration.V20220613.Models.SendMessageRequest)">
+            <summary>
+            This API is used to report data to DIP via SDK.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dataintegration.V20220613.Models.SendMessageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dataintegration.V20220613.Models.SendMessageResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Dataintegration.V20220613.Models.BatchContent.Body">
+            <summary>
+            Message body
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dataintegration.V20220613.Models.BatchContent.Key">
+            <summary>
+            Key of a message
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dataintegration.V20220613.Models.BatchContent.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dataintegration.V20220613.Models.SendMessageRequest.DataHubId">
+            <summary>
+            ID of the integrated resource
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dataintegration.V20220613.Models.SendMessageRequest.Message">
+            <summary>
+            A batch of messages
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dataintegration.V20220613.Models.SendMessageRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dataintegration.V20220613.Models.SendMessageResponse.MessageId">
+            <summary>
+            Message ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dataintegration.V20220613.Models.SendMessageResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dataintegration.V20220613.Models.SendMessageResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

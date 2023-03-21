@@ -1,0 +1,972 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudGme</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.CreateApp(TencentCloud.Gme.V20180711.Models.CreateAppRequest)">
+            <summary>
+            This API is used to create a GME application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.CreateAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.CreateAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.CreateAppSync(TencentCloud.Gme.V20180711.Models.CreateAppRequest)">
+            <summary>
+            This API is used to create a GME application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.CreateAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.CreateAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DeleteRoomMember(TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest)">
+            <summary>
+            This API is used to delete a room or remove members from the room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DeleteRoomMemberSync(TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest)">
+            <summary>
+            This API is used to delete a room or remove members from the room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DescribeAppStatistics(TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest)">
+            <summary>
+            This API is used to query the usage statistics of a GME application, including those of Voice Chat, Voice Message Service, Voice Analysis, etc. The maximum query period is the past 30 days.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DescribeAppStatisticsSync(TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest)">
+            <summary>
+            This API is used to query the usage statistics of a GME application, including those of Voice Chat, Voice Message Service, Voice Analysis, etc. The maximum query period is the past 30 days.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DescribeApplicationData(TencentCloud.Gme.V20180711.Models.DescribeApplicationDataRequest)">
+            <summary>
+            This API is used to query data details for up to the past 90 days.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DescribeApplicationDataSync(TencentCloud.Gme.V20180711.Models.DescribeApplicationDataRequest)">
+            <summary>
+            This API is used to query data details for up to the past 90 days.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DescribeRecordInfo(TencentCloud.Gme.V20180711.Models.DescribeRecordInfoRequest)">
+            <summary>
+            This API is used to query a recording task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DescribeRecordInfoSync(TencentCloud.Gme.V20180711.Models.DescribeRecordInfoRequest)">
+            <summary>
+            This API is used to query a recording task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DescribeTaskInfo(TencentCloud.Gme.V20180711.Models.DescribeTaskInfoRequest)">
+            <summary>
+            This API is used to query the recording task in a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.DescribeTaskInfoSync(TencentCloud.Gme.V20180711.Models.DescribeTaskInfoRequest)">
+            <summary>
+            This API is used to query the recording task in a room.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.ModifyAppStatus(TencentCloud.Gme.V20180711.Models.ModifyAppStatusRequest)">
+            <summary>
+            This API is used to change the status of an application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.ModifyAppStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.ModifyAppStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.ModifyAppStatusSync(TencentCloud.Gme.V20180711.Models.ModifyAppStatusRequest)">
+            <summary>
+            This API is used to change the status of an application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.ModifyAppStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.ModifyAppStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.ModifyRecordInfo(TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest)">
+            <summary>
+            This API is used to modify recording configurations.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.ModifyRecordInfoSync(TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest)">
+            <summary>
+            This API is used to modify recording configurations.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.StartRecord(TencentCloud.Gme.V20180711.Models.StartRecordRequest)">
+            <summary>
+            This API is used to start recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.StartRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.StartRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.StartRecordSync(TencentCloud.Gme.V20180711.Models.StartRecordRequest)">
+            <summary>
+            This API is used to start recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.StartRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.StartRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.StopRecord(TencentCloud.Gme.V20180711.Models.StopRecordRequest)">
+            <summary>
+            This API is used to stop recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.StopRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.StopRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.GmeClient.StopRecordSync(TencentCloud.Gme.V20180711.Models.StopRecordRequest)">
+            <summary>
+            This API is used to stop recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gme.V20180711.Models.StopRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gme.V20180711.Models.StopRecordResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.RealtimeSpeechStatisticsItem">
+            <summary>
+            Voice Chat statistics
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.VoiceMessageStatisticsItem">
+            <summary>
+            Voice Message statistics
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.VoiceFilterStatisticsItem">
+            <summary>
+            Phrase Filtering statistics
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.Date">
+            <summary>
+            Reference period
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.AudioTextStatisticsItem">
+            <summary>
+            Recording-to-Text usage statistics
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.StreamTextStatisticsItem">
+            <summary>
+            Stream-to-Text usage statistics
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.OverseaTextStatisticsItem">
+            <summary>
+            Usage statistics of Voice-to-Text of outside-MLC requests
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.RealtimeTextStatisticsItem">
+            <summary>
+            Real-time Voice-to-Text usage statistics
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.AppStatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.BizId">
+            <summary>
+            Application ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.DauDataNum">
+            <summary>
+            Number of DAU metrics
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.DauDataMainland">
+            <summary>
+            DAUs in the Chinese mainland
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.DauDataOversea">
+            <summary>
+            DAUs outside the Chinese mainland
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.DauDataSum">
+            <summary>
+            Total DAUs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.DurationDataNum">
+            <summary>
+            Number of Voice Chat metrics
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.DurationDataMainland">
+            <summary>
+            Duration of Voice Chat in the Chinese mainland (in minutes)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.DurationDataOversea">
+            <summary>
+            Duration of Voice Chat outside the Chinese mainland (in minutes)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.DurationDataSum">
+            <summary>
+            Total duration of Voice Chat (in minutes)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.PcuDataNum">
+            <summary>
+            Number of PCU metrics
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.PcuDataMainland">
+            <summary>
+            PCUs in the Chinese mainland
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.PcuDataOversea">
+            <summary>
+            PCUs outside the Chinese mainland
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.PcuDataSum">
+            <summary>
+            Total PCUs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.ApplicationDataStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.AudioTextStatisticsItem.Data">
+            <summary>
+            Statistical value (in seconds)
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.AudioTextStatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppRequest.AppName">
+            <summary>
+            Application name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppRequest.ProjectId">
+            <summary>
+            Tencent Cloud project ID. Default value: 0, which means that the default project is used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppRequest.EngineList">
+            <summary>
+            List of engines to be supported. All values are selected by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppRequest.RegionList">
+            <summary>
+            Service region list. All values are selected by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppRequest.RealtimeSpeechConf">
+            <summary>
+            Configuration information of Voice Chat
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppRequest.VoiceMessageConf">
+            <summary>
+            Configuration information of Voice Message Service
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppRequest.VoiceFilterConf">
+            <summary>
+            Configuration information of Voice Analysis Service
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppRequest.Tags">
+            <summary>
+            List of tags to be added
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.CreateAppRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResp.BizId">
+            <summary>
+            Application ID, automatically generated by the backend.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResp.AppName">
+            <summary>
+            Application name, the input of `AppName`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResp.ProjectId">
+            <summary>
+            Project ID, the input of `ProjectId`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResp.SecretKey">
+            <summary>
+            Application key, used to initialize GME SDK.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResp.CreateTime">
+            <summary>
+            Timestamp, indicating when the service is created.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResp.RealtimeSpeechConf">
+            <summary>
+            Configuration information of Voice Chat
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResp.VoiceMessageConf">
+            <summary>
+            Configuration information of Voice Message Service
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResp.VoiceFilterConf">
+            <summary>
+            Configuration information of Voice Analysis Service
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.CreateAppResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResponse.Data">
+            <summary>
+            Returned data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.CreateAppResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.CreateAppResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DeleteResult.Code">
+            <summary>
+            Status code. `0`: Succeeded. Others: Failed\
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DeleteResult.ErrorMsg">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DeleteResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest.RoomId">
+            <summary>
+            ID of the target room
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest.Uids">
+            <summary>
+            List of the members to remove
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest.DeleteType">
+            <summary>
+            Operation type. `1`: Delete a room; `2`: Remove members
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest.BizId">
+            <summary>
+            Application ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberResponse.DeleteResult">
+            <summary>
+            Result of the operation to delete a room or remove a member
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DeleteRoomMemberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest.BizId">
+            <summary>
+            GME application ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest.StartDate">
+            <summary>
+            Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest.EndDate">
+            <summary>
+            Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest.Services">
+            <summary>
+            List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsResp.AppStatistics">
+            <summary>
+            Application usage statistics
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsResponse.Data">
+            <summary>
+            Application usage statistics
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeAppStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataRequest.BizId">
+            <summary>
+            Application ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataRequest.StartDate">
+            <summary>
+            Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataRequest.EndDate">
+            <summary>
+            Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataResponse.Data">
+            <summary>
+            Application statistics
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeApplicationDataResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoRequest.TaskId">
+            <summary>
+            ID of the ongoing task, which is returned from the `StartRecord` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoRequest.BizId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoResponse.RecordInfo">
+            <summary>
+            Information about the recording task.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoResponse.RecordMode">
+            <summary>
+            Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoResponse.RoomId">
+            <summary>
+            Room ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeRecordInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoRequest.BizId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoRequest.RoomId">
+            <summary>
+            Room ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoResponse.TaskId">
+            <summary>
+            ID of the ongoing task, which is returned from the `StartRecord` API.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoResponse.RecordMode">
+            <summary>
+            Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoResponse.SubscribeRecordUserIds">
+            <summary>
+            Allowlist or blocklist for stream subscription.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.DescribeTaskInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyAppStatusRequest.BizId">
+            <summary>
+            Application ID, which is generated and returned by the backend after the application creation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyAppStatusRequest.Status">
+            <summary>
+            Application status. Valid values: `open`, `close`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.ModifyAppStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyAppStatusResp.BizId">
+            <summary>
+            GME application ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyAppStatusResp.Status">
+            <summary>
+            Application status. Valid values: `open`, `close`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.ModifyAppStatusResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyAppStatusResponse.Data">
+            <summary>
+            Returned data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyAppStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.ModifyAppStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest.TaskId">
+            <summary>
+            ID of the ongoing task, which is returned from the `StartRecord` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest.RecordMode">
+            <summary>
+            Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest.BizId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest.SubscribeRecordUserIds">
+            <summary>
+            Allowlist or blocklist for stream subscription.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.ModifyRecordInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.OverseaTextStatisticsItem.Data">
+            <summary>
+            Statistical value (in seconds)
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.OverseaTextStatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealTimeSpeechStatisticsItem.MainLandDau">
+            <summary>
+            DAUs in the Chinese mainland
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealTimeSpeechStatisticsItem.MainLandPcu">
+            <summary>
+            PCUs in the Chinese mainland
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealTimeSpeechStatisticsItem.MainLandDuration">
+            <summary>
+            Total duration of use in the Chinese mainland (in minutes)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealTimeSpeechStatisticsItem.OverseaDau">
+            <summary>
+            DAUs outside the Chinese mainland
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealTimeSpeechStatisticsItem.OverseaPcu">
+            <summary>
+            PCUs outside the Chinese mainland
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealTimeSpeechStatisticsItem.OverseaDuration">
+            <summary>
+            Total duration of use outside the Chinese mainland (in minutes)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.RealTimeSpeechStatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealtimeSpeechConf.Status">
+            <summary>
+            Voice Chat status. Valid values: `open`, `close`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealtimeSpeechConf.Quality">
+            <summary>
+            Voice Chat sound quality. Valid value: `high`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.RealtimeSpeechConf.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RealtimeTextStatisticsItem.Data">
+            <summary>
+            Statistical value (in seconds)
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.RealtimeTextStatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RecordInfo.UserId">
+            <summary>
+            User ID. The value is `0` in mixed streams recording mode.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RecordInfo.FileName">
+            <summary>
+            Recording filename.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RecordInfo.RecordBeginTime">
+            <summary>
+            Recording start time, which is a Unix timestamp. Example: 1234567868.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.RecordInfo.RecordStatus">
+            <summary>
+            Recording status. Valid values: `2`: recording; `10`: to be transcoded; `11`: transcoding; `12`: uploading; `13`: uploaded; `14`: user notified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.RecordInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StartRecordRequest.BizId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StartRecordRequest.RoomId">
+            <summary>
+            Room ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StartRecordRequest.RecordMode">
+            <summary>
+            Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StartRecordRequest.SubscribeRecordUserIds">
+            <summary>
+            Allowlist or blocklist for stream subscription. If you do not specify this parameter, the audio streams of all the users in the room are subscribed to by default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.StartRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StartRecordResponse.TaskId">
+            <summary>
+            Task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StartRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.StartRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StatisticsItem.StatDate">
+            <summary>
+            Date in the format of yyyy-mm-dd, such as 2018-07-13
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StatisticsItem.Data">
+            <summary>
+            Statistical value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.StatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StopRecordRequest.TaskId">
+            <summary>
+            Task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StopRecordRequest.BizId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.StopRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StopRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.StopRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.StreamTextStatisticsItem.Data">
+            <summary>
+            Usage of the service (in seconds)
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.StreamTextStatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.SubscribeRecordUserIds.UnSubscribeUserIds">
+            <summary>
+            Blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will not be subscribed to.
+            Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.SubscribeRecordUserIds.SubscribeUserIds">
+            <summary>
+            Allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will be subscribed to.
+            Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.SubscribeRecordUserIds.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.Tag.TagKey">
+            <summary>
+            Tag key
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.Tag.TagValue">
+            <summary>
+            Tag value
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.VoiceFilterConf.Status">
+            <summary>
+            Phrase Filtering status. Valid values: `open`, `close`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.VoiceFilterConf.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.VoiceFilterStatisticsItem.Duration">
+            <summary>
+            Total duration of phrase filtering (in minutes)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.VoiceFilterStatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.VoiceMessageConf.Status">
+            <summary>
+            Voice Message Service status. Valid values: `open`, `close`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.VoiceMessageConf.Language">
+            <summary>
+            Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.VoiceMessageConf.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gme.V20180711.Models.VoiceMessageStatisticsItem.Dau">
+            <summary>
+            DAUs of Voice Message Service
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gme.V20180711.Models.VoiceMessageStatisticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

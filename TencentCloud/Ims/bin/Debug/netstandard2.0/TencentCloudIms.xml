@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudIms</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Ims.V20201229.ImsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.ImsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Ims.V20201229.ImsClient.ImageModeration(TencentCloud.Ims.V20201229.Models.ImageModerationRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Ims.V20201229.ImsClient.ImageModerationSync(TencentCloud.Ims.V20201229.Models.ImageModerationRequest)" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.Device.Ip">
+            <summary>
+            This field indicates the IP address of the business user's device and supports recording both **IPv4 and IPv6** addresses. It needs to be used together with the `IpType` parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Device.Mac">
+            <summary>
+            This field indicates the MAC address of the business user, which makes it easier to identify and manage devices. Its format and value are the same as those of a standard MAC address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Device.TokenId">
+            <summary>
+            *In beta test. Stay tuned.*
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Device.DeviceId">
+            <summary>
+            *In beta test. Stay tuned.*
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.Device.IMEI" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.Device.IDFA" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.Device.IDFV">
+            <summary>
+            **For iOS devices**: this field indicates the identifier for vendors **(IDFV)** of the business user, which is provided by Apple to identify the app vendor and contains a hexadecimal string of 32 digits and letters. It can be used to uniquely identify a device.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Device.IpType">
+            <summary>
+            This field indicates the type of the recorded IP address. Valid values: **0** (IPv4 address), **1** (IPv6 address). It needs to be used together with the `IpType` parameter.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.Device.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.BizType" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.DataId" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.FileContent" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.FileUrl" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.Interval" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.MaxFrames" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.User">
+            <summary>
+            This field indicates the information of the user that corresponds to the object to be detected. It can be passed in to identify the user involved in the violation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.Device">
+            <summary>
+            This field indicates the information of the device that corresponds to the object to be detected. It can be passed in to identify the device involved in the violation.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.ImageModerationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.Suggestion" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.Label" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.SubLabel">
+            <summary>
+            This field is used to return the subtag name under the maliciousness tag with the highest priority hit by the detection result, such as *Porn-SexBehavior*. If no subtag is hit, an empty string will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.Score">
+            <summary>
+            This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.LabelResults">
+            <summary>
+            This field is used to return the detailed recognition result for the maliciousness tag hit by the categorization model, such as porn, advertising, or any other offensive, unsafe, or inappropriate type of content.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.ObjectResults">
+            <summary>
+            This field is used to return the detailed detection result of the object detection model, including the tag name hit by the content such as object, advertising logo, or QR code, tag score, coordinate information, scenario recognition result, and operation suggestion. For more information on the returned value, see the description of the `ObjectResults` data structure.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.OcrResults">
+            <summary>
+            This field is used to return the detailed text OCR result, including the text coordinate information, text recognition result, and operation suggestion. For more information on the returned value, see the description of the `OcrResults` data structure.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.LibResults" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.DataId">
+            <summary>
+            This field is used to return the `DataId` in the request parameters that correspond to the detected object.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.BizType">
+            <summary>
+            This field is used to return the `BizType` in the request parameters that correspond to the detected object.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.Extra" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.FileMD5">
+            <summary>
+            This field is used to return the MD5 checksum of the detected object for easier verification of the file integrity.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.ImageModerationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LabelDetailItem.Id">
+            <summary>
+            This field is used to return the ID of the recognized object for easier recognition and distinction.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LabelDetailItem.Name">
+            <summary>
+            This field is used to return the hit subtag name.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LabelDetailItem.Score">
+            <summary>
+            This field is used to return the hit score of the subtag. Value range: **0–100**; for example, *Porn-SexBehavior 99* indicates that the hit score of the *Porn-SexBehavior* tag for the recognized content is 99.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.LabelDetailItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LabelResult.Scene">
+            <summary>
+            This field is used to return the scenario result recognized by the model, such as advertising, pornographic, and harmful.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.LabelResult.Suggestion" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.LabelResult.Label" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.LabelResult.SubLabel">
+            <summary>
+            This field is used to return the detection result for a subtag under the maliciousness tag, such as *Porn-SexBehavior*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LabelResult.Score">
+            <summary>
+            This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LabelResult.Details">
+            <summary>
+            This field is used to return the details of the subtag hit by the categorization model, such as number, hit tag name, and score.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.LabelResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibDetail.Id">
+            <summary>
+            This field is used to return the ID of the recognized object for easier recognition and distinction.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibDetail.LibId">
+            <summary>
+            This field is **valid only when `Label` is `Custom` (custom keyword)**. It is used to return the ID of the custom library for easier custom library management and configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibDetail.LibName">
+            <summary>
+            This field is **valid only when `Label` is `Custom` (custom keyword)**. It is used to return the name of the custom library for easier custom library management and configuration.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibDetail.ImageId">
+            <summary>
+            This field is used to return the ID of the recognized image object for easier file management.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.LibDetail.Label" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibDetail.Tag">
+            <summary>
+            This field is used to return other custom tags to meet the needs in your customized scenarios. It can be skipped if you have no custom needs.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibDetail.Score">
+            <summary>
+            This field is used to return the hit score of the model. Value range: **0–100**; for example, *Porn 99* indicates that the hit score of the porn tag for the recognized content is 99.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.LibDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibResult.Scene">
+            <summary>
+            This field indicates the scenario recognition result of the model. Default value: Similar.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.LibResult.Suggestion" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.LibResult.Label" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibResult.SubLabel">
+            <summary>
+            This field is used to return the detection result for a subtag under the maliciousness tag, such as *Porn-SexBehavior*.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibResult.Score">
+            <summary>
+            This field is used to return the recognition score of the image search model. Value range: **0–100**. It indicates the score for the similarity between the moderated image **and the samples in the library**. A higher score indicates that the content is more likely to hit a sample in the library of similar images.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.LibResult.Details">
+            <summary>
+            This field is used to return the detailed result of the comparison with the blocklist/allowlist, such as number, library name, and maliciousness tag. For more information on the returned value, see the description of the [LibDetail](https://intl.cloud.tencent.com/document/product/1125/53274?from_cn_redirect=1#LibDetail) data structure.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.LibResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Location.X">
+            <summary>
+            This parameter is used to return the pixel position of the **abscissa (X) of the top-left corner** of the detection frame. It can be combined with other parameters to uniquely determine the size and position of the detection frame.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Location.Y">
+            <summary>
+            This parameter is used to return the pixel position of the **ordinate of the top-left corner** (Y) of the detection frame. It can be combined with other parameters to uniquely determine the size and position of the detection frame.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Location.Width">
+            <summary>
+            This parameter is used to return the **width of the detection frame** (the length starting from the top-left corner and extending to the right on the X axis). It can be combined with other parameters to uniquely determine the size and position of the detection frame.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Location.Height">
+            <summary>
+            This parameter is used to return the **height of the detection frame** (the length starting from the top-left corner and extending down the Y axis). It can be combined with other parameters to uniquely determine the size and position of the detection frame.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.Location.Rotate">
+            <summary>
+            This parameter is used to return the **rotation angle of the detection frame**. Valid values: **0–360** (**degrees**), and the direction is **counterclockwise rotation**. This parameter can be combined with the `X` and `Y` coordinate parameters to uniquely determine the specific position of the detection frame.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.Location.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectDetail.Id">
+            <summary>
+            This parameter is used to return the ID of the recognized object for easier recognition and distinction.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectDetail.Name">
+            <summary>
+            This parameter is used to return the hit object tag.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectDetail.Value">
+            <summary>
+            This parameter is used to return the value or content of the object tag; for example, when the tag is *QR code (QrCode)*, this field will be the URL of the recognized QR code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectDetail.Score">
+            <summary>
+            This parameter is used to return the hit score of the object tag. Valid values: **0–100**; for example, *QrCode 99* indicates that it is highly likely that the recognized content will hit the QR code tag.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectDetail.Location">
+            <summary>
+            This field is used to return the coordinate position (X and Y coordinates of the top-left corner, length, width, and rotation angle) of the object detection frame for quick location of the object information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectDetail.SubLabel">
+            <summary>
+            This parameter is used to return the hit object subtag.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.ObjectDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectResult.Scene">
+            <summary>
+            This field is used to return the recognized object scenario result, such as QR code, logo, and image OCR.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ObjectResult.Suggestion" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.ObjectResult.Label" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectResult.SubLabel">
+            <summary>
+            This field is used to return the detection result for a subtag under the current maliciousness tag, such as *Porn-SexBehavior*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectResult.Score">
+            <summary>
+            This field is used to return the hit score of a subtag under the current maliciousness tag. Value range: **0–100**; for example, *Porn-SexBehavior 99* indicates that the hit score of the *Porn-SexBehavior* tag for the recognized content is 99.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectResult.Names">
+            <summary>
+            This field is used to return the name of the recognized object.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.ObjectResult.Details">
+            <summary>
+            This field is used to return the details of the recognized object, such as number, hit tag name, and position coordinates. For more information on the returned value, see the description of the [ObjectDetail](https://intl.cloud.tencent.com/document/api/1125/53274?from_cn_redirect=1#ObjectDetail) data structure.
+             
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.ObjectResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrResult.Scene">
+            <summary>
+            This field indicates the recognition scenario. Default value: OCR (image OCR).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.OcrResult.Suggestion" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.OcrResult.Label" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrResult.SubLabel">
+            <summary>
+            This field is used to return the detection result for a subtag under the current tag (Label), such as *Porn-SexBehavior*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrResult.Score">
+            <summary>
+            This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrResult.Details">
+            <summary>
+            This field is used to return the details of the OCR recognition result, such as text content, tag, and recognition frame position.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrResult.Text">
+            <summary>
+            This field is used to return the text information recognized by OCR.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.OcrResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.Text" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.Label" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.LibId">
+            <summary>
+            This field is **valid only when `Label` is `Custom` (custom keyword)**. It is used to return the ID of the custom library for easier custom library management and configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.LibName">
+            <summary>
+            This field is **valid only when `Label` is `Custom` (custom keyword)**. It is used to return the name of the custom library for easier custom library management and configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.Keywords">
+            <summary>
+            This parameter is used to return the hit keyword under the current tag (label).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.Score">
+            <summary>
+            This parameter is used to return the model hit score of the current maliciousness tag. Value range: **0–100**, where a higher value indicates that the current scenario agrees more with the scenario represented by the maliciousness tag.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.Location">
+            <summary>
+            This parameter is used to return the position (X and Y coordinates of the top-left corner, length, width, and rotation angle) of the OCR detection frame in the image for quick location of the recognized text.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.Rate">
+            <summary>
+            This parameter is used to return the confidence of the text OCR result. Valid values: **0** (**the lowest confidence**)–**100** (**the highest confidence**), where a higher value indicates that it is more likely that the image contains the recognized text; for example, *Hello 99* indicates that it is highly likely that the text in the OCR recognition frame is "Hello".
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.OcrTextDetail.SubLabel">
+            <summary>
+            This field is used to return the maliciousness subtag that corresponds to the detection result.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ims.V20201229.Models.OcrTextDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.User.UserId">
+            <summary>
+            This field indicates the business user ID. After it is specified, the system can optimize the moderation result according to the violation history to facilitate determination when a suspicious violation risk exists.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ims.V20201229.Models.User.Nickname">
+            <summary>
+            This field indicates the nickname of the business user's account.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.User.AccountType" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.User.Gender" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.User.Age" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.User.Level" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.User.Phone" -->
+        <member name="P:TencentCloud.Ims.V20201229.Models.User.Desc">
+            <summary>
+            This field indicates the profile of the business user. It can contain **up to 5,000 letters and special symbols**.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ims.V20201229.Models.User.HeadUrl" -->
+        <member name="M:TencentCloud.Ims.V20201229.Models.User.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

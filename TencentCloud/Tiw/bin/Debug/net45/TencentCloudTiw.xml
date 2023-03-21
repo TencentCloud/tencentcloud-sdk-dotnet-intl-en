@@ -1,0 +1,1083 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudTiw</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.CreateTranscode(TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest)">
+            <summary>
+            This API is used to create a document transcoding task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.CreateTranscodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.CreateTranscodeSync(TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest)">
+            <summary>
+            This API is used to create a document transcoding task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.CreateTranscodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.DescribeOnlineRecord(TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordRequest)">
+            <summary>
+            This API is used to query the status and result of a real-time recording task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.DescribeOnlineRecordSync(TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordRequest)">
+            <summary>
+            This API is used to query the status and result of a real-time recording task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.DescribeOnlineRecordCallback(TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackRequest)">
+            <summary>
+            This API is used to query the real-time recording callback address.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.DescribeOnlineRecordCallbackSync(TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackRequest)">
+            <summary>
+            This API is used to query the real-time recording callback address.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.DescribeTranscode(TencentCloud.Tiw.V20190919.Models.DescribeTranscodeRequest)">
+            <summary>
+            This API is used to query the progress and result of a document transcoding task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.DescribeTranscodeSync(TencentCloud.Tiw.V20190919.Models.DescribeTranscodeRequest)">
+            <summary>
+            This API is used to query the progress and result of a document transcoding task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.DescribeTranscodeCallback(TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackRequest)">
+            <summary>
+            This API is used to query the document transcoding callback address.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.DescribeTranscodeCallbackSync(TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackRequest)">
+            <summary>
+            This API is used to query the document transcoding callback address.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.PauseOnlineRecord(TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordRequest)">
+            <summary>
+            This API is used to pause real-time recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.PauseOnlineRecordSync(TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordRequest)">
+            <summary>
+            This API is used to pause real-time recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.ResumeOnlineRecord(TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordRequest)">
+            <summary>
+            This API is used to resume real-time recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.ResumeOnlineRecordSync(TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordRequest)">
+            <summary>
+            This API is used to resume real-time recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.SetOnlineRecordCallback(TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackRequest)">
+            <summary>
+            This API is used to set the real-time recording callback address. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.SetOnlineRecordCallbackSync(TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackRequest)">
+            <summary>
+            This API is used to set the real-time recording callback address. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.SetOnlineRecordCallbackKey(TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyRequest)">
+            <summary>
+            This API is used to set the callback authentication key for real-time recording. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.SetOnlineRecordCallbackKeySync(TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyRequest)">
+            <summary>
+            This API is used to set the callback authentication key for real-time recording. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.SetTranscodeCallback(TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackRequest)">
+            <summary>
+            This API is used to set the callback address for document transcoding. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.SetTranscodeCallbackSync(TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackRequest)">
+            <summary>
+            This API is used to set the callback address for document transcoding. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.SetTranscodeCallbackKey(TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyRequest)">
+            <summary>
+            This API is used to set the callback authentication key for document transcoding. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.SetTranscodeCallbackKeySync(TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyRequest)">
+            <summary>
+            This API is used to set the callback authentication key for document transcoding. For more information, see [Event Notification](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.StartOnlineRecord(TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest)">
+            <summary>
+            This API is used to start a real-time recording task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.StartOnlineRecordSync(TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest)">
+            <summary>
+            This API is used to start a real-time recording task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.StopOnlineRecord(TencentCloud.Tiw.V20190919.Models.StopOnlineRecordRequest)">
+            <summary>
+            This API is used to stop real-time recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.TiwClient.StopOnlineRecordSync(TencentCloud.Tiw.V20190919.Models.StopOnlineRecordRequest)">
+            <summary>
+            This API is used to stop real-time recording.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.Canvas.LayoutParams">
+            <summary>
+            Width and height of the mixed stream canvas
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.Canvas.BackgroundColor">
+            <summary>
+            Background color, which is black by default. Its format is RGB. for example, "#FF0000" for the red color.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.Canvas.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.Concat.Enabled">
+            <summary>
+            Whether to enable the video splicing feature
+            If the video splicing feature is enabled, the real-time recording service will splice multiple video clips resulting from the pause into one video.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.Concat.Image">
+            <summary>
+            Download address of the padding image used during video splicing. If it is not specified, a pure black image is used by default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.Concat.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest.Url">
+            <summary>
+            Address of the file for transcoding
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest.IsStaticPPT">
+            <summary>
+            Whether the PowerPoint file is static. The default value is False.
+            If IsStaticPPT is False, documents with the .ppt or .pptx extension will be dynamically transcoded to HTML5 pages, and documents with other extensions will be statically transcoded to images. If IsStaticPPT is True, documents with any extensions will be statically transcoded to images.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest.MinResolution">
+            <summary>
+            Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+            
+             
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest.ThumbnailResolution">
+            <summary>
+            Resolution of the thumbnail generated for the dynamically transcoded PowerPoint file. If no value or null is specified for it or the resolution format is invalid, no thumbnail will be generated. The resolution format is the same as that of MinResolution.
+            
+            For static transcoding, this parameter does not work.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest.CompressFileType">
+            <summary>
+            Compression format of the transcoded file. If no value or null is specified for it or the specified format is invalid, no compression file will be generated. Currently, the following compression formats are supported:
+            
+            `zip`: generates a .zip compression package.
+            `tar.gz: generates a .tar.gz compression package.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.CreateTranscodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CreateTranscodeResponse.TaskId">
+            <summary>
+            Unique ID of the document transcoding task, which is used to query the task progress and transcoding result
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CreateTranscodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.CreateTranscodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CustomLayout.Canvas">
+            <summary>
+            Mixed stream canvas parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.CustomLayout.InputStreamList">
+            <summary>
+            Stream layout. The layout of each stream cannot exceed the canvas area.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.CustomLayout.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackRequest.SdkAppId">
+            <summary>
+            SdkAppId of the application
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackResponse.Callback">
+            <summary>
+            Callback address of the real-time recording event. If no callback address is set, this field is null.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackResponse.CallbackKey">
+            <summary>
+            Authentication key of the real-time recording callback
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordCallbackResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordRequest.TaskId">
+            <summary>
+            ID of the real-time recording task
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.FinishReason">
+            <summary>
+            Recording stop reason
+            - AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+            - USER_CALL: the API for stopping recording is called.
+            - EXCEPTION: an exception occurred during recording.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.TaskId">
+            <summary>
+            ID of the recording task to be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.Status">
+            <summary>
+            Recording task status
+            - PREPARED: preparing
+            - RECORDING: recording
+            - PAUSED: recording is paused.
+            - STOPPED: recording is stopped, and the recorded video is being processed and uploaded.
+            - FINISHED: the recorded video has been processed and uploaded, and the recording result is generated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.RoomId">
+            <summary>
+            Room ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.GroupId">
+            <summary>
+            Group ID of the whiteboard
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.RecordUserId">
+            <summary>
+            ID of the recording user
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.RecordStartTime">
+            <summary>
+            Actual recording start time, which is a UNIX timestamp in seconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.RecordStopTime">
+            <summary>
+            Actual recording stop time, which is a UNIX timestamp in seconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.TotalTime">
+            <summary>
+            Total video playback duration, in milliseconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.ExceptionCnt">
+            <summary>
+            Number of exceptions during recording
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.OmittedDurations">
+            <summary>
+            Duration to be deleted in the spliced video. This parameter is valid only when the video splicing feature is enabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.VideoInfos">
+            <summary>
+            List of recorded videos
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.DescribeOnlineRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackRequest.SdkAppId">
+            <summary>
+            SdkAppId of the application
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackResponse.Callback">
+            <summary>
+            Document transcoding callback address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackResponse.CallbackKey">
+            <summary>
+            Authentication key of the document transcoding callback
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeCallbackResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeRequest.TaskId">
+            <summary>
+            Unique ID of the document transcoding task
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.Pages">
+            <summary>
+            Total number of document pages
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.Progress">
+            <summary>
+            Transcoding progress. Value range: 0 to 100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.Resolution">
+            <summary>
+            Document resolution
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.ResultUrl">
+            <summary>
+            URL of the transcoding result
+            Dynamic transcoding: link of the HTML5 page transcoded from a PowerPoint file
+            Static transcoding: URL prefix of the image transcoded for each document page. For example, if the URL prefix is `http://example.com/g0jb42ps49vtebjshilb/`, the image URL of the first page is
+            `http://example.com/g0jb42ps49vtebjshilb/1.jpg`, and so on.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.Status">
+            <summary>
+            Current task state
+            - QUEUED: queuing for transcoding
+            - PROCESSING: transcoding is in progress
+            - FINISHED: transcoded
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.TaskId">
+            <summary>
+            Unique ID of the transcoding task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.Title">
+            <summary>
+            Document name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.ThumbnailUrl">
+            <summary>
+            URL prefix of the thumbnail. If the URL prefix is `http://example.com/g0jb42ps49vtebjshilb/ `, the thumbnail URL for the first page of the dynamically transcoded PowerPoint file is
+            `http://example.com/g0jb42ps49vtebjshilb/1.jpg`, and so on.
+            
+            If the document transcoding request carries the ThumbnailResolution parameter and the transcoding type is dynamic transcoding, this parameter is not null. In other cases, this parameter is null.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.ThumbnailResolution">
+            <summary>
+            Resolution of the thumbnail generated for dynamic transcoding
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.CompressFileUrl">
+            <summary>
+            URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.DescribeTranscodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.LayoutParams.Width">
+            <summary>
+            Stream image width. Value range: [2,3000]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.LayoutParams.Height">
+            <summary>
+            Stream image height. Value range: [2,3000]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.LayoutParams.X">
+            <summary>
+            Offset of the top point in the upper-left corner of the current image to the X axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.LayoutParams.Y">
+            <summary>
+            Offset of the top point in the upper-left corner of the current image to the Y axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.LayoutParams.ZOrder">
+            <summary>
+            Z-axis position of the image. The default value is 0.
+            The Z axis determines the overlap sequence of images. The image with the largest z-axis value is at the top layer.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.LayoutParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.MixStream.Enabled">
+            <summary>
+            Whether stream mixing is enabled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.MixStream.DisableAudio">
+            <summary>
+            Whether audio stream mixing is disabled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.MixStream.ModelId">
+            <summary>
+            ID of the embedded mixed stream layout template. Valid values: 1 and 2. For more information on the differences of both values, see the sample embedded mixed stream layout template.
+            If the Custom field is not specified, ModelId is required.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.MixStream.TeacherId">
+            <summary>
+            ID of a teacher account
+            This field is valid only when ModelId is specified.
+            If you specify TeacherID for a user, the user's video stream will be displayed in the first image of the embedded template.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.MixStream.Custom">
+            <summary>
+            Custom mixed stream layout parameter
+            If this parameter is available, the ModelId and TeacherId fields will be ignored.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.MixStream.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.OmittedDuration.VideoTime">
+            <summary>
+            Offset of the paused time in the spliced video, in milliseconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.OmittedDuration.PauseTime">
+            <summary>
+            Recording pause timestamp, in milliseconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.OmittedDuration.ResumeTime">
+            <summary>
+            Recording resumption timestamp, in milliseconds
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.OmittedDuration.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordRequest.TaskId">
+            <summary>
+            ID of the real-time recording task
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.PauseOnlineRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.RecordControl.Enabled">
+            <summary>
+            It specifies whether to enable RecordControl. Valid values: true (yes); false (no).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.RecordControl.DisableRecord">
+            <summary>
+            A global parameter generally used in conjunction with `StreamControls` that specifies whether to disable recording. Valid values:
+            
+            true: no stream is recorded.
+            false: all streams are recorded. Default value: false.
+            
+            The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.RecordControl.DisableAudio">
+            <summary>
+            A global parameter generally used in conjunction with `StreamControls` that specifies whether to disable audio recording over all streams. Valid values:
+            
+            true: no audio recording of any streams.
+            false: audio recording of all streams. Default value: false.
+            
+            The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.RecordControl.PullSmallVideo">
+            <summary>
+            A global parameter generally used in conjunction with `StreamControls` that specifies whether to record low-resolution videos only. Valid values:
+            
+            true: only records low-resolution videos for all streams. Please ensure that the up-streaming end pushes the low-resolution videos. Otherwise, the recorded video may be black.
+            false: high-resolution video recording of all streams. Default value: false.
+            
+            The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.RecordControl.StreamControls">
+            <summary>
+            Parameters over specific streams, which take priority over global configurations. If it’s empty, all streams are recorded according to the global configurations. 
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.RecordControl.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordRequest.TaskId">
+            <summary>
+            ID of the resumed real-time recording task
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.ResumeOnlineRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyRequest.SdkAppId">
+            <summary>
+            SdkAppId of the application
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyRequest.CallbackKey">
+            <summary>
+            Authentication key for the real-time recording callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information, please [see here](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackKeyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackRequest.Callback">
+            <summary>
+            Callback address of the real-time recording task result. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`. For the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40258?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.SetOnlineRecordCallbackResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyRequest.SdkAppId">
+            <summary>
+            SdkAppId of the application
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyRequest.CallbackKey">
+            <summary>
+            Authentication key for the document transcoding callback. It is a string that can have up to 64 characters. If an empty string is passed in, the existing callback authentication key will be deleted. For more information about callback authentication, please [see here](https://intl.cloud.tencent.com/document/product/1137/40257?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackKeyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackRequest.Callback">
+            <summary>
+            Callback address for the document transcoding progress. If an empty string is passed in, the existing callback address will be deleted. The callback address only supports the HTTP or HTTPS protocol, so the callback address must start with `http://` or `https://`.
+            For more information about the callback format, please [see here](https://intl.cloud.tencent.com/document/product/1137/40260?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.SetTranscodeCallbackResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.RoomId">
+            <summary>
+            ID of the room for recording. Value range: (1, 4294967295)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.RecordUserId">
+            <summary>
+            User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+            The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.RecordUserSig">
+            <summary>
+            Signature corresponding to RecordUserId
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.GroupId">
+            <summary>
+            (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.Concat">
+            <summary>
+            Real-time recording video splicing parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.Whiteboard">
+            <summary>
+            Real-time recording whiteboard parameter, such as the whiteboard width and height
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.MixStream">
+            <summary>
+            Real-time recording stream mixing parameter
+            Notes:
+            1. The stream mixing feature needs to be enabled separately. If you need the feature, contact TIW customer service.
+            2. To use the stream mixing feature, the Extras parameter is required and must contain "MIX_STREAM".
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.Extras">
+            <summary>
+            List of advanced features used
+            List of possible values:
+            MIX_STREAM - Stream mixing feature
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.AudioFileNeeded">
+            <summary>
+            Whether to return the audio-only recording file of different streams in the result callback. The file format is mp3.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.RecordControl">
+            <summary>
+            A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordResponse.TaskId">
+            <summary>
+            ID of the real-time recording task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.StartOnlineRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordRequest.SdkAppId">
+            <summary>
+            SdkAppId of the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordRequest.TaskId">
+            <summary>
+            ID of the recording task to stop
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.StopOnlineRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StreamControl.StreamId">
+            <summary>
+            Video stream ID
+            Description of the possible video stream ID values:
+            1. `tic_record_user`: the whiteboard video stream
+            2. `tic_substream`: the auxiliary video stream
+            3. Specific user ID: the video stream of the specified user
+            
+            The actual recording uses the prefix match of the video stream ID. The real stream becomes the specified stream once its ID prefix matches with the stream ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StreamControl.DisableRecord">
+            <summary>
+            Whether to disable recording over the stream.
+            
+            true: does not record this stream. This stream will not be included in the final recording file.
+            false: records this stream. This stream will be included in the final recording file.
+            
+            Default value: false
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StreamControl.DisableAudio">
+            <summary>
+            Whether to disable the audio recording of the stream.
+            
+            true: does not record the audio of the stream. In the final recording file, this stream will be soundless.
+            false: the stream has both video and audio recording.
+            
+            Default value: false
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StreamControl.PullSmallVideo">
+            <summary>
+            Whether to only record low-resolution stream videos.
+            
+            true: records only low-resolution videos. In this case, please make sure that the client pushes low-resolution videos upstream. Otherwise, the recorded video may be black. 
+            false: records only high-resolution videos.
+            
+            Default value: false
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.StreamControl.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StreamLayout.LayoutParams">
+            <summary>
+            Stream layout configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StreamLayout.InputStreamId">
+            <summary>
+            Video stream ID
+            Description of the possible video stream ID values:
+            1. tic_record_user: the current picture is used to display the whiteboard video stream.
+            2. tic_substream: the current picture is used to display the auxiliary video stream.
+            3. Specific user ID: the current picture is used to display the video stream of a specific user.
+            4.Left empty: the current picture is vacant for new video stream.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StreamLayout.BackgroundColor">
+            <summary>
+            Background color in RGB format, such as "#FF0000" for red. The default color is black. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.StreamLayout.FillMode">
+            <summary>
+            Video filling mode.
+            
+            0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
+            1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.StreamLayout.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.VideoPlayTime">
+            <summary>
+            Video playback start time, in milliseconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.VideoSize">
+            <summary>
+            Video size, in bytes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.VideoFormat">
+            <summary>
+            Video format
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.VideoDuration">
+            <summary>
+            Video playback duration, in milliseconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.VideoUrl">
+            <summary>
+            Video file URL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.VideoId">
+            <summary>
+            Video file ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.VideoType">
+            <summary>
+            Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tiw.V20190919.Models.VideoInfo.UserId" -->
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.Width">
+            <summary>
+            Width of the video resolution.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.VideoInfo.Height">
+            <summary>
+            Height of the video resolution.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.VideoInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.Whiteboard.Width">
+            <summary>
+            Whiteboard video width in the real-time recording result. The default value is 1280.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.Whiteboard.Height">
+            <summary>
+            Whiteboard video height in the real-time recording result. The default value is 960.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tiw.V20190919.Models.Whiteboard.InitParam">
+            <summary>
+            Whiteboard initialization parameter, which is passed through to the whiteboard SDK
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tiw.V20190919.Models.Whiteboard.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

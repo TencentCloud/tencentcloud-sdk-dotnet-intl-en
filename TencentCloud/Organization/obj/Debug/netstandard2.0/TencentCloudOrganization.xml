@@ -1,0 +1,2303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudOrganization</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.AddOrganizationNode(TencentCloud.Organization.V20210331.Models.AddOrganizationNodeRequest)">
+            <summary>
+            This API is used to add an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.AddOrganizationNodeSync(TencentCloud.Organization.V20210331.Models.AddOrganizationNodeRequest)">
+            <summary>
+            This API is used to add an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.BindOrganizationMemberAuthAccount(TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountRequest)">
+            <summary>
+            This API is used to bind an organization member to a sub-account of the organization admin.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.BindOrganizationMemberAuthAccountSync(TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountRequest)">
+            <summary>
+            This API is used to bind an organization member to a sub-account of the organization admin.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.CancelOrganizationMemberAuthAccount(TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountRequest)">
+            <summary>
+            This API is used to unbind an organization member from a sub-account of the organization admin.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.CancelOrganizationMemberAuthAccountSync(TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountRequest)">
+            <summary>
+            This API is used to unbind an organization member from a sub-account of the organization admin.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.CreateOrganizationMember(TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest)">
+            <summary>
+            This API is used to create an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.CreateOrganizationMemberSync(TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest)">
+            <summary>
+            This API is used to create an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.CreateOrganizationMemberPolicy(TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest)">
+            <summary>
+            This API is used to create an organization member access policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.CreateOrganizationMemberPolicySync(TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest)">
+            <summary>
+            This API is used to create an organization member access policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DeleteOrganizationMembers(TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersRequest)">
+            <summary>
+            This API is used to batch delete organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DeleteOrganizationMembersSync(TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersRequest)">
+            <summary>
+            This API is used to batch delete organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DeleteOrganizationNodes(TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesRequest)">
+            <summary>
+            This API is used to batch delete organization nodes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DeleteOrganizationNodesSync(TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesRequest)">
+            <summary>
+            This API is used to batch delete organization nodes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganization(TencentCloud.Organization.V20210331.Models.DescribeOrganizationRequest)">
+            <summary>
+            This API is used to get the organization information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationSync(TencentCloud.Organization.V20210331.Models.DescribeOrganizationRequest)">
+            <summary>
+            This API is used to get the organization information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationMemberAuthAccounts(TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest)">
+            <summary>
+            This API is used to get the list of sub-accounts bound to an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationMemberAuthAccountsSync(TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest)">
+            <summary>
+            This API is used to get the list of sub-accounts bound to an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationMemberAuthIdentities(TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesRequest)">
+            <summary>
+            This API is used to get the list of manageable identities of an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationMemberAuthIdentitiesSync(TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesRequest)">
+            <summary>
+            This API is used to get the list of manageable identities of an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationMemberPolicies(TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest)">
+            <summary>
+            This API is used to get the list of authorization policies of an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationMemberPoliciesSync(TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest)">
+            <summary>
+            This API is used to get the list of authorization policies of an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationMembers(TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest)">
+            <summary>
+            This API is used to get the list of organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationMembersSync(TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest)">
+            <summary>
+            This API is used to get the list of organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationNodes(TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesRequest)">
+            <summary>
+            This API is used to get the list of organization nodes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.DescribeOrganizationNodesSync(TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesRequest)">
+            <summary>
+            This API is used to get the list of organization nodes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.ListOrganizationIdentity(TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest)">
+            <summary>
+            This API is used to get the list of access identities of an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.ListOrganizationIdentitySync(TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest)">
+            <summary>
+            This API is used to get the list of access identities of an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.MoveOrganizationNodeMembers(TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersRequest)">
+            <summary>
+            This API is used to move a member to the specified organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.MoveOrganizationNodeMembersSync(TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersRequest)">
+            <summary>
+            This API is used to move a member to the specified organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.UpdateOrganizationNode(TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeRequest)">
+            <summary>
+            This API is used to update an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.OrganizationClient.UpdateOrganizationNodeSync(TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeRequest)">
+            <summary>
+            This API is used to update an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeRequest.ParentNodeId">
+            <summary>
+            Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeRequest.Name" -->
+        <member name="P:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeRequest.Remark">
+            <summary>
+            Remarks.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeResponse.NodeId">
+            <summary>
+            Node ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.AddOrganizationNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountRequest.MemberUin">
+            <summary>
+            Member UIN.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountRequest.PolicyId">
+            <summary>
+            Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountRequest.OrgSubAccountUins">
+            <summary>
+            List of sub-account UINs of the organization admin, which can contain up to five UINs.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.BindOrganizationMemberAuthAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountRequest.MemberUin">
+            <summary>
+            Member UIN.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountRequest.PolicyId">
+            <summary>
+            Policy ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountRequest.OrgSubAccountUin">
+            <summary>
+            Organization sub-account UIN.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.CancelOrganizationMemberAuthAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest.MemberUin">
+            <summary>
+            Member UIN.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest.PolicyName">
+            <summary>
+            Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest.IdentityId">
+            <summary>
+            Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest.Description">
+            <summary>
+            Description.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyResponse.PolicyId">
+            <summary>
+            Policy ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.Name" -->
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.PolicyType">
+            <summary>
+            Relationship policy. Valid value: `Financial`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.PermissionIds">
+            <summary>
+            List of member financial permission IDs. `7` indicates paying, which is the default value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.NodeId">
+            <summary>
+            ID of the node of the member's department, which can be obtained through the `DescribeOrganizationNodes` API.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.AccountName" -->
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.Remark">
+            <summary>
+            Remarks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.RecordId">
+            <summary>
+            Member creation record ID, which is required during retry upon creation exception.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.PayUin">
+            <summary>
+            Payer UIN, which is required during paying for a member.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.IdentityRoleID">
+            <summary>
+            List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.AuthRelationId">
+            <summary>
+            Verified entity relationship ID, which is required during creating members for different entities.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberResponse.Uin">
+            <summary>
+            Member UIN.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.CreateOrganizationMemberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersRequest.MemberUin">
+            <summary>
+            List of UINs of the members to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DeleteOrganizationMembersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesRequest.NodeId">
+            <summary>
+            List of node IDs.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DeleteOrganizationNodesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest.Offset">
+            <summary>
+            Offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest.Limit">
+            <summary>
+            Maximum number of returned results.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest.MemberUin">
+            <summary>
+            Member UIN.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest.PolicyId">
+            <summary>
+            Policy ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsResponse.Items">
+            <summary>
+            List
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsResponse.Total">
+            <summary>
+            Total number
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthAccountsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesRequest.Offset">
+            <summary>
+            Offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesRequest.Limit">
+            <summary>
+            Maximum number of returned results. Maximum value: `50`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesRequest.MemberUin">
+            <summary>
+            Organization member UIN.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesResponse.Items">
+            <summary>
+            List.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesResponse.Total">
+            <summary>
+            Total number.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberAuthIdentitiesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest.Offset">
+            <summary>
+            Offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest.Limit">
+            <summary>
+            Maximum number of returned results. Maximum value: `50`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest.MemberUin">
+            <summary>
+            Member UIN.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest.SearchKey">
+            <summary>
+            Search keyword, which can be the policy name or description.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesResponse.Items">
+            <summary>
+            List.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesResponse.Total">
+            <summary>
+            Total number.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMemberPoliciesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest.Offset">
+            <summary>
+            Offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest.Limit">
+            <summary>
+            Maximum number of returned results. Maximum value: `50`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest.Lang">
+            <summary>
+            Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest.SearchKey">
+            <summary>
+            Search by member name or ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest.AuthName">
+            <summary>
+            Entity name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest.Product">
+            <summary>
+            Abbreviation of the trusted service, which is required during querying the trusted service admin.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersResponse.Items">
+            <summary>
+            Member list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersResponse.Total">
+            <summary>
+            Total number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationMembersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesRequest.Limit">
+            <summary>
+            Maximum number of returned results. Maximum value: `50`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesRequest.Offset">
+            <summary>
+            Offset.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesResponse.Total">
+            <summary>
+            Total number.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesResponse.Items">
+            <summary>
+            List details.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationNodesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationRequest.Lang">
+            <summary>
+            Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationRequest.Product">
+            <summary>
+            Abbreviation of the trusted service, which is required during querying the trusted service admin.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.OrgId">
+            <summary>
+            Organization ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.HostUin">
+            <summary>
+            Creator UIN.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.NickName">
+            <summary>
+            Creator name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.OrgType">
+            <summary>
+            Organization type.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.IsManager">
+            <summary>
+            Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.OrgPolicyType">
+            <summary>
+            Policy type. Valid values: `Financial` (finance management).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.OrgPolicyName">
+            <summary>
+            Policy name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.OrgPermission">
+            <summary>
+            List of member financial permissions.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.RootNodeId">
+            <summary>
+            Organization root node ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.CreateTime">
+            <summary>
+            Organization creation time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.JoinTime">
+            <summary>
+            Member joining time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.IsAllowQuit">
+            <summary>
+            Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.PayUin">
+            <summary>
+            Payer UIN.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.PayName">
+            <summary>
+            Payer name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.IsAssignManager">
+            <summary>
+            Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.IsAuthManager">
+            <summary>
+            Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.DescribeOrganizationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.IdentityPolicy.PolicyId">
+            <summary>
+            Policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.IdentityPolicy.PolicyName">
+            <summary>
+            Policy name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.IdentityPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest.Offset">
+            <summary>
+            Offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest.Limit">
+            <summary>
+            Maximum number of returned results. Maximum value: `50`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest.SearchKey">
+            <summary>
+            Search by name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest.IdentityId">
+            <summary>
+            Search by identity ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityResponse.Total">
+            <summary>
+            Total number.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityResponse.Items">
+            <summary>
+            Item details.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.ListOrganizationIdentityResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.MemberIdentity.IdentityId">
+            <summary>
+            Identity ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.MemberIdentity.IdentityAliasName">
+            <summary>
+            Identity name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.MemberIdentity.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersRequest.NodeId">
+            <summary>
+            Organization node ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersRequest.MemberUin">
+            <summary>
+            Member UIN list.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.MoveOrganizationNodeMembersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgIdentity.IdentityId">
+            <summary>
+            Identity ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgIdentity.IdentityAliasName">
+            <summary>
+            Identity name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgIdentity.Description">
+            <summary>
+            Description.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgIdentity.IdentityPolicy">
+            <summary>
+            Identity policy.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgIdentity.IdentityType">
+            <summary>
+            Identity type. Valid values: `1` (preset); `2` (custom).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgIdentity.UpdateTime">
+            <summary>
+            Update time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.OrgIdentity.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.MemberUin">
+            <summary>
+            Member UIN
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.Name">
+            <summary>
+            Member name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.MemberType">
+            <summary>
+            Member type. Valid values: `Invite` (invited); `Create` (created).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.OrgPolicyType">
+            <summary>
+            Relationship policy type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.OrgPolicyName">
+            <summary>
+            Relationship policy name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.OrgPermission">
+            <summary>
+            Relationship policy permission
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.NodeId">
+            <summary>
+            Node ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.NodeName">
+            <summary>
+            Node name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.Remark">
+            <summary>
+            Remarks
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.CreateTime">
+            <summary>
+            Creation time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.UpdateTime">
+            <summary>
+            Update time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.IsAllowQuit">
+            <summary>
+            Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.PayUin">
+            <summary>
+            Payer UIN
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.PayName">
+            <summary>
+            Payer name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.OrgIdentity">
+            <summary>
+            Management identity
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.BindStatus">
+            <summary>
+            Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMember.PermissionStatus">
+            <summary>
+            Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.OrgMember.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.OrgSubAccountUin">
+            <summary>
+            Organization sub-account UIN.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.PolicyId">
+            <summary>
+            Policy ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.PolicyName">
+            <summary>
+            Policy name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.IdentityId">
+            <summary>
+            Identity ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.IdentityRoleName">
+            <summary>
+            Identity role name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.IdentityRoleAliasName">
+            <summary>
+            Identity role alias.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.CreateTime">
+            <summary>
+            Creation time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.UpdateTime">
+            <summary>
+            Update time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.OrgSubAccountName">
+            <summary>
+            Sub-account name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.OrgMemberAuthAccount.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthIdentity.IdentityId">
+            <summary>
+            Identity ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthIdentity.IdentityRoleName">
+            <summary>
+            Identity role name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthIdentity.IdentityRoleAliasName">
+            <summary>
+            Identity role alias.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthIdentity.Description">
+            <summary>
+            Description
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthIdentity.CreateTime">
+            <summary>
+            Creation time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberAuthIdentity.UpdateTime">
+            <summary>
+            Update time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.OrgMemberAuthIdentity.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.PolicyId">
+            <summary>
+            Policy ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.PolicyName">
+            <summary>
+            Policy name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.IdentityId">
+            <summary>
+            Identity ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.IdentityRoleName">
+            <summary>
+            Identity role name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.IdentityRoleAliasName">
+            <summary>
+            Identity role alias.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.Description">
+            <summary>
+            Description.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.CreateTime">
+            <summary>
+            Creation time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.UpdateTime">
+            <summary>
+            Update time.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.OrgMemberPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgNode.NodeId">
+            <summary>
+            Organization node ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgNode.Name">
+            <summary>
+            Name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgNode.ParentNodeId">
+            <summary>
+            Parent node ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgNode.Remark">
+            <summary>
+            Remarks
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgNode.CreateTime">
+            <summary>
+            Creation time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgNode.UpdateTime">
+            <summary>
+            Update time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.OrgNode.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgPermission.Id">
+            <summary>
+            Permission ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.OrgPermission.Name">
+            <summary>
+            Permission name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.OrgPermission.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeRequest.NodeId">
+            <summary>
+            Node ID.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeRequest.Name" -->
+        <member name="P:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeRequest.Remark">
+            <summary>
+            Remarks.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20210331.Models.UpdateOrganizationNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.AcceptOrganizationInvitation(TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationRequest)">
+            <summary>
+            This API is used to accept an invitation to an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.AcceptOrganizationInvitationSync(TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationRequest)">
+            <summary>
+            This API is used to accept an invitation to an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.AddOrganizationNode(TencentCloud.Organization.V20181225.Models.AddOrganizationNodeRequest)">
+            <summary>
+            This API is used to add an organizational unit.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.AddOrganizationNodeSync(TencentCloud.Organization.V20181225.Models.AddOrganizationNodeRequest)">
+            <summary>
+            This API is used to add an organizational unit.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.CancelOrganizationInvitation(TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationRequest)">
+            <summary>
+            This API is used to cancel an invitation to an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.CancelOrganizationInvitationSync(TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationRequest)">
+            <summary>
+            This API is used to cancel an invitation to an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.CreateOrganization(TencentCloud.Organization.V20181225.Models.CreateOrganizationRequest)">
+            <summary>
+            This API is used to create an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.CreateOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.CreateOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.CreateOrganizationSync(TencentCloud.Organization.V20181225.Models.CreateOrganizationRequest)">
+            <summary>
+            This API is used to create an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.CreateOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.CreateOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DeleteOrganization(TencentCloud.Organization.V20181225.Models.DeleteOrganizationRequest)">
+            <summary>
+            This API is used to delete an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DeleteOrganizationSync(TencentCloud.Organization.V20181225.Models.DeleteOrganizationRequest)">
+            <summary>
+            This API is used to delete an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DeleteOrganizationMemberFromNode(TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeRequest)">
+            <summary>
+            This API is used to delete an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DeleteOrganizationMemberFromNodeSync(TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeRequest)">
+            <summary>
+            This API is used to delete an organization member.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DeleteOrganizationMembers(TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersRequest)">
+            <summary>
+            This API is used to delete multiple organization members in a single request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DeleteOrganizationMembersSync(TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersRequest)">
+            <summary>
+            This API is used to delete multiple organization members in a single request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DeleteOrganizationNodes(TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesRequest)">
+            <summary>
+            This API is used to delete multiple organizational units in a single request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DeleteOrganizationNodesSync(TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesRequest)">
+            <summary>
+            This API is used to delete multiple organizational units in a single request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DenyOrganizationInvitation(TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationRequest)">
+            <summary>
+            This API is used to decline an invitation to an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.DenyOrganizationInvitationSync(TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationRequest)">
+            <summary>
+            This API is used to decline an invitation to an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.GetOrganization(TencentCloud.Organization.V20181225.Models.GetOrganizationRequest)">
+            <summary>
+            This API is used to obtain information on organizations.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.GetOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.GetOrganizationSync(TencentCloud.Organization.V20181225.Models.GetOrganizationRequest)">
+            <summary>
+            This API is used to obtain information on organizations.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.GetOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.GetOrganizationMember(TencentCloud.Organization.V20181225.Models.GetOrganizationMemberRequest)">
+            <summary>
+            This API is used to obtain information on organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.GetOrganizationMemberSync(TencentCloud.Organization.V20181225.Models.GetOrganizationMemberRequest)">
+            <summary>
+            This API is used to obtain information on organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.ListOrganizationInvitations(TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsRequest)">
+            <summary>
+            This API is used to obtain an invitation list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.ListOrganizationInvitationsSync(TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsRequest)">
+            <summary>
+            This API is used to obtain an invitation list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.ListOrganizationMembers(TencentCloud.Organization.V20181225.Models.ListOrganizationMembersRequest)">
+            <summary>
+            This API is used to obtain a list of organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.ListOrganizationMembersSync(TencentCloud.Organization.V20181225.Models.ListOrganizationMembersRequest)">
+            <summary>
+            This API is used to obtain a list of organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.ListOrganizationNodeMembers(TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersRequest)">
+            <summary>
+            This API is used to obtain a list of organizational unit members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.ListOrganizationNodeMembersSync(TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersRequest)">
+            <summary>
+            This API is used to obtain a list of organizational unit members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.ListOrganizationNodes(TencentCloud.Organization.V20181225.Models.ListOrganizationNodesRequest)">
+            <summary>
+            This API is used to obtain a list of organizational units.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.ListOrganizationNodesSync(TencentCloud.Organization.V20181225.Models.ListOrganizationNodesRequest)">
+            <summary>
+            This API is used to obtain a list of organizational units.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationNodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.ListOrganizationNodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.MoveOrganizationMembersToNode(TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeRequest)">
+            <summary>
+            This API is used to move members to a specified organizational unit.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.MoveOrganizationMembersToNodeSync(TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeRequest)">
+            <summary>
+            This API is used to move members to a specified organizational unit.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.QuitOrganization(TencentCloud.Organization.V20181225.Models.QuitOrganizationRequest)">
+            <summary>
+            This API is used to quit an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.QuitOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.QuitOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.QuitOrganizationSync(TencentCloud.Organization.V20181225.Models.QuitOrganizationRequest)">
+            <summary>
+            This API is used to quit an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.QuitOrganizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.QuitOrganizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.SendOrganizationInvitation(TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationRequest)">
+            <summary>
+            This API is used to send an invitation to join an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.SendOrganizationInvitationSync(TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationRequest)">
+            <summary>
+            This API is used to send an invitation to join an organization.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.UpdateOrganizationMember(TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberRequest)">
+            <summary>
+            This API is used to update information on organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.UpdateOrganizationMemberSync(TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberRequest)">
+            <summary>
+            This API is used to update information on organization members.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.UpdateOrganizationNode(TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeRequest)">
+            <summary>
+            This API is used to update organizational units.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.OrganizationClient.UpdateOrganizationNodeSync(TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeRequest)">
+            <summary>
+            This API is used to update organizational units.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationRequest.Id">
+            <summary>
+            Invitation ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.AcceptOrganizationInvitationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeRequest.ParentNodeId">
+            <summary>
+            Parent organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeRequest.Name">
+            <summary>
+            Organizational unit name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeResponse.NodeId">
+            <summary>
+            Organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.AddOrganizationNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationRequest.Id">
+            <summary>
+            Invitation ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.CancelOrganizationInvitationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.CreateOrganizationRequest.OrgType">
+            <summary>
+            Organization type; currently its value is fixed as `1`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.CreateOrganizationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.CreateOrganizationResponse.OrgId">
+            <summary>
+            Organization ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.CreateOrganizationResponse.Nickname">
+            <summary>
+            Creator's name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.CreateOrganizationResponse.Mail">
+            <summary>
+            Creator's email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.CreateOrganizationResponse.OrgType">
+            <summary>
+            Organization type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.CreateOrganizationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.CreateOrganizationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeRequest.MemberUin">
+            <summary>
+            UIN of the member to be deleted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeRequest.NodeId">
+            <summary>
+            Organizational unit ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMemberFromNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersRequest.Uins">
+            <summary>
+            List of UINs of members to be deleted
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DeleteOrganizationMembersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesRequest.NodeIds">
+            <summary>
+            Organizational unit ID list
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DeleteOrganizationNodesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DeleteOrganizationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DeleteOrganizationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DeleteOrganizationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationRequest.Id">
+            <summary>
+            Invitation ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.DenyOrganizationInvitationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberRequest.MemberUin">
+            <summary>
+            Organization member UIN
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.Uin">
+            <summary>
+            Organization member UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.Name">
+            <summary>
+            Organization member name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.Remark">
+            <summary>
+            Notes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.JoinTime">
+            <summary>
+            Joining time 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.NodeId">
+            <summary>
+            Organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.NodeName">
+            <summary>
+            Organizational unit name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.ParentNodeId">
+            <summary>
+            Parent organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.GetOrganizationMemberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.GetOrganizationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse.OrgId">
+            <summary>
+            Organization ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse.HostUin">
+            <summary>
+            Creator UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse.Nickname">
+            <summary>
+            Creator's name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse.Mail">
+            <summary>
+            Creator's email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse.OrgType">
+            <summary>
+            Organization type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse.IsEmpty">
+            <summary>
+            Whether the organization is empty or not 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.GetOrganizationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsRequest.Invited">
+            <summary>
+            Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsRequest.Offset">
+            <summary>
+            Offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsRequest.Limit">
+            <summary>
+            Limit
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsResponse.Invitations">
+            <summary>
+            List of invitations
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.ListOrganizationInvitationsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersRequest.Offset">
+            <summary>
+            Offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersRequest.Limit">
+            <summary>
+            Limit
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersResponse.Members">
+            <summary>
+            Member list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.ListOrganizationMembersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersRequest.NodeId">
+            <summary>
+            Organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersRequest.Offset">
+            <summary>
+            Offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersRequest.Limit">
+            <summary>
+            Limit
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersResponse.Members">
+            <summary>
+            Member list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.ListOrganizationNodeMembersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.ListOrganizationNodesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationNodesResponse.Nodes">
+            <summary>
+            Organizational unit list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.ListOrganizationNodesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.ListOrganizationNodesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeRequest.NodeId">
+            <summary>
+            Organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeRequest.Uins">
+            <summary>
+            Member UIN list
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.MoveOrganizationMembersToNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.Id">
+            <summary>
+            Invitation ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.Uin">
+            <summary>
+            UIN of the invitee
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.HostUin">
+            <summary>
+            Creator UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.HostName">
+            <summary>
+            Creator's name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.HostMail">
+            <summary>
+            Creator's email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.Status">
+            <summary>
+            Invitation status. `-1`: expired; `0`: normal; `1`: accepted; `2`: invalid; `3`: cancelled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.Remark">
+            <summary>
+            Notes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.OrgType">
+            <summary>
+            Organization type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.InviteTime">
+            <summary>
+            Time of invitation
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgInvitation.ExpireTime">
+            <summary>
+            Expiration time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.OrgInvitation.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgMember.Uin">
+            <summary>
+            UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgMember.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgMember.Remark">
+            <summary>
+            Notes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgMember.JoinTime">
+            <summary>
+            Joining time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.OrgMember.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgNode.NodeId">
+            <summary>
+            Organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgNode.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgNode.ParentNodeId">
+            <summary>
+            Parent organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.OrgNode.MemberCount">
+            <summary>
+            Number of members
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.OrgNode.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.QuitOrganizationRequest.OrgId">
+            <summary>
+            Organization ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.QuitOrganizationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.QuitOrganizationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.QuitOrganizationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationRequest.InviteUin">
+            <summary>
+            UIN of the invitee
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationRequest.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationRequest.Remark">
+            <summary>
+            Notes
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.SendOrganizationInvitationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberRequest.MemberUin">
+            <summary>
+            Member UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberRequest.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberRequest.Remark">
+            <summary>
+            Notes
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.UpdateOrganizationMemberResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeRequest.NodeId">
+            <summary>
+            Organizational unit ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeRequest.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeRequest.ParentNodeId">
+            <summary>
+            Parent organizational unit ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Organization.V20181225.Models.UpdateOrganizationNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

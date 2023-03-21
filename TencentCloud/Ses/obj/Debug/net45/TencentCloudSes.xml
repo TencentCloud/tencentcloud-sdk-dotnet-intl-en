@@ -1,0 +1,1725 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudSes</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.BatchSendEmail(TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest)">
+            <summary>
+            This API is used to send a TEXT or HTML email to multiple recipients at a time for marketing or notification purposes. By default, you can send emails using a template only. You need to create a recipient group with email addresses first and then send emails by group ID. SES supports scheduled and recurring email sending tasks. You need to pass in `TimedParam` for a scheduled task and `CycleParam` for a recurring one.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.BatchSendEmailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.BatchSendEmailSync(TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest)">
+            <summary>
+            This API is used to send a TEXT or HTML email to multiple recipients at a time for marketing or notification purposes. By default, you can send emails using a template only. You need to create a recipient group with email addresses first and then send emails by group ID. SES supports scheduled and recurring email sending tasks. You need to pass in `TimedParam` for a scheduled task and `CycleParam` for a recurring one.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.BatchSendEmailResponse"/></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Ses.V20201002.SesClient.CreateEmailAddress(TencentCloud.Ses.V20201002.Models.CreateEmailAddressRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Ses.V20201002.SesClient.CreateEmailAddressSync(TencentCloud.Ses.V20201002.Models.CreateEmailAddressRequest)" -->
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.CreateEmailIdentity(TencentCloud.Ses.V20201002.Models.CreateEmailIdentityRequest)">
+            <summary>
+            This API is used to create a sender domain. Before you can send an email using Tencent Cloud SES, you must create a sender domain as your identity. It can be the domain of your website or mobile app. You must verify the domain to prove that you own it and authorize Tencent Cloud SES to use it to send emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.CreateEmailIdentitySync(TencentCloud.Ses.V20201002.Models.CreateEmailIdentityRequest)">
+            <summary>
+            This API is used to create a sender domain. Before you can send an email using Tencent Cloud SES, you must create a sender domain as your identity. It can be the domain of your website or mobile app. You must verify the domain to prove that you own it and authorize Tencent Cloud SES to use it to send emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.CreateEmailTemplate(TencentCloud.Ses.V20201002.Models.CreateEmailTemplateRequest)">
+            <summary>
+            This API is used to create a TEXT or HTML email template. To create an HTML template, ensure that it does not include external CSS files. You can use {{variable name}} to specify a variable in the template.
+            Note: Only an approved template can be used to send emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.CreateEmailTemplateSync(TencentCloud.Ses.V20201002.Models.CreateEmailTemplateRequest)">
+            <summary>
+            This API is used to create a TEXT or HTML email template. To create an HTML template, ensure that it does not include external CSS files. You can use {{variable name}} to specify a variable in the template.
+            Note: Only an approved template can be used to send emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.CreateReceiver(TencentCloud.Ses.V20201002.Models.CreateReceiverRequest)">
+            <summary>
+            This API is used to create a recipient group, which is the list of target email addresses for batch sending emails. After creating a group, you need to upload recipient email addresses. Then, you can create a sending task and select the group to batch send emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.CreateReceiverRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.CreateReceiverResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.CreateReceiverSync(TencentCloud.Ses.V20201002.Models.CreateReceiverRequest)">
+            <summary>
+            This API is used to create a recipient group, which is the list of target email addresses for batch sending emails. After creating a group, you need to upload recipient email addresses. Then, you can create a sending task and select the group to batch send emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.CreateReceiverRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.CreateReceiverResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.CreateReceiverDetail(TencentCloud.Ses.V20201002.Models.CreateReceiverDetailRequest)">
+            <summary>
+            This API is used to add recipient email addresses (up to 20,000 at a time) to a recipient group. This will be processed asynchronously. If the data volume is large, it may take some time to upload. You can check the recipient group for the upload status and upload quantity. This API has basically the same feature as that of `CreateReceiverDetailWithData` except that it doesn't support uploading template parameters for email sending. You need to first call the `CreateReceiver` API to create a recipient group, then call this API to pass in recipient addresses, and finally call the `BatchSendEmail` API to batch send emails. This API supports adding more recipient addresses during upload but not address deduplication, so you need to make sure that the recipient addresses are not duplicate by yourself. This API can request up to 20,000 recipient addresses at a time, but the recipient group can contain up to 50,000 addresses currently.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.CreateReceiverDetailSync(TencentCloud.Ses.V20201002.Models.CreateReceiverDetailRequest)">
+            <summary>
+            This API is used to add recipient email addresses (up to 20,000 at a time) to a recipient group. This will be processed asynchronously. If the data volume is large, it may take some time to upload. You can check the recipient group for the upload status and upload quantity. This API has basically the same feature as that of `CreateReceiverDetailWithData` except that it doesn't support uploading template parameters for email sending. You need to first call the `CreateReceiver` API to create a recipient group, then call this API to pass in recipient addresses, and finally call the `BatchSendEmail` API to batch send emails. This API supports adding more recipient addresses during upload but not address deduplication, so you need to make sure that the recipient addresses are not duplicate by yourself. This API can request up to 20,000 recipient addresses at a time, but the recipient group can contain up to 50,000 addresses currently.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteBlackList(TencentCloud.Ses.V20201002.Models.DeleteBlackListRequest)">
+            <summary>
+            This API is used to unblocklist email addresses. If you confirm that a blocklisted recipient address is valid and active, you can remove it from Tencent Cloud’s address blocklist database.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteBlackListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteBlackListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteBlackListSync(TencentCloud.Ses.V20201002.Models.DeleteBlackListRequest)">
+            <summary>
+            This API is used to unblocklist email addresses. If you confirm that a blocklisted recipient address is valid and active, you can remove it from Tencent Cloud’s address blocklist database.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteBlackListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteBlackListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteEmailAddress(TencentCloud.Ses.V20201002.Models.DeleteEmailAddressRequest)">
+            <summary>
+            This API is used to delete a sender address.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteEmailAddressSync(TencentCloud.Ses.V20201002.Models.DeleteEmailAddressRequest)">
+            <summary>
+            This API is used to delete a sender address.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteEmailIdentity(TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityRequest)">
+            <summary>
+            This API is used to delete a sender domain. After deleted, the sender domain can no longer be used to send emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteEmailIdentitySync(TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityRequest)">
+            <summary>
+            This API is used to delete a sender domain. After deleted, the sender domain can no longer be used to send emails.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteEmailTemplate(TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateRequest)">
+            <summary>
+            This API is used to delete an email template.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteEmailTemplateSync(TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateRequest)">
+            <summary>
+            This API is used to delete an email template.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteReceiver(TencentCloud.Ses.V20201002.Models.DeleteReceiverRequest)">
+            <summary>
+            This API is used to delete a recipient group and all recipient email addresses in the group based on the recipient group ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteReceiverRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteReceiverResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.DeleteReceiverSync(TencentCloud.Ses.V20201002.Models.DeleteReceiverRequest)">
+            <summary>
+            This API is used to delete a recipient group and all recipient email addresses in the group based on the recipient group ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteReceiverRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.DeleteReceiverResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.GetEmailIdentity(TencentCloud.Ses.V20201002.Models.GetEmailIdentityRequest)">
+            <summary>
+            This API is used to get the configuration details of a sender domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.GetEmailIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.GetEmailIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.GetEmailIdentitySync(TencentCloud.Ses.V20201002.Models.GetEmailIdentityRequest)">
+            <summary>
+            This API is used to get the configuration details of a sender domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.GetEmailIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.GetEmailIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.GetEmailTemplate(TencentCloud.Ses.V20201002.Models.GetEmailTemplateRequest)">
+            <summary>
+            This API is used to get the details of a template.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.GetEmailTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.GetEmailTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.GetEmailTemplateSync(TencentCloud.Ses.V20201002.Models.GetEmailTemplateRequest)">
+            <summary>
+            This API is used to get the details of a template.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.GetEmailTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.GetEmailTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.GetSendEmailStatus(TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest)">
+            <summary>
+            This API is used to get email sending status. Only data within 30 days can be queried.
+            Default API request rate limit: 1 request/sec.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.GetSendEmailStatusSync(TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest)">
+            <summary>
+            This API is used to get email sending status. Only data within 30 days can be queried.
+            Default API request rate limit: 1 request/sec.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.GetStatisticsReport(TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest)">
+            <summary>
+            This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.GetStatisticsReportResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.GetStatisticsReportSync(TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest)">
+            <summary>
+            This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.GetStatisticsReportResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListBlackEmailAddress(TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest)">
+            <summary>
+            The API is used to get blocklisted addresses. In the case of a hard bounce, Tencent Cloud will blocklist the recipient address and do not allow any user to send emails to this address. If you confirm that this is a misjudgment, you can remove it from the blocklist.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListBlackEmailAddressSync(TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest)">
+            <summary>
+            The API is used to get blocklisted addresses. In the case of a hard bounce, Tencent Cloud will blocklist the recipient address and do not allow any user to send emails to this address. If you confirm that this is a misjudgment, you can remove it from the blocklist.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListEmailAddress(TencentCloud.Ses.V20201002.Models.ListEmailAddressRequest)">
+            <summary>
+            This API is used to get the list of sender addresses.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListEmailAddressSync(TencentCloud.Ses.V20201002.Models.ListEmailAddressRequest)">
+            <summary>
+            This API is used to get the list of sender addresses.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListEmailIdentities(TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesRequest)">
+            <summary>
+            This API is used to get the list of sender domains, including verified and unverified domains.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListEmailIdentitiesSync(TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesRequest)">
+            <summary>
+            This API is used to get the list of sender domains, including verified and unverified domains.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListEmailTemplates(TencentCloud.Ses.V20201002.Models.ListEmailTemplatesRequest)">
+            <summary>
+            This API is used to get the list of email templates.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListEmailTemplatesSync(TencentCloud.Ses.V20201002.Models.ListEmailTemplatesRequest)">
+            <summary>
+            This API is used to get the list of email templates.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListReceivers(TencentCloud.Ses.V20201002.Models.ListReceiversRequest)">
+            <summary>
+            This API is used to query recipient groups. It supports pagination, fuzzy query, and query by status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListReceiversRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListReceiversResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListReceiversSync(TencentCloud.Ses.V20201002.Models.ListReceiversRequest)">
+            <summary>
+            This API is used to query recipient groups. It supports pagination, fuzzy query, and query by status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListReceiversRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListReceiversResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListSendTasks(TencentCloud.Ses.V20201002.Models.ListSendTasksRequest)">
+            <summary>
+            This API is used to query batch email sending tasks (including immediate, scheduled, and recurring tasks) by page. You can query task data including the number of emails requested to be sent, the number of sent emails, the number of cached emails, and task status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListSendTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListSendTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.ListSendTasksSync(TencentCloud.Ses.V20201002.Models.ListSendTasksRequest)">
+            <summary>
+            This API is used to query batch email sending tasks (including immediate, scheduled, and recurring tasks) by page. You can query task data including the number of emails requested to be sent, the number of sent emails, the number of cached emails, and task status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.ListSendTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.ListSendTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.SendEmail(TencentCloud.Ses.V20201002.Models.SendEmailRequest)">
+            <summary>
+            This API is used to send an HTML or TEXT email triggered for authentication or transaction. By default, you can send emails using a template only.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.SendEmailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.SendEmailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.SendEmailSync(TencentCloud.Ses.V20201002.Models.SendEmailRequest)">
+            <summary>
+            This API is used to send an HTML or TEXT email triggered for authentication or transaction. By default, you can send emails using a template only.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.SendEmailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.SendEmailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.UpdateEmailIdentity(TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityRequest)">
+            <summary>
+            This API is used to verify whether your DNS configuration is correct.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.UpdateEmailIdentitySync(TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityRequest)">
+            <summary>
+            This API is used to verify whether your DNS configuration is correct.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.UpdateEmailSmtpPassWord(TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordRequest)">
+            <summary>
+            This API is used to set the SMTP password. Initially, no SMTP password is set for your email address, so emails cannot be sent over SMTP. To send emails over SMTP, you must set the SMTP password. The set password can be changed subsequently.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.UpdateEmailSmtpPassWordSync(TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordRequest)">
+            <summary>
+            This API is used to set the SMTP password. Initially, no SMTP password is set for your email address, so emails cannot be sent over SMTP. To send emails over SMTP, you must set the SMTP password. The set password can be changed subsequently.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.UpdateEmailTemplate(TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateRequest)">
+            <summary>
+            This API is used to update an email template. An updated template must be approved again before it can be used.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.SesClient.UpdateEmailTemplateSync(TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateRequest)">
+            <summary>
+            This API is used to update an email template. An updated template must be approved again before it can be used.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Attachment.FileName">
+            <summary>
+            Attachment name, which cannot exceed 255 characters. Some attachment types are not supported. For details, see [Attachment Types](https://intl.cloud.tencent.com/document/product/1288/51951?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Attachment.Content">
+            <summary>
+            Base64-encoded attachment content. You can send attachments of up to 4 MB in the total size. Note: The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.Attachment.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.FromEmailAddress">
+            <summary>
+            Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
+            sender &lt;email address&gt;. For example:
+            Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.ReceiverId">
+            <summary>
+            Recipient group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.Subject">
+            <summary>
+            Email subject
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.TaskType">
+            <summary>
+            Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.ReplyToAddresses">
+            <summary>
+            Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.Template">
+            <summary>
+            Template when emails are sent using a template
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.Simple">
+            <summary>
+            Disused
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.Attachments">
+            <summary>
+            Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.CycleParam">
+            <summary>
+            Parameter required for a recurring sending task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.TimedParam">
+            <summary>
+            Parameter required for a scheduled sending task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.Unsubscribe">
+            <summary>
+            Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.ADLocation">
+            <summary>
+            Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.BatchSendEmailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailResponse.TaskId">
+            <summary>
+            Sending task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BatchSendEmailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.BatchSendEmailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BlackEmailAddress.BounceTime">
+            <summary>
+            Time when the email address is blocklisted.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.BlackEmailAddress.EmailAddress">
+            <summary>
+            Blocklisted email address.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.BlackEmailAddress.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailAddressRequest.EmailAddress">
+            <summary>
+            Your sender address. (You can create up to 10 sender addresses for each domain.)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailAddressRequest.EmailSenderName">
+            <summary>
+            Sender name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateEmailAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateEmailAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityRequest.EmailIdentity">
+            <summary>
+            Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityResponse.IdentityType">
+            <summary>
+            Verification type. The value is fixed to `DOMAIN`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityResponse.VerifiedForSendingStatus">
+            <summary>
+            Verification passed or not.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityResponse.Attributes">
+            <summary>
+            DNS information that needs to be configured.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateEmailIdentityResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateRequest.TemplateName">
+            <summary>
+            Template name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateRequest.TemplateContent">
+            <summary>
+            Template content.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateResponse.TemplateID">
+            <summary>
+            Template ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateEmailTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailRequest.ReceiverId">
+            <summary>
+            Recipient group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailRequest.Emails">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateReceiverDetailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateReceiverRequest.ReceiversName">
+            <summary>
+            Recipient group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateReceiverRequest.Desc">
+            <summary>
+            Recipient group description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateReceiverRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateReceiverResponse.ReceiverId">
+            <summary>
+            Recipient group ID, by which recipient email addresses are uploaded
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CreateReceiverResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CreateReceiverResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CycleEmailParam.BeginTime">
+            <summary>
+            Start time of the task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CycleEmailParam.IntervalTime">
+            <summary>
+            Task recurrence in hours
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.CycleEmailParam.TermCycle">
+            <summary>
+            Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.CycleEmailParam.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DNSAttributes.Type">
+            <summary>
+            Record types: CNAME, A, TXT, and MX.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DNSAttributes.SendDomain">
+            <summary>
+            Domain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DNSAttributes.ExpectedValue">
+            <summary>
+            Expected value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DNSAttributes.CurrentValue">
+            <summary>
+            Currently configured value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DNSAttributes.Status">
+            <summary>
+            Approved or not. The default value is `false`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DNSAttributes.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteBlackListRequest.EmailAddressList">
+            <summary>
+            List of email addresses to be unblocklisted. Enter at least one address.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteBlackListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteBlackListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteBlackListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteEmailAddressRequest.EmailAddress">
+            <summary>
+            Sender address.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteEmailAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteEmailAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteEmailAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityRequest.EmailIdentity">
+            <summary>
+            Sender domain.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteEmailIdentityResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateRequest.TemplateID">
+            <summary>
+            Template ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteEmailTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteReceiverRequest.ReceiverId">
+            <summary>
+            Recipient group ID, which is returned when a recipient group is created.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteReceiverRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.DeleteReceiverResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.DeleteReceiverResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.EmailIdentity.IdentityName">
+            <summary>
+            Sender domain.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.EmailIdentity.IdentityType">
+            <summary>
+            Verification type. The value is fixed to `DOMAIN`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.EmailIdentity.SendingEnabled">
+            <summary>
+            Verification passed or not.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.EmailIdentity.CurrentReputationLevel">
+            <summary>
+            Current reputation level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.EmailIdentity.DailyQuota">
+            <summary>
+            Maximum number of messages sent per day
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.EmailIdentity.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.EmailSender.EmailAddress">
+            <summary>
+            Sender address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.EmailSender.EmailSenderName">
+            <summary>
+            Sender name.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.EmailSender.CreatedTimestamp">
+            <summary>
+            Creation time.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.EmailSender.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailIdentityRequest.EmailIdentity">
+            <summary>
+            Sender domain.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.GetEmailIdentityRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailIdentityResponse.IdentityType">
+            <summary>
+            Verification type. The value is fixed to `DOMAIN`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailIdentityResponse.VerifiedForSendingStatus">
+            <summary>
+            Verification passed or not.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailIdentityResponse.Attributes">
+            <summary>
+            DNS configuration details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailIdentityResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.GetEmailIdentityResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailTemplateRequest.TemplateID">
+            <summary>
+            Template ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.GetEmailTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailTemplateResponse.TemplateContent">
+            <summary>
+            Template content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailTemplateResponse.TemplateStatus">
+            <summary>
+            Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailTemplateResponse.TemplateName">
+            <summary>
+            Template name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetEmailTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.GetEmailTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest.RequestDate">
+            <summary>
+            Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest.Offset">
+            <summary>
+            Offset. Default value: `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest.Limit">
+            <summary>
+            Maximum number of pulled entries. Maximum value: `100`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest.MessageId">
+            <summary>
+            The `MessageId` field returned by the `SendMail` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest.ToEmailAddress">
+            <summary>
+            Recipient email address.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusResponse.EmailStatusList">
+            <summary>
+            Status of sent emails
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.GetSendEmailStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest.StartDate">
+            <summary>
+            Start date.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest.EndDate">
+            <summary>
+            End date.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest.Domain">
+            <summary>
+            Sender domain.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest.ReceivingMailboxType">
+            <summary>
+            Recipient address type, for example, gmail.com.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.GetStatisticsReportRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetStatisticsReportResponse.DailyVolumes">
+            <summary>
+            Daily email sending statistics.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetStatisticsReportResponse.OverallVolume">
+            <summary>
+            Overall email sending statistics.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.GetStatisticsReportResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.GetStatisticsReportResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest.StartDate">
+            <summary>
+            Start date in the format of `YYYY-MM-DD`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest.EndDate">
+            <summary>
+            End date in the format of `YYYY-MM-DD`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest.Limit">
+            <summary>
+            Common parameter. It must be used with `Offset`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest.Offset">
+            <summary>
+            Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest.EmailAddress">
+            <summary>
+            You can specify an email address to query.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest.TaskID">
+            <summary>
+            You can specify a task ID to query.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressResponse.BlackList">
+            <summary>
+            List of blocklisted addresses.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressResponse.TotalCount">
+            <summary>
+            Total number of blocklisted addresses.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListBlackEmailAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListEmailAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailAddressResponse.EmailSenders">
+            <summary>
+            Details of sender addresses.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListEmailAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesResponse.EmailIdentities">
+            <summary>
+            List of sender domains.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesResponse.MaxReputationLevel">
+            <summary>
+            Maximum reputation level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesResponse.MaxDailyQuota">
+            <summary>
+            Maximum number of emails sent per domain name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListEmailIdentitiesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesRequest.Limit">
+            <summary>
+            Number of templates to get. This parameter is used for pagination.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesRequest.Offset">
+            <summary>
+            Template offset to get. This parameter is used for pagination.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesResponse.TemplatesMetadata">
+            <summary>
+            List of email templates.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesResponse.TotalCount">
+            <summary>
+            Total number of templates
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListEmailTemplatesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListReceiversRequest.Offset">
+            <summary>
+            Offset, starting from 0. The value is an integer.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListReceiversRequest.Limit">
+            <summary>
+            Number of records to query. The value is an integer not exceeding 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListReceiversRequest.Status">
+            <summary>
+            Group status (`1`: to be uploaded; `2` uploading; `3` uploaded). To query groups in all states, do not pass in this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListReceiversRequest.KeyWord">
+            <summary>
+            Group name keyword for fuzzy query
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListReceiversRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListReceiversResponse.TotalCount">
+            <summary>
+            Total number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListReceiversResponse.Data">
+            <summary>
+            Data record
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListReceiversResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListReceiversResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListSendTasksRequest.Offset">
+            <summary>
+            Offset, starting from 0. The value is an integer. `0` means to skip 0 entries.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListSendTasksRequest.Limit">
+            <summary>
+            Number of records to query. The value is an integer not exceeding 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListSendTasksRequest.Status">
+            <summary>
+            Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent. To query tasks in all states, do not pass in this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListSendTasksRequest.ReceiverId">
+            <summary>
+            Recipient group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListSendTasksRequest.TaskType">
+            <summary>
+            Task type. `1`: immediate; `2`: scheduled; `3`: recurring. To query tasks of all types, do not pass in this parameter.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListSendTasksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListSendTasksResponse.TotalCount">
+            <summary>
+            Total number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListSendTasksResponse.Data">
+            <summary>
+            Data record
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ListSendTasksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ListSendTasksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ReceiverData.ReceiverId">
+            <summary>
+            Recipient group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ReceiverData.ReceiversName">
+            <summary>
+            Recipient group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ReceiverData.Count">
+            <summary>
+            Total number of recipient email addresses
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ReceiverData.Desc">
+            <summary>
+            Recipient group description
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ReceiverData.ReceiversStatus">
+            <summary>
+            Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.ReceiverData.CreateTime">
+            <summary>
+            Creation time, such as 2021-09-28 16:40:35
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.ReceiverData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.FromEmailAddress" -->
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.Destination">
+            <summary>
+            Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.Subject">
+            <summary>
+            Email subject.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.ReplyToAddresses">
+            <summary>
+            Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.Template">
+            <summary>
+            Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.Simple">
+            <summary>
+            Disused
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.Attachments">
+            <summary>
+            Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.Unsubscribe">
+            <summary>
+            Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailRequest.TriggerType">
+            <summary>
+            Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.SendEmailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailResponse.MessageId">
+            <summary>
+            Unique ID generated when receiving the message
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.SendEmailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.MessageId">
+            <summary>
+            The `MessageId` field returned by the `SendEmail` API
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.ToEmailAddress">
+            <summary>
+            Recipient email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.FromEmailAddress">
+            <summary>
+            Sender email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.SendStatus">
+            <summary>
+            Tencent Cloud processing status
+            0: Successful.
+            1001: Internal system exception.
+            1002: Internal system exception.
+            1003: Internal system exception.
+            1003: Internal system exception.
+            1004: Email sending timed out.
+            1005: Internal system exception.
+            1006: You have sent too many emails to the same address in a short period.
+            1007: The email address is in the blocklist.
+            1008: The sender domain is rejected by the recipient.
+            1009: Internal system exception.
+            1010: The daily email sending limit is exceeded.
+            1011: You have no permission to send custom content. Use a template.
+            1013: The sender domain is unsubscribed from by the recipient.
+            2001: No results were found.
+            3007: The template ID is invalid or the template is unavailable.
+            3008: The sender domain is temporarily blocked by the recipient domain.
+            3009: You have no permission to use this template.
+            3010: The format of the `TemplateData` field is incorrect. 
+            3014: The email cannot be sent because the sender domain is not verified.
+            3020: The recipient email address is in the blocklist.
+            3024: Failed to precheck the email address format.
+            3030: Email sending is restricted temporarily due to a high bounce rate.
+            3033: The account has insufficient balance or overdue payment.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.DeliverStatus">
+            <summary>
+            Recipient processing status
+            0: Tencent Cloud has accepted the request and added it to the send queue.
+            1: The email is delivered successfully. `DeliverTime` indicates the time when the email is delivered successfully.
+            2: The email is discarded. `DeliverMessage` indicates the reason for discarding.
+            3: The recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
+            8: The email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.DeliverMessage">
+            <summary>
+            Description of the recipient processing status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.RequestTime">
+            <summary>
+            Timestamp when the request arrives at Tencent Cloud
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.DeliverTime">
+            <summary>
+            Timestamp when Tencent Cloud delivers the email
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.UserOpened">
+            <summary>
+            Whether the recipient has opened the email
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.UserClicked">
+            <summary>
+            Whether the recipient has clicked the links in the email
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.UserUnsubscribed">
+            <summary>
+            Whether the recipient has unsubscribed from the email sent by the sender
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendEmailStatus.UserComplainted">
+            <summary>
+            Whether the recipient has reported the sender
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.SendEmailStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.TaskId">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.FromEmailAddress">
+            <summary>
+            Sender address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.ReceiverId">
+            <summary>
+            Recipient group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.TaskStatus">
+            <summary>
+            Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.TaskType">
+            <summary>
+            Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.RequestCount">
+            <summary>
+            Number of emails requested to be sent
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.SendCount">
+            <summary>
+            Number of emails sent
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.CacheCount">
+            <summary>
+            Number of emails cached
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.CreateTime">
+            <summary>
+            Task creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.UpdateTime">
+            <summary>
+            Task update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.Subject">
+            <summary>
+            Email subject
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.Template">
+            <summary>
+            Template and template data
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.CycleParam">
+            <summary>
+            Parameters of a recurring task
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.TimedParam">
+            <summary>
+            Parameters of a scheduled task
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.ErrMsg">
+            <summary>
+            Task exception information
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.SendTaskData.ReceiversName">
+            <summary>
+            Recipient group name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.SendTaskData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Simple.Html">
+            <summary>
+            HTML code after base64 encoding. To ensure correct display, this parameter should include all code information and cannot contain external CSS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Simple.Text">
+            <summary>
+            Plain text content after base64 encoding. If HTML is not involved, the plain text will be displayed in the email. Otherwise, this parameter represents the plain text style of the email.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.Simple.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Template.TemplateID">
+            <summary>
+            Template ID. If you don’t have any template, please create one.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Template.TemplateData">
+            <summary>
+            Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+            Note: The parameter value cannot be data of a complex type such as HTML.
+            Example: {"name":"xxx","age":"xx"}
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.Template.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.TemplateContent.Html">
+            <summary>
+            HTML code after base64 encoding.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.TemplateContent.Text">
+            <summary>
+            Text content after base64 encoding.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.TemplateContent.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.TemplatesMetadata.CreatedTimestamp">
+            <summary>
+            Creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.TemplatesMetadata.TemplateName">
+            <summary>
+            Template name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.TemplatesMetadata.TemplateStatus">
+            <summary>
+            Template status. 1: under review; 0: approved; 2: rejected; other values: unavailable.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.TemplatesMetadata.TemplateID">
+            <summary>
+            Template ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.TemplatesMetadata.ReviewReason">
+            <summary>
+            Review reply
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.TemplatesMetadata.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.TimedEmailParam.BeginTime">
+            <summary>
+            Start time of a scheduled sending task
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.TimedEmailParam.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityRequest.EmailIdentity">
+            <summary>
+            Domain to be verified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityResponse.IdentityType">
+            <summary>
+            Verification type. The value is fixed to `DOMAIN`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityResponse.VerifiedForSendingStatus">
+            <summary>
+            Verification passed or not.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityResponse.Attributes">
+            <summary>
+            DNS information that needs to be configured.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.UpdateEmailIdentityResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordRequest.Password">
+            <summary>
+            SMTP password. Length limit: 64.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordRequest.EmailAddress">
+            <summary>
+            Email address. Length limit: 128.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.UpdateEmailSmtpPassWordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateRequest.TemplateContent">
+            <summary>
+            Template content.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateRequest.TemplateID">
+            <summary>
+            Template ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateRequest.TemplateName">
+            <summary>
+            Template name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.UpdateEmailTemplateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Volume.SendDate">
+            <summary>
+            Date
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Volume.RequestCount">
+            <summary>
+            Number of email requests.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Volume.AcceptedCount">
+            <summary>
+            Number of email requests accepted by Tencent Cloud.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Volume.DeliveredCount">
+            <summary>
+            Number of delivered emails.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Volume.OpenedCount">
+            <summary>
+            Number of users (deduplicated) who opened emails.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Volume.ClickedCount">
+            <summary>
+            Number of recipients who clicked on links in emails.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Volume.BounceCount">
+            <summary>
+            Number of bounced emails.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ses.V20201002.Models.Volume.UnsubscribeCount">
+            <summary>
+            Number of users who canceled subscriptions.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ses.V20201002.Models.Volume.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

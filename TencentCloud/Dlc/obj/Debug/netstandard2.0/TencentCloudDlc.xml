@@ -1,0 +1,2102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudDlc</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CancelTask(TencentCloud.Dlc.V20210125.Models.CancelTaskRequest)">
+            <summary>
+            This API is used to cancel a task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CancelTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CancelTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CancelTaskSync(TencentCloud.Dlc.V20210125.Models.CancelTaskRequest)">
+            <summary>
+            This API is used to cancel a task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CancelTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CancelTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateInternalTable(TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest)">
+            <summary>
+            This API is used to create a managed internal table. It has been disused.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateInternalTableResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateInternalTableSync(TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest)">
+            <summary>
+            This API is used to create a managed internal table. It has been disused.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateInternalTableResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateResultDownload(TencentCloud.Dlc.V20210125.Models.CreateResultDownloadRequest)">
+            <summary>
+            This API is used to create a query result download task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateResultDownloadSync(TencentCloud.Dlc.V20210125.Models.CreateResultDownloadRequest)">
+            <summary>
+            This API is used to create a query result download task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateSparkApp(TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest)">
+            <summary>
+            This API is used to create a Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateSparkAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateSparkAppSync(TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest)">
+            <summary>
+            This API is used to create a Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateSparkAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateSparkAppTask(TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskRequest)">
+            <summary>
+            This API is used to create a Spark task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateSparkAppTaskSync(TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskRequest)">
+            <summary>
+            This API is used to create a Spark task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateTask(TencentCloud.Dlc.V20210125.Models.CreateTaskRequest)">
+            <summary>
+            This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateTaskSync(TencentCloud.Dlc.V20210125.Models.CreateTaskRequest)">
+            <summary>
+            This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateTasks(TencentCloud.Dlc.V20210125.Models.CreateTasksRequest)">
+            <summary>
+            This API is used to create tasks in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.CreateTasksSync(TencentCloud.Dlc.V20210125.Models.CreateTasksRequest)">
+            <summary>
+            This API is used to create tasks in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.CreateTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DeleteSparkApp(TencentCloud.Dlc.V20210125.Models.DeleteSparkAppRequest)">
+            <summary>
+            This API is used to delete a Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DeleteSparkAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DeleteSparkAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DeleteSparkAppSync(TencentCloud.Dlc.V20210125.Models.DeleteSparkAppRequest)">
+            <summary>
+            This API is used to delete a Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DeleteSparkAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DeleteSparkAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeResultDownload(TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadRequest)">
+            <summary>
+            This API is used to get a query result download task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeResultDownloadSync(TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadRequest)">
+            <summary>
+            This API is used to get a query result download task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeSparkAppJob(TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobRequest)">
+            <summary>
+            This API is used to query a specific Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeSparkAppJobSync(TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobRequest)">
+            <summary>
+            This API is used to query a specific Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeSparkAppJobs(TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest)">
+            <summary>
+            This API is used to get the list of Spark applications.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeSparkAppJobsSync(TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest)">
+            <summary>
+            This API is used to get the list of Spark applications.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeSparkAppTasks(TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest)">
+            <summary>
+            This API is used to query the list of running task instances of a Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeSparkAppTasksSync(TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest)">
+            <summary>
+            This API is used to query the list of running task instances of a Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeTaskResult(TencentCloud.Dlc.V20210125.Models.DescribeTaskResultRequest)">
+            <summary>
+            This API is used to query the result of a task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeTaskResultSync(TencentCloud.Dlc.V20210125.Models.DescribeTaskResultRequest)">
+            <summary>
+            This API is used to query the result of a task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeTasks(TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest)">
+            <summary>
+            This API is used to query the list of tasks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.DescribeTasksSync(TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest)">
+            <summary>
+            This API is used to query the list of tasks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.DescribeTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.GenerateCreateMangedTableSql(TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest)">
+            <summary>
+            This API is used to generate SQL statements for creating a managed table.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.GenerateCreateMangedTableSqlSync(TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest)">
+            <summary>
+            This API is used to generate SQL statements for creating a managed table.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.ModifyGovernEventRule(TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleRequest)">
+            <summary>
+            This API is used to change data governance event thresholds.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.ModifyGovernEventRuleSync(TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleRequest)">
+            <summary>
+            This API is used to change data governance event thresholds.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.ModifySparkApp(TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest)">
+            <summary>
+            This API is used to update a Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.ModifySparkAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.ModifySparkAppSync(TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest)">
+            <summary>
+            This API is used to update a Spark application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.ModifySparkAppResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.SuspendResumeDataEngine(TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineRequest)">
+            <summary>
+            This API is used to suspend or resume a data engine.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.DlcClient.SuspendResumeDataEngineSync(TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineRequest)">
+            <summary>
+            This API is used to suspend or resume a data engine.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CancelTaskRequest.TaskId">
+            <summary>
+            Globally unique task ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CancelTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CancelTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CancelTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.Name">
+            <summary>
+            Column name, which is case-insensitive and can contain up to 25 characters.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Dlc.V20210125.Models.Column.Type" -->
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.Comment">
+            <summary>
+            Class comment.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.Precision">
+            <summary>
+            Length of the entire numeric value
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.Scale">
+            <summary>
+            Length of the decimal part
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.Nullable">
+            <summary>
+            Whether the column is null.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.Position">
+            <summary>
+            Field position
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.CreateTime">
+            <summary>
+            Field creation time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.ModifiedTime">
+            <summary>
+            Field modification time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Column.IsPartition">
+            <summary>
+            Whether the column is the partition field.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.Column.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest.TableBaseInfo">
+            <summary>
+            The basic table information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest.Columns">
+            <summary>
+            The table fields.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest.Partitions">
+            <summary>
+            The table partitions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest.Properties">
+            <summary>
+            The table properties.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateInternalTableRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateInternalTableResponse.Execution">
+            <summary>
+            The SQL statements for creating the managed internal table.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateInternalTableResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateInternalTableResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadRequest.TaskId">
+            <summary>
+            The result query task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadRequest.Format">
+            <summary>
+            The result format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadRequest.Force">
+            <summary>
+            Whether to re-generate a file to download. This parameter applies only when the last task is `timeout` or `error`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadResponse.DownloadId">
+            <summary>
+            The download task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateResultDownloadResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppName">
+            <summary>
+            Spark application name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppType">
+            <summary>
+            1: Spark JAR application; 2: Spark streaming application
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.DataEngine">
+            <summary>
+            The data engine executing the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppFile">
+            <summary>
+            Execution entry of the Spark application
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.RoleArn">
+            <summary>
+            Execution role ID of the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppDriverSize">
+            <summary>
+            Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppExecutorSize">
+            <summary>
+            Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppExecutorNums">
+            <summary>
+            Number of Spark job executors
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.Eni">
+            <summary>
+            This field has been disused. Use the `Datasource` field instead.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.IsLocal">
+            <summary>
+            Whether it is upload locally. Valid values: `cos`, `lakefs`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.MainClass">
+            <summary>
+            Main class of the Spark JAR job during execution
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppConf">
+            <summary>
+            Spark configurations separated by line break
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.IsLocalJars">
+            <summary>
+            Whether it is upload locally. Valid values: `cos`, `lakefs`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppJars">
+            <summary>
+            Dependency JAR packages of the Spark JAR job separated by comma
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.IsLocalFiles">
+            <summary>
+            Whether it is upload locally. Valid values: `cos`, `lakefs`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppFiles">
+            <summary>
+            Dependency resources of the Spark job separated by comma
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.CmdArgs">
+            <summary>
+            Command line parameters of the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.MaxRetries">
+            <summary>
+            This parameter takes effect only for Spark flow tasks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.DataSource">
+            <summary>
+            Data source name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.IsLocalPythonFiles">
+            <summary>
+            PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppPythonFiles">
+            <summary>
+            PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.IsLocalArchives">
+            <summary>
+            Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppArchives">
+            <summary>
+            Archives: Dependency resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.SparkImage">
+            <summary>
+            The Spark image version.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.SparkImageVersion">
+            <summary>
+            The Spark image version name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.AppExecutorMaxNumbers">
+            <summary>
+            The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateSparkAppRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppResponse.SparkAppId">
+            <summary>
+            The unique ID of the application.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateSparkAppResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskRequest.JobName">
+            <summary>
+            Spark job name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskRequest.CmdArgs">
+            <summary>
+            Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskResponse.BatchId">
+            <summary>
+            Batch ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskResponse.TaskId">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateSparkAppTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTaskRequest.Task">
+            <summary>
+            Computing task. This parameter contains the task type and related configuration information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTaskRequest.DatabaseName">
+            <summary>
+            Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTaskRequest.DatasourceConnectionName">
+            <summary>
+            Name of the default data source
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTaskRequest.DataEngineName">
+            <summary>
+            Data engine name. If this parameter is not specified, the task will be submitted to the default engine.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTaskResponse.TaskId">
+            <summary>
+            Task ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTasksRequest.DatabaseName">
+            <summary>
+            Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTasksRequest.Tasks">
+            <summary>
+            SQL task information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTasksRequest.DatasourceConnectionName">
+            <summary>
+            Data source name. Default value: DataLakeCatalog.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTasksRequest.DataEngineName">
+            <summary>
+            Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateTasksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTasksResponse.BatchId">
+            <summary>
+            ID of the current batch of submitted tasks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTasksResponse.TaskIdSet">
+            <summary>
+            Collection of task IDs arranged in order of execution
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.CreateTasksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.CreateTasksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DataGovernPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DeleteSparkAppRequest.AppName">
+            <summary>
+            Spark application name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DeleteSparkAppRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DeleteSparkAppResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DeleteSparkAppResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadRequest.DownloadId">
+            <summary>
+            The query task ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse.Path">
+            <summary>
+            The file save path.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse.Status">
+            <summary>
+            The task status. Valid values: `init`, `queue`, `format`, `compress`, `success`, `timeout`, and `error`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse.Reason">
+            <summary>
+            The task exception cause.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse.SecretId">
+            <summary>
+            The temporary secret ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse.SecretKey">
+            <summary>
+            The temporary secret key.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse.Token">
+            <summary>
+            The temporary token.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeResultDownloadResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobRequest.JobId">
+            <summary>
+            Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobRequest.JobName">
+            <summary>
+            Spark job name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobResponse.Job">
+            <summary>
+            Spark job details
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobResponse.IsExists">
+            <summary>
+            Whether the queried Spark job exists
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest.SortBy">
+            <summary>
+            The returned results are sorted by this field.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest.Sorting">
+            <summary>
+            Descending or ascending order, such as `desc`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest.Filters">
+            <summary>
+            Filter by this parameter, which can be `spark-job-name`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest.StartTime">
+            <summary>
+            Update start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest.EndTime">
+            <summary>
+            Update end time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest.Offset">
+            <summary>
+            Query list offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest.Limit">
+            <summary>
+            Query list limit
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsResponse.SparkAppJobs">
+            <summary>
+            Detailed list of Spark jobs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsResponse.TotalCount">
+            <summary>
+            Total number of Spark jobs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppJobsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest.JobId">
+            <summary>
+            Spark job ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest.Offset">
+            <summary>
+            Paginated query offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest.Limit">
+            <summary>
+            Paginated query limit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest.TaskId">
+            <summary>
+            Execution instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest.StartTime">
+            <summary>
+            Update start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest.EndTime">
+            <summary>
+            Update end time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest.Filters">
+            <summary>
+            Filter by this parameter, which can be `task-state`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksResponse.Tasks">
+            <summary>
+            Task result (this field has been disused)
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksResponse.TotalCount">
+            <summary>
+            Total number of tasks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksResponse.SparkAppTasks">
+            <summary>
+            List of task results
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeSparkAppTasksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultRequest.TaskId">
+            <summary>
+            Unique task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultRequest.NextToken">
+            <summary>
+            The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultRequest.MaxResults">
+            <summary>
+            Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultResponse.TaskInfo">
+            <summary>
+            The queried task information. If the returned value is empty, the task with the entered task ID does not exist. The task result will be returned only if the task status is `2` (succeeded).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeTaskResultResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 10. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.Filters">
+            <summary>
+            Filter. The following filters are supported, and the `Name` input parameter must be one of them. Up to 50 `task-id` values can be filtered, while up to 5 other parameters can be filtered in total.
+            task-id - String - (filter by task ID). `task-id` format: e386471f-139a-4e59-877f-50ece8135b99.
+            task-state - String - (filter exactly by task status). Valid values: `0` (initial), `1` (running), `2` (succeeded), `-1` (failed).
+            task-sql-keyword - String - (filter fuzzily by SQL statement keyword, such as `DROP TABLE`).
+            task-operator- string (filter by sub-UIN)
+            task-kind - string (filter by task type)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.SortBy">
+            <summary>
+            Sorting field. Valid values: `create-time` (default value), `update-time`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.Sorting">
+            <summary>
+            Sorting order. Valid values: `asc` (ascending order), `desc` (descending order). Default value: `asc`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.StartTime">
+            <summary>
+            Start time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time seven days ago by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.EndTime">
+            <summary>
+            End time in the format of `yyyy-mm-dd HH:MM:SS`, which is the current time by default. The time span is (0, 30] days. Data in the last 45 days can be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.DataEngineName">
+            <summary>
+            Filter by compute resource name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeTasksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksResponse.TaskList">
+            <summary>
+            List of task objects.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksResponse.TotalCount">
+            <summary>
+            Total number of instances
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksResponse.TasksOverview">
+            <summary>
+            The task overview.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.DescribeTasksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.DescribeTasksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Execution.SQL">
+            <summary>
+            The automatically generated SQL statements.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.Execution.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Filter.Name">
+            <summary>
+            Attribute name. If more than one filter exists, the logical relationship between these filters is `OR`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Filter.Values">
+            <summary>
+            Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest.TableBaseInfo">
+            <summary>
+            The basic table information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest.Columns">
+            <summary>
+            The table fields.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest.Partitions">
+            <summary>
+            The table partitions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest.Properties">
+            <summary>
+            The table properties.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlResponse.Execution">
+            <summary>
+            The SQL statements for creating the managed internal table.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.GenerateCreateMangedTableSqlResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.KVPair.Key">
+            <summary>
+            Configured key
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.KVPair.Value">
+            <summary>
+            Configured value
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.KVPair.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.ModifyGovernEventRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppName">
+            <summary>
+            Spark application name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppType">
+            <summary>
+            1: Spark JAR application; 2: Spark streaming application
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.DataEngine">
+            <summary>
+            The data engine executing the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppFile">
+            <summary>
+            Execution entry of the Spark application
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.RoleArn">
+            <summary>
+            Execution role ID of the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppDriverSize">
+            <summary>
+            Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppExecutorSize">
+            <summary>
+            Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppExecutorNums">
+            <summary>
+            Number of Spark job executors
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.SparkAppId">
+            <summary>
+            Spark application ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.Eni">
+            <summary>
+            This field has been disused. Use the `Datasource` field instead.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.IsLocal">
+            <summary>
+            Whether it is uploaded locally. Valid values: `cos`, `lakefs`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.MainClass">
+            <summary>
+            Main class of the Spark JAR job during execution
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppConf">
+            <summary>
+            Spark configurations separated by line break
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.IsLocalJars">
+            <summary>
+            JAR resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppJars">
+            <summary>
+            Dependency JAR packages of the Spark JAR job separated by comma
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.IsLocalFiles">
+            <summary>
+            File resource dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppFiles">
+            <summary>
+            Dependency resources of the Spark job separated by comma
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.IsLocalPythonFiles">
+            <summary>
+            PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppPythonFiles">
+            <summary>
+            PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.CmdArgs">
+            <summary>
+            Command line parameters of the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.MaxRetries">
+            <summary>
+            This parameter takes effect only for Spark flow tasks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.DataSource">
+            <summary>
+            Data source name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.IsLocalArchives">
+            <summary>
+            Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppArchives">
+            <summary>
+            Archives: Dependency resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.SparkImage">
+            <summary>
+            The Spark image version.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.SparkImageVersion">
+            <summary>
+            The Spark image version name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.AppExecutorMaxNumbers">
+            <summary>
+            The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.ModifySparkAppRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.ModifySparkAppResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.ModifySparkAppResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Property.Key">
+            <summary>
+            The property key name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Property.Value">
+            <summary>
+            The property value.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.Property.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SQLTask.SQL">
+            <summary>
+            Base64-encrypted SQL statement
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SQLTask.Config">
+            <summary>
+            Task configuration information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.SQLTask.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobId">
+            <summary>
+            Spark job ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobName">
+            <summary>
+            Spark job name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobType">
+            <summary>
+            Spark job type. Valid values: `1` (batch job), `2` (streaming job).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.DataEngine">
+            <summary>
+            Engine name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.Eni">
+            <summary>
+            This field has been disused. Use the `Datasource` field instead.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.IsLocal">
+            <summary>
+            Whether the program package is uploaded locally. Valid values: `cos`, `lakefs`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobFile">
+            <summary>
+            Program package path
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.RoleArn">
+            <summary>
+            Role ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.MainClass">
+            <summary>
+            Main class of Spark job execution
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.CmdArgs">
+            <summary>
+            Command line parameters of the Spark job separated by space
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobConf">
+            <summary>
+            Native Spark configurations separated by line break
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.IsLocalJars">
+            <summary>
+            Whether the dependency JAR packages are uploaded locally. Valid values: `cos`, `lakefs`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobJars">
+            <summary>
+            Dependency JAR packages of the Spark job separated by comma
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.IsLocalFiles">
+            <summary>
+            Whether the dependency file is uploaded locally. Valid values: `cos`, `lakefs`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobFiles">
+            <summary>
+            Dependency files of the Spark job separated by comma
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobDriverSize">
+            <summary>
+            Driver resource size of the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobExecutorSize">
+            <summary>
+            Executor resource size of the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobExecutorNums">
+            <summary>
+            Number of Spark job executors
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobMaxAttempts">
+            <summary>
+            Maximum number of retries of the Spark flow task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobCreator">
+            <summary>
+            Spark job creator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobCreateTime">
+            <summary>
+            Spark job creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobUpdateTime">
+            <summary>
+            Spark job update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.CurrentTaskId">
+            <summary>
+            Last task ID of the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobStatus">
+            <summary>
+            Last status of the Spark job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.StreamingStat">
+            <summary>
+            Spark streaming job statistics
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.DataSource">
+            <summary>
+            Data source name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.IsLocalPythonFiles">
+            <summary>
+            PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.AppPythonFiles">
+            <summary>
+            Note: This returned value has been disused.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.IsLocalArchives">
+            <summary>
+            Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobArchives">
+            <summary>
+            Archives: Dependency resources
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.SparkImage">
+            <summary>
+            The Spark image version.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobPythonFiles">
+            <summary>
+            PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.TaskNum">
+            <summary>
+            Number of tasks running or ready to run under the current job
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.DataEngineStatus">
+            <summary>
+            Engine status. -100 (default value): unknown; -2–11: normal.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.JobExecutorMaxNumbers">
+            <summary>
+            The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.SparkJobInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.StartTime">
+            <summary>
+            Task start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.Receivers">
+            <summary>
+            Number of data receivers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.NumActiveReceivers">
+            <summary>
+            Number of receivers in service
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.NumInactiveReceivers">
+            <summary>
+            Number of inactive receivers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.NumActiveBatches">
+            <summary>
+            Number of running batches
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.NumRetainedCompletedBatches">
+            <summary>
+            Number of batches to be processed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.NumTotalCompletedBatches">
+            <summary>
+            Number of completed batches
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.AverageInputRate">
+            <summary>
+            Average input speed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.AverageSchedulingDelay">
+            <summary>
+            Average queue time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.AverageProcessingTime">
+            <summary>
+            Average processing time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.AverageTotalDelay">
+            <summary>
+            Average latency
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.StreamingStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineRequest.DataEngineName">
+            <summary>
+            The name of a virtual cluster.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineRequest.Operate">
+            <summary>
+            The operation type: `suspend` or `resume`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineResponse.DataEngineName">
+            <summary>
+            The details of the virtual cluster.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.SuspendResumeDataEngineResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TColumn.Name">
+            <summary>
+            The field name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TColumn.Type">
+            <summary>
+            The field type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TColumn.Comment">
+            <summary>
+            The field description.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TColumn.Default">
+            <summary>
+            The default field value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TColumn.NotNull">
+            <summary>
+            Whether the field is not null.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.TColumn.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TPartition.Name">
+            <summary>
+            The field name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TPartition.Type">
+            <summary>
+            The field type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TPartition.Comment">
+            <summary>
+            The field description.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TPartition.PartitionType">
+            <summary>
+            The partition type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TPartition.PartitionFormat">
+            <summary>
+            The partition format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TPartition.PartitionDot">
+            <summary>
+            The separator count of the partition conversion policy.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TPartition.Transform">
+            <summary>
+            The partition conversion policy.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TPartition.TransformArgs">
+            <summary>
+            The policy parameters.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.TPartition.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.DatabaseName">
+            <summary>
+            The database name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.TableName">
+            <summary>
+            The table name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.DatasourceConnectionName">
+            <summary>
+            The data source name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.TableComment">
+            <summary>
+            The table remarks.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.Type">
+            <summary>
+            The specific type: `table` or `view`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.TableFormat">
+            <summary>
+            The data format type, such as `hive` and `iceberg`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.UserAlias">
+            <summary>
+            The table creator name.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.UserSubUin">
+            <summary>
+            The table creator ID.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.GovernPolicy">
+            <summary>
+            The data governance configuration.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.TableBaseInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Task.SQLTask">
+            <summary>
+            SQL query task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.Task.SparkSQLTask">
+            <summary>
+            Spark SQL query task
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.Task.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.DatabaseName">
+            <summary>
+            Database name of the task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.DataAmount">
+            <summary>
+            Data volume of the task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.Id">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.UsedTime">
+            <summary>
+            The compute time in ms.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.OutputPath">
+            <summary>
+            Task output path
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.CreateTime">
+            <summary>
+            Task creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.State">
+            <summary>
+            Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.SQLType">
+            <summary>
+            SQL statement type of the task, such as DDL and DML.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.SQL">
+            <summary>
+            SQL statement of the task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.ResultExpired">
+            <summary>
+            Whether the result has expired
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.RowAffectInfo">
+            <summary>
+            Number of affected data rows
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.DataSet">
+            <summary>
+            Dataset of task results
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.Error">
+            <summary>
+            Failure information, such as `errorMessage`. This field has been disused.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.Percentage">
+            <summary>
+            Task progress (%)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.OutputMessage">
+            <summary>
+            Output information of task execution
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.TaskType">
+            <summary>
+            Type of the engine executing the SQL statement
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.ProgressDetail">
+            <summary>
+            Task progress details
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.UpdateTime">
+            <summary>
+            Task end time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.DataEngineId">
+            <summary>
+            Compute resource ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.OperateUin">
+            <summary>
+            Sub-UIN that executes the SQL statement
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.DataEngineName">
+            <summary>
+            Compute resource name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.InputType">
+            <summary>
+            Whether the import type is local import or COS
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.InputConf">
+            <summary>
+            Import configuration
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.DataNumber">
+            <summary>
+            Number of data entries
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.CanDownload">
+            <summary>
+            Whether the data can be downloaded
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.UserAlias">
+            <summary>
+            User alias
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.SparkJobName">
+            <summary>
+            Spark application job name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.SparkJobId">
+            <summary>
+            Spark application job ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.SparkJobFile">
+            <summary>
+            JAR file of the Spark application entry
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.UiUrl">
+            <summary>
+            Spark UI URL
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.TotalTime">
+            <summary>
+            The task time in ms.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.CmdArgs">
+            <summary>
+            The program entry parameter for running a task under a Spark job.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.TaskResponseInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.TaskId">
+            <summary>
+            Unique task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.DatasourceConnectionName">
+            <summary>
+            Name of the default selected data source when the current job is executed
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.DatabaseName">
+            <summary>
+            Name of the default selected database when the current job is executed
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.SQL">
+            <summary>
+            The currently executed SQL statement. Each task contains one SQL statement.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.SQLType">
+            <summary>
+            Type of the executed task. Valid values: `DDL`, `DML`, `DQL`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.State">
+            <summary>
+            Current status of the task. `0`: initial; `1`: task running; `2`: task execution succeeded; `-1`: task execution failed; `-3`: task terminated manually by the user. The task execution result will be returned only if task execution succeeds.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.DataAmount">
+            <summary>
+            Amount of the data scanned in bytes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.UsedTime">
+            <summary>
+            The compute time in ms.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.OutputPath">
+            <summary>
+            Address of the COS bucket for storing the task result
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.CreateTime">
+            <summary>
+            Task creation timestamp
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.OutputMessage">
+            <summary>
+            Task execution information. `success` will be returned if the task succeeds; otherwise, the failure cause will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.RowAffectInfo">
+            <summary>
+            Number of affected rows
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.ResultSchema">
+            <summary>
+            Schema information of the result
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.ResultSet">
+            <summary>
+            Result information. After it is unescaped, each element of the outer array is a data row.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.NextToken">
+            <summary>
+            Pagination information. If there is no more result data, `nextToken` will be empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.Percentage">
+            <summary>
+            Task progress (%)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.ProgressDetail">
+            <summary>
+            Task progress details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.DisplayFormat">
+            <summary>
+            Console display format. Valid values: `table`, `text`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.TotalTime">
+            <summary>
+            The task time in ms.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.TaskResultInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksInfo.TaskType">
+            <summary>
+            Task type. Valid values: `SQLTask` (SQL query task), `SparkSQLTask` (Spark SQL query task).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksInfo.FailureTolerance">
+            <summary>
+            Fault tolerance policy. `Proceed`: continues to execute subsequent tasks after the current task fails or is canceled. `Terminate`: terminates the execution of subsequent tasks after the current task fails or is canceled, and marks all subsequent tasks as canceled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksInfo.SQL">
+            <summary>
+            Base64-encrypted SQL statements separated by ";". Up to 50 tasks can be submitted at a time, and they will be executed strictly in sequence.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksInfo.Config">
+            <summary>
+            Configuration information of the task. Currently, only `SparkSQLTask` tasks are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksInfo.Params">
+            <summary>
+            User-defined parameters of the task
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.TasksInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksOverview.TaskQueuedCount">
+            <summary>
+            The number of tasks in queue.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksOverview.TaskInitCount">
+            <summary>
+            The number of initialized tasks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksOverview.TaskRunningCount">
+            <summary>
+            The number of tasks in progress.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dlc.V20210125.Models.TasksOverview.TotalTaskCount">
+            <summary>
+            The total number of tasks in this time range.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dlc.V20210125.Models.TasksOverview.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

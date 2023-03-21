@@ -1,0 +1,2183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudGse</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.CopyFleet(TencentCloud.Gse.V20191112.Models.CopyFleetRequest)">
+            <summary>
+            This API is used to replicate server fleet.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.CopyFleetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.CopyFleetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.CopyFleetSync(TencentCloud.Gse.V20191112.Models.CopyFleetRequest)">
+            <summary>
+            This API is used to replicate server fleet.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.CopyFleetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.CopyFleetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.CreateGameServerSession(TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest)">
+            <summary>
+            This API is used to create a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.CreateGameServerSessionSync(TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest)">
+            <summary>
+            This API is used to create a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DeleteTimerScalingPolicy(TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyRequest)">
+            <summary>
+            This API (DeleteTimerScalingPolicy) is used to delete a scheduled scaling policy of a fleet.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DeleteTimerScalingPolicySync(TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyRequest)">
+            <summary>
+            This API (DeleteTimerScalingPolicy) is used to delete a scheduled scaling policy of a fleet.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeGameServerSessionDetails(TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest)">
+            <summary>
+            This API is used to query the list of game server session details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeGameServerSessionDetailsSync(TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest)">
+            <summary>
+            This API is used to query the list of game server session details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeGameServerSessionPlacement(TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementRequest)">
+            <summary>
+            This API is used to query the placement of a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeGameServerSessionPlacementSync(TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementRequest)">
+            <summary>
+            This API is used to query the placement of a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeGameServerSessions(TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest)">
+            <summary>
+            This API is used to query the list of game server sessions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeGameServerSessionsSync(TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest)">
+            <summary>
+            This API is used to query the list of game server sessions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeInstanceTypes(TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesRequest)">
+            <summary>
+            This API is used to obtain the list of CVM types in the specified region.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeInstanceTypesSync(TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesRequest)">
+            <summary>
+            This API is used to obtain the list of CVM types in the specified region.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribePlayerSessions(TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest)">
+            <summary>
+            This API is used to get the list of player sessions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribePlayerSessionsSync(TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest)">
+            <summary>
+            This API is used to get the list of player sessions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeTimerScalingPolicies(TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest)">
+            <summary>
+            This API (DescribeTimerScalingPolicies) is used to query the scheduled scaling policies of a fleet. You can query the policies by `fleetID` or the fleet name. The returned results are paged. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.DescribeTimerScalingPoliciesSync(TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest)">
+            <summary>
+            This API (DescribeTimerScalingPolicies) is used to query the scheduled scaling policies of a fleet. You can query the policies by `fleetID` or the fleet name. The returned results are paged. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.EndGameServerSessionAndProcess(TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessRequest)">
+            <summary>
+            This API is used to terminate the game server session and the corresponding process, which is applicable to time-limited protection and no protection.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.EndGameServerSessionAndProcessSync(TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessRequest)">
+            <summary>
+            This API is used to terminate the game server session and the corresponding process, which is applicable to time-limited protection and no protection.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.GetGameServerSessionLogUrl(TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlRequest)">
+            <summary>
+            This API is used to get the log URL of a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.GetGameServerSessionLogUrlSync(TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlRequest)">
+            <summary>
+            This API is used to get the log URL of a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.GetInstanceAccess(TencentCloud.Gse.V20191112.Models.GetInstanceAccessRequest)">
+            <summary>
+            This API is used to get the credentials required for instance login.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.GetInstanceAccessRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.GetInstanceAccessResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.GetInstanceAccessSync(TencentCloud.Gse.V20191112.Models.GetInstanceAccessRequest)">
+            <summary>
+            This API is used to get the credentials required for instance login.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.GetInstanceAccessRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.GetInstanceAccessResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.JoinGameServerSession(TencentCloud.Gse.V20191112.Models.JoinGameServerSessionRequest)">
+            <summary>
+            This API is used to join a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.JoinGameServerSessionSync(TencentCloud.Gse.V20191112.Models.JoinGameServerSessionRequest)">
+            <summary>
+            This API is used to join a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.JoinGameServerSessionBatch(TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchRequest)">
+            <summary>
+            This API is used to join game server sessions in batch.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.JoinGameServerSessionBatchSync(TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchRequest)">
+            <summary>
+            This API is used to join game server sessions in batch.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.PutTimerScalingPolicy(TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyRequest)">
+            <summary>
+            This API (PutTimerScalingPolicy) is used to create or update a scheduled scaling policy for a fleet.
+            
+            If the field `timerID` is filled in, the specified policy will be updated, and if `timerID` is left empty, a new policy will be created.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.PutTimerScalingPolicySync(TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyRequest)">
+            <summary>
+            This API (PutTimerScalingPolicy) is used to create or update a scheduled scaling policy for a fleet.
+            
+            If the field `timerID` is filled in, the specified policy will be updated, and if `timerID` is left empty, a new policy will be created.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.SearchGameServerSessions(TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest)">
+            <summary>
+            This API is used to search in the list of game server sessions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.SearchGameServerSessionsSync(TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest)">
+            <summary>
+            This API is used to search in the list of game server sessions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.SetServerReserved(TencentCloud.Gse.V20191112.Models.SetServerReservedRequest)">
+            <summary>
+            This API (SetServerReserved) is used to mark the exceptional instances as retained for troubleshooting.
+            
+            `ReserveValue`: specifies whether to retain the instance. Valid values: `0` (do not retain), `1` (retain). Default value: `0`.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.SetServerReservedRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.SetServerReservedResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.SetServerReservedSync(TencentCloud.Gse.V20191112.Models.SetServerReservedRequest)">
+            <summary>
+            This API (SetServerReserved) is used to mark the exceptional instances as retained for troubleshooting.
+            
+            `ReserveValue`: specifies whether to retain the instance. Valid values: `0` (do not retain), `1` (retain). Default value: `0`.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.SetServerReservedRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.SetServerReservedResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.StartGameServerSessionPlacement(TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest)">
+            <summary>
+            This API is used to start placing a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.StartGameServerSessionPlacementSync(TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest)">
+            <summary>
+            This API is used to start placing a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.StopGameServerSessionPlacement(TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementRequest)">
+            <summary>
+            This API is used to stop placing a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.StopGameServerSessionPlacementSync(TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementRequest)">
+            <summary>
+            This API is used to stop placing a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.UpdateBucketAccelerateOpt(TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptRequest)">
+            <summary>
+            This API (UpdateBucketAccelerateOpt) is used to enable COS global acceleration.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.UpdateBucketAccelerateOptSync(TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptRequest)">
+            <summary>
+            This API (UpdateBucketAccelerateOpt) is used to enable COS global acceleration.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.UpdateBucketCORSOpt(TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest)">
+            <summary>
+            This API (UpdateBucketCORSOpt) is used to configure CORS for COS.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.UpdateBucketCORSOptSync(TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest)">
+            <summary>
+            This API (UpdateBucketCORSOpt) is used to configure CORS for COS.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.UpdateGameServerSession(TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest)">
+            <summary>
+            This API is used to update a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.GseClient.UpdateGameServerSessionSync(TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest)">
+            <summary>
+            This API is used to update a game server session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CcnInfo.AccountId">
+            <summary>
+            Account of the CCN instance owner
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CcnInfo.CcnId">
+            <summary>
+            CCN ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.CcnInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.FleetId">
+            <summary>
+            Server fleet ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.CopyNumber">
+            <summary>
+            Replica number. It should a value between 1 to the number of the remaining quota. It can be obtained through [Obtaining User Quota](https://intl.cloud.tencent.com/document/product/1165/48732?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.AssetId">
+            <summary>
+            Asset package ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.Description">
+            <summary>
+            Description. The length is 0-100 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.InboundPermissions">
+            <summary>
+            Network configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.InstanceType">
+            <summary>
+            Server type. It can be obtained through [Obtaining Server Instance Type List](https://intl.cloud.tencent.com/document/product/1165/48732?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.FleetType">
+            <summary>
+            Server fleet type, which only supports “ON_DEMAND” type now.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.Name">
+            <summary>
+            Server fleet name. The length is 1-50 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.NewGameServerSessionProtectionPolicy">
+            <summary>
+            Protection policy. Valid values: NoProtection·(no protection), FullProtection (full protection), TimeLimitProtection (time-limited protection)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.ResourceCreationLimitPolicy">
+            <summary>
+            Limit policy of resource creation
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.RuntimeConfiguration">
+            <summary>
+            Progress configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.GameServerSessionProtectionTimeLimit">
+            <summary>
+            Timeout period of time-limited protection. Value range: 5-1440 minutes. Default value: 60 minutes. This parameter is valid only when NewGameSessionProtectionPolicy is set as TimeLimitProtection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.SelectedScalingType">
+            <summary>
+            Whether to select scaling. Valid values: SCALING_SELECTED, SCALING_UNSELECTED. Default value: SCALING_UNSELECTED.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.SelectedCcnType">
+            <summary>
+            Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.Tags">
+            <summary>
+            Tag list. Up to 50 tags.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.SystemDiskInfo">
+            <summary>
+            System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.DataDiskInfo">
+            <summary>
+            Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.SelectedTimerType">
+            <summary>
+            Whether to select to replicate the timer policy: TIMER_SELECTED or TIMER_UNSELECTED. The default value is TIMER_UNSELECTED.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.CcnInfos">
+            <summary>
+            Information of the CCN instance, including the owner account and the instance ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.InternetMaxBandwidthOut">
+            <summary>
+            Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.CopyFleetRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetResponse.FleetAttributes">
+            <summary>
+            Server fleet attributes
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetResponse.TotalCount">
+            <summary>
+            The number of server fleets
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CopyFleetResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.CopyFleetResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.MaximumPlayerSessionCount">
+            <summary>
+            The maximum number of players, which cannot be less than 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.AliasId">
+            <summary>
+            Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.CreatorId">
+            <summary>
+            Creator ID. Up to 1024 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.FleetId">
+            <summary>
+            Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.GameProperties">
+            <summary>
+            Game attributes. Up to 16 groups of attributes are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.GameServerSessionData">
+            <summary>
+            The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.GameServerSessionId">
+            <summary>
+            The custom ID of game server session. Up to 4096 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.IdempotencyToken">
+            <summary>
+            Idempotency token. Up to 48 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.Name">
+            <summary>
+            The name of game server session. Up to 1024 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionResponse.GameServerSession">
+            <summary>
+            Game server session
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.CreateGameServerSessionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.Credentials.Secret">
+            <summary>
+            SSH private key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.Credentials.UserName">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.Credentials.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyRequest.TimerId">
+            <summary>
+            Unique ID of the policy
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyRequest.FleetId">
+            <summary>
+            ID of the fleet to be bound with the policy
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyRequest.TimerName">
+            <summary>
+            Scheduled scaling policy name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DeleteTimerScalingPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest.AliasId">
+            <summary>
+            Alias ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest.FleetId">
+            <summary>
+            Fleet ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 48 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest.Limit">
+            <summary>
+            Maximum number of entries in a single query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest.NextToken">
+            <summary>
+            Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest.StatusFilter">
+            <summary>
+            Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsResponse.GameServerSessionDetails">
+            <summary>
+            List of game server session details
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsResponse.NextToken">
+            <summary>
+            Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionDetailsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementRequest.PlacementId">
+            <summary>
+            Unique ID of game server session placement
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementResponse.GameServerSessionPlacement">
+            <summary>
+            Game server session placement
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionPlacementResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest.AliasId">
+            <summary>
+            Alias ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest.FleetId">
+            <summary>
+            Fleet ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 48 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest.Limit">
+            <summary>
+            Maximum number of entries in a single query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest.NextToken">
+            <summary>
+            Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest.StatusFilter">
+            <summary>
+            Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsResponse.GameServerSessions">
+            <summary>
+            Game server session list
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsResponse.NextToken">
+            <summary>
+            Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeGameServerSessionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesResponse.InstanceTypeList">
+            <summary>
+            List of server types
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeInstanceTypesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 48 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest.Limit">
+            <summary>
+            Maximum number of entries in a single query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest.NextToken">
+            <summary>
+            Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest.PlayerId">
+            <summary>
+            Player ID. It should contain 1 to 1024 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest.PlayerSessionId">
+            <summary>
+            Player session ID. It should contain 1 to 1024 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest.PlayerSessionStatusFilter">
+            <summary>
+            Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsResponse.PlayerSessions">
+            <summary>
+            Player session list
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsResponse.NextToken">
+            <summary>
+            Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribePlayerSessionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest.FleetId">
+            <summary>
+            ID of the fleet to be bound with the policy
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest.TimerName">
+            <summary>
+            Scheduled scaling policy name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest.BeginTime">
+            <summary>
+            Start time of the scheduled scaling policy
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest.EndTime">
+            <summary>
+            End time of the scheduled scaling policy
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest.Offset">
+            <summary>
+            Pagination offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest.Limit">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesResponse.TimerScalingPolicies">
+            <summary>
+            Configuration of the scheduled scaling policy
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesResponse.TotalCount">
+            <summary>
+            Total number of scheduled scaling policies
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DescribeTimerScalingPoliciesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DesiredPlayerSession.PlayerId">
+            <summary>
+            Unique player ID associated with player session
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DesiredPlayerSession.PlayerData">
+            <summary>
+            Developer-defined player data
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DesiredPlayerSession.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DiskInfo.DiskType">
+            <summary>
+            Disk type: Premium Cloud Storage (CLOUD_PREMIUM) or SSD (CLOUD_SSD)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.DiskInfo.DiskSize">
+            <summary>
+            System disk: the available disk capacity is 50-500 GB. Data disk: the available disk capacity is 100-32000 GB, and the value is a multiple of 10. When the disk type is SSD (CLOUD_SSD), the minimum capacity is 100 GB.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.DiskInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. If a game server session ID is passed in, its corresponding processes, game server sessions, and player sessions will be terminated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessRequest.IpAddress">
+            <summary>
+            The public IP of the CVM. You need to pass in `IpAddress` and `Port` at the same time to terminate the matched processes, game server sessions and player sessions (if any exists). It does not take effect in case only the `IpAddress` passed in.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessRequest.Port">
+            <summary>
+            Port number. Value range: 1025 - 60000. You need to pass in `IpAddress` and `Port` at the same time to terminate the matched processes, game server sessions (if any exists) and player sessions (if any exists). It does not take effect in case only the `IpAddress` passed in.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.EndGameServerSessionAndProcessResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.AssetId">
+            <summary>
+            Asset package ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.CreationTime">
+            <summary>
+            Server fleet creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.Description">
+            <summary>
+            Description
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.FleetArn">
+            <summary>
+            Description of server fleet resource
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.FleetId">
+            <summary>
+            Server fleet ID
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.FleetType">
+            <summary>
+            Server fleet type, which only supports ON_DEMAND now.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.InstanceType">
+            <summary>
+            Server type, such as S5.LARGE8
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.Name">
+            <summary>
+            Server fleet name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.NewGameServerSessionProtectionPolicy">
+            <summary>
+            Game session protection policy
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.OperatingSystem">
+            <summary>
+            Operating system type
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.ResourceCreationLimitPolicy">
+            <summary>
+            Limit policy of resource creation
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.Status">
+            <summary>
+            Statuses: “Create”, “Downloading”, “Verifying”, “Generating”, “Activating”, “Active”, “Exception”, “Deleting”, and “End”.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.StoppedActions">
+            <summary>
+            The status of server fleet when it stopped. If this field is left empty, it means automatic scaling.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.TerminationTime">
+            <summary>
+            Server fleet termination time
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.GameServerSessionProtectionTimeLimit">
+            <summary>
+            Timeout period of time-limited protection. Value range: 5-1440 minutes. Default value: 60 minutes.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.BillingStatus">
+            <summary>
+            Billing status: Unactivated, Activated, Exception, Isolated due to arrears, Terminated, and Unfrozen.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.Tags">
+            <summary>
+            Tag list. Up to 50 tags.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.DataDiskInfo">
+            <summary>
+            Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.SystemDiskInfo">
+            <summary>
+            System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.RelatedCcnInfos">
+            <summary>
+            CCN instance information
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.FleetAttributes.InternetMaxBandwidthOut">
+            <summary>
+            Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.FleetAttributes.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameProperty.Key">
+            <summary>
+            Attribute name. Up to 32 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameProperty.Value">
+            <summary>
+            Attribute value. Up to 96 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.GameProperty.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.CreationTime">
+            <summary>
+            Game server session creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.CreatorId">
+            <summary>
+            Creator ID. Up to 1024 ASCII characters are allowed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.CurrentPlayerSessionCount">
+            <summary>
+            The current number of players, which cannot be less than 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.DnsName">
+            <summary>
+            CVM DNS ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.FleetId">
+            <summary>
+            Fleet ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.GameProperties">
+            <summary>
+            Game attributes. Up to 16 groups of attributes are allowed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.GameServerSessionData">
+            <summary>
+            The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 48 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.IpAddress">
+            <summary>
+            CVM IP address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.MatchmakerData">
+            <summary>
+            Battle progress details. Up to 400,000 ASCII characters are allowed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.MaximumPlayerSessionCount">
+            <summary>
+            The maximum number of players, which cannot be less than 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.Name">
+            <summary>
+            The name of game server session. Up to 1024 ASCII characters are allowed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.PlayerSessionCreationPolicy">
+            <summary>
+            Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.Port">
+            <summary>
+            Port number. It should be a value between 1 to 60000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.Status">
+            <summary>
+            Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.StatusReason">
+            <summary>
+            Additional information of game server session status
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.TerminationTime">
+            <summary>
+            Termination time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.InstanceType">
+            <summary>
+            Instance type. Up to 128 ASCII characters are allowed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.CurrentCustomCount">
+            <summary>
+            Current custom count
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.MaxCustomCount">
+            <summary>
+            Maximum custom count
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.Weight">
+            <summary>
+            Weight
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSession.AvailabilityStatus">
+            <summary>
+            Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.GameServerSession.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionDetail.GameServerSession">
+            <summary>
+            Game server session
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionDetail.ProtectionPolicy">
+            <summary>
+            Protection policy. Valid values: NoProtection, FullProtection
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.GameServerSessionDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.PlacementId">
+            <summary>
+            Deployment ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.GameServerSessionQueueName">
+            <summary>
+            Service deployment group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.PlayerLatencies">
+            <summary>
+            Player latency
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.Status">
+            <summary>
+            Service deployment status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.DnsName">
+            <summary>
+            DNS ID assigned to the instance where the game session is running
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.GameServerSessionId">
+            <summary>
+            Game session ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.GameServerSessionName">
+            <summary>
+            Game session name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.GameServerSessionRegion">
+            <summary>
+            Service deployment region
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.GameProperties">
+            <summary>
+            Game attributes
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.MaximumPlayerSessionCount">
+            <summary>
+            The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.GameServerSessionData">
+            <summary>
+            Game session data
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.IpAddress">
+            <summary>
+            IP address of the instance where the game session is running
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.Port">
+            <summary>
+            Port number of the instance where the game session is running
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.MatchmakerData">
+            <summary>
+            Game match data
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.PlacedPlayerSessions">
+            <summary>
+            Deployed player game data
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.StartTime">
+            <summary>
+            Start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.EndTime">
+            <summary>
+            End time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.GameServerSessionPlacement.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 48 ASCII characters.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlResponse.PreSignedUrl">
+            <summary>
+            Log download URL. It should contain 1 to 1024 ASCII characters.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.GetGameServerSessionLogUrlResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GetInstanceAccessRequest.FleetId">
+            <summary>
+            Server fleet ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GetInstanceAccessRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.GetInstanceAccessRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GetInstanceAccessResponse.InstanceAccess">
+            <summary>
+            Credentials required for instance login
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.GetInstanceAccessResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.GetInstanceAccessResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InboundPermission.FromPort">
+            <summary>
+            Start port number. Minimum value: 1025.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InboundPermission.IpRange">
+            <summary>
+            IP range. Valid range of the input IPv4 addresses in CIDR format; for example, 0.0.0.0.0/0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InboundPermission.Protocol">
+            <summary>
+            Protocol type: TCP or UDP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InboundPermission.ToPort">
+            <summary>
+            End port number. Maximum value: 60000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.InboundPermission.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceAccess.Credentials">
+            <summary>
+            Credentials required for instance access
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceAccess.FleetId">
+            <summary>
+            Service deployment ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceAccess.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceAccess.IpAddress">
+            <summary>
+            Public IP of instance
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceAccess.OperatingSystem">
+            <summary>
+            OS
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.InstanceAccess.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceTypeInfo.TypeName">
+            <summary>
+            Name of the server type, such as `Standard SA1`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceTypeInfo.InstanceType">
+            <summary>
+            Specification of the server type, such as `SA1.SMALL1`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceTypeInfo.Cpu">
+            <summary>
+            CPU, in core
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceTypeInfo.Memory">
+            <summary>
+            Memory, in GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.InstanceTypeInfo.NetworkCard">
+            <summary>
+            The packet sending and receiving capability, in 10k PPS. 
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.InstanceTypeInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 256 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchRequest.PlayerIds">
+            <summary>
+            Player ID list. At least 1 ID and up to 25 IDs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchRequest.PlayerDataMap">
+            <summary>
+            Player custom data
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchResponse.PlayerSessions">
+            <summary>
+            Player session list. Up to 25 sessions.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionBatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 256 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionRequest.PlayerId">
+            <summary>
+            Player ID. Up to 1024 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionRequest.PlayerData">
+            <summary>
+            Player custom data. Up to 2048 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionResponse.PlayerSession">
+            <summary>
+            Player session
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.JoinGameServerSessionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlacedPlayerSession.PlayerId">
+            <summary>
+            Player ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlacedPlayerSession.PlayerSessionId">
+            <summary>
+            Player session ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.PlacedPlayerSession.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerDataMap.Key">
+            <summary>
+            The key of player custom data. It should contain 1 to 1024 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerDataMap.Value">
+            <summary>
+            The value of player custom data. It should contain 1 to 2048 ASCII characters.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.PlayerDataMap.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerLatency.PlayerId">
+            <summary>
+            Player ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerLatency.RegionIdentifier">
+            <summary>
+            Name of region corresponding to latency
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerLatency.LatencyInMilliseconds">
+            <summary>
+            Latency in milliseconds
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.PlayerLatency.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.CreationTime">
+            <summary>
+            Player session creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.DnsName">
+            <summary>
+            ID of the DNS where the game server session is running
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.FleetId">
+            <summary>
+            Fleet ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 256 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.IpAddress">
+            <summary>
+            Address of the CVM instance where the game server session is running
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.PlayerData">
+            <summary>
+            Player custom data. Up to 2048 ASCII characters are allowed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.PlayerId">
+            <summary>
+            Player ID. Up to 1024 ASCII characters are allowed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.PlayerSessionId">
+            <summary>
+            Player session ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.Port">
+            <summary>
+            Port number. It should be a value between 1 to 60000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.Status">
+            <summary>
+            Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PlayerSession.TerminationTime">
+            <summary>
+            Player session termination time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.PlayerSession.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyRequest.TimerScalingPolicy">
+            <summary>
+            Configuration of the scheduled scaling policy
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.PutTimerScalingPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.RelatedCcnInfo.AccountId">
+            <summary>
+            Account of the CCN instance owner
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.RelatedCcnInfo.CcnId">
+            <summary>
+            CCN instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.RelatedCcnInfo.AttachType">
+            <summary>
+            Status of associated CCN instance
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.RelatedCcnInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.ResourceCreationLimitPolicy.NewGameServerSessionsPerCreator">
+            <summary>
+            Creation quantity. Minimum value: 1. Default value: 2.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.ResourceCreationLimitPolicy.PolicyPeriodInMinutes">
+            <summary>
+            Unit time. Minimum value: 1. Default value: 3. Unit: minute.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.ResourceCreationLimitPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.RuntimeConfiguration.GameServerSessionActivationTimeoutSeconds">
+            <summary>
+            Game session timeout. Value range: 1-600. Unit: second.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.RuntimeConfiguration.MaxConcurrentGameServerSessionActivations">
+            <summary>
+            Maximum number of game sessions. Value range: 1-2,147,483,647.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.RuntimeConfiguration.ServerProcesses">
+            <summary>
+            Service process configuration. There must be at least one service configuration.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.RuntimeConfiguration.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest.AliasId">
+            <summary>
+            Alias ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest.FleetId">
+            <summary>
+            Fleet ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest.Limit">
+            <summary>
+            Maximum number of entries in a single query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest.NextToken">
+            <summary>
+            Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest.FilterExpression" -->
+        <member name="P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest.SortExpression">
+            <summary>
+            Sorting keyword
+            Valid values:
+            gameServerSessionName: game session name in `String` type
+            gameServerSessionId: game session ID in `String` type
+            maximumSessions: maximum number of player sessions in `Number` type
+            creationTimeMillis: creation time in milliseconds in `Number` type
+            playerSessionCount: current number of player sessions in `Number` type
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsResponse.GameServerSessions">
+            <summary>
+            Game server session list
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsResponse.NextToken">
+            <summary>
+            Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.SearchGameServerSessionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.ServerProcesse.ConcurrentExecutions">
+            <summary>
+            Number of concurrent processes. Value range of total concurrent processes: 1-50.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.ServerProcesse.LaunchPath">
+            <summary>
+            Launch Path. Linux: /local/game/ or Windows: C:\game\. The path length is 1-1024.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.ServerProcesse.Parameters">
+            <summary>
+            Launch parameter. The length is 0-1024.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.ServerProcesse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SetServerReservedRequest.FleetId">
+            <summary>
+            ID of the fleet to be bound with the policy
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SetServerReservedRequest.InstanceId">
+            <summary>
+            Instance ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SetServerReservedRequest.ReserveValue">
+            <summary>
+            Whether the instance is retained. Valid values: 1 (retained), 0 (not retained). Default value: 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.SetServerReservedRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.SetServerReservedResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.SetServerReservedResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.PlacementId">
+            <summary>
+            The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.GameServerSessionQueueName">
+            <summary>
+            Game server session queue name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.MaximumPlayerSessionCount">
+            <summary>
+            The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.DesiredPlayerSessions">
+            <summary>
+            Player game session information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.GameProperties">
+            <summary>
+            Player game session attributes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.GameServerSessionData">
+            <summary>
+            Data of game server sessions. Up to 4096 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.GameServerSessionName">
+            <summary>
+            Name of game server sessions. Up to 4096 ASCII characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.PlayerLatencies">
+            <summary>
+            Player latency
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementResponse.GameServerSessionPlacement">
+            <summary>
+            Game server session placement
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.StartGameServerSessionPlacementResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementRequest.PlacementId">
+            <summary>
+            Unique ID of game server session placement
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementResponse.GameServerSessionPlacement">
+            <summary>
+            Game server session placement
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.StopGameServerSessionPlacementResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.Tag.Key">
+            <summary>
+            Tag key. Up to 127 bytes are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.Tag.Value">
+            <summary>
+            Tag value. Up to 255 bytes are allowed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TargetConfiguration.TargetValue">
+            <summary>
+            Ratio of reserved server session resource 
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.TargetConfiguration.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerConfiguration.TimerType">
+            <summary>
+            The recurrence pattern of auto-scaling. `0`: undefined, `1`: once, `2`: daily, `3`: monthly, `4`: weekly
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerConfiguration.TimerValue">
+            <summary>
+            Details of the recurrence pattern of auto-scaling
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerConfiguration.BeginTime">
+            <summary>
+            Start time of the scheduled scaling policy
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerConfiguration.EndTime">
+            <summary>
+            End time of the scheduled scaling policy
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.TimerConfiguration.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerFleetCapacity.FleetId">
+            <summary>
+            ID of the fleet to be bound with the policy
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerFleetCapacity.DesiredInstances">
+            <summary>
+            Desired number of instances
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerFleetCapacity.MinSize">
+            <summary>
+            Minimum number of instances
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerFleetCapacity.MaxSize">
+            <summary>
+            Maximum number of instances
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerFleetCapacity.ScalingInterval">
+            <summary>
+            Scaling cooldown period, in minutes
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerFleetCapacity.ScalingType">
+            <summary>
+            Scaling type. `1`: manual, `2`: automatic, `0`: undefined
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerFleetCapacity.TargetConfiguration">
+            <summary>
+            Configuration of target tracking scaling
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.TimerFleetCapacity.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerScalingPolicy.TimerId">
+            <summary>
+            Unique ID of the policy. When it’s filled in, the policy will be updated.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerScalingPolicy.TimerName">
+            <summary>
+            Scheduled scaling policy name
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerScalingPolicy.TimerStatus">
+            <summary>
+            Scheduled scaling policy status. `0`: Undefined, `1`: Not started, 2: Activated, `3`: Stopped, `4`: Expired
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerScalingPolicy.TimerFleetCapacity">
+            <summary>
+            The capacity configurations of the scheduled scaling policy
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerScalingPolicy.TimerConfiguration">
+            <summary>
+            The recurrence pattern of auto-scaling
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.TimerScalingPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerValue.Day">
+            <summary>
+            Execute once every X day(s)
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerValue.FromDay">
+            <summary>
+            Specify the first day to execute the scaling action in a month (execute once per day)
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerValue.ToDay">
+            <summary>
+            Specify the last day to execute the scaling action in a month
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.TimerValue.WeekDays">
+            <summary>
+            Specify the week days to repeat the scaling action. Multiple values are supported. Valid values: `1` (Monday), `2` (Tuesday), `3` (Wednesday), `4` (Thursday), `5` (Friday), `6` (Saturday), `7` (Sunday). 
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.TimerValue.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptRequest.Allowed">
+            <summary>
+            `true`: enable global acceleration; `false`: disable global acceleration
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.UpdateBucketAccelerateOptResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest.AllowedOrigins">
+            <summary>
+            Allowed access source. For details, see [COS Documentation](https://intl.cloud.tencent.com/document/product/436/8279?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest.AllowedMethods">
+            <summary>
+            Allowed HTTP method(s). Multiple methods are allowed, including PUT, GET, POST, and HEAD. For details, see [COS Documentation](https://intl.cloud.tencent.com/document/product/436/8279?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest.AllowedHeaders">
+            <summary>
+            Specifies the custom HTTP request headers that the browser is allowed to include in a CORS request. Wildcard (*) is supported, indicating allowing all headers (recommended). For details, see [COS Documentation](https://intl.cloud.tencent.com/document/product/436/8279?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest.MaxAgeSeconds">
+            <summary>
+            Sets the validity duration for the CORS configuration (in second). For details, see [COS Documentation](https://intl.cloud.tencent.com/document/product/436/8279?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest.ExposeHeaders">
+            <summary>
+            CORS response header(s) that can be exposed to the browser, case-insensitive. If this parameter is not specified, the browser can access only simple response headers Cache-Control, Content-Type, Expires, and Last-Modified by default. For details, see [COS Documentation](https://intl.cloud.tencent.com/document/product/436/8279?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.UpdateBucketCORSOptResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 256 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest.MaximumPlayerSessionCount">
+            <summary>
+            The maximum number of players, which cannot be less than 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest.Name">
+            <summary>
+            Name of the game server session. It should contain 1 to 1024 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest.PlayerSessionCreationPolicy">
+            <summary>
+            Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest.ProtectionPolicy">
+            <summary>
+            Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionResponse.GameServerSession">
+            <summary>
+            Updated game session
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gse.V20191112.Models.UpdateGameServerSessionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

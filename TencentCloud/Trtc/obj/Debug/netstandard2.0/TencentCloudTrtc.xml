@@ -1,0 +1,2105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudTrtc</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.CreateCloudRecording(TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest)">
+            <summary>
+            API description:
+            This API is used to start an on-cloud recording task. It records the audio and video streams in a room and saves them to the specified cloud storage. You can use this API to record the streams in a room separately, or you can mix the streams first and then record the mixed stream.
+            
+            You can use this API to perform the following operations:
+            * Specify the anchors whose streams you want or do not want to record by using the `RecordParams` parameter
+            * Specify the storage service you want to save recording files to by using the `StorageParams` parameter. Currently, you can only save recording files to VOD (`CloudVod`).
+            * Specify transcoding settings for mixed-stream recording, including video resolution, video bitrate, frame rate, and audio quality, by using `MixTranscodeParams`
+            * Specify the layout of different videos in mixed-stream recording mode or select an auto-arranged layout template
+            
+            Key concepts:
+            * Single-stream recording: Record the audio and video of each subscribed user (`UserId`) in a room and save the recording files to VOD.
+            * Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files to VOD. After a recording task ends, you can go to the VOD console (https://console.cloud.tencent.com/vod/media) to view the recording files.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.CreateCloudRecordingSync(TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest)">
+            <summary>
+            API description:
+            This API is used to start an on-cloud recording task. It records the audio and video streams in a room and saves them to the specified cloud storage. You can use this API to record the streams in a room separately, or you can mix the streams first and then record the mixed stream.
+            
+            You can use this API to perform the following operations:
+            * Specify the anchors whose streams you want or do not want to record by using the `RecordParams` parameter
+            * Specify the storage service you want to save recording files to by using the `StorageParams` parameter. Currently, you can only save recording files to VOD (`CloudVod`).
+            * Specify transcoding settings for mixed-stream recording, including video resolution, video bitrate, frame rate, and audio quality, by using `MixTranscodeParams`
+            * Specify the layout of different videos in mixed-stream recording mode or select an auto-arranged layout template
+            
+            Key concepts:
+            * Single-stream recording: Record the audio and video of each subscribed user (`UserId`) in a room and save the recording files to VOD.
+            * Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files to VOD. After a recording task ends, you can go to the VOD console (https://console.cloud.tencent.com/vod/media) to view the recording files.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DeleteCloudRecording(TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingRequest)">
+            <summary>
+            This API is used to stop a recording task. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DeleteCloudRecordingSync(TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingRequest)">
+            <summary>
+            This API is used to stop a recording task. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeCloudRecording(TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingRequest)">
+            <summary>
+            This API is used to query the status of a recording task after it starts. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned.
+            If a recording file is being uploaded to VOD, the response parameter `StorageFileList` will not contain the information of the recording file. Please listen for the recording file callback to get the information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeCloudRecordingSync(TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingRequest)">
+            <summary>
+            This API is used to query the status of a recording task after it starts. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned.
+            If a recording file is being uploaded to VOD, the response parameter `StorageFileList` will not contain the information of the recording file. Please listen for the recording file callback to get the information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeMixTranscodingUsage(TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageRequest)">
+            <summary>
+            This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
+            - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+            - The period queried per request cannot be longer than 31 days.
+            - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+            - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+            - The rate limit of this API is five calls per second.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeMixTranscodingUsageSync(TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageRequest)">
+            <summary>
+            This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
+            - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+            - The period queried per request cannot be longer than 31 days.
+            - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+            - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+            - The rate limit of this API is five calls per second.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeRecordingUsage(TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest)">
+            <summary>
+            This API is used to query your TRTC recording usage.
+            - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+            - The period queried per request cannot be longer than 31 days.
+            - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+            - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+            - The rate limit of this API is five calls per second.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeRecordingUsageSync(TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest)">
+            <summary>
+            This API is used to query your TRTC recording usage.
+            - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+            - The period queried per request cannot be longer than 31 days.
+            - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+            - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+            - The rate limit of this API is five calls per second.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeRelayUsage(TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageRequest)">
+            <summary>
+            This API is used to query your usage of TRTC’s relay to CDN service.
+            - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+            - The period queried per request cannot be longer than 31 days.
+            - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+            - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+            - The rate limit of this API is five calls per second.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeRelayUsageSync(TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageRequest)">
+            <summary>
+            This API is used to query your usage of TRTC’s relay to CDN service.
+            - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+            - The period queried per request cannot be longer than 31 days.
+            - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+            - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+            - The rate limit of this API is five calls per second.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeTrtcUsage(TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageRequest)">
+            <summary>
+            This API is used to query your TRTC audio/video duration.
+            - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+            - The period queried per request cannot be longer than 31 days.
+            - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+            - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+            - The rate limit of this API is five calls per second.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DescribeTrtcUsageSync(TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageRequest)">
+            <summary>
+            This API is used to query your TRTC audio/video duration.
+            - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+            - The period queried per request cannot be longer than 31 days.
+            - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+            - You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+            - The rate limit of this API is five calls per second.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DismissRoom(TencentCloud.Trtc.V20190722.Models.DismissRoomRequest)">
+            <summary>
+            This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DismissRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DismissRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DismissRoomSync(TencentCloud.Trtc.V20190722.Models.DismissRoomRequest)">
+            <summary>
+            This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DismissRoomRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DismissRoomResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DismissRoomByStrRoomId(TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdRequest)">
+            <summary>
+            This API is used to remove all users from a room and close the room. It works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.DismissRoomByStrRoomIdSync(TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdRequest)">
+            <summary>
+            This API is used to remove all users from a room and close the room. It works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.ModifyCloudRecording(TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest)">
+            <summary>
+            This API is used to modify a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. You need to specify all the parameters for each request instead of just the ones you want to modify.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.ModifyCloudRecordingSync(TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest)">
+            <summary>
+            This API is used to modify a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. You need to specify all the parameters for each request instead of just the ones you want to modify.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.RemoveUser(TencentCloud.Trtc.V20190722.Models.RemoveUserRequest)">
+            <summary>
+            This API is used to remove a user from a room. It is applicable to scenarios where the anchor, room owner, or admin wants to kick out a user. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.RemoveUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.RemoveUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.RemoveUserSync(TencentCloud.Trtc.V20190722.Models.RemoveUserRequest)">
+            <summary>
+            This API is used to remove a user from a room. It is applicable to scenarios where the anchor, room owner, or admin wants to kick out a user. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.RemoveUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.RemoveUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.RemoveUserByStrRoomId(TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdRequest)">
+            <summary>
+            This API is used to remove a user from a room. It allows the anchor, room owner, or admin to kick out a user, and works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.RemoveUserByStrRoomIdSync(TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdRequest)">
+            <summary>
+            This API is used to remove a user from a room. It allows the anchor, room owner, or admin to kick out a user, and works on all platforms. For Android, iOS, Windows, and macOS, you need to update the TRTC SDK to version 6.6 or above.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.SetUserBlocked(TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest)">
+            <summary>
+            This API is used to disable or enable the audio and video of a user. It can be used by an anchor, room owner, or admin to block or unblock a user. It supports platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API if the room ID is a number.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.SetUserBlockedResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.SetUserBlockedSync(TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest)">
+            <summary>
+            This API is used to disable or enable the audio and video of a user. It can be used by an anchor, room owner, or admin to block or unblock a user. It supports platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API if the room ID is a number.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.SetUserBlockedResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.SetUserBlockedByStrRoomId(TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest)">
+            <summary>
+            This API allows an anchor, room owner, admin to mute/unmute a user. It can be used on platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API when the room ID is a string.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.SetUserBlockedByStrRoomIdSync(TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest)">
+            <summary>
+            This API allows an anchor, room owner, admin to mute/unmute a user. It can be used on platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API when the room ID is a string.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.StartPublishCdnStream(TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest)">
+            <summary>
+            This API is used to mix streams and relay the mixed stream to CDNs. You can use this API to do the following:
+            1. Publish (also known as “relay”) the audio/video stream of one anchor to CDNs. For details, see example 2 (starting a task to relay the audio and video of a stream) and example 3 (starting a task to relay only the audio of a stream).
+            2. Mix the streams of multiple anchors in a room or in different rooms and publish the mixed stream to CDNs. You can use `AudioParams.SubscribeAudioList` to specify the users whose audios are mixed, and use `VideoParams.LayoutParams` to specify the layout of the anchors’ videos. For details, see example 1 (mixing streams and publishing the mixed stream to a CDN).
+            3. Mix multiple streams in a room according to a template and publish the mixed stream to CDNs. The TRTC backend will detect the change of anchors in the room and adjust the video layout automatically according to the stream mixing template. The following template types are supported:
+                 - Floating: The entire screen is covered by the video of the first user who enters the room, and the videos of other users are displayed as small windows in rows in the bottom-left corner in room entry sequence. The screen allows up to 4 rows of 4 small videos, which float over the large video. Up to 1 large and 15 small videos can be displayed.
+                 - Grid: The videos of all users split the screen evenly. The more the users, the smaller the video dimensions. Up to 16 videos are supported.
+                 - Screen sharing: This is designed for video conferencing and online education. The shared screen (or camera video of the anchor) is always displayed as the large video, which occupies the left half of the screen, and the videos of other users occupy the right half in up to two columns of up to eight small videos each. Up to 1 large video and 15 small videos can be displayed. If the upstream aspect ratio does not match the output, the large video on the left will be scaled and displayed in whole, while the small videos on the right will be cropped.
+            4. Publish audio/video streams to up to 10 CDNs at a time. You can use `PublishCdnParams.PublishCdnUrl` to specify the URLs of the CDNs to publish to. To publish to Tencent Cloud’s CDN, set `PublishCdnParams.IsTencentCdn` to 1.
+            5. Configure a server-side callback to have Tencent Cloud send relay status updates to your server in the form of HTTP/HTTPS POST requests. To use the callback for relay events, please contact Technical Support.
+            6. The API supports four regions: Guangzhou, Shanghai, Beijing, and Hong Kong. If you relay to regions outside the Chinese mainland, select Hong Kong.
+             
+            Notes:
+            1. **Because On-Cloud MixTranscoding is a paid feature, calling this API will incur MixTranscoding fees. For details, see [Billing of MixTranscoding and Relay to CDN](https://intl.cloud.tencent.com/document/product/647/49446?from_cn_redirect=1).**
+            2. **Relaying to third-party CDNs will incur relaying fees. For details, see [Billing of MixTranscoding and Relay to CDN](https://intl.cloud.tencent.com/document/product/647/82155?from_cn_redirect=1).**
+            
+            Others:
+            1. You need to first call `StartPublishCdnStream` to start a relay task and get the task ID before you can use the `UpdatePublishCdnStream` API to modify the task and `StopPublishCdnStream` to stop the task.
+            2. To ensure the stability of relaying, you cannot switch between relaying audio only, relaying audio and video, and relaying video only for the same task.
+            3. To ensure the stability of relaying, you cannot change the video codec, audio codec, audio sample rate, audio bitrate, or sound channels using the `UpdatePublishCdnStream` API. We recommend you pass in all the other parameters.
+            4. When you relay a single stream, specify both `AudioParams` and `VideoParams` to publish both audio and video, and specify only `AudioParams` to publish audio only. You cannot switch between the two modes during the relaying process. For `VideoParams`, set `Width`, `Height`, `Fps`, `Bitrate`, and `Gop` according to the actual settings used for publishing.
+            5. The `SequenceNumber` parameter is required when you call `UpdatePublishCdnStream` to change the relaying parameters. It ensures that multiple requests for the same relaying task are in the correct order. The value of `SequenceNumber` increases each time a new request is made for the same task. If `InternalError` is returned, try again using the same `SequenceNumber`. You don’t need to handle the `FailedOperation.OutdateRequest` error.
+            6. You can create a relay task before anchors enter a room, in which case you need to manually call `StopPublishCdnStream` to stop the task. If you don’t, after all the users whose streams are mixed leave the room, the TRTC backend will wait for the timeout period (`AgentParams.MaxIdleTime`) to elapse before stopping the relaying task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.StartPublishCdnStreamSync(TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest)">
+            <summary>
+            This API is used to mix streams and relay the mixed stream to CDNs. You can use this API to do the following:
+            1. Publish (also known as “relay”) the audio/video stream of one anchor to CDNs. For details, see example 2 (starting a task to relay the audio and video of a stream) and example 3 (starting a task to relay only the audio of a stream).
+            2. Mix the streams of multiple anchors in a room or in different rooms and publish the mixed stream to CDNs. You can use `AudioParams.SubscribeAudioList` to specify the users whose audios are mixed, and use `VideoParams.LayoutParams` to specify the layout of the anchors’ videos. For details, see example 1 (mixing streams and publishing the mixed stream to a CDN).
+            3. Mix multiple streams in a room according to a template and publish the mixed stream to CDNs. The TRTC backend will detect the change of anchors in the room and adjust the video layout automatically according to the stream mixing template. The following template types are supported:
+                 - Floating: The entire screen is covered by the video of the first user who enters the room, and the videos of other users are displayed as small windows in rows in the bottom-left corner in room entry sequence. The screen allows up to 4 rows of 4 small videos, which float over the large video. Up to 1 large and 15 small videos can be displayed.
+                 - Grid: The videos of all users split the screen evenly. The more the users, the smaller the video dimensions. Up to 16 videos are supported.
+                 - Screen sharing: This is designed for video conferencing and online education. The shared screen (or camera video of the anchor) is always displayed as the large video, which occupies the left half of the screen, and the videos of other users occupy the right half in up to two columns of up to eight small videos each. Up to 1 large video and 15 small videos can be displayed. If the upstream aspect ratio does not match the output, the large video on the left will be scaled and displayed in whole, while the small videos on the right will be cropped.
+            4. Publish audio/video streams to up to 10 CDNs at a time. You can use `PublishCdnParams.PublishCdnUrl` to specify the URLs of the CDNs to publish to. To publish to Tencent Cloud’s CDN, set `PublishCdnParams.IsTencentCdn` to 1.
+            5. Configure a server-side callback to have Tencent Cloud send relay status updates to your server in the form of HTTP/HTTPS POST requests. To use the callback for relay events, please contact Technical Support.
+            6. The API supports four regions: Guangzhou, Shanghai, Beijing, and Hong Kong. If you relay to regions outside the Chinese mainland, select Hong Kong.
+             
+            Notes:
+            1. **Because On-Cloud MixTranscoding is a paid feature, calling this API will incur MixTranscoding fees. For details, see [Billing of MixTranscoding and Relay to CDN](https://intl.cloud.tencent.com/document/product/647/49446?from_cn_redirect=1).**
+            2. **Relaying to third-party CDNs will incur relaying fees. For details, see [Billing of MixTranscoding and Relay to CDN](https://intl.cloud.tencent.com/document/product/647/82155?from_cn_redirect=1).**
+            
+            Others:
+            1. You need to first call `StartPublishCdnStream` to start a relay task and get the task ID before you can use the `UpdatePublishCdnStream` API to modify the task and `StopPublishCdnStream` to stop the task.
+            2. To ensure the stability of relaying, you cannot switch between relaying audio only, relaying audio and video, and relaying video only for the same task.
+            3. To ensure the stability of relaying, you cannot change the video codec, audio codec, audio sample rate, audio bitrate, or sound channels using the `UpdatePublishCdnStream` API. We recommend you pass in all the other parameters.
+            4. When you relay a single stream, specify both `AudioParams` and `VideoParams` to publish both audio and video, and specify only `AudioParams` to publish audio only. You cannot switch between the two modes during the relaying process. For `VideoParams`, set `Width`, `Height`, `Fps`, `Bitrate`, and `Gop` according to the actual settings used for publishing.
+            5. The `SequenceNumber` parameter is required when you call `UpdatePublishCdnStream` to change the relaying parameters. It ensures that multiple requests for the same relaying task are in the correct order. The value of `SequenceNumber` increases each time a new request is made for the same task. If `InternalError` is returned, try again using the same `SequenceNumber`. You don’t need to handle the `FailedOperation.OutdateRequest` error.
+            6. You can create a relay task before anchors enter a room, in which case you need to manually call `StopPublishCdnStream` to stop the task. If you don’t, after all the users whose streams are mixed leave the room, the TRTC backend will wait for the timeout period (`AgentParams.MaxIdleTime`) to elapse before stopping the relaying task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.StopPublishCdnStream(TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamRequest)">
+            <summary>
+            This API is used to stop a relaying task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.StopPublishCdnStreamSync(TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamRequest)">
+            <summary>
+            This API is used to stop a relaying task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.UpdatePublishCdnStream(TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest)">
+            <summary>
+            This API is used to change the parameters of a relaying task.
+            Note: For details about how to use this API, see the `StartPublishCdnStream` document.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.TrtcClient.UpdatePublishCdnStreamSync(TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest)">
+            <summary>
+            This API is used to change the parameters of a relaying task.
+            Note: For details about how to use this API, see the `StartPublishCdnStream` document.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest"/></param>
+            <returns><see cref="T:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AgentParams.UserId">
+            <summary>
+            The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AgentParams.UserSig">
+            <summary>
+            The signature (similar to a login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AgentParams.MaxIdleTime">
+            <summary>
+            The timeout period (seconds) for relaying to stop automatically after all the users whose streams are mixed leave the room. The value cannot be smaller than 5 or larger than 86400 (24 hours). Default value: 30.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.AgentParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AudioEncode.SampleRate">
+            <summary>
+            The audio sample rate (Hz). Valid values: 48000, 44100, 32000, 24000, 16000, 8000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AudioEncode.Channel">
+            <summary>
+            The number of sound channels. Valid values: 1 (mono), 2 (dual).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AudioEncode.BitRate">
+            <summary>
+            The audio bitrate (Kbps). Value range: 8-500.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AudioEncode.Codec">
+            <summary>
+            The audio codec. Valid values: 0 (LC-AAC), 1 (HE-AAC), 2 (HE-AACv2). The default value is 0. If this parameter is set to 2, `Channel` must be 2. If it is set to 1 or 2, `SampleRate` can only be 48000, 44100, 32000, 24000, or 16000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.AudioEncode.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AudioParams.SampleRate">
+            <summary>
+            The audio sample rate.
+            1: 48000 Hz (default)
+            2: 44100 Hz
+            3: 16000 Hz
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AudioParams.Channel">
+            <summary>
+            The number of sound channels.
+            1: Mono-channel
+            2: Dual-channel (default)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.AudioParams.BitRate">
+            <summary>
+            The audio bitrate (bps). Value range: [32000, 128000]. Default: 64000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.AudioParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CloudStorage.Vendor">
+            <summary>
+            The cloud storage provider.
+            `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CloudStorage.Region">
+            <summary>
+            The region of cloud storage.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CloudStorage.Bucket">
+            <summary>
+            The storage bucket.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CloudStorage.AccessKey">
+            <summary>
+            The access_key of the cloud storage account.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CloudStorage.SecretKey">
+            <summary>
+            The secret_key of the cloud storage account.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CloudStorage.FileNamePrefix">
+            <summary>
+            The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.CloudStorage.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CloudVod.TencentVod">
+            <summary>
+            The Tencent Cloud VOD parameters.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.CloudVod.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.SdkAppId">
+            <summary>
+            The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.RoomId">
+            <summary>
+            The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.UserId">
+            <summary>
+            The [user ID](https://www.tencentcloud.com/document/product/647/37714#userid) of the recording robot in the TRTC room, which cannot be identical to the user IDs of anchors in the room or other recording robots. To distinguish this user ID from others, we recommend you include the room ID in the user ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.UserSig">
+            <summary>
+            The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.RecordParams">
+            <summary>
+            The on-cloud recording parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.StorageParams">
+            <summary>
+            The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.RoomIdType">
+            <summary>
+            The type of the TRTC room ID, which must be the same as the ID type of the room whose streams are recorded.
+            0: String
+            1: 32-bit integer (default)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.MixTranscodeParams">
+            <summary>
+            The stream mixing parameters, which are valid if the mixed-stream recording mode is used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.MixLayoutParams">
+            <summary>
+            The layout parameters, which are valid if the mixed-stream recording mode is used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.ResourceExpiredHour">
+            <summary>
+            The amount of time (in hours) during which API requests can be made after recording starts. Calculation starts when a recording task is started (when the recording task ID is returned). Once the period elapses, the query, modification, and stop recording APIs can no longer be called, but the recording task will continue. The default value is `72` (three days), and the maximum and minimum values allowed are `720` (30 days) and `6` respectively. If you do not set this parameter, the query, modification, and stop recording APIs can be called within 72 hours after recording starts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.PrivateMapKey">
+            <summary>
+            The permission ticket for a TRTC room. This parameter is required if advanced permission control is enabled in the console, in which case the TRTC backend will verify users’ [PrivateMapKey](https://intl.cloud.tencent.com/document/product/647/32240?from_cn_redirect=1), which include an encrypted room ID and permission bit list. A user providing only `UserSig` and not `PrivateMapKey` will be unable to enter the room.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingResponse.TaskId">
+            <summary>
+            The task ID assigned by the recording service, which uniquely identifies a recording process and becomes invalid after a recording task ends. After a recording task starts, if you want to perform other actions on the task, you need to specify the task ID when making API requests.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.CreateCloudRecordingResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingRequest.SdkAppId">
+            <summary>
+            The `SDKAppID` of the room whose streams are recorded.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingRequest.TaskId">
+            <summary>
+            The unique ID of the recording task, which is returned after recording starts successfully.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingResponse.TaskId">
+            <summary>
+            The task ID assigned by the recording service, which uniquely identifies a recording process and becomes invalid after a recording task ends.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DeleteCloudRecordingResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingRequest.SdkAppId">
+            <summary>
+            The `SDKAppID` of the room whose streams are recorded.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingRequest.TaskId">
+            <summary>
+            The unique ID of the recording task, which is returned after recording starts successfully.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingResponse.TaskId">
+            <summary>
+            The unique ID of the recording task.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingResponse.Status">
+            <summary>
+            The status of the on-cloud recording task.
+            Idle: The task is idle.
+            InProgress: The task is in progress.
+            Exited: The task is being ended.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingResponse.StorageFileList">
+            <summary>
+            The information of the recording files.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeCloudRecordingResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageRequest.StartTime">
+            <summary>
+            The start date in the format of YYYY-MM-DD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageRequest.EndTime">
+            <summary>
+            The end date in the format of YYYY-MM-DD.
+            The period queried per request cannot be longer than 31 days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageRequest.SdkAppId">
+            <summary>
+            The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageResponse.UsageKey">
+            <summary>
+            The usage type. Each element of this parameter corresponds to an element of `UsageValue` in the order they are listed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageResponse.UsageList">
+            <summary>
+            The usage data in each time unit.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeMixTranscodingUsageResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest.StartTime">
+            <summary>
+            The start date in the format of YYYY-MM-DD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest.EndTime">
+            <summary>
+            The end date in the format of YYYY-MM-DD.
+            The period queried per request cannot be longer than 31 days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest.MixType">
+            <summary>
+            Whether to query single-stream or mixed-stream recording. Valid values: `single`, `multi`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest.SdkAppId">
+            <summary>
+            The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageResponse.UsageKey">
+            <summary>
+            The usage type. Each element of this parameter corresponds to an element of `UsageValue` in the order they are listed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageResponse.UsageList">
+            <summary>
+            The usage data in each time unit.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeRecordingUsageResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageRequest.StartTime">
+            <summary>
+            The start date in the format of YYYY-MM-DD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageRequest.EndTime">
+            <summary>
+            The end date in the format of YYYY-MM-DD.
+            The period queried per request cannot be longer than 31 days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageRequest.SdkAppId">
+            <summary>
+            The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageResponse.UsageKey">
+            <summary>
+            The usage type. Each element of this parameter corresponds to an element of `UsageValue` in the order they are listed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageResponse.UsageList">
+            <summary>
+            The usage data in each time unit.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeRelayUsageResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageRequest.StartTime">
+            <summary>
+            The start date in the format of YYYY-MM-DD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageRequest.EndTime">
+            <summary>
+            The end date in the format of YYYY-MM-DD.
+            The period queried per request cannot be longer than 31 days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageRequest.SdkAppId">
+            <summary>
+            The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageResponse.UsageKey">
+            <summary>
+            The usage type. Each element of this parameter corresponds to an element of `UsageValue` in the order they are listed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageResponse.UsageList">
+            <summary>
+            The usage data in each time unit.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DescribeTrtcUsageResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdRequest.SdkAppId">
+            <summary>
+            `SDKAppId` of TRTC
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdRequest.RoomId">
+            <summary>
+            Room ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DismissRoomByStrRoomIdResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DismissRoomRequest.SdkAppId">
+            <summary>
+            `SDKAppId` of TRTC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DismissRoomRequest.RoomId">
+            <summary>
+            Room number.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DismissRoomRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.DismissRoomResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.DismissRoomResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MaxVideoUser.UserMediaStream">
+            <summary>
+            The stream information.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.MaxVideoUser.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuAudioParams.AudioEncode">
+            <summary>
+            The audio encoding parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuAudioParams.SubscribeAudioList">
+            <summary>
+            The audio mix allowlist. For the `StartPublishCdnStream` API, if you do not pass this parameter or leave it empty, the audios of all anchors will be mixed. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current allowlist; if you pass in an empty string, the audios of all anchors will be mixed.
+            In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuAudioParams.UnSubscribeAudioList">
+            <summary>
+            The audio mix blocklist. If you do not pass this parameter or leave it empty, there won’t be a blocklist. For the `UpdatePublishCdnStream` API, if you do not pass this parameter, no changes will be made to the current blocklist; if you pass in an empty string, the blocklist will be reset.
+            In cases where `SubscribeAudioList` and `UnSubscribeAudioList` are used at the same time, you need to specify both parameters. If you pass neither `SubscribeAudioList` nor `UnSubscribeAudioList`, no changes will be made. If a user is included in both parameters, the user’s audio will not be mixed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuAudioParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuCustomCrop.LocationX">
+            <summary>
+            The horizontal offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuCustomCrop.LocationY">
+            <summary>
+            The vertical offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuCustomCrop.Width">
+            <summary>
+            The video width (pixels) after cropping. The sum of this parameter and `LocationX` cannot be greater than 10000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuCustomCrop.Height">
+            <summary>
+            The video height (pixels) after cropping. The sum of this parameter and `LocationY` cannot be greater than 10000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuCustomCrop.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuFeedBackRoomParams.RoomId">
+            <summary>
+            The room ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuFeedBackRoomParams.RoomIdType">
+            <summary>
+            The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuFeedBackRoomParams.UserId">
+            <summary>
+            The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuFeedBackRoomParams.UserSig">
+            <summary>
+            The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuFeedBackRoomParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.UserMediaStream">
+            <summary>
+            The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.ImageWidth">
+            <summary>
+            The video width (pixels). If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.ImageHeight">
+            <summary>
+            The video height (pixels). If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.LocationX">
+            <summary>
+            The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.LocationY">
+            <summary>
+            The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.ZOrder">
+            <summary>
+            The image layer of the video. If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.RenderMode">
+            <summary>
+            The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.BackGroundColor">
+            <summary>
+            The background color of the video. Below are the values for some common colors:
+            Red: 0xcc0033
+            Yellow: 0xcc9900
+            Green: 0xcccc33
+            Blue: 0x99CCFF
+            Black: 0x000000
+            White: 0xFFFFFF
+            Grey: 0x999999
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.BackgroundImageUrl">
+            <summary>
+            The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayout.CustomCrop">
+            <summary>
+            Custom cropping.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuLayout.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayoutParams.MixLayoutMode">
+            <summary>
+            The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayoutParams.PureAudioHoldPlaceMode">
+            <summary>
+            Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayoutParams.MixLayoutList">
+            <summary>
+            The details of a custom layout.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayoutParams.MaxVideoUser">
+            <summary>
+            The information of the large video in screen sharing or floating layout mode.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuLayoutParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayoutVolume.AppData">
+            <summary>
+            The application data, which will be embedded in the `app_data` field of the custom SEI. It must be shorter than 4,096 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayoutVolume.PayloadType">
+            <summary>
+            The payload type of the SEI message. The default is 100. Value range: 100-254 (244 is used internally by Tencent Cloud for timestamps).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayoutVolume.Interval">
+            <summary>
+            The SEI sending interval (milliseconds). The default value is 1000.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuLayoutVolume.FollowIdr">
+            <summary>
+            Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuLayoutVolume.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuPassThrough.PayloadContent">
+            <summary>
+            The payload of the pass-through SEI.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuPassThrough.PayloadType">
+            <summary>
+            The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuPassThrough.PayloadUuid">
+            <summary>
+            This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuPassThrough.Interval">
+            <summary>
+            The SEI sending interval (milliseconds). The default value is 1000.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuPassThrough.FollowIdr">
+            <summary>
+            Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuPassThrough.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuPublishCdnParam.PublishCdnUrl">
+            <summary>
+            The URLs of the CDNs to relay to.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuPublishCdnParam.IsTencentCdn">
+            <summary>
+            Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuPublishCdnParam.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuSeiParams.LayoutVolume">
+            <summary>
+            The audio volume layout SEI.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuSeiParams.PassThrough">
+            <summary>
+            The pass-through SEI.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuSeiParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuUserInfoParams.UserInfo">
+            <summary>
+            The user information.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuUserInfoParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuVideoParams.VideoEncode">
+            <summary>
+            The video encoding parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuVideoParams.LayoutParams">
+            <summary>
+            The layout parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuVideoParams.BackGroundColor">
+            <summary>
+            The canvas color. Below are the values for some common colors:
+            Red: 0xcc0033
+            Yellow: 0xcc9900
+            Green: 0xcccc33
+            Blue: 0x99CCFF
+            Black: 0x000000
+            White: 0xFFFFFF
+            Grey: 0x999999
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuVideoParams.BackgroundImageUrl">
+            <summary>
+            The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuVideoParams.WaterMarkList">
+            <summary>
+            The watermark information for the mixed stream.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuVideoParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkImage.WaterMarkUrl">
+            <summary>
+            The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkImage.WaterMarkWidth">
+            <summary>
+            The watermark width (pixels).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkImage.WaterMarkHeight">
+            <summary>
+            The watermark height (pixels).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkImage.LocationX">
+            <summary>
+            The horizontal offset (pixels) of the watermark.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkImage.LocationY">
+            <summary>
+            The vertical offset (pixels) of the watermark.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkImage.ZOrder">
+            <summary>
+            The image layer of the watermark. If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuWaterMarkImage.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkParams.WaterMarkType">
+            <summary>
+            The watermark type. Valid values: `0` (default): Image; `1`: Text.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkParams.WaterMarkImage">
+            <summary>
+            The watermark image information. This parameter is required if `WaterMarkType` is 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkParams.WaterMarkText">
+            <summary>
+            The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuWaterMarkParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.Text">
+            <summary>
+            The text.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.WaterMarkWidth">
+            <summary>
+            The watermark width (pixels).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.WaterMarkHeight">
+            <summary>
+            The watermark height (pixels).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.LocationX">
+            <summary>
+            The horizontal offset (pixels) of the watermark.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.LocationY">
+            <summary>
+            The vertical offset (pixels) of the watermark.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.FontSize">
+            <summary>
+            The font size.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.FontColor">
+            <summary>
+            The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.BackGroundColor">
+            <summary>
+            The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.McuWaterMarkText.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.Top">
+            <summary>
+            The Y axis of the window’s top-left corner. Value range: [0, 1920]. The value cannot be larger than the canvas height.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.Left">
+            <summary>
+            The X axis of the window’s top-left corner. Value range: [0, 1920]. The value cannot be larger than the canvas width.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.Width">
+            <summary>
+            The relative width of the window. Value range: [0, 1920]. The sum of the values of this parameter and `Left` cannot exceed the canvas width.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.Height">
+            <summary>
+            The relative height of the window. Value range: [0, 1920]. The sum of the values of this parameter and `Top` cannot exceed the canvas height.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.UserId">
+            <summary>
+            The user ID (string) of the anchor whose video is shown in the window. If you do not set this parameter, anchors’ videos will be shown in their room entry sequence.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.Alpha">
+            <summary>
+            The degree of transparency of the canvas. Value range: [0, 255]. 0 means fully opaque, and 255 means fully transparent.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.RenderMode">
+            <summary>
+            0: Stretch. In this mode, the image is stretched to fill the space available. The whole image is visible after scaling. However, if the original aspect ratio is different from the target, the image may be distorted.
+            
+            1: Crop (default). In this mode, if the original aspect ratio is different from the target, the image will be cropped according to the target before being stretched to fill the space available. The image will not be distorted.
+            
+            2: Blank. This mode stretches the image while keeping its original aspect ratio. If the original aspect ratio is different from the target, there may be blank spaces to the top and bottom or to the left and right of the window.
+            
+            3: Smart stretch. This mode is similar to the crop mode, except that it restricts cropping to 20% of the image’s width or height at most.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.MediaId">
+            <summary>
+            The type of the stream subscribed to.
+            0: Primary stream (default)
+            1: Substream
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.ImageLayer">
+            <summary>
+            The image layer. 0 is the default value and means the bottommost layer.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayout.SubBackgroundImage">
+            <summary>
+            The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.MixLayout.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.MixLayoutMode">
+            <summary>
+            Layout mode:
+            1: Floating
+            2: Screen sharing
+            3: Grid (default)
+            4: Custom
+            
+            Floating: By default, the video of the first anchor (you can also specify an anchor) who enters the room is scaled to fill the screen. When other anchors enter the room, their videos appear smaller and are superimposed over the large video from left to right starting from the bottom of the canvas according to their room entry sequence. If the total number of videos is 17 or less, there will be four windows in each row (4 x 4); if it is greater than 17, there will be five windows in each row (5 x 5). Up to 25 videos can be displayed. A user who publishes only audio will still be displayed in one window.
+            
+            Screen sharing: The video of a specified anchor occupies a larger part of the canvas on the left side (if you do not specify an anchor, the left window will display the canvas background). The videos of other anchors are smaller and are positioned on the right side. If the total number of videos is 17 or less, the small videos are positioned from top to bottom in up to two columns on the right side, with eight videos per column at most. If there are more than 17 videos, the additional videos are positioned at the bottom of the canvas from left to right. Up to 25 videos can be displayed. A user who publishes only audio will still be displayed in one window.
+            
+            Grid: The videos of anchors are scaled and positioned automatically according to the total number of anchors in a room. Each video has the same size. Up to 25 videos can be displayed.
+            
+            Custom: Specify the layout of videos by using the `MixLayoutList` parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.MixLayoutList">
+            <summary>
+            The custom layout details. This parameter is valid if `MixLayoutMode` is set to `4`. Up to 25 videos can be displayed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.BackGroundColor">
+            <summary>
+            The background color, which is a hexadecimal value (starting with "#", followed by the color value) converted from an 8-bit RGB value. For example, the RGB value of orange is `R:255 G:165 B:0`, and its hexadecimal value is `#FFA500`. The default color is black.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.MaxResolutionUserId">
+            <summary>
+            The user whose video is displayed in the big window. This parameter is valid if `MixLayoutMode` is set to `1` (floating) or `2` (screen sharing). If it is left empty, the first anchor entering the room is displayed in the big window in the floating mode and the canvas background is displayed in the screen sharing mode.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.MediaId">
+            <summary>
+            The stream type.
+            0: Primary stream (default)
+            1: Substream (screen sharing stream)
+            This parameter specifies the type of the stream displayed in the big window. If it appears in `MixLayoutList`, it indicates the type of the stream of a specified user.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.BackgroundImageUrl">
+            <summary>
+            The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.PlaceHolderMode">
+            <summary>
+            `1` means to use placeholders, and `0` (default) means to not use placeholders. If this parameter is set to `1`, when a user is not publishing video, a placeholder image will be displayed in the window reserved for the user.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.BackgroundImageRenderMode">
+            <summary>
+            The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is defined the same as `RenderMode` in `MixLayoufList`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.DefaultSubBackgroundImage">
+            <summary>
+            The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.WaterMarkList">
+            <summary>
+            The watermark layout. Up to 25 watermarks are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.RenderMode">
+            <summary>
+            The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.MaxResolutionUserAlign">
+            <summary>
+            This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.MixLayoutParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixTranscodeParams.VideoParams">
+            <summary>
+            The video transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixTranscodeParams.AudioParams">
+            <summary>
+            The audio transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.MixTranscodeParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixUserInfo.UserId">
+            <summary>
+            User ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixUserInfo.RoomId">
+            <summary>
+            If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.MixUserInfo.RoomIdType">
+            <summary>
+            The type of the `RoomId` parameter. 0: integer; 1: string.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.MixUserInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest.SdkAppId">
+            <summary>
+            The `SDKAppID` of the room whose streams are recorded.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest.TaskId">
+            <summary>
+            The unique ID of the recording task, which is returned after recording starts successfully.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest.MixLayoutParams">
+            <summary>
+            The new stream mixing layout to use.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest.SubscribeStreamUserIds">
+            <summary>
+            The allowlist/blocklist for stream subscription.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingResponse.TaskId">
+            <summary>
+            The task ID assigned by the recording service, which uniquely identifies a recording process and becomes invalid after a recording task ends.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.ModifyCloudRecordingResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RecordParams.RecordMode">
+            <summary>
+            The recording mode.
+            1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
+            2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RecordParams.MaxIdleTime">
+            <summary>
+            The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RecordParams.StreamType">
+            <summary>
+            The media type of the streams to record.
+            0: Audio and video streams (default)
+            1: Audio streams only
+            2: Video streams only
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RecordParams.SubscribeStreamUserIds">
+            <summary>
+            The allowlist/blocklist for stream subscription.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RecordParams.OutputFormat">
+            <summary>
+            The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RecordParams.AvMerge">
+            <summary>
+            Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RecordParams.MaxMediaFileDuration">
+            <summary>
+            The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
+            This parameter is invalid if the output format is HLS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RecordParams.MediaId">
+            <summary>
+            The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.RecordParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdRequest.SdkAppId">
+            <summary>
+            `SDKAppId` of TRTC
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdRequest.RoomId">
+            <summary>
+            Room ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdRequest.UserIds">
+            <summary>
+            List of up to 10 users to be removed
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.RemoveUserByStrRoomIdResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RemoveUserRequest.SdkAppId">
+            <summary>
+            `SDKAppId` of TRTC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RemoveUserRequest.RoomId">
+            <summary>
+            Room number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RemoveUserRequest.UserIds">
+            <summary>
+            List of up to 10 users to be removed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.RemoveUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.RemoveUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.RemoveUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest.SdkAppId">
+            <summary>
+            The application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest.StrRoomId">
+            <summary>
+            The room ID (string).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest.UserId">
+            <summary>
+            The user ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest.IsMute">
+            <summary>
+            Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.SetUserBlockedByStrRoomIdResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest.SdkAppId">
+            <summary>
+            The application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest.RoomId">
+            <summary>
+            The room ID (number).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest.UserId">
+            <summary>
+            The user ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest.IsMute">
+            <summary>
+            Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.SetUserBlockedRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SetUserBlockedResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.SetUserBlockedResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SingleSubscribeParams.UserMediaStream">
+            <summary>
+            The stream information.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.SingleSubscribeParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.SdkAppId">
+            <summary>
+            The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.RoomId">
+            <summary>
+            The ID of the room whose streams are relayed (the main room).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.RoomIdType">
+            <summary>
+            The type of the `RoomId` parameter, which must be the same as the ID type of the room whose streams are relayed. 0: integer; 1: string.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.AgentParams">
+            <summary>
+            The information of the relaying robot in the room.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.WithTranscoding">
+            <summary>
+            Whether to transcode the streams. 0: No; 1: Yes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.AudioParams">
+            <summary>
+            The audio encoding parameters for relaying.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.VideoParams">
+            <summary>
+            The video encoding parameters for relaying. If you do not pass this parameter, only audio will be relayed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.SingleSubscribeParams">
+            <summary>
+            The information of a single stream relayed. When you relay a single stream, set `WithTranscoding` to 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.PublishCdnParams">
+            <summary>
+            The CDN information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.SeiParams">
+            <summary>
+            The stream mixing SEI parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.FeedBackRoomParams">
+            <summary>
+            The information of the room to which streams are relayed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamResponse.TaskId">
+            <summary>
+            The task ID, which is generated by the Tencent Cloud server. You need to pass in the task ID when making a request to update or stop a relaying task.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.StartPublishCdnStreamResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamRequest.SdkAppId">
+            <summary>
+            The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamRequest.TaskId">
+            <summary>
+            The task ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamResponse.TaskId">
+            <summary>
+            The task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.StopPublishCdnStreamResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StorageFile.UserId">
+            <summary>
+            The user whose stream is recorded into the file. In the mixed-stream recording mode, this parameter will be empty.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StorageFile.FileName">
+            <summary>
+            The filename.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StorageFile.TrackType">
+            <summary>
+            The type of the media recorded.
+            video
+            audio
+            audio_video
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StorageFile.BeginTimeStamp">
+            <summary>
+            The start time (Unix timestamp) of the recording file.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.StorageFile.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StorageParams.CloudStorage">
+            <summary>
+            The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.StorageParams.CloudVod">
+            <summary>
+            The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.StorageParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SubscribeStreamUserIds.SubscribeAudioUserIds">
+            <summary>
+            The allowlist for audio subscription. For example, `["1", "2", "3"]` means to only subscribe to the audios of users 1, 2, and 3, and ["1.*$"] means to only subscribe to the audios of users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SubscribeStreamUserIds.UnSubscribeAudioUserIds">
+            <summary>
+            The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SubscribeStreamUserIds.SubscribeVideoUserIds">
+            <summary>
+            The allowlist for video subscription. For example, `["1", "2", "3"]` means to only subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to only subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.SubscribeStreamUserIds.UnSubscribeVideoUserIds">
+            <summary>
+            The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.SubscribeStreamUserIds.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.Procedure">
+            <summary>
+            The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.ExpireTime">
+            <summary>
+            The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.StorageRegion">
+            <summary>
+            The storage region. Set this parameter if you have special requirements on the storage region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.ClassId">
+            <summary>
+            The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
+            The default value is `0`, which means others.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.SubAppId">
+            <summary>
+            The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.SessionContext">
+            <summary>
+            The task flow context, which is passed through after the task is completed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.SourceContext">
+            <summary>
+            The upload context, which is passed through after upload is completed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.MediaType">
+            <summary>
+            The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TencentVod.UserDefineRecordId">
+            <summary>
+            The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.TencentVod.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TrtcUsage.TimeKey">
+            <summary>
+            The time point in the format of `YYYY-MM-DD HH:mm:ss`. If more than one day is queried, `HH:mm:ss` is `00:00:00`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.TrtcUsage.UsageValue">
+            <summary>
+            The usage (minutes). Each element of this parameter corresponds to an element of `UsageKey` in the order they are listed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.TrtcUsage.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.SdkAppId">
+            <summary>
+            The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.TaskId">
+            <summary>
+            The task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.SequenceNumber">
+            <summary>
+            The sequence of a request. This parameter ensures the requests to change the parameters of the same relaying task are in the correct order. It increases each time a new request is made.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.WithTranscoding">
+            <summary>
+            Whether to transcode the streams. 0: No; 1: Yes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.AudioParams">
+            <summary>
+            Pass this parameter to change the users whose audios are mixed. If you do not pass this parameter, no changes will be made.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.VideoParams">
+            <summary>
+            Pass this parameter to change video parameters other than the codec, including the video layout, background image, background color, and watermark information. This parameter is valid only if streams are transcoded. If you do not pass it, no changes will be made.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.SingleSubscribeParams">
+            <summary>
+            Pass this parameter to change the single stream that is relayed. This parameter is valid only if streams are not transcoded. If you do not pass this parameter, no changes will be made.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.PublishCdnParams">
+            <summary>
+            Pass this parameter to change the CDNs to relay to. If you do not pass this parameter, no changes will be made.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.SeiParams">
+            <summary>
+            The stream mixing SEI parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.FeedBackRoomParams">
+            <summary>
+            The information of the room to which streams are relayed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamResponse.TaskId">
+            <summary>
+            The task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.UpdatePublishCdnStreamResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UserMediaStream.UserInfo">
+            <summary>
+            The user information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.UserMediaStream.StreamType">
+            <summary>
+            The stream type. 0: Camera; 1: Screen sharing. If you do not pass this parameter, 0 will be used.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.UserMediaStream.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoEncode.Width">
+            <summary>
+            The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoEncode.Height">
+            <summary>
+            The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoEncode.Fps">
+            <summary>
+            The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoEncode.BitRate">
+            <summary>
+            The bitrate (Kbps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 10000].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoEncode.Gop">
+            <summary>
+            The GOP (seconds) of the output stream. This parameter is required if audio and video are relayed. Value range: [1, 5].
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.VideoEncode.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoParams.Width">
+            <summary>
+            The video width in pixels. The value of this parameter cannot be larger than 1920, and the result of multiplying `Width` and `Height` cannot exceed 1920 x 1080. The default value is `360`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoParams.Height">
+            <summary>
+            The video height in pixels. The value of this parameter cannot be larger than 1920, and the result of multiplying `Width` and `Height` cannot exceed 1920 x 1080. The default value is `640`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoParams.Fps">
+            <summary>
+            The video frame rate. Value range: [1, 60]. Default: 15.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoParams.BitRate">
+            <summary>
+            The video bitrate (bps). Value range: [64000, 8192000]. Default: 550000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.VideoParams.Gop">
+            <summary>
+            The keyframe interval (seconds). Default value: 10.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.VideoParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.WaterMark.WaterMarkType">
+            <summary>
+            The watermark type. 0 (default): image; 1: text (not supported yet).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.WaterMark.WaterMarkImage">
+            <summary>
+            The information of watermark images. This parameter is required if the watermark type is image.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.WaterMark.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.WaterMarkImage.WaterMarkUrl">
+            <summary>
+            The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.WaterMarkImage.Top">
+            <summary>
+            The Y axis of the image's top-left corner. Value range: [0, 2560]. The value cannot be larger than the canvas height.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.WaterMarkImage.Left">
+            <summary>
+            The X axis of the image’s top-left corner. Value range: [0, 2560]. The value cannot be larger than the canvas width.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.WaterMarkImage.Width">
+            <summary>
+            The relative width of the image. Value range: [0, 2560]. The sum of the values of this parameter and `Left` cannot exceed the canvas width.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Trtc.V20190722.Models.WaterMarkImage.Height">
+            <summary>
+            The relative height of the image. Value range: [0, 2560]. The sum of the values of this parameter and `Top` cannot exceed the canvas height.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Trtc.V20190722.Models.WaterMarkImage.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

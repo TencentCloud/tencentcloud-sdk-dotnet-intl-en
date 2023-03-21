@@ -1,0 +1,1861 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudEcdn</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.AddEcdnDomain(TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest)">
+            <summary>
+            This API is used to create an acceleration domain name.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/41123?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.AddEcdnDomainSync(TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest)">
+            <summary>
+            This API is used to create an acceleration domain name.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/41123?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DeleteEcdnDomain(TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainRequest)">
+            <summary>
+            This API is used to delete a specified acceleration domain name. The acceleration domain name to be deleted must be in disabled status.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/570/42471?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DeleteEcdnDomainSync(TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainRequest)">
+            <summary>
+            This API is used to delete a specified acceleration domain name. The acceleration domain name to be deleted must be in disabled status.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/570/42471?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeDomains(TencentCloud.Ecdn.V20191012.Models.DescribeDomainsRequest)">
+            <summary>
+            This API is used to query the basic information of a CDN domain name, including the project ID, status, business type, creation time, update time, etc.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/41118?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeDomainsSync(TencentCloud.Ecdn.V20191012.Models.DescribeDomainsRequest)">
+            <summary>
+            This API is used to query the basic information of a CDN domain name, including the project ID, status, business type, creation time, update time, etc.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/41118?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeDomainsConfig(TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest)">
+            <summary>
+            This API is used to query the detailed configuration information of a CDN acceleration domain name.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/41117?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeDomainsConfigSync(TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest)">
+            <summary>
+            This API is used to query the detailed configuration information of a CDN acceleration domain name.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/41117?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeEcdnDomainLogs(TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest)">
+            <summary>
+            This API is used to query the access log download link of a domain name.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeEcdnDomainLogsSync(TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest)">
+            <summary>
+            This API is used to query the access log download link of a domain name.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeEcdnDomainStatistics(TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest)">
+            <summary>
+            This API is used to query the statistical metrics of domain name access within a specified time period.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeEcdnDomainStatisticsSync(TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest)">
+            <summary>
+            This API is used to query the statistical metrics of domain name access within a specified time period.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeEcdnStatistics(TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest)">
+            <summary>
+            This API is used to query ECDN real-time access monitoring data and supports the following metrics:
+            
+            + Traffic (in bytes)
+            + Bandwidth (in bps)
+            + Number of requests
+            + Number of 2xx status codes and details of status codes starting with 2
+            + Number of 3xx status codes and details of status codes starting with 3
+            + Number of 4xx status codes and details of status codes starting with 4
+            + Number of 5xx status codes and details of status codes starting with 5
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeEcdnStatisticsSync(TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest)">
+            <summary>
+            This API is used to query ECDN real-time access monitoring data and supports the following metrics:
+            
+            + Traffic (in bytes)
+            + Bandwidth (in bps)
+            + Number of requests
+            + Number of 2xx status codes and details of status codes starting with 2
+            + Number of 3xx status codes and details of status codes starting with 3
+            + Number of 4xx status codes and details of status codes starting with 4
+            + Number of 5xx status codes and details of status codes starting with 5
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeIpStatus(TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusRequest)">
+            <summary>
+            This API is used to query ECDN node IPs. This API is only available to beta users. Please submit a ticket to use it.
+            
+            If you need to add the node IPs to your origin allowlist, keep querying the updating the IPs regularly to ensure the success of origin forwarding. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribeIpStatusSync(TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusRequest)">
+            <summary>
+            This API is used to query ECDN node IPs. This API is only available to beta users. Please submit a ticket to use it.
+            
+            If you need to add the node IPs to your origin allowlist, keep querying the updating the IPs regularly to ensure the success of origin forwarding. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribePurgeQuota(TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaRequest)">
+            <summary>
+            This API is used to query the usage quota of the purge API.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/41956?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribePurgeQuotaSync(TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaRequest)">
+            <summary>
+            This API is used to query the usage quota of the purge API.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/41956?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribePurgeTasks(TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest)">
+            <summary>
+            This API is used to query the submission record and progress of purge tasks.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/37873?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.DescribePurgeTasksSync(TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest)">
+            <summary>
+            This API is used to query the submission record and progress of purge tasks.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/37873?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.PurgePathCache(TencentCloud.Ecdn.V20191012.Models.PurgePathCacheRequest)">
+            <summary>
+            This API is used to purge cache directories in batches. One purge task ID will be returned for each submission.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/570/42475?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.PurgePathCacheSync(TencentCloud.Ecdn.V20191012.Models.PurgePathCacheRequest)">
+            <summary>
+            This API is used to purge cache directories in batches. One purge task ID will be returned for each submission.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/570/42475?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.PurgeUrlsCache(TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheRequest)">
+            <summary>
+            This API is used to batch purge URLs. One purge task ID will be returned for each submission.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/37870?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.PurgeUrlsCacheSync(TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheRequest)">
+            <summary>
+            This API is used to batch purge URLs. One purge task ID will be returned for each submission.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/api/228/37870?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.StartEcdnDomain(TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainRequest)">
+            <summary>
+            This API is used to enable an acceleration domain name. The domain name to be enabled must be in deactivated status.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/product/228/41121?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.StartEcdnDomainSync(TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainRequest)">
+            <summary>
+            This API is used to enable an acceleration domain name. The domain name to be enabled must be in deactivated status.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/product/228/41121?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.StopEcdnDomain(TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainRequest)">
+            <summary>
+            This API is used to disable an acceleration domain name. The domain name to be disabled must be in enabled or deploying status.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/product/228/41120?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.StopEcdnDomainSync(TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainRequest)">
+            <summary>
+            This API is used to disable an acceleration domain name. The domain name to be disabled must be in enabled or deploying status.
+            
+            >? If you have migrated your ECDN service to CDN, you can use the <a href="https://intl.cloud.tencent.com/document/product/228/41120?from_cn_redirect=1">corresponding CDN API</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.UpdateDomainConfig(TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest)">
+            <summary>
+            This API is used to update the configuration information of an ECDN acceleration domain name.
+            Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. The default value will be used for attributes that are not passed. We recommend calling the querying API to obtain the configuration attributes first. You can then modify and pass the attributes to the API. The certificate and key fields do not need to be passed for HTTPS configuration.
+            
+            >?  If your application has been migrated to Tencent Cloud CDN, you can use <a href="https://intl.cloud.tencent.com/document/product/228/41116?from_cn_redirect=1">CDN APIs</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.EcdnClient.UpdateDomainConfigSync(TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest)">
+            <summary>
+            This API is used to update the configuration information of an ECDN acceleration domain name.
+            Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. The default value will be used for attributes that are not passed. We recommend calling the querying API to obtain the configuration attributes first. You can then modify and pass the attributes to the API. The certificate and key fields do not need to be passed for HTTPS configuration.
+            
+            >?  If your application has been migrated to Tencent Cloud CDN, you can use <a href="https://intl.cloud.tencent.com/document/product/228/41116?from_cn_redirect=1">CDN APIs</a>.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.Domain">
+            <summary>
+            Domain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.Origin">
+            <summary>
+            Origin server configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.Area">
+            <summary>
+            Domain name acceleration region. Valid values: mainland (acceleration in Mainland China), overseas (acceleration outside Mainland China), global (global acceleration).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.ProjectId">
+            <summary>
+            Project ID. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.IpFilter">
+            <summary>
+            IP block/allowlist configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.IpFreqLimit">
+            <summary>
+            IP access limit configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.ResponseHeader">
+            <summary>
+            Origin server response header configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.CacheKey">
+            <summary>
+            Node caching configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.Cache">
+            <summary>
+            Caching rule configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.Https">
+            <summary>
+            HTTPS configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.ForceRedirect">
+            <summary>
+            Forced access protocol redirection configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.Tag">
+            <summary>
+            Tag bound to a domain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.WebSocket">
+            <summary>
+            WebSocket configuration.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.AddEcdnDomainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AdvanceHttps.CustomTlsStatus">
+            <summary>
+            Custom TLS data switch
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AdvanceHttps.TlsVersion">
+            <summary>
+            TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AdvanceHttps.Cipher">
+            <summary>
+            Custom encryption suite
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AdvanceHttps.VerifyOriginType">
+            <summary>
+            Origin-pull verification status
+            `off`: Disables origin-pull verification
+            `oneWay`: Only verify the origin
+            `twoWay`: Enables two-way origin-pull verification
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AdvanceHttps.CertInfo">
+            <summary>
+            Configuration information of the origin-pull certificate
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.AdvanceHttps.OriginCertInfo">
+            <summary>
+            Configuration information of the origin server certificate
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.AdvanceHttps.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Cache.CacheRules">
+            <summary>
+            Caching configuration rule array.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Cache.FollowOrigin">
+            <summary>
+            Whether to follow the `Cache-Control: max-age` configuration on the origin server (this feature is only available to users on the allowlist).
+            on: enable
+            off: disable
+            If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.Cache.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.CacheKey.FullUrlCache">
+            <summary>
+            Whether to enable full path cache. Valid values: on, off.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.CacheKey.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.CacheRule.CacheType">
+            <summary>
+            Cache type. Valid values: all (all files), file (extension type), directory (directory), path (full path), index (homepage).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.CacheRule.CacheContents">
+            <summary>
+            Cached content list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.CacheRule.CacheTime">
+            <summary>
+            Cache time in seconds.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.CacheRule.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ClientCert.Certificate">
+            <summary>
+            Client certificate in PEM format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ClientCert.CertName">
+            <summary>
+            Client certificate name.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ClientCert.ExpireTime">
+            <summary>
+            Certificate expiration time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ClientCert.DeployTime">
+            <summary>
+            Certificate issuance time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.ClientCert.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainRequest.Domain">
+            <summary>
+            Domain name to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DeleteEcdnDomainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest.Offset">
+            <summary>
+            Pagination offset address. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest.Limit">
+            <summary>
+            Number of domain names per page. Default value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest.Filters">
+            <summary>
+            Query filter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest.Sort">
+            <summary>
+            Query result sorting rule.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigResponse.Domains">
+            <summary>
+            Domain name list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigResponse.TotalCount">
+            <summary>
+            Number of matched domain names. This is used for paginated query.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsRequest.Offset">
+            <summary>
+            Pagination offset address. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsRequest.Limit">
+            <summary>
+            Number of domain names per page. Default value: 100. Maximum value: 1000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsRequest.Filters">
+            <summary>
+            Query filter.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsResponse.Domains">
+            <summary>
+            Domain name information list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsResponse.TotalCount">
+            <summary>
+            Total number of domain names.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeDomainsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest.Domain">
+            <summary>
+            Domain name to be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest.StartTime">
+            <summary>
+            Log start time, such as 2019-10-01 00:00:00
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest.EndTime">
+            <summary>
+            Log end time, such as 2019-10-02 00:00:00. Only logs for the last 30 days can be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest.Offset">
+            <summary>
+            Pagination offset for log link list. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest.Limit">
+            <summary>
+            Number of log links per page. Default value: 100. Maximum value: 1000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsResponse.DomainLogs">
+            <summary>
+            Log link list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsResponse.TotalCount">
+            <summary>
+            Total number of log links.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.StartTime">
+            <summary>
+            Query start time, such as 2019-12-13 00:00:00.
+            The time span cannot exceed 90 days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.EndTime">
+            <summary>
+            Query end time, such as 2019-12-13 23:59:59.
+            The time span cannot exceed 90 days.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.Metrics">
+            <summary>
+            Statistical metric names:
+            flux: traffic (in bytes)
+            bandwidth: bandwidth (in bps)
+            request: number of requests
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.Domains">
+            <summary>
+            Specifies the list of domain names to be queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.Projects">
+            <summary>
+            Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
+            If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: 1000. Maximum value: 3,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.Area">
+            <summary>
+            Statistical areas:
+            mainland: Chinese mainland
+            oversea: outside the Chinese mainland
+            global: global
+            Default value: global
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsResponse.Data">
+            <summary>
+            Domain name data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsResponse.TotalCount">
+            <summary>
+            Quantity
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnDomainStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest.StartTime">
+            <summary>
+            Query start time, such as 2019-12-13 00:00:00
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest.EndTime">
+            <summary>
+            Query end time, such as 2019-12-13 23:59:59
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest.Metrics">
+            <summary>
+            Specifies the query metric, which can be:
+            flux: traffic (in bytes)
+            bandwidth: bandwidth (in bps)
+            request: number of requests
+            2xx: returns the number of 2xx status codes or details of status codes starting with 2
+            3xx: returns the number of 3xx status codes or details of status codes starting with 3
+            4xx: returns the number of 4xx status codes or details of status codes starting with 4
+            5xx: returns the number of 5xx status codes or details of status codes starting with 5
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest.Interval">
+            <summary>
+            Sampling interval in minutes. The available options vary for different query period. See below: 
+            1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+            2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+            4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+            8 to 31 days: `60`, `120`, `240`, `1440`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest.Domains">
+            <summary>
+            Specifies the list of domain names to be queried
+            
+            Up to 30 acceleration domain names can be queried at a time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest.Projects">
+            <summary>
+            Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
+            If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest.Area">
+            <summary>
+            Statistical areas:
+            mainland: Chinese mainland
+            oversea: outside the Chinese mainland
+            global: global
+            Default value: global
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsResponse.Data">
+            <summary>
+            Returned data details of the specified conditional query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeEcdnStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusRequest.Domain">
+            <summary>
+            Acceleration domain name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusRequest.Area">
+            <summary>
+            Target region of the query:
+            mainland: nodes in Mainland China
+            overseas: nodes outside Mainland China
+            global: global nodes
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusResponse.Ips">
+            <summary>
+            Node list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusResponse.TotalCount">
+            <summary>
+            Total number of nodes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribeIpStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaResponse.UrlPurge">
+            <summary>
+            URL purge usage and quota.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaResponse.PathPurge">
+            <summary>
+            Directory purge usage and quota.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribePurgeQuotaResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.PurgeType">
+            <summary>
+            Purge type to be queried. url: query URL purge records; path: query directory purge records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.StartTime">
+            <summary>
+            Start time, such as 2018-08-08 00:00:00
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.EndTime">
+            <summary>
+            End time, such as 2018-08-08 23:59:59
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.TaskId">
+            <summary>
+            Task ID returned during submission. Either `TaskId` or start time must be specified for a query.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0 (starting from entry 0).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.Limit">
+            <summary>
+            Pagination limit. Default value: 20.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.Keyword">
+            <summary>
+            Query keyword. Please enter a domain name or full URL beginning with `http(s)://`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.Status">
+            <summary>
+            Specified task status to be queried. fail: failed, done: succeeded, process: purging.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksResponse.PurgeLogs">
+            <summary>
+            Purge history.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksResponse.TotalCount">
+            <summary>
+            Total number of tasks, which is used for pagination.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DescribePurgeTasksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DetailData.Name">
+            <summary>
+            Data type name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DetailData.Value">
+            <summary>
+            Data value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DetailData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.ResourceId">
+            <summary>
+            Domain name ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.AppId">
+            <summary>
+            Tencent Cloud account ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.Domain">
+            <summary>
+            CDN acceleration domain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.Cname">
+            <summary>
+            Domain name CNAME.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.Status">
+            <summary>
+            Domain name status. Valid values: pending (reviewing), rejected (rejected), processing (deploying after approval), online (enabled), offline (disabled), deleted (deleted).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.ProjectId">
+            <summary>
+            Project ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.CreateTime">
+            <summary>
+            Domain name creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.UpdateTime">
+            <summary>
+            Domain name update time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.Origin">
+            <summary>
+            Origin server configuration details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.Disable">
+            <summary>
+            Domain name blockage status. Valid values: normal (normal), overdue (service is suspended due to arrears), quota (trial traffic package is used up), malicious (malicious user), ddos (DDoS attack), idle (no traffic), unlicensed (no ICP filing), capping (bandwidth cap reached), readonly (read-only)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.Area">
+            <summary>
+            Acceleration region. Valid values: mainland, oversea, global.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.Readonly">
+            <summary>
+            Domain name lock status. normal: not locked; global: globally locked
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.Tag">
+            <summary>
+            Domain name tag
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DomainBriefInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainData.Resource">
+            <summary>
+            Domain name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainData.DetailData">
+            <summary>
+            Result details.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DomainData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.ResourceId">
+            <summary>
+            Domain name ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.AppId">
+            <summary>
+            Tencent Cloud account ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Domain">
+            <summary>
+            Acceleration domain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Cname">
+            <summary>
+            Domain name CNAME.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Status">
+            <summary>
+            Domain name status. Valid values: pending (reviewing), rejected (rejected), processing (deploying after approval), online (enabled), offline (disabled), deleted (deleted).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.ProjectId">
+            <summary>
+            Project ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.CreateTime">
+            <summary>
+            Domain name creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.UpdateTime">
+            <summary>
+            Domain name update time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Origin">
+            <summary>
+            Origin server configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.IpFilter">
+            <summary>
+            IP blocklist/allowlist configuration.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.IpFreqLimit">
+            <summary>
+            IP access limit configuration.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.ResponseHeader">
+            <summary>
+            Origin server response header configuration.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.CacheKey">
+            <summary>
+            Node caching configuration.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Cache">
+            <summary>
+            Caching rule configuration.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Https">
+            <summary>
+            HTTPS configuration.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Disable">
+            <summary>
+            Domain name blockage status. Valid values: normal (normal), overdue (service is suspended due to arrears), quota (trial traffic package is used up), malicious (malicious user), ddos (DDoS attack), idle (no traffic), unlicensed (no ICP filing), capping (bandwidth cap reached), readonly (read-only).
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.ForceRedirect">
+            <summary>
+            Forced access protocol redirection configuration.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Area">
+            <summary>
+            Acceleration region. Valid values: mainland, overseas, global.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Readonly">
+            <summary>
+            Domain name lock status. normal: not locked; global: globally locked.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.Tag">
+            <summary>
+            Domain name tag
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.WebSocket">
+            <summary>
+            WebSocket configuration.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DomainDetailInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainFilter.Name">
+            <summary>
+            Filters by the field name, which includes:
+            - `origin`: Primary origin server.
+            - `domain`: Domain name.
+            - `resourceId`: Domain name ID.
+            - `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
+            - `disable`: Whether the domain name is blocked. Valid values: `normal`, `unlicensed`.
+            - `projectId`: Project ID.
+            - `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
+            - `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
+            - `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+            - `area`: Acceleration region, which can be `mainland`，`overseas` or `global`.
+            - `tagKey`: Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainFilter.Value">
+            <summary>
+            Filter field value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainFilter.Fuzzy">
+            <summary>
+            Whether to enable fuzzy query, which is supported only for filter fields `origin` and `domain`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DomainFilter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainLogs.StartTime">
+            <summary>
+            Log start time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainLogs.EndTime">
+            <summary>
+            Log end time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.DomainLogs.LogPath">
+            <summary>
+            Log download path.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.DomainLogs.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.EcdnData.Metrics">
+            <summary>
+            Queries the specified metric. Valid values: Bandwidth, Flux, Request, Delay, status code, LogBandwidth, LogFlux, LogRequest
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.EcdnData.DetailData">
+            <summary>
+            Detailed data collection
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.EcdnData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ForceRedirect.Switch">
+            <summary>
+            Forced access protocol redirection configuration switch. Valid values: on, off.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ForceRedirect.RedirectType">
+            <summary>
+            Access protocol type for forced redirection. Valid values: http (forced redirection to HTTP protocol), https (forced redirection to HTTPS protocol).
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ForceRedirect.RedirectStatusCode">
+            <summary>
+            HTTP status code returned when forced redirection is enabled. Valid values: 301, 302.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.ForceRedirect.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Hsts.Switch">
+            <summary>
+            Whether to enable. Valid values: on, off.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Hsts.MaxAge">
+            <summary>
+            `MaxAge` value.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Hsts.IncludeSubDomains">
+            <summary>
+            Whether to include subdomain names. Valid values: on, off.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.Hsts.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.HttpHeaderPathRule.HeaderMode">
+            <summary>
+            HTTP header setting method. Valid values: add (add header), set (set header), del (delete header).
+            Request header currently does not support `set`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.HttpHeaderPathRule.HeaderName">
+            <summary>
+            HTTP header name.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.HttpHeaderPathRule.HeaderValue">
+            <summary>
+            HTTP header value, which is optional when it is `del`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.HttpHeaderPathRule.RuleType">
+            <summary>
+            Type of effective URL path rule. Valid values: all (all paths), file (file extension), directory (directory), path (absolute path).
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.HttpHeaderPathRule.RulePaths">
+            <summary>
+            URL path or file type list
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.HttpHeaderPathRule.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.Switch">
+            <summary>
+            HTTPS configuration switch. Valid values: on, off. If the domain name with HTTPS configuration enabled is being deployed, this switch will be `off`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.Http2">
+            <summary>
+            Whether to enable HTTP2. Valid values: on, off.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.OcspStapling">
+            <summary>
+            Whether to enable the OCSP feature. Valid values: on, off.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.VerifyClient">
+            <summary>
+            Whether to enable the client certificate verification feature. Valid values: on, off. The client certificate information must be uploaded if this feature is enabled.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.CertInfo">
+            <summary>
+            Server certificate configuration information.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.ClientCertInfo">
+            <summary>
+            Client certificate configuration information.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.Spdy">
+            <summary>
+            Whether to enable SPDY. Valid values: on, off.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.SslStatus">
+            <summary>
+            HTTPS certificate deployment status. Valid values: closed (disabled), deploying (deploying), deployed (deployment succeeded), failed (deployment failed). This parameter cannot be used as an input parameter.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Https.Hsts">
+            <summary>
+            HSTS configuration
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.Https.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpFilter.Switch">
+            <summary>
+            IP blocklist/allowlist switch. Valid values: on, off.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpFilter.FilterType">
+            <summary>
+            IP blocklist/allowlist type. Valid values: whitelist, blacklist.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpFilter.Filters">
+            <summary>
+            IP blocklist/allowlist list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.IpFilter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpFreqLimit.Switch">
+            <summary>
+            IP access limit switch. Valid values: on, off.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpFreqLimit.Qps">
+            <summary>
+            Number of requests per second.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.IpFreqLimit.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpStatus.Ip">
+            <summary>
+            Node IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpStatus.District">
+            <summary>
+            Node region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpStatus.Isp">
+            <summary>
+            Node ISP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpStatus.City">
+            <summary>
+            Node city
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpStatus.Status">
+            <summary>
+            Node status
+            online: the node is online and scheduling normally
+            offline: the node is offline
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.IpStatus.CreateTime">
+            <summary>
+            Node IP creation time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.IpStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Origin.Origins">
+            <summary>
+            Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Origin.OriginType">
+            <summary>
+            Primary origin server type. Valid values: domain (domain name origin server), ip (IP origin server).
+            This is required when setting `Origins`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Origin.ServerName">
+            <summary>
+            Host header value during origin-pull.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Origin.OriginPullProtocol">
+            <summary>
+            Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
+            If this parameter is left empty, HTTP origin-pull will be used by default.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Origin.BackupOrigins">
+            <summary>
+            Secondary origin server list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Origin.BackupOriginType">
+            <summary>
+            Secondary origin server type, which is the same as `OriginType`.
+            This is required when setting `BackupOrigins`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Origin.AdvanceHttps">
+            <summary>
+            HTTPS advanced origin-pull configuration
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.Origin.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheRequest.Paths">
+            <summary>
+            List of directories to be purged. The protocol header must be included.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheRequest.FlushType">
+            <summary>
+            Purge type. flush: purges updated resources, delete: purges all resources.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheResponse.TaskId">
+            <summary>
+            Purge task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.PurgePathCacheResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeTask.TaskId">
+            <summary>
+            Purge task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeTask.Url">
+            <summary>
+            Purged URL.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeTask.Status">
+            <summary>
+            Purge task status. fail: failed, done: succeeded, process: purging.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeTask.PurgeType">
+            <summary>
+            Purge type. url: URL purge; path: directory purge.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeTask.FlushType">
+            <summary>
+            Resource purge method. flush: purges updated resources, delete: purges all resources.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeTask.CreateTime">
+            <summary>
+            Purge task submission time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.PurgeTask.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheRequest.Urls">
+            <summary>
+            List of URLs to be purged. The protocol header must be included.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheResponse.TaskId">
+            <summary>
+            Purge task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.PurgeUrlsCacheResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Quota.Batch">
+            <summary>
+            Quota limit for one batch submission request.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Quota.Total">
+            <summary>
+            Daily submission quota limit.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Quota.Available">
+            <summary>
+            Remaining daily submission quota.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.Quota.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ResourceData.Resource">
+            <summary>
+            Resource name, which is categorized as follows based on different query conditions:
+            Specific domain name: indicates the details of the specific domain name
+            multiDomains: indicates aggregated details of multiple domain names
+            Project ID: displays the ID of the specified project to be queried
+            all: details at the account level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ResourceData.EcdnData">
+            <summary>
+            Data details of resource
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.ResourceData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ResponseHeader.Switch">
+            <summary>
+            Custom response header switch. Valid values: on, off.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ResponseHeader.HeaderRules">
+            <summary>
+            Custom response header rule array.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.ResponseHeader.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ServerCert.CertId">
+            <summary>
+            Server certificate ID, which is required if the certificate is a Tencent Cloud-hosted certificate.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ServerCert.CertName">
+            <summary>
+            Server certificate name, which is required if the certificate is a Tencent Cloud-hosted certificate.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ServerCert.Certificate">
+            <summary>
+            Server certificate information, which is required when uploading your own certificate and must contain complete certificate chain information.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ServerCert.PrivateKey">
+            <summary>
+            Server key information, which is required when uploading your own certificate.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ServerCert.ExpireTime">
+            <summary>
+            Certificate expiration time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ServerCert.DeployTime">
+            <summary>
+            Certificate issuance time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.ServerCert.Message">
+            <summary>
+            Certificate remarks.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.ServerCert.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Sort.Key">
+            <summary>
+            Sort by field. Valid values:
+            createTime: domain name creation time
+            certExpireTime: certificate expiration time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Sort.Sequence">
+            <summary>
+            asc/desc. Default value: desc.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.Sort.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainRequest.Domain">
+            <summary>
+            Domain name to be enabled.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.StartEcdnDomainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainRequest.Domain">
+            <summary>
+            Domain name to be disabled.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.StopEcdnDomainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Tag.TagKey">
+            <summary>
+            Tag key.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.Tag.TagValue">
+            <summary>
+            Tag value.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.TimestampData.Time">
+            <summary>
+            Statistical time point in forward rounding mode
+            Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.TimestampData.Value">
+            <summary>
+            Data value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.TimestampData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.Domain">
+            <summary>
+            Domain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.Origin">
+            <summary>
+            Origin server configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.ProjectId">
+            <summary>
+            Project ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.IpFilter">
+            <summary>
+            IP blocklist/allowlist configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.IpFreqLimit">
+            <summary>
+            IP access limit configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.ResponseHeader">
+            <summary>
+            Origin server response header configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.CacheKey">
+            <summary>
+            Node caching configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.Cache">
+            <summary>
+            Caching rule configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.Https">
+            <summary>
+            HTTPS configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.ForceRedirect">
+            <summary>
+            Forced access protocol redirection configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.Area">
+            <summary>
+            Domain name acceleration region. Valid values: mainland (acceleration in Mainland China), overseas (acceleration outside Mainland China), global (global acceleration).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.WebSocket">
+            <summary>
+            WebSocket configuration.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.UpdateDomainConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.WebSocket.Switch">
+            <summary>
+            Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+            
+            * WebSocket is now only available for beta users. To use it, please submit a ticket.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ecdn.V20191012.Models.WebSocket.Timeout">
+            <summary>
+            Sets timeout period in seconds. Maximum value: 65
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ecdn.V20191012.Models.WebSocket.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1823 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudCiam</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.CreateApiImportUserJob(TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobRequest)">
+            <summary>
+            This API is used to create an API for user import task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.CreateApiImportUserJobSync(TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobRequest)">
+            <summary>
+            This API is used to create an API for user import task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.CreateFileExportUserJob(TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest)">
+            <summary>
+            This API is used to create a file for user export task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.CreateFileExportUserJobSync(TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest)">
+            <summary>
+            This API is used to create a file for user export task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.CreateUser(TencentCloud.Ciam.V20220331.Models.CreateUserRequest)">
+            <summary>
+            This API is used to create a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.CreateUserSync(TencentCloud.Ciam.V20220331.Models.CreateUserRequest)">
+            <summary>
+            This API is used to create a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.CreateUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.DeleteUsers(TencentCloud.Ciam.V20220331.Models.DeleteUsersRequest)">
+            <summary>
+            This API is used to delete users in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.DeleteUsersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.DeleteUsersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.DeleteUsersSync(TencentCloud.Ciam.V20220331.Models.DeleteUsersRequest)">
+            <summary>
+            This API is used to delete users in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.DeleteUsersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.DeleteUsersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.DescribeUser(TencentCloud.Ciam.V20220331.Models.DescribeUserRequest)">
+            <summary>
+            This API is used to query the user information with multiple conditions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.DescribeUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.DescribeUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.DescribeUserSync(TencentCloud.Ciam.V20220331.Models.DescribeUserRequest)">
+            <summary>
+            This API is used to query the user information with multiple conditions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.DescribeUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.DescribeUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.DescribeUserById(TencentCloud.Ciam.V20220331.Models.DescribeUserByIdRequest)">
+            <summary>
+            This API is used to query a user by ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.DescribeUserByIdSync(TencentCloud.Ciam.V20220331.Models.DescribeUserByIdRequest)">
+            <summary>
+            This API is used to query a user by ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.LinkAccount(TencentCloud.Ciam.V20220331.Models.LinkAccountRequest)">
+            <summary>
+            This API is used to merge accounts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.LinkAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.LinkAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.LinkAccountSync(TencentCloud.Ciam.V20220331.Models.LinkAccountRequest)">
+            <summary>
+            This API is used to merge accounts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.LinkAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.LinkAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ListJobs(TencentCloud.Ciam.V20220331.Models.ListJobsRequest)">
+            <summary>
+            This API is used to query the details of a task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ListJobsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ListJobsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ListJobsSync(TencentCloud.Ciam.V20220331.Models.ListJobsRequest)">
+            <summary>
+            This API is used to query the details of a task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ListJobsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ListJobsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ListLogMessageByCondition(TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest)">
+            <summary>
+            This API is used to query a specified log.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ListLogMessageByConditionSync(TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest)">
+            <summary>
+            This API is used to query a specified log.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ListUser(TencentCloud.Ciam.V20220331.Models.ListUserRequest)">
+            <summary>
+            This API is used to query the list of users.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ListUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ListUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ListUserSync(TencentCloud.Ciam.V20220331.Models.ListUserRequest)">
+            <summary>
+            This API is used to query the list of users.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ListUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ListUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ListUserByProperty(TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest)">
+            <summary>
+            This API is used to query the list of users by attribute.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ListUserByPropertySync(TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest)">
+            <summary>
+            This API is used to query the list of users by attribute.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ResetPassword(TencentCloud.Ciam.V20220331.Models.ResetPasswordRequest)">
+            <summary>
+            This API is used to reset the password for a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ResetPasswordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ResetPasswordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.ResetPasswordSync(TencentCloud.Ciam.V20220331.Models.ResetPasswordRequest)">
+            <summary>
+            This API is used to reset the password for a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.ResetPasswordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.ResetPasswordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.SetPassword(TencentCloud.Ciam.V20220331.Models.SetPasswordRequest)">
+            <summary>
+            This API is used to set the password for a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.SetPasswordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.SetPasswordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.SetPasswordSync(TencentCloud.Ciam.V20220331.Models.SetPasswordRequest)">
+            <summary>
+            This API is used to set the password for a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.SetPasswordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.SetPasswordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.UpdateUser(TencentCloud.Ciam.V20220331.Models.UpdateUserRequest)">
+            <summary>
+            This API is used to update a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.UpdateUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.UpdateUserSync(TencentCloud.Ciam.V20220331.Models.UpdateUserRequest)">
+            <summary>
+            This API is used to update a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.UpdateUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.UpdateUserStatus(TencentCloud.Ciam.V20220331.Models.UpdateUserStatusRequest)">
+            <summary>
+            This API is used to update the status of a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.CiamClient.UpdateUserStatusSync(TencentCloud.Ciam.V20220331.Models.UpdateUserStatusRequest)">
+            <summary>
+            This API is used to update the status of a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobRequest.DataFlowUserCreateList">
+            <summary>
+            Imported user data
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobResponse.Job">
+            <summary>
+            Data flow task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.CreateApiImportUserJobResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest.Format">
+            <summary>
+            Exported data type
+            
+            <li> **NDJSON** </li>  New-line Delimited JSON
+            <li> **CSV** </li>  Comma-Separated Values
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest.Filters">
+            <summary>
+            Valid values of `Key`: `condition`, `userGroupId`.
+            
+            <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
+            <li> **userGroupId** </li>	Values = User group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest.ExportPropertyMaps">
+            <summary>
+            Attributes and mapping names included in the exported user information. If this parameter is empty, all attributes will be included.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobResponse.Job">
+            <summary>
+            Data flow task
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.CreateFileExportUserJobResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.PhoneNumber">
+            <summary>
+            Mobile number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.UserName">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.Nickname">
+            <summary>
+            Nickname
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.UserGroup">
+            <summary>
+            User group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.Birthdate">
+            <summary>
+            Date of birth
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.CustomizationAttributes">
+            <summary>
+            Custom attribute
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.IndexedAttribute1">
+            <summary>
+            Index field 1
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.IndexedAttribute2">
+            <summary>
+            Index field 2
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.IndexedAttribute3">
+            <summary>
+            Index field 3
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.IndexedAttribute4">
+            <summary>
+            Index field 4
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.IndexedAttribute5">
+            <summary>
+            Index field 5
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.CreateUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserResponse.User">
+            <summary>
+            Information of the created user
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.CreateUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.CreateUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DeleteUsersRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DeleteUsersRequest.UserIds">
+            <summary>
+            Array of user IDs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.DeleteUsersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DeleteUsersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.DeleteUsersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdRequest.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdRequest.Original">
+            <summary>
+            Whether the content is passed through
+            
+            <li> **false** </li>Default. The returned information is desensitized.
+            <li> **true** </li>Return the original content.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdResponse.User">
+            <summary>
+            User information
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.DescribeUserByIdResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserRequest.Pageable">
+            <summary>
+            Pagination data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserRequest.Filters">
+            <summary>
+            Query condition (`propertycode` and `propertykey`)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserRequest.Original">
+            <summary>
+            Whether the plaintext is returned
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserRequest.Sort">
+            <summary>
+            Sorting configuration
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.DescribeUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserResponse.Total">
+            <summary>
+            The total number of returned results.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserResponse.Pageable">
+            <summary>
+            Pagination object
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserResponse.Content">
+            <summary>
+            User List
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.DescribeUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.DescribeUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ErrorDetails.UserId">
+            <summary>
+            User information
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ErrorDetails.Error">
+            <summary>
+            Failure cause
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ErrorDetails.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ExportPropertyMap.UserPropertyCode">
+            <summary>
+            User attribute code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ExportPropertyMap.ColumnName">
+            <summary>
+            User attribute mapping name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ExportPropertyMap.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.FailedUsers.FailedUserIdentification">
+            <summary>
+            ID of the failed user
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.FailedUsers.FailedReason">
+            <summary>
+            Failure cause for user import
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.FailedUsers.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Filter.Key">
+            <summary>
+            Key value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Filter.Values">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Filter.Logic">
+            <summary>
+            Logical value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.UserName">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.PhoneNumber">
+            <summary>
+            Mobile number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.ResidentIdentityCard">
+            <summary>
+            ID card number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Nickname">
+            <summary>
+            Nickname
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.UserGroup">
+            <summary>
+            User group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.QqOpenId">
+            <summary>
+            `qqOpenId` on QQ
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.QqUnionId">
+            <summary>
+            `qqUnionId` on QQ
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.WechatOpenId">
+            <summary>
+            `wechatOpenId` on WeChat
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.WechatUnionId">
+            <summary>
+            `wechatUnionId` on WeChat
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.AlipayUserId">
+            <summary>
+            `alipayUserId` on Alipay
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Birthdate">
+            <summary>
+            Date of birth
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Locale">
+            <summary>
+            Coordinate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Gender">
+            <summary>
+            Gender. Valid values: `MALE`, `FEMALE`, `UNKNOWN`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.IdentityVerificationMethod">
+            <summary>
+            Identity verification method
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.IdentityVerified">
+            <summary>
+            Whether the identity is verified
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Job">
+            <summary>
+            Job
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Nationality">
+            <summary>
+            Country/Region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Zone">
+            <summary>
+            Time zone
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Password">
+            <summary>
+            Password ciphertext
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.CustomizationAttributes">
+            <summary>
+            Custom attribute
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.Salt">
+            <summary>
+            Password salt
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.PasswordEncryptTypeEnum">
+            <summary>
+            Password encryption method. Valid values: `SHA1`, `BCRYPT`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.IndexedAttribute1">
+            <summary>
+            Index field 1
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.IndexedAttribute2">
+            <summary>
+            Index field 2
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.IndexedAttribute3">
+            <summary>
+            Index field 3
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.IndexedAttribute4">
+            <summary>
+            Index field 4
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ImportUser.IndexedAttribute5">
+            <summary>
+            Index field 5
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ImportUser.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Job.Id">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Job.Status">
+            <summary>
+            Task status
+            
+            <li> **PENDING** </li>  Pending
+            <li> **PROCESSING** </li>  Executing
+            <li> **COMPLETED** </li>  Completed
+            <li> **FAILED** </li>  Failed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Job.Type">
+            <summary>
+            Task type
+            
+            <li> **IMPORT_USER** </li>  User import
+            <li> **EXPORT_USER** </li>  User export
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Job.CreatedDate">
+            <summary>
+            Task creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Job.Format">
+            <summary>
+            Data type of the task
+            
+            <li> **NDJSON** </li>  New-line Delimited JSON
+            <li> **CSV** </li>  Comma-Separated Values
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Job.Location">
+            <summary>
+            Task result download address
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Job.ErrorDetails">
+            <summary>
+            Failure details
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Job.FailedUsers">
+            <summary>
+            Failed user
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.Job.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LinkAccountRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LinkAccountRequest.PrimaryUserId">
+            <summary>
+            Primary user ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LinkAccountRequest.SecondaryUserId">
+            <summary>
+            Secondary user ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LinkAccountRequest.UserLinkedOnAttribute">
+            <summary>
+            Fusion attribute
+            
+            <li> **PHONENUMBER** </li>	  Mobile number
+            <li> **EMAIL** </li>  Email
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.LinkAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LinkAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.LinkAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListJobsRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListJobsRequest.JobIds">
+            <summary>
+            List of task IDs. If this parameter is empty, all tasks will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ListJobsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListJobsResponse.JobSet">
+            <summary>
+            List of tasks
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListJobsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ListJobsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest.UserStoreId">
+            <summary>
+            User pool ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest.Pageable">
+            <summary>
+            Pagination data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest.StartTime">
+            <summary>
+            Start timestamp accurate to the millisecond
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest.Filters">
+            <summary>
+            Valid values of `Key`: `events`.
+            
+            <li> **events** </li>	Values can be one or multiple items in ["SIGNUP", "USER_UPDATE", "USER_DELETE", "USER_CREATE", "ACCOUNT_LINKING"].
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionResponse.Total">
+            <summary>
+            Total number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionResponse.Pageable">
+            <summary>
+            Pagination object
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionResponse.Content">
+            <summary>
+            List of logs
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ListLogMessageByConditionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest.PropertyCode">
+            <summary>
+            Query attribute
+            
+            <li> **phoneNumber** </li>	  Mobile number
+            <li> **email** </li>  Email
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest.PropertyValue">
+            <summary>
+            Attribute value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest.Original">
+            <summary>
+            Whether the content is passed through
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyResponse.Users">
+            <summary>
+            List of users
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ListUserByPropertyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserRequest.Pageable">
+            <summary>
+            Pagination data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserRequest.Filters">
+            <summary>
+            Valid values of `Key`: `condition`, `userGroupId`.
+            
+            <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
+            <li> **userGroupId** </li>	Values = User group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserRequest.Original">
+            <summary>
+            Whether the content is passed through
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ListUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserResponse.Total">
+            <summary>
+            Total number
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserResponse.Pageable">
+            <summary>
+            Pagination object
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserResponse.Content">
+            <summary>
+            List of users
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ListUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ListUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.LogId">
+            <summary>
+            Log ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.TenantId">
+            <summary>
+            Tenant ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.UserStoreId">
+            <summary>
+            User pool ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.EventCode">
+            <summary>
+            Event code
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.EventDate">
+            <summary>
+            Event timestamp in milliseconds
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.Description">
+            <summary>
+            Description
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.Participant">
+            <summary>
+            Event participant
+            
+            <li> **TENANT** </li>  Tenant
+            <li> **USER** </li>  User
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.ApplicationClientId">
+            <summary>
+            Application `clientId`
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.ApplicationName">
+            <summary>
+            Application name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.AuthSourceId">
+            <summary>
+            Authentication source ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.AuthSourceName">
+            <summary>
+            Authentication source name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.AuthSourceType">
+            <summary>
+            Authentication source type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.AuthSourceCategory">
+            <summary>
+            Authentication source category
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.Ip">
+            <summary>
+            IP address
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.UserAgent">
+            <summary>
+            User agent
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.UserId">
+            <summary>
+            User ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.LogMessage.Detail">
+            <summary>
+            Details
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.LogMessage.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.MemberMap.Name">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.MemberMap.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.MemberMap.Type">
+            <summary>
+            Type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.MemberMap.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Pageable.PageSize">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Pageable.PageNumber">
+            <summary>
+            Current page number
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.Pageable.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.QueryUserFilter.PropertyKey">
+            <summary>
+            Property key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.QueryUserFilter.PropertyValue">
+            <summary>
+            Property value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.QueryUserFilter.Logic">
+            <summary>
+            Logic value. `True` or `False`
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ciam.V20220331.Models.QueryUserFilter.OperateLogic" -->
+        <member name="M:TencentCloud.Ciam.V20220331.Models.QueryUserFilter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ResetPasswordRequest.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ResetPasswordRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ResetPasswordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ResetPasswordResponse.Password">
+            <summary>
+            User password after reset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.ResetPasswordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.ResetPasswordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Salt.SaltValue">
+            <summary>
+            Salt value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Salt.SaltLocation">
+            <summary>
+            Salt value location
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.Salt.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.SaltLocation.SaltLocationTypeEnum">
+            <summary>
+            Password salt type. Valid values: `HEAD`, `TAIL`, `OTHER`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.SaltLocation.SaltLocationRule">
+            <summary>
+            Salting rule
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.SaltLocation.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.SaltLocationRule.Regex">
+            <summary>
+            Expression
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.SaltLocationRule.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.SetPasswordRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.SetPasswordRequest.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.SetPasswordRequest.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.SetPasswordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.SetPasswordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.SetPasswordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Sort.PropertyKey">
+            <summary>
+            Key for sorting. See custom attributes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.Sort.Order">
+            <summary>
+            `ASC` or `DESC`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.Sort.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.UserName">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.PhoneNumber">
+            <summary>
+            Mobile number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.Nickname">
+            <summary>
+            Nickname
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.UserGroup">
+            <summary>
+            User group
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.Birthdate">
+            <summary>
+            Date of birth
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.CustomizationAttributes">
+            <summary>
+            Custom attribute
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.IndexedAttribute1">
+            <summary>
+            Index field 1
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.IndexedAttribute2">
+            <summary>
+            Index field 2
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.IndexedAttribute3">
+            <summary>
+            Index field 3
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.IndexedAttribute4">
+            <summary>
+            Index field 4
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.IndexedAttribute5">
+            <summary>
+            Index field 5
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.UpdateUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserResponse.User">
+            <summary>
+            User information after update
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.UpdateUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusRequest.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusRequest.Status">
+            <summary>
+            User status
+            
+            <li> **NORMAL** </li>	  Normal
+            <li> **LOCK** </li>  Locked
+            <li> **FREEZE** </li>	  Frozen
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.UpdateUserStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.UserId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.UserName">
+            <summary>
+            Username
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.PhoneNumber">
+            <summary>
+            Mobile number
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Email">
+            <summary>
+            Email address
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.LastSignOn">
+            <summary>
+            Last login time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.CreatedDate">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.UserDataSourceEnum">
+            <summary>
+            User source
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Nickname">
+            <summary>
+            Nickname
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Address">
+            <summary>
+            Address
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Birthdate">
+            <summary>
+            Date of birth
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.UserGroups">
+            <summary>
+            User group ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.LastModifiedDate">
+            <summary>
+            Last modified time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.CustomAttributes">
+            <summary>
+            Custom attribute
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.ResidentIdentityCard">
+            <summary>
+            ID card number
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.QqOpenId">
+            <summary>
+            `OpenId` on QQ
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.QqUnionId">
+            <summary>
+            `UnionId` on QQ
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.WechatOpenId">
+            <summary>
+            `WechatOpenId` on WeChat
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.WechatUnionId">
+            <summary>
+            `WechatUnionId` on WeChat
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.AlipayUserId">
+            <summary>
+            `AlipayUserId` on Alipay
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Description">
+            <summary>
+            Description
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Name">
+            <summary>
+            Name
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Locale">
+            <summary>
+            Coordinate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Gender">
+            <summary>
+            Gender
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.IdentityVerificationMethod">
+            <summary>
+            Identity verification method
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.IdentityVerified">
+            <summary>
+            Whether the identity is verified
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Job">
+            <summary>
+            Job
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Nationality">
+            <summary>
+            Country/Region
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Primary">
+            <summary>
+            Whether the account is the primary account (after account merge, this parameter is `true` for primary accounts and `false` for secondary account).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Zone">
+            <summary>
+            Time zone
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.AlreadyFirstLogin">
+            <summary>
+            Whether the account has ever logged in.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.TenantId">
+            <summary>
+            Tenant ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.UserStoreId">
+            <summary>
+            User directory ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.Version">
+            <summary>
+            Version
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.LockType">
+            <summary>
+            Lock type (locked by admin or locked by login policy)
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.LockTime">
+            <summary>
+            Lock time
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.IndexedAttribute1">
+            <summary>
+            Index field 1
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.IndexedAttribute2">
+            <summary>
+            Index field 2
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.IndexedAttribute3">
+            <summary>
+            Index field 3
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.IndexedAttribute4">
+            <summary>
+            Index field 4
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20220331.Models.User.IndexedAttribute5">
+            <summary>
+            Index field 5
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20220331.Models.User.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20210420.CiamClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20210420.CiamClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20210420.CiamClient.ListUserGroups(TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest)">
+            <summary>
+            This API is used to list user groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20210420.Models.ListUserGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20210420.CiamClient.ListUserGroupsSync(TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest)">
+            <summary>
+            This API is used to list user groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ciam.V20210420.Models.ListUserGroupsResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest.Page">
+            <summary>
+            Number of queried pages
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest.Size">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest.Condition">
+            <summary>
+            Query conditions (user group ID or user group name)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20210420.Models.ListUserGroupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.ListUserGroupsResponse.Content">
+            <summary>
+            User group list
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.ListUserGroupsResponse.Total">
+            <summary>
+            Total number
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.ListUserGroupsResponse.Pageable">
+            <summary>
+            Pagination
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.ListUserGroupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20210420.Models.ListUserGroupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.Pageable.PageSize">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.Pageable.PageNumber">
+            <summary>
+            Current page number
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20210420.Models.Pageable.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.UserGroup.UserGroupId">
+            <summary>
+            User group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.UserGroup.DisplayName">
+            <summary>
+            User group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.UserGroup.Description">
+            <summary>
+            User group description
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.UserGroup.UserStoreId">
+            <summary>
+            User directory ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ciam.V20210420.Models.UserGroup.TenantId">
+            <summary>
+            Tenant ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ciam.V20210420.Models.UserGroup.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

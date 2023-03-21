@@ -1,0 +1,1721 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudDc</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.AcceptDirectConnectTunnel(TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelRequest)">
+            <summary>
+            This API is used to accept an application for a dedicated tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.AcceptDirectConnectTunnelSync(TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelRequest)">
+            <summary>
+            This API is used to accept an application for a dedicated tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.ApplyInternetAddress(TencentCloud.Dc.V20180410.Models.ApplyInternetAddressRequest)">
+            <summary>
+            This API is used to apply for an internet tunnel’s CIDR block.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.ApplyInternetAddressSync(TencentCloud.Dc.V20180410.Models.ApplyInternetAddressRequest)">
+            <summary>
+            This API is used to apply for an internet tunnel’s CIDR block.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.CreateDirectConnect(TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest)">
+            <summary>
+            This API is used to apply for a connection.
+            When calling this API, please note that:
+            You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
+            If there is any connection in arrears under your account, you cannot apply for more connections.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.CreateDirectConnectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.CreateDirectConnectSync(TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest)">
+            <summary>
+            This API is used to apply for a connection.
+            When calling this API, please note that:
+            You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
+            If there is any connection in arrears under your account, you cannot apply for more connections.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.CreateDirectConnectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.CreateDirectConnectTunnel(TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest)">
+            <summary>
+            This API is used to create a dedicated tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.CreateDirectConnectTunnelSync(TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest)">
+            <summary>
+            This API is used to create a dedicated tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DeleteDirectConnect(TencentCloud.Dc.V20180410.Models.DeleteDirectConnectRequest)">
+            <summary>
+            This API is used to delete a connection.
+            Only connected connections can be deleted.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DeleteDirectConnectSync(TencentCloud.Dc.V20180410.Models.DeleteDirectConnectRequest)">
+            <summary>
+            This API is used to delete a connection.
+            Only connected connections can be deleted.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DeleteDirectConnectTunnel(TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelRequest)">
+            <summary>
+            This API is used to delete a dedicated tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DeleteDirectConnectTunnelSync(TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelRequest)">
+            <summary>
+            This API is used to delete a dedicated tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeAccessPoints(TencentCloud.Dc.V20180410.Models.DescribeAccessPointsRequest)">
+            <summary>
+            This API is used to query connection access points.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeAccessPointsSync(TencentCloud.Dc.V20180410.Models.DescribeAccessPointsRequest)">
+            <summary>
+            This API is used to query connection access points.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeDirectConnectTunnels(TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest)">
+            <summary>
+            This API is used to query the list of dedicated tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeDirectConnectTunnelsSync(TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest)">
+            <summary>
+            This API is used to query the list of dedicated tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeDirectConnects(TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest)">
+            <summary>
+            This API is used to query the list of connections.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeDirectConnectsSync(TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest)">
+            <summary>
+            This API is used to query the list of connections.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeInternetAddress(TencentCloud.Dc.V20180410.Models.DescribeInternetAddressRequest)">
+            <summary>
+            This API is used to obtain the public IP address of an internet tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeInternetAddressSync(TencentCloud.Dc.V20180410.Models.DescribeInternetAddressRequest)">
+            <summary>
+            This API is used to obtain the public IP address of an internet tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeInternetAddressQuota(TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaRequest)">
+            <summary>
+            This API is used to obtain the public IP quota of internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeInternetAddressQuotaSync(TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaRequest)">
+            <summary>
+            This API is used to obtain the public IP quota of internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeInternetAddressStatistics(TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsRequest)">
+            <summary>
+            This API is used to obtain the public IP address assignment statistics of internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DescribeInternetAddressStatisticsSync(TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsRequest)">
+            <summary>
+            This API is used to obtain the public IP address assignment statistics of internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DisableInternetAddress(TencentCloud.Dc.V20180410.Models.DisableInternetAddressRequest)">
+            <summary>
+            This API is used to disable a public IP address of internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DisableInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DisableInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.DisableInternetAddressSync(TencentCloud.Dc.V20180410.Models.DisableInternetAddressRequest)">
+            <summary>
+            This API is used to disable a public IP address of internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.DisableInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.DisableInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.EnableInternetAddress(TencentCloud.Dc.V20180410.Models.EnableInternetAddressRequest)">
+            <summary>
+            This API is used to enable a public IP address for internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.EnableInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.EnableInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.EnableInternetAddressSync(TencentCloud.Dc.V20180410.Models.EnableInternetAddressRequest)">
+            <summary>
+            This API is used to enable a public IP address for internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.EnableInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.EnableInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.ModifyDirectConnectAttribute(TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest)">
+            <summary>
+            This API is used to modify connection attributes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.ModifyDirectConnectAttributeSync(TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest)">
+            <summary>
+            This API is used to modify connection attributes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.ModifyDirectConnectTunnelAttribute(TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest)">
+            <summary>
+            This API is used to modify the dedicated tunnel attributes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.ModifyDirectConnectTunnelAttributeSync(TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest)">
+            <summary>
+            This API is used to modify the dedicated tunnel attributes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.RejectDirectConnectTunnel(TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelRequest)">
+            <summary>
+            This API is used to reject an application for a dedicated tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.RejectDirectConnectTunnelSync(TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelRequest)">
+            <summary>
+            This API is used to reject an application for a dedicated tunnel.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.ReleaseInternetAddress(TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressRequest)">
+            <summary>
+            This API is used to release an IP address of internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.DcClient.ReleaseInternetAddressSync(TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressRequest)">
+            <summary>
+            This API is used to release an IP address of internet tunnels.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelRequest.DirectConnectTunnelId">
+            <summary>
+            The connection owner accepts an application for sharing the dedicated tunnel
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.AcceptDirectConnectTunnelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.AccessPointName">
+            <summary>
+            Access point name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.AccessPointId">
+            <summary>
+            Unique access point ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.State">
+            <summary>
+            Access point status. Valid values: available, unavailable.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.Location">
+            <summary>
+            Access point location.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.LineOperator">
+            <summary>
+            List of ISPs supported by access point.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.RegionId">
+            <summary>
+            ID of the region that manages the access point.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.AvailablePortType">
+            <summary>
+            Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.Coordinate">
+            <summary>
+            Latitude and longitude of the access point
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.City">
+            <summary>
+            City where the access point is located
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.Area">
+            <summary>
+            Access point region
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.AccessPoint.AccessPointType">
+            <summary>
+            Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.AccessPoint.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressRequest.MaskLen">
+            <summary>
+            Mask length of a CIDR block
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressRequest.AddrType">
+            <summary>
+            Address type. Valid values: 0: BGP
+            1: China Telecom
+            2: China Mobile
+            3: China Unicom
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressRequest.AddrProto">
+            <summary>
+            Address protocol. Valid values: 0: IPv4
+            1: IPv6
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressResponse.InstanceId">
+            <summary>
+            ID of the internet tunnel’s public IP address
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.ApplyInternetAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.BFDInfo.ProbeFailedTimes">
+            <summary>
+            Number of health checks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.BFDInfo.Interval">
+            <summary>
+            Health check interval
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.BFDInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.BgpPeer.Asn">
+            <summary>
+            User-side BGP Asn.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.BgpPeer.AuthKey">
+            <summary>
+            User-side BGP key.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.BgpPeer.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.Coordinate.Lat">
+            <summary>
+            Latitude
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.Coordinate.Lng">
+            <summary>
+            Longitude
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.Coordinate.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.DirectConnectName">
+            <summary>
+            Connection name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.AccessPointId">
+            <summary>
+            Access point of connection.
+            You can call `DescribeAccessPoints` to get the region ID. The selected access point must exist and be available.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.LineOperator">
+            <summary>
+            ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.PortType">
+            <summary>
+            Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.CircuitCode">
+            <summary>
+            Circuit code of a connection, which is provided by the ISP or connection provider.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.Location">
+            <summary>
+            Local IDC location.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.Bandwidth">
+            <summary>
+            Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.RedundantDirectConnectId">
+            <summary>
+            ID of redundant connection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.Vlan">
+            <summary>
+            VLAN for connection debugging, which is enabled and automatically assigned by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.TencentAddress">
+            <summary>
+            Tencent-side IP address for connection debugging, which is automatically assigned by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.CustomerAddress">
+            <summary>
+            User-side IP address for connection debugging, which is automatically assigned by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.CustomerName">
+            <summary>
+            Name of connection applicant, which is obtained from the account system by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.CustomerContactMail">
+            <summary>
+            Email address of connection applicant, which is obtained from the account system by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.CustomerContactNumber">
+            <summary>
+            Contact number of connection applicant, which is obtained from the account system by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.FaultReportContactPerson">
+            <summary>
+            Fault reporting contact person.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.FaultReportContactNumber">
+            <summary>
+            Fault reporting contact number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.SignLaw">
+            <summary>
+            Whether the connection applicant has signed the service agreement. Default value: true.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.CreateDirectConnectRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectResponse.DirectConnectIdSet">
+            <summary>
+            Connection ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.CreateDirectConnectResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.DirectConnectId">
+            <summary>
+            Direct Connect ID, such as `dc-kd7d06of`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.DirectConnectTunnelName">
+            <summary>
+            Dedicated tunnel name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.DirectConnectOwnerAccount">
+            <summary>
+            Connection owner, who is the current customer by default.
+            The developer account ID should be entered for shared connections.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.NetworkType">
+            <summary>
+            Network type. Valid values: VPC, BMVPC, CCN. Default value: VPC.
+            VPC: Virtual Private Cloud.
+            BMVPC: BM VPC.
+            CCN: Cloud Connect Network.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.NetworkRegion">
+            <summary>
+            Network region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.VpcId">
+            <summary>
+            Unified VPC ID or BMVPC ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.DirectConnectGatewayId">
+            <summary>
+            Direct connect gateway ID, such as `dcg-d545ddf`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.Bandwidth">
+            <summary>
+            Direct Connect bandwidth in Mbps.
+            Default value: connection bandwidth value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.RouteType">
+            <summary>
+            BGP: BGP routing.
+            STATIC: Static routing.
+            Default value: BGP routing.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.BgpPeer">
+            <summary>
+            BgpPeer, which is BGP information on the user side and includes Asn and AuthKey.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.RouteFilterPrefixes">
+            <summary>
+            Static routing, i.e., IP range of the user's IDC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.Vlan">
+            <summary>
+            VLAN. Value range: 0-3,000.
+            0: sub-interface not enabled.
+            Default value: Non-zero.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.TencentAddress">
+            <summary>
+            TencentAddress: Tencent-side IP address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.CustomerAddress">
+            <summary>
+            CustomerAddress: User-side IP address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.TencentBackupAddress">
+            <summary>
+            TencentBackupAddress, i.e., Tencent-side standby IP address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.CloudAttachId">
+            <summary>
+            Cloud Attached Connection Service ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.BfdEnable">
+            <summary>
+            Whether to enable BFD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.NqaEnable">
+            <summary>
+            Whether to enable NQA
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.BfdInfo">
+            <summary>
+            BFD configuration information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.NqaInfo">
+            <summary>
+            NQA configuration information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelResponse.DirectConnectTunnelIdSet">
+            <summary>
+            Dedicated tunnel ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.CreateDirectConnectTunnelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectRequest.DirectConnectId">
+            <summary>
+            Connection ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelRequest.DirectConnectTunnelId">
+            <summary>
+            Dedicated tunnel ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DeleteDirectConnectTunnelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsRequest.RegionId">
+            <summary>
+            Access point region, which can be queried through `DescribeRegions`.
+            
+            You can call `DescribeRegions` to get the region ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsRequest.Limit">
+            <summary>
+            Number of results to be returned. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsResponse.AccessPointSet">
+            <summary>
+            Access point information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsResponse.TotalCount">
+            <summary>
+            Number of eligible access points.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeAccessPointsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest.Filters">
+            <summary>
+            Filter conditions:
+            This parameter does not support specifying `DirectConnectTunnelIds` and `Filters` at the same time.
+            <li> direct-connect-tunnel-name: Dedicated tunnel name.</li>
+            <li> direct-connect-tunnel-id: Dedicated tunnel instance ID, such as `dcx-abcdefgh`.</li>
+            <li>direct-connect-id: Connection instance ID, such as `dc-abcdefgh`.</li>
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest.DirectConnectTunnelIds">
+            <summary>
+            Array of dedicated tunnel IDs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsResponse.DirectConnectTunnelSet">
+            <summary>
+            List of dedicated tunnels.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsResponse.TotalCount">
+            <summary>
+            Number of eligible dedicated tunnels.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectTunnelsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest.Filters">
+            <summary>
+            Filter conditions:
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest.DirectConnectIds">
+            <summary>
+            Array of connection IDs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsResponse.DirectConnectSet">
+            <summary>
+            List of connections.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsResponse.TotalCount">
+            <summary>
+            Number of eligible connection lists.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsResponse.AllSignLaw">
+            <summary>
+            Whether all connections under the account have the service agreement signed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeDirectConnectsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse.Ipv6PrefixLen">
+            <summary>
+            Minimum prefix length allowed for a public IPv6 address
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse.Ipv4BgpQuota">
+            <summary>
+            Quota of BGP IPv4 addresses
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse.Ipv4OtherQuota">
+            <summary>
+            Quota of non-BGP IPv4 addresses
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse.Ipv4BgpNum">
+            <summary>
+            Used number of BGP IPv4 addresses
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse.Ipv4OtherNum">
+            <summary>
+            Used number of non-BGP IPv4 addresses
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressQuotaResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressRequest.Filters" -->
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressResponse.TotalCount">
+            <summary>
+            Number of public IP addresses for internet tunnels
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressResponse.Subnets">
+            <summary>
+            List of the public IP addresses for internet tunnels
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsResponse.TotalCount">
+            <summary>
+            Number of public IP address statistics for internet tunnels
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsResponse.InternetAddressStatistics">
+            <summary>
+            List of the public IP address statistics for internet tunnels
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DescribeInternetAddressStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.DirectConnectId">
+            <summary>
+            Connection ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.DirectConnectName">
+            <summary>
+            Connection name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.AccessPointId">
+            <summary>
+            Access point ID of a connection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.State">
+            <summary>
+            Connection status.
+            PENDING: Applying. 
+            REJECTED: Application rejected.   
+            TOPAY: Payment pending. 
+            PAID: Paid. 
+            ALLOCATED: Constructing.   
+            AVAILABLE: Available.  
+            DELETING: Deleting.
+            DELETED: Deleted.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.CreatedTime">
+            <summary>
+            Connection creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.EnabledTime">
+            <summary>
+            Connection activation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.LineOperator">
+            <summary>
+            ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.Location">
+            <summary>
+            Location of a local IDC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.Bandwidth">
+            <summary>
+            Connection port bandwidth in Mbps.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.PortType">
+            <summary>
+            User-side port type of a connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface; it is the default value), 1000Base-LX (1-Gigabit single-mode optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-mode optical Ethernet interface; 10 KM).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.CircuitCode">
+            <summary>
+            Circuit code of a connection, which is provided by the ISP or service provider.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.RedundantDirectConnectId">
+            <summary>
+            ID of a redundant connection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.Vlan">
+            <summary>
+            VLAN for connection debugging, which is enabled and automatically assigned by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.TencentAddress">
+            <summary>
+            Tencent-side IP address for connection debugging.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.CustomerAddress">
+            <summary>
+            User-side IP address for connection debugging.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.CustomerName">
+            <summary>
+            Name of the connection applicant, which is obtained from the account system by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.CustomerContactMail">
+            <summary>
+            Email address of the connection applicant, which is obtained from the account system by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.CustomerContactNumber">
+            <summary>
+            Contact number of the connection applicant, which is obtained from the account system by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.ExpiredTime">
+            <summary>
+            Connection expiration time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.ChargeType">
+            <summary>
+            Connection billing mode. NON_RECURRING_CHARGE: One-time charge for accessing service
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.FaultReportContactPerson">
+            <summary>
+            Fault reporting contact person.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.FaultReportContactNumber">
+            <summary>
+            Fault reporting contact number.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.TagSet">
+            <summary>
+            Tag key-value pair
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.AccessPointType">
+            <summary>
+            Access point type of a connection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.IdcCity">
+            <summary>
+            IDC city.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.ChargeState">
+            <summary>
+            Billing status
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.StartTime">
+            <summary>
+            Connection activation time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.SignLaw">
+            <summary>
+            Whether the connection has the service agreement signed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.LocalZone">
+            <summary>
+            Whether the connection is an edge zone.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.VlanZeroDirectConnectTunnelCount">
+            <summary>
+            Number of dedicated tunnels with disabled VLAN in the connection
+            Note: this field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.OtherVlanDirectConnectTunnelCount">
+            <summary>
+            Number of dedicated tunnels with enabled VLAN in the connection
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnect.MinBandwidth">
+            <summary>
+            Minimum bandwidth of the connection
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DirectConnect.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.DirectConnectTunnelId">
+            <summary>
+            Dedicated tunnel ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.DirectConnectId">
+            <summary>
+            Connection ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.State">
+            <summary>
+            Dedicated tunnel status.
+            AVAILABLE: Ready or connected.
+            PENDING: Applying.
+            ALLOCATING: Configuring.
+            ALLOCATED: Configured.
+            ALTERING: Modifying.
+            DELETING: Deleting.
+            DELETED: Deleted.
+            COMFIRMING: To be accepted.
+            REJECTED: Rejected.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.DirectConnectOwnerAccount">
+            <summary>
+            Connection owner, i.e., developer account ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.OwnerAccount">
+            <summary>
+            Dedicated tunnel owner, i.e., developer account ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.NetworkType">
+            <summary>
+            Network type. Valid values: VPC, BMVPC, CCN.
+             VPC: Virtual Private Cloud; BMVPC: BM VPC; CCN: Cloud Connect Network.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.NetworkRegion">
+            <summary>
+            Network of the VPC region, such as `ap-guangzhou`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.VpcId">
+            <summary>
+            Unified VPC ID or BMVPC ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.DirectConnectGatewayId">
+            <summary>
+            Direct connect gateway ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.RouteType">
+            <summary>
+            BGP: BGP routing; STATIC: Static routing. Default value: BGP routing.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.BgpPeer">
+            <summary>
+            User-side BGP, including Asn and AuthKey.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.RouteFilterPrefixes">
+            <summary>
+            User-side IP range.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.Vlan">
+            <summary>
+            VLAN of a dedicated tunnel.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.TencentAddress">
+            <summary>
+            TencentAddress: Tencent-side IP address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.CustomerAddress">
+            <summary>
+            CustomerAddress: User-side IP address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.DirectConnectTunnelName">
+            <summary>
+            Dedicated tunnel name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.CreatedTime">
+            <summary>
+            Creation time of a dedicated tunnel.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.Bandwidth">
+            <summary>
+            Bandwidth value of a dedicated tunnel.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.TagSet">
+            <summary>
+            Tag value of a dedicated tunnel.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.NetDetectId">
+            <summary>
+            Associated custom network probe ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.EnableBGPCommunity">
+            <summary>
+            BGP community switch
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.NatType">
+            <summary>
+            Whether it is a NAT tunnel
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.VpcRegion">
+            <summary>
+            VPC region abbreviation, such as `gz`, `cd`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.BfdEnable">
+            <summary>
+            Whether to enable BFD
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.AccessPointType">
+            <summary>
+            Access point type of a dedicated tunnel.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.DirectConnectGatewayName">
+            <summary>
+            Direct connect gateway name.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.VpcName">
+            <summary>
+            VPC name.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.TencentBackupAddress">
+            <summary>
+            Backup IP address on the Tencent side.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.SignLaw">
+            <summary>
+            Whether the connection associated with the dedicated tunnel has the service agreement signed.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.CloudAttachId">
+            <summary>
+            Cloud Attached Connection Service ID
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DirectConnectTunnel.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DisableInternetAddressRequest.InstanceId">
+            <summary>
+            ID of the internet tunnel’s public IP address
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DisableInternetAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.DisableInternetAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.DisableInternetAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.EnableInternetAddressRequest.InstanceId">
+            <summary>
+            ID of the internet tunnel’s public IP address
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.EnableInternetAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.EnableInternetAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.EnableInternetAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.Filter.Name">
+            <summary>
+            Fields to be filtered.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.Filter.Values">
+            <summary>
+            Filter values of the field.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.InstanceId">
+            <summary>
+            Internet tunnel’s IP address ID
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.Subnet">
+            <summary>
+            Internet tunnel’s network address
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.MaskLen">
+            <summary>
+            Mask length of a network address
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.AddrType">
+            <summary>
+            Address type. Valid values: 0: BGP
+            1: China Telecom
+            2: China Mobile
+            3: China Unicom
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.Status">
+            <summary>
+            Address status. Valid values: 0: in use
+            1: disabled
+            2: returned
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.ApplyTime">
+            <summary>
+            Applied at
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.StopTime">
+            <summary>
+            Disabled at
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.ReleaseTime">
+            <summary>
+            Returned at
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.Region">
+            <summary>
+            Region
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.AppId">
+            <summary>
+            User ID
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.AddrProto">
+            <summary>
+            Address protocol. Valid values: 0: IPv4; 1: IPv6
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.ReserveTime">
+            <summary>
+            Retention period of a released IP address, in days
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.InternetAddressDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressStatistics.Region">
+            <summary>
+            Region
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.InternetAddressStatistics.SubnetNum">
+            <summary>
+            Number of public IP addresses for internet tunnels
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.InternetAddressStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.DirectConnectId">
+            <summary>
+            Connection ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.DirectConnectName">
+            <summary>
+            Connection name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.CircuitCode">
+            <summary>
+            Circuit code of a connection, which is provided by the ISP or connection provider.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.Vlan">
+            <summary>
+            VLAN for connection debugging.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.TencentAddress">
+            <summary>
+            Tencent-side IP address for connection debugging.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.CustomerAddress">
+            <summary>
+            User-side IP address for connection debugging.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.CustomerName">
+            <summary>
+            Name of connection applicant, which is obtained from the account system by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.CustomerContactMail">
+            <summary>
+            Email address of connection applicant, which is obtained from the account system by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.CustomerContactNumber">
+            <summary>
+            Contact number of connection applicant, which is obtained from the account system by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.FaultReportContactPerson">
+            <summary>
+            Fault reporting contact person.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.FaultReportContactNumber">
+            <summary>
+            Fault reporting contact number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.SignLaw">
+            <summary>
+            Whether the connection applicant has signed the service agreement.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.Bandwidth">
+            <summary>
+            Connection’s bandwidth
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectAttributeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.DirectConnectTunnelId">
+            <summary>
+            Dedicated tunnel ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.DirectConnectTunnelName">
+            <summary>
+            Dedicated tunnel name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.BgpPeer">
+            <summary>
+            User-side BGP, including Asn and AuthKey.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.RouteFilterPrefixes">
+            <summary>
+            User-side IP range.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.TencentAddress">
+            <summary>
+            Tencent-side IP address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.CustomerAddress">
+            <summary>
+            User-side IP address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.Bandwidth">
+            <summary>
+            Bandwidth value of a dedicated tunnel in Mbps.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.TencentBackupAddress">
+            <summary>
+            Tencent-side standby IP address
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.ModifyDirectConnectTunnelAttributeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.NQAInfo.ProbeFailedTimes">
+            <summary>
+            Number of health checks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.NQAInfo.Interval">
+            <summary>
+            Health check interval
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.NQAInfo.DestinationIp">
+            <summary>
+            IP address for the health check
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.NQAInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelRequest.DirectConnectTunnelId">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.RejectDirectConnectTunnelResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressRequest.InstanceId">
+            <summary>
+            ID of the internet tunnel’s public IP address
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.ReleaseInternetAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.RouteFilterPrefix.Cidr">
+            <summary>
+            User-side IP range.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.RouteFilterPrefix.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.Tag.Key">
+            <summary>
+            Tag key
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dc.V20180410.Models.Tag.Value">
+            <summary>
+            Tag value
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dc.V20180410.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

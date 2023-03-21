@@ -1,0 +1,2316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudCfs</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.BindAutoSnapshotPolicy(TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to bind one or multiple file systems to a snapshot policy. A file system can be bound to only one policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.BindAutoSnapshotPolicySync(TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to bind one or multiple file systems to a snapshot policy. A file system can be bound to only one policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateAutoSnapshotPolicy(TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to create a scheduled snapshot policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateAutoSnapshotPolicySync(TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to create a scheduled snapshot policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateCfsFileSystem(TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest)">
+            <summary>
+            This API is used to create a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateCfsFileSystemSync(TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest)">
+            <summary>
+            This API is used to create a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateCfsPGroup(TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupRequest)">
+            <summary>
+            This API is used to create a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateCfsPGroupSync(TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupRequest)">
+            <summary>
+            This API is used to create a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateCfsRule(TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest)">
+            <summary>
+            This API is used to create a permission group rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateCfsRuleSync(TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest)">
+            <summary>
+            This API is used to create a permission group rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateCfsSnapshot(TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotRequest)">
+            <summary>
+            This API is used to create a file system snapshot.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.CreateCfsSnapshotSync(TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotRequest)">
+            <summary>
+            This API is used to create a file system snapshot.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteAutoSnapshotPolicy(TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to delete a scheduled snapshot policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteAutoSnapshotPolicySync(TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to delete a scheduled snapshot policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteCfsFileSystem(TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemRequest)">
+            <summary>
+            This API is used to delete a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteCfsFileSystemSync(TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemRequest)">
+            <summary>
+            This API is used to delete a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteCfsPGroup(TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupRequest)">
+            <summary>
+            This API is used to delete a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteCfsPGroupSync(TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupRequest)">
+            <summary>
+            This API is used to delete a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteCfsRule(TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleRequest)">
+            <summary>
+            This API is used to delete a permission group rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteCfsRuleSync(TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleRequest)">
+            <summary>
+            This API is used to delete a permission group rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteCfsSnapshot(TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotRequest)">
+            <summary>
+            This API is used to delete a file system snapshot.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteCfsSnapshotSync(TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotRequest)">
+            <summary>
+            This API is used to delete a file system snapshot.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteMountTarget(TencentCloud.Cfs.V20190719.Models.DeleteMountTargetRequest)">
+            <summary>
+            This API is used to delete a mount target.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DeleteMountTargetSync(TencentCloud.Cfs.V20190719.Models.DeleteMountTargetRequest)">
+            <summary>
+            This API is used to delete a mount target.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeAutoSnapshotPolicies(TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest)">
+            <summary>
+            This API is used to query the list of scheduled snapshot policies of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeAutoSnapshotPoliciesSync(TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest)">
+            <summary>
+            This API is used to query the list of scheduled snapshot policies of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeAvailableZoneInfo(TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoRequest)">
+            <summary>
+            This API is used to query the availability of a region.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeAvailableZoneInfoSync(TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoRequest)">
+            <summary>
+            This API is used to query the availability of a region.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsFileSystemClients(TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsRequest)">
+            <summary>
+            This API is used to query clients on which this file system is mounted. To do so, the client needs to have the CFS monitoring plugin installed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsFileSystemClientsSync(TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsRequest)">
+            <summary>
+            This API is used to query clients on which this file system is mounted. To do so, the client needs to have the CFS monitoring plugin installed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsFileSystems(TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsRequest)">
+            <summary>
+            This API is used to query file systems.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsFileSystemsSync(TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsRequest)">
+            <summary>
+            This API is used to query file systems.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsPGroups(TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsRequest)">
+            <summary>
+            This API is used to query the list of permission groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsPGroupsSync(TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsRequest)">
+            <summary>
+            This API is used to query the list of permission groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsRules(TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesRequest)">
+            <summary>
+            This API is used to query the list of permission group rules.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsRulesSync(TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesRequest)">
+            <summary>
+            This API is used to query the list of permission group rules.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsServiceStatus(TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusRequest)">
+            <summary>
+            This API is used to query the status of the CFS service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsServiceStatusSync(TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusRequest)">
+            <summary>
+            This API is used to query the status of the CFS service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsSnapshotOverview(TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewRequest)">
+            <summary>
+            This API is used to get the snapshot overview of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsSnapshotOverviewSync(TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewRequest)">
+            <summary>
+            This API is used to get the snapshot overview of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsSnapshots(TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest)">
+            <summary>
+            This API is used to query the list of snapshots of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeCfsSnapshotsSync(TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest)">
+            <summary>
+            This API is used to query the list of snapshots of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeMountTargets(TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsRequest)">
+            <summary>
+            This API is used to query the mount targets of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeMountTargetsSync(TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsRequest)">
+            <summary>
+            This API is used to query the mount targets of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeSnapshotOperationLogs(TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsRequest)">
+            <summary>
+            This API is used to query the operation logs of a snapshot.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.DescribeSnapshotOperationLogsSync(TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsRequest)">
+            <summary>
+            This API is used to query the operation logs of a snapshot.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.SignUpCfsService(TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceRequest)">
+            <summary>
+            This API is used to activate the CFS service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.SignUpCfsServiceSync(TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceRequest)">
+            <summary>
+            This API is used to activate the CFS service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UnbindAutoSnapshotPolicy(TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to unbind a snapshot policy from a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UnbindAutoSnapshotPolicySync(TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to unbind a snapshot policy from a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateAutoSnapshotPolicy(TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to update a scheduled snapshot policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateAutoSnapshotPolicySync(TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest)">
+            <summary>
+            This API is used to update a scheduled snapshot policy.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsFileSystemName(TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameRequest)">
+            <summary>
+            This API is used to update a file system name.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsFileSystemNameSync(TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameRequest)">
+            <summary>
+            This API is used to update a file system name.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsFileSystemPGroup(TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupRequest)">
+            <summary>
+            This API is used to update the permission group used by a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsFileSystemPGroupSync(TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupRequest)">
+            <summary>
+            This API is used to update the permission group used by a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsFileSystemSizeLimit(TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitRequest)">
+            <summary>
+            This API is used to update the capacity limit of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsFileSystemSizeLimitSync(TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitRequest)">
+            <summary>
+            This API is used to update the capacity limit of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsPGroup(TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupRequest)">
+            <summary>
+            This API is used to update the information of a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsPGroupSync(TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupRequest)">
+            <summary>
+            This API is used to update the information of a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsRule(TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest)">
+            <summary>
+            This API is used to update a permission rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsRuleSync(TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest)">
+            <summary>
+            This API is used to update a permission rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsSnapshotAttribute(TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeRequest)">
+            <summary>
+            This API is used to update the name and retention period of a file system snapshot.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.CfsClient.UpdateCfsSnapshotAttributeSync(TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeRequest)">
+            <summary>
+            This API is used to update the name and retention period of a file system snapshot.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.PolicyName">
+            <summary>
+            Snapshot policy name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.CreationTime">
+            <summary>
+            Snapshot policy creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.FileSystemNums">
+            <summary>
+            Number of bound file systems
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.DayOfWeek">
+            <summary>
+            The day of the week on which to regularly back up the snapshot
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.Hour">
+            <summary>
+            The hour of a day at which to regularly back up the snapshot
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.IsActivated">
+            <summary>
+            Whether to activate the scheduled snapshot feature
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.NextActiveTime">
+            <summary>
+            Next time to trigger snapshot
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.Status">
+            <summary>
+            Snapshot policy status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.AppId">
+            <summary>
+            Account ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.AliveDays">
+            <summary>
+            Retention period
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.RegionName">
+            <summary>
+            Region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.FileSystems">
+            <summary>
+            File system information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.AutoSnapshotPolicyInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableProtoStatus.SaleStatus">
+            <summary>
+            Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableProtoStatus.Protocol">
+            <summary>
+            Protocol type. Valid values: NFS, CIFS
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.AvailableProtoStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableRegion.Region">
+            <summary>
+            Region name, such as "ap-beijing"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableRegion.RegionName">
+            <summary>
+            Region name, such as "bj"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableRegion.RegionStatus">
+            <summary>
+            Region availability. If a region has at least one AZ where resources are purchasable, this value will be `AVAILABLE`; otherwise, it will be `UNAVAILABLE`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableRegion.Zones">
+            <summary>
+            Array of AZs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableRegion.RegionCnName">
+            <summary>
+            Region name, such as "Guangzhou"
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.AvailableRegion.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableType.Protocols">
+            <summary>
+            Protocol and sale details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableType.Type">
+            <summary>
+            Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableType.Prepayment">
+            <summary>
+            Indicates whether prepaid is supported. `true`: yes; `false`: no
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.AvailableType.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableZone.Zone">
+            <summary>
+            AZ name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableZone.ZoneId">
+            <summary>
+            AZ ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableZone.ZoneCnName">
+            <summary>
+            Chinese name of an AZ
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableZone.Types">
+            <summary>
+            Array of classes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.AvailableZone.ZoneName">
+            <summary>
+            Chinese and English names of an AZ
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.AvailableZone.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyRequest.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyRequest.FileSystemIds">
+            <summary>
+            List of file systems
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyResponse.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.BindAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest.DayOfWeek">
+            <summary>
+            The day of the week on which to repeat the snapshot operation
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest.Hour">
+            <summary>
+            The time point when to repeat the snapshot operation
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest.PolicyName">
+            <summary>
+            Policy name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest.AliveDays">
+            <summary>
+            Snapshot retention period
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyResponse.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.Zone">
+            <summary>
+            AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.NetInterface">
+            <summary>
+            Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.PGroupId">
+            <summary>
+            Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.Protocol">
+            <summary>
+            File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.StorageType">
+            <summary>
+            Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.VpcId">
+            <summary>
+            VPC ID. This field is required if network type is VPC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.SubnetId">
+            <summary>
+            Subnet ID. This field is required if network type is VPC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.MountIP">
+            <summary>
+            IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.FsName">
+            <summary>
+            Custom file system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.ResourceTags">
+            <summary>
+            File system tag
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.ClientToken">
+            <summary>
+            A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.CcnId">
+            <summary>
+            CCN instance ID (required if the network type is CCN)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.CidrBlock">
+            <summary>
+            CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.Capacity">
+            <summary>
+            File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.CreationTime">
+            <summary>
+            File system creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.CreationToken">
+            <summary>
+            Custom file system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.LifeCycleState">
+            <summary>
+            File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.SizeByte">
+            <summary>
+            Storage used by the file system, in bytes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.ZoneId">
+            <summary>
+            AZ ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.FsName">
+            <summary>
+            Custom file system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.Encrypted">
+            <summary>
+            Whether a file system is encrypted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateCfsFileSystemResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupRequest.Name">
+            <summary>
+            Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupRequest.DescInfo">
+            <summary>
+            Permission group description, which can contain 1-255 characters
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse.Name">
+            <summary>
+            Permission group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse.DescInfo">
+            <summary>
+            Permission group description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse.BindCfsNum">
+            <summary>
+            The number of file systems bound to this permission group
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse.CDate">
+            <summary>
+            Permission group creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateCfsPGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest.AuthClientIp">
+            <summary>
+            You can enter a single IP or IP range, such as 10.1.10.11 or 10.10.1.0/24. The default visiting address is `*`, indicating that all IPs are allowed. Please note that you need to enter the CVM instance's private IP here.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest.Priority">
+            <summary>
+            Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest.RWPermission" -->
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest.UserPermission">
+            <summary>
+            User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse.AuthClientIp">
+            <summary>
+            Client IP
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse.RWPermission" -->
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse.UserPermission">
+            <summary>
+            User permission
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse.Priority">
+            <summary>
+            Priority
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateCfsRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotRequest.SnapshotName">
+            <summary>
+            Snapshot name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotRequest.ResourceTags">
+            <summary>
+            Snapshot tag
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotResponse.SnapshotId">
+            <summary>
+            File system snapshot ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.CreateCfsSnapshotResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyRequest.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyResponse.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemRequest.FileSystemId">
+            <summary>
+            File system ID. Note: please call the `DeleteMountTarget` API to delete the mount target first before deleting a file system; otherwise, the delete operation will fail.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteCfsFileSystemResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupRequest.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupResponse.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupResponse.AppId">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteCfsPGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleRequest.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleRequest.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleResponse.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleResponse.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteCfsRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotRequest.SnapshotId">
+            <summary>
+            File system snapshot ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotRequest.SnapshotIds">
+            <summary>
+            The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotResponse.SnapshotId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteCfsSnapshotResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetRequest.MountTargetId">
+            <summary>
+            Mount target ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DeleteMountTargetResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest.Offset">
+            <summary>
+            Page offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest.Limit">
+            <summary>
+            Page length
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest.Filters">
+            <summary>
+            Filters
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest.Order">
+            <summary>
+            Ascending or descending order
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest.OrderField">
+            <summary>
+            Sorting field
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesResponse.TotalCount">
+            <summary>
+            Total number of snapshot policies
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesResponse.AutoSnapshotPolicies">
+            <summary>
+            Snapshot policy information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeAutoSnapshotPoliciesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoResponse.RegionZones">
+            <summary>
+            Information such as resource availability in each AZ and the supported storage classes and protocols
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeAvailableZoneInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsResponse.ClientList">
+            <summary>
+            Client list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemClientsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsRequest.VpcId">
+            <summary>
+            VPC ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsRequest.SubnetId">
+            <summary>
+            Subnet ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsResponse.FileSystems">
+            <summary>
+            File system information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsResponse.TotalCount">
+            <summary>
+            Total number of file systems
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsFileSystemsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsResponse.PGroupList">
+            <summary>
+            Permission group information list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsPGroupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesRequest.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesResponse.RuleList">
+            <summary>
+            List of permission group rules
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusResponse.CfsServiceStatus">
+            <summary>
+            Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsServiceStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewResponse.StatisticsList">
+            <summary>
+            Statistics
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotOverviewResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest.SnapshotId">
+            <summary>
+            Snapshot ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest.Offset">
+            <summary>
+            The starting position of paging
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest.Limit">
+            <summary>
+            Page length
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest.Filters">
+            <summary>
+            Filters
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest.OrderField">
+            <summary>
+            Order field
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest.Order">
+            <summary>
+            Sorting order (ascending or descending)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsResponse.TotalCount">
+            <summary>
+            Total number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsResponse.Snapshots">
+            <summary>
+            Snapshot information description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsResponse.TotalSize">
+            <summary>
+            Total size of snapshots
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeCfsSnapshotsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsResponse.MountTargets">
+            <summary>
+            Mount target details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsResponse.NumberOfMountTargets">
+            <summary>
+            The number of mount targets
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeMountTargetsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsRequest.SnapshotId">
+            <summary>
+            File system snapshot ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsRequest.StartTime">
+            <summary>
+            Start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsRequest.EndTime">
+            <summary>
+            End time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsResponse.SnapshotId">
+            <summary>
+            Snapshot ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsResponse.SnapshotOperates">
+            <summary>
+            Operation log
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.DescribeSnapshotOperationLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemByPolicy.CreationToken">
+            <summary>
+            File system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemByPolicy.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemByPolicy.SizeByte">
+            <summary>
+            File system size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemByPolicy.StorageType">
+            <summary>
+            Storage class
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemByPolicy.TotalSnapshotSize">
+            <summary>
+            Total snapshot size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemByPolicy.CreationTime">
+            <summary>
+            File system creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemByPolicy.ZoneId">
+            <summary>
+            Region ID of the file system
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.FileSystemByPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemClient.CfsVip">
+            <summary>
+            IP address of the file system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemClient.ClientIp">
+            <summary>
+            Client IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemClient.VpcId">
+            <summary>
+            File system VPCID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemClient.Zone">
+            <summary>
+            Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemClient.ZoneName">
+            <summary>
+            AZ name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemClient.MountDirectory">
+            <summary>
+            Path in which the file system is mounted to the client
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.FileSystemClient.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.CreationTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.CreationToken">
+            <summary>
+            Custom name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.LifeCycleState">
+            <summary>
+            File system status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.SizeByte">
+            <summary>
+            Used file system capacity
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.SizeLimit">
+            <summary>
+            Maximum storage limit of a file system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.ZoneId">
+            <summary>
+            Region ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.Zone">
+            <summary>
+            Region name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.Protocol">
+            <summary>
+            File system protocol type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.StorageType">
+            <summary>
+            File system storage class
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.StorageResourcePkg">
+            <summary>
+            Prepaid storage pack bound with the file system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.BandwidthResourcePkg">
+            <summary>
+            Prepaid bandwidth pack bound to a file system (not supported currently)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.PGroup">
+            <summary>
+            Information of permission groups bound to a file system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.FsName">
+            <summary>
+            Custom name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.Encrypted">
+            <summary>
+            Whether a file system is encrypted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.KmsKeyId">
+            <summary>
+            Key used for encryption, which can be the key ID or ARN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.AppId">
+            <summary>
+            Application ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.BandwidthLimit">
+            <summary>
+            The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.Capacity">
+            <summary>
+            Total capacity of the file system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.Tags">
+            <summary>
+            File system tag list
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.FileSystemInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.Filter.Values">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.Filter.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.MountTargetId">
+            <summary>
+            Mount target ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.IpAddress">
+            <summary>
+            Mount target IP
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.FSID">
+            <summary>
+            Mount root-directory
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.LifeCycleState">
+            <summary>
+            Mount target status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.NetworkInterface">
+            <summary>
+            Network type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.VpcId">
+            <summary>
+            VPC ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.VpcName">
+            <summary>
+            VPC name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.SubnetId">
+            <summary>
+            Subnet ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.SubnetName">
+            <summary>
+            Subnet name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.CcnID">
+            <summary>
+            CCN instance ID used by CFS Turbo
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.MountInfo.CidrBlock">
+            <summary>
+            CCN IP range used by CFS Turbo
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.MountInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroup.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroup.Name">
+            <summary>
+            Permission group name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.PGroup.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupInfo.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupInfo.Name">
+            <summary>
+            Permission group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupInfo.DescInfo">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupInfo.CDate">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupInfo.BindCfsNum">
+            <summary>
+            The number of bound file system
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.PGroupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupRuleInfo.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupRuleInfo.AuthClientIp">
+            <summary>
+            Client IP allowed for access
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cfs.V20190719.Models.PGroupRuleInfo.RWPermission" -->
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupRuleInfo.UserPermission">
+            <summary>
+            User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.PGroupRuleInfo.Priority">
+            <summary>
+            Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.PGroupRuleInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceResponse.CfsServiceStatus">
+            <summary>
+            Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.SignUpCfsServiceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.CreationTime">
+            <summary>
+            Snapshot creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.SnapshotName">
+            <summary>
+            Snapshot name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.SnapshotId">
+            <summary>
+            Snapshot ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.Status">
+            <summary>
+            Snapshot status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.RegionName">
+            <summary>
+            Region name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.Size">
+            <summary>
+            Snapshot size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.AliveDay">
+            <summary>
+            Retention period in days
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.Percent">
+            <summary>
+            Snapshot progress
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.AppId">
+            <summary>
+            Account ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.DeleteTime">
+            <summary>
+            Snapshot deletion time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.FsName">
+            <summary>
+            File system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.Tags">
+            <summary>
+            Snapshot tag
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.SnapshotInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotOperateLog.Action">
+            <summary>
+            Operation type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotOperateLog.ActionTime">
+            <summary>
+            Operation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotOperateLog.ActionName">
+            <summary>
+            Operation name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotOperateLog.Operator">
+            <summary>
+            Operator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotOperateLog.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.SnapshotOperateLog.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotStatistics.Region">
+            <summary>
+            Region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotStatistics.SnapshotNumber">
+            <summary>
+            Total number of snapshots
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.SnapshotStatistics.SnapshotSize">
+            <summary>
+            Total snapshot size
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.SnapshotStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.TagInfo.TagKey">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.TagInfo.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.TagInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyRequest.FileSystemIds">
+            <summary>
+            List of IDs of the file systems to be unbound, separated by comma
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyRequest.AutoSnapshotPolicyId">
+            <summary>
+            ID of the snapshot to be unbound
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyResponse.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UnbindAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest.PolicyName">
+            <summary>
+            Snapshot policy name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest.DayOfWeek">
+            <summary>
+            The day of the week on which to regularly back up the snapshot
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest.Hour">
+            <summary>
+            The hour of a day at which to regularly back up the snapshot
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest.AliveDays">
+            <summary>
+            Snapshot retention period
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest.IsActivated">
+            <summary>
+            Whether to activate the scheduled snapshot feature
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyResponse.AutoSnapshotPolicyId">
+            <summary>
+            Snapshot policy ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateAutoSnapshotPolicyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameRequest.FsName">
+            <summary>
+            Custom file system name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameResponse.CreationToken">
+            <summary>
+            Custom file system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameResponse.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameResponse.FsName">
+            <summary>
+            Custom file system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemNameResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupRequest.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupResponse.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupResponse.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemPGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitRequest.FsLimit">
+            <summary>
+            File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitRequest.FileSystemId">
+            <summary>
+            File system ID. Currently, only Standard file systems are supported.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsFileSystemSizeLimitResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupRequest.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupRequest.Name">
+            <summary>
+            Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupRequest.DescInfo">
+            <summary>
+            Permission group description, which can contain 1-255 characters
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupResponse.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupResponse.Name">
+            <summary>
+            Permission group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupResponse.DescInfo">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsPGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest.AuthClientIp">
+            <summary>
+            You can enter a single IP or IP range, such as 10.1.10.11 or 10.10.1.0/24. The default visiting address is `*`, indicating that all IPs are allowed. Please note that you need to enter the CVM instance's private IP here.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest.RWPermission" -->
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest.UserPermission">
+            <summary>
+            User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest.Priority">
+            <summary>
+            Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse.PGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse.AuthClientIp">
+            <summary>
+            Client IP or IP range allowed for access
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse.RWPermission" -->
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse.UserPermission">
+            <summary>
+            User permission
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse.Priority">
+            <summary>
+            Priority
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeRequest.SnapshotId">
+            <summary>
+            File system snapshot ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeRequest.SnapshotName">
+            <summary>
+            File system snapshot name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeRequest.AliveDays">
+            <summary>
+            File system snapshot retention period in days
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeResponse.SnapshotId">
+            <summary>
+            File system snapshot ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cfs.V20190719.Models.UpdateCfsSnapshotAttributeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

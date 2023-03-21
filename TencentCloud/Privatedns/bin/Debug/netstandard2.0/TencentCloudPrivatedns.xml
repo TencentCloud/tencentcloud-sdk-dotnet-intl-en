@@ -1,0 +1,1087 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudPrivatedns</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.CreatePrivateDNSAccount(TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountRequest)">
+            <summary>
+            This API is used to create a Private DNS account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.CreatePrivateDNSAccountSync(TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountRequest)">
+            <summary>
+            This API is used to create a Private DNS account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.CreatePrivateZone(TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest)">
+            <summary>
+            This API is used to create a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.CreatePrivateZoneSync(TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest)">
+            <summary>
+            This API is used to create a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.CreatePrivateZoneRecord(TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest)">
+            <summary>
+            This API is used to add a DNS record for a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.CreatePrivateZoneRecordSync(TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest)">
+            <summary>
+            This API is used to add a DNS record for a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeAccountVpcList(TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest)">
+            <summary>
+            This API is used to get the VPC list of a Private DNS account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeAccountVpcListSync(TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest)">
+            <summary>
+            This API is used to get the VPC list of a Private DNS account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeAuditLog(TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest)">
+            <summary>
+            This API is used to get the list of operation logs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeAuditLogSync(TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest)">
+            <summary>
+            This API is used to get the list of operation logs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeDashboard(TencentCloud.Privatedns.V20201028.Models.DescribeDashboardRequest)">
+            <summary>
+            This API is used to get the overview of private DNS records.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeDashboardSync(TencentCloud.Privatedns.V20201028.Models.DescribeDashboardRequest)">
+            <summary>
+            This API is used to get the overview of private DNS records.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribePrivateDNSAccountList(TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListRequest)">
+            <summary>
+            This API is used to get the list of Private DNS accounts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribePrivateDNSAccountListSync(TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListRequest)">
+            <summary>
+            This API is used to get the list of Private DNS accounts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribePrivateZoneService(TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceRequest)">
+            <summary>
+            This API is used to query the Private DNS activation status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribePrivateZoneServiceSync(TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceRequest)">
+            <summary>
+            This API is used to query the Private DNS activation status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeQuotaUsage(TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageRequest)">
+            <summary>
+            This API is used to query quota usage.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeQuotaUsageSync(TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageRequest)">
+            <summary>
+            This API is used to query quota usage.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeRequestData(TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataRequest)">
+            <summary>
+            This API is used to get the DNS request volume of a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.DescribeRequestDataSync(TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataRequest)">
+            <summary>
+            This API is used to get the DNS request volume of a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.ModifyPrivateZone(TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest)">
+            <summary>
+            This API is used to modify a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.ModifyPrivateZoneSync(TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest)">
+            <summary>
+            This API is used to modify a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.ModifyPrivateZoneRecord(TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest)">
+            <summary>
+            This API is used to modify a DNS record for a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.ModifyPrivateZoneRecordSync(TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest)">
+            <summary>
+            This API is used to modify a DNS record for a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.ModifyPrivateZoneVpc(TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcRequest)">
+            <summary>
+            This API is used to modify the VPC associated with a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.ModifyPrivateZoneVpcSync(TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcRequest)">
+            <summary>
+            This API is used to modify the VPC associated with a private domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.ModifyRecordsStatus(TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusRequest)">
+            <summary>
+            This API is used to modify the DNS record status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.ModifyRecordsStatusSync(TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusRequest)">
+            <summary>
+            This API is used to modify the DNS record status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.SubscribePrivateZoneService(TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceRequest)">
+            <summary>
+            This API is used to activate the Private DNS service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.PrivatednsClient.SubscribePrivateZoneServiceSync(TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceRequest)">
+            <summary>
+            This API is used to activate the Private DNS service.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfo.UniqVpcId">
+            <summary>
+            VpcId: vpc-xadsafsdasd
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfo.Region">
+            <summary>
+            VPC region: ap-guangzhou, ap-shanghai
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfo.Uin">
+            <summary>
+            VPC account: 123456789
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfo.VpcName">
+            <summary>
+            VPC name: testname
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOut.VpcId">
+            <summary>
+            VpcId: vpc-xadsafsdasd
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOut.Region">
+            <summary>
+            Region: ap-guangzhou, ap-shanghai
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOut.Uin">
+            <summary>
+            VPC ID: 123456789
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOut.VpcName">
+            <summary>
+            VPC name: testname
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOut.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOutput.Uin">
+            <summary>
+            UIN of the VPC account
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOutput.UniqVpcId">
+            <summary>
+            VPC ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOutput.Region">
+            <summary>
+            Region
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.AccountVpcInfoOutput.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AuditLog.Resource">
+            <summary>
+            Log type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AuditLog.Metric">
+            <summary>
+            Log table name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AuditLog.TotalCount">
+            <summary>
+            Total number of logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AuditLog.DataSet">
+            <summary>
+            List of logs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.AuditLog.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AuditLogInfo.Date">
+            <summary>
+            Time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AuditLogInfo.OperatorUin">
+            <summary>
+            Operator UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.AuditLogInfo.Content">
+            <summary>
+            Log content
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.AuditLogInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountRequest.Account">
+            <summary>
+            Private DNS account
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.CreatePrivateDNSAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest.ZoneId">
+            <summary>
+            Private domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest.RecordType">
+            <summary>
+            Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest.SubDomain">
+            <summary>
+            Subdomain, such as "www", "m", and "@"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest.RecordValue">
+            <summary>
+            Record value, such as IP: 192.168.10.2, CNAME: cname.qcloud.com., and MX: mail.qcloud.com.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest.Weight">
+            <summary>
+            Record weight. Value range: 1–100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest.MX">
+            <summary>
+            MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest.TTL">
+            <summary>
+            Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordResponse.RecordId">
+            <summary>
+            Record ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.Domain">
+            <summary>
+            Domain name, which must be in the format of standard TLD
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.TagSet">
+            <summary>
+            Tags the private domain when it is created
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.VpcSet">
+            <summary>
+            Associates the private domain to a VPC when it is created
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.Remark">
+            <summary>
+            Remarks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.DnsForwardStatus">
+            <summary>
+            Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.Vpcs">
+            <summary>
+            Associates the private domain to a VPC when it is created
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.AccountVpcSet">
+            <summary>
+            List of authorized accounts' VPCs to associate with the private domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.CnameSpeedupStatus">
+            <summary>
+            Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneResponse.ZoneId">
+            <summary>
+            Private domain ID, such as zone-xxxxxx
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneResponse.Domain">
+            <summary>
+            Private domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.CreatePrivateZoneResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DatePoint.Date">
+            <summary>
+            Time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DatePoint.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DatePoint.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest.AccountUin">
+            <summary>
+            UIN of account
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest.Offset">
+            <summary>
+            Pagination offset, starting from 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest.Limit">
+            <summary>
+            Number of entries per page. Maximum value: `100`. Default value: `20`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest.Filters">
+            <summary>
+            Filter parameters
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListResponse.TotalCount">
+            <summary>
+            Number of VPCs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListResponse.VpcSet">
+            <summary>
+            VPC list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeAccountVpcListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest.TimeRangeBegin">
+            <summary>
+            Request volume statistics start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest.Filters">
+            <summary>
+            Filter parameter. Valid values: ZoneId (private domain ID), Domain (private domain), OperatorUin (operator account ID)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest.TimeRangeEnd">
+            <summary>
+            Request volume statistics end time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest.Offset">
+            <summary>
+            Pagination offset, starting from 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest.Limit">
+            <summary>
+            Number of entries per page. Maximum value: 100. Default value: 20
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogResponse.Data">
+            <summary>
+            List of operation logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeAuditLogResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardResponse.ZoneTotal">
+            <summary>
+            Total number of private domain DNS records
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardResponse.ZoneVpcCount">
+            <summary>
+            Number of VPCs associated with private domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardResponse.RequestTotalCount">
+            <summary>
+            Total number of historical requests
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardResponse.FlowUsage">
+            <summary>
+            Traffic package usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeDashboardResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListRequest.Offset">
+            <summary>
+            Pagination offset, starting from `0`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListRequest.Limit">
+            <summary>
+            Number of entries per page. Maximum value: `100`. Default value: `20`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListRequest.Filters">
+            <summary>
+            Filter parameters
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListResponse.TotalCount">
+            <summary>
+            Number of Private DNS accounts
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListResponse.AccountSet">
+            <summary>
+            List of Private DNS accounts
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribePrivateDNSAccountListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceResponse.ServiceStatus">
+            <summary>
+            Private DNS service activation status. Valid values: ENABLED, DISABLED
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribePrivateZoneServiceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageResponse.TldQuota">
+            <summary>
+            TLD quota usage
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeQuotaUsageResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataRequest.TimeRangeBegin">
+            <summary>
+            Request volume statistics start time in the format of 2020-11-22 00:00:00
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataRequest.Filters">
+            <summary>
+            Filter parameter:
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataRequest.TimeRangeEnd">
+            <summary>
+            Request volume statistics end time in the format of 2020-11-22 23:59:59
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataResponse.Data">
+            <summary>
+            Request volume statistics table
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataResponse.Interval">
+            <summary>
+            Request volume unit time. Valid values: Day, Hour
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.DescribeRequestDataResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.Filter.Name">
+            <summary>
+            Parameter name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.Filter.Values">
+            <summary>
+            Array of parameter values
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.FlowUsage.FlowType">
+            <summary>
+            Traffic package type, Valid values: ZONE (private domain); TRAFFIC (DNS traffic package)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.FlowUsage.TotalQuantity">
+            <summary>
+            Traffic package quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.FlowUsage.AvailableQuantity">
+            <summary>
+            Available quota of traffic package
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.FlowUsage.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.MetricData.Resource">
+            <summary>
+            Resource description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.MetricData.Metric">
+            <summary>
+            Table name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.MetricData.DataSet">
+            <summary>
+            Table data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.MetricData.MetricCount">
+            <summary>
+            The total number of requests within the query scope.
+            Note: This field may return null, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.MetricData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.ZoneId">
+            <summary>
+            Private domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.RecordId">
+            <summary>
+            Record ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.RecordType">
+            <summary>
+            Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.SubDomain">
+            <summary>
+            Subdomain, such as "www", "m", and "@"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.RecordValue">
+            <summary>
+            Record value, such as IP: 192.168.10.2, CNAME: cname.qcloud.com., and MX: mail.qcloud.com.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.Weight">
+            <summary>
+            Record weight. Value range: 1–100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.MX">
+            <summary>
+            MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.TTL">
+            <summary>
+            Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest.ZoneId">
+            <summary>
+            Private domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest.Remark">
+            <summary>
+            Remarks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest.DnsForwardStatus">
+            <summary>
+            Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest.CnameSpeedupStatus">
+            <summary>
+            Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcRequest.ZoneId">
+            <summary>
+            Private domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcRequest.VpcSet">
+            <summary>
+            List of all VPCs associated with private domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcRequest.AccountVpcSet">
+            <summary>
+            List of authorized accounts' VPCs to associate with the private domain
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcResponse.ZoneId">
+            <summary>
+            Private domain ID, such as zone-xxxxxx
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcResponse.VpcSet">
+            <summary>
+            List of VPCs associated with domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcResponse.AccountVpcSet">
+            <summary>
+            List of authorized accounts' VPCs associated with the private domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.ModifyPrivateZoneVpcResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusRequest.ZoneId">
+            <summary>
+            The private domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusRequest.RecordIds">
+            <summary>
+            The DNS record IDs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusRequest.Status">
+            <summary>
+            `enabled`: Enable; `disabled`: Disable.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusResponse.ZoneId">
+            <summary>
+            The private domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusResponse.RecordIds">
+            <summary>
+            The DNS record IDs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusResponse.Status">
+            <summary>
+            `enabled`: Enabled; `disabled`: Disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.ModifyRecordsStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.PrivateDNSAccount.Uin">
+            <summary>
+            Root account UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.PrivateDNSAccount.Account">
+            <summary>
+            Root account name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.PrivateDNSAccount.Nickname">
+            <summary>
+            Account name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.PrivateDNSAccount.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceResponse.ServiceStatus">
+            <summary>
+            Private DNS service activation status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.SubscribePrivateZoneServiceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.TagInfo.TagKey">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.TagInfo.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.TagInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.TldQuota.Total">
+            <summary>
+            Total quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.TldQuota.Used">
+            <summary>
+            Used quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.TldQuota.Stock">
+            <summary>
+            Available quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.TldQuota.Quota">
+            <summary>
+            User’s quota
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.TldQuota.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.VpcInfo.UniqVpcId">
+            <summary>
+            VpcId: vpc-xadsafsdasd
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Privatedns.V20201028.Models.VpcInfo.Region">
+            <summary>
+            VPC region: ap-guangzhou, ap-shanghai
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Privatedns.V20201028.Models.VpcInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

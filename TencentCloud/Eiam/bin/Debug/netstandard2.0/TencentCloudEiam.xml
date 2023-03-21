@@ -1,0 +1,3108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudEiam</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.AddAccountToAccountGroup(TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupRequest)">
+            <summary>
+            This API is used to add an account to an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.AddAccountToAccountGroupSync(TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupRequest)">
+            <summary>
+            This API is used to add an account to an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.AddUserToUserGroup(TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupRequest)">
+            <summary>
+            This API is used to add a user to a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.AddUserToUserGroupSync(TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupRequest)">
+            <summary>
+            This API is used to add a user to a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateAccountGroup(TencentCloud.Eiam.V20210420.Models.CreateAccountGroupRequest)">
+            <summary>
+            This API is used to create an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateAccountGroupSync(TencentCloud.Eiam.V20210420.Models.CreateAccountGroupRequest)">
+            <summary>
+            This API is used to create an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateAppAccount(TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest)">
+            <summary>
+            This API is used to create an application account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateAppAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateAppAccountSync(TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest)">
+            <summary>
+            This API is used to create an application account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateAppAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateOrgNode(TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest)">
+            <summary>
+            This API is used to create an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateOrgNodeSync(TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest)">
+            <summary>
+            This API is used to create an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateUser(TencentCloud.Eiam.V20210420.Models.CreateUserRequest)">
+            <summary>
+            This API is used to create a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateUserSync(TencentCloud.Eiam.V20210420.Models.CreateUserRequest)">
+            <summary>
+            This API is used to create a user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateUserGroup(TencentCloud.Eiam.V20210420.Models.CreateUserGroupRequest)">
+            <summary>
+            This API is used to create a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.CreateUserGroupSync(TencentCloud.Eiam.V20210420.Models.CreateUserGroupRequest)">
+            <summary>
+            This API is used to create a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.CreateUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteAccountGroup(TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupRequest)">
+            <summary>
+            This API is used to delete an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteAccountGroupSync(TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupRequest)">
+            <summary>
+            This API is used to delete an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteAppAccount(TencentCloud.Eiam.V20210420.Models.DeleteAppAccountRequest)">
+            <summary>
+            This API is used to delete an application account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteAppAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteAppAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteAppAccountSync(TencentCloud.Eiam.V20210420.Models.DeleteAppAccountRequest)">
+            <summary>
+            This API is used to delete an application account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteAppAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteAppAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteOrgNode(TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeRequest)">
+            <summary>
+            This API is used to delete an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteOrgNodeSync(TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeRequest)">
+            <summary>
+            This API is used to delete an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteUser(TencentCloud.Eiam.V20210420.Models.DeleteUserRequest)">
+            <summary>
+            This API is used to delete a user by username or user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteUserSync(TencentCloud.Eiam.V20210420.Models.DeleteUserRequest)">
+            <summary>
+            This API is used to delete a user by username or user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteUserGroup(TencentCloud.Eiam.V20210420.Models.DeleteUserGroupRequest)">
+            <summary>
+            This API is used to delete a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteUserGroupSync(TencentCloud.Eiam.V20210420.Models.DeleteUserGroupRequest)">
+            <summary>
+            This API is used to delete a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteUsers(TencentCloud.Eiam.V20210420.Models.DeleteUsersRequest)">
+            <summary>
+            This API is used to batch delete the users under the current node. If an error occurs when a user is deleted, the deletion of other selected users will not be affected, and the username/ID of the user who fails to be deleted will be prompted.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUsersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUsersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DeleteUsersSync(TencentCloud.Eiam.V20210420.Models.DeleteUsersRequest)">
+            <summary>
+            This API is used to batch delete the users under the current node. If an error occurs when a user is deleted, the deletion of other selected users will not be affected, and the username/ID of the user who fails to be deleted will be prompted.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUsersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DeleteUsersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeAccountGroup(TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest)">
+            <summary>
+            This API is used to query the list of account groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeAccountGroupSync(TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest)">
+            <summary>
+            This API is used to query the list of account groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeAppAccount(TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest)">
+            <summary>
+            This API is used to query the list of application accounts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeAppAccountSync(TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest)">
+            <summary>
+            This API is used to query the list of application accounts.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeApplication(TencentCloud.Eiam.V20210420.Models.DescribeApplicationRequest)">
+            <summary>
+            This API is used to get the information of an application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeApplicationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeApplicationSync(TencentCloud.Eiam.V20210420.Models.DescribeApplicationRequest)">
+            <summary>
+            This API is used to get the information of an application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeApplicationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeOrgNode(TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeRequest)">
+            <summary>
+            This API is used to read the information of an organization node by organization node ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeOrgNodeSync(TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeRequest)">
+            <summary>
+            This API is used to read the information of an organization node by organization node ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribePublicKey(TencentCloud.Eiam.V20210420.Models.DescribePublicKeyRequest)">
+            <summary>
+            This API is used to get the information of a JWT public key.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribePublicKeySync(TencentCloud.Eiam.V20210420.Models.DescribePublicKeyRequest)">
+            <summary>
+            This API is used to get the information of a JWT public key.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeUserGroup(TencentCloud.Eiam.V20210420.Models.DescribeUserGroupRequest)">
+            <summary>
+            This API is used to get the information of a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeUserGroupSync(TencentCloud.Eiam.V20210420.Models.DescribeUserGroupRequest)">
+            <summary>
+            This API is used to get the information of a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeUserInfo(TencentCloud.Eiam.V20210420.Models.DescribeUserInfoRequest)">
+            <summary>
+            This API is used to search for a user by username or user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeUserInfoSync(TencentCloud.Eiam.V20210420.Models.DescribeUserInfoRequest)">
+            <summary>
+            This API is used to search for a user by username or user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeUserResourcesAuthorization(TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest)">
+            <summary>
+            This API is used to query the list of resource authorizations under the specified user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeUserResourcesAuthorizationSync(TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest)">
+            <summary>
+            This API is used to query the list of resource authorizations under the specified user.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeUserThirdPartyAccountInfo(TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoRequest)">
+            <summary>
+            This API is used to get the third-party account binding information by username or user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.DescribeUserThirdPartyAccountInfoSync(TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoRequest)">
+            <summary>
+            This API is used to get the third-party account binding information by username or user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListAccountInAccountGroup(TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest)">
+            <summary>
+             This API is used to get the list of accounts in an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListAccountInAccountGroupSync(TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest)">
+            <summary>
+             This API is used to get the list of accounts in an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListApplicationAuthorizations(TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest)">
+            <summary>
+            This API is used to get the list of authorization relationships of an application (including search criteria-based match).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListApplicationAuthorizationsSync(TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest)">
+            <summary>
+            This API is used to get the list of authorization relationships of an application (including search criteria-based match).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListApplications(TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest)">
+            <summary>
+            This API is used to get the list of applications.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListApplicationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListApplicationsSync(TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest)">
+            <summary>
+            This API is used to get the list of applications.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListApplicationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListAuthorizedApplicationsToOrgNode(TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeRequest)">
+            <summary>
+            This API is used to get the list of accessible applications by organization node ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListAuthorizedApplicationsToOrgNodeSync(TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeRequest)">
+            <summary>
+            This API is used to get the list of accessible applications by organization node ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListAuthorizedApplicationsToUser(TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserRequest)">
+            <summary>
+            This API is used to get the list of accessible applications by user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListAuthorizedApplicationsToUserSync(TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserRequest)">
+            <summary>
+            This API is used to get the list of accessible applications by user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListAuthorizedApplicationsToUserGroup(TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupRequest)">
+            <summary>
+            This API is used to get the list of accessible applications by user group ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListAuthorizedApplicationsToUserGroupSync(TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupRequest)">
+            <summary>
+            This API is used to get the list of accessible applications by user group ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUserGroups(TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest)">
+            <summary>
+            This API is used to get the information of the user group list (including query conditions).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUserGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUserGroupsSync(TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest)">
+            <summary>
+            This API is used to get the information of the user group list (including query conditions).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUserGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUserGroupsOfUser(TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest)">
+            <summary>
+            This API is used to get the list of a user's user groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUserGroupsOfUserSync(TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest)">
+            <summary>
+            This API is used to get the list of a user's user groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUsers(TencentCloud.Eiam.V20210420.Models.ListUsersRequest)">
+            <summary>
+            This API is used to get the information of the user list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUsersSync(TencentCloud.Eiam.V20210420.Models.ListUsersRequest)">
+            <summary>
+            This API is used to get the information of the user list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUsersInOrgNode(TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest)">
+            <summary>
+            This API is used to read the users under an organization node by organization node ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUsersInOrgNodeSync(TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest)">
+            <summary>
+            This API is used to read the users under an organization node by organization node ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUsersInUserGroup(TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest)">
+            <summary>
+            This API is used to get the list of the users in a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ListUsersInUserGroupSync(TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest)">
+            <summary>
+            This API is used to get the list of the users in a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ModifyAccountGroup(TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupRequest)">
+            <summary>
+            This API is used to modify an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ModifyAccountGroupSync(TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupRequest)">
+            <summary>
+            This API is used to modify an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ModifyAppAccount(TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest)">
+            <summary>
+            This API is used to modify an application account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ModifyAppAccountSync(TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest)">
+            <summary>
+            This API is used to modify an application account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ModifyApplication(TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest)">
+            <summary>
+            This API is used to update the information of an application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyApplicationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ModifyApplicationSync(TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest)">
+            <summary>
+            This API is used to update the information of an application.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyApplicationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ModifyUserInfo(TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest)">
+            <summary>
+            This API is used to modify the information of a user by username or user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.ModifyUserInfoSync(TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest)">
+            <summary>
+            This API is used to modify the information of a user by username or user ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.RemoveAccountFromAccountGroup(TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupRequest)">
+            <summary>
+            This API is used to remove an account from an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.RemoveAccountFromAccountGroupSync(TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupRequest)">
+            <summary>
+            This API is used to remove an account from an account group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.RemoveUserFromUserGroup(TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupRequest)">
+            <summary>
+            This API is used to remove a user from a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.RemoveUserFromUserGroupSync(TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupRequest)">
+            <summary>
+            This API is used to remove a user from a user group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.UpdateOrgNode(TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest)">
+            <summary>
+            This API is used to create an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.EiamClient.UpdateOrgNodeSync(TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest)">
+            <summary>
+            This API is used to create an organization node.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AccountGroupInfo.AccountGroupId">
+            <summary>
+            Account group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AccountGroupInfo.GroupName">
+            <summary>
+            Account group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AccountGroupInfo.Description">
+            <summary>
+            Remarks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AccountGroupInfo.CreatedDate">
+            <summary>
+            Creation time.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AccountGroupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AccountGroupSearchCriteria.Keyword">
+            <summary>
+            Keyword
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AccountGroupSearchCriteria.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupRequest.AccountGroupId">
+            <summary>
+            Account group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupRequest.AccountIds">
+            <summary>
+            List of IDs of the accounts to be added to the account group.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AddAccountToAccountGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupRequest.UserIds">
+            <summary>
+            List of IDs of the users to be added to the user group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupRequest.UserGroupId">
+            <summary>
+            User group ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupResponse.FailedItems">
+            <summary>
+            List of IDs of the users failed to be added to the user group.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AddUserToUserGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AppAccountInfo.AccountId">
+            <summary>
+            Account ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AppAccountInfo.AccountName">
+            <summary>
+            Account name.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AppAccountInfo.UserList">
+            <summary>
+            User information list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AppAccountInfo.Description">
+            <summary>
+            Description.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AppAccountInfo.CreatedDate">
+            <summary>
+            Creation time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AppAccountInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AppAccountSearchCriteria.Keyword">
+            <summary>
+            Keyword
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AppAccountSearchCriteria.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationAuthorizationInfo.ApplicationAccounts">
+            <summary>
+            List of the user's accounts under authorized applications
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationAuthorizationInfo.ApplicationId">
+            <summary>
+            Application ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationAuthorizationInfo.InheritedForm">
+            <summary>
+            List of IDs of the user's user groups and organization nodes that have access to the application.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationAuthorizationInfo.ApplicationName">
+            <summary>
+            Application name.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationAuthorizationInfo.CreatedDate">
+            <summary>
+            Application creation time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ApplicationAuthorizationInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInfoSearchCriteria.Keyword">
+            <summary>
+            Application search keyword, which can be application name or ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInfoSearchCriteria.ApplicationType">
+            <summary>
+            Application type. Valid values: OAUTH2, JWT, CAS, SAML2, FORM, OIDC, APIGW
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ApplicationInfoSearchCriteria.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.ApplicationId">
+            <summary>
+            Application ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.DisplayName">
+            <summary>
+            Displayed application name, which can contain up to 64 characters and is the same as the application name by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.CreatedDate">
+            <summary>
+            Application creation time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.LastModifiedDate">
+            <summary>
+            Last update time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.AppStatus">
+            <summary>
+            Application status.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.Icon">
+            <summary>
+            Application icon.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.ApplicationType">
+            <summary>
+            Application type.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.ClientId">
+            <summary>
+            Client ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ApplicationInformation.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationInfo.AppId">
+            <summary>
+            Unique application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationInfo.AppName">
+            <summary>
+            Application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationInfo.EntityName">
+            <summary>
+            Type name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationInfo.EntityId">
+            <summary>
+            Unique type ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationInfo.LastModifiedDate">
+            <summary>
+            Last update time in ISO 8601 format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationInfo.AuthorizationId">
+            <summary>
+            Unique authorization type ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AuthorizationInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationInfoSearchCriteria.Keyword">
+            <summary>
+            Search by name. When the query type is user, the match criteria include username and application name. When the query type is user group, the match criteria include user group name and application name. When the query type is organization, the match criteria include organization name and application name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AuthorizationInfoSearchCriteria.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationUserResouceInfo.ResourceId">
+            <summary>
+            Resource ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationUserResouceInfo.ResourceType">
+            <summary>
+            Resource type
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationUserResouceInfo.Resource">
+            <summary>
+            Authorized resource
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationUserResouceInfo.InheritedForm">
+            <summary>
+            Inheritance relationship
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationUserResouceInfo.ApplicationAccounts">
+            <summary>
+            Application account
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.AuthorizationUserResouceInfo.ResourceName">
+            <summary>
+            Resource name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.AuthorizationUserResouceInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupRequest.ApplicationId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupRequest.GroupName">
+            <summary>
+            Account group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupRequest.Description">
+            <summary>
+            Description.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupResponse.AccountGroupId">
+            <summary>
+            Account group ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateAccountGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest.ApplicationId">
+            <summary>
+            Application ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest.AccountName">
+            <summary>
+            Account name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest.Password">
+            <summary>
+            Account password
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateAppAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAppAccountResponse.AccountId">
+            <summary>
+            Account ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateAppAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateAppAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest.DisplayName">
+            <summary>
+            Organization node name, which can contain up to 64 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest.ParentOrgNodeId">
+            <summary>
+            Parent organization node ID. If this parameter is left empty, the organization will be created under the root organization node by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest.Description">
+            <summary>
+            Organization node description.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest.CustomizedOrgNodeId">
+            <summary>
+            External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeResponse.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateOrgNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserGroupRequest.DisplayName">
+            <summary>
+            User group nickname, which is unique and can contain up to 64 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserGroupRequest.Description">
+            <summary>
+            User group remarks, which can contain up to 512 characters.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateUserGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserGroupResponse.UserGroupId">
+            <summary>
+            User group ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateUserGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.UserName">
+            <summary>
+            Username, which can contain up to 64 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.Password">
+            <summary>
+            User password, which needs to be configured according to the password policy.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.DisplayName">
+            <summary>
+            Nickname, which can contain up to 64 characters and is the same as the username by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.Description">
+            <summary>
+            User remarks, which can contain up to 512 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.UserGroupIds">
+            <summary>
+            List of IDs of the user's user groups.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.Phone">
+            <summary>
+            User's mobile number, such as `+86-1xxxxxxxxxx`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.OrgNodeId">
+            <summary>
+            Unique ID of the user's primary organization. If this parameter is left empty, the user will be created under the root node by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.ExpirationTime">
+            <summary>
+            User expiration time in ISO 8601 format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.Email">
+            <summary>
+            User's email address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.PwdNeedReset">
+            <summary>
+            Whether the password needs to be reset. Default value: false (no).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.SecondaryOrgNodeIdList">
+            <summary>
+            List of IDs of the user's secondary organizations.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserResponse.UserId">
+            <summary>
+            Returned ID of the newly created user, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.CreateUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.CreateUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupRequest.AccountGroupIdList">
+            <summary>
+            Array of account group IDs.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteAccountGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteAppAccountRequest.AccountIdList">
+            <summary>
+            Array of account IDs .
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteAppAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteAppAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteAppAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeRequest.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteOrgNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUserGroupRequest.UserGroupId">
+            <summary>
+            User group ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteUserGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUserGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteUserGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUserRequest.UserName">
+            <summary>
+            Username, which can contain up to 32 characters. You need to select either `UserName` or `UserId` as the search criterion; if both are selected, `UserName` will be used by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUserRequest.UserId">
+            <summary>
+            User ID. You need to select either `UserName` or `UserId` as the search criterion. If both are selected, `UserName` will be used by default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUsersRequest.DeleteIdList">
+            <summary>
+            List of IDs of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUsersRequest.DeleteNameList">
+            <summary>
+            List of usernames of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteUsersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUsersResponse.FailedItems">
+            <summary>
+            Information of the users failed to be deleted. When the business parameter is `DeleteIdList`, this field will return the list of IDs of the users failed to be deleted. When the business parameter is `DeleteNameList`, this field will return the list of usernames of the users failed to be deleted.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DeleteUsersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DeleteUsersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest.ApplicationId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest.SearchCondition">
+            <summary>
+            Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupResponse.TotalCount">
+            <summary>
+            Total number of records returned for the query.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupResponse.ApplicationId">
+            <summary>
+            Application ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupResponse.AccountGroupList">
+            <summary>
+            Returned list of eligible data.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeAccountGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest.ApplicationId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest.SearchCondition">
+            <summary>
+            Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountResponse.TotalCount">
+            <summary>
+            Total number of records returned for the query.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountResponse.ApplicationId">
+            <summary>
+            Application ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountResponse.AppAccountList">
+            <summary>
+            Returned list of eligible data.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeAppAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationRequest.ApplicationId">
+            <summary>
+            Application ID, which is globally unique. You must specify at least this parameter or `ClientId`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationRequest.ClientId">
+            <summary>
+            Client ID. You must specify at least this parameter or `ApplicationId`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeApplicationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.KeyId">
+            <summary>
+            Key ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.DisplayName">
+            <summary>
+            Displayed application name, which can contain up to 64 characters and is the same as the application name by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.LastModifiedDate">
+            <summary>
+            Last modification time of the application in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.ClientId">
+            <summary>
+            Client ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.ApplicationType">
+            <summary>
+            Application type, i.e., the application template type selected during application creation.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.CreatedDate">
+            <summary>
+            Application creation time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.ApplicationId">
+            <summary>
+            Application ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.TokenExpired">
+            <summary>
+            Token validity period in seconds.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.ClientSecret">
+            <summary>
+            Client secret.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.PublicKey">
+            <summary>
+            Public key information.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.AuthorizeUrl">
+            <summary>
+            Authorization address.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.IconUrl">
+            <summary>
+            Access address of the application icon image.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.SecureLevel">
+            <summary>
+            Security level.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.AppStatus">
+            <summary>
+            Application status.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.Description">
+            <summary>
+            Description.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeApplicationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeRequest.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique and can contain up to 64 characters. If this parameter is left empty, the information of the root organization node will be read by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeRequest.IncludeOrgNodeChildInfo">
+            <summary>
+            Whether to read the information of its sub-nodes. When this parameter is left empty or specified as `false`, only the information of the current organization node will be read by default. When it is specified as `true`, the information of the current organization node and its level-1 sub-nodes will be read.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.DisplayName">
+            <summary>
+            Displayed organization node name, which can contain up to 64 characters and is the same as the organization name by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.LastModifiedDate">
+            <summary>
+            Last modification time of the organization node in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.CustomizedOrgNodeId">
+            <summary>
+            External ID of the organization node.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.ParentOrgNodeId">
+            <summary>
+            Parent node ID of the current organization node.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.DataSource">
+            <summary>
+            Data source.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.CreatedDate">
+            <summary>
+            Organization node creation time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.OrgNodeChildInfo">
+            <summary>
+            List of sub-nodes under the current organization node.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.Description">
+            <summary>
+            Organization node description.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeOrgNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyRequest.ApplicationId">
+            <summary>
+            Application ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyResponse.PublicKey">
+            <summary>
+            Public key information used for JWT signature verification.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyResponse.KeyId">
+            <summary>
+            JWT key ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyResponse.ApplicationId">
+            <summary>
+            Application ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribePublicKeyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupRequest.UserGroupId">
+            <summary>
+            User group ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupResponse.DisplayName">
+            <summary>
+            User group nickname, which is not unique and can contain up to 64 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupResponse.Description">
+            <summary>
+            User group remarks, which can contain up to 512 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupResponse.UserGroupId">
+            <summary>
+            User group ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeUserGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoRequest.UserName">
+            <summary>
+            Username, which can contain up to 64 characters. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoRequest.UserId">
+            <summary>
+            User ID, which can contain up to 64 characters. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.UserName">
+            <summary>
+            Username.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.Status">
+            <summary>
+            User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.DisplayName">
+            <summary>
+            Nickname
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.Description">
+            <summary>
+            User remarks.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.UserGroupIds">
+            <summary>
+            List of IDs of the user's user groups.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.UserId">
+            <summary>
+            User ID, which can contain up to 64 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.Email">
+            <summary>
+            User's email address.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.Phone">
+            <summary>
+            User's mobile number.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.OrgNodeId">
+            <summary>
+            Unique ID of the user's primary organization.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.DataSource">
+            <summary>
+            Data source
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.ExpirationTime">
+            <summary>
+            User expiration time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.ActivationTime">
+            <summary>
+            User activation time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.PwdNeedReset">
+            <summary>
+            Whether the password of the current user needs to be reset. `false` indicates no.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.SecondaryOrgNodeIdList">
+            <summary>
+            List of IDs of the user's secondary organizations.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.AdminFlag">
+            <summary>
+            Whether the user is an admin. Valid values: 0: no; 1: yes.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeUserInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest.ApplicationId">
+            <summary>
+            Application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest.UserId">
+            <summary>
+            User ID. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest.UserName">
+            <summary>
+            Username. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest.IncludeInheritedAuthorizations">
+            <summary>
+            Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse.ApplicationId">
+            <summary>
+            Unique application ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse.ApplicationAccounts">
+            <summary>
+            Application account.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse.UserId">
+            <summary>
+            Unique ID of the authorized user.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse.UserName">
+            <summary>
+            Username of the authorized user.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse.AuthorizationUserResourceList">
+            <summary>
+            Returned resource list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeUserResourcesAuthorizationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoRequest.UserName">
+            <summary>
+            Username. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoRequest.UserId">
+            <summary>
+            User ID. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoResponse.UserId">
+            <summary>
+            User ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoResponse.UserName">
+            <summary>
+            Username.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoResponse.ThirdPartyAccounts">
+            <summary>
+            Third-Party account binding information.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.DescribeUserThirdPartyAccountInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.InheritedForm.UserGroupIds">
+            <summary>
+            List of IDs of the user's user groups.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.InheritedForm.OrgNodeIds">
+            <summary>
+            List of IDs of the user's organization nodes.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.InheritedForm.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.LinkUserInfo.UserId">
+            <summary>
+            User ID, which is globally unique and can contain up to 64 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.LinkUserInfo.UserName">
+            <summary>
+            Username.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.LinkUserInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest.AccountGroupId">
+            <summary>
+            Account group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest.SearchCondition">
+            <summary>
+            Search criterion. You can combine multiple search criteria and search in multiple data ranges.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupResponse.AccountList">
+            <summary>
+            List of accounts returned for the query.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupResponse.TotalCount">
+            <summary>
+            Total number of accounts returned for the query.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupResponse.AccountGroupId">
+            <summary>
+            Account group ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListAccountInAccountGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest.EntityType">
+            <summary>
+            Query type. Valid values: User: user; UserGroup: user group; OrgNode: organization.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest.SearchCondition">
+            <summary>
+            Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest.Sort">
+            <summary>
+            Set of sort criteria. You can sort the results by last modification time (lastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest.Offset">
+            <summary>
+            Pagination offset. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest.Limit">
+            <summary>
+            Number of results read per page. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsResponse.AuthorizationInfoList">
+            <summary>
+            Returned list of application authorization information.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsResponse.TotalCount">
+            <summary>
+            Total number of returned application information items.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListApplicationAuthorizationsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest.SearchCondition">
+            <summary>
+            Fuzzy match search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, and an asterisk (*) at the end of the field indicates partial match. The fuzzy match search feature and the exact match query feature will not take effect at the same time. If both `SearchCondition` and `ApplicationIdList` are specified, `ApplicationIdList` will take effect by default for exact match query; otherwise, the information of all applications will be returned by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest.Sort">
+            <summary>
+            Set of sort criteria. Valid values: DisplayName: application name; CreatedDate: creation time; LastModifiedDate: last modification time. If this field is left empty, the results will be sorted in alphabetical order by application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest.Offset">
+            <summary>
+            Set of sort criteria. Valid values: DisplayName: application name; CreatedDate: creation time; LastModifiedDate: last modification time. If this field is left empty, the results will be sorted in alphabetical order by application name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest.Limit">
+            <summary>
+            Number of results read per page. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest.ApplicationIdList">
+            <summary>
+            Application ID list, through which the corresponding application information will be matched exactly. The fuzzy match search feature and the exact match query feature will not take effect at the same time. If both `SearchCondition` and `ApplicationIdList` are specified, `ApplicationIdList` will take effect by default for exact match query; otherwise, the information of all applications will be returned by default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListApplicationsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationsResponse.TotalCount">
+            <summary>
+            Total number of returned application information items.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationsResponse.ApplicationInfoList">
+            <summary>
+            Returned application information list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListApplicationsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListApplicationsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeRequest.OrgNodeId">
+            <summary>
+            Organization node ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeResponse.ApplicationIds">
+            <summary>
+            List of IDs of the applications accessible to the organization node.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToOrgNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupRequest.UserGroupId">
+            <summary>
+            User group ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupResponse.ApplicationIds">
+            <summary>
+            List of IDs of the applications accessible to the user group.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserRequest.UserId">
+            <summary>
+            User ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserRequest.IncludeInheritedAuthorizations">
+            <summary>
+            Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserResponse.ApplicationAuthorizationInfo">
+            <summary>
+            List of information of the applications accessible to the user.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListAuthorizedApplicationsToUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest.UserId">
+            <summary>
+            User ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest.SearchCondition">
+            <summary>
+            Fuzzy search criterion. You can search by user group name (DisplayName). If this field is left empty, all of the user's user groups will be displayed by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest.Sort">
+            <summary>
+            Set of sort criteria. Valid values: DisplayName: user group name; UserGroupId: user group ID; CreatedDate: creation time. If this field is left empty, the results will be sorted in alphabetical order by user group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated, and up to 50 user groups will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest.Limit">
+            <summary>
+            Number of results read per page. Default value: 50. Maximum value: 100. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated, and up to 50 user groups will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserResponse.UserGroupIds">
+            <summary>
+            List of IDs of the user's user groups.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserResponse.UserId">
+            <summary>
+            User ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserResponse.UserGroupInfoList">
+            <summary>
+            List of information of the user's user groups.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserResponse.TotalCount">
+            <summary>
+            Total number of returned user group information items.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUserGroupsOfUserResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest.SearchCondition">
+            <summary>
+            Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest.Sort">
+            <summary>
+            Set of sort criteria. The supported attributes for sorting include user group name (DisplayName), user group ID (UserGroupId), and last modification time (LastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by user group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest.Offset">
+            <summary>
+            Pagination offset. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest.Limit">
+            <summary>
+            Number of results read per page. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUserGroupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsResponse.UserGroupList">
+            <summary>
+            Returned user group list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsResponse.TotalCount">
+            <summary>
+            Total number of returned user group information items.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUserGroupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUserGroupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique and can contain up to 64 characters. If this parameter is left empty, the user information under the root organization node will be read by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest.IncludeOrgNodeChildInfo">
+            <summary>
+            Whether to read the information of its sub-nodes. When this parameter is left empty or specified as `false`, only the information of the current organization node will be read by default. When it is specified as `true`, the information of the current organization node and its level-1 sub-nodes will be read.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest.SearchCondition">
+            <summary>
+            User attribute search criterion. The supported search criteria include username, mobile number, email address, user locking status, user freezing status, creation time, and last modification time, which can also be combined. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, brackets separated by a comma ([Min,Max]) indicate query within a closed interval, braces separated by a comma ({Min,Max}) indicate query within an open interval, and a bracket and a brace can be used together (for example, {Min,Max] indicates that the minimum value is excluded and the maximum value is included in the query). Range query supports using an asterisk (for example, {20,*] indicates an interval including all data greater than 20) and querying by time period. The supported attributes include creation time (CreationTime) and last modification time (LastUpdateTime) in ISO 8601 format, such as `2021-01-13T09:44:07.182+0000`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest.Sort">
+            <summary>
+            Set of sort criteria. The supported attributes for sorting include username (UserName), mobile number (Phone), email address (Email), user status (Status), creation time (CreatedDate), and last modification time (LastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by nickname (DisplayName).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated, and up to 50 users will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest.Limit">
+            <summary>
+            Number of results read per page. Default value: 50. Maximum value: 100. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated, and up to 50 users will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse.OrgNodeChildUserInfo">
+            <summary>
+            User information list under the organization sub-node.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique and can contain up to 64 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse.UserInfo">
+            <summary>
+            User information list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse.TotalUserNum">
+            <summary>
+            Total number of users under the current organization node.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse.OrgNodeIdPath">
+            <summary>
+            Organization ID path.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse.OrgNodeNamePath">
+            <summary>
+            Organization name path.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeSearchCriteria.UserName">
+            <summary>
+            Username, which can contain up to 64 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeSearchCriteria.Phone">
+            <summary>
+            User's mobile number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeSearchCriteria.Email">
+            <summary>
+            User's email address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeSearchCriteria.Status">
+            <summary>
+            User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeSearchCriteria.CreationTime">
+            <summary>
+            User creation time in ISO 8601 format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeSearchCriteria.LastUpdateTime">
+            <summary>
+            Last update time of the user.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeSearchCriteria.Keyword">
+            <summary>
+            Search by name. The match criteria include username and user's mobile number.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUsersInOrgNodeSearchCriteria.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest.UserGroupId">
+            <summary>
+            User group ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest.SearchCondition">
+            <summary>
+            User attribute search criterion. The supported search criteria include username, mobile number, email address, user locking status, user freezing status, creation time, and last modification time, which can also be combined. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, brackets separated by a comma ([Min,Max]) indicate query within a closed interval, braces separated by a comma ({Min,Max}) indicate query within an open interval, and a bracket and a brace can be used together (for example, {Min,Max] indicates that the minimum value is excluded and the maximum value is included in the query). Range query supports using an asterisk (for example, {20,*] indicates an interval including all data greater than 20) and querying by time period. The supported attributes include creation time (CreationTime) and last modification time (LastUpdateTime) in ISO 8601 format, such as `2021-01-13T09:44:07.182+0000`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest.Sort">
+            <summary>
+            Set of sort criteria. The supported attributes for sorting include username (UserName), nickname (DisplayName), mobile number (Phone), email address (Email), user status (Status), creation time (CreatedDate), and last modification time (LastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by nickname (DisplayName).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated, and up to 50 users will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest.Limit">
+            <summary>
+            Number of results read per page. Default value: 50. Maximum value: 100. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated, and up to 50 users will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupResponse.UserGroupId">
+            <summary>
+            User group ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupResponse.UserInfo">
+            <summary>
+            Returned user information list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupResponse.TotalNum">
+            <summary>
+            Total number of returned user information items.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUsersInUserGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersRequest.SearchCondition">
+            <summary>
+            User attribute search criterion. The supported search criteria include username, mobile number, email address, user locking status, user freezing status, creation time, and last modification time, which can also be combined. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, brackets separated by a comma ([Min,Max]) indicate query within a closed interval, braces separated by a comma ({Min,Max}) indicate query within an open interval, and a bracket and a brace can be used together (for example, {Min,Max] indicates that the minimum value is excluded and the maximum value is included in the query). Range query supports using an asterisk (for example, {20,*] indicates an interval including all data greater than 20) and querying by time period. The supported attributes include creation time (CreationTime) and last modification time (LastUpdateTime) in ISO 8601 format, such as `2021-01-13T09:44:07.182+0000`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersRequest.ExpectedFields">
+            <summary>
+            User attributes expected to be returned. All built-in user attributes will be returned by default, including user UUID (UserId), nickname (DisplayName), username (UserName), mobile number (Phone), email address (Email), status (Status), user group (SubjectGroups), organization path (OrgPath), remarks (Description), creation time (CreationTime), last modification time (LastUpdateTime), and last login time (LastLoginTime).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersRequest.Sort">
+            <summary>
+            Set of sort criteria. The supported attributes for sorting include username (UserName), nickname (DisplayName), mobile number (Phone), email address (Email), user status (Status), creation time (CreatedDate), last modification time (LastUpdateTime), and last login time (LastLoginTime). If this field is left empty, the results will be sorted in alphabetical order by nickname (DisplayName).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated, and up to 1,000 users will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersRequest.Limit">
+            <summary>
+            Number of results read per page. Default value: 50. Maximum value: 100. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated, and up to 1,000 users will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersRequest.IncludeTotal">
+            <summary>
+            Whether to view the total number of search results. Default value: false (no).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUsersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersResponse.UserList">
+            <summary>
+            List of users returned for the query.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersResponse.TotalCount">
+            <summary>
+            Total number of users returned for the query, which will be returned only when the `IncludeTotal` input parameter is set to `true`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ListUsersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ListUsersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupRequest.AccountGroupId">
+            <summary>
+            Account group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupRequest.GroupName">
+            <summary>
+            Account group name. When this parameter is not specified, the name will not be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupRequest.Description">
+            <summary>
+            Description. When this parameter is not specified, the description will not be modified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ModifyAccountGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest.AccountId">
+            <summary>
+            Account ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest.AccountName">
+            <summary>
+            Account name. When this parameter is not specified, the name will not be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest.Password">
+            <summary>
+            Account password. When this parameter is not specified, the password will not be changed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest.Description">
+            <summary>
+            Description. When this parameter is not specified, the description will not be modified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ModifyAppAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest.ApplicationId">
+            <summary>
+            Application ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest.SecureLevel">
+            <summary>
+            Security level.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest.DisplayName">
+            <summary>
+            Displayed application name, which can contain up to 32 characters and is the same as the application name by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest.AppStatus">
+            <summary>
+            Application status. Valid values: true: enabled; false: disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest.IconUrl">
+            <summary>
+            Access address of the application icon image.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest.Description">
+            <summary>
+            Description, which can contain up to 128 characters.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ModifyApplicationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyApplicationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ModifyApplicationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.UserName">
+            <summary>
+            Username, which can contain up to 32 characters. You need to select either `Username` or `UserId` as the search criterion; if both are selected, `Username` will be used by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.DisplayName">
+            <summary>
+            Nickname, which can contain up to 64 characters and is the same as the username by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.Description">
+            <summary>
+            User remarks, which can contain up to 512 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.UserGroupIds">
+            <summary>
+            List of IDs of the user's user groups.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.UserId">
+            <summary>
+            User ID. You need to select either `UserName` or `UserId` as the search criterion. If both are selected, `UserName` will be used by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.Phone">
+            <summary>
+            User's mobile number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.ExpirationTime">
+            <summary>
+            User expiration time in ISO 8601 format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.Password">
+            <summary>
+            User password, which needs to be configured according to the password policy.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.Email">
+            <summary>
+            User's email address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.PwdNeedReset">
+            <summary>
+            Whether the password needs to be reset. Default value: false (no).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.OrgNodeId">
+            <summary>
+            Unique ID of the user's primary organization. If this parameter is left empty, the user will be created under the root node by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.SecondaryOrgNodeIdList">
+            <summary>
+            List of IDs of the user's secondary organizations.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ModifyUserInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.DisplayName">
+            <summary>
+            Displayed organization node name, which can contain up to 64 characters and is the same as the organization name by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.LastModifiedDate">
+            <summary>
+            Last modification time of the organization node in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.CustomizedOrgNodeId">
+            <summary>
+            External ID of the organization node, which is optional and customizable.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.ParentOrgNodeId">
+            <summary>
+            Parent node ID of the current organization node.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.DataSource">
+            <summary>
+            Data source.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.CreatedDate">
+            <summary>
+            Organization node creation time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.Description">
+            <summary>
+            Organization node description.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.OrgNodeChildInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildUserInfo.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique and can contain up to 64 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildUserInfo.UserInfo">
+            <summary>
+            User information list.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildUserInfo.TotalUserNum">
+            <summary>
+            Total number of users under the current organization node.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildUserInfo.OrgNodeIdPath">
+            <summary>
+            Organization ID path.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.OrgNodeChildUserInfo.OrgNodeNamePath">
+            <summary>
+            Organization name path.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.OrgNodeChildUserInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupRequest.AccountGroupId">
+            <summary>
+            Account group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupRequest.AccountIds">
+            <summary>
+            List of IDs of the accounts to be removed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.RemoveAccountFromAccountGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupRequest.UserIds">
+            <summary>
+            List of IDs of the users to be added to the user group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupRequest.UserGroupId">
+            <summary>
+            User group ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.RemoveUserFromUserGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.SortCondition.SortKey">
+            <summary>
+            Sorting attribute.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.SortCondition.SortOrder">
+            <summary>
+            Sorting order. Valid values: ASC: ascending order; DESC: descending order.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.SortCondition.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ThirdPartyAccountInfo.AccountCode">
+            <summary>
+            Third-Party account code. `2` indicates WeCom account.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.ThirdPartyAccountInfo.AccountName">
+            <summary>
+            Username of the account.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.ThirdPartyAccountInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest.OrgNodeId">
+            <summary>
+            Organization node ID, which is globally unique.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest.DisplayName">
+            <summary>
+            Organization node name, which can contain up to 64 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest.Description">
+            <summary>
+            Organization node description.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest.CustomizedOrgNodeId">
+            <summary>
+            External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UpdateOrgNodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInfo.DisplayName">
+            <summary>
+            Nickname, which can contain up to 64 characters and is the same as the username by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInfo.UserGroupId">
+            <summary>
+            User group ID, which is globally unique and can contain up to 64 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInfo.Description">
+            <summary>
+            User group remarks.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInfo.CreatedDate">
+            <summary>
+            Creation time.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UserGroupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInfoSearchCriteria.Keyword">
+            <summary>
+            Search by name. The match criteria include user group name and user group ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UserGroupInfoSearchCriteria.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInformation.UserGroupId">
+            <summary>
+            User group ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInformation.UserGroupName">
+            <summary>
+            User group name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInformation.LastModifiedDate">
+            <summary>
+            Last update time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UserGroupInformation.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserGroupInformationSearchCriteria.Keyword">
+            <summary>
+            Search by name. The match criteria include user group name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UserGroupInformationSearchCriteria.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInfo.UserId">
+            <summary>
+            User ID, which is globally unique and can contain up to 64 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInfo.DisplayName">
+            <summary>
+            Nickname, which can contain up to 64 characters and is the same as the username by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInfo.UserName">
+            <summary>
+            Username.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInfo.Phone">
+            <summary>
+            User's mobile number.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInfo.Email">
+            <summary>
+            Email address.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInfo.Status">
+            <summary>
+            User status.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInfo.DataSource">
+            <summary>
+            Data source.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UserInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.UserName">
+            <summary>
+            Username, which can contain up to 32 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.Status">
+            <summary>
+            User status.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.DisplayName">
+            <summary>
+            Nickname, which can contain up to 64 characters and is the same as the username by default.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.Description">
+            <summary>
+            User remarks, which can contain up to 512 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.LastUpdateTime">
+            <summary>
+            Last update time of the user in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.CreationTime">
+            <summary>
+            User creation time in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.OrgPath">
+            <summary>
+            Path ID of the user's primary organization.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.Phone">
+            <summary>
+            User's mobile number with country code, such as `+86-00000000000`.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.SubjectGroups">
+            <summary>
+            List of IDs of the user's user groups.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.Email">
+            <summary>
+            User's email address.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.LastLoginTime">
+            <summary>
+            Last login time of the user in ISO 8601 format.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserInformation.UserId">
+            <summary>
+            User ID, which is globally unique and can contain up to 64 characters.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UserInformation.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserSearchCriteria.UserName">
+            <summary>
+            Username, which can contain up to 64 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserSearchCriteria.Phone">
+            <summary>
+            User's mobile number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserSearchCriteria.Email">
+            <summary>
+            User's email address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserSearchCriteria.Status">
+            <summary>
+            User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserSearchCriteria.CreationTime">
+            <summary>
+            User creation time in ISO 8601 format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserSearchCriteria.LastUpdateTime">
+            <summary>
+            The user's last update time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eiam.V20210420.Models.UserSearchCriteria.Keyword">
+            <summary>
+            Search by name. The match criteria include username and user ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eiam.V20210420.Models.UserSearchCriteria.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

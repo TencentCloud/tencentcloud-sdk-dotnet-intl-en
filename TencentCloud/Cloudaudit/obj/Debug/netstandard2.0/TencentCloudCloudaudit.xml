@@ -1,0 +1,1373 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudCloudaudit</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.CreateAudit(TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest)">
+            <summary>
+            Parameter requirements:
+            1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
+            2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+            3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+            4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.CreateAuditSync(TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest)">
+            <summary>
+            Parameter requirements:
+            1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
+            2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+            3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+            4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.CreateAuditTrack(TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest)">
+            <summary>
+            This API is used to create a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.CreateAuditTrackSync(TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest)">
+            <summary>
+            This API is used to create a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DeleteAudit(TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditRequest)">
+            <summary>
+            This API is used to delete a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DeleteAuditSync(TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditRequest)">
+            <summary>
+            This API is used to delete a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DeleteAuditTrack(TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackRequest)">
+            <summary>
+            This API is used to delete a CloudAudit tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DeleteAuditTrackSync(TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackRequest)">
+            <summary>
+            This API is used to delete a CloudAudit tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DescribeAudit(TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditRequest)">
+            <summary>
+            This API is used to query the details of a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DescribeAuditSync(TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditRequest)">
+            <summary>
+            This API is used to query the details of a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DescribeAuditTrack(TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackRequest)">
+            <summary>
+            This API is used to query the CloudAudit tracking set details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DescribeAuditTrackSync(TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackRequest)">
+            <summary>
+            This API is used to query the CloudAudit tracking set details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DescribeAuditTracks(TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksRequest)">
+            <summary>
+            This API is used to query the CloudAudit tracking set list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DescribeAuditTracksSync(TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksRequest)">
+            <summary>
+            This API is used to query the CloudAudit tracking set list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DescribeEvents(TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest)">
+            <summary>
+            This API is used to query CloudAudit logs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.DescribeEventsSync(TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest)">
+            <summary>
+            This API is used to query CloudAudit logs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.GetAttributeKey(TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyRequest)">
+            <summary>
+            This API is used to query the valid values of `AttributeKey`.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.GetAttributeKeySync(TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyRequest)">
+            <summary>
+            This API is used to query the valid values of `AttributeKey`.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.InquireAuditCredit(TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditRequest)">
+            <summary>
+            This API is used to query the number of tracking sets that can be created.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.InquireAuditCreditSync(TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditRequest)">
+            <summary>
+            This API is used to query the number of tracking sets that can be created.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.ListAudits(TencentCloud.Cloudaudit.V20190319.Models.ListAuditsRequest)">
+            <summary>
+            This API is used to query the summary of tracking sets.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListAuditsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListAuditsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.ListAuditsSync(TencentCloud.Cloudaudit.V20190319.Models.ListAuditsRequest)">
+            <summary>
+            This API is used to query the summary of tracking sets.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListAuditsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListAuditsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.ListCmqEnableRegion(TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionRequest)">
+            <summary>
+            This API is used to query CloudAudit-enabled CMQ AZs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.ListCmqEnableRegionSync(TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionRequest)">
+            <summary>
+            This API is used to query CloudAudit-enabled CMQ AZs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.ListCosEnableRegion(TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionRequest)">
+            <summary>
+            This API is used to query CloudAudit-enabled COS AZs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.ListCosEnableRegionSync(TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionRequest)">
+            <summary>
+            This API is used to query CloudAudit-enabled COS AZs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.LookUpEvents(TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest)">
+            <summary>
+            This API is used to search for operation logs to help query relevant operation information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.LookUpEventsSync(TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest)">
+            <summary>
+            This API is used to search for operation logs to help query relevant operation information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.ModifyAuditTrack(TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest)">
+            <summary>
+            This API is used to modify a CloudAudit tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.ModifyAuditTrackSync(TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest)">
+            <summary>
+            This API is used to modify a CloudAudit tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.StartLogging(TencentCloud.Cloudaudit.V20190319.Models.StartLoggingRequest)">
+            <summary>
+            This API is used to enable a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.StartLoggingSync(TencentCloud.Cloudaudit.V20190319.Models.StartLoggingRequest)">
+            <summary>
+            This API is used to enable a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.StopLogging(TencentCloud.Cloudaudit.V20190319.Models.StopLoggingRequest)">
+            <summary>
+            This API is used to disable a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.StopLoggingSync(TencentCloud.Cloudaudit.V20190319.Models.StopLoggingRequest)">
+            <summary>
+            This API is used to disable a tracking set.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.UpdateAudit(TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest)">
+            <summary>
+            Parameter requirements:
+            1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
+            2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+            3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+            4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.CloudauditClient.UpdateAuditSync(TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest)">
+            <summary>
+            Parameter requirements:
+            1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
+            2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+            3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+            4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AttributeKeyDetail.LabelType">
+            <summary>
+            Input box type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AttributeKeyDetail.Starter">
+            <summary>
+            Initial display
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AttributeKeyDetail.Order">
+            <summary>
+            Display sort order
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AttributeKeyDetail.Value">
+            <summary>
+            `AttributeKey` value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AttributeKeyDetail.Label">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.AttributeKeyDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AuditSummary.AuditStatus">
+            <summary>
+            Tracking set status. 1: enabled, 0: disabled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AuditSummary.CosBucketName">
+            <summary>
+            COS bucket name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AuditSummary.AuditName">
+            <summary>
+            Tracking set name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.AuditSummary.LogFilePrefix">
+            <summary>
+            Log prefix
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.AuditSummary.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CmqRegionInfo.CmqRegionName">
+            <summary>
+            Region description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CmqRegionInfo.CmqRegion">
+            <summary>
+            CMQ region
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.CmqRegionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CosRegionInfo.CosRegion">
+            <summary>
+            COS region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CosRegionInfo.CosRegionName">
+            <summary>
+            Region description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.CosRegionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.IsEnableCmqNotify">
+            <summary>
+            Whether to enable CMQ message notification. 1: Yes; 0: No. Only CMQ queue service is currently supported. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.ReadWriteAttribute">
+            <summary>
+            Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.AuditName">
+            <summary>
+            Tracking set name, which can contain 3–128 ASCII letters (a–z; A–Z), digits (0–9), and underscores (_).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.CosRegion">
+            <summary>
+            COS region. Supported regions can be queried through the `ListCosEnableRegion` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.IsCreateNewBucket">
+            <summary>
+            Whether to create a COS bucket. 1: Yes; 0: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.CosBucketName">
+            <summary>
+            User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.KeyId">
+            <summary>
+            Globally unique ID of the CMK. This value is required if it is not a newly created KMS element. It can be obtained through `ListKeyAliasByRegion`. CloudAudit will not verify the validity of the `KeyId`. Enter it carefully to avoid data loss.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.CmqQueueName">
+            <summary>
+            Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of `IsEnableCmqNotify` is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.KmsRegion">
+            <summary>
+            KMS region. Currently supported regions can be obtained through `ListKmsEnableRegion`. This must be the same as the COS region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.IsEnableKmsEncry">
+            <summary>
+            Whether to enable KMS encryption. 1: Yes, 0: No. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.CmqRegion">
+            <summary>
+            Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.LogFilePrefix">
+            <summary>
+            Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9). It can be left empty and is the account ID by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.IsCreateNewQueue">
+            <summary>
+            Whether to create a queue. 1: Yes; 0: No. This field is required if the value of `IsEnableCmqNotify` is 1.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditResponse.IsSuccess">
+            <summary>
+            Whether creation succeeded.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest.Name">
+            <summary>
+            Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest.ActionType">
+            <summary>
+            Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest.ResourceType">
+            <summary>
+            The product to which the tracking set event belongs. The value can be a single product such as `cos`, or `*` that indicates all products.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest.Status">
+            <summary>
+            Tracking set status (0: Not enabled; 1: Enabled)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest.EventNames">
+            <summary>
+            The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest.Storage">
+            <summary>
+            Storage type of shipped data. Valid values: `cos`, `cls`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest.TrackForAllMembers">
+            <summary>
+            Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackResponse.TrackId">
+            <summary>
+            Tracking set ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.CreateAuditTrackResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditRequest.AuditName">
+            <summary>
+            Tracking set name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditResponse.IsSuccess">
+            <summary>
+            Whether deletion succeeded
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackRequest.TrackId">
+            <summary>
+            Tracking set ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DeleteAuditTrackResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditRequest.AuditName">
+            <summary>
+            Tracking set name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.IsEnableCmqNotify">
+            <summary>
+            Whether to enable CMQ message notification. 1: Yes; 0: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.ReadWriteAttribute">
+            <summary>
+            Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.KeyId">
+            <summary>
+            Globally unique CMK ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.AuditStatus">
+            <summary>
+            Tracking set status. 1: enabled, 0: disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.AuditName">
+            <summary>
+            Tracking set name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.CosRegion">
+            <summary>
+            COS bucket region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.CmqQueueName">
+            <summary>
+            Queue name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.KmsAlias">
+            <summary>
+            CMK alias.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.KmsRegion">
+            <summary>
+            KMS region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.IsEnableKmsEncry">
+            <summary>
+            Whether to enable KMS encryption. 1: Yes, 0: No. If KMS encryption is enabled, the data will be encrypted when it is delivered to COS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.CosBucketName">
+            <summary>
+            COS bucket name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.CmqRegion">
+            <summary>
+            Queue region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.LogFilePrefix">
+            <summary>
+            Log prefix.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackRequest.TrackId">
+            <summary>
+            Tracking set ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.Name">
+            <summary>
+            Tracking set name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.ActionType">
+            <summary>
+            Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.ResourceType">
+            <summary>
+            The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.Status">
+            <summary>
+            Tracking set status (0: Not enabled; 1: Enabled)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.EventNames">
+            <summary>
+            The list of API names of tracking set events (`*`: All)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.Storage">
+            <summary>
+            Storage type of shipped data. Valid values: `cos`, `cls`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.CreateTime">
+            <summary>
+            Creation time of the tracking set
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.TrackForAllMembers">
+            <summary>
+            Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTrackResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksRequest.PageNumber">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksRequest.PageSize">
+            <summary>
+            The number of tracking sets per page
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksResponse.Tracks">
+            <summary>
+            Tracking set list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksResponse.TotalCount">
+            <summary>
+            Total number of tracking sets
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DescribeAuditTracksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest.StartTime">
+            <summary>
+            Start timestamp in seconds (cannot be 90 days after the current time).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest.EndTime">
+            <summary>
+            End timestamp in seconds (the time range for query is less than 30 days).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest.NextToken">
+            <summary>
+            Credential for viewing more logs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest.MaxResults">
+            <summary>
+            Max number of returned logs (up to 50).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest.LookupAttributes">
+            <summary>
+            Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest.IsReturnLocation">
+            <summary>
+            Whether to return the IP location. `1`: yes, `0`: no.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsResponse.ListOver">
+            <summary>
+            Whether the log list has come to an end. `true`: Yes. Pagination is not required.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsResponse.NextToken">
+            <summary>
+            Credential for viewing more logs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsResponse.Events">
+            <summary>
+            Logset.
+            Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsResponse.TotalCount">
+            <summary>
+            This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.DescribeEventsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.EventId">
+            <summary>
+            Log ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.Username">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.EventTime">
+            <summary>
+            Event Time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.CloudAuditEvent">
+            <summary>
+            Log details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.ResourceTypeCn">
+            <summary>
+            Description of resource type in Chinese (please use this field as required; if you are using other languages, ignore this field)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.ErrorCode">
+            <summary>
+            Authentication error code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.EventName">
+            <summary>
+            Event name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.SecretId">
+            <summary>
+            Certificate ID
+            Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.EventSource">
+            <summary>
+            Request source
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.RequestID">
+            <summary>
+            Request ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.ResourceRegion">
+            <summary>
+            Resource region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.AccountID">
+            <summary>
+            Root account ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.SourceIPAddress">
+            <summary>
+            Source IP
+            Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.EventNameCn">
+            <summary>
+            Description of event name in Chinese (please use this field as required; if you are using other languages, ignore this field)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.Resources">
+            <summary>
+            Resource pair
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.EventRegion">
+            <summary>
+            Event region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Event.Location">
+            <summary>
+            IP location
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.Event.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyRequest.WebsiteType">
+            <summary>
+            Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyResponse.AttributeKeyDetails">
+            <summary>
+            Valid values of `AttributeKey`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.GetAttributeKeyResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditResponse.AuditAmount">
+            <summary>
+            Number of tracking sets that can be created
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.InquireAuditCreditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.ListAuditsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ListAuditsResponse.AuditSummarys">
+            <summary>
+            Set of queried tracking set summaries
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ListAuditsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.ListAuditsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionRequest.WebsiteType">
+            <summary>
+            Website type. zh: Chinese mainland (default); en: outside Chinese mainland.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionResponse.EnableRegions">
+            <summary>
+            CloudAudit-enabled CMQ AZs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.ListCmqEnableRegionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionRequest.WebsiteType">
+            <summary>
+            Website type. zh: Chinese mainland (default); en: outside Chinese mainland.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionResponse.EnableRegions">
+            <summary>
+            CloudAudit-enabled COS AZs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.ListCosEnableRegionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest.StartTime">
+            <summary>
+            Start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest.EndTime">
+            <summary>
+            End time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest.LookupAttributes">
+            <summary>
+            Search criteria
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest.NextToken">
+            <summary>
+            Credential for viewing more logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest.MaxResults">
+            <summary>
+            Maximum number of logs to be returned
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest.Mode">
+            <summary>
+            CloudAudit mode. Valid values: standard, quick. Default value: standard
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsResponse.NextToken">
+            <summary>
+            Credential for viewing more logs
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsResponse.Events">
+            <summary>
+            Logset
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsResponse.ListOver">
+            <summary>
+            Whether the logset ends
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.LookUpEventsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookupAttribute.AttributeKey">
+            <summary>
+            Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
+            Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.LookupAttribute.AttributeValue">
+            <summary>
+            Value of `AttributeValue`
+            Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.LookupAttribute.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.TrackId">
+            <summary>
+            Tracking set ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.Name">
+            <summary>
+            Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.ActionType">
+            <summary>
+            Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.ResourceType">
+            <summary>
+            The product to which the tracking set event belongs. The value can be a single product such as `cos`, or `*` that indicates all products.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.Status">
+            <summary>
+            Tracking set status (0: Not enabled; 1: Enabled)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.EventNames">
+            <summary>
+            The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.Storage">
+            <summary>
+            Storage type of shipped data. Valid values: `cos`, `cls`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.TrackForAllMembers">
+            <summary>
+            Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.ModifyAuditTrackResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Resource.ResourceType">
+            <summary>
+            Resource type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Resource.ResourceName">
+            <summary>
+            Resource name
+            Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.Resource.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingRequest.AuditName">
+            <summary>
+            Tracking set name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingResponse.IsSuccess">
+            <summary>
+            Whether enablement succeeded
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.StartLoggingResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingRequest.AuditName">
+            <summary>
+            Tracking set name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingResponse.IsSuccess">
+            <summary>
+            Whether disablement succeeded
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.StopLoggingResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Storage.StorageType">
+            <summary>
+            Storage type (Valid values: cos, cls)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Storage.StorageRegion">
+            <summary>
+            Storage region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Storage.StorageName">
+            <summary>
+            Storage name. For COS, the storage name is the custom bucket name, which can contain up to 50 lowercase letters, digits, and hyphens. It cannot contain "-APPID" and cannot start or end with a hyphen. For CLS, the storage name is the log topic ID, which can contain 1-50 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Storage.StoragePrefix">
+            <summary>
+            Storage directory prefix. The COS log file prefix can only contain 3-40 letters and digits.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.Storage.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Tracks.Name">
+            <summary>
+            Tracking set name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Tracks.ActionType">
+            <summary>
+            Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Tracks.ResourceType">
+            <summary>
+            The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Tracks.Status">
+            <summary>
+            Tracking set status (0: Not enabled; 1: Enabled)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Tracks.EventNames">
+            <summary>
+            The list of API names of tracking set events (`*`: All)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Tracks.Storage">
+            <summary>
+            Storage type of shipped data. Valid values: `cos`, `cls`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Tracks.CreateTime">
+            <summary>
+            Creation time of the tracking set
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.Tracks.TrackId">
+            <summary>
+            Tracking set ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.Tracks.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.AuditName">
+            <summary>
+            Tracking set name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.IsEnableCmqNotify">
+            <summary>
+            Whether to enable CMQ message notification. 1: Yes; 0: No. Only CMQ queue service is currently supported. If CMQ message notification is enabled, CloudAudit will deliver your log contents to the designated queue in the specified region in real time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.ReadWriteAttribute">
+            <summary>
+            Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.KeyId">
+            <summary>
+            Globally unique ID of the CMK. This value is required if it is not a newly created KMS element. It can be obtained through `ListKeyAliasByRegion`. CloudAudit will not verify the validity of the `KeyId`. Enter it carefully to avoid data loss.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.CosRegion">
+            <summary>
+            COS region. Supported regions can be queried through the `ListCosEnableRegion` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.CmqQueueName">
+            <summary>
+            Queue name, which must begin with a letter and can contain up to 64 letters, digits, and dashes (-). This field is required if the value of `IsEnableCmqNotify` is 1. If a queue is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.IsCreateNewBucket">
+            <summary>
+            Whether to create a COS bucket. 1: Yes; 0: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.KmsRegion">
+            <summary>
+            KMS region. Currently supported regions can be obtained through `ListKmsEnableRegion`. This must be the same as the COS region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.IsEnableKmsEncry">
+            <summary>
+            Whether to enable KMS encryption. 1: Yes, 0: No. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.CosBucketName">
+            <summary>
+            User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.CmqRegion">
+            <summary>
+            Region where the queue is located. Supported CMQ regions can be queried through the `ListCmqEnableRegion` API. This field is required if the value of `IsEnableCmqNotify` is 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.LogFilePrefix">
+            <summary>
+            Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.IsCreateNewQueue">
+            <summary>
+            Whether to create a queue. 1: Yes; 0: No. This field is required if the value of `IsEnableCmqNotify` is 1.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditResponse.IsSuccess">
+            <summary>
+            Whether update succeeded
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Cloudaudit.V20190319.Models.UpdateAuditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

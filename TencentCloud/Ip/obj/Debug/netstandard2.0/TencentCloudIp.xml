@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudIp</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.AllocateCustomerCredit(TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditRequest)">
+            <summary>
+            This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
+            1. The credit is valid permanently and will not be zeroed regularly.
+            2. The customer's service will be suspended when its available credit sets to 0, so caution should be exercised with this operation.
+            3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
+            4. The set credit is an increase to the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates to repossess it. The available credit can be set to 0 at the minimum.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.AllocateCustomerCreditSync(TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditRequest)">
+            <summary>
+            This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
+            1. The credit is valid permanently and will not be zeroed regularly.
+            2. The customer's service will be suspended when its available credit sets to 0, so caution should be exercised with this operation.
+            3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
+            4. The set credit is an increase to the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates to repossess it. The available credit can be set to 0 at the minimum.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditResponse"/></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Ip.V20210409.IpClient.CreateAccount(TencentCloud.Ip.V20210409.Models.CreateAccountRequest)" -->
+        <!-- Badly formed XML comment ignored for member "M:TencentCloud.Ip.V20210409.IpClient.CreateAccountSync(TencentCloud.Ip.V20210409.Models.CreateAccountRequest)" -->
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.GetCountryCodes(TencentCloud.Ip.V20210409.Models.GetCountryCodesRequest)">
+            <summary>
+            This API is used to obtain country and region codes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.GetCountryCodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.GetCountryCodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.GetCountryCodesSync(TencentCloud.Ip.V20210409.Models.GetCountryCodesRequest)">
+            <summary>
+            This API is used to obtain country and region codes.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.GetCountryCodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.GetCountryCodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.QueryCreditAllocationHistory(TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryRequest)">
+            <summary>
+            This API is used to query all the credit allocation records of a single customer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.QueryCreditAllocationHistorySync(TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryRequest)">
+            <summary>
+            This API is used to query all the credit allocation records of a single customer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.QueryCustomersCredit(TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest)">
+            <summary>
+            This API is used for a partner to query a customer's credit and basic information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.QueryCustomersCreditSync(TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest)">
+            <summary>
+            This API is used for a partner to query a customer's credit and basic information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.QueryPartnerCredit(TencentCloud.Ip.V20210409.Models.QueryPartnerCreditRequest)">
+            <summary>
+            This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.IpClient.QueryPartnerCreditSync(TencentCloud.Ip.V20210409.Models.QueryPartnerCreditRequest)">
+            <summary>
+            This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditRequest.AddedCredit">
+            <summary>
+            Specific value of the credit allocated to the customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditRequest.ClientUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditResponse.TotalCredit">
+            <summary>
+            The updated total credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditResponse.RemainingCredit">
+            <summary>
+            The updated available credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.AllocateCustomerCreditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CountryCodeItem.EnName">
+            <summary>
+            Country/region name in English
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CountryCodeItem.Name">
+            <summary>
+            Country/region name in Chinese
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CountryCodeItem.IOS2">
+            <summary>
+            IOS2 standard country/region code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CountryCodeItem.IOS3">
+            <summary>
+            IOS3 standard country/region code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CountryCodeItem.Code">
+            <summary>
+            Phone code
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.CountryCodeItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.AccountType">
+            <summary>
+            Account type of a new customer. Valid values: `personal`, `company`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.Mail">
+            <summary>
+            Registered email address, which should be valid and correct.
+            For example, account@qq.com.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.Password" -->
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.ConfirmPassword">
+            <summary>
+            Confirm the password. It must be the same as the `Password` field.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.PhoneNum">
+            <summary>
+            Customer mobile number, which should be valid and correct.
+            A global mobile number within 1-32 digits is allowed, such as 18888888888.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.CountryCode">
+            <summary>
+            Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.Area">
+            <summary>
+            Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.Extended">
+            <summary>
+            Expanded field, which is left empty by default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.CreateAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountResponse.Uin">
+            <summary>
+            Account UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.CreateAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.CreateAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.GetCountryCodesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.GetCountryCodesResponse.Data">
+            <summary>
+            List of country/region codes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.GetCountryCodesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.GetCountryCodesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryData.AllocatedTime">
+            <summary>
+            Allocation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryData.Operator">
+            <summary>
+            Operator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryData.Credit">
+            <summary>
+            Allocated credit value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryData.AllocatedCredit">
+            <summary>
+            The allocated total credit
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryRequest.ClientUin">
+            <summary>
+            Customer UIN
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryRequest.Page">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryRequest.PageSize">
+            <summary>
+            Number of data entries per page
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryResponse.Total">
+            <summary>
+            Total number of records
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryResponse.History">
+            <summary>
+            List of record details
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.QueryCreditAllocationHistoryResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.Mobile">
+            <summary>
+            Phone
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.Arrears">
+            <summary>
+            Overdue payment flag
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.AssociationTime">
+            <summary>
+            Binding time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.RecentExpiry">
+            <summary>
+            Expiration time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.ClientUin">
+            <summary>
+            The UIN of reseller’s customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.Credit">
+            <summary>
+            Credit granted to reseller’s customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.RemainingCredit">
+            <summary>
+            The remaining credit of reseller’s customer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.IdentifyType">
+            <summary>
+            0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.Remark">
+            <summary>
+            Customer remarks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.Force">
+            <summary>
+            Forced status
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest.FilterType">
+            <summary>
+            Search condition type. You can only search by UIN, name, or remarks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest.Filter">
+            <summary>
+            Search condition
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest.Page">
+            <summary>
+            A pagination parameter that specifies the current page number, with a value starting from 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest.PageSize">
+            <summary>
+            A pagination parameter that specifies the number of entries per page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest.Order">
+            <summary>
+            A sort parameter that specifies the sort order. Valid values: `desc` (descending order), or `asc` (ascending order) based on `AssociationTime`. The value will be `desc` if left empty.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditResponse.Data">
+            <summary>
+            Queries the list of customers
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditResponse.Total">
+            <summary>
+            Number of customers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.QueryCustomersCreditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditResponse.AllocatedCredit">
+            <summary>
+            Allocated credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditResponse.TotalCredit">
+            <summary>
+            Total credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditResponse.RemainingCredit">
+            <summary>
+            Remaining credit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ip.V20210409.Models.QueryPartnerCreditResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudTms</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Tms.V20201229.TmsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.TmsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.TmsClient.TextModeration(TencentCloud.Tms.V20201229.Models.TextModerationRequest)">
+            <summary>
+            This API is used to submit text content for intelligent moderation. 
+            
+            ### Notes
+            - Before invoking this API, be sure you have activated Tencent Cloud Text Moderation System in the [Content Moderation - Text Moderation System](https://console.cloud.tencent.com/cms/text/package) console.
+            - This is a paid API. For the billing details, see [Text Moderation System Pricing](https://intl.cloud.tencent.com/product/tms/pricing?from_cn_redirect=1).
+            
+             
+             
+             
+             
+             
+             
+            
+            ### Use limits
+            - The submitted texts can not be longer than 10,000 unicode characters.
+            - English letters, digits and Chinese characters are supported for moderation.
+            - The API request frequency limit: **1,000 times/second**. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tms.V20201229.Models.TextModerationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tms.V20201229.Models.TextModerationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.TmsClient.TextModerationSync(TencentCloud.Tms.V20201229.Models.TextModerationRequest)">
+            <summary>
+            This API is used to submit text content for intelligent moderation. 
+            
+            ### Notes
+            - Before invoking this API, be sure you have activated Tencent Cloud Text Moderation System in the [Content Moderation - Text Moderation System](https://console.cloud.tencent.com/cms/text/package) console.
+            - This is a paid API. For the billing details, see [Text Moderation System Pricing](https://intl.cloud.tencent.com/product/tms/pricing?from_cn_redirect=1).
+            
+             
+             
+             
+             
+             
+             
+            
+            ### Use limits
+            - The submitted texts can not be longer than 10,000 unicode characters.
+            - English letters, digits and Chinese characters are supported for moderation.
+            - The API request frequency limit: **1,000 times/second**. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tms.V20201229.Models.TextModerationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tms.V20201229.Models.TextModerationResponse"/></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.DetailResults.Label" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.DetailResults.Suggestion" -->
+        <member name="P:TencentCloud.Tms.V20201229.Models.DetailResults.Keywords">
+            <summary>
+            Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.DetailResults.Score">
+            <summary>
+            This field indicates the convincing level of the `Label`, ranging from `0` (lowest) to `100` (highest). 
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.DetailResults.LibType">
+            <summary>
+            It indicates the library type corresponding with the keyword. Valid values: `1` (blocklist/allowlist library) and `2` (custom keyword library). If no custom keyword library is configured, the default value is 1.
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.DetailResults.LibId">
+            <summary>
+            This field is **only valid when `Label` is `Custom`. It returns the custom library ID to facilitate the library management and configuration.
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.DetailResults.LibName">
+            <summary>
+            This field is **only valid when `Label` is `Custom` (custom keyword)`. It returns the custom library name to facilitate the library management and configuration.
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.DetailResults.SubLabel">
+            <summary>
+            The field returns the second-level labels under the current label.
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.DetailResults.Tags">
+            <summary>
+            Returns the keywords, label, sub-label and the score.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.Models.DetailResults.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.Device.IP" -->
+        <member name="P:TencentCloud.Tms.V20201229.Models.Device.Mac">
+            <summary>
+            This field indicates the MAC address used by the service subscriber to facilitate device identification and management. Its format and value are consistent with those of the standard MAC address.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.Device.TokenId">
+            <summary>
+            * In beta test. Available soon.*
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.Device.DeviceId">
+            <summary>
+            * In beta test. Available soon.*
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.Device.IMEI" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.Device.IDFA" -->
+        <member name="P:TencentCloud.Tms.V20201229.Models.Device.IDFV">
+            <summary>
+            **Dedicated for iOS device**. This field indicates the **IDFV** (Identifier for Vendor) corresponding to the service subscriber. IDFV, a string of hexadecimal 32 characters including numbers and letters, is provided by Apple Inc. to identify the vendor. IDFV can also be used as a unique device identifier.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.Models.Device.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.RiskDetails.Label">
+            <summary>
+            This field returns the risk categories after account information detection. Valid values: **RiskAccount** (the account is at risk), **RiskIP** (the IP address is at risk), and **RiskIMEI** (the mobile device identifier is at risk).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.RiskDetails.Level">
+            <summary>
+            This field returns the risk levels after account information detection. Valid values: **1** (suspected to be at risk) and **2** (malicious risk).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.Models.RiskDetails.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.Tag.Keyword">
+            <summary>
+            Returns the hit keywords.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.Tag.SubLabel">
+            <summary>
+            Returns the sub-tags.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.Tag.Score">
+            <summary>
+            Returns the score for the sub-label
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationRequest.Content">
+            <summary>
+            This field indicates the text content of the object to be moderated. The text needs to be encoded in utf-8 format and encrypted with Base64. It can contain up to 10,000 characters, calculated by unicode encoding.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.TextModerationRequest.BizType" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.TextModerationRequest.DataId" -->
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationRequest.User">
+            <summary>
+            This field indicates the user information related with the object to be moderated, which can be used to identify violating users at risk.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationRequest.Device">
+            <summary>
+            This field indicates the device information related with the object to be moderated, which can be used to identify violating devices at risk.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.Models.TextModerationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.BizType">
+            <summary>
+            This field returns the BizType of the request parameters
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.Label" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.Suggestion" -->
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.Keywords">
+            <summary>
+            This field returns the keywords matched with the libraries in the moderated text under the current label to mark the specific violations (for example, *Friend me*). This parameter may have multiple returned values, indicating multiple keywords are matched. If the returned value is empty and the `Score` is not empty, it means that the negative label corresponding to the moderation result is a value returned from the semantic model judgment
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.Score">
+            <summary>
+            This field returns the confidence level under the current label. Value range: 0 (**the lowest confidence level**) - 100 (**the highest confidence level**). The higher the value, the more likely the text is to belong to the category indicated by the current label. For example, *pornographic 99* indicates that the text is very likely to be pornographic, and *pornographic 0* indicates that the text is not pornographic
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.DetailResults">
+            <summary>
+            This field returns the moderation results based on the text libraries. For details, see `DetailResults` in the data structure
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.RiskDetails">
+            <summary>
+            This field returns the detection results of violating accounts at risk, mainly including violation categories and risk levels. For details, see `RiskDetails` in the data structure
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.Extra" -->
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.DataId">
+            <summary>
+            This field returns the `DataId` in the request parameter corresponding to the moderated object
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.SubLabel">
+            <summary>
+            The field returns the second-level labels under the current label.
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.ContextText">
+            <summary>
+            Returns the context text.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.TextModerationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.Models.TextModerationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.User.UserId">
+            <summary>
+            This field indicates the service subscriber ID. This ID can be used to optimize the moderation result judgment based on the account's violation records, which is helpful for auxiliary judgment when there is a risk of suspected violations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.User.Nickname">
+            <summary>
+            This field indicates the account nickname information of the service subscriber.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.User.AccountType" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.User.Gender" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.User.Age" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.User.Level" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tms.V20201229.Models.User.Phone" -->
+        <member name="P:TencentCloud.Tms.V20201229.Models.User.HeadUrl">
+            <summary>
+            This field indicates the URL of the service subscriber's profile photos formatted with .png, .jpg, .jpeg, .bmp, .gif and .webp.
+            Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it takes more than 3 seconds to download, the "download timeout" is returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.User.Desc">
+            <summary>
+            This field indicates the profile information of service subscribers. It can contain up to 5,000 characters, including Chinese characters, letters and special symbols.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.User.RoomId">
+            <summary>
+            Room ID of the group chat.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.User.ReceiverId">
+            <summary>
+            Receiver ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tms.V20201229.Models.User.SendTime">
+            <summary>
+            Generation time of the message, in ms.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tms.V20201229.Models.User.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

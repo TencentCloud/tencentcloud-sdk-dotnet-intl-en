@@ -1,0 +1,1033 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudFaceid</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.ApplyLivenessToken(TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenRequest)">
+            <summary>
+            This API is used to apply for a token before calling the liveness detection service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.ApplyLivenessTokenSync(TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenRequest)">
+            <summary>
+            This API is used to apply for a token before calling the liveness detection service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.ApplySdkVerificationToken(TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest)">
+            <summary>
+            This API is used to apply for a token before calling the SDK-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.ApplySdkVerificationTokenSync(TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest)">
+            <summary>
+            This API is used to apply for a token before calling the SDK-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.ApplyWebVerificationToken(TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenRequest)">
+            <summary>
+            This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.ApplyWebVerificationTokenSync(TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenRequest)">
+            <summary>
+            This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.CreateUploadUrl(TencentCloud.Faceid.V20180301.Models.CreateUploadUrlRequest)">
+            <summary>
+            This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 
+            The data will be stored in a COS bucket in the region specified by the parameter `Region` for two hours.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.CreateUploadUrlSync(TencentCloud.Faceid.V20180301.Models.CreateUploadUrlRequest)">
+            <summary>
+            This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 
+            The data will be stored in a COS bucket in the region specified by the parameter `Region` for two hours.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.DetectReflectLivenessAndCompare(TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest)">
+            <summary>
+            This API is used to detect liveness with the package generated by the liveness comparison (reflection-based) SDK, and to compare the person detected with that in the image passed in.
+            The image and the data generated with the SDK must be stored in COS, and the region of the COS bucket must be same as that of requests made with this API. We recommend that you pass resources with upload link APIs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.DetectReflectLivenessAndCompareSync(TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest)">
+            <summary>
+            This API is used to detect liveness with the package generated by the liveness comparison (reflection-based) SDK, and to compare the person detected with that in the image passed in.
+            The image and the data generated with the SDK must be stored in COS, and the region of the COS bucket must be same as that of requests made with this API. We recommend that you pass resources with upload link APIs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.GenerateReflectSequence(TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceRequest)">
+            <summary>
+            This API is used to generate an appropriate light sequence based on the information collected by the liveness comparison (reflection-based) SDK and pass the light sequence into the SDK to start the identity verification process.
+            The data generated with the SDK must be stored in COS, and the region of the COS bucket must be same as that of requests made with this API. We recommend that you pass resources with upload link APIs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.GenerateReflectSequenceSync(TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceRequest)">
+            <summary>
+            This API is used to generate an appropriate light sequence based on the information collected by the liveness comparison (reflection-based) SDK and pass the light sequence into the SDK to start the identity verification process.
+            The data generated with the SDK must be stored in COS, and the region of the COS bucket must be same as that of requests made with this API. We recommend that you pass resources with upload link APIs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.GetLivenessResult(TencentCloud.Faceid.V20180301.Models.GetLivenessResultRequest)">
+            <summary>
+            This API is used to get the verification result with the corresponding token (SdkToken) after the liveness detection is completed. The token is valid for two hours after issuance and can be called multiple times.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.GetLivenessResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.GetLivenessResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.GetLivenessResultSync(TencentCloud.Faceid.V20180301.Models.GetLivenessResultRequest)">
+            <summary>
+            This API is used to get the verification result with the corresponding token (SdkToken) after the liveness detection is completed. The token is valid for two hours after issuance and can be called multiple times.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.GetLivenessResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.GetLivenessResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.GetSdkVerificationResult(TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultRequest)">
+            <summary>
+            This API is used to get the verification result with the corresponding token after the SDK-based verification is completed. The token is valid for three days after issuance and can be called multiple times.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.GetSdkVerificationResultSync(TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultRequest)">
+            <summary>
+            This API is used to get the verification result with the corresponding token after the SDK-based verification is completed. The token is valid for three days after issuance and can be called multiple times.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.GetWebVerificationResult(TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultRequest)">
+            <summary>
+            This API is used to get the verification result with the corresponding token (BizToken) after the web-based verification is completed. The BizToken is valid for three days (3*24*3,600s) after issuance and can be called multiple times.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.GetWebVerificationResultSync(TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultRequest)">
+            <summary>
+            This API is used to get the verification result with the corresponding token (BizToken) after the web-based verification is completed. The BizToken is valid for three days (3*24*3,600s) after issuance and can be called multiple times.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.LivenessCompare(TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest)">
+            <summary>
+            This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+            This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.LivenessCompareSync(TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest)">
+            <summary>
+            This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+            This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.VideoLivenessCompare(TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest)">
+            <summary>
+            This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.FaceidClient.VideoLivenessCompareSync(TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest)">
+            <summary>
+            This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest"/></param>
+            <returns><see cref="T:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenRequest.SecureLevel">
+            <summary>
+            Enumerated value. Valid values: `1`, `2`, `3`, and `4`.
+            Their meanings are as follows:
+            1 - silent
+            2 - blinking
+            3 - light
+            4 - blinking + light (default)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenResponse.SdkToken">
+            <summary>
+            The token used to identify an SDK-based verification process. It is valid for 10 minutes and can be used to get the verification result after the process is completed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.ApplyLivenessTokenResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest.NeedVerifyIdCard">
+            <summary>
+            Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest.IdCardType">
+            <summary>
+            The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), and `IndonesiaIDCard` (Indonesian identity card).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest.DisableChangeOcrResult">
+            <summary>
+            Disable the modification of the OCR result by the user. Default value: `false` (modification allowed).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest.DisableCheckOcrWarnings">
+            <summary>
+            Disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned based on the warnings. If the value of `NeedVerifyIdCard` is `true`, the value of this field will also be `true`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest.Extra">
+            <summary>
+            A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenResponse.SdkToken">
+            <summary>
+            The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.ApplySdkVerificationTokenResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenRequest.RedirectUrl">
+            <summary>
+            The web redirect URL after the verification is completed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenRequest.CompareImageUrl">
+            <summary>
+            The COS URL of the image for face comparison, which can be obtained with one of the following methods:
+            1. Call the `CreateUploadUrl` API to generate a URL and call it again after the image is successfully uploaded.
+            2. Use an existing COS URL. For a private bucket, grant the download permission with a pre-signed URL. The corresponding COS bucket must be in the same region as the input parameter `Region`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenRequest.CompareImageMd5">
+            <summary>
+            The MD5 hash values of the image for face comparison (CompareImageUrl).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenResponse.VerificationUrl">
+            <summary>
+            The verification URL to be opened with a browser to start the verification process.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenResponse.BizToken">
+            <summary>
+            The token used to identify a web-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.ApplyWebVerificationTokenResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CardVerifyResult.IsPass">
+            <summary>
+            Whether the authentication or OCR process is successful.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CardVerifyResult.CardVideo">
+            <summary>
+            The video for ID card authentication. This field is returned only if the video-based ID card authentication is enabled. The URL is valid for 10 minutes.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CardVerifyResult.CardImage">
+            <summary>
+            The identity document image. The URL is valid for 10 minutes.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CardVerifyResult.CardInfoOcrJson">
+            <summary>
+            The OCR result (in JSON) of the identity document image. If authentication or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
+            When the value of `IdCardType` is `HK`:
+            - CnName (string): Chinese name.
+            - EnName (string): English name.
+            - TelexCode (string): The code corresponding to the Chinese name.
+            - Sex (string): Gender. Valid values: `M` (male) and `F` (female).
+            - Birthday (string): Date of birth.
+            - Permanent (int): Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+            - IdNum (string): ID number.
+            - Symbol (string): The ID symbol below the date of birth, such as "***AZ".
+            - FirstIssueDate (string): The date of first issuance.
+            - CurrentIssueDate (string): The date of latest issuance.
+            
+            When the value of `IdCardType` is `ML`:
+            - Sex (string): `LELAKI` (male) and `PEREMPUAN` (female).
+            - Birthday (string): Date of birth.
+            - ID (string): ID number.
+            - Name (string): Name.
+            - Address (string): Address.
+            - Type (string): Identity document type.
+            
+            When the value of `IdCardType` is `PhilippinesVoteID`:
+            - Birthday (string): Date of birth.
+            - Address (string): Address.
+            - LastName (string): Family name.
+            - FirstName (string): First name.
+            - VIN (string): VIN number.
+            - CivilStatus (string): Marital status.
+            - Citizenship (string): Citizenship.
+            - PrecinctNo (string): Region.
+            
+            When the value of `IdCardType` is `PhilippinesDrivingLicense`:
+            - Sex (string): Gender.
+            - Birthday (string): Date of birth.
+            - Name (string): Name.
+            - Address (string): Address.
+            - LastName (string): Family name.
+            - FirstName (string): First name.
+            - MiddleName (string): Middle name.
+            - Nationality (string): Nationality.
+            - LicenseNo (string): License number.
+            - ExpiresDate (string): Validity period.
+            - AgencyCode (string): Agency code.
+            
+            When the value of `IdCardType` is `IndonesiaIDCard`:
+            - NIK (string): Identity document No.
+            - Nama (string): Name.
+            - TempatTglLahir (string): Place/Date of birth.
+            - JenisKelamin (string): Gender.
+            - GolDarah (string): Blood type.
+            - Alamat (string): Address.
+            - RTRW (string): Street.
+            - KelDesa (string): Village.
+            - Kecamatan (string): Region.
+            - Agama (string): Religion.
+            - StatusPerkawinan (string): Marital status.
+            - Perkerjaan (string): Profession.
+            - KewargaNegaraan (string): Nationality.
+            - BerlakuHingga (string): Expiry date of the identity document.
+            - IssuedDate (string): Date of issuance.
+            
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CardVerifyResult.RequestId">
+            <summary>
+            The request ID of a single process.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.CardVerifyResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.ErrorCode">
+            <summary>
+            The final comparison result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.ErrorMsg">
+            <summary>
+            The description of the final comparison result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.LiveData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.LiveVideo">
+            <summary>
+            The video for this liveness detection process. The URL is valid for 10 minutes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.LiveErrorCode">
+            <summary>
+            The code of the liveness detection result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.LiveErrorMsg">
+            <summary>
+            The description of the liveness detection result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.BestFrame">
+            <summary>
+            The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.ProfileImage">
+            <summary>
+            The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.CompareErrorCode">
+            <summary>
+            The code of the face comparison result.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.CompareErrorMsg">
+            <summary>
+            The description of the face comparison result.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.Sim">
+            <summary>
+            Similarity
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.IsNeedCharge">
+            <summary>
+            This field is disused.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.CardInfoInputJson">
+            <summary>
+            The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
+            When the value of `IdCardType` is `HK`:
+            - CnName string: Chinese name
+            - EnName string: English name
+            - TelexCode string: The code corresponding to the Chinese name
+            - Sex string: Gender. Valid values: `M` (male) and `F` (female).
+            - Birthday string: Date of birth.
+            - Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+            - IdNum string: ID number.
+            - Symbol string: The ID symbol below the date of birth, such as "***AZ".
+            - FirstIssueDate string: The date of first issuance.
+            - CurrentIssueDate string: The date of latest issuance.
+            
+            When the value of `IdCardType` is `ML`:
+            - Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
+            - Birthday string
+            - ID string
+            - Name string
+            - Address string
+            - Type string: Identity document type.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CompareResult.RequestId">
+            <summary>
+            The request ID of this verification process.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.CompareResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlRequest.TargetAction">
+            <summary>
+            Target API
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlResponse.UploadUrl">
+            <summary>
+            The URL for uploading contents with the `HTTP PUT` method.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlResponse.ResourceUrl">
+            <summary>
+            The resource URL obtained after this upload is completed and to be passed in where it is required later.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlResponse.ExpiredTimestamp">
+            <summary>
+            The point in time when the upload/download link expires, which is a 10-bit Unix timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.CreateUploadUrlResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest.LiveDataUrl">
+            <summary>
+            URL of the liveness detection data package generated by the SDK
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest.LiveDataMd5">
+            <summary>
+            MD5 hash value (32-bit) of the liveness detection data package generated by the SDK, which is used to verify the LiveData consistency.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest.ImageUrl">
+            <summary>
+            URL of the target image for comparison
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest.ImageMd5">
+            <summary>
+            MD5 hash value (32-bit) of the target image for comparison, which is used to verify the `Image` consistency.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse.BestFrameUrl">
+            <summary>
+            Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse.BestFrameMd5">
+            <summary>
+            MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse.Result">
+            <summary>
+            Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse.Description">
+            <summary>
+            Service result description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse.Sim">
+            <summary>
+            Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.DetectReflectLivenessAndCompareResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.FileInfo.Url">
+            <summary>
+            The URL for downloading the file
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.FileInfo.MD5">
+            <summary>
+            The 32-bit MD5 checksum of the file
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.FileInfo.Size">
+            <summary>
+            The file size
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.FileInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceRequest.DeviceDataUrl">
+            <summary>
+            The resource URL of the data package generated by the SDK.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceRequest.DeviceDataMd5">
+            <summary>
+            The MD5 hash value of the data package generated by the SDK.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceRequest.SecurityLevel">
+            <summary>
+            1 - silent
+            2 - blinking
+            3 - light
+            4 - blinking + light (default)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceResponse.ReflectSequenceUrl">
+            <summary>
+            The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceResponse.ReflectSequenceMd5">
+            <summary>
+            The MD5 hash value of the light sequence, which is used to check whether the light sequence is altered.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.GenerateReflectSequenceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetLivenessResultRequest.SdkToken">
+            <summary>
+            The token used to identify an SDK-based verification process.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.GetLivenessResultRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetLivenessResultResponse.Result">
+            <summary>
+            The final verification result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetLivenessResultResponse.Description">
+            <summary>
+            The description of the final verification result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetLivenessResultResponse.BestFrame">
+            <summary>
+            The face screenshot.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetLivenessResultResponse.Video">
+            <summary>
+            The video for the detection.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetLivenessResultResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.GetLivenessResultResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultRequest.SdkToken">
+            <summary>
+            The token used to identify an SDK-based verification process.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse.Result">
+            <summary>
+            The result of the entire verification process.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse.Description">
+            <summary>
+            The result description.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse.ChargeCount">
+            <summary>
+            The charge count.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse.CardVerifyResults">
+            <summary>
+            The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse.CompareResults">
+            <summary>
+            The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse.Extra">
+            <summary>
+            Info passed in the process of getting the token.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.GetSdkVerificationResultResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultRequest.BizToken">
+            <summary>
+            The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.ErrorCode">
+            <summary>
+            The final result of this verification. `0` indicates that the person is the same as that in the photo.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.ErrorMsg">
+            <summary>
+            The description of the final verification result.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.VideoBestFrameUrl">
+            <summary>
+            The temporary URL of the best face screenshot collected from the video stream. It is valid for 10 minutes. Download the image if needed.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.VideoBestFrameMd5">
+            <summary>
+            The MD5 hash value of the best face screenshot collected from the video stream. It can be used to check whether the image content is consistent with the file content.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.VerificationDetailList">
+            <summary>
+            The details list of this verification process.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.VideoUrl">
+            <summary>
+            The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.VideoMd5">
+            <summary>
+            The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.GetWebVerificationResultResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest.LivenessType">
+            <summary>
+            Liveness detection type. Valid values: LIP/ACTION/SILENT.
+            LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select a mode to input.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest.ImageBase64">
+            <summary>
+            Base64 string of the image for face comparison.
+            The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+            Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+            
+            Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest.ImageUrl">
+            <summary>
+            URL of the image for face comparison. The size of the downloaded image after Base64 encoding can be up to 3 MB. JPG and PNG formats are supported.
+            
+            Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+            
+            We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest.ValidateData">
+            <summary>
+            Lip mode: set this parameter to a custom 4-digit verification code.
+            Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
+            Silent mode: do not pass in this parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest.Optional">
+            <summary>
+            Optional configuration (a JSON string)
+            {
+            "BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+            }
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest.VideoBase64">
+            <summary>
+            Base64 string of the video for liveness detection.
+            The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+            Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+            
+            Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest.VideoUrl">
+            <summary>
+            URL of the video for liveness detection. The size of the downloaded video after Base64 encoding can be up to 8 MB. It takes no more than 4 seconds to download. MP4, AVI, and FLV formats are supported.
+            
+            Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+            
+            We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.LivenessCompareRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse.BestFrameBase64">
+            <summary>
+            The best screenshot of the video after successful verification. The photo is Base64-encoded and in JPG format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse.Sim">
+            <summary>
+            Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse.Result">
+            <summary>
+            Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse.Description">
+            <summary>
+            Service result description.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse.BestFrameList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.LivenessCompareResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.ErrorCode">
+            <summary>
+            The final result of this verification. `0` indicates that the person is the same as that in the photo.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.ErrorMsg">
+            <summary>
+            The description of the final verification result.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.LivenessErrorCode">
+            <summary>
+            The result of this liveness detection process. `0` indicates success.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.LivenessErrorMsg">
+            <summary>
+            The result description of this liveness detection process.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.CompareErrorCode">
+            <summary>
+            The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.CompareErrorMsg">
+            <summary>
+            The result description of this comparison process.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.ReqTimestamp">
+            <summary>
+            The timestamp (ms) of this verification process.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.Similarity">
+            <summary>
+            The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VerificationDetail.Seq">
+            <summary>
+            Unique ID of this verification process.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.VerificationDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest.ImageUrl">
+            <summary>
+            The URL of the photo for face comparison. The downloaded image after Base64 encoding can be up to 3 MB and must be in JPG or PNG.
+            
+            The image must be stored in a COS bucket in the region where the FaceID service resides to ensure a higher download speed and better stability. You can generate an image URL by using `CreateUploadUrl` or purchase the COS service.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest.ImageMd5">
+            <summary>
+            The 32-bit MD5 checksum of the image for comparison
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest.VideoUrl">
+            <summary>
+            The URL of the video for liveness detection. The downloaded video after Base64 encoding can be up to 8 MB and must be in MP4, AVI, or FLV. It takes no more than 4s to download the video.
+            
+            The video must be stored in a COS bucket in the region where the FaceID service resides to ensure a higher download speed and better stability. You can generate a video URL by using `CreateUploadUrl` or purchase the COS service.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest.VideoMd5">
+            <summary>
+            The 32-bit MD5 checksum of the video
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest.LivenessType">
+            <summary>
+            The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
+            `LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest.ValidateData">
+            <summary>
+            LIP parameter: Pass in a custom 4-digit verification code.
+            ACTION parameter: Pass in a custom action sequence (`2,1` or `1,2`).
+            SILENT parameter: Null.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareResponse.Sim">
+            <summary>
+            The similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two persons are of the same person. You can adjust the threshold according to your specific scenario (the FARs at the thresholds of 70 and 80 are 0.1% and 0.01%, respectively).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareResponse.Result">
+            <summary>
+            The service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareResponse.Description">
+            <summary>
+            The service result description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareResponse.BestFrame">
+            <summary>
+            The best video screenshot after successful verification
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Faceid.V20180301.Models.VideoLivenessCompareResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1726 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudTat</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.CancelInvocation(TencentCloud.Tat.V20201028.Models.CancelInvocationRequest)">
+            <summary>
+            This API is used to cancel the command executed on one or more CVM instances.
+            
+            * If the command has not been delivered to the TAT agent, the task status is `PENDING`, `DELIVERING`, or `DELIVER_DELAYED`, and will be `CANCELLED` after the command is canceled.
+            * If the command has been delivered to the TAT agent, the task status is `RUNNING`, and will be `TERMINATED` after the command is canceled.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.CancelInvocationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.CancelInvocationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.CancelInvocationSync(TencentCloud.Tat.V20201028.Models.CancelInvocationRequest)">
+            <summary>
+            This API is used to cancel the command executed on one or more CVM instances.
+            
+            * If the command has not been delivered to the TAT agent, the task status is `PENDING`, `DELIVERING`, or `DELIVER_DELAYED`, and will be `CANCELLED` after the command is canceled.
+            * If the command has been delivered to the TAT agent, the task status is `RUNNING`, and will be `TERMINATED` after the command is canceled.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.CancelInvocationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.CancelInvocationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.CreateCommand(TencentCloud.Tat.V20201028.Models.CreateCommandRequest)">
+            <summary>
+            This API is used to create a command.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.CreateCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.CreateCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.CreateCommandSync(TencentCloud.Tat.V20201028.Models.CreateCommandRequest)">
+            <summary>
+            This API is used to create a command.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.CreateCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.CreateCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.CreateInvoker(TencentCloud.Tat.V20201028.Models.CreateInvokerRequest)">
+            <summary>
+            This API is used to create an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.CreateInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.CreateInvokerSync(TencentCloud.Tat.V20201028.Models.CreateInvokerRequest)">
+            <summary>
+            This API is used to create an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.CreateInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DeleteCommand(TencentCloud.Tat.V20201028.Models.DeleteCommandRequest)">
+            <summary>
+            This API is used to delete a command.
+            Commands bound to an invoker cannot be deleted.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DeleteCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DeleteCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DeleteCommandSync(TencentCloud.Tat.V20201028.Models.DeleteCommandRequest)">
+            <summary>
+            This API is used to delete a command.
+            Commands bound to an invoker cannot be deleted.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DeleteCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DeleteCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DeleteInvoker(TencentCloud.Tat.V20201028.Models.DeleteInvokerRequest)">
+            <summary>
+            This API is used to delete an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DeleteInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DeleteInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DeleteInvokerSync(TencentCloud.Tat.V20201028.Models.DeleteInvokerRequest)">
+            <summary>
+            This API is used to delete an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DeleteInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DeleteInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeAutomationAgentStatus(TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest)">
+            <summary>
+            This API is used to query the status of the TAT agent.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeAutomationAgentStatusSync(TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest)">
+            <summary>
+            This API is used to query the status of the TAT agent.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeCommands(TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest)">
+            <summary>
+            This API is used to query command details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeCommandsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeCommandsSync(TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest)">
+            <summary>
+            This API is used to query command details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeCommandsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeInvocationTasks(TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest)">
+            <summary>
+            This API is used to query execution task details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeInvocationTasksSync(TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest)">
+            <summary>
+            This API is used to query execution task details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeInvocations(TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest)">
+            <summary>
+            This API is used to query execution activity details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvocationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeInvocationsSync(TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest)">
+            <summary>
+            This API is used to query execution activity details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvocationsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeInvokerRecords(TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsRequest)">
+            <summary>
+            This API is used to query the execution history of an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeInvokerRecordsSync(TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsRequest)">
+            <summary>
+            This API is used to query the execution history of an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeInvokers(TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest)">
+            <summary>
+            This API is used to query invoker details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvokersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeInvokersSync(TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest)">
+            <summary>
+            This API is used to query invoker details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeInvokersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeRegions(TencentCloud.Tat.V20201028.Models.DescribeRegionsRequest)">
+            <summary>
+            This API is used to query the list of regions that supports TAT.
+            If the `RegionState` is `AVAILABLE`, it means that TAT is available in the region. If no value is returned, TAT is not available in the region.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeRegionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeRegionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DescribeRegionsSync(TencentCloud.Tat.V20201028.Models.DescribeRegionsRequest)">
+            <summary>
+            This API is used to query the list of regions that supports TAT.
+            If the `RegionState` is `AVAILABLE`, it means that TAT is available in the region. If no value is returned, TAT is not available in the region.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeRegionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DescribeRegionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DisableInvoker(TencentCloud.Tat.V20201028.Models.DisableInvokerRequest)">
+            <summary>
+            This API is used to disable an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DisableInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DisableInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.DisableInvokerSync(TencentCloud.Tat.V20201028.Models.DisableInvokerRequest)">
+            <summary>
+            This API is used to disable an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.DisableInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.DisableInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.EnableInvoker(TencentCloud.Tat.V20201028.Models.EnableInvokerRequest)">
+            <summary>
+            This API is used to enable an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.EnableInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.EnableInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.EnableInvokerSync(TencentCloud.Tat.V20201028.Models.EnableInvokerRequest)">
+            <summary>
+            This API is used to enable an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.EnableInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.EnableInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.InvokeCommand(TencentCloud.Tat.V20201028.Models.InvokeCommandRequest)">
+            <summary>
+            This API is used to trigger a command on the specified instance and returns the execution activity ID (inv-xxxxxxxx) on success. Each execution activity has one or more execution tasks (invt-xxxxxxxx) and each execution task indicates an execution record on a CVM or Lighthouse instance.
+            
+            * If the agent is not installed on the instance or is offline, an error is returned.
+            * If the command type is not supported by the agent runtime environment, an error is returned.
+            * The specified instance needs to be in a VPC network.
+            * The specified instance needs to be in the RUNNING status.
+            * Only one type of instances (CVM or Lighthouse) can be specified in a single request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.InvokeCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.InvokeCommandSync(TencentCloud.Tat.V20201028.Models.InvokeCommandRequest)">
+            <summary>
+            This API is used to trigger a command on the specified instance and returns the execution activity ID (inv-xxxxxxxx) on success. Each execution activity has one or more execution tasks (invt-xxxxxxxx) and each execution task indicates an execution record on a CVM or Lighthouse instance.
+            
+            * If the agent is not installed on the instance or is offline, an error is returned.
+            * If the command type is not supported by the agent runtime environment, an error is returned.
+            * The specified instance needs to be in a VPC network.
+            * The specified instance needs to be in the RUNNING status.
+            * Only one type of instances (CVM or Lighthouse) can be specified in a single request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.InvokeCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.ModifyCommand(TencentCloud.Tat.V20201028.Models.ModifyCommandRequest)">
+            <summary>
+            This API is used to modify a command.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.ModifyCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.ModifyCommandSync(TencentCloud.Tat.V20201028.Models.ModifyCommandRequest)">
+            <summary>
+            This API is used to modify a command.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.ModifyCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.ModifyInvoker(TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest)">
+            <summary>
+            This API is used to modify an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.ModifyInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.ModifyInvokerSync(TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest)">
+            <summary>
+            This API is used to modify an invoker.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.ModifyInvokerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.PreviewReplacedCommandContent(TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentRequest)">
+            <summary>
+            This API is used to preview the command with custom parameters. The command is not executed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.PreviewReplacedCommandContentSync(TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentRequest)">
+            <summary>
+            This API is used to preview the command with custom parameters. The command is not executed.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.RunCommand(TencentCloud.Tat.V20201028.Models.RunCommandRequest)">
+            <summary>
+            This API is used to execute a command and returns the execution activity ID (inv-xxxxxxxx) on success. Each execution has one or more execution tasks (invt-xxxxxxxx) and each execution task indicates an execution record on a CVM or Lighthouse instance.
+            
+            * If the agent is not installed on the instance or is offline, an error is returned.
+            * If the command type is not supported by the agent runtime environment, an error is returned.
+            * The specified instance needs to be in a VPC network.
+            * The specified instance needs to be in the `RUNNING` status.
+            * Only one type of instances (CVM or Lighthouse) can be specified in a single request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.RunCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.RunCommandResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.TatClient.RunCommandSync(TencentCloud.Tat.V20201028.Models.RunCommandRequest)">
+            <summary>
+            This API is used to execute a command and returns the execution activity ID (inv-xxxxxxxx) on success. Each execution has one or more execution tasks (invt-xxxxxxxx) and each execution task indicates an execution record on a CVM or Lighthouse instance.
+            
+            * If the agent is not installed on the instance or is offline, an error is returned.
+            * If the command type is not supported by the agent runtime environment, an error is returned.
+            * The specified instance needs to be in a VPC network.
+            * The specified instance needs to be in the `RUNNING` status.
+            * Only one type of instances (CVM or Lighthouse) can be specified in a single request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tat.V20201028.Models.RunCommandRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tat.V20201028.Models.RunCommandResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.AutomationAgentInfo.InstanceId">
+            <summary>
+            Instance ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.AutomationAgentInfo.Version">
+            <summary>
+            Agent version.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.AutomationAgentInfo.LastHeartbeatTime">
+            <summary>
+            Last heartbeat time
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.AutomationAgentInfo.AgentStatus" -->
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.AutomationAgentInfo.Environment" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.AutomationAgentInfo.SupportFeatures">
+            <summary>
+            Features supported by the TAT agent.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.AutomationAgentInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CancelInvocationRequest.InvocationId">
+            <summary>
+            Execution activity ID
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.CancelInvocationRequest.InstanceIds" -->
+        <member name="M:TencentCloud.Tat.V20201028.Models.CancelInvocationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CancelInvocationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.CancelInvocationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.CommandId">
+            <summary>
+            Command ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.CommandName">
+            <summary>
+            Command name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.Description">
+            <summary>
+            Command description.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.Content">
+            <summary>
+            Base64-encoded command.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.CommandType">
+            <summary>
+            Command type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.WorkingDirectory">
+            <summary>
+            Command execution path.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.Timeout">
+            <summary>
+            Command timeout period.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.CreatedTime">
+            <summary>
+            Command creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.UpdatedTime">
+            <summary>
+            Command update time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.EnableParameter">
+            <summary>
+            Whether to enable the custom parameter feature.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.DefaultParameters">
+            <summary>
+            Default custom parameter value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.FormattedDescription">
+            <summary>
+            Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.CreatedBy">
+            <summary>
+            Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.Tags">
+            <summary>
+            The list of tags bound to the command.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.Username">
+            <summary>
+            The user who executes the command on the instance.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.OutputCOSBucketUrl">
+            <summary>
+            The COS bucket URL for uploading logs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Command.OutputCOSKeyPrefix">
+            <summary>
+            The COS bucket directory where the logs are saved.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.Command.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CommandDocument.Content">
+            <summary>
+            Base64-encoded command.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CommandDocument.CommandType">
+            <summary>
+            Command type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CommandDocument.Timeout">
+            <summary>
+            Timeout period.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CommandDocument.WorkingDirectory">
+            <summary>
+            Execution path.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CommandDocument.Username">
+            <summary>
+            The user who executes the command.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CommandDocument.OutputCOSBucketUrl">
+            <summary>
+            URL of the COS bucket to store the output
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CommandDocument.OutputCOSKeyPrefix">
+            <summary>
+            Prefix of the output file name 
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.CommandDocument.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.CommandName">
+            <summary>
+            Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.Content">
+            <summary>
+            Base64-encoded command. The maximum length is 64 KB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.Description">
+            <summary>
+            Command description. The maximum length is 120 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.CommandType">
+            <summary>
+            Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.WorkingDirectory">
+            <summary>
+            Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.Timeout">
+            <summary>
+            Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.EnableParameter">
+            <summary>
+            Whether to enable the custom parameter feature.
+            This cannot be modified once created.
+            Default value: `false`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.DefaultParameters">
+            <summary>
+            The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+            `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
+            If no parameter value is provided in the `InvokeCommand` API, the default value is used.
+            Up to 20 custom parameters are supported.
+            The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.Tags">
+            <summary>
+            Tags bound to the command. At most 10 tags are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.Username">
+            <summary>
+            The username used to execute the command on the CVM or Lighthouse instance.
+            The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. By default, the root user is used to execute commands on Linux and the System user is used on Windows.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.OutputCOSBucketUrl">
+            <summary>
+            The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.OutputCOSKeyPrefix">
+            <summary>
+            The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
+            1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
+            2. Use a slash (/) to create a subdirectory.
+            3. Consecutive dots (.) and slashes (/) are not allowed. It can not start with a slash (/). 
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.CreateCommandRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandResponse.CommandId">
+            <summary>
+            Command ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateCommandResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.CreateCommandResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest.Name">
+            <summary>
+            Invoker name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest.Type">
+            <summary>
+            Invoker type. It can only be `SCHEDULE` (recurring invokers).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest.CommandId">
+            <summary>
+            Remote command ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest.InstanceIds">
+            <summary>
+            ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest.Username">
+            <summary>
+            The user who executes the command.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest.Parameters">
+            <summary>
+            Custom parameters of the command.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest.ScheduleSettings">
+            <summary>
+            Settings required for a recurring invoker.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.CreateInvokerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerResponse.InvokerId">
+            <summary>
+            Invoker ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.CreateInvokerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.CreateInvokerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DeleteCommandRequest.CommandId">
+            <summary>
+            ID of the command to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DeleteCommandRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DeleteCommandResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DeleteCommandResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DeleteInvokerRequest.InvokerId">
+            <summary>
+            ID of the invoker to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DeleteInvokerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DeleteInvokerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DeleteInvokerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest.InstanceIds">
+            <summary>
+            List of instance IDs for the query.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest.Filters" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest.Limit">
+            <summary>
+            Number of returned results. It defaults to `20`. The maximum is 100. For more information on `Limit`, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest.Offset">
+            <summary>
+            Offset. The default value is `0`. For more information on `Offset`, see the relevant section in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusResponse.AutomationAgentSet">
+            <summary>
+            Agent information list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusResponse.TotalCount">
+            <summary>
+            Total number of matching agents.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeAutomationAgentStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest.CommandIds">
+            <summary>
+            List of command IDs. Up to 100 IDs are allowed for each request. `CommandIds` and `Filters` cannot be specified at the same time.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest.Filters" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest.Limit">
+            <summary>
+            Number of returned results. It defaults to `20`. The maximum is 100. For more information on `Limit`, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest.Offset">
+            <summary>
+            Offset. The default value is `0`. For more information on `Offset`, see the relevant section in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeCommandsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeCommandsResponse.TotalCount">
+            <summary>
+            Total number of matching commands.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeCommandsResponse.CommandSet">
+            <summary>
+            List of command details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeCommandsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeCommandsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest.InvocationTaskIds">
+            <summary>
+            List of execution task IDs. Up to 100 IDs are allowed for each request. `InvocationTaskIds` and `Filters` cannot be specified at the same time.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest.Filters" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest.Limit">
+            <summary>
+            Number of returned results. It defaults to `20`. The maximum is 100. For more information on `Limit`, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest.Offset">
+            <summary>
+            Offset. The default value is `0`. For more information on `Offset`, see the relevant section in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest.HideOutput" -->
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksResponse.TotalCount">
+            <summary>
+            Total number of matching execution tasks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksResponse.InvocationTaskSet">
+            <summary>
+            List of execution tasks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeInvocationTasksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest.InvocationIds">
+            <summary>
+            List of execution activity IDs. Up to 100 IDs are allowed for each request. `InvocationIds` and `Filters` cannot be specified at the same time.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest.Filters" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest.Limit">
+            <summary>
+            Number of returned results. It defaults to `20`. The maximum is 100. For more information on `Limit`, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest.Offset">
+            <summary>
+            Offset. The default value is `0`. For more information on `Offset`, see the relevant section in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeInvocationsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationsResponse.TotalCount">
+            <summary>
+            Total number of matching execution activities.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationsResponse.InvocationSet">
+            <summary>
+            List of execution activities.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvocationsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeInvocationsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsRequest.InvokerIds">
+            <summary>
+            List of invoker IDs. Up to 100 IDs are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsResponse.TotalCount">
+            <summary>
+            Number of matching records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsResponse.InvokerRecordSet">
+            <summary>
+            Execution history of an invoker.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeInvokerRecordsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest.InvokerIds">
+            <summary>
+            List of invoker IDs.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest.Filters" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeInvokersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokersResponse.TotalCount">
+            <summary>
+            Number of matching invokers.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokersResponse.InvokerSet">
+            <summary>
+            Invoker information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeInvokersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeInvokersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeRegionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeRegionsResponse.TotalCount">
+            <summary>
+            Number of regions
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeRegionsResponse.RegionSet">
+            <summary>
+            Region information list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DescribeRegionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DescribeRegionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DisableInvokerRequest.InvokerId">
+            <summary>
+            ID of the invoker to be disabled.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DisableInvokerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.DisableInvokerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.DisableInvokerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.EnableInvokerRequest.InvokerId">
+            <summary>
+            ID of the invoker to be enabled.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.EnableInvokerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.EnableInvokerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.EnableInvokerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Filter.Name">
+            <summary>
+            Field to be filtered.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Filter.Values">
+            <summary>
+            Filter values of the field.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.InvocationId">
+            <summary>
+            Execution activity ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.CommandId">
+            <summary>
+            Command ID.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.Invocation.InvocationStatus" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.InvocationTaskBasicInfoSet">
+            <summary>
+            Execution task information list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.Description">
+            <summary>
+            Execution activity description.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.StartTime">
+            <summary>
+            Start time of the execution activity.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.EndTime">
+            <summary>
+            End time of the execution activity.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.CreatedTime">
+            <summary>
+            Time when the execution activity is created.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.UpdatedTime">
+            <summary>
+            Time when the execution activity is updated.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.Parameters">
+            <summary>
+            Values of custom parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.DefaultParameters">
+            <summary>
+            Default custom parameter value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.InstanceKind">
+            <summary>
+            Type of the instance executing the command. Valid values: `CVM`, `LIGHTHOUSE`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.Username">
+            <summary>
+            The user who executes the command on the instance.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.InvocationSource">
+            <summary>
+            Invocation source.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.CommandContent">
+            <summary>
+            Base64-encoded command
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.CommandType">
+            <summary>
+            Command type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.Timeout">
+            <summary>
+            Command timeout period, in seconds.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.WorkingDirectory">
+            <summary>
+            Working directory for executing the command.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.OutputCOSBucketUrl">
+            <summary>
+            The COS bucket URL for uploading logs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invocation.OutputCOSKeyPrefix">
+            <summary>
+            The COS bucket directory where the logs are saved.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.Invocation.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.InvocationId">
+            <summary>
+            Execution activity ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.InvocationTaskId">
+            <summary>
+            Execution task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.CommandId">
+            <summary>
+            Command ID.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.InvocationTask.TaskStatus" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.InstanceId">
+            <summary>
+            Instance ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.TaskResult">
+            <summary>
+            Execution result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.StartTime">
+            <summary>
+            Start time of the execution task.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.EndTime">
+            <summary>
+            End time of the execution task.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.CreatedTime">
+            <summary>
+            Creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.UpdatedTime">
+            <summary>
+            Update time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.CommandDocument">
+            <summary>
+            Command details of the execution task.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.ErrorInfo">
+            <summary>
+            Error message displayed when the execution task fails.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTask.InvocationSource">
+            <summary>
+            Invocation source.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.InvocationTask.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTaskBasicInfo.InvocationTaskId">
+            <summary>
+            Execution task ID.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.InvocationTaskBasicInfo.TaskStatus" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvocationTaskBasicInfo.InstanceId">
+            <summary>
+            Instance ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.InvocationTaskBasicInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.CommandId">
+            <summary>
+            ID of the command to be triggered.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.InstanceIds">
+            <summary>
+            IDs of instances about to execute commands. At most 100 IDs are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.Parameters">
+            <summary>
+            Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+            `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
+            If no parameter value is provided, the DefaultParameters of the command is used.
+            Up to 20 custom parameters are supported.
+            The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.Username">
+            <summary>
+            The username used to execute the command on the CVM or Lighthouse instance.
+            The principle of the least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. If this is not specified, the Username of the command is used by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.WorkingDirectory">
+            <summary>
+            Execution path of the command. The WorkingDirectory of the command is used by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.Timeout">
+            <summary>
+            Command timeout period. Value range: [1, 86400]. The Timeout of the command is used by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.OutputCOSBucketUrl">
+            <summary>
+            The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.OutputCOSKeyPrefix">
+            <summary>
+            The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
+            1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
+            2. Use a slash (/) to create a subdirectory.
+            3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.InvokeCommandRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandResponse.InvocationId">
+            <summary>
+            Execution activity ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokeCommandResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.InvokeCommandResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.InvokerId">
+            <summary>
+            Invoker ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.Name">
+            <summary>
+            Invoker name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.Type">
+            <summary>
+            Invoker type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.CommandId">
+            <summary>
+            Command ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.Username">
+            <summary>
+            Username.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.Parameters">
+            <summary>
+            Custom parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.InstanceIds">
+            <summary>
+            Instance ID list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.Enable">
+            <summary>
+            Whether to enable the invoker.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.ScheduleSettings">
+            <summary>
+            Execution schedule of the invoker. This field is returned for recurring invokers.
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.CreatedTime">
+            <summary>
+            Creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Invoker.UpdatedTime">
+            <summary>
+            Modification time.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.Invoker.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokerRecord.InvokerId">
+            <summary>
+            Invoker ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokerRecord.InvokeTime">
+            <summary>
+            Execution time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokerRecord.Reason">
+            <summary>
+            Execution reason.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokerRecord.InvocationId">
+            <summary>
+            Command execution ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.InvokerRecord.Result">
+            <summary>
+            Trigger result.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.InvokerRecord.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.CommandId">
+            <summary>
+            Command ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.CommandName">
+            <summary>
+            Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.Description">
+            <summary>
+            Command description. The maximum length is 120 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.Content">
+            <summary>
+            Base64-encoded command. The maximum length is 64 KB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.CommandType">
+            <summary>
+            Command type. `SHELL` and `POWERSHELL` are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.WorkingDirectory">
+            <summary>
+            Command execution path.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.Timeout">
+            <summary>
+            Command timeout period. Value range: [1, 86400].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.DefaultParameters">
+            <summary>
+            The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+            All parameters are overwritten. All default values are required for modification.
+            Modification is only allowed when `EnableParameter` is `true`.
+            `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
+            Up to 20 custom parameters are supported.
+            The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.Username">
+            <summary>
+            The username used to execute the command on the CVM or Lighthouse instance.
+            The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.OutputCOSBucketUrl">
+            <summary>
+            The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.OutputCOSKeyPrefix">
+            <summary>
+            The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
+            1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
+            2. Use a slash (/) to create a subdirectory.
+            3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.ModifyCommandRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyCommandResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.ModifyCommandResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.InvokerId">
+            <summary>
+            ID of the invoker to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.Name">
+            <summary>
+            Name of the invoker to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.Type">
+            <summary>
+            Invoker type. It can only be `SCHEDULE` (recurring invokers).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.CommandId">
+            <summary>
+            ID of the command to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.Username">
+            <summary>
+            The username to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.Parameters">
+            <summary>
+            Custom parameters to be modified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.InstanceIds">
+            <summary>
+            List of instance IDs to be modified. Up to 100 IDs are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.ScheduleSettings">
+            <summary>
+            Scheduled invoker settings to be modified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.ModifyInvokerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ModifyInvokerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.ModifyInvokerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentRequest.Parameters">
+            <summary>
+            Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+            `key` is the name of the custom parameter and "value" is its specified value. Both "key" and "value" are strings.
+            At most 20 custom parameters are supported.
+            The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
+            This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentRequest.CommandId">
+            <summary>
+            The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
+            `CommandId` or `Content` must be specified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentRequest.Content">
+            <summary>
+            Base64-encoded command to be previewed. The maximum length is 64 KB.
+            CommandId or Content must be specified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentResponse.ReplacedContent">
+            <summary>
+            Base64-encoded command with custom parameters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.PreviewReplacedCommandContentResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RegionInfo.Region">
+            <summary>
+            Region name, such as `ap-guangzhou`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RegionInfo.RegionName">
+            <summary>
+            Region description, such as `Guangzhou`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RegionInfo.RegionState">
+            <summary>
+            Region status. `AVAILABLE` indicates the region is available.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.RegionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.Content">
+            <summary>
+            Base64-encoded command. The maximum length is 64 KB.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.InstanceIds" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.CommandName">
+            <summary>
+            Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.Description">
+            <summary>
+            Command description. The maximum length is 120 characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.CommandType">
+            <summary>
+            Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.WorkingDirectory">
+            <summary>
+            Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.Timeout">
+            <summary>
+            Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.SaveCommand" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.EnableParameter">
+            <summary>
+            Whether to enable the custom parameter feature.
+            This cannot be modified once created.
+            Default value: `false`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.DefaultParameters">
+            <summary>
+            The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+            `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
+            If Parameters is not provided, the default values specified here are used.
+            Up to 20 custom parameters are supported.
+            The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.Parameters">
+            <summary>
+            Custom parameters of `Command`. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+            `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
+            If no parameter value is provided, the `DefaultParameters` is used.
+            Up to 20 custom parameters are supported.
+            The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.Tags">
+            <summary>
+            The tags of the command. It is available when `SaveCommand` is `True`. A maximum of 10 tags are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.Username">
+            <summary>
+            The username used to execute the command on the CVM or Lighthouse instance.
+            The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. By default, the user `root` is used to execute commands on Linux and the user `System` is used on Windows.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.OutputCOSBucketUrl">
+            <summary>
+            The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandRequest.OutputCOSKeyPrefix">
+            <summary>
+            The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
+            1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
+            2. Use a slash (/) to create a subdirectory.
+            3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.RunCommandRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandResponse.CommandId">
+            <summary>
+            Command ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandResponse.InvocationId">
+            <summary>
+            Execution activity ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.RunCommandResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.RunCommandResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Tat.V20201028.Models.ScheduleSettings.Policy" -->
+        <member name="P:TencentCloud.Tat.V20201028.Models.ScheduleSettings.Recurrence">
+            <summary>
+            Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.ScheduleSettings.InvokeTime">
+            <summary>
+            The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.ScheduleSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Tag.Key">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.Tag.Value">
+            <summary>
+            Tag value.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.TaskResult.ExitCode">
+            <summary>
+            ExitCode of the execution.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.TaskResult.Output">
+            <summary>
+            Base64-encoded command output. The maximum length is 24 KB.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.TaskResult.ExecStartTime">
+            <summary>
+            Time when the execution is started.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.TaskResult.ExecEndTime">
+            <summary>
+            Time when the execution is ended.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.TaskResult.Dropped">
+            <summary>
+            Dropped bytes of the command output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.TaskResult.OutputUrl">
+            <summary>
+            COS URL of the logs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tat.V20201028.Models.TaskResult.OutputUploadCOSErrorInfo">
+            <summary>
+            Error message for uploading logs to COS.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tat.V20201028.Models.TaskResult.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

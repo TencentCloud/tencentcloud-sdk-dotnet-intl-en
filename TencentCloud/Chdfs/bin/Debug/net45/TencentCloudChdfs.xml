@@ -1,0 +1,1538 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudChdfs</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.AssociateAccessGroups(TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsRequest)">
+            <summary>
+            This API is used to bind multiple permission groups to a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.AssociateAccessGroupsSync(TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsRequest)">
+            <summary>
+            This API is used to bind multiple permission groups to a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateAccessGroup(TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest)">
+            <summary>
+            This API is used to create a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateAccessGroupSync(TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest)">
+            <summary>
+            This API is used to create a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateAccessRules(TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesRequest)">
+            <summary>
+            This API is used to batch create permission rules. You don't need to enter the permission rule IDs and creation time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateAccessRulesSync(TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesRequest)">
+            <summary>
+            This API is used to batch create permission rules. You don't need to enter the permission rule IDs and creation time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateFileSystem(TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest)">
+            <summary>
+            This API is used to create a file system (asynchronously).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateFileSystemSync(TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest)">
+            <summary>
+            This API is used to create a file system (asynchronously).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateLifeCycleRules(TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesRequest)">
+            <summary>
+            This API is used to batch create lifecycle rules. You don't need to enter the lifecycle rule IDs and creation time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateLifeCycleRulesSync(TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesRequest)">
+            <summary>
+            This API is used to batch create lifecycle rules. You don't need to enter the lifecycle rule IDs and creation time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateMountPoint(TencentCloud.Chdfs.V20201112.Models.CreateMountPointRequest)">
+            <summary>
+            This API is used to create a mount point for a successfully created file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateMountPointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateMountPointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateMountPointSync(TencentCloud.Chdfs.V20201112.Models.CreateMountPointRequest)">
+            <summary>
+            This API is used to create a mount point for a successfully created file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateMountPointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateMountPointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateRestoreTasks(TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksRequest)">
+            <summary>
+            This API is used to batch create restoration tasks. You don't need to enter the restoration task IDs, status, and creation time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.CreateRestoreTasksSync(TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksRequest)">
+            <summary>
+            This API is used to batch create restoration tasks. You don't need to enter the restoration task IDs, status, and creation time.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteAccessGroup(TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupRequest)">
+            <summary>
+            This API is used to delete a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteAccessGroupSync(TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupRequest)">
+            <summary>
+            This API is used to delete a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteAccessRules(TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesRequest)">
+            <summary>
+            This API is used to batch delete permission rules.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteAccessRulesSync(TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesRequest)">
+            <summary>
+            This API is used to batch delete permission rules.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteFileSystem(TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemRequest)">
+            <summary>
+            This API is used to delete a file system. Non-empty file systems cannot be deleted.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteFileSystemSync(TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemRequest)">
+            <summary>
+            This API is used to delete a file system. Non-empty file systems cannot be deleted.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteLifeCycleRules(TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesRequest)">
+            <summary>
+            This API is used to batch delete lifecycle rules.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteLifeCycleRulesSync(TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesRequest)">
+            <summary>
+            This API is used to batch delete lifecycle rules.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteMountPoint(TencentCloud.Chdfs.V20201112.Models.DeleteMountPointRequest)">
+            <summary>
+            This API is used to delete a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteMountPointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteMountPointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DeleteMountPointSync(TencentCloud.Chdfs.V20201112.Models.DeleteMountPointRequest)">
+            <summary>
+            This API is used to delete a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteMountPointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DeleteMountPointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeAccessGroup(TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupRequest)">
+            <summary>
+            This API is used to view the details of a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeAccessGroupSync(TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupRequest)">
+            <summary>
+            This API is used to view the details of a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeAccessGroups(TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsRequest)">
+            <summary>
+            This API is used to view the list of permission groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeAccessGroupsSync(TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsRequest)">
+            <summary>
+            This API is used to view the list of permission groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeAccessRules(TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesRequest)">
+            <summary>
+            This API is used to view the list of permission rules by permission group ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeAccessRulesSync(TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesRequest)">
+            <summary>
+            This API is used to view the list of permission rules by permission group ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeFileSystem(TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemRequest)">
+            <summary>
+            This API is used to view the details of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeFileSystemSync(TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemRequest)">
+            <summary>
+            This API is used to view the details of a file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeFileSystems(TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsRequest)">
+            <summary>
+            This API is used to view the list of file systems.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeFileSystemsSync(TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsRequest)">
+            <summary>
+            This API is used to view the list of file systems.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeLifeCycleRules(TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesRequest)">
+            <summary>
+            This API is used to view the list of lifecycle rules by file system ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeLifeCycleRulesSync(TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesRequest)">
+            <summary>
+            This API is used to view the list of lifecycle rules by file system ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeMountPoint(TencentCloud.Chdfs.V20201112.Models.DescribeMountPointRequest)">
+            <summary>
+            This API is used to view the details of a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeMountPointSync(TencentCloud.Chdfs.V20201112.Models.DescribeMountPointRequest)">
+            <summary>
+            This API is used to view the details of a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeMountPoints(TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsRequest)">
+            <summary>
+            This API is used to view the list of mount points.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeMountPointsSync(TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsRequest)">
+            <summary>
+            This API is used to view the list of mount points.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeResourceTags(TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsRequest)">
+            <summary>
+            This API is used to view the list of resource tags by file system ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeResourceTagsSync(TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsRequest)">
+            <summary>
+            This API is used to view the list of resource tags by file system ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeRestoreTasks(TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksRequest)">
+            <summary>
+            This API is used to view the list of restoration tasks by file system ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DescribeRestoreTasksSync(TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksRequest)">
+            <summary>
+            This API is used to view the list of restoration tasks by file system ID.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DisassociateAccessGroups(TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsRequest)">
+            <summary>
+            This API is used to unbind multiple permission groups from a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.DisassociateAccessGroupsSync(TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsRequest)">
+            <summary>
+            This API is used to unbind multiple permission groups from a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyAccessGroup(TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupRequest)">
+            <summary>
+            This API is used to modify the attributes of a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyAccessGroupSync(TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupRequest)">
+            <summary>
+            This API is used to modify the attributes of a permission group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyAccessRules(TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesRequest)">
+            <summary>
+            This API is used to batch modify the attributes of permission rules, such as address, access mode, and priority. You must specify the permission rule IDs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyAccessRulesSync(TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesRequest)">
+            <summary>
+            This API is used to batch modify the attributes of permission rules, such as address, access mode, and priority. You must specify the permission rule IDs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyFileSystem(TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest)">
+            <summary>
+            This API is used to modify the attributes of a successfully created file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyFileSystemSync(TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest)">
+            <summary>
+            This API is used to modify the attributes of a successfully created file system.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyLifeCycleRules(TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesRequest)">
+            <summary>
+            This API is used to batch modify the attributes of lifecycle rules, such as name, path, transition list, and status. You must specify the lifecycle rule IDs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyLifeCycleRulesSync(TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesRequest)">
+            <summary>
+            This API is used to batch modify the attributes of lifecycle rules, such as name, path, transition list, and status. You must specify the lifecycle rule IDs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyMountPoint(TencentCloud.Chdfs.V20201112.Models.ModifyMountPointRequest)">
+            <summary>
+            This API is used to modify the attributes of a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyMountPointSync(TencentCloud.Chdfs.V20201112.Models.ModifyMountPointRequest)">
+            <summary>
+            This API is used to modify the attributes of a mount point.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyResourceTags(TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsRequest)">
+            <summary>
+            This API is used to modify the list of resource tags by overwriting them all.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.ChdfsClient.ModifyResourceTagsSync(TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsRequest)">
+            <summary>
+            This API is used to modify the list of resource tags by overwriting them all.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessGroup.AccessGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessGroup.AccessGroupName">
+            <summary>
+            Permission group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessGroup.Description">
+            <summary>
+            Permission group description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessGroup.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessGroup.VpcType">
+            <summary>
+            VPC type (1: CVM; 2: BM 1.0)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessGroup.VpcId">
+            <summary>
+            VPC ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.AccessGroup.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessRule.AccessRuleId">
+            <summary>
+            Permission rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessRule.Address">
+            <summary>
+            Permission rule address (IP range or IP)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessRule.AccessMode">
+            <summary>
+            Permission rule access mode (1: read-only; 2: read-write)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessRule.Priority">
+            <summary>
+            Priority (value range: 1–100. The smaller the value, the higher the priority)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AccessRule.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.AccessRule.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsRequest.MountPointId">
+            <summary>
+            Mount point ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsRequest.AccessGroupIds">
+            <summary>
+            List of permission group IDs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.AssociateAccessGroupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest.AccessGroupName">
+            <summary>
+            Permission group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest.VpcType">
+            <summary>
+            VPC type (1: CVM; 2: BM 1.0)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest.VpcId">
+            <summary>
+            VPC ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest.Description">
+            <summary>
+            Permission group description, which is an empty string by default
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupResponse.AccessGroup">
+            <summary>
+            Permission group
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateAccessGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesRequest.AccessRules">
+            <summary>
+            Multiple permission rules (up to 10)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesRequest.AccessGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateAccessRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.FileSystemName">
+            <summary>
+            File system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.CapacityQuota">
+            <summary>
+            File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.PosixAcl">
+            <summary>
+            Whether to verify POSIX ACL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.Description">
+            <summary>
+            File system description, which is an empty string by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.SuperUsers">
+            <summary>
+            List of superuser names, which is an empty array by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.RootInodeUser">
+            <summary>
+            Username of the root directory Inode, which is `hadoop` by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.RootInodeGroup">
+            <summary>
+            Group name of the root directory Inode, which is `supergroup` by default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.EnableRanger">
+            <summary>
+            Whether to enable verification of Ranger service addresses
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.RangerServiceAddresses">
+            <summary>
+            List of Ranger service addresses (empty array by default)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.Tags">
+            <summary>
+            Multiple resource tags, which can be an empty array
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemResponse.FileSystem">
+            <summary>
+            File system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateFileSystemResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesRequest.LifeCycleRules">
+            <summary>
+            Multiple lifecycle rules (up to 10)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateLifeCycleRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateMountPointRequest.MountPointName">
+            <summary>
+            Mount point name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateMountPointRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateMountPointRequest.MountPointStatus">
+            <summary>
+            Mount point status (1: enabled; 2: disabled)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateMountPointRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateMountPointResponse.MountPoint">
+            <summary>
+            Mount point
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateMountPointResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateMountPointResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksRequest.RestoreTasks">
+            <summary>
+            Multiple restoration tasks (up to 10)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.CreateRestoreTasksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupRequest.AccessGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteAccessGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesRequest.AccessRuleIds">
+            <summary>
+            Multiple permission rule IDs (up to 10)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteAccessRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteFileSystemResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesRequest.LifeCycleRuleIds">
+            <summary>
+            Multiple lifecycle rule IDs (up to 10)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteLifeCycleRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteMountPointRequest.MountPointId">
+            <summary>
+            Mount point ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteMountPointRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DeleteMountPointResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DeleteMountPointResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupRequest.AccessGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupResponse.AccessGroup">
+            <summary>
+            Permission group
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsRequest.VpcId">
+            <summary>
+            VPC ID
+            Note: either `VpcId` or `OwnerUin` can be specified as the input parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsRequest.OwnerUin">
+            <summary>
+            Resource owner `Uin`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsResponse.AccessGroups">
+            <summary>
+            List of permission groups
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeAccessGroupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesRequest.AccessGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesResponse.AccessRules">
+            <summary>
+            List of permission rules
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeAccessRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse.FileSystem">
+            <summary>
+            File system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse.CapacityUsed">
+            <summary>
+            Used capacity of the file system, in bytes
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse.ArchiveCapacityUsed">
+            <summary>
+            Used ARCHIVE capacity of COS, in bytes
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse.StandardCapacityUsed">
+            <summary>
+            Used STANDARD capacity of COS, in bytes
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse.DegradeCapacityUsed">
+            <summary>
+            Used STANDARD_IA capacity of COS, in bytes
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsResponse.FileSystems">
+            <summary>
+            List of file systems
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeFileSystemsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesResponse.LifeCycleRules">
+            <summary>
+            List of lifecycle rules
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeLifeCycleRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointRequest.MountPointId">
+            <summary>
+            Mount point ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointResponse.MountPoint">
+            <summary>
+            Mount point
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsRequest.FileSystemId">
+            <summary>
+            File system ID
+            Note: only one of `AccessGroupId`, `FileSystemId`, and `OwnerUin` can be specified as the input parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsRequest.AccessGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsRequest.OwnerUin">
+            <summary>
+            Resource owner `Uin`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsResponse.MountPoints">
+            <summary>
+            List of mount points
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeMountPointsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsResponse.Tags">
+            <summary>
+            List of resource tags
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeResourceTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksResponse.RestoreTasks">
+            <summary>
+            List of restoration tasks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DescribeRestoreTasksResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsRequest.MountPointId">
+            <summary>
+            Mount point ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsRequest.AccessGroupIds">
+            <summary>
+            List of permission group IDs
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.DisassociateAccessGroupsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.AppId">
+            <summary>
+            Resource owner `AppId`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.FileSystemName">
+            <summary>
+            File system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.Description">
+            <summary>
+            File system description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.Region">
+            <summary>
+            Region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.BlockSize">
+            <summary>
+            File system block size (in bytes)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.CapacityQuota">
+            <summary>
+            File system capacity (in bytes)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.Status">
+            <summary>
+            File system status (1: creating; 2: created successfully; 3: failed to create)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.SuperUsers">
+            <summary>
+            List of superuser names
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.PosixAcl">
+            <summary>
+            POSIX permission control
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.EnableRanger">
+            <summary>
+            Whether to enable verification of Ranger service addresses
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.FileSystem.RangerServiceAddresses">
+            <summary>
+            List of Ranger service addresses
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.FileSystem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.LifeCycleRule.LifeCycleRuleId">
+            <summary>
+            Lifecycle rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.LifeCycleRule.LifeCycleRuleName">
+            <summary>
+            Lifecycle rule name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.LifeCycleRule.Path">
+            <summary>
+            Lifecycle rule path (directory or file)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.LifeCycleRule.Transitions">
+            <summary>
+            List of lifecycle rule transitions
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.LifeCycleRule.Status">
+            <summary>
+            Lifecycle rule status (1: enabled; 2: disabled)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.LifeCycleRule.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.LifeCycleRule.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupRequest.AccessGroupId">
+            <summary>
+            Permission group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupRequest.AccessGroupName">
+            <summary>
+            Permission group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupRequest.Description">
+            <summary>
+            Permission group description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyAccessGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesRequest.AccessRules">
+            <summary>
+            Multiple permission rules (up to 10)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyAccessRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.FileSystemName">
+            <summary>
+            File system name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.Description">
+            <summary>
+            File system description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.CapacityQuota">
+            <summary>
+            File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+            Note: the file system capacity after change cannot be smaller than the currently used capacity
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.SuperUsers">
+            <summary>
+            List of superuser names, which can be an empty array
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.PosixAcl">
+            <summary>
+            Whether to verify POSIX ACL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.EnableRanger">
+            <summary>
+            Whether to enable verification of Ranger service addresses
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.RangerServiceAddresses">
+            <summary>
+            List of Ranger service addresses, which can be an empty array
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyFileSystemResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesRequest.LifeCycleRules">
+            <summary>
+            Multiple lifecycle rules (up to 10)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyLifeCycleRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointRequest.MountPointId">
+            <summary>
+            Mount point ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointRequest.MountPointName">
+            <summary>
+            Mount point name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointRequest.MountPointStatus">
+            <summary>
+            Mount point status
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyMountPointResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsRequest.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsRequest.Tags">
+            <summary>
+            Multiple resource tags, which can be an empty array
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.ModifyResourceTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.MountPoint.MountPointId">
+            <summary>
+            Mount point ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.MountPoint.MountPointName">
+            <summary>
+            Mount point name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.MountPoint.FileSystemId">
+            <summary>
+            File system ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.MountPoint.Status">
+            <summary>
+            Mount point status (1: enabled; 2: disabled)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.MountPoint.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.MountPoint.AccessGroupIds">
+            <summary>
+            List of IDs of the bound permission groups
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.MountPoint.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.RestoreTask.RestoreTaskId">
+            <summary>
+            Restoration task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.RestoreTask.FilePath">
+            <summary>
+            Restoration task file path
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.RestoreTask.Type">
+            <summary>
+            Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.RestoreTask.Days">
+            <summary>
+            Validity period (in days) of the temporary copy generated during restoration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.RestoreTask.Status">
+            <summary>
+            Restoration task status (1: binding file; 2: file binding completed; 3: restoring file; 4: file restoration completed)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.RestoreTask.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.RestoreTask.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.Tag.Key">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.Tag.Value">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.Transition.Days">
+            <summary>
+            Trigger time (in days)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Chdfs.V20201112.Models.Transition.Type">
+            <summary>
+            Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Chdfs.V20201112.Models.Transition.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

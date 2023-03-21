@@ -1,0 +1,1919 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudTag</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.AddResourceTag(TencentCloud.Tag.V20180813.Models.AddResourceTagRequest)">
+            <summary>
+            This API is used to associate resources with tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.AddResourceTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.AddResourceTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.AddResourceTagSync(TencentCloud.Tag.V20180813.Models.AddResourceTagRequest)">
+            <summary>
+            This API is used to associate resources with tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.AddResourceTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.AddResourceTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.AttachResourcesTag(TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest)">
+            <summary>
+            This API is used to associate a tag with multiple resources.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.AttachResourcesTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.AttachResourcesTagSync(TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest)">
+            <summary>
+            This API is used to associate a tag with multiple resources.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.AttachResourcesTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.CreateTag(TencentCloud.Tag.V20180813.Models.CreateTagRequest)">
+            <summary>
+            This API is used to create a tag key and tag value pair.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.CreateTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.CreateTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.CreateTagSync(TencentCloud.Tag.V20180813.Models.CreateTagRequest)">
+            <summary>
+            This API is used to create a tag key and tag value pair.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.CreateTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.CreateTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.CreateTags(TencentCloud.Tag.V20180813.Models.CreateTagsRequest)">
+            <summary>
+            This API is used to create multiple tag key-value pairs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.CreateTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.CreateTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.CreateTagsSync(TencentCloud.Tag.V20180813.Models.CreateTagsRequest)">
+            <summary>
+            This API is used to create multiple tag key-value pairs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.CreateTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.CreateTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DeleteResourceTag(TencentCloud.Tag.V20180813.Models.DeleteResourceTagRequest)">
+            <summary>
+            This API is used to unassociate tags and resources.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteResourceTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteResourceTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DeleteResourceTagSync(TencentCloud.Tag.V20180813.Models.DeleteResourceTagRequest)">
+            <summary>
+            This API is used to unassociate tags and resources.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteResourceTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteResourceTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DeleteTag(TencentCloud.Tag.V20180813.Models.DeleteTagRequest)">
+            <summary>
+            This API is used to delete a tag key and tag value pair.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DeleteTagSync(TencentCloud.Tag.V20180813.Models.DeleteTagRequest)">
+            <summary>
+            This API is used to delete a tag key and tag value pair.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DeleteTags(TencentCloud.Tag.V20180813.Models.DeleteTagsRequest)">
+            <summary>
+            This API is used to delete multiple tag key-value pairs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DeleteTagsSync(TencentCloud.Tag.V20180813.Models.DeleteTagsRequest)">
+            <summary>
+            This API is used to delete multiple tag key-value pairs.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DeleteTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourceTags(TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest)">
+            <summary>
+            This API is used to query the tags associated with a resource.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourceTagsSync(TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest)">
+            <summary>
+            This API is used to query the tags associated with a resource.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourceTagsByResourceIds(TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest)">
+            <summary>
+            This API is used to query the tag key-value pairs associated with an existing resource.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourceTagsByResourceIdsSync(TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest)">
+            <summary>
+            This API is used to query the tag key-value pairs associated with an existing resource.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourceTagsByResourceIdsSeq(TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest)">
+            <summary>
+            This API is used to view the tags associated with a resource in sequence.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourceTagsByResourceIdsSeqSync(TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest)">
+            <summary>
+            This API is used to view the tags associated with a resource in sequence.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourceTagsByTagKeys(TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest)">
+            <summary>
+            This API is used to get resource tags based on tag keys.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourceTagsByTagKeysSync(TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest)">
+            <summary>
+            This API is used to get resource tags based on tag keys.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourcesByTags(TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest)">
+            <summary>
+            This API is used to query resources by tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourcesByTagsSync(TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest)">
+            <summary>
+            This API is used to query resources by tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourcesByTagsUnion(TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest)">
+            <summary>
+            This API is used to query resource list by tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeResourcesByTagsUnionSync(TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest)">
+            <summary>
+            This API is used to query resource list by tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagKeys(TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest)">
+            <summary>
+            This API is used to query tag keys in an existing tag list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagKeysResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagKeysSync(TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest)">
+            <summary>
+            This API is used to query tag keys in an existing tag list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagKeysResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagValues(TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest)">
+            <summary>
+            This API is used to query tag values in an existing tag list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagValuesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagValuesSync(TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest)">
+            <summary>
+            This API is used to query tag values in an existing tag list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagValuesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagValuesSeq(TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest)">
+            <summary>
+            This API is used to query tag values in a created tag list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagValuesSeqSync(TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest)">
+            <summary>
+            This API is used to query tag values in a created tag list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTags(TencentCloud.Tag.V20180813.Models.DescribeTagsRequest)">
+            <summary>
+            This API is used to query existing tag lists.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagsSync(TencentCloud.Tag.V20180813.Models.DescribeTagsRequest)">
+            <summary>
+            This API is used to query existing tag lists.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagsSeq(TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest)">
+            <summary>
+            This API is used to query the created tag lists.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DescribeTagsSeqSync(TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest)">
+            <summary>
+            This API is used to query the created tag lists.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DetachResourcesTag(TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest)">
+            <summary>
+            This API is used to unbind a tag from multiple resources.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DetachResourcesTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.DetachResourcesTagSync(TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest)">
+            <summary>
+            This API is used to unbind a tag from multiple resources.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.DetachResourcesTagResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.GetResources(TencentCloud.Tag.V20180813.Models.GetResourcesRequest)">
+            <summary>
+            This API is used to query the list of resources associated with a tag.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.GetResourcesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.GetResourcesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.GetResourcesSync(TencentCloud.Tag.V20180813.Models.GetResourcesRequest)">
+            <summary>
+            This API is used to query the list of resources associated with a tag.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.GetResourcesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.GetResourcesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.GetTagKeys(TencentCloud.Tag.V20180813.Models.GetTagKeysRequest)">
+            <summary>
+            This API is used to query the list of tag keys.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagKeysRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagKeysResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.GetTagKeysSync(TencentCloud.Tag.V20180813.Models.GetTagKeysRequest)">
+            <summary>
+            This API is used to query the list of tag keys.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagKeysRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagKeysResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.GetTagValues(TencentCloud.Tag.V20180813.Models.GetTagValuesRequest)">
+            <summary>
+            This API is used to query tag values in the list of created tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagValuesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagValuesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.GetTagValuesSync(TencentCloud.Tag.V20180813.Models.GetTagValuesRequest)">
+            <summary>
+            This API is used to query tag values in the list of created tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagValuesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagValuesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.GetTags(TencentCloud.Tag.V20180813.Models.GetTagsRequest)">
+            <summary>
+            This API is used to get the list of created tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.GetTagsSync(TencentCloud.Tag.V20180813.Models.GetTagsRequest)">
+            <summary>
+            This API is used to get the list of created tags.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.GetTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.ModifyResourceTags(TencentCloud.Tag.V20180813.Models.ModifyResourceTagsRequest)">
+            <summary>
+            This API is used to modify all tags associated with a resource.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.ModifyResourceTagsSync(TencentCloud.Tag.V20180813.Models.ModifyResourceTagsRequest)">
+            <summary>
+            This API is used to modify all tags associated with a resource.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.ModifyResourcesTagValue(TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest)">
+            <summary>
+            This API is used to modify the tag value corresponding to a tag key associated with multiple resources.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.ModifyResourcesTagValueSync(TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest)">
+            <summary>
+            This API is used to modify the tag value corresponding to a tag key associated with multiple resources.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.TagResources(TencentCloud.Tag.V20180813.Models.TagResourcesRequest)">
+            <summary>
+            This API is used to create and bind a tag uniformly to multiple specified resources of multiple Tencent Cloud services.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.TagResourcesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.TagResourcesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.TagResourcesSync(TencentCloud.Tag.V20180813.Models.TagResourcesRequest)">
+            <summary>
+            This API is used to create and bind a tag uniformly to multiple specified resources of multiple Tencent Cloud services.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.TagResourcesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.TagResourcesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.UnTagResources(TencentCloud.Tag.V20180813.Models.UnTagResourcesRequest)">
+            <summary>
+            This API is used to unbind a tag uniformly from multiple specified resources of multiple Tencent Cloud services.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.UnTagResourcesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.UnTagResourcesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.UnTagResourcesSync(TencentCloud.Tag.V20180813.Models.UnTagResourcesRequest)">
+            <summary>
+            This API is used to unbind a tag uniformly from multiple specified resources of multiple Tencent Cloud services.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.UnTagResourcesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.UnTagResourcesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.UpdateResourceTagValue(TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueRequest)">
+            <summary>
+            This API is used to modify the values of tags associated with a resource (the tag key does not change).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.TagClient.UpdateResourceTagValueSync(TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueRequest)">
+            <summary>
+            This API is used to modify the values of tags associated with a resource (the tag key does not change).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueRequest"/></param>
+            <returns><see cref="T:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AddResourceTagRequest.TagKey">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AddResourceTagRequest.TagValue">
+            <summary>
+            Tag value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AddResourceTagRequest.Resource">
+            <summary>
+            [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.AddResourceTagRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AddResourceTagResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.AddResourceTagResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest.ServiceType">
+            <summary>
+            Resource service name (the third segment in the six-segment resource description)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest.ResourceIds">
+            <summary>
+            Resource ID array, which can contain up to 50 resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest.TagKey">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest.ResourceRegion">
+            <summary>
+            Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest.ResourcePrefix">
+            <summary>
+            Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.AttachResourcesTagRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.AttachResourcesTagResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.AttachResourcesTagResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.CreateTagRequest.TagKey">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.CreateTagRequest.TagValue">
+            <summary>
+            Tag value.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.CreateTagRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.CreateTagResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.CreateTagResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.CreateTagsRequest.Tags">
+            <summary>
+            Tag list.
+            Value range of N: 0–9
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.CreateTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.CreateTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.CreateTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DeleteResourceTagRequest.TagKey">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DeleteResourceTagRequest.Resource">
+            <summary>
+            [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DeleteResourceTagRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DeleteResourceTagResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DeleteResourceTagResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DeleteTagRequest.TagKey">
+            <summary>
+            The tag key to be deleted.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DeleteTagRequest.TagValue">
+            <summary>
+            The tag value to be deleted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DeleteTagRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DeleteTagResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DeleteTagResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DeleteTagsRequest.Tags">
+            <summary>
+            Tag list.
+            Value range of N: 0–9
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DeleteTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DeleteTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DeleteTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest.ServiceType">
+            <summary>
+            Service type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest.ResourcePrefix">
+            <summary>
+            Resource prefix.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest.ResourceIds">
+            <summary>
+            Array of resource IDs (up to 50)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest.ResourceRegion">
+            <summary>
+            The resource's region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest.Offset">
+            <summary>
+            Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest.Limit">
+            <summary>
+            Page size. The default value is 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsResponse.TotalCount">
+            <summary>
+            Total number of results.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsResponse.Offset">
+            <summary>
+            Data offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsResponse.Limit">
+            <summary>
+            Page size.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsResponse.Tags">
+            <summary>
+            Tag list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest.ServiceType">
+            <summary>
+            Service type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest.ResourcePrefix">
+            <summary>
+            Resource prefix
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest.ResourceIds">
+            <summary>
+            Unique resource ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest.ResourceRegion">
+            <summary>
+            Resource region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest.Offset">
+            <summary>
+            Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: 15
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqResponse.Offset">
+            <summary>
+            Data offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqResponse.Limit">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqResponse.Tags">
+            <summary>
+            Tag list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByResourceIdsSeqResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest.ServiceType">
+            <summary>
+            Service type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest.ResourcePrefix">
+            <summary>
+            Resource prefix
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest.ResourceRegion">
+            <summary>
+            Resource region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest.ResourceIds">
+            <summary>
+            Unique resource ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest.TagKeys">
+            <summary>
+            Resource tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: 400
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest.Offset">
+            <summary>
+            Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysResponse.Offset">
+            <summary>
+            Data offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysResponse.Limit">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysResponse.Rows">
+            <summary>
+            Resource tag
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsByTagKeysResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.CreateUin">
+            <summary>
+            Creator `uin`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.ResourceRegion">
+            <summary>
+            Resource region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.ServiceType">
+            <summary>
+            Service type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.ResourcePrefix">
+            <summary>
+            Resource prefix
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.ResourceId">
+            <summary>
+            Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.Offset">
+            <summary>
+            Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: 15
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.CosResourceId">
+            <summary>
+            Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsResponse.Offset">
+            <summary>
+            Data offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsResponse.Limit">
+            <summary>
+            Number of entries per page.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsResponse.Rows">
+            <summary>
+            Resource tag
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourceTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.TagFilters">
+            <summary>
+            Tag filtering arrays.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.CreateUin">
+            <summary>
+            Tag creator uin.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.Offset">
+            <summary>
+            Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.Limit">
+            <summary>
+            Page size. The default value is 15.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.ResourcePrefix">
+            <summary>
+            Resource prefix.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.ResourceId">
+            <summary>
+            Unique resource ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.ResourceRegion">
+            <summary>
+            The resource's region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.ServiceType">
+            <summary>
+            Service type.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsResponse.TotalCount">
+            <summary>
+            Total number of results.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsResponse.Offset">
+            <summary>
+            Data offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsResponse.Limit">
+            <summary>
+            Number of entries per page.
+            Note: This field may return null, indicating that no valid value is found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsResponse.Rows">
+            <summary>
+            Resource tag.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.TagFilters">
+            <summary>
+            Tag filtering arrays.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.CreateUin">
+            <summary>
+            Tag creator uin.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.Offset">
+            <summary>
+            Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.Limit">
+            <summary>
+            Page size. The default value is 15.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.ResourcePrefix">
+            <summary>
+            Resource prefix.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.ResourceId">
+            <summary>
+            Unique resource ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.ResourceRegion">
+            <summary>
+            The resource’s region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.ServiceType">
+            <summary>
+            Service type
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionResponse.TotalCount">
+            <summary>
+            Total number of results.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionResponse.Offset">
+            <summary>
+            Data offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionResponse.Limit">
+            <summary>
+            The size of each page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionResponse.Rows">
+            <summary>
+            Resource tag.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeResourcesByTagsUnionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest.CreateUin">
+            <summary>
+            Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest.Offset">
+            <summary>
+            Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest.Limit">
+            <summary>
+            Page size. The default value is 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest.ShowProject">
+            <summary>
+            Whether to show project
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagKeysRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysResponse.TotalCount">
+            <summary>
+            Total number of results.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysResponse.Offset">
+            <summary>
+            Data offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysResponse.Limit">
+            <summary>
+            Page size.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysResponse.Tags">
+            <summary>
+            Tag list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagKeysResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagKeysResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest.TagKeys">
+            <summary>
+            Tag key list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest.CreateUin">
+            <summary>
+            Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest.Offset">
+            <summary>
+            Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest.Limit">
+            <summary>
+            Page size. The default value is 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagValuesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesResponse.TotalCount">
+            <summary>
+            Total number of results.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesResponse.Offset">
+            <summary>
+            Data offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesResponse.Limit">
+            <summary>
+            Page size.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesResponse.Tags">
+            <summary>
+            Tag list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagValuesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest.TagKeys">
+            <summary>
+            Tag key list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest.CreateUin">
+            <summary>
+            Creator `Uin`. If this parameter is blank or left empty, only `Uin` will be used as a condition for query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest.Offset">
+            <summary>
+            Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: 15
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqResponse.Offset">
+            <summary>
+            Data offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqResponse.Limit">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqResponse.Tags">
+            <summary>
+            Tag list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagValuesSeqResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest.TagKey">
+            <summary>
+            Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest.TagValue">
+            <summary>
+            Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest.Offset">
+            <summary>
+            Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest.Limit">
+            <summary>
+            Page size. The default value is 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest.CreateUin">
+            <summary>
+            Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest.TagKeys">
+            <summary>
+            Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest.ShowProject">
+            <summary>
+            Whether to show project tag
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsResponse.TotalCount">
+            <summary>
+            Total number of results.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsResponse.Offset">
+            <summary>
+            Data offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsResponse.Limit">
+            <summary>
+            Page size.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsResponse.Tags">
+            <summary>
+            Tag list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest.TagKey">
+            <summary>
+            Tag key, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest.TagValue">
+            <summary>
+            Tag value, which either exists or does not exist with the tag key. If it does not exist, all tags of the user will be queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest.Offset">
+            <summary>
+            Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: 15
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest.CreateUin">
+            <summary>
+            Creator `Uin`. If this parameter is blank or left empty, only `Uin` will be used as a condition for query
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest.TagKeys">
+            <summary>
+            Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest.ShowProject">
+            <summary>
+            Whether to show project tag
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqResponse.Offset">
+            <summary>
+            Data offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqResponse.Limit">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqResponse.Tags">
+            <summary>
+            Tag list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DescribeTagsSeqResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest.ServiceType">
+            <summary>
+            Resource service name (the third segment in the six-segment resource description)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest.ResourceIds">
+            <summary>
+            Resource ID array, which can contain up to 50 resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest.TagKey">
+            <summary>
+            Tag key to be unbound
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest.ResourceRegion">
+            <summary>
+            Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest.ResourcePrefix">
+            <summary>
+            Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DetachResourcesTagRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.DetachResourcesTagResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.DetachResourcesTagResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.FailedResource.Resource">
+            <summary>
+            Six-segment descriptions of failed resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.FailedResource.Code">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.FailedResource.Message">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.FailedResource.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetResourcesRequest.ResourceList">
+            <summary>
+            Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource.
+            For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
+            If this parameter is passed in, the list of all matching resources will be returned, and the specified `MaxResults` will become invalid.
+            Value range of N: 0–9
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetResourcesRequest.TagFilters">
+            <summary>
+            Tag key and value.
+            If multiple tags are specified, resources bound to all such tags will be queried.
+            Value range of N: 0–5
+            There can be up to 10 `TagValues` in each `TagFilters`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetResourcesRequest.PaginationToken">
+            <summary>
+            The token value of the next page obtained from the response of the previous page.
+            Leave it empty for the first request.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetResourcesRequest.MaxResults">
+            <summary>
+            Number of data entries to return per page (up to 200).
+            Default value: 50.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.GetResourcesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetResourcesResponse.PaginationToken">
+            <summary>
+            Token value obtained for the next page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetResourcesResponse.ResourceTagMappingList">
+            <summary>
+            List of resources and their associated tags (key-value pairs)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetResourcesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.GetResourcesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagKeysRequest.PaginationToken">
+            <summary>
+            The token value of the next page obtained from the response of the previous page.
+            Leave it empty for the first request.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagKeysRequest.MaxResults">
+            <summary>
+            Number of data entries to return per page (up to 1,000).
+            Default value: 50.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.GetTagKeysRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagKeysResponse.PaginationToken">
+            <summary>
+            Token value obtained for the next page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagKeysResponse.TagKeys">
+            <summary>
+            Tag key information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagKeysResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.GetTagKeysResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagValuesRequest.TagKeys">
+            <summary>
+            Tag key.
+            All tag values corresponding to the list of tag keys.
+            Maximum length: 20
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagValuesRequest.PaginationToken">
+            <summary>
+            The token value of the next page obtained from the response of the previous page.
+            Leave it empty for the first request.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagValuesRequest.MaxResults">
+            <summary>
+            Number of data entries to return per page (up to 1,000).
+            Default value: 50.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.GetTagValuesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagValuesResponse.PaginationToken">
+            <summary>
+            Token value obtained for the next page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagValuesResponse.Tags">
+            <summary>
+            Tag list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagValuesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.GetTagValuesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagsRequest.PaginationToken">
+            <summary>
+            The token value of the next page obtained from the response of the previous page.
+            Leave it empty for the first request.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagsRequest.MaxResults">
+            <summary>
+            Number of data entries to return per page (up to 1,000).
+            Default value: 50.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagsRequest.TagKeys">
+            <summary>
+            Tag key.
+            All tags corresponding to the list of tag keys.
+            Maximum length: 20
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.GetTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagsResponse.PaginationToken">
+            <summary>
+            Token value obtained for the next page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagsResponse.Tags">
+            <summary>
+            Tag list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.GetTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.GetTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsRequest.Resource">
+            <summary>
+            [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsRequest.ReplaceTags">
+            <summary>
+            The tags to be added or modified. If the resource described by `Resource` is not associated with the input tag keys, an association will be added. If the tag keys are already associated, the values corresponding to the associated tag keys will be modified to the input values. This API must contain either `ReplaceTags` or `DeleteTag`, and these two parameters cannot include the same tag keys. This parameter can be omitted, but it cannot be an empty array.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsRequest.DeleteTags">
+            <summary>
+            The tags to be disassociated. This API must contain either `ReplaceTags` or `DeleteTag`, and these two parameters cannot include the same tag keys. This parameter can be omitted, but it cannot be an empty array.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.ModifyResourceTagsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest.ServiceType">
+            <summary>
+            Resource service name (the third segment in the six-segment resource description)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest.ResourceIds">
+            <summary>
+            Resource ID array, which can contain up to 50 resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest.TagKey">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest.ResourceRegion">
+            <summary>
+            Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest.ResourcePrefix">
+            <summary>
+            Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.ModifyResourcesTagValueResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceIdTag.ResourceId">
+            <summary>
+            Unique resource ID
+            Note: this field may return null, indicating that no valid values can be obtained
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceIdTag.TagKeyValues">
+            <summary>
+            Tag key-value pair
+            Note: this field may return null, indicating that no valid values can be obtained
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.ResourceIdTag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceTag.ResourceRegion">
+            <summary>
+            The resource's region.
+            Note: This field may return null, indicating that no valid value is found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceTag.ServiceType">
+            <summary>
+            Service type.
+            Note: This field may return null, indicating that no valid value is found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceTag.ResourcePrefix">
+            <summary>
+            Resource prefix.
+            Note: This field may return null, indicating that no valid value is found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceTag.ResourceId">
+            <summary>
+            Unique resource ID.
+            Note: This field may return null, indicating that no valid value is found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceTag.Tags">
+            <summary>
+            Resource tag.
+            Note: This field may return null, indicating that no valid value is found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.ResourceTag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceTagMapping.Resource">
+            <summary>
+            Six-segment resource description. Tencent Cloud uses a six-segment value to describe a resource.
+            For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.ResourceTagMapping.Tags">
+            <summary>
+            List of tags associated with the resource
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.ResourceTagMapping.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.Tag.TagKey">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.Tag.TagValue">
+            <summary>
+            Tag value.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagFilter.TagKey">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagFilter.TagValue">
+            <summary>
+            Tag value array. '**OR**' relation if multiple values.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.TagFilter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagKeyObject.TagKey">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.TagKeyObject.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResource.TagKey">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResource.TagValue">
+            <summary>
+            Tag value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResource.ResourceId">
+            <summary>
+            Resource ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResource.TagKeyMd5">
+            <summary>
+            Tag key MD5 value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResource.TagValueMd5">
+            <summary>
+            Tag value MD5 value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResource.ServiceType">
+            <summary>
+            Resource type
+            Note: this field may return null, indicating that no valid values found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.TagResource.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResourcesRequest.ResourceList">
+            <summary>
+            Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
+            For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
+            Value range of N: 0–9
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResourcesRequest.Tags">
+            <summary>
+            Tag key and value.
+            If multiple tags are specified, all such tags will be created and bound to the specified resources.
+            For each resource, each tag key can have only one value. If you try to add an existing tag key, the corresponding tag value will be updated to the new value.
+            Non-existent tags will be automatically created.
+            Value range of N: 0–9
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.TagResourcesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResourcesResponse.FailedResources">
+            <summary>
+            Information of failed resources.
+            When tag creating and binding succeeds, the returned `FailedResources` will be empty.
+            When tag creating and binding partially or completely fails, the returned `FailedResources` will display the details of failed resources.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagResourcesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.TagResourcesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagWithDelete.TagKey">
+            <summary>
+            Tag key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagWithDelete.TagValue">
+            <summary>
+            Tag value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.TagWithDelete.CanDelete">
+            <summary>
+            If deletion is allowed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.TagWithDelete.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.UnTagResourcesRequest.ResourceList">
+            <summary>
+            Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
+            For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
+            Value range of N: 0–9
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.UnTagResourcesRequest.TagKeys">
+            <summary>
+            Tag key.
+            Value range: 0–9
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.UnTagResourcesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.UnTagResourcesResponse.FailedResources">
+            <summary>
+            Information of failed resources.
+            When tag unbinding succeeds, the returned `FailedResources` will be empty.
+            When tag unbinding partially or completely fails, the returned `FailedResources` will display the details of failed resources.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.UnTagResourcesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.UnTagResourcesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueRequest.TagKey">
+            <summary>
+            Tag key associated with the resource.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueRequest.TagValue">
+            <summary>
+            Modified tag value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueRequest.Resource">
+            <summary>
+            [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Tag.V20180813.Models.UpdateResourceTagValueResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

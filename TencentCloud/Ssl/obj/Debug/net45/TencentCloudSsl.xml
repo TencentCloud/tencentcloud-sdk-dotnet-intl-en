@@ -1,0 +1,1975 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudSsl</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.ApplyCertificate(TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest)">
+            <summary>
+            This API is used to apply for a free certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.ApplyCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.ApplyCertificateSync(TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest)">
+            <summary>
+            This API is used to apply for a free certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.ApplyCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.CancelCertificateOrder(TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderRequest)">
+            <summary>
+            This API is used to cancel a certificate order.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.CancelCertificateOrderSync(TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderRequest)">
+            <summary>
+            This API is used to cancel a certificate order.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.CommitCertificateInformation(TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationRequest)">
+            <summary>
+            This API is used to submit a certificate order.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.CommitCertificateInformationSync(TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationRequest)">
+            <summary>
+            This API is used to submit a certificate order.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DeleteCertificate(TencentCloud.Ssl.V20191205.Models.DeleteCertificateRequest)">
+            <summary>
+            This API is used to delete a certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DeleteCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DeleteCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DeleteCertificateSync(TencentCloud.Ssl.V20191205.Models.DeleteCertificateRequest)">
+            <summary>
+            This API is used to delete a certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DeleteCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DeleteCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DescribeCertificate(TencentCloud.Ssl.V20191205.Models.DescribeCertificateRequest)">
+            <summary>
+            This API is used to get certificate information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DescribeCertificateSync(TencentCloud.Ssl.V20191205.Models.DescribeCertificateRequest)">
+            <summary>
+            This API is used to get certificate information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DescribeCertificateDetail(TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailRequest)">
+            <summary>
+            This API is used to get certificate details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DescribeCertificateDetailSync(TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailRequest)">
+            <summary>
+            This API is used to get certificate details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DescribeCertificateOperateLogs(TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest)">
+            <summary>
+            This API is used to get certificate operation logs in the current account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DescribeCertificateOperateLogsSync(TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest)">
+            <summary>
+            This API is used to get certificate operation logs in the current account.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DescribeCertificates(TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest)">
+            <summary>
+            This API is used to get the certificate list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DescribeCertificatesSync(TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest)">
+            <summary>
+            This API is used to get the certificate list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DownloadCertificate(TencentCloud.Ssl.V20191205.Models.DownloadCertificateRequest)">
+            <summary>
+            This API is used to download a certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DownloadCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DownloadCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.DownloadCertificateSync(TencentCloud.Ssl.V20191205.Models.DownloadCertificateRequest)">
+            <summary>
+            This API is used to download a certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.DownloadCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.DownloadCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.ModifyCertificateAlias(TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasRequest)">
+            <summary>
+            This API is used to modify a certificate alias by passing in the certificate ID and new alias.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.ModifyCertificateAliasSync(TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasRequest)">
+            <summary>
+            This API is used to modify a certificate alias by passing in the certificate ID and new alias.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.ModifyCertificateProject(TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectRequest)">
+            <summary>
+            This API is used to modify the projects of multiple certificates.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.ModifyCertificateProjectSync(TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectRequest)">
+            <summary>
+            This API is used to modify the projects of multiple certificates.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.ReplaceCertificate(TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest)">
+            <summary>
+            This API is used to reissue a certificate. Note that if you have applied for a free certificate, only an RSA-2048 certificate will be reissued, and the certificate can be reissued only once.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.ReplaceCertificateSync(TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest)">
+            <summary>
+            This API is used to reissue a certificate. Note that if you have applied for a free certificate, only an RSA-2048 certificate will be reissued, and the certificate can be reissued only once.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.SubmitCertificateInformation(TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest)">
+            <summary>
+            This API is used to submit certificate information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.SubmitCertificateInformationSync(TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest)">
+            <summary>
+            This API is used to submit certificate information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.UploadCertificate(TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest)">
+            <summary>
+            This API is used to upload a certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.UploadCertificateResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.SslClient.UploadCertificateSync(TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest)">
+            <summary>
+            This API is used to upload a certificate.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest"/></param>
+            <returns><see cref="T:TencentCloud.Ssl.V20191205.Models.UploadCertificateResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.DvAuthMethod">
+            <summary>
+            Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.DomainName">
+            <summary>
+            Domain name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.PackageType">
+            <summary>
+            Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.ContactEmail">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.ContactPhone">
+            <summary>
+            Mobile number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.ValidityPeriod">
+            <summary>
+            Validity period. The default value is 12 months, which is the only supported value currently.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.CsrEncryptAlgo">
+            <summary>
+            Encryption algorithm. Only RSA is supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.CsrKeyParameter">
+            <summary>
+            Key pair parameter. Only the 2048-bit key pair is supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.CsrKeyPassword">
+            <summary>
+            CSR encryption password
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.Alias">
+            <summary>
+            Alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.OldCertificateId">
+            <summary>
+            Original certificate ID, which is used to apply for a new certificate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.PackageId">
+            <summary>
+            Benefit package ID, which is used to expand the free certificate package
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.DeleteDnsAutoRecord">
+            <summary>
+            Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ApplyCertificateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateResponse.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ApplyCertificateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ApplyCertificateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderResponse.CertificateId">
+            <summary>
+            ID of the certificate whose order has been successfully cancelled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.CancelCertificateOrderResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CertificateExtra.DomainNumber">
+            <summary>
+            Number of domain names which can be associated with the certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CertificateExtra.OriginCertificateId">
+            <summary>
+            Original certificate ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CertificateExtra.ReplacedBy">
+            <summary>
+            Original ID of the new certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CertificateExtra.ReplacedFor">
+            <summary>
+            New ID of the new certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CertificateExtra.RenewOrder">
+            <summary>
+            Certificate ID of the new order
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.CertificateExtra.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.OwnerUin">
+            <summary>
+            User UIN
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.ProjectId">
+            <summary>
+            Project ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.From">
+            <summary>
+            Certificate source
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.PackageType">
+            <summary>
+            Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.CertificateType">
+            <summary>
+            Certificate type. `CA`: client certificate; `SVR`: server certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.ProductZhName">
+            <summary>
+            Issuer
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.Domain">
+            <summary>
+            Primary domain name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.Alias">
+            <summary>
+            Alias
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.Status">
+            <summary>
+            Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.CertificateExtra">
+            <summary>
+            Extended information of the certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.VulnerabilityStatus">
+            <summary>
+            Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.StatusMsg">
+            <summary>
+            Status information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.VerifyType">
+            <summary>
+            Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.CertBeginTime">
+            <summary>
+            Time when the certificate takes effect
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.CertEndTime">
+            <summary>
+            Time when the certificate expires
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.ValidityPeriod">
+            <summary>
+            Validity period of the certificate, in months
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.InsertTime">
+            <summary>
+            Creation time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.CertificateId">
+            <summary>
+            Certificate ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.SubjectAltName">
+            <summary>
+            Domain names associated with the certificate (including the primary domain name)
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.PackageTypeName">
+            <summary>
+            Certificate type name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.StatusName">
+            <summary>
+            Status description
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.IsVip">
+            <summary>
+            Whether the customer is a VIP customer
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.IsDv">
+            <summary>
+            Whether the certificate is a DV certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.IsWildcard">
+            <summary>
+            Whether the certificate is a wildcard certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.IsVulnerability">
+            <summary>
+            Whether the vulnerability scanning feature is enabled
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.RenewAble">
+            <summary>
+            Whether the certificate can be reissued
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.ProjectInfo">
+            <summary>
+            Project information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.BoundResource">
+            <summary>
+            Associated Tencent Cloud services. Currently, this parameter is unavailable.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.Deployable">
+            <summary>
+            Whether the certificate can be deployed
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.Tags">
+            <summary>
+            List of tags
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.IsIgnore">
+            <summary>
+            Whether the expiration notification was ignored
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.IsSM">
+            <summary>
+            Whether the certificate is a Chinese SM certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.EncryptAlgorithm">
+            <summary>
+            Certificate algorithm
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.CAEncryptAlgorithms">
+            <summary>
+            Encryption algorithm of the uploaded CA certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.CAEndTimes">
+            <summary>
+            Expiration time of the uploaded CA certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.CACommonNames">
+            <summary>
+            Generic name of the uploaded CA certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.PreAuditInfo">
+            <summary>
+            Prereview information of the certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Certificates.AutoRenewFlag">
+            <summary>
+            Whether auto-renewal is enabled.
+            Note: This field may return null, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.Certificates.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationResponse.OrderId">
+            <summary>
+            TrustAsia order ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationResponse.Status">
+            <summary>
+            Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.CommitCertificateInformationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DeleteCertificateRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DeleteCertificateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DeleteCertificateResponse.DeleteResult">
+            <summary>
+            Deletion result
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DeleteCertificateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DeleteCertificateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.OwnerUin">
+            <summary>
+            User UIN
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.ProjectId">
+            <summary>
+            Project ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.From">
+            <summary>
+            Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.CertificateType">
+            <summary>
+            Certificate type. `CA`: client certificate; `SVR`: server certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.PackageType">
+            <summary>
+            Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.ProductZhName">
+            <summary>
+            Issuer
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.Domain">
+            <summary>
+            Domain name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.Alias">
+            <summary>
+            Alias
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.Status">
+            <summary>
+            Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.StatusMsg">
+            <summary>
+            Status information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.VerifyType">
+            <summary>
+            Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.VulnerabilityStatus">
+            <summary>
+            Vulnerability scanning status
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.CertBeginTime">
+            <summary>
+            Time when the certificate takes effect
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.CertEndTime">
+            <summary>
+            Time when the certificate expires
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.ValidityPeriod">
+            <summary>
+            Validity period of the certificate, in months
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.InsertTime">
+            <summary>
+            Application time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.OrderId">
+            <summary>
+            Order ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.CertificateExtra">
+            <summary>
+            Extended information of the certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.CertificatePrivateKey">
+            <summary>
+            Private key of the certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.CertificatePublicKey">
+            <summary>
+            Public key of the certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.DvAuthDetail">
+            <summary>
+            DV authentication information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.VulnerabilityReport">
+            <summary>
+            Vulnerability scanning assessment report
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.CertificateId">
+            <summary>
+            Certificate ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.TypeName">
+            <summary>
+            Certificate type name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.StatusName">
+            <summary>
+            Status description
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.SubjectAltName">
+            <summary>
+            Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.IsVip">
+            <summary>
+            Whether the certificate is a paid one.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.IsWildcard">
+            <summary>
+            Whether the certificate is a wildcard certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.IsDv">
+            <summary>
+            Whether the certificate is a DV certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.IsVulnerability">
+            <summary>
+            Whether the vulnerability scanning feature is enabled
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.SubmittedData">
+            <summary>
+            Submitted data
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.RenewAble">
+            <summary>
+            Whether the certificate can be renewed.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.Deployable">
+            <summary>
+            Whether the certificate can be deployed
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.Tags">
+            <summary>
+            List of associated tags
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.RootCert">
+            <summary>
+            Root certificate.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.EncryptCert">
+            <summary>
+            Chinese SM encryption certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.EncryptPrivateKey">
+            <summary>
+            Private key of Chinese SM encryption
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.CertFingerprint">
+            <summary>
+            SHA1 fingerprint of the signature certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.EncryptCertFingerprint">
+            <summary>
+            SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.EncryptAlgorithm">
+            <summary>
+            Certificate algorithm
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DescribeCertificateDetailResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest.Offset">
+            <summary>
+            Offset. The default value is 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest.Limit">
+            <summary>
+            Number of requested logs. The default value is 20.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest.StartTime">
+            <summary>
+            Start time. The default value is 15 days ago.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest.EndTime">
+            <summary>
+            End time. The default value is the current time.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsResponse.AllTotal">
+            <summary>
+            Total number of logs that meet query conditions
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsResponse.TotalCount">
+            <summary>
+            Number of logs returned for this request
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsResponse.OperateLogs">
+            <summary>
+            Certificate operation log list
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DescribeCertificateOperateLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DescribeCertificateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.OwnerUin">
+            <summary>
+            User UIN
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.ProjectId">
+            <summary>
+            Project ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.From">
+            <summary>
+            Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.CertificateType">
+            <summary>
+            Certificate type. `CA`: client certificate; `SVR`: server certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.PackageType">
+            <summary>
+            Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.ProductZhName">
+            <summary>
+            Name of the certificate issuer
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.Domain">
+            <summary>
+            Domain name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.Alias">
+            <summary>
+            Alias
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.Status">
+            <summary>
+            Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.StatusMsg">
+            <summary>
+            Status information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.VerifyType">
+            <summary>
+            Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.VulnerabilityStatus">
+            <summary>
+            Vulnerability scanning status
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.CertBeginTime">
+            <summary>
+            Time when the certificate takes effect
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.CertEndTime">
+            <summary>
+            Time when the certificate expires
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.ValidityPeriod">
+            <summary>
+            Validity period of the certificate, in months
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.InsertTime">
+            <summary>
+            Application time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.OrderId">
+            <summary>
+            Order ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.CertificateExtra">
+            <summary>
+            Extended information of the certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.DvAuthDetail">
+            <summary>
+            DV authentication information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.VulnerabilityReport">
+            <summary>
+            Vulnerability scanning assessment report
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.CertificateId">
+            <summary>
+            Certificate ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.PackageTypeName">
+            <summary>
+            Certificate type name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.StatusName">
+            <summary>
+            Status description
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.SubjectAltName">
+            <summary>
+            Domain names associated with the certificate (including the primary domain name)
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.IsVip">
+            <summary>
+            Whether the customer is a VIP customer
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.IsWildcard">
+            <summary>
+            Whether the certificate is a wildcard certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.IsDv">
+            <summary>
+            Whether the certificate is a DV certificate
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.IsVulnerability">
+            <summary>
+            Whether the vulnerability scanning feature is enabled
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.RenewAble">
+            <summary>
+            Whether the certificate can be reissued
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.SubmittedData">
+            <summary>
+            Submitted data
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.Deployable">
+            <summary>
+            Whether the certificate can be deployed
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.Tags">
+            <summary>
+            List of tags
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DescribeCertificateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.Offset">
+            <summary>
+            Pagination offset, starting from 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.Limit">
+            <summary>
+            Number of entries per page. Default value: `20`. Maximum value: `1000`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.SearchKey">
+            <summary>
+            Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.CertificateType">
+            <summary>
+            Certificate type. `CA`: client certificate; `SVR`: server certificate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.ExpirationSort">
+            <summary>
+            Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.CertificateStatus">
+            <summary>
+            Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.Deployable">
+            <summary>
+            Whether the certificate can be deployed. `1`: yes; `0`: no
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.Upload">
+            <summary>
+            Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.Renew">
+            <summary>
+            Whether to filter renewable certificates. `1`: Yes; `0`: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.FilterSource">
+            <summary>
+            Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.IsSM">
+            <summary>
+            Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.FilterExpiring">
+            <summary>
+            Whether to filter expiring certificates. `1`: Yes; `0`: No.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesResponse.TotalCount">
+            <summary>
+            Total number
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesResponse.Certificates">
+            <summary>
+            List
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DescribeCertificatesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DownloadCertificateRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DownloadCertificateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DownloadCertificateResponse.Content">
+            <summary>
+            ZIP content encoded by using Base64. After the content is decoded by using Base64, it can be saved as a ZIP file.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DownloadCertificateResponse.ContentType">
+            <summary>
+            MIME type. `application/zip`: ZIP file
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DownloadCertificateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DownloadCertificateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuthDetail.DvAuthKey">
+            <summary>
+            DV authentication key
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuthDetail.DvAuthValue">
+            <summary>
+            DV authentication value
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuthDetail.DvAuthDomain">
+            <summary>
+            Domain name of the DV authentication value
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuthDetail.DvAuthPath">
+            <summary>
+            Path of the DV authentication value
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuthDetail.DvAuthKeySubDomain">
+            <summary>
+            DV authentication sub-domain name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuthDetail.DvAuths">
+            <summary>
+            DV authentication information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DvAuthDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuths.DvAuthKey">
+            <summary>
+            DV authentication key
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuths.DvAuthValue">
+            <summary>
+            DV authentication value
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuths.DvAuthDomain">
+            <summary>
+            Domain name of the DV authentication value
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuths.DvAuthPath">
+            <summary>
+            Path of the DV authentication value
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuths.DvAuthSubDomain">
+            <summary>
+            DV authentication sub-domain name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.DvAuths.DvAuthVerifyType">
+            <summary>
+            DV authentication type
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.DvAuths.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasRequest.Alias">
+            <summary>
+            Alias
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasResponse.CertificateId">
+            <summary>
+            ID of the successfully modified certificate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ModifyCertificateAliasResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectRequest.CertificateIdList">
+            <summary>
+            ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectRequest.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectResponse.SuccessCertificates">
+            <summary>
+            List of certificates whose projects were modified successfully
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectResponse.FailCertificates">
+            <summary>
+            List of certificates whose projects failed to be modified
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ModifyCertificateProjectResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.OperationLog.Action">
+            <summary>
+            Action performed on logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.OperationLog.CreatedOn">
+            <summary>
+            Time when the action is performed
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.OperationLog.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.PreAuditInfo.TotalPeriod">
+            <summary>
+            Total number of years of the certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.PreAuditInfo.NowPeriod">
+            <summary>
+            Current year of the certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.PreAuditInfo.ManagerId">
+            <summary>
+            Certificate prereview manager ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.PreAuditInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ProjectInfo.ProjectName">
+            <summary>
+            Project name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ProjectInfo.ProjectCreatorUin">
+            <summary>
+            UIN of the project creator
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ProjectInfo.ProjectCreateTime">
+            <summary>
+            Project creation time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ProjectInfo.ProjectResume">
+            <summary>
+            Brief project information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ProjectInfo.OwnerUin">
+            <summary>
+            User UIN
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ProjectInfo.ProjectId">
+            <summary>
+            Project ID
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ProjectInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest.ValidType">
+            <summary>
+            Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest.CsrType">
+            <summary>
+            Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest.CsrContent">
+            <summary>
+            CSR content
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest.CsrkeyPassword">
+            <summary>
+            Password of the key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest.Reason">
+            <summary>
+            Reissue reason
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateResponse.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.ReplaceCertificateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.RootCertificates.Sign">
+            <summary>
+            Chinese SM signature certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.RootCertificates.Encrypt">
+            <summary>
+            Chinese SM encryption certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.RootCertificates.Standard">
+            <summary>
+            Standard certificate
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.RootCertificates.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.CsrType">
+            <summary>
+            CSR generation mode. `online`: generated online; `parse`: uploaded manually
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.CsrContent">
+            <summary>
+            Uploaded CSR content
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.CertificateDomain">
+            <summary>
+            Domain name bound with the certificate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.DomainList">
+            <summary>
+            Uploaded domain name array (can be uploaded for a multi-domain certificate)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.KeyPassword">
+            <summary>
+            Password of the private key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.OrganizationName">
+            <summary>
+            Organization name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.OrganizationDivision">
+            <summary>
+            Division name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.OrganizationAddress">
+            <summary>
+            Detailed address of the organization
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.OrganizationCountry">
+            <summary>
+            Country where the organization is located, for example, CN (China)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.OrganizationCity">
+            <summary>
+            City where the organization is located
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.OrganizationRegion">
+            <summary>
+            Province where the organization is located
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.PostalCode">
+            <summary>
+            Postal code of the organization
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.PhoneAreaCode">
+            <summary>
+            Area code of the fixed-line phone number of the organization
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.PhoneNumber">
+            <summary>
+            Fixed-line phone number of the organization
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.VerifyType">
+            <summary>
+            Certificate validation method
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.AdminFirstName">
+            <summary>
+            Last name of the administrator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.AdminLastName">
+            <summary>
+            First name of the administrator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.AdminPhoneNum">
+            <summary>
+            Mobile number of the administrator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.AdminEmail">
+            <summary>
+            Email of the administrator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.AdminPosition">
+            <summary>
+            Position of the administrator
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.ContactFirstName">
+            <summary>
+            Last name of the contact
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.ContactLastName">
+            <summary>
+            First name of the contact
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.ContactEmail">
+            <summary>
+            Email of the contact
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.ContactNumber">
+            <summary>
+            Mobile number of the contact
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.ContactPosition">
+            <summary>
+            Position of the contact
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationResponse.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.SubmitCertificateInformationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.CsrType">
+            <summary>
+            CSR type. `online`: CSR generated online; `parse`: CSR pasted
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.CsrContent">
+            <summary>
+            CSR content
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.CertificateDomain">
+            <summary>
+            Domain name information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.DomainList">
+            <summary>
+            DNS information
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.KeyPassword">
+            <summary>
+            Password of the private key
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.OrganizationName">
+            <summary>
+            Enterprise or unit name
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.OrganizationDivision">
+            <summary>
+            Division
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.OrganizationAddress">
+            <summary>
+            Address
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.OrganizationCountry">
+            <summary>
+            Country
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.OrganizationCity">
+            <summary>
+            City
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.OrganizationRegion">
+            <summary>
+            Province
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.PostalCode">
+            <summary>
+            Postal code
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.PhoneAreaCode">
+            <summary>
+            Area code of the fixed-line phone number
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.PhoneNumber">
+            <summary>
+            Fixed-line phone number
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.AdminFirstName">
+            <summary>
+            First name of the administrator
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.AdminLastName">
+            <summary>
+            Last name of the administrator
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.AdminPhoneNum">
+            <summary>
+            Phone number of the administrator
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.AdminEmail">
+            <summary>
+            Email of the administrator
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.AdminPosition">
+            <summary>
+            Position of the administrator
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.ContactFirstName">
+            <summary>
+            First name of the contact
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.ContactLastName">
+            <summary>
+            Last name of the contact
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.ContactNumber">
+            <summary>
+            Phone number of the contact
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.ContactEmail">
+            <summary>
+            Email of the contact
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.ContactPosition">
+            <summary>
+            Position of the contact
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.SubmittedData.VerifyType">
+            <summary>
+            Validation type
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.SubmittedData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Tags.TagKey">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.Tags.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.Tags.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest.CertificatePublicKey">
+            <summary>
+            Public key of the certificate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest.CertificatePrivateKey">
+            <summary>
+            Private key content. This parameter is required when the certificate type is SVR, and not required when the certificate type is CA.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest.CertificateType">
+            <summary>
+            Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest.Alias">
+            <summary>
+            Alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest.CertificateUse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.UploadCertificateRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.UploadCertificateResponse.CertificateId">
+            <summary>
+            Certificate ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Ssl.V20191205.Models.UploadCertificateResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Ssl.V20191205.Models.UploadCertificateResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

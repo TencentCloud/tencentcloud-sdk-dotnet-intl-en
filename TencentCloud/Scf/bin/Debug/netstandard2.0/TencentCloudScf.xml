@@ -1,0 +1,3653 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudScf</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.CopyFunction(TencentCloud.Scf.V20180416.Models.CopyFunctionRequest)">
+            <summary>
+            This API is used to replicate a function. You can store the replicated function in a specified Region and Namespace.
+            Note: This API **does not** replicate the following objects or attributes of the function:
+            1. Function trigger
+            2. Versions other than $LATEST
+            3. CLS target of the logs configured in the function
+            
+            You can manually configure the function after replication as required.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.CopyFunctionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.CopyFunctionSync(TencentCloud.Scf.V20180416.Models.CopyFunctionRequest)">
+            <summary>
+            This API is used to replicate a function. You can store the replicated function in a specified Region and Namespace.
+            Note: This API **does not** replicate the following objects or attributes of the function:
+            1. Function trigger
+            2. Versions other than $LATEST
+            3. CLS target of the logs configured in the function
+            
+            You can manually configure the function after replication as required.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.CopyFunctionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.CreateAlias(TencentCloud.Scf.V20180416.Models.CreateAliasRequest)">
+            <summary>
+            This API is used to create an alias for a function version. You can use the alias to mark a specific function version such as DEV/RELEASE. You can also modify the version pointed to by the alias at any time.
+            An alias must point to a master version and can point to an additional version at the same time. If you specify an alias when invoking a function, the request will be sent to the versions pointed to by the alias. You can configure the ratio between the master version and additional version during request sending.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.CreateAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.CreateAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.CreateAliasSync(TencentCloud.Scf.V20180416.Models.CreateAliasRequest)">
+            <summary>
+            This API is used to create an alias for a function version. You can use the alias to mark a specific function version such as DEV/RELEASE. You can also modify the version pointed to by the alias at any time.
+            An alias must point to a master version and can point to an additional version at the same time. If you specify an alias when invoking a function, the request will be sent to the versions pointed to by the alias. You can configure the ratio between the master version and additional version during request sending.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.CreateAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.CreateAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.CreateNamespace(TencentCloud.Scf.V20180416.Models.CreateNamespaceRequest)">
+            <summary>
+            This API is used to create a namespace based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.CreateNamespaceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.CreateNamespaceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.CreateNamespaceSync(TencentCloud.Scf.V20180416.Models.CreateNamespaceRequest)">
+            <summary>
+            This API is used to create a namespace based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.CreateNamespaceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.CreateNamespaceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.CreateTrigger(TencentCloud.Scf.V20180416.Models.CreateTriggerRequest)">
+            <summary>
+            This API is used to create a trigger based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.CreateTriggerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.CreateTriggerSync(TencentCloud.Scf.V20180416.Models.CreateTriggerRequest)">
+            <summary>
+            This API is used to create a trigger based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.CreateTriggerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteAlias(TencentCloud.Scf.V20180416.Models.DeleteAliasRequest)">
+            <summary>
+            This API is used to delete an alias of a function version.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteAliasSync(TencentCloud.Scf.V20180416.Models.DeleteAliasRequest)">
+            <summary>
+            This API is used to delete an alias of a function version.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteFunction(TencentCloud.Scf.V20180416.Models.DeleteFunctionRequest)">
+            <summary>
+            This API is used to delete a function based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteFunctionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteFunctionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteFunctionSync(TencentCloud.Scf.V20180416.Models.DeleteFunctionRequest)">
+            <summary>
+            This API is used to delete a function based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteFunctionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteFunctionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteLayerVersion(TencentCloud.Scf.V20180416.Models.DeleteLayerVersionRequest)">
+            <summary>
+            This API is used to delete a specified version of a specified layer. The deleted version cannot be associated with a function, but the deletion does not affect functions that are referencing this layer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteLayerVersionSync(TencentCloud.Scf.V20180416.Models.DeleteLayerVersionRequest)">
+            <summary>
+            This API is used to delete a specified version of a specified layer. The deleted version cannot be associated with a function, but the deletion does not affect functions that are referencing this layer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteNamespace(TencentCloud.Scf.V20180416.Models.DeleteNamespaceRequest)">
+            <summary>
+            This API is used to delete the specific namespace according to the parameters passed in.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteNamespaceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteNamespaceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteNamespaceSync(TencentCloud.Scf.V20180416.Models.DeleteNamespaceRequest)">
+            <summary>
+            This API is used to delete the specific namespace according to the parameters passed in.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteNamespaceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteNamespaceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteProvisionedConcurrencyConfig(TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to delete the provisioned concurrency configuration of a function version.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteProvisionedConcurrencyConfigSync(TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to delete the provisioned concurrency configuration of a function version.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteReservedConcurrencyConfig(TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to delete the configuration of reserved quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteReservedConcurrencyConfigSync(TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to delete the configuration of reserved quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteTrigger(TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest)">
+            <summary>
+            This API is used to delete an existing trigger based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteTriggerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.DeleteTriggerSync(TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest)">
+            <summary>
+            This API is used to delete an existing trigger based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.DeleteTriggerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetAccount(TencentCloud.Scf.V20180416.Models.GetAccountRequest)">
+            <summary>
+            This API is used to get the account information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetAccountSync(TencentCloud.Scf.V20180416.Models.GetAccountRequest)">
+            <summary>
+            This API is used to get the account information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetAccountRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetAccountResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetAlias(TencentCloud.Scf.V20180416.Models.GetAliasRequest)">
+            <summary>
+            This API is used to get the alias details such as the name, description, version, and routing information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetAliasSync(TencentCloud.Scf.V20180416.Models.GetAliasRequest)">
+            <summary>
+            This API is used to get the alias details such as the name, description, version, and routing information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetAsyncEventStatus(TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusRequest)">
+            <summary>
+            This API is used to get the status of an async function execution event. The event status is retained for 3*24 hours, counting from the completion of the event.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetAsyncEventStatusSync(TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusRequest)">
+            <summary>
+            This API is used to get the status of an async function execution event. The event status is retained for 3*24 hours, counting from the completion of the event.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetFunctionAddress(TencentCloud.Scf.V20180416.Models.GetFunctionAddressRequest)">
+            <summary>
+            This API is used to obtain the download address of the function code package.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetFunctionAddressSync(TencentCloud.Scf.V20180416.Models.GetFunctionAddressRequest)">
+            <summary>
+            This API is used to obtain the download address of the function code package.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionAddressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionAddressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetFunctionEventInvokeConfig(TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigRequest)">
+            <summary>
+            This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetFunctionEventInvokeConfigSync(TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigRequest)">
+            <summary>
+            This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetFunctionLogs(TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest)">
+            <summary>
+            This API returns function running logs according to the specified conditions. Note that this API has been disused. You can use [GetRequestStatus](https://intl.cloud.tencent.com/document/product/583/65348?from_cn_redirect=1) instead. See also [Retrieving Logs](https://intl.cloud.tencent.com/document/product/583/52637?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetFunctionLogsSync(TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest)">
+            <summary>
+            This API returns function running logs according to the specified conditions. Note that this API has been disused. You can use [GetRequestStatus](https://intl.cloud.tencent.com/document/product/583/65348?from_cn_redirect=1) instead. See also [Retrieving Logs](https://intl.cloud.tencent.com/document/product/583/52637?from_cn_redirect=1).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetFunctionLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetLayerVersion(TencentCloud.Scf.V20180416.Models.GetLayerVersionRequest)">
+            <summary>
+            This API is used to get the layer version details, including links used to download files in the layer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetLayerVersionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetLayerVersionSync(TencentCloud.Scf.V20180416.Models.GetLayerVersionRequest)">
+            <summary>
+            This API is used to get the layer version details, including links used to download files in the layer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetLayerVersionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetProvisionedConcurrencyConfig(TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to get the provisioned concurrency details of a function or its specified version.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetProvisionedConcurrencyConfigSync(TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to get the provisioned concurrency details of a function or its specified version.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetRequestStatus(TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest)">
+            <summary>
+            This API is used to query the status of a single function request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetRequestStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetRequestStatusSync(TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest)">
+            <summary>
+            This API is used to query the status of a single function request.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetRequestStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetReservedConcurrencyConfig(TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to obtain the reserved quota details of a function. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.GetReservedConcurrencyConfigSync(TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to obtain the reserved quota details of a function. 
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.Invoke(TencentCloud.Scf.V20180416.Models.InvokeRequest)">
+            <summary>
+            This API is used to run a function.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.InvokeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.InvokeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.InvokeSync(TencentCloud.Scf.V20180416.Models.InvokeRequest)">
+            <summary>
+            This API is used to run a function.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.InvokeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.InvokeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.InvokeFunction(TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest)">
+            <summary>
+             This API is used to invoke functions synchronously.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.InvokeFunctionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.InvokeFunctionSync(TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest)">
+            <summary>
+             This API is used to invoke functions synchronously.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.InvokeFunctionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListAliases(TencentCloud.Scf.V20180416.Models.ListAliasesRequest)">
+            <summary>
+            This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListAliasesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListAliasesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListAliasesSync(TencentCloud.Scf.V20180416.Models.ListAliasesRequest)">
+            <summary>
+            This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListAliasesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListAliasesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListAsyncEvents(TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest)">
+            <summary>
+            This API is used to pull the list of async function events.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListAsyncEventsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListAsyncEventsSync(TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest)">
+            <summary>
+            This API is used to pull the list of async function events.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListAsyncEventsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListFunctions(TencentCloud.Scf.V20180416.Models.ListFunctionsRequest)">
+            <summary>
+            This API is used to return relevant function information based on the input query parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListFunctionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListFunctionsSync(TencentCloud.Scf.V20180416.Models.ListFunctionsRequest)">
+            <summary>
+            This API is used to return relevant function information based on the input query parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListFunctionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListLayerVersions(TencentCloud.Scf.V20180416.Models.ListLayerVersionsRequest)">
+            <summary>
+            This API is used to get the information of all versions of a specified layer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListLayerVersionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListLayerVersionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListLayerVersionsSync(TencentCloud.Scf.V20180416.Models.ListLayerVersionsRequest)">
+            <summary>
+            This API is used to get the information of all versions of a specified layer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListLayerVersionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListLayerVersionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListLayers(TencentCloud.Scf.V20180416.Models.ListLayersRequest)">
+            <summary>
+            This API is used to return the list of all layers, including the information of the latest version of each layer. You can filter them by the compatible runtime.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListLayersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListLayersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListLayersSync(TencentCloud.Scf.V20180416.Models.ListLayersRequest)">
+            <summary>
+            This API is used to return the list of all layers, including the information of the latest version of each layer. You can filter them by the compatible runtime.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListLayersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListLayersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListNamespaces(TencentCloud.Scf.V20180416.Models.ListNamespacesRequest)">
+            <summary>
+            This API is used to display a namespace list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListNamespacesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListNamespacesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListNamespacesSync(TencentCloud.Scf.V20180416.Models.ListNamespacesRequest)">
+            <summary>
+            This API is used to display a namespace list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListNamespacesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListNamespacesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListTriggers(TencentCloud.Scf.V20180416.Models.ListTriggersRequest)">
+            <summary>
+            This API is used to get the function trigger list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListTriggersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListTriggersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListTriggersSync(TencentCloud.Scf.V20180416.Models.ListTriggersRequest)">
+            <summary>
+            This API is used to get the function trigger list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListTriggersRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListTriggersResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListVersionByFunction(TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest)">
+            <summary>
+            This API is used to query the function version based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.ListVersionByFunctionSync(TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest)">
+            <summary>
+            This API is used to query the function version based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PublishLayerVersion(TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest)">
+            <summary>
+            This API is used to create a version for a layer by using the given .zip file or COS object. Each time this API is called with the same layer name, a new version will be generated.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PublishLayerVersionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PublishLayerVersionSync(TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest)">
+            <summary>
+            This API is used to create a version for a layer by using the given .zip file or COS object. Each time this API is called with the same layer name, a new version will be generated.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PublishLayerVersionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PublishVersion(TencentCloud.Scf.V20180416.Models.PublishVersionRequest)">
+            <summary>
+            This API is used for users to release a new version of the function.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PublishVersionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PublishVersionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PublishVersionSync(TencentCloud.Scf.V20180416.Models.PublishVersionRequest)">
+            <summary>
+            This API is used for users to release a new version of the function.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PublishVersionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PublishVersionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PutProvisionedConcurrencyConfig(TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to set the provisioned concurrency of a non-$LATEST version of a function.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PutProvisionedConcurrencyConfigSync(TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to set the provisioned concurrency of a non-$LATEST version of a function.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PutReservedConcurrencyConfig(TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to configure the reserved quota of a function.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PutReservedConcurrencyConfigSync(TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigRequest)">
+            <summary>
+            This API is used to configure the reserved quota of a function.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PutTotalConcurrencyConfig(TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigRequest)">
+            <summary>
+            This API is used to modify the account concurrency quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.PutTotalConcurrencyConfigSync(TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigRequest)">
+            <summary>
+            This API is used to modify the account concurrency quota.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.TerminateAsyncEvent(TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest)">
+            <summary>
+            This API is used to terminate a running async function event.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.TerminateAsyncEventSync(TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest)">
+            <summary>
+            This API is used to terminate a running async function event.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.UpdateAlias(TencentCloud.Scf.V20180416.Models.UpdateAliasRequest)">
+            <summary>
+            This API is used to update the configuration of an alias.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.UpdateAliasSync(TencentCloud.Scf.V20180416.Models.UpdateAliasRequest)">
+            <summary>
+            This API is used to update the configuration of an alias.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.UpdateFunctionCode(TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest)">
+            <summary>
+            This API is used to update the function code based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.UpdateFunctionCodeSync(TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest)">
+            <summary>
+            This API is used to update the function code based on the input parameters.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.UpdateFunctionEventInvokeConfig(TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigRequest)">
+            <summary>
+            This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.UpdateFunctionEventInvokeConfigSync(TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigRequest)">
+            <summary>
+            This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.UpdateNamespace(TencentCloud.Scf.V20180416.Models.UpdateNamespaceRequest)">
+            <summary>
+            This API is used to update a namespace.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateNamespaceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateNamespaceResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.ScfClient.UpdateNamespaceSync(TencentCloud.Scf.V20180416.Models.UpdateNamespaceRequest)">
+            <summary>
+            This API is used to update a namespace.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateNamespaceRequest"/></param>
+            <returns><see cref="T:TencentCloud.Scf.V20180416.Models.UpdateNamespaceResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Alias.FunctionVersion">
+            <summary>
+            Master version pointed to by the alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Alias.Name">
+            <summary>
+            Alias name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Alias.RoutingConfig">
+            <summary>
+            Routing information of alias
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Alias.Description">
+            <summary>
+            Description
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Alias.AddTime">
+            <summary>
+            Creation time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Alias.ModTime">
+            <summary>
+            Update time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.Alias.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEvent.InvokeRequestId">
+            <summary>
+            Invocation request ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEvent.InvokeType">
+            <summary>
+            Invocation type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEvent.Qualifier">
+            <summary>
+            Function version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEvent.Status">
+            <summary>
+            Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEvent.StartTime">
+            <summary>
+            Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEvent.EndTime">
+            <summary>
+            Invocation end time in the format of "%Y-%m-%d %H:%M:%S.%f"
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.AsyncEvent.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEventStatus.Status">
+            <summary>
+            Async event status. Values: `RUNNING` (running); `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEventStatus.StatusCode">
+            <summary>
+            Request status code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncEventStatus.InvokeRequestId">
+            <summary>
+            Async execution request ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.AsyncEventStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncTriggerConfig.RetryConfig">
+            <summary>
+            Async retry configuration of function upon user error
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.AsyncTriggerConfig.MsgTTL">
+            <summary>
+            Message retention period
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.AsyncTriggerConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.CosBucketName">
+            <summary>
+            Object bucket name (enter the custom part of the bucket name without `-appid`)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.CosObjectName">
+            <summary>
+            File path of code package stored in COS, which should start with “/”
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.ZipFile">
+            <summary>
+            This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.CosBucketRegion">
+            <summary>
+            COS region. For Beijing regions, you need to import `ap-beijing`. For Beijing Region 1, you need to input `ap-beijing-1`. For other regions, no import is required.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.DemoId">
+            <summary>
+            `DemoId` is required if Demo is used for the creation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.TempCosObjectName">
+            <summary>
+            `TempCosObjectName` is required if TempCos is used for the creation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.GitUrl">
+            <summary>
+            (Disused) Git address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.GitUserName">
+            <summary>
+            (Disused) Git username
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.GitPassword">
+            <summary>
+            (Disused) Git password
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.GitPasswordSecret">
+            <summary>
+            (Disused) Git password after encryption. It’s usually not required.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.GitBranch">
+            <summary>
+            (Disused) Git branch
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.GitDirectory">
+            <summary>
+            (Disused) Directory to the codes in the Git repository. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.GitCommitId">
+            <summary>
+            (Disused) 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.GitUserNameSecret">
+            <summary>
+            (Disused) Git username after encryption. It’s usually not required.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Code.ImageConfig">
+            <summary>
+            TCR image configurations
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.Code.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.FunctionName">
+            <summary>
+            Name of the function to be replicated
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.NewFunctionName">
+            <summary>
+            Name of the new function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.Namespace">
+            <summary>
+            Namespace of the function to be replicated. The default value is `default`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.TargetNamespace">
+            <summary>
+            Namespace of the replicated function. The default value is default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.Description">
+            <summary>
+            Description of the new function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.TargetRegion">
+            <summary>
+            Region of the target of the function replication. If the value is not set, the current region is used by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.Override">
+            <summary>
+            It specifies whether to replace the function with the same name in the target namespace. The default option is `FALSE`.
+            (Note: The `TRUE` option results in deletion of the function in the target namespace. Please operate with caution.)
+            TRUE: Replaces the function.
+            FALSE: Does not replace the function.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.CopyConfiguration">
+            <summary>
+            It specifies whether to replicate the function attributes, including environment variables, memory, timeout, function description, labels, and VPC. The default value is `TRUE`.
+            TRUE: Replicates the function configuration.
+            FALSE: Does not replicate the function configuration.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.CopyFunctionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CopyFunctionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.CopyFunctionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateAliasRequest.Name">
+            <summary>
+            Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateAliasRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateAliasRequest.FunctionVersion">
+            <summary>
+            Master version pointed to by the alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateAliasRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateAliasRequest.RoutingConfig">
+            <summary>
+            Request routing configuration of alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateAliasRequest.Description">
+            <summary>
+            Alias description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.CreateAliasRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateAliasResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.CreateAliasResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateNamespaceRequest.Namespace">
+            <summary>
+            Namespace name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateNamespaceRequest.Description">
+            <summary>
+            Namespace description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.CreateNamespaceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateNamespaceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.CreateNamespaceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.FunctionName">
+            <summary>
+            Name of the function bound to the new trigger
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.TriggerName">
+            <summary>
+            Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.Type">
+            <summary>
+            Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.TriggerDesc">
+            <summary>
+            For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.Qualifier">
+            <summary>
+            Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.Enable">
+            <summary>
+            Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.CustomArgument">
+            <summary>
+            Custom argument, supporting only the timer trigger.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.CreateTriggerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerResponse.TriggerInfo">
+            <summary>
+            Trigger information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.CreateTriggerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.CreateTriggerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteAliasRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteAliasRequest.Name">
+            <summary>
+            Alias name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteAliasRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteAliasRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteAliasResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteAliasResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteFunctionRequest.FunctionName">
+            <summary>
+            Name of the function to be deleted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteFunctionRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteFunctionRequest.Qualifier">
+            <summary>
+            ID of the version to delete. All versions are deleted if it’s left empty.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteFunctionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteFunctionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteFunctionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionRequest.LayerName">
+            <summary>
+            Layer name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionRequest.LayerVersion">
+            <summary>
+            Version number
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteLayerVersionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteNamespaceRequest.Namespace">
+            <summary>
+            Namespace name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteNamespaceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteNamespaceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteNamespaceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigRequest.FunctionName">
+            <summary>
+            Name of the function for which to delete the provisioned concurrency
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigRequest.Qualifier">
+            <summary>
+            Function version number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigRequest.Namespace">
+            <summary>
+            Function namespace. Default value: `default`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteProvisionedConcurrencyConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigRequest.FunctionName">
+            <summary>
+            Specifies the function of which you want to delete the reserved quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigRequest.Namespace">
+            <summary>
+            Function namespace. Default value: `default`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteReservedConcurrencyConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest.TriggerName">
+            <summary>
+            Name of the trigger to be deleted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest.Type">
+            <summary>
+            Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest.TriggerDesc">
+            <summary>
+            This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest.Qualifier">
+            <summary>
+            Function version information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteTriggerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.DeleteTriggerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.DeleteTriggerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Filter.Name">
+            <summary>
+            Fields to be filtered. Up to 10 conditions allowed.
+            Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+            Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+            When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Filter.Values">
+            <summary>
+            Filter values of the field
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.ModTime">
+            <summary>
+            Modification time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.AddTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.Runtime">
+            <summary>
+            Running
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.FunctionId">
+            <summary>
+            Function ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.Namespace">
+            <summary>
+            Namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.Status">
+            <summary>
+            Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.StatusDesc">
+            <summary>
+            Function status details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.Description">
+            <summary>
+            Function description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.Tags">
+            <summary>
+            Function tag
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.Type">
+            <summary>
+            Function type. The value is `HTTP` or `Event`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.StatusReasons">
+            <summary>
+            Cause of function failure
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.TotalProvisionedConcurrencyMem">
+            <summary>
+            Sum of provisioned concurrence memory for all function versions
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.ReservedConcurrencyMem">
+            <summary>
+            Reserved memory for function concurrence
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.AsyncRunEnable">
+            <summary>
+            Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Function.TraceEnable">
+            <summary>
+            Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.Function.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.RetMsg">
+            <summary>
+            Return value after the function is executed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.RequestId">
+            <summary>
+            RequestId corresponding to the executed function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.StartTime">
+            <summary>
+            Start time of the function execution
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.RetCode">
+            <summary>
+            Function execution result. `0` indicates successful execution and other values indicate failure.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.InvokeFinished">
+            <summary>
+            It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.Duration">
+            <summary>
+            Duration of the function execution. The unit is millisecond (ms).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.BillDuration">
+            <summary>
+            Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.MemUsage">
+            <summary>
+            Actual memory size used during the function execution. The unit is byte.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.Log">
+            <summary>
+            Function execution logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.Level">
+            <summary>
+            Log level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.Source">
+            <summary>
+            Log source
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionLog.RetryNum">
+            <summary>
+            Number of retries
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.FunctionLog.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionVersion.Version">
+            <summary>
+            Function version name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionVersion.Description">
+            <summary>
+            Version description
+            Note: This field may return null, indicating that no valid values is found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionVersion.AddTime">
+            <summary>
+            The creation time
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionVersion.ModTime">
+            <summary>
+            Update time
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.FunctionVersion.Status">
+            <summary>
+            Version status
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.FunctionVersion.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetAccountRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAccountResponse.AccountUsage">
+            <summary>
+            Namespace usage information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAccountResponse.AccountLimit">
+            <summary>
+            Namespace limit information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAccountResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetAccountResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasRequest.Name">
+            <summary>
+            Alias name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetAliasRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasResponse.FunctionVersion">
+            <summary>
+            Master version pointed to by the alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasResponse.Name">
+            <summary>
+            Alias name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasResponse.RoutingConfig">
+            <summary>
+            Routing information of alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasResponse.Description">
+            <summary>
+            Alias description
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasResponse.AddTime">
+            <summary>
+            Creation time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasResponse.ModTime">
+            <summary>
+            Update time
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAliasResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetAliasResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusRequest.InvokeRequestId">
+            <summary>
+            ID of the async execution request
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusResponse.Result">
+            <summary>
+            Async event status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetAsyncEventStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionAddressRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionAddressRequest.Qualifier">
+            <summary>
+            Function version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionAddressRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetFunctionAddressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionAddressResponse.Url">
+            <summary>
+            Cos address of the function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionAddressResponse.CodeSha256">
+            <summary>
+            SHA256 code of the function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionAddressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetFunctionAddressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigRequest.Namespace">
+            <summary>
+            Function namespace. Default value: default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigRequest.Qualifier">
+            <summary>
+            Function version. Default value: $LATEST
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigResponse.AsyncTriggerConfig">
+            <summary>
+            Async retry configuration information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetFunctionEventInvokeConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.FunctionName">
+            <summary>
+            Function name.
+            - To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583?from_cn_redirect=1) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
+            - After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.Offset">
+            <summary>
+            Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.Limit">
+            <summary>
+            Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.Order">
+            <summary>
+            It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.OrderBy">
+            <summary>
+            It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.Filter">
+            <summary>
+            Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.Qualifier">
+            <summary>
+            Function version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.FunctionRequestId">
+            <summary>
+            RequestId corresponding to the executed function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.StartTime">
+            <summary>
+            Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.EndTime">
+            <summary>
+            Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.SearchContext">
+            <summary>
+            This field is disused.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetFunctionLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsResponse.TotalCount">
+            <summary>
+            Total number of function logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsResponse.Data">
+            <summary>
+            Function log information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsResponse.SearchContext">
+            <summary>
+            This field is disused.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetFunctionLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetFunctionLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionRequest.LayerName">
+            <summary>
+            Layer name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionRequest.LayerVersion">
+            <summary>
+            Version number
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetLayerVersionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.CompatibleRuntimes">
+            <summary>
+            Compatible runtimes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.CodeSha256">
+            <summary>
+            SHA256 encoding of version file on the layer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.Location">
+            <summary>
+            Download address of version file on the layer
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.AddTime">
+            <summary>
+            Version creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.Description">
+            <summary>
+            Version description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.LicenseInfo">
+            <summary>
+            License information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.LayerVersion">
+            <summary>
+            Version number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.LayerName">
+            <summary>
+            Layer name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.Status">
+            <summary>
+            Current status of specific layer version. Valid values:
+            Active: normal
+            Publishing: publishing
+            PublishFailed: publishing failed
+            Deleted: deleted
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetLayerVersionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigRequest.FunctionName">
+            <summary>
+            Name of the function for which to get the provisioned concurrency details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigRequest.Namespace">
+            <summary>
+            Function namespace. Default value: default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigRequest.Qualifier">
+            <summary>
+            Function version number. If this parameter is left empty, the provisioned concurrency information of all function versions will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigResponse.UnallocatedConcurrencyNum">
+            <summary>
+            Unallocated provisioned concurrency amount of function.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigResponse.Allocated">
+            <summary>
+            Allocated provisioned concurrency amount of function.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetProvisionedConcurrencyConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest.FunctionRequestId">
+            <summary>
+            ID of the request to be queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest.StartTime">
+            <summary>
+            Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest.EndTime">
+            <summary>
+            End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetRequestStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetRequestStatusResponse.TotalCount">
+            <summary>
+            Total running functions
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetRequestStatusResponse.Data">
+            <summary>
+            Details of the function running status
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetRequestStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetRequestStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigRequest.FunctionName">
+            <summary>
+            Specifies the function of which you want to obtain the reserved quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigRequest.Namespace">
+            <summary>
+            Function namespace. Default value: default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigResponse.ReservedMem">
+            <summary>
+            The reserved quota of the function
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.GetReservedConcurrencyConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ImageConfig.ImageType">
+            <summary>
+            Image repository type, which can be `personal` or `enterprise`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ImageConfig.ImageUri">
+            <summary>
+            {domain}/{namespace}/{imageName}:{tag}@{digest}
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ImageConfig.RegistryId">
+            <summary>
+            The temp token that a TCR Enterprise instance uses to obtain an image. It’s required when `ImageType` is `enterprise`.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ImageConfig.EntryPoint">
+            <summary>
+            Disused
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ImageConfig.Command">
+            <summary>
+            The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ImageConfig.Args">
+            <summary>
+            The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ImageConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest.Qualifier">
+            <summary>
+            Version or alias of the function. It defaults to `$DEFAULT`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest.Event">
+            <summary>
+            Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest.LogType">
+            <summary>
+            Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest.Namespace">
+            <summary>
+            Namespace. `default` is used if it’s left empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest.RoutingKey">
+            <summary>
+            Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.InvokeFunctionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeFunctionResponse.Result">
+            <summary>
+            Function execution result
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeFunctionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.InvokeFunctionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeRequest.InvocationType">
+            <summary>
+            Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeRequest.Qualifier">
+            <summary>
+            The version or alias of the triggered function. It defaults to $LATEST
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeRequest.ClientContext">
+            <summary>
+            Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeRequest.LogType">
+            <summary>
+            Null for async invocations
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeRequest.Namespace">
+            <summary>
+            Namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeRequest.RoutingKey">
+            <summary>
+            Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.InvokeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeResponse.Result">
+            <summary>
+            Function execution result
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.InvokeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.InvokeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LayerVersionInfo.CompatibleRuntimes">
+            <summary>
+            Runtime applicable to a version
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LayerVersionInfo.AddTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LayerVersionInfo.Description">
+            <summary>
+            Version description
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LayerVersionInfo.LicenseInfo">
+            <summary>
+            License information
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LayerVersionInfo.LayerVersion">
+            <summary>
+            Version number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LayerVersionInfo.LayerName">
+            <summary>
+            Layer name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LayerVersionInfo.Status">
+            <summary>
+            Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.LayerVersionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LimitsInfo.NamespacesCount">
+            <summary>
+            Limit of namespace quantity
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LimitsInfo.Namespace">
+            <summary>
+            Namespace limit information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.LimitsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAliasesRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAliasesRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAliasesRequest.FunctionVersion">
+            <summary>
+            If this parameter is provided, only aliases associated with this function version will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAliasesRequest.Offset">
+            <summary>
+            Data offset. Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAliasesRequest.Limit">
+            <summary>
+            Number of results to be returned. Default value: 20
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListAliasesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAliasesResponse.Aliases">
+            <summary>
+            Alias list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAliasesResponse.TotalCount">
+            <summary>
+            Total number of aliases
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAliasesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListAliasesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.Namespace">
+            <summary>
+            Namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.Qualifier">
+            <summary>
+            Filter (function version)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.InvokeType">
+            <summary>
+            Filter (invocation type list)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.Status">
+            <summary>
+            Filter (event status list)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.StartTimeInterval">
+            <summary>
+            Filter (left-closed-right-open range of execution start time)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.EndTimeInterval">
+            <summary>
+            Filter (left-closed-right-open range of execution end time)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.Order">
+            <summary>
+            Valid values: ASC, DESC. Default value: DESC
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.Orderby">
+            <summary>
+            Valid values: StartTime, EndTime. Default value: StartTime
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.Offset">
+            <summary>
+            Data offset. Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.Limit">
+            <summary>
+            Number of results to be returned. Default value: 20. Maximum value: 100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.InvokeRequestId">
+            <summary>
+            Filter (event invocation request ID)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListAsyncEventsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsResponse.TotalCount">
+            <summary>
+            Total number of events that meet the filter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsResponse.EventList">
+            <summary>
+            Async event list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListAsyncEventsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListAsyncEventsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.Order">
+            <summary>
+            It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.Orderby">
+            <summary>
+            It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`, and `FunctionName`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.Offset">
+            <summary>
+            Data offset. The default value is `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.Limit">
+            <summary>
+            Return data length. The default value is `20`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.SearchKey">
+            <summary>
+            It specifies whether to support fuzzy matching for the function name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.Namespace">
+            <summary>
+            Namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.Description">
+            <summary>
+            Function description. Fuzzy search is supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.Filters">
+            <summary>
+            Filters
+            - tag:tag-key - String - Required: No - Filtering criteria based on tag-key - value pairs. Replace `tag-key` with a specific tag-key.
+            
+            The maximum number of `Filters` for each request is 10, and that of `Filter.Values` is 5.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListFunctionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsResponse.Functions">
+            <summary>
+            Function list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsResponse.TotalCount">
+            <summary>
+            Total number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListFunctionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListFunctionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayerVersionsRequest.LayerName">
+            <summary>
+            Layer name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayerVersionsRequest.CompatibleRuntime">
+            <summary>
+            Compatible runtimes
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListLayerVersionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayerVersionsResponse.LayerVersions">
+            <summary>
+            Layer version list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayerVersionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListLayerVersionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayersRequest.CompatibleRuntime">
+            <summary>
+            Compatible runtimes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayersRequest.Offset">
+            <summary>
+            Offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayersRequest.Limit">
+            <summary>
+            Limit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayersRequest.SearchKey">
+            <summary>
+            Query key, which fuzzily matches the name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListLayersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayersResponse.Layers">
+            <summary>
+            Layer list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayersResponse.TotalCount">
+            <summary>
+            Total number of layers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListLayersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListLayersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListNamespacesRequest.Limit">
+            <summary>
+            Return data length. The default value is `20`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListNamespacesRequest.Offset">
+            <summary>
+            Data offset. The default value is `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListNamespacesRequest.Orderby">
+            <summary>
+            It specifies the sorting order of the results according to a specified field, such as `Name` and `Updatetime`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListNamespacesRequest.Order">
+            <summary>
+            It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListNamespacesRequest.SearchKey">
+            <summary>
+            Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListNamespacesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListNamespacesResponse.Namespaces">
+            <summary>
+            Namespace details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListNamespacesResponse.TotalCount">
+            <summary>
+            Number of return namespaces
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListNamespacesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListNamespacesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersRequest.Namespace">
+            <summary>
+            Namespace. Default value: default
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersRequest.Offset">
+            <summary>
+            Data offset. Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersRequest.Limit">
+            <summary>
+            Number of results to be returned. Default value: 20
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersRequest.OrderBy">
+            <summary>
+            Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersRequest.Order">
+            <summary>
+            Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersRequest.Filters">
+            <summary>
+            * Qualifier:
+            Function version, alias
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListTriggersRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersResponse.TotalCount">
+            <summary>
+            Total number of triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersResponse.Triggers">
+            <summary>
+            Trigger list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListTriggersResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListTriggersResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest.FunctionName">
+            <summary>
+            Function Name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest.Namespace">
+            <summary>
+            The namespace where the function locates
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest.Offset">
+            <summary>
+            Data offset. The default value is `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest.Limit">
+            <summary>
+            Return data length. The default value is `20`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest.Order">
+            <summary>
+            It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest.OrderBy">
+            <summary>
+            It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionResponse.FunctionVersion">
+            <summary>
+            Function version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionResponse.Versions">
+            <summary>
+            Function version list
+            Note: This field may return null, indicating that no valid values is found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionResponse.TotalCount">
+            <summary>
+            Total number of function versions
+            Note: This field may return null, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.ListVersionByFunctionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LogFilter.RetCode">
+            <summary>
+            Values of `filter.RetCode` include:
+            not0, indicating that only logs of failed execution will be returned.
+            is0, indicating that only logs of successful execution will be returned.
+            TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
+            ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
+            UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
+            Blank, indicating that all logs will be returned.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.LogFilter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LogSearchContext.Offset">
+            <summary>
+            Offset.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LogSearchContext.Limit">
+            <summary>
+            Log record number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LogSearchContext.Keyword">
+            <summary>
+            Log keyword
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.LogSearchContext.Type">
+            <summary>
+            Log type. The value is `Application` (default) or `Platform`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.LogSearchContext.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Namespace.ModTime">
+            <summary>
+            Creation time of the namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Namespace.AddTime">
+            <summary>
+            Modification time of the namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Namespace.Description">
+            <summary>
+            Namespace description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Namespace.Name">
+            <summary>
+            Namespace name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Namespace.Type">
+            <summary>
+            The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.Namespace.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.FunctionsCount">
+            <summary>
+            Total number of functions
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.Trigger">
+            <summary>
+            Trigger information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.Namespace">
+            <summary>
+            Namespace name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.ConcurrentExecutions">
+            <summary>
+            Concurrency
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.TimeoutLimit">
+            <summary>
+            Timeout limit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.TestModelLimit">
+            <summary>
+            Test event limit
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.InitTimeoutLimit">
+            <summary>
+            Initialization timeout limit
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.RetryNumLimit">
+            <summary>
+            Limit of async retry attempt quantity
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.MinMsgTTL">
+            <summary>
+            Lower limit of message retention time for async retry
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceLimit.MaxMsgTTL">
+            <summary>
+            Upper limit of message retention time for async retry
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.NamespaceLimit.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceUsage.Functions">
+            <summary>
+            Function array
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceUsage.Namespace">
+            <summary>
+            Namespace name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceUsage.FunctionsCount">
+            <summary>
+            Number of functions in namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceUsage.TotalConcurrencyMem">
+            <summary>
+            Total memory quota of the namespace
+            Note: This field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceUsage.TotalAllocatedConcurrencyMem">
+            <summary>
+            Concurrency usage of the namespace
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.NamespaceUsage.TotalAllocatedProvisionedMem">
+            <summary>
+            Provisioned concurrency usage of the namespace
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.NamespaceUsage.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest.LayerName">
+            <summary>
+            Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest.CompatibleRuntimes">
+            <summary>
+            Runtimes compatible with layer. Multiple choices are allowed. The valid values of this parameter correspond to the valid values of the `Runtime` of the function.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest.Content">
+            <summary>
+            Layer file source or content
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest.Description">
+            <summary>
+            Layer version description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest.LicenseInfo">
+            <summary>
+            Software license of layer
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PublishLayerVersionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishLayerVersionResponse.LayerVersion">
+            <summary>
+            Version number of the layer created in this request
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishLayerVersionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PublishLayerVersionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionRequest.FunctionName">
+            <summary>
+            Name of the released function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionRequest.Description">
+            <summary>
+            Function description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PublishVersionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.FunctionVersion">
+            <summary>
+            Function version
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.CodeSize">
+            <summary>
+            Code size
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.MemorySize">
+            <summary>
+            Maximum available memory
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.Description">
+            <summary>
+            Function description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.Handler">
+            <summary>
+            Function entry
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.Timeout">
+            <summary>
+            Function timeout
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.Runtime">
+            <summary>
+            Function running environment
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PublishVersionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.FunctionName">
+            <summary>
+            Name of the function for which to set the provisioned concurrency
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.Qualifier">
+            <summary>
+            Function version number. Note: the `$LATEST` version does not support provisioned concurrency
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.VersionProvisionedConcurrencyNum">
+            <summary>
+            Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.Namespace">
+            <summary>
+            Function namespace. Default value: `default`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.TriggerActions">
+            <summary>
+            Scheduled provisioned concurrency scaling action
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.ProvisionedType">
+            <summary>
+            Specifies the provisioned concurrency type.
+            `Default`: Static provisioned concurrency. 
+            `ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+            If `ConcurrencyUtilizationTracking` is passed in, 
+            
+            `TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.TrackingTarget">
+            <summary>
+            The target concurrency utilization. Range: (0,1) (two decimal places)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.MinCapacity">
+            <summary>
+            The minimum number of instances. It can not be smaller than `1`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.MaxCapacity">
+            <summary>
+            The maximum number of instances
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PutProvisionedConcurrencyConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigRequest.FunctionName">
+            <summary>
+            Specifies the function of which you want to configure the reserved quota
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigRequest.ReservedConcurrencyMem">
+            <summary>
+            Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigRequest.Namespace">
+            <summary>
+            Function namespace. Default value: `default`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PutReservedConcurrencyConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigRequest.TotalConcurrencyMem">
+            <summary>
+            Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigRequest.Namespace">
+            <summary>
+            Namespace. Default value: `default`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.PutTotalConcurrencyConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RequestStatus.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RequestStatus.RetMsg">
+            <summary>
+            Return value after the function is executed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RequestStatus.RequestId">
+            <summary>
+            Request ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RequestStatus.StartTime">
+            <summary>
+            Request start time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RequestStatus.RetCode">
+            <summary>
+            Result of the request. `0`: succeeded, `1`: running, `-1`: exception
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RequestStatus.Duration">
+            <summary>
+            Time consumed for the request in ms
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RequestStatus.MemUsage">
+            <summary>
+            Time consumed by the request in MB
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RequestStatus.RetryNum">
+            <summary>
+            Retry Attempts
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.RequestStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Result.Log">
+            <summary>
+            It indicates the log output during the function execution. Null is returned for asynchronous invocations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Result.RetMsg">
+            <summary>
+            It indicates the response from the executed function. Null is returned for asynchronous invocations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Result.ErrMsg">
+            <summary>
+            It indicates the error message of the executed function. Null is returned for asynchronous invocations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Result.MemUsage">
+            <summary>
+            It indicates the memory size (in bytes) when the function is running. Null is returned for asynchronous invocations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Result.Duration">
+            <summary>
+            It indicates the duration (in milliseconds) required for running the function. Null is returned for asynchronous invocations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Result.BillDuration">
+            <summary>
+            It indicates the billing duration (in milliseconds) for the function. Null is returned for asynchronous invocations.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Result.FunctionRequestId">
+            <summary>
+            ID of the executed function
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Result.InvokeResult">
+            <summary>
+            `0` indicates successful execution. Null is returned for asynchronous invocations.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.Result.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RetryConfig.RetryNum">
+            <summary>
+            Number of retry attempts
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.RetryConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RoutingConfig.AdditionalVersionWeights">
+            <summary>
+            Additional version with random weight-based routing
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.RoutingConfig.AddtionVersionMatchs">
+            <summary>
+            Additional version with rule-based routing
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.RoutingConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.SearchKey.Key">
+            <summary>
+            Search range
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.SearchKey.Value">
+            <summary>
+            Keyword for search
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.SearchKey.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.StatusReason.ErrorCode">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.StatusReason.ErrorMessage">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.StatusReason.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Tag.Key">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Tag.Value">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest.InvokeRequestId">
+            <summary>
+            Terminated invocation request ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest.Namespace">
+            <summary>
+            Namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest.GraceShutdown">
+            <summary>
+            Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.TerminateAsyncEventResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TimeInterval.Start">
+            <summary>
+            Start time (inclusive) in the format of "%Y-%m-%d %H:%M:%S"
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TimeInterval.End">
+            <summary>
+            End time (exclusive) in the format of "%Y-%m-%d %H:%M:%S"
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.TimeInterval.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.ModTime">
+            <summary>
+            Latest modification time of the trigger
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.Type">
+            <summary>
+            Trigger type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.TriggerDesc">
+            <summary>
+            Detailed trigger configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.TriggerName">
+            <summary>
+            Trigger name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.AddTime">
+            <summary>
+            Creation time of the trigger
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.Enable">
+            <summary>
+            Enabling switch
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.CustomArgument">
+            <summary>
+            Custom parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.AvailableStatus">
+            <summary>
+            Trigger status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.ResourceId">
+            <summary>
+            Minimum resource ID of trigger
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.BindStatus">
+            <summary>
+            Trigger-Function binding status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.TriggerAttribute">
+            <summary>
+            Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.Trigger.Qualifier">
+            <summary>
+            The alias or version bound with the trigger
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.Trigger.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerAction.TriggerName">
+            <summary>
+            Scheduled action name
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerAction.TriggerProvisionedConcurrencyNum">
+            <summary>
+            Target provisioned concurrency of the scheduled scaling action 
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerAction.TriggerCronConfig">
+            <summary>
+            Trigger time of the scheduled action in Cron expression. Seven fields are required and should be separated with a space.
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerAction.ProvisionedType">
+            <summary>
+            The provision type. Value: `Default`
+            Note: This field may return `null`, indicating that no valid value can be found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.TriggerAction.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Cos">
+            <summary>
+            Number of COS triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Timer">
+            <summary>
+            Number of timer triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Cmq">
+            <summary>
+            Number of CMQ triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Total">
+            <summary>
+            Total number of triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Ckafka">
+            <summary>
+            Number of CKafka triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Apigw">
+            <summary>
+            Number of API Gateway triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Cls">
+            <summary>
+            Number of CLS triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Clb">
+            <summary>
+            Number of CLB triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Mps">
+            <summary>
+            Number of MPS triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Cm">
+            <summary>
+            Number of CM triggers
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerCount.Vod">
+            <summary>
+            Number of VOD triggers
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.TriggerCount.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.Enable">
+            <summary>
+            Whether to enable
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.Qualifier">
+            <summary>
+            Function version or alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.TriggerName">
+            <summary>
+            Trigger name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.Type">
+            <summary>
+            Trigger type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.TriggerDesc">
+            <summary>
+            Detailed configuration of trigger
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.AvailableStatus">
+            <summary>
+            Whether the trigger is available
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.CustomArgument">
+            <summary>
+            Custom parameter
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.AddTime">
+            <summary>
+            Trigger creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.ModTime">
+            <summary>
+            Trigger last modified time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.ResourceId">
+            <summary>
+            Minimum resource ID of trigger
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.BindStatus">
+            <summary>
+            Trigger-Function binding status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.TriggerInfo.TriggerAttribute">
+            <summary>
+            Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.TriggerInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest.Name">
+            <summary>
+            Alias name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest.FunctionVersion">
+            <summary>
+            Master version pointed to by the alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest.RoutingConfig">
+            <summary>
+            Routing information of alias, which is required if you need to specify an additional version for the alias.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest.Description">
+            <summary>
+            Alias description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UpdateAliasRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateAliasResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UpdateAliasResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.FunctionName">
+            <summary>
+            Name of the function to be modified
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.Handler">
+            <summary>
+            Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.CosBucketName">
+            <summary>
+            COS bucket name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.CosObjectName">
+            <summary>
+            COS object path
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.ZipFile">
+            <summary>
+            It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.Namespace">
+            <summary>
+            Function namespace
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.CosBucketRegion">
+            <summary>
+            COS region. Note: Beijing includes ap-beijing and ap-beijing-1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.InstallDependency">
+            <summary>
+            Whether to install dependencies automatically
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.EnvId">
+            <summary>
+            Function environment
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.Publish">
+            <summary>
+            It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.Code">
+            <summary>
+            Function code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.CodeSource">
+            <summary>
+            Code source. Valid values: ZipFile, Cos, Inline
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UpdateFunctionCodeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigRequest.AsyncTriggerConfig">
+            <summary>
+            Async retry configuration information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigRequest.FunctionName">
+            <summary>
+            Function name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigRequest.Namespace">
+            <summary>
+            Function namespace. Default value: default
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UpdateFunctionEventInvokeConfigResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateNamespaceRequest.Namespace">
+            <summary>
+            Namespace name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateNamespaceRequest.Description">
+            <summary>
+            Namespace description
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UpdateNamespaceRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UpdateNamespaceResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UpdateNamespaceResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UsageInfo.NamespacesCount">
+            <summary>
+            Number of namespaces
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UsageInfo.Namespace">
+            <summary>
+            Namespace details
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UsageInfo.TotalConcurrencyMem">
+            <summary>
+            Upper limit of user concurrency memory in the current region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UsageInfo.TotalAllocatedConcurrencyMem">
+            <summary>
+            Quota of configured user concurrency memory in the current region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.UsageInfo.UserConcurrencyMemLimit">
+            <summary>
+            Quota of account concurrency actually configured by user
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.UsageInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionMatch.Version">
+            <summary>
+            Function version name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionMatch.Key">
+            <summary>
+            Matching rule key. When the API is called, pass in the `key` to route the request to the specified version based on the matching rule
+            Header method:
+            Enter "invoke.headers.User" for `key` and pass in `RoutingKey:{"User":"value"}` when invoking a function through `invoke` for invocation based on rule matching
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionMatch.Method">
+            <summary>
+            Match method. Valid values:
+            range: range match
+            exact: exact string match
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionMatch.Expression">
+            <summary>
+            Rule requirements for range match:
+            It should be described in an open or closed range, i.e., `(a,b)` or `[a,b]`, where both a and b are integers
+            Rule requirements for exact match:
+            Exact string match
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.VersionMatch.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionProvisionedConcurrencyInfo.AllocatedProvisionedConcurrencyNum">
+            <summary>
+            Set provisioned concurrency amount.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionProvisionedConcurrencyInfo.AvailableProvisionedConcurrencyNum">
+            <summary>
+            Currently available provisioned concurrency amount.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionProvisionedConcurrencyInfo.Status">
+            <summary>
+            Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionProvisionedConcurrencyInfo.StatusReason">
+            <summary>
+            Status description of provisioned concurrency setting task.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionProvisionedConcurrencyInfo.Qualifier">
+            <summary>
+            Function version number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionProvisionedConcurrencyInfo.TriggerActions">
+            <summary>
+            List of scheduled provisioned concurrency scaling actions
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.VersionProvisionedConcurrencyInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionWeight.Version">
+            <summary>
+            Function version name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Scf.V20180416.Models.VersionWeight.Weight">
+            <summary>
+            Version weight
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Scf.V20180416.Models.VersionWeight.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

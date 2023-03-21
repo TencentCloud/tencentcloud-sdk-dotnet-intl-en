@@ -1,0 +1,1609 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudGpm</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.CancelMatching(TencentCloud.Gpm.V20200820.Models.CancelMatchingRequest)">
+            <summary>
+            This API is used to cancel matching.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.CancelMatchingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.CancelMatchingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.CancelMatchingSync(TencentCloud.Gpm.V20200820.Models.CancelMatchingRequest)">
+            <summary>
+            This API is used to cancel matching.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.CancelMatchingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.CancelMatchingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.CreateMatch(TencentCloud.Gpm.V20200820.Models.CreateMatchRequest)">
+            <summary>
+            This API is used to create a match.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.CreateMatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.CreateMatchSync(TencentCloud.Gpm.V20200820.Models.CreateMatchRequest)">
+            <summary>
+            This API is used to create a match.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.CreateMatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.CreateRule(TencentCloud.Gpm.V20200820.Models.CreateRuleRequest)">
+            <summary>
+            This API is used to create a rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.CreateRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.CreateRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.CreateRuleSync(TencentCloud.Gpm.V20200820.Models.CreateRuleRequest)">
+            <summary>
+            This API is used to create a rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.CreateRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.CreateRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DeleteMatch(TencentCloud.Gpm.V20200820.Models.DeleteMatchRequest)">
+            <summary>
+            This API is used to delete a match.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DeleteMatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DeleteMatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DeleteMatchSync(TencentCloud.Gpm.V20200820.Models.DeleteMatchRequest)">
+            <summary>
+            This API is used to delete a match.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DeleteMatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DeleteMatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DeleteRule(TencentCloud.Gpm.V20200820.Models.DeleteRuleRequest)">
+            <summary>
+            This API is used to delete a rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DeleteRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DeleteRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DeleteRuleSync(TencentCloud.Gpm.V20200820.Models.DeleteRuleRequest)">
+            <summary>
+            This API is used to delete a rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DeleteRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DeleteRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeData(TencentCloud.Gpm.V20200820.Models.DescribeDataRequest)">
+            <summary>
+            This API is used to view statistics.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeDataRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeDataResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeDataSync(TencentCloud.Gpm.V20200820.Models.DescribeDataRequest)">
+            <summary>
+            This API is used to view statistics.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeDataRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeDataResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeMatch(TencentCloud.Gpm.V20200820.Models.DescribeMatchRequest)">
+            <summary>
+            This API is used to query the matchmaking details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeMatchSync(TencentCloud.Gpm.V20200820.Models.DescribeMatchRequest)">
+            <summary>
+            This API is used to query the matchmaking details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeMatchCodes(TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesRequest)">
+            <summary>
+            This API is used to query the created MatchCodes and paginate the query result.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeMatchCodesSync(TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesRequest)">
+            <summary>
+            This API is used to query the created MatchCodes and paginate the query result.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeMatches(TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest)">
+            <summary>
+            This API is used to query the matchmaking list and paginate the query result.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeMatchesSync(TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest)">
+            <summary>
+            This API is used to query the matchmaking list and paginate the query result.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeMatchingProgress(TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressRequest)">
+            <summary>
+            This API is used to query the matching progress.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeMatchingProgressSync(TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressRequest)">
+            <summary>
+            This API is used to query the matching progress.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeRule(TencentCloud.Gpm.V20200820.Models.DescribeRuleRequest)">
+            <summary>
+            This API is used to query the rule details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeRuleSync(TencentCloud.Gpm.V20200820.Models.DescribeRuleRequest)">
+            <summary>
+            This API is used to query the rule details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeRules(TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest)">
+            <summary>
+            This API is used to query the rule set list and paginate the query result.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeRulesSync(TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest)">
+            <summary>
+            This API is used to query the rule set list and paginate the query result.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeToken(TencentCloud.Gpm.V20200820.Models.DescribeTokenRequest)">
+            <summary>
+            This API is used to query the token of a Matchcode, which is used for verified the pushed message.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.DescribeTokenSync(TencentCloud.Gpm.V20200820.Models.DescribeTokenRequest)">
+            <summary>
+            This API is used to query the token of a Matchcode, which is used for verified the pushed message.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.DescribeTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.ModifyMatch(TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest)">
+            <summary>
+            This API is used to modify a match.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyMatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.ModifyMatchSync(TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest)">
+            <summary>
+            This API is used to modify a match.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyMatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.ModifyRule(TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest)">
+            <summary>
+            This API is used to modify a rule (including description and tag).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.ModifyRuleSync(TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest)">
+            <summary>
+            This API is used to modify a rule (including description and tag).
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.ModifyToken(TencentCloud.Gpm.V20200820.Models.ModifyTokenRequest)">
+            <summary>
+            This API is used to modify the token of a Matchcode.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.ModifyTokenSync(TencentCloud.Gpm.V20200820.Models.ModifyTokenRequest)">
+            <summary>
+            This API is used to modify the token of a Matchcode.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyTokenRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.ModifyTokenResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.StartMatching(TencentCloud.Gpm.V20200820.Models.StartMatchingRequest)">
+            <summary>
+            This API is used to pass in one player or multiple players to initiate match. Players within the same request will be assigned to the same game session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.StartMatchingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.StartMatchingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.StartMatchingSync(TencentCloud.Gpm.V20200820.Models.StartMatchingRequest)">
+            <summary>
+            This API is used to pass in one player or multiple players to initiate match. Players within the same request will be assigned to the same game session.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.StartMatchingRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.StartMatchingResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.StartMatchingBackfill(TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest)">
+            <summary>
+            This API is used to send a match backfill request, for which a MatchTicket will be searched to start a new match.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.GpmClient.StartMatchingBackfillSync(TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest)">
+            <summary>
+            This API is used to send a match backfill request, for which a MatchTicket will be searched to start a new match.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest"/></param>
+            <returns><see cref="T:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.AttributeMap.Key">
+            <summary>
+            Map key, supporting [a-zA-Z0-9-\.]*
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.AttributeMap.Value">
+            <summary>
+            Map value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.AttributeMap.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CancelMatchingRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CancelMatchingRequest.MatchTicketId">
+            <summary>
+            The MatchTicket ID of the matchmaking to cancel
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.CancelMatchingRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CancelMatchingResponse.ErrCode">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CancelMatchingResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.CancelMatchingResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.MatchName">
+            <summary>
+            Match name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.RuleCode">
+            <summary>
+            RuleCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.Timeout">
+            <summary>
+            Timeout period in seconds. Value range: 1 600
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.ServerType">
+            <summary>
+            Whether to request server resources for the matchmaking results. 0: no, 1: request GSE resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.MatchDesc">
+            <summary>
+            Matchmaking description. Up to 1024 bytes are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.NotifyUrl">
+            <summary>
+            Only HTTP and HTTPS protocols are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.ServerRegion">
+            <summary>
+            Region of the game server queue
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.ServerQueue">
+            <summary>
+            Game server queue
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.CustomPushData">
+            <summary>
+            Custom push data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.ServerSessionData">
+            <summary>
+            Game server session data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.GameProperties">
+            <summary>
+            Game attribute. It is an array of key-value structure.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.LogSwitch">
+            <summary>
+            Enable or disable the log. 0: disable, 1: enable
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.Tags">
+            <summary>
+            Tag. It is an array of key-value structure.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.CreateMatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchResponse.MatchInfo">
+            <summary>
+            Matchmaking information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateMatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.CreateMatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateRuleRequest.RuleName">
+            <summary>
+            Rule name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateRuleRequest.RuleScript">
+            <summary>
+            Rule script. Up to 65535 bytes are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateRuleRequest.RuleDesc">
+            <summary>
+            Rule description. Up to 1024 bytes are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateRuleRequest.Tags">
+            <summary>
+            Tag. It is an array of key-value structure. Up to 50 tags can be associated.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.CreateRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateRuleResponse.RuleInfo">
+            <summary>
+            Rule information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.CreateRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.CreateRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DeleteMatchRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DeleteMatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DeleteMatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DeleteMatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DeleteRuleRequest.RuleCode">
+            <summary>
+            RuleCode
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DeleteRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DeleteRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DeleteRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeDataRequest.StartTime">
+            <summary>
+            Start time in seconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeDataRequest.EndTime">
+            <summary>
+            End time in seconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeDataRequest.TimeType">
+            <summary>
+            Time granularity. Valid values: 1: 1 day, 2: 1 hour, 3: 1 minute, 4: 10 minutes, 5: 30 minutes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeDataRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeDataRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeDataResponse.OverviewData">
+            <summary>
+            Matchmaking statistics overview
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeDataResponse.TrendData">
+            <summary>
+            Trend data of the number of matchmaking requests
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeDataResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeDataResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesRequest.Offset">
+            <summary>
+            Offset, number of pages.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesRequest.Limit">
+            <summary>
+            The number of MatchCodes per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesRequest.MatchCode">
+            <summary>
+            Query by the MatchCode value (a string).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesResponse.MatchCodes">
+            <summary>
+            MatchCode
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesResponse.TotalCount">
+            <summary>
+            The total number of queried MatchCodes
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeMatchCodesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeMatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchResponse.MatchInfo">
+            <summary>
+            Matchmaking information
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeMatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest.PageNumber">
+            <summary>
+            The current page number. If this parameter is left empty, all queried matches will be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest.PageSize">
+            <summary>
+            Number of matchmaking lists per page. If this parameter is left empty, all queried matches will be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest.SearchType">
+            <summary>
+            Query type (optional). Valid values: match (query by matchCode or matchName), rule (query by ruleCode or ruleName), and other types (not filtered)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest.Keyword">
+            <summary>
+            Keyword. Enter a keyword about SearchType to query.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest.Tags">
+            <summary>
+            Tags. Enter a tag for querying.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeMatchesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse.MatchInfoList">
+            <summary>
+            Matchmaking information list
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse.PageNumber">
+            <summary>
+            The current page number. The first page will be returned by default if this parameter is left empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse.PageSize">
+            <summary>
+            The number of matches per page. If this parameter is left empty, 30 matches are displayed per page by default. Maximum value: 30
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse.SearchType">
+            <summary>
+            Query type (optional). Valid values: matchName (query by match name), matchCode (query by matchCode), ruleName (query by rule name), and tag (query by tag key/value)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse.Keyword">
+            <summary>
+            Keyword for querying (optional)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeMatchesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressRequest.MatchTicketIds">
+            <summary>
+            List of MatchTicket IDs. It can contain up to 12 IDs.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressResponse.MatchTickets">
+            <summary>
+            MatchTicket list
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressResponse.ErrCode">
+            <summary>
+            Error code
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeMatchingProgressResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRuleRequest.RuleCode">
+            <summary>
+            RuleCode
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRuleResponse.RuleInfo">
+            <summary>
+            Rule information
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest.PageNumber">
+            <summary>
+            The current page number. The first page will be returned if this parameter is left empty.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest.PageSize">
+            <summary>
+            The number of rules per page. If this parameter is left empty, 30 rules are displayed per page by default. Maximum value: 30
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest.SearchType">
+            <summary>
+            Query type (optional). Valid values: match (query by matchCode or matchName), rule (query by ruleCode or ruleName), and other types (not filtered)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest.Keyword">
+            <summary>
+            Keyword. Enter a keyword about SearchType to query.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest.Tags">
+            <summary>
+            Tags. Enter a tag for querying.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse.RuleInfoList">
+            <summary>
+            Rule information list
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse.TotalCount">
+            <summary>
+            Total number of results
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse.PageNumber">
+            <summary>
+            The current page number
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse.PageSize">
+            <summary>
+            Number of rules per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse.SearchType">
+            <summary>
+            Query type (optional). Valid values: matchName (query by match name), matchCode (query by matchCode), ruleName (query by rule name), and tag (query by tag key/value)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse.Keyword">
+            <summary>
+            Keyword for querying (optional)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeTokenRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeTokenRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeTokenResponse.MatchToken">
+            <summary>
+            The token corresponding to the current MatchCode. If the current MatchCode does not have a token, this parameter may not obtain a valid value.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeTokenResponse.CompatibleSpan">
+            <summary>
+            The time period during which GPM will continuously push the original token in seconds when the token is replaced.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.DescribeTokenResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.DescribeTokenResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MTicket.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MTicket.MatchTicketId">
+            <summary>
+            MatchTicket ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.MTicket.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchAttribute.Name">
+            <summary>
+            Attribute name. It can contain up to 128 characters, supporting [a-zA-Z0-9-\.]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchAttribute.Type">
+            <summary>
+            Attribute type. 0: number, 1: string. Default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchAttribute.NumberValue">
+            <summary>
+            Numeric attribute value. Default value: 0.0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchAttribute.StringValue">
+            <summary>
+            String attribute value. Up to 128 characters are allowed. Default value: ""
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchAttribute.ListValue">
+            <summary>
+            List attribute value
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchAttribute.MapValue">
+            <summary>
+            Map attribute value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.MatchAttribute.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchCodeAttr.MatchCode">
+            <summary>
+            MatchCode
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.MatchCodeAttr.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.MatchName">
+            <summary>
+            Match name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.MatchDesc">
+            <summary>
+            Matchmaking description
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.RuleCode">
+            <summary>
+            RuleCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.Timeout">
+            <summary>
+            Timeout period
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.NotifyUrl">
+            <summary>
+            Receiving notification address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.ServerType">
+            <summary>
+            Whether to request server resources for the match results. 0: no, 1: request GSE resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.ServerRegion">
+            <summary>
+            Region of the server queue
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.ServerQueue">
+            <summary>
+            Server queue
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.CustomPushData">
+            <summary>
+            Custom push data
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.ServerSessionData">
+            <summary>
+            Game server session data
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.GameProperties">
+            <summary>
+            Game attributes
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.LogSwitch">
+            <summary>
+            Enable or disable the log. 0: disable, 1: enable
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.LogsetId">
+            <summary>
+            Logset ID
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.LogsetName">
+            <summary>
+            Logset name
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.LogTopicId">
+            <summary>
+            Log topic ID
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.LogTopicName">
+            <summary>
+            Log topic name
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.Tags">
+            <summary>
+            Tag
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.Region">
+            <summary>
+            Region
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.AppId">
+            <summary>
+            User AppId
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.Uin">
+            <summary>
+            User root account UIN
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.CreateUin">
+            <summary>
+            Create user account UIN
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.RuleName">
+            <summary>
+            Rule Name
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchInfo.LogStatus">
+            <summary>
+            Log status. 0: normal, 1: the log set does not exist, 2: the log topic does not exist, 3: neither the log set nor the log topic exists.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.MatchInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.Id">
+            <summary>
+            MatchTicket ID. It can contain up to 128 characters, supporting [a-zA-Z0-9-\.]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.MatchResult">
+            <summary>
+            Different structure serialized results will be returned according to the MatchType.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.MatchType">
+            <summary>
+            Matchmaking type. Valid values: NORMAL, GSE
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.Players">
+            <summary>
+            Player information list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.Status">
+            <summary>
+            Matching status. Valid values: SEARCHING (matching), PLACING (pending match), COMPLETED (match completed), CANCELLED (match cancelled), TIMEDOUT (match timeouts), FAILED (match failed)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.StatusMessage">
+            <summary>
+            Matching status descriptions
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.StatusReason">
+            <summary>
+            Reason for the matching status
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.StartTime">
+            <summary>
+            The time when the GPM received the matchmaking request, for example "2020-08-17T08:14:38.077Z".
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.MatchTicket.EndTime">
+            <summary>
+            The time when the matchmaking request stopped executing due to the completion, failure, timeout, or cancellation, for example "2020-08-17T08:14:38.077Z".
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.MatchTicket.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.MatchName">
+            <summary>
+            Match name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.RuleCode">
+            <summary>
+            RuleCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.Timeout">
+            <summary>
+            Timeout period in seconds. Value range: 1 600
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.ServerType">
+            <summary>
+            Whether to request server resources for the matchmaking results. 0: no, 1: request GSE resources
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.MatchDesc">
+            <summary>
+            Matchmaking description. Up to 1024 bytes are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.NotifyUrl">
+            <summary>
+            Only HTTP and HTTPS protocols are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.ServerRegion">
+            <summary>
+            Region of the game server queue
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.ServerQueue">
+            <summary>
+            Game server queue
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.CustomPushData">
+            <summary>
+            Custom push data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.ServerSessionData">
+            <summary>
+            Game server session data
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.GameProperties">
+            <summary>
+            Game attribute. It is an array of key-value structure.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.LogSwitch">
+            <summary>
+            Enable or disable the log. 0: disable, 1: enable
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.Tags">
+            <summary>
+            Tag. It is an array of key-value structure.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.ModifyMatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchResponse.MatchInfo">
+            <summary>
+            Matchmaking information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyMatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.ModifyMatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest.RuleCode">
+            <summary>
+            RuleCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest.RuleName">
+            <summary>
+            Rule name. It can only contain numbers, letters, ".", and "-".
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest.RuleDesc">
+            <summary>
+            Rule description. Up to 1024 bytes are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest.Tags">
+            <summary>
+            Tag. It is an array of key-value structure. Up to 50 tags can be associated.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.ModifyRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyRuleResponse.RuleInfo">
+            <summary>
+            Rule information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.ModifyRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyTokenRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyTokenRequest.CompatibleSpan">
+            <summary>
+            The time period during which GPM will continuously push the original token in seconds to the user when the token is replaced. Value range: 0 - 1800. Within the CompatibleSpan time period, user will receive the current and original token in the event notification.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyTokenRequest.MatchToken">
+            <summary>
+            Token. It can contain 0 - 64 characters, supporting [a-zA-Z0-9-_.]. If this parameter is left empty, the token will be randomly generated by GPM.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.ModifyTokenRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyTokenResponse.MatchToken">
+            <summary>
+            Token that has been set successfully.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyTokenResponse.CompatibleSpan">
+            <summary>
+            The time period during which GPM will continuously push the original token in seconds to the user when the token is replaced.
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ModifyTokenResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.ModifyTokenResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Player.Id">
+            <summary>
+            Player ID. It can contain up to 128 characters, supporting [a-zA-Z\d-\._]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Player.Name">
+            <summary>
+            Player nickname. Up to 128 characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Player.MatchAttributes">
+            <summary>
+            Player attribute for matching. Up to 10 attributes are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Player.Team">
+            <summary>
+            Team name. A player can pass in a different team name, which can contain up to 128 characters, and support [a-zA-Z0-9-\.]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Player.CustomPlayerStatus">
+            <summary>
+            Custom player status. This parameter will be passed through. Value range: [0, 99999]
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Player.CustomProfile">
+            <summary>
+            Custom player information. Up to 1024 characters are allowed. This parameter will be passed through.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Player.RegionLatencies">
+            <summary>
+            Number of delays in each area. Up to 20 delays are supported.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.Player.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RegionLatency.Region">
+            <summary>
+            Region
+            ap-beijing          North China (Beijing)
+            ap-chengdu          Southwest China (Chengdu)
+            ap-guangzhou           South China (Guangzhou)
+            ap-hongkong           Hong Kong/Macao/Taiwan (Hong Kong, China)
+            ap-seoul          Asia Pacific (Seoul)
+            ap-shanghai          East China (Shanghai)
+            ap-singapore          Southeast Asia (Singapore)
+            eu-frankfurt          Europe (Frankfurt)
+            na-siliconvalley          Western US (Silicon Valley)
+            na-toronto           North America (Toronto)
+            ap-mumbai           Asia Pacific (Mumbai)
+            na-ashburn          Eastern US (Virginia)
+            ap-bangkok           Asia Pacific (Bangkok)
+            eu-moscow           Europe (Moscow)
+            ap-tokyo           Asia Pacific (Tokyo)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RegionLatency.Latency">
+            <summary>
+            Delay time in ms. Value range: 0 - 999999
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.RegionLatency.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportOverviewData.TotalTimes">
+            <summary>
+            Total count
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportOverviewData.SuccessPercent">
+            <summary>
+            Success rate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportOverviewData.TimeoutPercent">
+            <summary>
+            Timeout rate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportOverviewData.FailPercent">
+            <summary>
+            Failure rate
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportOverviewData.AverageSec">
+            <summary>
+            Average matching time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.ReportOverviewData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportTrendData.TotalList">
+            <summary>
+            Total count
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportTrendData.CancelList">
+            <summary>
+            Number of requests cancelled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportTrendData.SuccessList">
+            <summary>
+            Number of successes
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportTrendData.FailList">
+            <summary>
+            Number of failures
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportTrendData.TimeoutList">
+            <summary>
+            Number of request timeout
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.ReportTrendData.TimeList">
+            <summary>
+            Time array in seconds
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.ReportTrendData.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleBriefInfo.RuleName">
+            <summary>
+            Rule name. It supports [a-zA-Z\d-\.]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleBriefInfo.MatchCodeList">
+            <summary>
+            The associated match
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleBriefInfo.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleBriefInfo.RuleCode">
+            <summary>
+            RuleCode
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.RuleBriefInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.RuleName">
+            <summary>
+            Rule name. It supports [a-zA-Z0-9-\.]*.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.CreateTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.RuleDesc">
+            <summary>
+            Rule description
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.RuleScript">
+            <summary>
+            Rule script
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.Tags">
+            <summary>
+            Tag
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.MatchCodeList">
+            <summary>
+            The associated match
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.RuleCode">
+            <summary>
+            RuleCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.Region">
+            <summary>
+            Region
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.AppId">
+            <summary>
+            User AppId
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.Uin">
+            <summary>
+            User UIN
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.RuleInfo.CreateUin">
+            <summary>
+            User OwnerUin
+            Note: this field may return `null`, indicating that no valid value is obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.RuleInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest.Players">
+            <summary>
+            Player information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest.GameServerSessionId">
+            <summary>
+            Game server session ID. It should contain 1 to 256 ASCII characters.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest.MatchTicketId">
+            <summary>
+            MatchTicket ID, which can contain 1 to 128 characters. This parameter is left empty by default, and in this case, MatchTicket ID will be automatically generated by GPM.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillResponse.MatchTicket">
+            <summary>
+            MatchTicket
+            Note: this field may return `null`, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.StartMatchingBackfillResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingRequest.MatchCode">
+            <summary>
+            MatchCode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingRequest.Players">
+            <summary>
+            Player information. Up to 200 entries can be entered.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingRequest.MatchTicketId">
+            <summary>
+            MatchTicket ID, which can contain up to 128 characters and can only contain numbers, letters, “.”, and “-”. This parameter is left empty by default. When it is empty, the MatchTicket ID will be automatically generated by GPM.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.StartMatchingRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingResponse.ErrCode">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingResponse.MatchTicketId">
+            <summary>
+            MatchTicket ID. Up to 128 characters are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StartMatchingResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.StartMatchingResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StringKV.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.StringKV.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.StringKV.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Tag.TagKey">
+            <summary>
+            Tag key
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Gpm.V20200820.Models.Tag.TagValue">
+            <summary>
+            Tag value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Gpm.V20200820.Models.Tag.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

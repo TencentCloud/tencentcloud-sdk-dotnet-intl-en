@@ -1,0 +1,2208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudMdc</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.CreateStreamLinkFlow(TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowRequest)">
+            <summary>
+            This API is used to create a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.CreateStreamLinkFlowSync(TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowRequest)">
+            <summary>
+            This API is used to create a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.CreateStreamLinkOutputInfo(TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoRequest)">
+            <summary>
+            This API is used to create a StreamLink output.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.CreateStreamLinkOutputInfoSync(TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoRequest)">
+            <summary>
+            This API is used to create a StreamLink output.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DeleteStreamLinkFlow(TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowRequest)">
+            <summary>
+            This API is used to delete a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DeleteStreamLinkFlowSync(TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowRequest)">
+            <summary>
+            This API is used to delete a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DeleteStreamLinkOutput(TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputRequest)">
+            <summary>
+            This API is used to delete an output of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DeleteStreamLinkOutputSync(TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputRequest)">
+            <summary>
+            This API is used to delete an output of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlow(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRequest)">
+            <summary>
+            This API is used to query the configuration information of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowSync(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRequest)">
+            <summary>
+            This API is used to query the configuration information of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowLogs(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest)">
+            <summary>
+            This API is used to query the logs of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowLogsSync(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest)">
+            <summary>
+            This API is used to query the logs of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowMediaStatistics(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest)">
+            <summary>
+            This API is used to query the media quality of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowMediaStatisticsSync(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest)">
+            <summary>
+            This API is used to query the media quality of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowRealtimeStatus(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusRequest)">
+            <summary>
+            This API is used to query the current status of a flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowRealtimeStatusSync(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusRequest)">
+            <summary>
+            This API is used to query the current status of a flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowSRTStatistics(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest)">
+            <summary>
+            This API is used to query the SRT streaming performance of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowSRTStatisticsSync(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest)">
+            <summary>
+            This API is used to query the SRT streaming performance of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowStatistics(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest)">
+            <summary>
+            This API is used to query the media quality of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowStatisticsSync(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest)">
+            <summary>
+            This API is used to query the media quality of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlows(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsRequest)">
+            <summary>
+            This API is used to query the configuration information of multiple StreamLink flows in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkFlowsSync(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsRequest)">
+            <summary>
+            This API is used to query the configuration information of multiple StreamLink flows in batches.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkRegions(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsRequest)">
+            <summary>
+            This API is used to query all StreamLink regions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.DescribeStreamLinkRegionsSync(TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsRequest)">
+            <summary>
+            This API is used to query all StreamLink regions.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.ModifyStreamLinkFlow(TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowRequest)">
+            <summary>
+            This API is used to modify the configuration information of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.ModifyStreamLinkFlowSync(TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowRequest)">
+            <summary>
+            This API is used to modify the configuration information of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.ModifyStreamLinkInput(TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputRequest)">
+            <summary>
+            This API is used to modify an input of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.ModifyStreamLinkInputSync(TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputRequest)">
+            <summary>
+            This API is used to modify an input of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.ModifyStreamLinkOutputInfo(TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoRequest)">
+            <summary>
+            This API is used to modify an output of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.ModifyStreamLinkOutputInfoSync(TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoRequest)">
+            <summary>
+            This API is used to modify an output of a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.StartStreamLinkFlow(TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowRequest)">
+            <summary>
+            This API is used to start a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.StartStreamLinkFlowSync(TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowRequest)">
+            <summary>
+            This API is used to start a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.StopStreamLinkFlow(TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowRequest)">
+            <summary>
+            This API is used to stop a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.MdcClient.StopStreamLinkFlowSync(TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowRequest)">
+            <summary>
+            This API is used to stop a StreamLink flow.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowRequest"/></param>
+            <returns><see cref="T:TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInput.InputName">
+            <summary>
+            Input name, which can contain 1 to 32 letters, digits, and underscores.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInput.Protocol">
+            <summary>
+            Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInput.Description">
+            <summary>
+            Input description. Length: [0, 255].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInput.AllowIpList">
+            <summary>
+            Allowlist of input IPs in CIDR format.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInput.SRTSettings">
+            <summary>
+            SRT configuration information of input.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInput.RTPSettings">
+            <summary>
+            RTP configuration information of input.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInput.FailOver">
+            <summary>
+            Input failover. Valid values: `OPEN`, `CLOSE` (default)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateInput.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputRTPSettings.FEC">
+            <summary>
+            Default value: none. Valid values: ['none'].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputRTPSettings.IdleTimeout">
+            <summary>
+            Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateInputRTPSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.Mode">
+            <summary>
+            The SRT mode. Valid values: LISTENER (default), CALLER.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.StreamId" -->
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.Latency">
+            <summary>
+            Latency in ms. Default value: 0. Value range: [0, 3000].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.RecvLatency">
+            <summary>
+            Receive latency in ms. Default value: 120. Value range: [0, 3000].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.PeerLatency">
+            <summary>
+            Peer latency in ms. Default value: 0. Value range: [0, 3000].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.PeerIdleTimeout">
+            <summary>
+            Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.Passphrase">
+            <summary>
+            Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.PbKeyLen">
+            <summary>
+            Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.SourceAddresses">
+            <summary>
+            The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateInputSRTSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.OutputName">
+            <summary>
+            The output name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.Description">
+            <summary>
+            Description of the output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.Protocol">
+            <summary>
+            The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.OutputRegion">
+            <summary>
+            The output region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.SRTSettings">
+            <summary>
+            The SRT configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.RTMPSettings">
+            <summary>
+            The RTMP configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.RTPSettings">
+            <summary>
+            The RTP configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.AllowIpList">
+            <summary>
+            The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
+            This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateOutputInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfoRTPSettings.Destinations">
+            <summary>
+            The relay destination addresses. One or two addresses are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfoRTPSettings.FEC">
+            <summary>
+            This parameter must be set to `none`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputInfoRTPSettings.IdleTimeout">
+            <summary>
+            The timeout period (ms).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateOutputInfoRTPSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputRTMPSettings.Destinations">
+            <summary>
+            The relay destination addresses. One or two addresses are allowed.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputRTMPSettings.ChunkSize">
+            <summary>
+            The RTMP chunk size. Value range: [4096, 40960].
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateOutputRTMPSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputRTPSettingsDestinations.Ip">
+            <summary>
+            The relay destination IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputRTPSettingsDestinations.Port">
+            <summary>
+            The relay destination port.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateOutputRTPSettingsDestinations.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputRtmpSettingsDestinations.Url">
+            <summary>
+            The relay URL. Format: `rtmp://domain/live`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputRtmpSettingsDestinations.StreamKey">
+            <summary>
+            The `StreamKey` for relay. Format: `stream?key=value`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateOutputRtmpSettingsDestinations.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.Destinations">
+            <summary>
+            The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.StreamId" -->
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.Latency">
+            <summary>
+            The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.RecvLatency">
+            <summary>
+            The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.PeerLatency">
+            <summary>
+            The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.PeerIdleTimeout">
+            <summary>
+            The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.Passphrase">
+            <summary>
+            The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.PbKeyLen">
+            <summary>
+            The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.Mode">
+            <summary>
+            The SRT mode. Valid values: LISTENER, CALLER (default).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettingsDestinations.Ip">
+            <summary>
+            The output IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettingsDestinations.Port">
+            <summary>
+            The output port.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateOutputSrtSettingsDestinations.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowRequest.FlowName">
+            <summary>
+            Flow name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowRequest.MaxBandwidth">
+            <summary>
+            Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowRequest.InputGroup">
+            <summary>
+            Flow input group
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowResponse.Info">
+            <summary>
+            Information of the created flow
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkFlowResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoRequest.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoRequest.Output">
+            <summary>
+            The output configuration of the flow.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoResponse.Info">
+            <summary>
+            The information of the created output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.CreateStreamLinkOutputInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowRequest.FlowId">
+            <summary>
+            Flow ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkFlowResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputRequest.FlowId">
+            <summary>
+            Flow ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputRequest.OutputId">
+            <summary>
+            Output ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DeleteStreamLinkOutputResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeFlow.FlowId">
+            <summary>
+            Flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeFlow.FlowName">
+            <summary>
+            Flow name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeFlow.State">
+            <summary>
+            Flow status. Valid values: `IDLE`, `RUNNING`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeFlow.MaxBandwidth">
+            <summary>
+            Maximum bandwidth value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeFlow.InputGroup">
+            <summary>
+            Input group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeFlow.OutputGroup">
+            <summary>
+            Output group.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeFlow.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.InputId">
+            <summary>
+            Input ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.InputName">
+            <summary>
+            Input name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.Description">
+            <summary>
+            Input description.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.Protocol">
+            <summary>
+            Input protocol.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.InputAddressList">
+            <summary>
+            Input address list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.AllowIpList">
+            <summary>
+            Input IP allowlist.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.SRTSettings">
+            <summary>
+            SRT configuration information of input.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.RTPSettings">
+            <summary>
+            RTP configuration information of input.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.InputRegion">
+            <summary>
+            Input region.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.RTMPSettings">
+            <summary>
+            RTMP configuration information of an input
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInput.FailOver">
+            <summary>
+            Input failover
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeInput.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputRTMPSettings.AppName">
+            <summary>
+            Path for RTMP stream pushing
+            Note: this field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputRTMPSettings.StreamKey">
+            <summary>
+            StreamKey for RTMP stream pushing
+            Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeInputRTMPSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputRTPSettings.FEC">
+            <summary>
+            Whether it is FEC.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputRTPSettings.IdleTimeout">
+            <summary>
+            Idle timeout period.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeInputRTPSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.Mode">
+            <summary>
+            The SRT mode.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.StreamId">
+            <summary>
+            Stream ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.Latency">
+            <summary>
+            Latency.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.RecvLatency">
+            <summary>
+            Receive latency.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.PeerLatency">
+            <summary>
+            Peer latency.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.PeerIdleTimeout">
+            <summary>
+            Peer idle timeout period.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.Passphrase">
+            <summary>
+            Decryption key.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.PbKeyLen">
+            <summary>
+            Key length.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.SourceAddresses">
+            <summary>
+            The SRT peer address.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeInputSRTSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.OutputId">
+            <summary>
+            Output ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.OutputName">
+            <summary>
+            Output name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.OutputType">
+            <summary>
+            Output type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.Description">
+            <summary>
+            Output description.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.Protocol">
+            <summary>
+            Output protocol.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.OutputAddressList">
+            <summary>
+            Output destination address information list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.OutputRegion">
+            <summary>
+            Output region.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.SRTSettings">
+            <summary>
+            SRT configuration information of output.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.RTPSettings">
+            <summary>
+            RTP configuration information of output.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.RTMPSettings">
+            <summary>
+            RTMP configuration information of output.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.RTMPPullSettings">
+            <summary>
+            RTMP pull configuration of the output
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutput.AllowIpList">
+            <summary>
+            CIDR allowlist
+            This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeOutput.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPPullServerUrl.TcUrl">
+            <summary>
+            `tcUrl` of the RTMP pull URL
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPPullServerUrl.StreamKey">
+            <summary>
+            Stream key of the RTMP pull URL
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPPullServerUrl.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPPullSettings.ServerUrls">
+            <summary>
+            List of pull URLs
+            Note: This field may return `null`, indicating that no valid value was found.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPPullSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPSettings.IdleTimeout">
+            <summary>
+            Idle timeout period.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPSettings.ChunkSize">
+            <summary>
+            Chunk size.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPSettings.Destinations">
+            <summary>
+            Destination address information list of RTMP push.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTMPSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTPSettings.Destinations">
+            <summary>
+            Destination address information list of RTP push.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTPSettings.FEC">
+            <summary>
+            Whether it is FEC.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTPSettings.IdleTimeout">
+            <summary>
+            Idle timeout period.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeOutputRTPSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.Destinations">
+            <summary>
+            A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.StreamId">
+            <summary>
+            Stream ID.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.Latency">
+            <summary>
+            Latency.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.RecvLatency">
+            <summary>
+            Receive latency.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.PeerLatency">
+            <summary>
+            Peer latency.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.PeerIdleTimeout">
+            <summary>
+            Peer idle timeout period.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.Passphrase">
+            <summary>
+            Encryption key.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.PbKeyLen">
+            <summary>
+            Encryption key length.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.Mode">
+            <summary>
+            The SRT mode.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.SourceAddresses">
+            <summary>
+            The server’s listen address, which is valid if `Mode` is `LISTENER`.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeOutputSRTSettings.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.StartTime">
+            <summary>
+            The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
+            It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.EndTime">
+            <summary>
+            The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
+            It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.Type">
+            <summary>
+            Whether to query the inputs or outputs. Valid values: input, output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.Pipeline">
+            <summary>
+            Whether to query the primary or backup pipeline. Valid values: 0, 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.PageSize">
+            <summary>
+            The page size. Value range: [1, 1000]. Default: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.SortType">
+            <summary>
+            Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.PageNum">
+            <summary>
+            The page number. Value range: [1, 1000]. Default: 1.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse.Infos">
+            <summary>
+            A list of the logs.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse.PageNum">
+            <summary>
+            The current page number.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse.PageSize">
+            <summary>
+            The number of records per page.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse.TotalNum">
+            <summary>
+            The total number of records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse.TotalPage">
+            <summary>
+            The total number of pages.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowLogsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest.Type">
+            <summary>
+            Whether to query the inputs or outputs. Valid values: input, output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest.InputOutputId">
+            <summary>
+            The input or output ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest.Pipeline">
+            <summary>
+            Whether to query the primary or backup pipeline. Valid values: 0, 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest.Period">
+            <summary>
+            The query interval. Valid values: 5s, 1min, 5min, 15min.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest.StartTime">
+            <summary>
+            The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
+            It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest.EndTime">
+            <summary>
+            The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
+            It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsResponse.Infos">
+            <summary>
+            A list of the media data.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowMediaStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusRequest.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusRequest.InputIds">
+            <summary>
+            The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusRequest.OutputIds">
+            <summary>
+            The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusResponse.Timestamp">
+            <summary>
+            The timestamp (seconds) of the query.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusResponse.Datas">
+            <summary>
+            A list of the real-time data.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRealtimeStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRequest.FlowId">
+            <summary>
+            Flow ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowResponse.Info">
+            <summary>
+            Configuration information of a flow
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest.Type">
+            <summary>
+            Whether to query the inputs or outputs. Valid values: input, output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest.InputOutputId">
+            <summary>
+            The input or output ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest.Pipeline">
+            <summary>
+            Whether to query the primary or backup pipeline. Valid values: 0, 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest.StartTime">
+            <summary>
+            The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
+            It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest.EndTime">
+            <summary>
+            The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
+            It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest.Period">
+            <summary>
+            The query interval. Valid values: 5s, 1min, 5min, 15min.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsResponse.Infos">
+            <summary>
+            A list of the SRT streaming performance data.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowSRTStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest.Type">
+            <summary>
+            Whether to query the inputs or outputs. Valid values: input, output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest.InputOutputId">
+            <summary>
+            The input or output ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest.Pipeline">
+            <summary>
+            Whether to query the primary or backup pipeline. Valid values: 0, 1.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest.Period">
+            <summary>
+            The query interval. Valid values: 5s, 1min, 5min, 15min.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest.StartTime">
+            <summary>
+            The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
+            It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest.EndTime">
+            <summary>
+            The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
+            It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsResponse.Infos">
+            <summary>
+            A list of the media data.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowStatisticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsRequest.PageNum">
+            <summary>
+            Number of the current page. Default value: `1`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsRequest.PageSize">
+            <summary>
+            Number of entries per page. Default value: `10`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse.Infos">
+            <summary>
+            List of the configuration information of the flows
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse.PageNum">
+            <summary>
+            Number of the current page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse.PageSize">
+            <summary>
+            Number of entries per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse.TotalNum">
+            <summary>
+            Total number of entries
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse.TotalPage">
+            <summary>
+            Total number of pages
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkFlowsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsResponse.Info">
+            <summary>
+            StreamLink region information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.DescribeStreamLinkRegionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowAudio.Fps">
+            <summary>
+            The frame rate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowAudio.Rate">
+            <summary>
+            The bitrate (bps).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowAudio.Pid">
+            <summary>
+            The audio PID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowAudio.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.Timestamp">
+            <summary>
+            The timestamp (seconds).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.Type">
+            <summary>
+            Whether it is an input or output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.InputOutputId">
+            <summary>
+            The input or output ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.Protocol">
+            <summary>
+            The protocol.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.EventCode">
+            <summary>
+            The event code.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.EventMessage">
+            <summary>
+            The event information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.RemoteIp">
+            <summary>
+            The peer IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.RemotePort">
+            <summary>
+            The peer port.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.Pipeline">
+            <summary>
+            Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.InputOutputName">
+            <summary>
+            The input or output name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowLogInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaAudio.Fps">
+            <summary>
+            The frame rate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaAudio.Rate">
+            <summary>
+            The bitrate (bps).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaAudio.Pid">
+            <summary>
+            The audio PID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaAudio.SessionId">
+            <summary>
+            The ID of a push session.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowMediaAudio.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaInfo.Timestamp">
+            <summary>
+            The timestamp (seconds).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaInfo.Network">
+            <summary>
+            The total bandwidth.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaInfo.Video">
+            <summary>
+            The video data of the flow.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaInfo.Audio">
+            <summary>
+            The audio data of the flow.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaInfo.SessionId">
+            <summary>
+            The ID of a push session.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaInfo.ClientIp">
+            <summary>
+            The client IP.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowMediaInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaVideo.Fps">
+            <summary>
+            The frame rate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaVideo.Rate">
+            <summary>
+            The bitrate (bps).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaVideo.Pid">
+            <summary>
+            The video PID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowMediaVideo.SessionId">
+            <summary>
+            The ID of a push session.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowMediaVideo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusCommon.State">
+            <summary>
+            The connection status. Valid values: Connected, Waiting, Idle.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusCommon.Mode">
+            <summary>
+            The connection mode. Valid values: Listener, Caller.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusCommon.ConnectedTime">
+            <summary>
+            The connected time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusCommon.Bitrate">
+            <summary>
+            The real-time bitrate (bps).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusCommon.Reconnections">
+            <summary>
+            The number of retries.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusCommon.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.Type">
+            <summary>
+            Whether it is an input or output. Valid values: Input, Output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.InputId">
+            <summary>
+            The input ID, which is not empty if `Type` is `Input`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.OutputId">
+            <summary>
+            The output ID, which is not empty if `Type` is `Output`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.Protocol">
+            <summary>
+            The protocol used. Valid values: SRT, RTP, RTMP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.CommonStatus">
+            <summary>
+            The common status information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.SRTStatus">
+            <summary>
+            This parameter is returned if `Protocol` is `SRT`.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.RTMPStatus">
+            <summary>
+            This parameter is returned if `Protocol` is `RTMP`.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.ConnectServerIP">
+            <summary>
+            The server IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.RTPStatus">
+            <summary>
+            This parameter is returned if the RTP protocol is used.
+            Note: This field may return `null`, indicating that no valid value can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusRTMP.VideoFPS">
+            <summary>
+            The video frame rate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusRTMP.AudioFPS">
+            <summary>
+            The audio frame rate.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusRTMP.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusRTP.Packets">
+            <summary>
+            The number of packets transmitted.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusRTP.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusSRT.Latency">
+            <summary>
+            The latency (ms).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusSRT.RTT">
+            <summary>
+            RTT (ms).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusSRT.Packets">
+            <summary>
+            The number of packets sent or received.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusSRT.PacketLossRate">
+            <summary>
+            The packet loss rate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusSRT.RetransmitRate">
+            <summary>
+            The retransmission rate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusSRT.DroppedPackets">
+            <summary>
+            The number of packets dropped.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusSRT.Encryption">
+            <summary>
+            Whether to encrypt the stream. Valid values: On, Off.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowRealtimeStatusSRT.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.Timestamp">
+            <summary>
+            The timestamp (seconds).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.SendPacketLossRate">
+            <summary>
+            The packet loss rate for sending.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.SendRetransmissionRate">
+            <summary>
+            The retry rate for sending.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.RecvPacketLossRate">
+            <summary>
+            The packet loss rate for receiving.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.RecvRetransmissionRate">
+            <summary>
+            The retry rate for receiving.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.RTT">
+            <summary>
+            The peer RTT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.SessionId">
+            <summary>
+            The ID of a push session.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.SendPacketDropNumber">
+            <summary>
+            The number of dropped packets for sending.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.RecvPacketDropNumber">
+            <summary>
+            The number of dropped packets for receiving.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowSRTInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowStatistics.SessionId">
+            <summary>
+            The session ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowStatistics.ClientIp">
+            <summary>
+            The peer IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowStatistics.Network">
+            <summary>
+            The total bandwidth.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowStatistics.Video">
+            <summary>
+            The video data.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowStatistics.Audio">
+            <summary>
+            The audio data.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowStatistics.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowStatisticsArray.Timestamp">
+            <summary>
+            The timestamp.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowStatisticsArray.FlowStatistics">
+            <summary>
+            The statistics of all the sessions.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowStatisticsArray.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowVideo.Fps">
+            <summary>
+            The frame rate.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowVideo.Rate">
+            <summary>
+            The bitrate (bps).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.FlowVideo.Pid">
+            <summary>
+            The audio PID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.FlowVideo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.InputAddress.Ip">
+            <summary>
+            Input address IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.InputAddress.Port">
+            <summary>
+            Input address port.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.InputAddress.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyInput.InputId">
+            <summary>
+            The input ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyInput.InputName">
+            <summary>
+            The input name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyInput.Description">
+            <summary>
+            The description of the input.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyInput.AllowIpList">
+            <summary>
+            The IP addresses (CIDR) allowed to push streams.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyInput.SRTSettings">
+            <summary>
+            The SRT configuration information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyInput.RTPSettings">
+            <summary>
+            The RTP configuration information.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyInput.Protocol">
+            <summary>
+            The input protocol. Valid values: SRT, RTP, RTMP.
+            If there is an RTP input, the output must be RTP.
+            If there is an RTMP input, the output must be SRT or RTMP.
+            If there is an SRT input, the output must be SRT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyInput.FailOver">
+            <summary>
+            Whether to enable input failover. Valid values: OPEN, CLOSE.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.ModifyInput.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.OutputId">
+            <summary>
+            The ID of the output to modify.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.OutputName">
+            <summary>
+            The output name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.Description">
+            <summary>
+            The description of the output.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.Protocol">
+            <summary>
+            The output protocol. Valid values: SRT, RTP, RTMP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.SRTSettings">
+            <summary>
+            The SRT relay configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.RTPSettings">
+            <summary>
+            The RTP relay configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.RTMPSettings">
+            <summary>
+            The RTMP relay configuration.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.AllowIpList">
+            <summary>
+            The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
+            This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.ModifyOutputInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowRequest.FlowId">
+            <summary>
+            Flow ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowRequest.FlowName">
+            <summary>
+            Name of the flow to modify
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkFlowResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputRequest.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputRequest.Input">
+            <summary>
+            The input information to modify.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputResponse.Info">
+            <summary>
+            The input information after modification.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkInputResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoRequest.FlowId">
+            <summary>
+            The flow ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoRequest.Output">
+            <summary>
+            The output configuration to modify.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoResponse.Info">
+            <summary>
+            The output configuration after modification.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.ModifyStreamLinkOutputInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.OutputAddress.Ip">
+            <summary>
+            Output destination IP.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.OutputAddress.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.OutputSRTSourceAddressResp.Ip">
+            <summary>
+            The listen IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.OutputSRTSourceAddressResp.Port">
+            <summary>
+            The listen port.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.OutputSRTSourceAddressResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.RTMPAddressDestination.Url">
+            <summary>
+            Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.RTMPAddressDestination.StreamKey">
+            <summary>
+            Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.RTMPAddressDestination.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.RTPAddressDestination.Ip">
+            <summary>
+            Push destination address IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.RTPAddressDestination.Port">
+            <summary>
+            Push destination address port.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.RTPAddressDestination.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.RegionInfo.Name">
+            <summary>
+            Region name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.RegionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.SRTAddressDestination.Ip">
+            <summary>
+            Destination address IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.SRTAddressDestination.Port">
+            <summary>
+            Destination address port.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.SRTAddressDestination.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.SRTSourceAddressReq.Ip">
+            <summary>
+            The peer IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.SRTSourceAddressReq.Port">
+            <summary>
+            The peer port.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.SRTSourceAddressReq.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.SRTSourceAddressResp.Ip">
+            <summary>
+            The peer IP.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.SRTSourceAddressResp.Port">
+            <summary>
+            The peer port.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.SRTSourceAddressResp.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowRequest.FlowId">
+            <summary>
+            Flow ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.StartStreamLinkFlowResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowRequest.FlowId">
+            <summary>
+            Flow ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.StopStreamLinkFlowResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Mdc.V20200828.Models.StreamLinkRegionInfo.Regions">
+            <summary>
+            List of StreamLink regions
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Mdc.V20200828.Models.StreamLinkRegionInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

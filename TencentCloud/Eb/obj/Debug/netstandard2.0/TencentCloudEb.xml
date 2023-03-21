@@ -1,0 +1,1818 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudEb</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CheckRule(TencentCloud.Eb.V20210416.Models.CheckRuleRequest)">
+            <summary>
+            This API is used to check a rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CheckRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CheckRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CheckRuleSync(TencentCloud.Eb.V20210416.Models.CheckRuleRequest)">
+            <summary>
+            This API is used to check a rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CheckRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CheckRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CheckTransformation(TencentCloud.Eb.V20210416.Models.CheckTransformationRequest)">
+            <summary>
+            This API is used to test rules and data on the ETL configuration page.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CheckTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CheckTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CheckTransformationSync(TencentCloud.Eb.V20210416.Models.CheckTransformationRequest)">
+            <summary>
+            This API is used to test rules and data on the ETL configuration page.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CheckTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CheckTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateConnection(TencentCloud.Eb.V20210416.Models.CreateConnectionRequest)">
+            <summary>
+            This API is used to create an event connector.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateConnectionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateConnectionSync(TencentCloud.Eb.V20210416.Models.CreateConnectionRequest)">
+            <summary>
+            This API is used to create an event connector.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateConnectionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateEventBus(TencentCloud.Eb.V20210416.Models.CreateEventBusRequest)">
+            <summary>
+            This API is used to create an event bus.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateEventBusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateEventBusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateEventBusSync(TencentCloud.Eb.V20210416.Models.CreateEventBusRequest)">
+            <summary>
+            This API is used to create an event bus.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateEventBusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateEventBusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateRule(TencentCloud.Eb.V20210416.Models.CreateRuleRequest)">
+            <summary>
+            This API is used to create an event rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateRuleSync(TencentCloud.Eb.V20210416.Models.CreateRuleRequest)">
+            <summary>
+            This API is used to create an event rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateTarget(TencentCloud.Eb.V20210416.Models.CreateTargetRequest)">
+            <summary>
+            This API is used to create a delivery target.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateTargetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateTargetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateTargetSync(TencentCloud.Eb.V20210416.Models.CreateTargetRequest)">
+            <summary>
+            This API is used to create a delivery target.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateTargetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateTargetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateTransformation(TencentCloud.Eb.V20210416.Models.CreateTransformationRequest)">
+            <summary>
+            This API is used to create a transformer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.CreateTransformationSync(TencentCloud.Eb.V20210416.Models.CreateTransformationRequest)">
+            <summary>
+            This API is used to create a transformer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.CreateTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.CreateTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteConnection(TencentCloud.Eb.V20210416.Models.DeleteConnectionRequest)">
+            <summary>
+            This API is used to delete an event connector.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteConnectionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteConnectionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteConnectionSync(TencentCloud.Eb.V20210416.Models.DeleteConnectionRequest)">
+            <summary>
+            This API is used to delete an event connector.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteConnectionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteConnectionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteEventBus(TencentCloud.Eb.V20210416.Models.DeleteEventBusRequest)">
+            <summary>
+            This API is used to delete an event bus.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteEventBusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteEventBusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteEventBusSync(TencentCloud.Eb.V20210416.Models.DeleteEventBusRequest)">
+            <summary>
+            This API is used to delete an event bus.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteEventBusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteEventBusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteRule(TencentCloud.Eb.V20210416.Models.DeleteRuleRequest)">
+            <summary>
+            This API is used to delete an event rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteRuleSync(TencentCloud.Eb.V20210416.Models.DeleteRuleRequest)">
+            <summary>
+            This API is used to delete an event rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteTarget(TencentCloud.Eb.V20210416.Models.DeleteTargetRequest)">
+            <summary>
+            This API is used to delete a delivery target.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteTargetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteTargetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteTargetSync(TencentCloud.Eb.V20210416.Models.DeleteTargetRequest)">
+            <summary>
+            This API is used to delete a delivery target.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteTargetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteTargetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteTransformation(TencentCloud.Eb.V20210416.Models.DeleteTransformationRequest)">
+            <summary>
+            This API is used to delete a transformer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.DeleteTransformationSync(TencentCloud.Eb.V20210416.Models.DeleteTransformationRequest)">
+            <summary>
+            This API is used to delete a transformer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.DeleteTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.GetEventBus(TencentCloud.Eb.V20210416.Models.GetEventBusRequest)">
+            <summary>
+            This API is used to get the details of an event bus.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.GetEventBusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.GetEventBusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.GetEventBusSync(TencentCloud.Eb.V20210416.Models.GetEventBusRequest)">
+            <summary>
+            This API is used to get the details of an event bus.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.GetEventBusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.GetEventBusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.GetRule(TencentCloud.Eb.V20210416.Models.GetRuleRequest)">
+            <summary>
+            This API is used to get the details of an event rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.GetRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.GetRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.GetRuleSync(TencentCloud.Eb.V20210416.Models.GetRuleRequest)">
+            <summary>
+            This API is used to get the details of an event rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.GetRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.GetRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.GetTransformation(TencentCloud.Eb.V20210416.Models.GetTransformationRequest)">
+            <summary>
+            This API is used to get the details of a transformer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.GetTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.GetTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.GetTransformationSync(TencentCloud.Eb.V20210416.Models.GetTransformationRequest)">
+            <summary>
+            This API is used to get the details of a transformer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.GetTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.GetTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.ListConnections(TencentCloud.Eb.V20210416.Models.ListConnectionsRequest)">
+            <summary>
+            This API is used to get the list of event connectors.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.ListConnectionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.ListConnectionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.ListConnectionsSync(TencentCloud.Eb.V20210416.Models.ListConnectionsRequest)">
+            <summary>
+            This API is used to get the list of event connectors.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.ListConnectionsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.ListConnectionsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.ListEventBuses(TencentCloud.Eb.V20210416.Models.ListEventBusesRequest)">
+            <summary>
+            This API is used to get the list of event buses.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.ListEventBusesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.ListEventBusesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.ListEventBusesSync(TencentCloud.Eb.V20210416.Models.ListEventBusesRequest)">
+            <summary>
+            This API is used to get the list of event buses.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.ListEventBusesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.ListEventBusesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.ListRules(TencentCloud.Eb.V20210416.Models.ListRulesRequest)">
+            <summary>
+            This API is used to get the list of event rules.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.ListRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.ListRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.ListRulesSync(TencentCloud.Eb.V20210416.Models.ListRulesRequest)">
+            <summary>
+            This API is used to get the list of event rules.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.ListRulesRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.ListRulesResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.ListTargets(TencentCloud.Eb.V20210416.Models.ListTargetsRequest)">
+            <summary>
+            This API is used to get the list delivery targets.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.ListTargetsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.ListTargetsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.ListTargetsSync(TencentCloud.Eb.V20210416.Models.ListTargetsRequest)">
+            <summary>
+            This API is used to get the list delivery targets.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.ListTargetsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.ListTargetsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateConnection(TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest)">
+            <summary>
+            This API is used to update an event connector.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateConnectionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateConnectionSync(TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest)">
+            <summary>
+            This API is used to update an event connector.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateConnectionResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateEventBus(TencentCloud.Eb.V20210416.Models.UpdateEventBusRequest)">
+            <summary>
+            This API is used to update an event bus.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateEventBusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateEventBusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateEventBusSync(TencentCloud.Eb.V20210416.Models.UpdateEventBusRequest)">
+            <summary>
+            This API is used to update an event bus.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateEventBusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateEventBusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateRule(TencentCloud.Eb.V20210416.Models.UpdateRuleRequest)">
+            <summary>
+            This API is used to update an event rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateRuleSync(TencentCloud.Eb.V20210416.Models.UpdateRuleRequest)">
+            <summary>
+            This API is used to update an event rule.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateRuleResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateTarget(TencentCloud.Eb.V20210416.Models.UpdateTargetRequest)">
+            <summary>
+            This API is used to update a delivery target.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateTargetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateTargetSync(TencentCloud.Eb.V20210416.Models.UpdateTargetRequest)">
+            <summary>
+            This API is used to update a delivery target.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateTargetResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateTransformation(TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest)">
+            <summary>
+            This API is used to update a transformer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateTransformationResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.EbClient.UpdateTransformationSync(TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest)">
+            <summary>
+            This API is used to update a transformer.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest"/></param>
+            <returns><see cref="T:TencentCloud.Eb.V20210416.Models.UpdateTransformationResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.APIGWParams.Protocol">
+            <summary>
+            HTTPS
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.APIGWParams.Method">
+            <summary>
+            POST
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.APIGWParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CheckRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CheckRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CheckRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CheckTransformationRequest.Input">
+            <summary>
+            JSON string to be processed
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CheckTransformationRequest.Transformations">
+            <summary>
+            Transformation rule list
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CheckTransformationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CheckTransformationResponse.Output">
+            <summary>
+            Data processed by `Transformations`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CheckTransformationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CheckTransformationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CkafkaDeliveryParams.TopicName">
+            <summary>
+            ckafka topic name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CkafkaDeliveryParams.ResourceDescription">
+            <summary>
+            Six-Segment QCS description of CKafka resource
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CkafkaDeliveryParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CkafkaParams.Offset">
+            <summary>
+            kafka offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CkafkaParams.TopicName">
+            <summary>
+            ckafka  topic
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CkafkaParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CkafkaTargetParams.TopicName">
+            <summary>
+            CKafka topic to be delivered to
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CkafkaTargetParams.RetryPolicy">
+            <summary>
+            Retry policy
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CkafkaTargetParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.ModTime">
+            <summary>
+            Update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.Enable">
+            <summary>
+            Switch
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.AddTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.ConnectionId">
+            <summary>
+            Connector ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.ConnectionDescription">
+            <summary>
+            Connector description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.ConnectionName">
+            <summary>
+            Connector name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Connection.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.Connection.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ConnectionDescription.ResourceDescription">
+            <summary>
+            Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ConnectionDescription.APIGWParams">
+            <summary>
+            API Gateway parameters
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ConnectionDescription.CkafkaParams">
+            <summary>
+            CKafka parameters
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ConnectionDescription.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest.ConnectionDescription">
+            <summary>
+            Connector description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest.ConnectionName">
+            <summary>
+            Connector name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest.Enable">
+            <summary>
+            Whether to enable
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest.Type">
+            <summary>
+            Type of the connector
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateConnectionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateConnectionResponse.ConnectionId">
+            <summary>
+            Connector ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateConnectionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateConnectionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateEventBusRequest.EventBusName">
+            <summary>
+            Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateEventBusRequest.Description">
+            <summary>
+            Event bus description, which can contain up to 200 characters of any type.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateEventBusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateEventBusResponse.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateEventBusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateEventBusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateRuleRequest.EventPattern">
+            <summary>
+            See [Event Pattern](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateRuleRequest.EventBusId">
+            <summary>
+            Event bus ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateRuleRequest.RuleName">
+            <summary>
+            Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateRuleRequest.Enable">
+            <summary>
+            Switch.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateRuleRequest.Description">
+            <summary>
+            Event bus description, which can contain up to 200 characters of any type
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateRuleResponse.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTargetRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTargetRequest.Type">
+            <summary>
+            Target type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTargetRequest.TargetDescription">
+            <summary>
+            Target description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTargetRequest.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateTargetRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTargetResponse.TargetId">
+            <summary>
+            Target ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTargetResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateTargetResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTransformationRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTransformationRequest.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTransformationRequest.Transformations">
+            <summary>
+            Transformation rule list (currently, only one is supported)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateTransformationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTransformationResponse.TransformationId">
+            <summary>
+            Generated transformer ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.CreateTransformationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.CreateTransformationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeadLetterConfig.DisposeMethod">
+            <summary>
+            Three modes are supported: DLQ, drop, and ignore error, which correspond to `DLQ`, `DROP`, and `IGNORE_ERROR` respectively
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeadLetterConfig.CkafkaDeliveryParams">
+            <summary>
+            If the DLQ mode is set, this option is required. Error messages will be delivered to the corresponding Kafka topic
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeadLetterConfig.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteConnectionRequest.ConnectionId">
+            <summary>
+            Connector ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteConnectionRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteConnectionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteConnectionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteConnectionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteEventBusRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteEventBusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteEventBusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteEventBusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteRuleRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteRuleRequest.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteTargetRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteTargetRequest.TargetId">
+            <summary>
+            Delivery target ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteTargetRequest.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteTargetRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteTargetResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteTargetResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteTransformationRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteTransformationRequest.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteTransformationRequest.TransformationId">
+            <summary>
+            Transformer ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteTransformationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.DeleteTransformationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.DeleteTransformationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ESTargetParams.NetMode">
+            <summary>
+            Network connection type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ESTargetParams.IndexPrefix">
+            <summary>
+            Index prefix
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ESTargetParams.RotationInterval">
+            <summary>
+            ES log rotation interval
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ESTargetParams.OutputMode">
+            <summary>
+            DTS event configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ESTargetParams.IndexSuffixMode">
+            <summary>
+            DTS indexing configuration
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ESTargetParams.IndexTemplateType">
+            <summary>
+            ES template type
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ESTargetParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.EtlFilter.Filter">
+            <summary>
+            The syntax is the same as that of `Rule`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.EtlFilter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.EventBus.ModTime">
+            <summary>
+            Update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.EventBus.Description">
+            <summary>
+            Event bus description, which can contain up to 200 characters of any type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.EventBus.AddTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.EventBus.EventBusName">
+            <summary>
+            Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.EventBus.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.EventBus.Type">
+            <summary>
+            Event bus type
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.EventBus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Extraction.ExtractionInputPath">
+            <summary>
+            JsonPath, which will be `$.` by default if not specified
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Extraction.Format">
+            <summary>
+            Valid values: TEXT/JSON
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Extraction.TextParams">
+            <summary>
+            Only required for `Text`
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.Extraction.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Filter.Values">
+            <summary>
+            One or more filter values.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Filter.Name">
+            <summary>
+            Filter name.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.Filter.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.GetEventBusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.ModTime">
+            <summary>
+            Update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.Description">
+            <summary>
+            Event bus description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.ClsTopicId">
+            <summary>
+            Log topic ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.AddTime">
+            <summary>
+            Creation time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.ClsLogsetId">
+            <summary>
+            Logset ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.EventBusName">
+            <summary>
+            Event bus name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.Type">
+            <summary>
+            (Disused) Event bus type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.GetEventBusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleRequest.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.GetRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.RuleName">
+            <summary>
+            Event rule name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.Status">
+            <summary>
+            Event rule status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.Enable">
+            <summary>
+            Switch
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.Description">
+            <summary>
+            Event rule description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.EventPattern">
+            <summary>
+            Event pattern
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.AddTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.ModTime">
+            <summary>
+            Update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.GetRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetTransformationRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetTransformationRequest.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetTransformationRequest.TransformationId">
+            <summary>
+            Transformer ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.GetTransformationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetTransformationResponse.Transformations">
+            <summary>
+            Transformation rule list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.GetTransformationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.GetTransformationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListConnectionsRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListConnectionsRequest.OrderBy">
+            <summary>
+            Indicates by which field to sort the returned results. Valid values: AddTime, ModTime
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListConnectionsRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListConnectionsRequest.Order">
+            <summary>
+            Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListConnectionsRequest.Offset">
+            <summary>
+            Offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ListConnectionsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListConnectionsResponse.Connections">
+            <summary>
+            Connector information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListConnectionsResponse.TotalCount">
+            <summary>
+            Total number of connectors
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListConnectionsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ListConnectionsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListEventBusesRequest.OrderBy">
+            <summary>
+            Indicates by which field to sort the returned results. Valid values: AddTime (creation time), ModTime (modification time)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListEventBusesRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListEventBusesRequest.Order">
+            <summary>
+            Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC (ascending order), DESC (descending order)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListEventBusesRequest.Filters">
+            <summary>
+            Filter. For more information, see the Instance Filter Table below. Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListEventBusesRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ListEventBusesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListEventBusesResponse.EventBuses">
+            <summary>
+            Event bus information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListEventBusesResponse.TotalCount">
+            <summary>
+            Total number of event buses
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListEventBusesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ListEventBusesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListRulesRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListRulesRequest.OrderBy">
+            <summary>
+            Indicates by which field to sort the returned results. Valid values: AddTime (creation time), ModTime (modification time)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListRulesRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListRulesRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListRulesRequest.Order">
+            <summary>
+            Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC (ascending order), DESC (descending order)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ListRulesRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListRulesResponse.Rules">
+            <summary>
+            Event rule information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListRulesResponse.TotalCount">
+            <summary>
+            Total number of event rules
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListRulesResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ListRulesResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsRequest.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsRequest.OrderBy">
+            <summary>
+            Indicates by which field to sort the returned results. Valid values: AddTime (creation time), ModTime (modification time)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsRequest.Limit">
+            <summary>
+            Number of returned results. Default value: 20. Maximum value: 100.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsRequest.Offset">
+            <summary>
+            Pagination offset. Default value: 0.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsRequest.Order">
+            <summary>
+            Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC (ascending order), DESC (descending order)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ListTargetsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsResponse.TotalCount">
+            <summary>
+            Total number of targets
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsResponse.Targets">
+            <summary>
+            Target information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.ListTargetsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.ListTargetsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.OutputStructParam.Key">
+            <summary>
+            Key in the corresponding JSON output
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.OutputStructParam.Value">
+            <summary>
+            You can enter a JsonPath, constant, or built-in date type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.OutputStructParam.ValueType">
+            <summary>
+            Data type of `Value`. Valid values: STRING, NUMBER, BOOLEAN, NULL, SYS_VARIABLE, JSONPATH
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.OutputStructParam.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.RetryPolicy.RetryInterval">
+            <summary>
+            Retry interval in seconds
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.RetryPolicy.MaxRetryAttempts">
+            <summary>
+            Maximum number of retries
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.RetryPolicy.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.ModTime">
+            <summary>
+            Modification time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.Enable">
+            <summary>
+            Switch
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.AddTime">
+            <summary>
+            Creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.RuleName">
+            <summary>
+            Rule name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.Targets">
+            <summary>
+            Target overview
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Rule.DeadLetterConfig">
+            <summary>
+            DLQ rule set by the rule, which may be null
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.Rule.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.SCFParams.BatchTimeout">
+            <summary>
+            Maximum waiting time for batch delivery
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.SCFParams.BatchEventCount">
+            <summary>
+            Maximum number of events in batch delivery
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.SCFParams.EnableBatchDelivery">
+            <summary>
+            Enables batch delivery
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.SCFParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Target.Type">
+            <summary>
+            Target type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Target.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Target.TargetId">
+            <summary>
+            Target ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Target.TargetDescription">
+            <summary>
+            Target description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Target.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Target.EnableBatchDelivery">
+            <summary>
+            Enables batch delivery
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Target.BatchTimeout">
+            <summary>
+            Maximum waiting time for batch delivery
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Target.BatchEventCount">
+            <summary>
+            Maximum number of events in batch delivery
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.Target.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.TargetBrief.TargetId">
+            <summary>
+            Target ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.TargetBrief.Type">
+            <summary>
+            Target type
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.TargetBrief.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.TargetDescription.ResourceDescription">
+            <summary>
+            Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.TargetDescription.SCFParams">
+            <summary>
+            SCF parameter
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.TargetDescription.CkafkaTargetParams">
+            <summary>
+            CKafka parameters
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.TargetDescription.ESTargetParams">
+            <summary>
+            ElasticSearch parameters
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.TargetDescription.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.TextParams.Separator">
+            <summary>
+            Comma, | , tab, space, line break, %, or #, which can contain only 1 character.
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.TextParams.Regex">
+            <summary>
+            Entered regex (128 characters)
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.TextParams.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Transform.OutputStructs">
+            <summary>
+            Describes how to transform data
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.Transform.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Transformation.Extraction">
+            <summary>
+            Describes how to extract data
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Transformation.EtlFilter">
+            <summary>
+            Describes how to filter data
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.Transformation.Transform">
+            <summary>
+            Describes how to transform data
+            Note: this field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.Transformation.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest.ConnectionId">
+            <summary>
+            Connector ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest.Enable">
+            <summary>
+            Switch
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest.ConnectionName">
+            <summary>
+            Connector name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateConnectionRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateConnectionResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateConnectionResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateEventBusRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateEventBusRequest.Description">
+            <summary>
+            Event bus description, which can contain up to 200 characters of any type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateEventBusRequest.EventBusName">
+            <summary>
+            Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateEventBusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateEventBusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateEventBusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest.Enable">
+            <summary>
+            Switch.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest.Description">
+            <summary>
+            Rule description, which can contain up to 200 characters of any type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest.EventPattern">
+            <summary>
+            See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest.RuleName">
+            <summary>
+            Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateRuleRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateRuleResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateRuleResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest.RuleId">
+            <summary>
+            Event rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest.TargetId">
+            <summary>
+            Delivery target ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest.EnableBatchDelivery">
+            <summary>
+            Enables batch delivery
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest.BatchTimeout">
+            <summary>
+            Maximum waiting time for batch delivery
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest.BatchEventCount">
+            <summary>
+            Maximum number of events in batch delivery
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateTargetRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTargetResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateTargetResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest.EventBusId">
+            <summary>
+            Event bus ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest.RuleId">
+            <summary>
+            Rule ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest.TransformationId">
+            <summary>
+            Transformer ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest.Transformations">
+            <summary>
+            Transformation rule list (currently, only one is supported)
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateTransformationRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Eb.V20210416.Models.UpdateTransformationResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Eb.V20210416.Models.UpdateTransformationResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

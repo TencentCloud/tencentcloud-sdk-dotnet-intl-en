@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudMsp</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.DeregisterMigrationTask(TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskRequest)">
+            <summary>
+            This API is used to cancel the registered migration tasks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.DeregisterMigrationTaskSync(TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskRequest)">
+            <summary>
+            This API is used to cancel the registered migration tasks.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.DescribeMigrationTask(TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskRequest)">
+            <summary>
+            This API is used to obtain the specified migration task details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.DescribeMigrationTaskSync(TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskRequest)">
+            <summary>
+            This API is used to obtain the specified migration task details.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.ListMigrationProject(TencentCloud.Msp.V20180319.Models.ListMigrationProjectRequest)">
+            <summary>
+            This API is used to obtain the list of migration project names.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.ListMigrationProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.ListMigrationProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.ListMigrationProjectSync(TencentCloud.Msp.V20180319.Models.ListMigrationProjectRequest)">
+            <summary>
+            This API is used to obtain the list of migration project names.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.ListMigrationProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.ListMigrationProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.ListMigrationTask(TencentCloud.Msp.V20180319.Models.ListMigrationTaskRequest)">
+            <summary>
+            This API is used to obtain migration task list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.ListMigrationTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.ListMigrationTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.ListMigrationTaskSync(TencentCloud.Msp.V20180319.Models.ListMigrationTaskRequest)">
+            <summary>
+            This API is used to obtain migration task list.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.ListMigrationTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.ListMigrationTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.ModifyMigrationTaskBelongToProject(TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectRequest)">
+            <summary>
+            This API is used to modify the project of a migration task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.ModifyMigrationTaskBelongToProjectSync(TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectRequest)">
+            <summary>
+            This API is used to modify the project of a migration task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.ModifyMigrationTaskStatus(TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusRequest)">
+            <summary>
+            This API is used to update the migration task status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.ModifyMigrationTaskStatusSync(TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusRequest)">
+            <summary>
+            This API is used to update the migration task status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.RegisterMigrationTask(TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest)">
+            <summary>
+            This API is used to register a migration task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.MspClient.RegisterMigrationTaskSync(TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest)">
+            <summary>
+            This API is used to register a migration task.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest"/></param>
+            <returns><see cref="T:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskRequest.TaskId">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.DeregisterMigrationTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskRequest.TaskId">
+            <summary>
+            Task ID, such as msp-jitoh33n
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskResponse.TaskStatus">
+            <summary>
+            Migration details list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.DescribeMigrationTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DstInfo.Region">
+            <summary>
+            Migration destination region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DstInfo.Ip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DstInfo.Port">
+            <summary>
+            Migration destination port
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.DstInfo.InstanceId">
+            <summary>
+            Migration destination instance ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.DstInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationProjectRequest.Offset">
+            <summary>
+            The initial number of records, default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationProjectRequest.Limit">
+            <summary>
+            The number of records returned, default value: 500
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.ListMigrationProjectRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationProjectResponse.Projects">
+            <summary>
+            Project list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationProjectResponse.TotalCount">
+            <summary>
+            Total number of projects
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationProjectResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.ListMigrationProjectResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationTaskRequest.Offset">
+            <summary>
+            The initial number of records, default value: 0
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationTaskRequest.Limit">
+            <summary>
+            Number of records, default value: 10
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationTaskRequest.ProjectId">
+            <summary>
+            Project ID, the default value is empty.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.ListMigrationTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationTaskResponse.TotalCount">
+            <summary>
+            Total number of records
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationTaskResponse.Tasks">
+            <summary>
+            Migration task list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ListMigrationTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.ListMigrationTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectRequest.TaskId">
+            <summary>
+            Task ID, such as msp-jitoh33n
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectRequest.ProjectId">
+            <summary>
+            Project ID, such as 10005
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskBelongToProjectResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusRequest.Status">
+            <summary>
+            Task status, valid values include `unstart` (migration has not started), `migrating` (migration in progress), `finish` (migration completed) or `fail` (migration failed).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusRequest.TaskId">
+            <summary>
+            Task ID, such as msp-jitoh33n
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.ModifyMigrationTaskStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Project.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Project.ProjectName">
+            <summary>
+            Project name
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.Project.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.TaskType">
+            <summary>
+            Task type, valid values include `database` (database migration), `file` (file migration) or `host` (host migration).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.TaskName">
+            <summary>
+            Task name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.ServiceSupplier">
+            <summary>
+            Service supplier name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.CreateTime">
+            <summary>
+            Migration task creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.UpdateTime">
+            <summary>
+            Migration task update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.MigrateClass">
+            <summary>
+            Migration type, for example `mysql:mysql` in database migration means migration from mysql to mysql and `oss:cos` in file migration means migration from Alibaba Cloud OSS to Tencent COS.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.SrcInfo">
+            <summary>
+            Migration task source information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.DstInfo">
+            <summary>
+            Migration task destination information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.SrcAccessType">
+            <summary>
+            Source instance access type. Valid values for database migration include `extranet` (public network), `cvm` (CVM-created instance), `dcg` (Direct Connect-enabled instance), `vpncloud` (Tencent Cloud VPN-enabled instance), `vpnselfbuild` (self-built VPN-enabled instance), `cdb` (TencentDB instance)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.SrcDatabaseType">
+            <summary>
+            Database type of the source instance. Valid values for database migration: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.DstAccessType">
+            <summary>
+            Target instance access type. Valid values for database migration include `extranet` (public network), `cvm` (CVM-created instance), `dcg` (Direct Connect-enabled instance), `vpncloud` (Tencent Cloud VPN-enabled instance), `vpnselfbuild` (self-built VPN-enabled instance), `cdb` (TencentDB instance)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.DstDatabaseType">
+            <summary>
+            Database type of the target instance. Valid values for database migration: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskResponse.TaskId">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.RegisterMigrationTaskResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.SrcInfo.Region">
+            <summary>
+            Migration source region
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.SrcInfo.Ip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.SrcInfo.Port">
+            <summary>
+            Migration source port
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.SrcInfo.InstanceId">
+            <summary>
+            Migration source instance ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.SrcInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.TaskId">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.TaskName">
+            <summary>
+            Task name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.MigrationType">
+            <summary>
+            Migration type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.Status">
+            <summary>
+            Migration status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.ProjectId">
+            <summary>
+            Project ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.ProjectName">
+            <summary>
+            Project name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.SrcInfo">
+            <summary>
+            Migration source information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.MigrationTimeLine">
+            <summary>
+            Migration time information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.Updated">
+            <summary>
+            Status update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.Task.DstInfo">
+            <summary>
+            Migration destination information
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.Task.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.TaskStatus.Status">
+            <summary>
+            Migration status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.TaskStatus.Progress">
+            <summary>
+            Migration progress
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.TaskStatus.UpdateTime">
+            <summary>
+            Migration date
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.TaskStatus.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.TimeObj.CreateTime">
+            <summary>
+            The creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Msp.V20180319.Models.TimeObj.EndTime">
+            <summary>
+            End time
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Msp.V20180319.Models.TimeObj.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>

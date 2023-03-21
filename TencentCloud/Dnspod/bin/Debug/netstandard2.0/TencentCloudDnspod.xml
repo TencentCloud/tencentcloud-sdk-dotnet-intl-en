@@ -1,0 +1,3134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TencentCloudDnspod</name>
+    </assembly>
+    <members>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.#ctor(TencentCloud.Common.Credential,System.String)">
+            <summary>
+            Client constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.#ctor(TencentCloud.Common.Credential,System.String,TencentCloud.Common.Profile.ClientProfile)">
+            <summary>
+            Client Constructor.
+            </summary>
+            <param name="credential">Credentials.</param>
+            <param name="region">Region name, such as "ap-guangzhou".</param>
+            <param name="profile">Client profiles.</param>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateDomain(TencentCloud.Dnspod.V20210323.Models.CreateDomainRequest)">
+            <summary>
+            This API is used to add a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateDomainSync(TencentCloud.Dnspod.V20210323.Models.CreateDomainRequest)">
+            <summary>
+            This API is used to add a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateDomainAlias(TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasRequest)">
+            <summary>
+            This API is used to create a domain alias.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateDomainAliasSync(TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasRequest)">
+            <summary>
+            This API is used to create a domain alias.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateDomainBatch(TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRequest)">
+            <summary>
+            This API is used to bulk add domains.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateDomainBatchSync(TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRequest)">
+            <summary>
+            This API is used to bulk add domains.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateDomainGroup(TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupRequest)">
+            <summary>
+            This API is used to create a domain group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateDomainGroupSync(TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupRequest)">
+            <summary>
+            This API is used to create a domain group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateRecord(TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest)">
+            <summary>
+            This API is used to add a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateRecordSync(TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest)">
+            <summary>
+            This API is used to add a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateRecordBatch(TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRequest)">
+            <summary>
+            This API is used to bulk add records.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateRecordBatchSync(TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRequest)">
+            <summary>
+            This API is used to bulk add records.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateRecordGroup(TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupRequest)">
+            <summary>
+            This API is used to add a record group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.CreateRecordGroupSync(TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupRequest)">
+            <summary>
+            This API is used to add a record group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteDomain(TencentCloud.Dnspod.V20210323.Models.DeleteDomainRequest)">
+            <summary>
+            This API is used to delete a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteDomainSync(TencentCloud.Dnspod.V20210323.Models.DeleteDomainRequest)">
+            <summary>
+            This API is used to delete a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteDomainAlias(TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasRequest)">
+            <summary>
+            This API is used to delete a domain alias.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteDomainAliasSync(TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasRequest)">
+            <summary>
+            This API is used to delete a domain alias.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteDomainBatch(TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchRequest)">
+            <summary>
+            This API is used to batch delete domains.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteDomainBatchSync(TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchRequest)">
+            <summary>
+            This API is used to batch delete domains.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteRecord(TencentCloud.Dnspod.V20210323.Models.DeleteRecordRequest)">
+            <summary>
+            This API is used to delete a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteRecordSync(TencentCloud.Dnspod.V20210323.Models.DeleteRecordRequest)">
+            <summary>
+            This API is used to delete a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteRecordGroup(TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupRequest)">
+            <summary>
+            This API is used to delete a record group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteRecordGroupSync(TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupRequest)">
+            <summary>
+            This API is used to delete a record group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteShareDomain(TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainRequest)">
+            <summary>
+            This API is used to unshare a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DeleteShareDomainSync(TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainRequest)">
+            <summary>
+            This API is used to unshare a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomain(TencentCloud.Dnspod.V20210323.Models.DescribeDomainRequest)">
+            <summary>
+            This API is used to get the information of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainSync(TencentCloud.Dnspod.V20210323.Models.DescribeDomainRequest)">
+            <summary>
+            This API is used to get the information of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainAliasList(TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListRequest)">
+            <summary>
+            This API is used to get the list of domain aliases.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainAliasListSync(TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListRequest)">
+            <summary>
+            This API is used to get the list of domain aliases.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainGroupList(TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListRequest)">
+            <summary>
+            This API is used to get the list of domain groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainGroupListSync(TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListRequest)">
+            <summary>
+            This API is used to get the list of domain groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainList(TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest)">
+            <summary>
+            This API is used to get the list of domains.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainListSync(TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest)">
+            <summary>
+            This API is used to get the list of domains.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainLogList(TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest)">
+            <summary>
+            This API is used to get the log of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainLogListSync(TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest)">
+            <summary>
+            This API is used to get the log of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainPurview(TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewRequest)">
+            <summary>
+            This API is used to get the permissions of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainPurviewSync(TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewRequest)">
+            <summary>
+            This API is used to get the permissions of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainShareInfo(TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoRequest)">
+            <summary>
+            This API is used to get the domain sharing information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeDomainShareInfoSync(TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoRequest)">
+            <summary>
+            This API is used to get the domain sharing information.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecord(TencentCloud.Dnspod.V20210323.Models.DescribeRecordRequest)">
+            <summary>
+            This API is used to get the information of a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordSync(TencentCloud.Dnspod.V20210323.Models.DescribeRecordRequest)">
+            <summary>
+            This API is used to get the information of a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordGroupList(TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest)">
+            <summary>
+            This API is used to query the list of DNS record groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordGroupListSync(TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest)">
+            <summary>
+            This API is used to query the list of DNS record groups.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordLineList(TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListRequest)">
+            <summary>
+            This API is used to get the split zones allowed by the domain level.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordLineListSync(TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListRequest)">
+            <summary>
+            This API is used to get the split zones allowed by the domain level.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordList(TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest)">
+            <summary>
+            This API is used to get the DNS records of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordListSync(TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest)">
+            <summary>
+            This API is used to get the DNS records of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordType(TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeRequest)">
+            <summary>
+            This API is used to get the record type allowed by the domain level.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeRecordTypeSync(TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeRequest)">
+            <summary>
+            This API is used to get the record type allowed by the domain level.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeSubdomainAnalytics(TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest)">
+            <summary>
+            This API is used to collect statistics on the DNS query volume of a subdomain. It helps you understand the traffic and time period distribution and allows you to view statistics in the last three months. It is available only for domains under a paid plan.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.DescribeSubdomainAnalyticsSync(TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest)">
+            <summary>
+            This API is used to collect statistics on the DNS query volume of a subdomain. It helps you understand the traffic and time period distribution and allows you to view statistics in the last three months. It is available only for domains under a paid plan.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainLock(TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockRequest)">
+            <summary>
+            This API is used to lock a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainLockSync(TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockRequest)">
+            <summary>
+            This API is used to lock a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainOwner(TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerRequest)">
+            <summary>
+            This API is used to transfer ownership of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainOwnerSync(TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerRequest)">
+            <summary>
+            This API is used to transfer ownership of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainRemark(TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkRequest)">
+            <summary>
+            This API is used to set the remarks of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainRemarkSync(TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkRequest)">
+            <summary>
+            This API is used to set the remarks of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainStatus(TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusRequest)">
+            <summary>
+            This API is used to modify the status of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainStatusSync(TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusRequest)">
+            <summary>
+            This API is used to modify the status of a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainUnlock(TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockRequest)">
+            <summary>
+            This API is used to unlock a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyDomainUnlockSync(TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockRequest)">
+            <summary>
+            This API is used to unlock a domain.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecord(TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest)">
+            <summary>
+            This API is used to modify a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordSync(TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest)">
+            <summary>
+            This API is used to modify a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordBatch(TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest)">
+            <summary>
+            This API is used to bulk modify records.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordBatchSync(TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest)">
+            <summary>
+            This API is used to bulk modify records.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordGroup(TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest)">
+            <summary>
+            This API is used to modify a record group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordGroupSync(TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest)">
+            <summary>
+            This API is used to modify a record group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordRemark(TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest)">
+            <summary>
+            This API is used to set the remarks of a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordRemarkSync(TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest)">
+            <summary>
+            This API is used to set the remarks of a record.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordStatus(TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest)">
+            <summary>
+            This API is used to modify the DNS record status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordStatusSync(TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest)">
+            <summary>
+            This API is used to modify the DNS record status.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordToGroup(TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest)">
+            <summary>
+            This API is used to add a record to a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupResponse"/></returns>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.DnspodClient.ModifyRecordToGroupSync(TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest)">
+            <summary>
+            This API is used to add a record to a group.
+            </summary>
+            <param name="req"><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest"/></param>
+            <returns><see cref="T:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupResponse"/></returns>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.RecordType">
+            <summary>
+            Record type. For more information, see the `DescribeRecordType` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.Value">
+            <summary>
+            Record value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.SubDomain">
+            <summary>
+            Subdomain (host record), which is `@` by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.RecordLine">
+            <summary>
+            Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API. If neither `RecordLine` nor `RecordLineId` is specified, the default split zone will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.RecordLineId">
+            <summary>
+            Split zone ID of the DNS record. If both `RecordLine` and `RecordLineId` are specified, `RecordLineId` will be used.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.Weight">
+            <summary>
+            Record weight (not supported).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.MX">
+            <summary>
+            MX record value. It is `0` by default for non-MX records and required for MX records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.TTL">
+            <summary>
+            TTL value of the record, which is `600` by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.Enabled">
+            <summary>
+            Record status (not supported). Valid values: `0` (disabled); `1` (enabled). Default value: `1`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.Remark">
+            <summary>
+            Record remarks (not supported).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.AddRecordBatch.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.RecordId">
+            <summary>
+            Record ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.SubDomain">
+            <summary>
+            Subdomain (host record).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.RecordType">
+            <summary>
+            Record type. For more information, see the `DescribeRecordType` API.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.RecordLine">
+            <summary>
+            Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.Value">
+            <summary>
+            Record value
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.TTL">
+            <summary>
+            TTL value of the record
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.Status">
+            <summary>
+            Record adding status
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.Operation">
+            <summary>
+            Operation type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.ErrMsg">
+            <summary>
+            Error message
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.Id">
+            <summary>
+            ID of the record in the list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.Enabled">
+            <summary>
+            Record status
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.MX">
+            <summary>
+            MX weight of the record
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.Weight">
+            <summary>
+            The record weight.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.BatchRecordInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasRequest.DomainAlias">
+            <summary>
+            Domain alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasResponse.DomainAliasId">
+            <summary>
+            Domain alias ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainAliasResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchDetail.RecordList">
+            <summary>
+            See `RecordInfoBatch`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchDetail.Id">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchDetail.Domain">
+            <summary>
+            Domain
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchDetail.DomainGrade">
+            <summary>
+            Domain level
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchDetail.ErrMsg">
+            <summary>
+            Error message
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchDetail.Status">
+            <summary>
+            Task running status
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchDetail.Operation">
+            <summary>
+            Operation type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.SubDomain">
+            <summary>
+            Subdomain (host record).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.RecordType">
+            <summary>
+            Record type. For more information, see the `DescribeRecordType` API.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.RecordLine">
+            <summary>
+            Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.Value">
+            <summary>
+            Record value
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.TTL">
+            <summary>
+            TTL value of the record
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.Status">
+            <summary>
+            Record adding status
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.Operation">
+            <summary>
+            Operation type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.ErrMsg">
+            <summary>
+            Error message
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.Id">
+            <summary>
+            ID of the record in the list
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRecord.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRequest.DomainList">
+            <summary>
+            Domain array
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRequest.RecordValue">
+            <summary>
+            Add A records of @ and www for each domain with the record value of the IP. If this parameter is not passed in or is set to an empty string or null, only the domain but not the records will be added.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchResponse.DetailList">
+            <summary>
+            Information of the bulk added domains
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchResponse.JobId">
+            <summary>
+            Bulk task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainBatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupRequest.GroupName">
+            <summary>
+            Domain group
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupResponse.GroupId">
+            <summary>
+            Domain group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainRequest.GroupId">
+            <summary>
+            The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainRequest.IsMark">
+            <summary>
+            Whether the domain is starred. Valid values: yes, no.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainResponse.DomainInfo">
+            <summary>
+            Domain information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateDomainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateDomainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.RecordList">
+            <summary>
+            See `RecordInfoBatch`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.Id">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.Domain">
+            <summary>
+            Domain
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.DomainGrade">
+            <summary>
+            Domain level
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.ErrMsg">
+            <summary>
+            Error message
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.Status">
+            <summary>
+            Task running status
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.Operation">
+            <summary>
+            Operation type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.DomainId">
+            <summary>
+            Domain ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.SubDomain">
+            <summary>
+            Subdomain (host record).
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.RecordType">
+            <summary>
+            Record type. For more information, see the `DescribeRecordType` API.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.RecordLine">
+            <summary>
+            Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.Value">
+            <summary>
+            Record value
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.TTL">
+            <summary>
+            TTL value of the record
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.Status">
+            <summary>
+            Record adding status
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.Operation">
+            <summary>
+            Operation type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.ErrMsg">
+            <summary>
+            Error message
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.Id">
+            <summary>
+            ID of the record in the list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.MX">
+            <summary>
+            MX weight of the record
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRecord.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRequest.DomainIdList">
+            <summary>
+            Domain ID. Separate multiple ones by comma.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRequest.RecordList">
+            <summary>
+            Record array
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchResponse.DetailList">
+            <summary>
+            Information of the bulk added domains
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchResponse.JobId">
+            <summary>
+            Bulk task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateRecordBatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupRequest.GroupName">
+            <summary>
+            Group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupResponse.GroupId">
+            <summary>
+            New group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateRecordGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.RecordType">
+            <summary>
+            Record type, which is obtained through the record type API. The value contains uppercase letters, such as `A`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.RecordLine">
+            <summary>
+            Record split zone, which is obtained through the record split zone API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.Value">
+            <summary>
+            Record value, such as `IP : 200.200.200.200`, `CNAME : cname.dnspod.com`, and `MX : mail.dnspod.com`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.DomainId">
+            <summary>
+            Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.SubDomain">
+            <summary>
+            Host record such as `www`. If it is not passed in, it will be `@` by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.RecordLineId">
+            <summary>
+            Split zone ID, which is obtained through the record split zone API. The value is a string such as `10=1`. The `RecordLineId` parameter has a higher priority than `RecordLine`. If both of them are passed in, `RecordLineId` will be used first.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.MX">
+            <summary>
+            MX priority, which is required for an MX record and will take effect if the record type is MX. Value range: 1–20.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.TTL">
+            <summary>
+            TTL. Value range: 1–604800. The minimum value varies by domain level.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.Weight">
+            <summary>
+            Weight information, which is an integer between 0 and 100. It is supported only for enterprise VIP domains. `0` indicates not to pass in this parameter, i.e., not to set the weight.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.Status">
+            <summary>
+            Initial status of the record. Valid values: ENABLE, DISABLE. Default value: ENABLE. If `DISABLE` is passed in, the DNS record won't take effect, and the limit on round-robin DNS won't be verified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordResponse.RecordId">
+            <summary>
+            Record ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.CreateRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.CreateRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasRequest.DomainAliasId">
+            <summary>
+            Domain alias ID. You can view all domain aliases and their IDs via the `DescribeDomainAliasList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteDomainAliasResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchDetail.DomainId">
+            <summary>
+            The domain ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchDetail.Domain">
+            <summary>
+            The domain name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchDetail.Error">
+            <summary>
+            The error message.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchDetail.Status">
+            <summary>
+            The domain deletion status.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchDetail.Operation">
+            <summary>
+            The operation.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchRequest.DomainList">
+            <summary>
+            The domain array.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchResponse.JobId">
+            <summary>
+            The task ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchResponse.DetailList">
+            <summary>
+            The array of task details.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteDomainBatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteDomainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteDomainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteDomainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupRequest.GroupId">
+            <summary>
+            Group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteRecordGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteRecordRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteRecordRequest.RecordId">
+            <summary>
+            The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteRecordRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainRequest.Account">
+            <summary>
+            Account of the domain to be shared
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DeleteShareDomainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListResponse.DomainAliasList">
+            <summary>
+            List of domain aliases
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainAliasListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListResponse.GroupList">
+            <summary>
+            Group list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainGroupListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest.Type">
+            <summary>
+            Domain group type. Valid values: `ALL`, `MINE`, `SHARE`, `ISMARK`, `PAUSE`, `VIP`, `RECENT`, `SHARE_OUT`. Default value: `ALL`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest.Offset">
+            <summary>
+            Record offset starting from `0`. Default value: `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest.Limit">
+            <summary>
+            Number of domains to be obtained. For example, `20` indicates to obtain 20 domains. Default value: `3000`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest.GroupId">
+            <summary>
+            Group ID, which can be passed in to get all domains in the specified group
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest.Keyword">
+            <summary>
+            Keyword for searching for a domain
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListResponse.DomainCountInfo">
+            <summary>
+            Statistics on the list page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListResponse.DomainList">
+            <summary>
+            Domain list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest.Offset">
+            <summary>
+            Record offset starting from `0`. Default value: `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest.Limit">
+            <summary>
+            Total number of logs to be obtained. For example, `20` indicates to obtain 20 logs. Default value: `500`. Maximum value: `500`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListResponse.LogList">
+            <summary>
+            Domain information
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListResponse.PageSize">
+            <summary>
+            Number of results per page
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListResponse.TotalCount">
+            <summary>
+            Total number of logs
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainLogListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewResponse.PurviewList">
+            <summary>
+            Permission list of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainPurviewResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainResponse.DomainInfo">
+            <summary>
+            Domain information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoResponse.ShareList">
+            <summary>
+            Domain sharing information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoResponse.Owner">
+            <summary>
+            Owner account of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeDomainShareInfoResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest.Offset">
+            <summary>
+            Pagination offset
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest.Limit">
+            <summary>
+            Number of items per page for pagination
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListResponse.GroupList">
+            <summary>
+            Group list
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordGroupListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListRequest.Domain">
+            <summary>
+            Domain.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListRequest.DomainGrade">
+            <summary>
+            Domain level.
+            + Original plan. Valid values: `D_FREE` (Free Plan); `D_PLUS` (Individual Plus Plan); `D_EXTRA` (Enterprise 1 Plan); `D_EXPERT` (Enterprise 2 Plan); `D_ULTRA` (Enterprise 3 Plan).
+            + New plan. Valid values: `DP_FREE` (Free Version); `DP_PLUS` (Professional); `DP_EXTRA` (Enterprise Basic); `DP_EXPERT` (Enterprise); `DP_ULTRA` (Ultimate).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListResponse.LineList">
+            <summary>
+            List of split zones.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListResponse.LineGroupList">
+            <summary>
+            List of split zone groups.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordLineListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.Domain">
+            <summary>
+            The domain for which DNS records are to be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.DomainId">
+            <summary>
+            The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.Subdomain">
+            <summary>
+            The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.RecordType">
+            <summary>
+            The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.RecordLine">
+            <summary>
+            The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.RecordLineId">
+            <summary>
+            The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.GroupId">
+            <summary>
+            The group ID passed in to get DNS records in the group.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.Keyword">
+            <summary>
+            The keyword for searching for DNS records. Host headers and record values are supported.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.SortField">
+            <summary>
+            The sorting field. Available values: `name`, `line`, `type`, `value`, `weight`, `mx`, and `ttl,updated_on`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.SortType">
+            <summary>
+            The sorting type. Valid values: `ASC` (ascending, default), `DESC` (descending).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.Offset">
+            <summary>
+            The offset. Default value: `0`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.Limit">
+            <summary>
+            The limit. It defaults to 100 and can be up to 3,000.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListResponse.RecordCountInfo">
+            <summary>
+            The record count info.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListResponse.RecordList">
+            <summary>
+            The record list result.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordListResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordRequest.RecordId">
+            <summary>
+            The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordResponse.RecordInfo">
+            <summary>
+            Record information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeRequest.DomainGrade">
+            <summary>
+            Domain level.
+            + Original plan. Valid values: `D_FREE` (Free Plan); `D_PLUS` (Individual Plus Plan); `D_EXTRA` (Enterprise 1 Plan); `D_EXPERT` (Enterprise 2 Plan); `D_ULTRA` (Enterprise 3 Plan).
+            + New plan. Valid values: `DP_FREE` (Free Version); `DP_PLUS` (Professional); `DP_EXTRA` (Enterprise Basic); `DP_EXPERT` (Enterprise); `DP_ULTRA` (Ultimate).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeResponse.TypeList">
+            <summary>
+            List of record types
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeRecordTypeResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest.Domain">
+            <summary>
+            The domain of the DNS query volume to be queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest.StartDate">
+            <summary>
+            Query start date in the format of `YYYY-MM-DD`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest.EndDate">
+            <summary>
+            Query end date in the format of `YYYY-MM-DD`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest.Subdomain">
+            <summary>
+            The subdomain of the DNS query volume to be queried
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest.DnsFormat">
+            <summary>
+            `DATE`: Daily. `HOUR`: Hourly
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsResponse.Data">
+            <summary>
+            DNS query volume in the current statistical dimension
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsResponse.Info">
+            <summary>
+            Statistics on the DNS query volume of a subdomain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsResponse.AliasData">
+            <summary>
+            DNS query volume of the subdomain alias
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DescribeSubdomainAnalyticsResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainAliasInfo.Id">
+            <summary>
+            Domain alias ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainAliasInfo.DomainAlias">
+            <summary>
+            Domain alias
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DomainAliasInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainAnalyticsDetail.Num">
+            <summary>
+            DNS query volume in the current statistical dimension
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainAnalyticsDetail.DateKey">
+            <summary>
+            Collection date for daily collection
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainAnalyticsDetail.HourKey">
+            <summary>
+            The last hour (0–23) for hourly collection. For example, if `HourKey` is `23`, the DNS query volume in the statistical period of 22:00–23:00 will be collected.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DomainAnalyticsDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.DomainTotal">
+            <summary>
+            Number of eligible domains
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.AllTotal">
+            <summary>
+            Number of all domains that can be viewed by the user
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.MineTotal">
+            <summary>
+            Number of domains added under the user account
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.ShareTotal">
+            <summary>
+            Number of domains shared with the user
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.VipTotal">
+            <summary>
+            Number of paid domains
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.PauseTotal">
+            <summary>
+            Number of suspended domains
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.ErrorTotal">
+            <summary>
+            Number of domains with a DNS configuration error
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.LockTotal">
+            <summary>
+            Number of locked domains
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.SpamTotal">
+            <summary>
+            Number of blocked domains
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.VipExpire">
+            <summary>
+            Number of domains that will expire within 30 days
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.ShareOutTotal">
+            <summary>
+            Number of domains shared with others
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.GroupTotal">
+            <summary>
+            Number of domains in the specified group
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DomainCountInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCreateInfo.Id">
+            <summary>
+            Domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCreateInfo.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCreateInfo.Punycode">
+            <summary>
+            Domain Punycode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainCreateInfo.GradeNsList">
+            <summary>
+            NS list of the domain
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DomainCreateInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.DomainId">
+            <summary>
+            Domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.Status">
+            <summary>
+            Domain status
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.Grade">
+            <summary>
+            DNS plan level
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.GroupId">
+            <summary>
+            Domain group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.IsMark">
+            <summary>
+            Whether the domain is starred
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.TTL">
+            <summary>
+            TTL (DNS record cache time)
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.CnameSpeedup">
+            <summary>
+            Whether CNAME flattening is enabled
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.Remark">
+            <summary>
+            Domain remarks
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.Punycode">
+            <summary>
+            Domain Punycode
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.DnsStatus">
+            <summary>
+            DNS status of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.DnspodNsList">
+            <summary>
+            NS list of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.GradeLevel">
+            <summary>
+            Domain level ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.UserId">
+            <summary>
+            Domain user ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.IsVip">
+            <summary>
+            Whether the domain is a VIP domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.Owner">
+            <summary>
+            Domain owner account
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.GradeTitle">
+            <summary>
+            Domain level description
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.CreatedOn">
+            <summary>
+            Domain creation time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.UpdatedOn">
+            <summary>
+            Last update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.Uin">
+            <summary>
+            Tencent Cloud account `Uin`
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.ActualNsList">
+            <summary>
+            NS list actually used by the domain
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.RecordCount">
+            <summary>
+            Number of domain records
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainInfo.OwnerNick">
+            <summary>
+            Alias of the domain account owner
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DomainInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.DomainId">
+            <summary>
+            Unique ID assigned to the domain by the system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.Name">
+            <summary>
+            Original format of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.Status">
+            <summary>
+            Domain status. Valid values: `ENABLE` (normal), `PAUSE` (suspended), `SPAM` (blocked).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.TTL">
+            <summary>
+            Default TTL of the default DNS record of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.CNAMESpeedup">
+            <summary>
+            Whether CNAME flattening is enabled. Valid values: `ENABLE` (enabled); `DISABLE` (disabled).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.DNSStatus">
+            <summary>
+            DNS configuration status. Valid values: `DNSERROR` (error), an empty string (normal).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.Grade">
+            <summary>
+            Plan level code of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.GroupId">
+            <summary>
+            Group ID of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.SearchEnginePush">
+            <summary>
+            Whether search engine push optimization is enabled. Valid values: `YES` (yes), `NO` (no).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.Remark">
+            <summary>
+            Domain remarks
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.Punycode">
+            <summary>
+            Punycode-encoded domain format
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.EffectiveDNS">
+            <summary>
+            Effective DNS assigned to the domain by the system
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.GradeLevel">
+            <summary>
+            Number corresponding to the plan level of the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.GradeTitle">
+            <summary>
+            Plan name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.IsVip">
+            <summary>
+            Whether it is a paid plan
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.VipStartAt">
+            <summary>
+            Activation time of the paid plan
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.VipEndAt">
+            <summary>
+            Expiry time of the paid plan
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.VipAutoRenew">
+            <summary>
+            Whether VIP automatic renewal is enabled for the domain. Valid values: `YES` (yes); `NO` (no). Default value: `DEFAULT`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.RecordCount">
+            <summary>
+            Number of records under the domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.CreatedOn">
+            <summary>
+            Domain adding time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.UpdatedOn">
+            <summary>
+            Domain update time
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainListItem.Owner">
+            <summary>
+            Account of the domain
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DomainListItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainShareInfo.ShareTo">
+            <summary>
+            Account with which the domain is shared
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainShareInfo.Mode">
+            <summary>
+            Sharing mode. Valid values: `rw` (read/write), `r` (read-only).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.DomainShareInfo.Status">
+            <summary>
+            Sharing status. Valid values: `enabled` (shared successfully); `pending` (the account shared to does not exist and is pending registration).
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.DomainShareInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.GroupInfo.GroupId">
+            <summary>
+            Group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.GroupInfo.GroupName">
+            <summary>
+            Group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.GroupInfo.GroupType">
+            <summary>
+            Group type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.GroupInfo.Size">
+            <summary>
+            Number of domains in the group
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.GroupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LineGroupInfo.LineId">
+            <summary>
+            Split zone group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LineGroupInfo.Name">
+            <summary>
+            Split zone group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LineGroupInfo.Type">
+            <summary>
+            Group type
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LineGroupInfo.LineList">
+            <summary>
+            List of split zones in the split zone group
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.LineGroupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LineInfo.Name">
+            <summary>
+            Split zone name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LineInfo.LineId">
+            <summary>
+            Split zone ID
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.LineInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LockInfo.DomainId">
+            <summary>
+            Domain ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LockInfo.LockCode">
+            <summary>
+            Domain unlock code
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.LockInfo.LockEnd">
+            <summary>
+            Automatic unlock date of the domain
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.LockInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockRequest.LockDays">
+            <summary>
+            Number of days to lock the domain. The maximum number of locked days can be obtained by calling the API for getting the permissions of a domain.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockResponse.LockInfo">
+            <summary>
+            Domain lock information
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainLockResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerRequest.Account">
+            <summary>
+            The account to which to transfer the domain, which can be an UIN or email address
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainOwnerResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkRequest.Remark">
+            <summary>
+            Domain remarks. To delete the remarks, submit empty content.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainRemarkResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusRequest.Status">
+            <summary>
+            Domain status. Valid values: enable; disable.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockRequest.LockCode">
+            <summary>
+            Domain unlock code, which will be returned when the domain is locked.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyDomainUnlockResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.RecordList">
+            <summary>
+            See `RecordInfoBatchModify`.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.Id">
+            <summary>
+            Task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.Domain">
+            <summary>
+            Domain
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.DomainGrade">
+            <summary>
+            Domain level
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.ErrMsg">
+            <summary>
+            Error message
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.Status">
+            <summary>
+            Task running status
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.Operation">
+            <summary>
+            Operation type
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.DomainId">
+            <summary>
+            Domain ID
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchDetail.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest.RecordIdList">
+            <summary>
+            Array of record IDs. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest.Change">
+            <summary>
+            The field to be modified. Valid values: `sub_domain`, `record_type`, `area`, `value`, `mx`, `ttl`, `status`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest.ChangeTo">
+            <summary>
+            The value to be changed to, which is required and subject to the `change` field.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest.Value">
+            <summary>
+            The record value to be changed to, which is required only if the `change` field is `record_type`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest.MX">
+            <summary>
+            MX record priority, which is required only if the `Change` field is `mx`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchResponse.JobId">
+            <summary>
+            Bulk task ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchResponse.DetailList">
+            <summary>
+            See `modifyRecordBatchDetail`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordBatchResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest.GroupName">
+            <summary>
+            Group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest.GroupId">
+            <summary>
+            ID of the group to be modified
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupResponse.GroupId">
+            <summary>
+            ID of the modified group
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest.RecordId">
+            <summary>
+            The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest.Remark">
+            <summary>
+            DNS record remarks. To delete the remarks, submit empty content.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRemarkResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.RecordType">
+            <summary>
+            Record type, which is obtained through the record type API. The value contains uppercase letters, such as `A`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.RecordLine">
+            <summary>
+            Record split zone, which is obtained through the record split zone API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.Value">
+            <summary>
+            Record value, such as `IP : 200.200.200.200`, `CNAME : cname.dnspod.com`, and `MX : mail.dnspod.com`.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.RecordId">
+            <summary>
+            The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.SubDomain">
+            <summary>
+            Host record such as `www`. If it is not passed in, it will be `@` by default.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.RecordLineId">
+            <summary>
+            Split zone ID, which is obtained through the record split zone API. The value is a string such as `10=1`. The `RecordLineId` parameter has a higher priority than `RecordLine`. If both of them are passed in, `RecordLineId` will be used first.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.MX">
+            <summary>
+            MX priority, which is required for an MX record and will take effect if the record type is MX. Value range: 1–20.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.TTL">
+            <summary>
+            TTL. Value range: 1–604800. The minimum value varies by domain level.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.Weight">
+            <summary>
+            Weight information, which is an integer between 0 and 100. It is supported only for enterprise VIP domains. `0` indicates not to pass in this parameter, i.e., not to set the weight.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.Status">
+            <summary>
+            Initial status of the record. Valid values: ENABLE, DISABLE. Default value: ENABLE. If `DISABLE` is passed in, the DNS record won't take effect, and the limit on round-robin DNS won't be verified.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordResponse.RecordId">
+            <summary>
+            Record ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest.RecordId">
+            <summary>
+            The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest.Status">
+            <summary>
+            Record status. Valid values: `ENABLE`, `DISABLE`. If `DISABLE` is passed in, the DNS record won't take effect, and the limit on round-robin DNS won't be verified.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusResponse.RecordId">
+            <summary>
+            Record ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordStatusResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest.Domain">
+            <summary>
+            Domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest.GroupId">
+            <summary>
+            Group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest.RecordId">
+            <summary>
+            Record ID. Separate multiple IDs by vertical bar ("|").
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest.DomainId">
+            <summary>
+            The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupRequest.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupResponse.RequestId">
+            <summary>
+            The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.ModifyRecordToGroupResponse.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.PurviewInfo.Name">
+            <summary>
+            Permission name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.PurviewInfo.Value">
+            <summary>
+            Permission value
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.PurviewInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordCountInfo.SubdomainCount">
+            <summary>
+            The subdomain count.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordCountInfo.ListCount">
+            <summary>
+            The count of records returned in the list.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordCountInfo.TotalCount">
+            <summary>
+            The total record count.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.RecordCountInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordGroupInfo.GroupId">
+            <summary>
+            Group ID
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordGroupInfo.GroupName">
+            <summary>
+            Group name
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordGroupInfo.GroupType">
+            <summary>
+            Group type. Valid values: `system`, `user`.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.RecordGroupInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.Id">
+            <summary>
+            Record ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.SubDomain">
+            <summary>
+            Subdomain (host record).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.RecordType">
+            <summary>
+            Record type. For more information, see the `DescribeRecordType` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.RecordLine">
+            <summary>
+            Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.RecordLineId">
+            <summary>
+            Split zone ID of the DNS record. For more information, see the `DescribeRecordLineList` API.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.Value">
+            <summary>
+            Record value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.Weight">
+            <summary>
+            Record weight.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.MX">
+            <summary>
+            MX record value. It is 0 by default for non-MX records.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.TTL">
+            <summary>
+            TTL value of the record.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.Enabled">
+            <summary>
+            Record status. Valid values: 0 (disabled); 1 (enabled).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.MonitorStatus">
+            <summary>
+            D-Monitor status of the record.
+            "Ok" : The server is normal.
+            "Warn" : There is an alarm on this record, and the server returns 4XX.
+            "Down" : The server is down.
+            "" : D-Monitor is disabled for this record.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.Remark">
+            <summary>
+            Record remarks.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.UpdatedOn">
+            <summary>
+            Last update time of the record.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordInfo.DomainId">
+            <summary>
+            Domain ID.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.RecordInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.RecordId">
+            <summary>
+            The record ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.Value">
+            <summary>
+            The record value.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.Status">
+            <summary>
+            The record status. Valid values: `ENABLE` (enabled), `DISABLE` (disabled).
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.UpdatedOn">
+            <summary>
+            The update time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.Name">
+            <summary>
+            The host name.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.Line">
+            <summary>
+            The record split zone.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.LineId">
+            <summary>
+            The split zone ID.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.Type">
+            <summary>
+            The record type.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.Weight">
+            <summary>
+            The record weight, which is required for round-robin DNS records.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.MonitorStatus">
+            <summary>
+            The monitoring status of the record. Valid values: `OK` (normal), `WARN` (warning), and `DOWN` (downtime). It is empty if no monitoring is set or the monitoring is suspended.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.Remark">
+            <summary>
+            The record remarks.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.TTL">
+            <summary>
+            The record cache time.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.MX">
+            <summary>
+            The MX value, applicable to the MX record only.
+            Note: This field may return null, indicating that no valid values can be obtained.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.RecordListItem.DefaultNS">
+            <summary>
+            Whether it is a default NS record.
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.RecordListItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.SubdomainAliasAnalyticsItem.Info">
+            <summary>
+            Statistics on the DNS query volume of a subdomain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.SubdomainAliasAnalyticsItem.Data">
+            <summary>
+            DNS query volume in the current statistical dimension
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.SubdomainAliasAnalyticsItem.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.SubdomainAnalyticsInfo.DnsFormat">
+            <summary>
+            `DATE`: Daily; `HOUR`: Hourly
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.SubdomainAnalyticsInfo.DnsTotal">
+            <summary>
+            Total DNS query volume for the current statistical period
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.SubdomainAnalyticsInfo.Domain">
+            <summary>
+            The queried domain
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.SubdomainAnalyticsInfo.StartDate">
+            <summary>
+            Start date of the current statistical period
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.SubdomainAnalyticsInfo.EndDate">
+            <summary>
+            End date of the current statistical period
+            </summary>
+        </member>
+        <member name="P:TencentCloud.Dnspod.V20210323.Models.SubdomainAnalyticsInfo.Subdomain">
+            <summary>
+            Subdomain
+            </summary>
+        </member>
+        <member name="M:TencentCloud.Dnspod.V20210323.Models.SubdomainAnalyticsInfo.ToMap(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            For internal usage only. DO NOT USE IT.
+            </summary>
+        </member>
+    </members>
+</doc>
