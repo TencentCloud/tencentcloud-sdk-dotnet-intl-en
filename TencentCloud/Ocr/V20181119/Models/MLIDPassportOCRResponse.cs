@@ -108,6 +108,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CodeCrc{ get; set; }
 
         /// <summary>
+        /// The surname.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Surname")]
+        public string Surname{ get; set; }
+
+        /// <summary>
+        /// The given name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("GivenName")]
+        public string GivenName{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -131,6 +145,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "CodeSet", this.CodeSet);
             this.SetParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
+            this.SetParamSimple(map, prefix + "Surname", this.Surname);
+            this.SetParamSimple(map, prefix + "GivenName", this.GivenName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
