@@ -79,6 +79,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("FailedReason")]
         public string FailedReason{ get; set; }
 
+        /// <summary>
+        /// Agent name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FailedReason", this.FailedReason);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

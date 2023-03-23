@@ -272,13 +272,15 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the last instance to which the cloud disk is attached
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastAttachInsId")]
         public string LastAttachInsId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message for the last operation of the cloud disk
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorPrompt")]
         public string ErrorPrompt{ get; set; }

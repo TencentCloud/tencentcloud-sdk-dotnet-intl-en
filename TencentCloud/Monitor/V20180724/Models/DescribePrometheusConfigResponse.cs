@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public PrometheusConfigItem[] RawJobs{ get; set; }
 
         /// <summary>
-        /// 
+        /// Probes
         /// </summary>
         [JsonProperty("Probes")]
         public PrometheusConfigItem[] Probes{ get; set; }

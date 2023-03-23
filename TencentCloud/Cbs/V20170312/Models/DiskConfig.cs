@@ -94,6 +94,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("MaxDiskSize")]
         public ulong? MaxDiskSize{ get; set; }
 
+        /// <summary>
+        /// Price of a monthly subscribed or pay-as-you-go cloud disk.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Price")]
+        public Price Price{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +118,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
             this.SetParamSimple(map, prefix + "MinDiskSize", this.MinDiskSize);
             this.SetParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
+            this.SetParamObj(map, prefix + "Price.", this.Price);
         }
     }
 }

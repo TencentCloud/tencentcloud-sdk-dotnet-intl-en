@@ -127,13 +127,15 @@ namespace TencentCloud.Cbs.V20170312.Models
         public AdvancedRetentionPolicy AdvancedRetentionPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// Source account ID of the copied snapshot policy
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CopyFromAccountUin")]
         public string CopyFromAccountUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

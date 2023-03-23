@@ -44,6 +44,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
+        /// Project name of the instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
+
+        /// <summary>
         /// Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "CdcName", this.CdcName);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);

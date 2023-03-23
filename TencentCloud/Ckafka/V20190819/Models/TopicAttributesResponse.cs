@@ -94,6 +94,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("QuotaConfig")]
         public InstanceQuotaConfigResp QuotaConfig{ get; set; }
 
+        /// <summary>
+        /// Number of replicas
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReplicaNum")]
+        public long? ReplicaNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +118,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
             this.SetParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
             this.SetParamObj(map, prefix + "QuotaConfig.", this.QuotaConfig);
+            this.SetParamSimple(map, prefix + "ReplicaNum", this.ReplicaNum);
         }
     }
 }
