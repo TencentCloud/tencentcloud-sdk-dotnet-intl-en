@@ -72,6 +72,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
+        /// <summary>
+        /// Clone instance region ID
+        /// </summary>
+        [JsonProperty("NewRegionId")]
+        public long? NewRegionId{ get; set; }
+
+        /// <summary>
+        /// Source instance region ID
+        /// </summary>
+        [JsonProperty("SrcRegionId")]
+        public long? SrcRegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+            this.SetParamSimple(map, prefix + "NewRegionId", this.NewRegionId);
+            this.SetParamSimple(map, prefix + "SrcRegionId", this.SrcRegionId);
         }
     }
 }
