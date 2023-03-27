@@ -37,23 +37,19 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// The user ID of the group’s teacher.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
 
         /// <summary>
-        /// The group type.
-        /// `0`: Ordinary group.
-        /// `1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+        /// The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
         /// </summary>
         [JsonProperty("GroupType")]
         public ulong? GroupType{ get; set; }
 
         /// <summary>
-        /// The IDs of the sub-groups.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubGroupIds")]
         public string[] SubGroupIds{ get; set; }

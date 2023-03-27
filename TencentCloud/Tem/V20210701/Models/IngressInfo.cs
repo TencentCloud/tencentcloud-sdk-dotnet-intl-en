@@ -105,6 +105,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("RewriteType")]
         public string RewriteType{ get; set; }
 
+        /// <summary>
+        /// CLB domain name
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +130,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Mixed", this.Mixed);
             this.SetParamSimple(map, prefix + "RewriteType", this.RewriteType);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

@@ -25,38 +25,31 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// Group ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Group ID Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// The group name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The group name. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// The user ID of the teacher.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
 
         /// <summary>
-        /// The group type. 
-        /// `0`: Ordinary group. 
-        /// `1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupType")]
         public ulong? GroupType{ get; set; }
 
         /// <summary>
-        /// The IDs of the sub-groups.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubGroupIds")]
         public string SubGroupIds{ get; set; }

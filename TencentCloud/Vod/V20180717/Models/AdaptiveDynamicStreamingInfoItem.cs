@@ -31,7 +31,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Container format. Valid values: hls, dash.
+        /// The packaging format. Valid values:
+        /// <li>`HLS`</li>
+        /// <li>`DASH`</li>
         /// </summary>
         [JsonProperty("Package")]
         public string Package{ get; set; }
@@ -65,6 +67,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
 
+        /// <summary>
+        /// The information of the streams.
+        /// </summary>
+        [JsonProperty("SubStreamSet")]
+        public MediaSubStreamInfoItem[] SubStreamSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
+            this.SetParamArrayObj(map, prefix + "SubStreamSet.", this.SubStreamSet);
         }
     }
 }

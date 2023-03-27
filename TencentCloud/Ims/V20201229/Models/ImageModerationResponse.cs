@@ -43,7 +43,7 @@ namespace TencentCloud.Ims.V20201229.Models
         public string SubLabel{ get; set; }
 
         /// <summary>
-        /// This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+        /// Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic.
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
@@ -102,6 +102,13 @@ namespace TencentCloud.Ims.V20201229.Models
         public string FileMD5{ get; set; }
 
         /// <summary>
+        /// Image recognition result, including the hit tags, confidence and location.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RecognitionResults")]
+        public RecognitionResult[] RecognitionResults{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -125,6 +132,7 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);
+            this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

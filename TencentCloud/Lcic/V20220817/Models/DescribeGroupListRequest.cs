@@ -37,19 +37,19 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+        /// The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+        /// The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
 
         /// <summary>
-        /// The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+        /// The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }

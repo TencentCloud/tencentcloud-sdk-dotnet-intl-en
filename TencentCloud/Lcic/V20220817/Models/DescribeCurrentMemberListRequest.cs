@@ -37,7 +37,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Page{ get; set; }
 
         /// <summary>
-        /// The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+        /// The maximum number of records per page. The value of this parameter cannot exceed 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

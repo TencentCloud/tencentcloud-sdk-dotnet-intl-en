@@ -25,15 +25,13 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The watermark text.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// The watermark text color.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }

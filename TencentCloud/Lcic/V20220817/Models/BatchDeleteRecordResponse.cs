@@ -25,8 +25,7 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The IDs of the rooms whose recordings are deleted.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RoomIds")]
         public long?[] RoomIds{ get; set; }

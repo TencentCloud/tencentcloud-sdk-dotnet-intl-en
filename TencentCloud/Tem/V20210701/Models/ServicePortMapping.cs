@@ -94,6 +94,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("PortMappingItemList")]
         public ServicePortMappingItem[] PortMappingItemList{ get; set; }
 
+        /// <summary>
+        /// CLB domain name
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExternalDomain")]
+        public string ExternalDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Yaml", this.Yaml);
             this.SetParamArraySimple(map, prefix + "Ports.", this.Ports);
             this.SetParamArrayObj(map, prefix + "PortMappingItemList.", this.PortMappingItemList);
+            this.SetParamSimple(map, prefix + "ExternalDomain", this.ExternalDomain);
         }
     }
 }

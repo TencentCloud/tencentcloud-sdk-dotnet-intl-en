@@ -25,13 +25,13 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The room IDs.	
+        /// The room IDs.
         /// </summary>
         [JsonProperty("RoomIds")]
         public long?[] RoomIds{ get; set; }
 
         /// <summary>
-        /// The SDKAppID assigned by LCIC.	
+        /// The SDKAppID assigned by LCIC.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }

@@ -25,36 +25,31 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The room name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The room name. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The room start time (Unix timestamp).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// The room end time (Unix timestamp).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Resolution")]
         public ulong? Resolution{ get; set; }
 
         /// <summary>
-        /// The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxMicNumber")]
         public ulong? MaxMicNumber{ get; set; }
@@ -67,71 +62,61 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string SubType{ get; set; }
 
         /// <summary>
-        /// The user ID of the teacher. User IDs are returned by the user registration APIs.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
 
         /// <summary>
-        /// Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AutoMic")]
         public ulong? AutoMic{ get; set; }
 
         /// <summary>
-        /// Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0`: Yes (default value); `1`: No.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TurnOffMic")]
         public ulong? TurnOffMic{ get; set; }
 
         /// <summary>
-        /// Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AudioQuality")]
         public ulong? AudioQuality{ get; set; }
 
         /// <summary>
-        /// Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DisableRecord")]
         public ulong? DisableRecord{ get; set; }
 
         /// <summary>
-        /// The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }
 
         /// <summary>
-        /// The number of RTC users.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RTCAudienceNumber")]
         public ulong? RTCAudienceNumber{ get; set; }
 
         /// <summary>
-        /// The audience type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The audience type. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AudienceType")]
         public ulong? AudienceType{ get; set; }
 
         /// <summary>
-        /// The recording layout.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RecordLayout")]
         public ulong? RecordLayout{ get; set; }
 
         /// <summary>
-        /// The ID of the group to bind.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The ID of the group to bind. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

@@ -333,6 +333,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to create a COS import task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosRechargeRequest"/></param>
+        /// <returns><see cref="CreateCosRechargeResponse"/></returns>
+        public async Task<CreateCosRechargeResponse> CreateCosRecharge(CreateCosRechargeRequest req)
+        {
+             JsonResponseModel<CreateCosRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCosRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCosRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a COS import task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosRechargeRequest"/></param>
+        /// <returns><see cref="CreateCosRechargeResponse"/></returns>
+        public CreateCosRechargeResponse CreateCosRechargeSync(CreateCosRechargeRequest req)
+        {
+             JsonResponseModel<CreateCosRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCosRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCosRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
@@ -493,7 +533,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a shipping rule. Note: To use this API, you need to check whether you have configured the role and permission for COS shipping tasks. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
+        /// This API is used to create a task to ship to COS. Note: To use this API, you need to check whether you have configured the role and permission for shipping to COS. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
         /// </summary>
         /// <param name="req"><see cref="CreateShipperRequest"/></param>
         /// <returns><see cref="CreateShipperResponse"/></returns>
@@ -513,7 +553,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a shipping rule. Note: To use this API, you need to check whether you have configured the role and permission for COS shipping tasks. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
+        /// This API is used to create a task to ship to COS. Note: To use this API, you need to check whether you have configured the role and permission for shipping to COS. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
         /// </summary>
         /// <param name="req"><see cref="CreateShipperRequest"/></param>
         /// <returns><see cref="CreateShipperResponse"/></returns>
@@ -1253,6 +1293,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to get COS import configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRechargesRequest"/></param>
+        /// <returns><see cref="DescribeCosRechargesResponse"/></returns>
+        public async Task<DescribeCosRechargesResponse> DescribeCosRecharges(DescribeCosRechargesRequest req)
+        {
+             JsonResponseModel<DescribeCosRechargesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCosRecharges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCosRechargesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get COS import configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRechargesRequest"/></param>
+        /// <returns><see cref="DescribeCosRechargesResponse"/></returns>
+        public DescribeCosRechargesResponse DescribeCosRechargesSync(DescribeCosRechargesRequest req)
+        {
+             JsonResponseModel<DescribeCosRechargesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCosRecharges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCosRechargesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of log download tasks.
         /// </summary>
         /// <param name="req"><see cref="DescribeExportsRequest"/></param>
@@ -1653,7 +1733,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of shipping rules.
+        /// This API is used to get the configuration of the task of shipping to COS.
         /// </summary>
         /// <param name="req"><see cref="DescribeShippersRequest"/></param>
         /// <returns><see cref="DescribeShippersResponse"/></returns>
@@ -1673,7 +1753,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of shipping rules.
+        /// This API is used to get the configuration of the task of shipping to COS.
         /// </summary>
         /// <param name="req"><see cref="DescribeShippersRequest"/></param>
         /// <returns><see cref="DescribeShippersResponse"/></returns>
@@ -1693,7 +1773,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        ///  This API is used to get the list of log topics and supports pagination.
+        /// This API is used to get the list of log topics and supports pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
         /// <returns><see cref="DescribeTopicsResponse"/></returns>
@@ -1713,7 +1793,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        ///  This API is used to get the list of log topics and supports pagination.
+        /// This API is used to get the list of log topics and supports pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
         /// <returns><see cref="DescribeTopicsResponse"/></returns>
@@ -1964,6 +2044,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyConsumer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a COS import task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosRechargeRequest"/></param>
+        /// <returns><see cref="ModifyCosRechargeResponse"/></returns>
+        public async Task<ModifyCosRechargeResponse> ModifyCosRecharge(ModifyCosRechargeRequest req)
+        {
+             JsonResponseModel<ModifyCosRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCosRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCosRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a COS import task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosRechargeRequest"/></param>
+        /// <returns><see cref="ModifyCosRechargeResponse"/></returns>
+        public ModifyCosRechargeResponse ModifyCosRechargeSync(ModifyCosRechargeRequest req)
+        {
+             JsonResponseModel<ModifyCosRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCosRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCosRechargeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

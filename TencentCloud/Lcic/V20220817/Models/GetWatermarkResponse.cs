@@ -25,29 +25,25 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The watermark settings for the teacher’s video.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeacherLogo")]
         public WatermarkConfig TeacherLogo{ get; set; }
 
         /// <summary>
-        /// The watermark settings for the whiteboard.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BoardLogo")]
         public WatermarkConfig BoardLogo{ get; set; }
 
         /// <summary>
-        /// The background image.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The background image. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackgroundPicture")]
         public BackgroundPictureConfig BackgroundPicture{ get; set; }
 
         /// <summary>
-        /// The watermark text.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Text")]
         public TextMarkConfig Text{ get; set; }

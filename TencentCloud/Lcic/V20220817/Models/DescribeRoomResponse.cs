@@ -55,64 +55,60 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD	
+        /// Resolution. Valid values: 1: SD; 2: HD; 3: FHD
         /// </summary>
         [JsonProperty("Resolution")]
         public ulong? Resolution{ get; set; }
 
         /// <summary>
-        /// Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
+        /// Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
         /// </summary>
         [JsonProperty("MaxMicNumber")]
         public ulong? MaxMicNumber{ get; set; }
 
         /// <summary>
-        /// Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.	
+        /// Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
         /// </summary>
         [JsonProperty("AutoMic")]
         public ulong? AutoMic{ get; set; }
 
         /// <summary>
-        /// Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.	
+        /// Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
         /// </summary>
         [JsonProperty("AudioQuality")]
         public ulong? AudioQuality{ get; set; }
 
         /// <summary>
-        /// The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
+        /// The room subtype. Valid values: videodoc: Document + Video; video: Video only.
         /// </summary>
         [JsonProperty("SubType")]
         public string SubType{ get; set; }
 
         /// <summary>
-        /// Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.	
+        /// Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
         /// </summary>
         [JsonProperty("DisableRecord")]
         public ulong? DisableRecord{ get; set; }
 
         /// <summary>
-        /// Assistant ID list	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Assistant ID list Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }
 
         /// <summary>
-        /// Recording URL. This parameter exists only after a room is ended.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Recording URL. This parameter exists only after a room is ended. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
 
         /// <summary>
-        /// The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The class status. 0: The class has not started. 1: The class has started. 2: The class ended. 3: The class expired. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupId")]

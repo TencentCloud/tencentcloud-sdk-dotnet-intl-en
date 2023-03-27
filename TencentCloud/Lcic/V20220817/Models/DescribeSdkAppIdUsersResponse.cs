@@ -31,8 +31,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// The information of the users.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Users")]
         public UserInfo[] Users{ get; set; }

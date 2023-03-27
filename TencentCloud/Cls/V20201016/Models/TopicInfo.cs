@@ -122,6 +122,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
 
+        /// <summary>
+        /// The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+        /// The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HotPeriod")]
+        public ulong? HotPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +151,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
+            this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         }
     }
 }

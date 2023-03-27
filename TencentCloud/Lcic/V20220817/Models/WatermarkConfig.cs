@@ -25,36 +25,31 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The URL of the watermark image.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// The watermark width, which is expressed as a percentage of the video width.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Width")]
         public float? Width{ get; set; }
 
         /// <summary>
-        /// The watermark height, which is expressed as a percentage of the video height.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Height")]
         public float? Height{ get; set; }
 
         /// <summary>
-        /// The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LocationX")]
         public float? LocationX{ get; set; }
 
         /// <summary>
-        /// The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LocationY")]
         public float? LocationY{ get; set; }

@@ -103,19 +103,19 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string Location{ get; set; }
 
         /// <summary>
-        /// The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+        /// The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
         /// </summary>
         [JsonProperty("Device")]
         public long? Device{ get; set; }
 
         /// <summary>
-        /// The number of times each member mics.
+        /// The number of times a user turned their mic on.
         /// </summary>
         [JsonProperty("PerMemberMicCount")]
         public long? PerMemberMicCount{ get; set; }
 
         /// <summary>
-        /// The number of messages sent by each member.
+        /// The number of messages sent by a user.
         /// </summary>
         [JsonProperty("PerMemberMessageCount")]
         public long? PerMemberMessageCount{ get; set; }

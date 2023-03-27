@@ -31,15 +31,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// The user ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user ID. Note: This field may return null, indicating that no valid values can be obtained
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }

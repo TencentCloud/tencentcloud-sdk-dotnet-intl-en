@@ -54,6 +54,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to add users to a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="AddGroupMemberRequest"/></param>
         /// <returns><see cref="AddGroupMemberResponse"/></returns>
@@ -74,6 +75,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to add users to a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="AddGroupMemberRequest"/></param>
         /// <returns><see cref="AddGroupMemberResponse"/></returns>
@@ -94,6 +96,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to add users to multiple groups at a time.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchAddGroupMemberRequest"/></param>
         /// <returns><see cref="BatchAddGroupMemberResponse"/></returns>
@@ -114,6 +117,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to add users to multiple groups at a time.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchAddGroupMemberRequest"/></param>
         /// <returns><see cref="BatchAddGroupMemberResponse"/></returns>
@@ -134,6 +138,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to create multiple groups at a time.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchCreateGroupWithMembersRequest"/></param>
         /// <returns><see cref="BatchCreateGroupWithMembersResponse"/></returns>
@@ -154,6 +159,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to create multiple groups at a time.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchCreateGroupWithMembersRequest"/></param>
         /// <returns><see cref="BatchCreateGroupWithMembersResponse"/></returns>
@@ -174,6 +180,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to create multiple rooms at a time.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchCreateRoomRequest"/></param>
         /// <returns><see cref="BatchCreateRoomResponse"/></returns>
@@ -194,6 +201,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to create multiple rooms at a time.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchCreateRoomRequest"/></param>
         /// <returns><see cref="BatchCreateRoomResponse"/></returns>
@@ -214,6 +222,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to remove users from multiple groups at a time.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchDeleteGroupMemberRequest"/></param>
         /// <returns><see cref="BatchDeleteGroupMemberResponse"/></returns>
@@ -234,6 +243,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to remove users from multiple groups at a time.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchDeleteGroupMemberRequest"/></param>
         /// <returns><see cref="BatchDeleteGroupMemberResponse"/></returns>
@@ -254,6 +264,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to delete the recordings of multiple rooms.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchDeleteRecordRequest"/></param>
         /// <returns><see cref="BatchDeleteRecordResponse"/></returns>
@@ -274,6 +285,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to delete the recordings of multiple rooms.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchDeleteRecordRequest"/></param>
         /// <returns><see cref="BatchDeleteRecordResponse"/></returns>
@@ -294,6 +306,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchRegisterRequest"/></param>
         /// <returns><see cref="BatchRegisterResponse"/></returns>
@@ -314,6 +327,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchRegisterRequest"/></param>
         /// <returns><see cref="BatchRegisterResponse"/></returns>
@@ -413,7 +427,8 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// This API is used to create a group and specify its members.
+        /// his API is used to create a group and specify its members.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="CreateGroupWithMembersRequest"/></param>
         /// <returns><see cref="CreateGroupWithMembersResponse"/></returns>
@@ -433,7 +448,8 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// This API is used to create a group and specify its members.
+        /// his API is used to create a group and specify its members.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="CreateGroupWithMembersRequest"/></param>
         /// <returns><see cref="CreateGroupWithMembersResponse"/></returns>
@@ -454,6 +470,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to merge groups.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="CreateGroupWithSubGroupRequest"/></param>
         /// <returns><see cref="CreateGroupWithSubGroupResponse"/></returns>
@@ -474,6 +491,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to merge groups.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="CreateGroupWithSubGroupRequest"/></param>
         /// <returns><see cref="CreateGroupWithSubGroupResponse"/></returns>
@@ -494,6 +512,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to create a room.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="CreateRoomRequest"/></param>
         /// <returns><see cref="CreateRoomResponse"/></returns>
@@ -514,6 +533,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to create a room.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="CreateRoomRequest"/></param>
         /// <returns><see cref="CreateRoomResponse"/></returns>
@@ -574,6 +594,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to delete a document.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteDocumentRequest"/></param>
         /// <returns><see cref="DeleteDocumentResponse"/></returns>
@@ -594,6 +615,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to delete a document.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteDocumentRequest"/></param>
         /// <returns><see cref="DeleteDocumentResponse"/></returns>
@@ -614,6 +636,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to delete one or multiple groups.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteGroupRequest"/></param>
         /// <returns><see cref="DeleteGroupResponse"/></returns>
@@ -634,6 +657,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to delete one or multiple groups.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteGroupRequest"/></param>
         /// <returns><see cref="DeleteGroupResponse"/></returns>
@@ -654,6 +678,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to remove users from a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteGroupMemberRequest"/></param>
         /// <returns><see cref="DeleteGroupMemberResponse"/></returns>
@@ -674,6 +699,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to remove users from a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteGroupMemberRequest"/></param>
         /// <returns><see cref="DeleteGroupMemberResponse"/></returns>
@@ -694,6 +720,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This example shows you how to delete the recording files of a specific room.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordRequest"/></param>
         /// <returns><see cref="DeleteRecordResponse"/></returns>
@@ -714,6 +741,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This example shows you how to delete the recording files of a specific room.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordRequest"/></param>
         /// <returns><see cref="DeleteRecordResponse"/></returns>
@@ -774,6 +802,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeCurrentMemberListRequest"/></param>
         /// <returns><see cref="DescribeCurrentMemberListResponse"/></returns>
@@ -794,6 +823,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeCurrentMemberListRequest"/></param>
         /// <returns><see cref="DescribeCurrentMemberListResponse"/></returns>
@@ -814,6 +844,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the information of a specific document.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDocumentRequest"/></param>
         /// <returns><see cref="DescribeDocumentResponse"/></returns>
@@ -834,6 +865,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the information of a specific document.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDocumentRequest"/></param>
         /// <returns><see cref="DescribeDocumentResponse"/></returns>
@@ -854,6 +886,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the document list of a specific room.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDocumentsByRoomRequest"/></param>
         /// <returns><see cref="DescribeDocumentsByRoomResponse"/></returns>
@@ -874,6 +907,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the document list of a specific room.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDocumentsByRoomRequest"/></param>
         /// <returns><see cref="DescribeDocumentsByRoomResponse"/></returns>
@@ -894,6 +928,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the details of a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupRequest"/></param>
         /// <returns><see cref="DescribeGroupResponse"/></returns>
@@ -914,6 +949,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the details of a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupRequest"/></param>
         /// <returns><see cref="DescribeGroupResponse"/></returns>
@@ -934,6 +970,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to query groups.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupListRequest"/></param>
         /// <returns><see cref="DescribeGroupListResponse"/></returns>
@@ -954,6 +991,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to query groups.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupListRequest"/></param>
         /// <returns><see cref="DescribeGroupListResponse"/></returns>
@@ -974,6 +1012,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the members of a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupMemberListRequest"/></param>
         /// <returns><see cref="DescribeGroupMemberListResponse"/></returns>
@@ -994,6 +1033,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the members of a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupMemberListRequest"/></param>
         /// <returns><see cref="DescribeGroupMemberListResponse"/></returns>
@@ -1014,6 +1054,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get room information.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomRequest"/></param>
         /// <returns><see cref="DescribeRoomResponse"/></returns>
@@ -1034,6 +1075,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get room information.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomRequest"/></param>
         /// <returns><see cref="DescribeRoomResponse"/></returns>
@@ -1054,6 +1096,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to obtain the statistics of a room. It can be called only after the room is ended.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomStatisticsRequest"/></param>
         /// <returns><see cref="DescribeRoomStatisticsResponse"/></returns>
@@ -1074,6 +1117,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to obtain the statistics of a room. It can be called only after the room is ended.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomStatisticsRequest"/></param>
         /// <returns><see cref="DescribeRoomStatisticsResponse"/></returns>
@@ -1094,6 +1138,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the user list of a specific application.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeSdkAppIdUsersRequest"/></param>
         /// <returns><see cref="DescribeSdkAppIdUsersResponse"/></returns>
@@ -1114,6 +1159,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get the user list of a specific application.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeSdkAppIdUsersRequest"/></param>
         /// <returns><see cref="DescribeSdkAppIdUsersResponse"/></returns>
@@ -1173,7 +1219,48 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// This API is used to get the message history of a room (room messages are retained for seven days).
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomMessageRequest"/></param>
+        /// <returns><see cref="GetRoomMessageResponse"/></returns>
+        public async Task<GetRoomMessageResponse> GetRoomMessage(GetRoomMessageRequest req)
+        {
+             JsonResponseModel<GetRoomMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRoomMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the message history of a room (room messages are retained for seven days).
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomMessageRequest"/></param>
+        /// <returns><see cref="GetRoomMessageResponse"/></returns>
+        public GetRoomMessageResponse GetRoomMessageSync(GetRoomMessageRequest req)
+        {
+             JsonResponseModel<GetRoomMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRoomMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get watermark settings.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="GetWatermarkRequest"/></param>
         /// <returns><see cref="GetWatermarkResponse"/></returns>
@@ -1194,6 +1281,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to get watermark settings.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="GetWatermarkRequest"/></param>
         /// <returns><see cref="GetWatermarkResponse"/></returns>
@@ -1294,6 +1382,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to modify an application.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyAppRequest"/></param>
         /// <returns><see cref="ModifyAppResponse"/></returns>
@@ -1314,6 +1403,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to modify an application.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyAppRequest"/></param>
         /// <returns><see cref="ModifyAppResponse"/></returns>
@@ -1334,6 +1424,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to modify a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupRequest"/></param>
         /// <returns><see cref="ModifyGroupResponse"/></returns>
@@ -1354,6 +1445,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to modify a group.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupRequest"/></param>
         /// <returns><see cref="ModifyGroupResponse"/></returns>
@@ -1374,6 +1466,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to modify a room.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyRoomRequest"/></param>
         /// <returns><see cref="ModifyRoomResponse"/></returns>
@@ -1394,6 +1487,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to modify a room.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyRoomRequest"/></param>
         /// <returns><see cref="ModifyRoomResponse"/></returns>
@@ -1414,6 +1508,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to modify a user profile such as the nickname and profile photo.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyUserProfileRequest"/></param>
         /// <returns><see cref="ModifyUserProfileResponse"/></returns>
@@ -1434,6 +1529,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to modify a user profile such as the nickname and profile photo.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyUserProfileRequest"/></param>
         /// <returns><see cref="ModifyUserProfileResponse"/></returns>
@@ -1534,6 +1630,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to configure watermarks.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="SetWatermarkRequest"/></param>
         /// <returns><see cref="SetWatermarkResponse"/></returns>
@@ -1554,6 +1651,7 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to configure watermarks.
+        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="SetWatermarkRequest"/></param>
         /// <returns><see cref="SetWatermarkResponse"/></returns>

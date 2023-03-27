@@ -31,13 +31,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// The page to return records from. The default value is `1`.
+        /// The page to return records from. The default value is 1.
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// The maximum number of records to return per page. The default value is `20`.
+        /// The maximum number of records to return per page. The default value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

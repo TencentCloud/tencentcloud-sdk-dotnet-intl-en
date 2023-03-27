@@ -79,7 +79,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? TranscodeProgress{ get; set; }
 
         /// <summary>
-        /// The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+        /// The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
         /// </summary>
         [JsonProperty("TranscodeState")]
         public ulong? TranscodeState{ get; set; }

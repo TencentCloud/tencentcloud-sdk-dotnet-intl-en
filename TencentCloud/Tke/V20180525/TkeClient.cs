@@ -2533,7 +2533,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the status of events, audits and logs.
+        /// This API is used to query the status of event storage, cluster auditing and logging.
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
         /// <returns><see cref="DescribeEdgeLogSwitchesResponse"/></returns>
@@ -2553,7 +2553,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the status of events, audits and logs.
+        /// This API is used to query the status of event storage, cluster auditing and logging.
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
         /// <returns><see cref="DescribeEdgeLogSwitchesResponse"/></returns>

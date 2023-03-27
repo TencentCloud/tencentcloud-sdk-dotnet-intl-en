@@ -25,7 +25,7 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The SDKAppID assigned by LCIC.	
+        /// The SDKAppID assigned by LCIC.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
@@ -49,49 +49,49 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string VideoUrl{ get; set; }
 
         /// <summary>
-        /// The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+        /// The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
         /// </summary>
         [JsonProperty("BoardW")]
         public float? BoardW{ get; set; }
 
         /// <summary>
-        /// The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+        /// The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
         /// </summary>
         [JsonProperty("BoardH")]
         public float? BoardH{ get; set; }
 
         /// <summary>
-        /// The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+        /// The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
         /// </summary>
         [JsonProperty("BoardX")]
         public float? BoardX{ get; set; }
 
         /// <summary>
-        /// The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+        /// The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
         /// </summary>
         [JsonProperty("BoardY")]
         public float? BoardY{ get; set; }
 
         /// <summary>
-        /// The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+        /// The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
         /// </summary>
         [JsonProperty("TeacherW")]
         public float? TeacherW{ get; set; }
 
         /// <summary>
-        /// The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+        /// The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
         /// </summary>
         [JsonProperty("TeacherH")]
         public float? TeacherH{ get; set; }
 
         /// <summary>
-        /// The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+        /// The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
         /// </summary>
         [JsonProperty("TeacherX")]
         public float? TeacherX{ get; set; }
 
         /// <summary>
-        /// The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+        /// The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
         /// </summary>
         [JsonProperty("TeacherY")]
         public float? TeacherY{ get; set; }

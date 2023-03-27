@@ -38,6 +38,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>`DescribeFileAttributesTask`: Getting file attributes</li>
         /// <li>`RebuildMedia`; Remastering audio/video</li>
         /// <li> `ReviewAudioVideo`: Moderation</li>
+        /// <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

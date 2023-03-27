@@ -25,15 +25,13 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The group names.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The group names. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// The user ID of the teacher.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }

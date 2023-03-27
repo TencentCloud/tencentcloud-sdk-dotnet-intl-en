@@ -25,99 +25,85 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The document ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The document ID. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DocumentId")]
         public string DocumentId{ get; set; }
 
         /// <summary>
-        /// The document’s original URL.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DocumentUrl")]
         public string DocumentUrl{ get; set; }
 
         /// <summary>
-        /// The document title.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The document title. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DocumentName")]
         public string DocumentName{ get; set; }
 
         /// <summary>
-        /// The user ID of the document’s owner.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// The application ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The application ID. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// The document access type. `0`: Private; `1`: Public.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The document access type. 0: Private; 1: Public. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Permission")]
         public ulong? Permission{ get; set; }
 
         /// <summary>
-        /// The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranscodeResult")]
         public string TranscodeResult{ get; set; }
 
         /// <summary>
-        /// The transcoding type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The transcoding type. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranscodeType")]
         public ulong? TranscodeType{ get; set; }
 
         /// <summary>
-        /// The transcoding progress. Value range: 0-100.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The transcoding progress. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranscodeProgress")]
         public ulong? TranscodeProgress{ get; set; }
 
         /// <summary>
-        /// The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranscodeState")]
         public ulong? TranscodeState{ get; set; }
 
         /// <summary>
-        /// The error message for failed transcoding.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The error message for failed transcoding. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranscodeInfo")]
         public string TranscodeInfo{ get; set; }
 
         /// <summary>
-        /// The document type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The document type. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DocumentType")]
         public string DocumentType{ get; set; }
 
         /// <summary>
-        /// The document size (bytes).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The document size (bytes). Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DocumentSize")]
         public ulong? DocumentSize{ get; set; }
 
         /// <summary>
-        /// The time (Unix timestamp) when the document was last updated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }

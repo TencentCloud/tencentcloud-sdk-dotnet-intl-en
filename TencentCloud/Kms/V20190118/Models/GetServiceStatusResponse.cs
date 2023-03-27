@@ -78,6 +78,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public bool? ExclusiveHSMEnabled{ get; set; }
 
         /// <summary>
+        /// KMS subscription information.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubscriptionInfo")]
+        public string SubscriptionInfo{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -97,6 +104,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
             this.SetParamSimple(map, prefix + "ExclusiveVSMEnabled", this.ExclusiveVSMEnabled);
             this.SetParamSimple(map, prefix + "ExclusiveHSMEnabled", this.ExclusiveHSMEnabled);
+            this.SetParamSimple(map, prefix + "SubscriptionInfo", this.SubscriptionInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

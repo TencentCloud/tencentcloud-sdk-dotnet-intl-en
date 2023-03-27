@@ -43,18 +43,13 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? Page{ get; set; }
 
         /// <summary>
-        /// The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+        /// The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// The document access type.
-        /// [0]: The private documents of the owner.
-        /// [1]: The public documents of the owner.
-        /// [0,1]: The private and public documents of the owner.
-        /// [2]: The private and public documents of all users (including the owner).
-        /// Default value: [2].
+        /// The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
         /// </summary>
         [JsonProperty("Permission")]
         public ulong?[] Permission{ get; set; }

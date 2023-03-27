@@ -49,27 +49,25 @@ namespace TencentCloud.Lcic.V20220817.Models
         public MemberRecord[] MemberRecords{ get; set; }
 
         /// <summary>
-        /// The actual start time of the room, in Unix timestamp, accurate to seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RealStartTime")]
         public ulong? RealStartTime{ get; set; }
 
         /// <summary>
-        /// The actual end time of the room, in Unix timestamp, accurate to seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RealEndTime")]
         public ulong? RealEndTime{ get; set; }
 
         /// <summary>
-        /// The total number of room messages.
+        /// The total message count of the room.
         /// </summary>
         [JsonProperty("MessageCount")]
         public ulong? MessageCount{ get; set; }
 
         /// <summary>
-        /// The total number of mics in the room.
+        /// The total number of mic-on students in the room.
         /// </summary>
         [JsonProperty("MicCount")]
         public ulong? MicCount{ get; set; }
