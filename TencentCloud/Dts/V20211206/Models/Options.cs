@@ -73,6 +73,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("DdlOptions")]
         public DdlOption[] DdlOptions{ get; set; }
 
+        /// <summary>
+        /// Kafka sync options
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KafkaOption")]
+        public KafkaOption KafkaOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArraySimple(map, prefix + "OpTypes.", this.OpTypes);
             this.SetParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
             this.SetParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
+            this.SetParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
         }
     }
 }

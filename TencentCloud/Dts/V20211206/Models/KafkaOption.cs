@@ -15,33 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcr.V20190924.Models
+namespace TencentCloud.Dts.V20211206.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceAllResponse : AbstractModel
+    public class KafkaOption : AbstractModel
     {
         
         /// <summary>
-        /// Total number of instances
+        /// Type of data that is delivered to Kafka, such as `Avro` and `Json`.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("DataType")]
+        public string DataType{ get; set; }
 
         /// <summary>
-        /// List of instances
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
         /// </summary>
-        [JsonProperty("Registries")]
-        public Registry[] Registries{ get; set; }
+        [JsonProperty("TopicType")]
+        public string TopicType{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Topic for DDL storage
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DDLTopicName")]
+        public string DDLTopicName{ get; set; }
+
+        /// <summary>
+        /// Topic description
+        /// </summary>
+        [JsonProperty("TopicRules")]
+        public TopicRule[] TopicRules{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Registries.", this.Registries);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DataType", this.DataType);
+            this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
+            this.SetParamSimple(map, prefix + "DDLTopicName", this.DDLTopicName);
+            this.SetParamArrayObj(map, prefix + "TopicRules.", this.TopicRules);
         }
     }
 }

@@ -25,22 +25,22 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Additional data
-        /// </summary>
-        [JsonProperty("Externals")]
-        public Externals Externals{ get; set; }
-
-        /// <summary>
         /// Timer name. Currently `TerminateInstances` is the only supported value.
         /// </summary>
         [JsonProperty("TimerAction")]
         public string TimerAction{ get; set; }
 
         /// <summary>
-        /// Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+        /// Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
         /// </summary>
         [JsonProperty("ActionTime")]
         public string ActionTime{ get; set; }
+
+        /// <summary>
+        /// Additional data
+        /// </summary>
+        [JsonProperty("Externals")]
+        public Externals Externals{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Externals.", this.Externals);
             this.SetParamSimple(map, prefix + "TimerAction", this.TimerAction);
             this.SetParamSimple(map, prefix + "ActionTime", this.ActionTime);
+            this.SetParamObj(map, prefix + "Externals.", this.Externals);
         }
     }
 }

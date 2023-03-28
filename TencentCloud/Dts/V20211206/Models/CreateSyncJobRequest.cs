@@ -43,7 +43,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SrcRegion{ get; set; }
 
         /// <summary>
-        /// Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+        /// Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }

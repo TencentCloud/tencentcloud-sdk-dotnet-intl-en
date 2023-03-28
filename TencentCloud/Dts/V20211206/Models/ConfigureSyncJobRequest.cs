@@ -79,10 +79,34 @@ namespace TencentCloud.Dts.V20211206.Models
         public Endpoint SrcInfo{ get; set; }
 
         /// <summary>
+        /// Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+        /// </summary>
+        [JsonProperty("SrcInfos")]
+        public SyncDBEndpointInfos SrcInfos{ get; set; }
+
+        /// <summary>
+        /// Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+        /// </summary>
+        [JsonProperty("SrcNodeType")]
+        public string SrcNodeType{ get; set; }
+
+        /// <summary>
         /// Target database information. This parameter is used by single-node databases.
         /// </summary>
         [JsonProperty("DstInfo")]
         public Endpoint DstInfo{ get; set; }
+
+        /// <summary>
+        /// Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+        /// </summary>
+        [JsonProperty("DstInfos")]
+        public SyncDBEndpointInfos DstInfos{ get; set; }
+
+        /// <summary>
+        /// Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+        /// </summary>
+        [JsonProperty("DstNodeType")]
+        public string DstNodeType{ get; set; }
 
         /// <summary>
         /// Sync task options
@@ -111,7 +135,11 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
             this.SetParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
             this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+            this.SetParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
+            this.SetParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
+            this.SetParamObj(map, prefix + "DstInfos.", this.DstInfos);
+            this.SetParamSimple(map, prefix + "DstNodeType", this.DstNodeType);
             this.SetParamObj(map, prefix + "Options.", this.Options);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }

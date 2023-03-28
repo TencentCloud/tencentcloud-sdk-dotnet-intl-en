@@ -1613,46 +1613,6 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// This API is used to query the information of all instances.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceAllRequest"/></param>
-        /// <returns><see cref="DescribeInstanceAllResponse"/></returns>
-        public async Task<DescribeInstanceAllResponse> DescribeInstanceAll(DescribeInstanceAllRequest req)
-        {
-             JsonResponseModel<DescribeInstanceAllResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInstanceAll");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAllResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to query the information of all instances.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceAllRequest"/></param>
-        /// <returns><see cref="DescribeInstanceAllResponse"/></returns>
-        public DescribeInstanceAllResponse DescribeInstanceAllSync(DescribeInstanceAllRequest req)
-        {
-             JsonResponseModel<DescribeInstanceAllResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceAll");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAllResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to query the list of all namespaces in an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAllNamespacesRequest"/></param>
