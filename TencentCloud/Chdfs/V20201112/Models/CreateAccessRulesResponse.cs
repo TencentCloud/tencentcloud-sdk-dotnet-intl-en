@@ -25,6 +25,13 @@ namespace TencentCloud.Chdfs.V20201112.Models
     {
         
         /// <summary>
+        /// List of permission rules
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccessRules")]
+        public AccessRule[] AccessRules{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +43,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "AccessRules.", this.AccessRules);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -59,6 +59,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("RenewOrder")]
         public string RenewOrder{ get; set; }
 
+        /// <summary>
+        /// Whether the certificate is a Chinese SM certificate.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SMCert")]
+        public long? SMCert{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ReplacedBy", this.ReplacedBy);
             this.SetParamSimple(map, prefix + "ReplacedFor", this.ReplacedFor);
             this.SetParamSimple(map, prefix + "RenewOrder", this.RenewOrder);
+            this.SetParamSimple(map, prefix + "SMCert", this.SMCert);
         }
     }
 }

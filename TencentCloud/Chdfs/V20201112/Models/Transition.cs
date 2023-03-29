@@ -31,7 +31,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public ulong? Days{ get; set; }
 
         /// <summary>
-        /// Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+        /// Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

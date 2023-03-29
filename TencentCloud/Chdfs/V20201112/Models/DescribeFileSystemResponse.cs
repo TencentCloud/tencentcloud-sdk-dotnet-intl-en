@@ -59,6 +59,20 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public ulong? DegradeCapacityUsed{ get; set; }
 
         /// <summary>
+        /// COS DEEP ARCHIVE storage usage, in bytes
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeepArchiveCapacityUsed")]
+        public ulong? DeepArchiveCapacityUsed{ get; set; }
+
+        /// <summary>
+        /// COS INTELLIGENT TIERING storage usage, in bytes
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IntelligentCapacityUsed")]
+        public ulong? IntelligentCapacityUsed{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -75,6 +89,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
             this.SetParamSimple(map, prefix + "StandardCapacityUsed", this.StandardCapacityUsed);
             this.SetParamSimple(map, prefix + "DegradeCapacityUsed", this.DegradeCapacityUsed);
+            this.SetParamSimple(map, prefix + "DeepArchiveCapacityUsed", this.DeepArchiveCapacityUsed);
+            this.SetParamSimple(map, prefix + "IntelligentCapacityUsed", this.IntelligentCapacityUsed);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

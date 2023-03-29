@@ -25,12 +25,6 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// The day of the week on which to repeat the snapshot operation
-        /// </summary>
-        [JsonProperty("DayOfWeek")]
-        public string DayOfWeek{ get; set; }
-
-        /// <summary>
         /// The time point when to repeat the snapshot operation
         /// </summary>
         [JsonProperty("Hour")]
@@ -43,10 +37,28 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
+        /// The day of the week on which to repeat the snapshot operation
+        /// </summary>
+        [JsonProperty("DayOfWeek")]
+        public string DayOfWeek{ get; set; }
+
+        /// <summary>
         /// Snapshot retention period
         /// </summary>
         [JsonProperty("AliveDays")]
         public ulong? AliveDays{ get; set; }
+
+        /// <summary>
+        /// The specific day (day 1 to day 31) of the month on which to create a snapshot.
+        /// </summary>
+        [JsonProperty("DayOfMonth")]
+        public string DayOfMonth{ get; set; }
+
+        /// <summary>
+        /// The snapshot interval, in days.
+        /// </summary>
+        [JsonProperty("IntervalDays")]
+        public ulong? IntervalDays{ get; set; }
 
 
         /// <summary>
@@ -54,10 +66,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DayOfWeek", this.DayOfWeek);
             this.SetParamSimple(map, prefix + "Hour", this.Hour);
             this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "DayOfWeek", this.DayOfWeek);
             this.SetParamSimple(map, prefix + "AliveDays", this.AliveDays);
+            this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+            this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
         }
     }
 }

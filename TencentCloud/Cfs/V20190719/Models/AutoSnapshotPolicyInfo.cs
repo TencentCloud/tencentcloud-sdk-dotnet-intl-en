@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? FileSystemNums{ get; set; }
 
         /// <summary>
-        /// The day of the week on which to regularly back up the snapshot
+        /// The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public string DayOfWeek{ get; set; }
@@ -102,6 +102,20 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("FileSystems")]
         public FileSystemByPolicy[] FileSystems{ get; set; }
 
+        /// <summary>
+        /// The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DayOfMonth")]
+        public string DayOfMonth{ get; set; }
+
+        /// <summary>
+        /// The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IntervalDays")]
+        public ulong? IntervalDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +135,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "AliveDays", this.AliveDays);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
+            this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+            this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
         }
     }
 }
