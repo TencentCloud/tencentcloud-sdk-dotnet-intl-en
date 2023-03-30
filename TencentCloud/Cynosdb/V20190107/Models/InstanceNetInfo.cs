@@ -25,49 +25,57 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Network type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceGroupType")]
         public string InstanceGroupType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance group ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// VPC ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subnet ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Network type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }
 
         /// <summary>
-        /// 
+        /// VPC IP
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 
+        /// VPC port
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public network domain name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
@@ -79,13 +87,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public network port
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public network status
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }

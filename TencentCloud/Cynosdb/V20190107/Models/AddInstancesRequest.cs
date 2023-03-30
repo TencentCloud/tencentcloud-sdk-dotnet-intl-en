@@ -49,19 +49,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
-        /// Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+        /// Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// VPC ID. This parameter has been disused.
+        /// VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+        /// Subnet ID. If `VpcId` is set, `SubnetId` is required.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -115,6 +115,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceParams")]
         public ModifyParamItem[] InstanceParams{ get; set; }
 
+        /// <summary>
+        /// Security group ID. You can specify an security group when creating a read-only instance.
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

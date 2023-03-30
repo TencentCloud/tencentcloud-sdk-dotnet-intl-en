@@ -253,6 +253,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to create a DataHub topic.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
+        /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
+        public async Task<CreateDatahubTopicResponse> CreateDatahubTopic(CreateDatahubTopicRequest req)
+        {
+             JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a DataHub topic.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
+        /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
+        public CreateDatahubTopicResponse CreateDatahubTopicSync(CreateDatahubTopicRequest req)
+        {
+             JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a pay-as-you-go instance.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePostRequest"/></param>

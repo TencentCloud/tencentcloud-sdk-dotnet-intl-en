@@ -117,15 +117,15 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string ApiAccessIpv6{ get; set; }
 
         /// <summary>
-        /// Cluster type
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// Cluster status
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
@@ -213,6 +213,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("IsReadOnlyUlogBackupExpireDay")]
         public ulong? IsReadOnlyUlogBackupExpireDay{ get; set; }
 
+        /// <summary>
+        /// restproxy Status
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RestProxyStatus")]
+        public long? RestProxyStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +255,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
             this.SetParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
             this.SetParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
+            this.SetParamSimple(map, prefix + "RestProxyStatus", this.RestProxyStatus);
         }
     }
 }

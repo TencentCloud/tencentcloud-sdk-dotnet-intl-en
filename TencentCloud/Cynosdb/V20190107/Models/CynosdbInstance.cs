@@ -328,7 +328,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance network information
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("InstanceNetInfo")]
         public InstanceNetInfo[] InstanceNetInfo{ get; set; }
