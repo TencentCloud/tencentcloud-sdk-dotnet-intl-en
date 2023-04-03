@@ -43,7 +43,11 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+        /// Availability status. Valid values:
+        /// `UNAVAILABLE`.
+        /// `AVAILABLE`.
+        /// `SELLOUT`.
+        /// `SUPPORTMODIFYONLY` (supports configuration adjustment).
         /// </summary>
         [JsonProperty("ZoneState")]
         public string ZoneState{ get; set; }

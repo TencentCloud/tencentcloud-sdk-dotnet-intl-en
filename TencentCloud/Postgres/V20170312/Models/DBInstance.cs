@@ -67,7 +67,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceName{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
+        /// Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, upgrading (upgrading kernel version).
         /// </summary>
         [JsonProperty("DBInstanceStatus")]
         public string DBInstanceStatus{ get; set; }

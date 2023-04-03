@@ -213,6 +213,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a full backup of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaseBackupRequest"/></param>
+        /// <returns><see cref="CreateBaseBackupResponse"/></returns>
+        public async Task<CreateBaseBackupResponse> CreateBaseBackup(CreateBaseBackupRequest req)
+        {
+             JsonResponseModel<CreateBaseBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBaseBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBaseBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a full backup of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaseBackupRequest"/></param>
+        /// <returns><see cref="CreateBaseBackupResponse"/></returns>
+        public CreateBaseBackupResponse CreateBaseBackupSync(CreateBaseBackupRequest req)
+        {
+             JsonResponseModel<CreateBaseBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBaseBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBaseBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add a network for an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceNetworkAccessRequest"/></param>
@@ -533,6 +573,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to delete the specified full backup of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaseBackupRequest"/></param>
+        /// <returns><see cref="DeleteBaseBackupResponse"/></returns>
+        public async Task<DeleteBaseBackupResponse> DeleteBaseBackup(DeleteBaseBackupRequest req)
+        {
+             JsonResponseModel<DeleteBaseBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBaseBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBaseBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the specified full backup of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaseBackupRequest"/></param>
+        /// <returns><see cref="DeleteBaseBackupResponse"/></returns>
+        public DeleteBaseBackupResponse DeleteBaseBackupSync(DeleteBaseBackupRequest req)
+        {
+             JsonResponseModel<DeleteBaseBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBaseBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBaseBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a network of an instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteDBInstanceNetworkAccessRequest"/></param>
@@ -564,6 +644,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDBInstanceNetworkAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the specified log backup of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogBackupRequest"/></param>
+        /// <returns><see cref="DeleteLogBackupResponse"/></returns>
+        public async Task<DeleteLogBackupResponse> DeleteLogBackup(DeleteLogBackupRequest req)
+        {
+             JsonResponseModel<DeleteLogBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLogBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLogBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the specified log backup of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogBackupRequest"/></param>
+        /// <returns><see cref="DeleteLogBackupResponse"/></returns>
+        public DeleteLogBackupResponse DeleteLogBackupSync(DeleteLogBackupRequest req)
+        {
+             JsonResponseModel<DeleteLogBackupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLogBackup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLogBackupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,6 +933,86 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to get the download URL of a backup.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadURLResponse"/></returns>
+        public async Task<DescribeBackupDownloadURLResponse> DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDownloadURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the download URL of a backup.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadURLRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadURLResponse"/></returns>
+        public DescribeBackupDownloadURLResponse DescribeBackupDownloadURLSync(DescribeBackupDownloadURLRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDownloadURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the backup overview. It will return the current number and size of backups, free backup space size, and paid backup space size (all size values are in bytes).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBackupOverviewResponse"/></returns>
+        public async Task<DescribeBackupOverviewResponse> DescribeBackupOverview(DescribeBackupOverviewRequest req)
+        {
+             JsonResponseModel<DescribeBackupOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the backup overview. It will return the current number and size of backups, free backup space size, and paid backup space size (all size values are in bytes).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBackupOverviewResponse"/></returns>
+        public DescribeBackupOverviewResponse DescribeBackupOverviewSync(DescribeBackupOverviewRequest req)
+        {
+             JsonResponseModel<DescribeBackupOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query all backup plans of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupPlansRequest"/></param>
@@ -844,6 +1044,126 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupPlans");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupPlansResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the backup statistics of an instance. It will return the number and size (bytes) of backups of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupSummariesRequest"/></param>
+        /// <returns><see cref="DescribeBackupSummariesResponse"/></returns>
+        public async Task<DescribeBackupSummariesResponse> DescribeBackupSummaries(DescribeBackupSummariesRequest req)
+        {
+             JsonResponseModel<DescribeBackupSummariesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupSummaries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupSummariesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the backup statistics of an instance. It will return the number and size (bytes) of backups of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupSummariesRequest"/></param>
+        /// <returns><see cref="DescribeBackupSummariesResponse"/></returns>
+        public DescribeBackupSummariesResponse DescribeBackupSummariesSync(DescribeBackupSummariesRequest req)
+        {
+             JsonResponseModel<DescribeBackupSummariesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupSummaries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupSummariesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of full backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaseBackupsRequest"/></param>
+        /// <returns><see cref="DescribeBaseBackupsResponse"/></returns>
+        public async Task<DescribeBaseBackupsResponse> DescribeBaseBackups(DescribeBaseBackupsRequest req)
+        {
+             JsonResponseModel<DescribeBaseBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBaseBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBaseBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of full backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaseBackupsRequest"/></param>
+        /// <returns><see cref="DescribeBaseBackupsResponse"/></returns>
+        public DescribeBaseBackupsResponse DescribeBaseBackupsSync(DescribeBaseBackupsRequest req)
+        {
+             JsonResponseModel<DescribeBaseBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBaseBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBaseBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query purchasable instance specifications.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClassesRequest"/></param>
+        /// <returns><see cref="DescribeClassesResponse"/></returns>
+        public async Task<DescribeClassesResponse> DescribeClasses(DescribeClassesRequest req)
+        {
+             JsonResponseModel<DescribeClassesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClasses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query purchasable instance specifications.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClassesRequest"/></param>
+        /// <returns><see cref="DescribeClassesResponse"/></returns>
+        public DescribeClassesResponse DescribeClassesSync(DescribeClassesRequest req)
+        {
+             JsonResponseModel<DescribeClassesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClasses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1173,6 +1493,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the list of supported database versions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBVersionsRequest"/></param>
+        /// <returns><see cref="DescribeDBVersionsResponse"/></returns>
+        public async Task<DescribeDBVersionsResponse> DescribeDBVersions(DescribeDBVersionsRequest req)
+        {
+             JsonResponseModel<DescribeDBVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of supported database versions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBVersionsRequest"/></param>
+        /// <returns><see cref="DescribeDBVersionsResponse"/></returns>
+        public DescribeDBVersionsResponse DescribeDBVersionsSync(DescribeDBVersionsRequest req)
+        {
+             JsonResponseModel<DescribeDBVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the instance Xlog list.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
@@ -1324,6 +1684,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEncryptionKeys");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptionKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of log backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogBackupsRequest"/></param>
+        /// <returns><see cref="DescribeLogBackupsResponse"/></returns>
+        public async Task<DescribeLogBackupsResponse> DescribeLogBackups(DescribeLogBackupsRequest req)
+        {
+             JsonResponseModel<DescribeLogBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of log backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogBackupsRequest"/></param>
+        /// <returns><see cref="DescribeLogBackupsResponse"/></returns>
+        public DescribeLogBackupsResponse DescribeLogBackupsSync(DescribeLogBackupsRequest req)
+        {
+             JsonResponseModel<DescribeLogBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogBackupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2133,6 +2533,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the expiration time of the specified full backup of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
+        /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
+        public async Task<ModifyBaseBackupExpireTimeResponse> ModifyBaseBackupExpireTime(ModifyBaseBackupExpireTimeRequest req)
+        {
+             JsonResponseModel<ModifyBaseBackupExpireTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBaseBackupExpireTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBaseBackupExpireTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the expiration time of the specified full backup of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
+        /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
+        public ModifyBaseBackupExpireTimeResponse ModifyBaseBackupExpireTimeSync(ModifyBaseBackupExpireTimeRequest req)
+        {
+             JsonResponseModel<ModifyBaseBackupExpireTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBaseBackupExpireTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBaseBackupExpireTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the AZs where the nodes of a source instance reside.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceDeploymentRequest"/></param>
@@ -2884,6 +3324,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "UpgradeDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the kernel version of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceKernelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceKernelVersionResponse"/></returns>
+        public async Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceKernelVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDBInstanceKernelVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceKernelVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the kernel version of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceKernelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceKernelVersionResponse"/></returns>
+        public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersionSync(UpgradeDBInstanceKernelVersionRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceKernelVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDBInstanceKernelVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceKernelVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
