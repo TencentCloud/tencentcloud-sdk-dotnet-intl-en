@@ -373,6 +373,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] CheckPlatform{ get; set; }
 
         /// <summary>
+        /// File accessed time
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FileAccessTime")]
+        public string FileAccessTime{ get; set; }
+
+        /// <summary>
+        /// File modified time
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FileModifyTime")]
+        public string FileModifyTime{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -431,6 +445,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
             this.SetParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
+            this.SetParamSimple(map, prefix + "FileAccessTime", this.FileAccessTime);
+            this.SetParamSimple(map, prefix + "FileModifyTime", this.FileModifyTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

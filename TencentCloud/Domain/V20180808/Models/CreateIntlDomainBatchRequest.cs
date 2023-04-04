@@ -66,6 +66,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("UpdateProhibition")]
         public bool? UpdateProhibition{ get; set; }
 
+        /// <summary>
+        /// The custom DNS servers
+        /// </summary>
+        [JsonProperty("CustomDns")]
+        public string[] CustomDns{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "TransferProhibition", this.TransferProhibition);
             this.SetParamSimple(map, prefix + "UpdateProhibition", this.UpdateProhibition);
+            this.SetParamArraySimple(map, prefix + "CustomDns.", this.CustomDns);
         }
     }
 }

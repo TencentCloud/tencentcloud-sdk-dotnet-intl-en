@@ -92,6 +92,15 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ClickTimeout{ get; set; }
 
         /// <summary>
+        /// Path scanning mode: 
+        /// `SCAN_PATH_ALL`: Scan all paths
+        /// `SCAN_PATH_DEFAULT`: Scan the default path
+        /// `SCAN_PATH_USER_DEFINE`: Scan the custom path
+        /// </summary>
+        [JsonProperty("ScanPathMode")]
+        public string ScanPathMode{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -114,6 +123,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "ScanIds.", this.ScanIds);
             this.SetParamArraySimple(map, prefix + "ScanPath.", this.ScanPath);
             this.SetParamSimple(map, prefix + "ClickTimeout", this.ClickTimeout);
+            this.SetParamSimple(map, prefix + "ScanPathMode", this.ScanPathMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
