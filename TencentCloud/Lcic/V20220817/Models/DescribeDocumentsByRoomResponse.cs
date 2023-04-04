@@ -25,7 +25,8 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Documents")]
         public DocumentInfo[] Documents{ get; set; }

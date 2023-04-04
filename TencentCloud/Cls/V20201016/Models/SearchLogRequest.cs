@@ -96,6 +96,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("SamplingRate")]
         public float? SamplingRate{ get; set; }
 
+        /// <summary>
+        /// Search syntax.
+        /// `0` (default): Lucene; `1`: CQL.
+        /// For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +119,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+            this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         }
     }
 }

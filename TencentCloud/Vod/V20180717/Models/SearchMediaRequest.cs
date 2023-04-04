@@ -171,6 +171,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StorageClasses{ get; set; }
 
         /// <summary>
+        /// The file formats.
+        /// <li>Array length limit: 10</li>
+        /// </summary>
+        [JsonProperty("MediaTypes")]
+        public string[] MediaTypes{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Status")]
+        public string[] Status{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ReviewResults")]
+        public string[] ReviewResults{ get; set; }
+
+        /// <summary>
         /// The TRTC application IDs. Any file that matches one of the application IDs will be returned.
         /// <li>Array length limit: 10</li>
         /// </summary>
@@ -262,6 +281,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
+            this.SetParamArraySimple(map, prefix + "MediaTypes.", this.MediaTypes);
+            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamArraySimple(map, prefix + "ReviewResults.", this.ReviewResults);
             this.SetParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
             this.SetParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
             this.SetParamSimple(map, prefix + "Text", this.Text);

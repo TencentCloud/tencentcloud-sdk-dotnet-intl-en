@@ -67,6 +67,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? DefaultServer{ get; set; }
 
         /// <summary>
+        /// Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+        /// </summary>
+        [JsonProperty("Quic")]
+        public bool? Quic{ get; set; }
+
+        /// <summary>
         /// Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
         /// </summary>
         [JsonProperty("NewDefaultServerDomain")]
@@ -97,6 +103,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+            this.SetParamSimple(map, prefix + "Quic", this.Quic);
             this.SetParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
             this.SetParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
             this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);

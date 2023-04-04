@@ -60,7 +60,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// COS bucket region.
+        /// Region where the COS bucket is located.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BucketRegion")]

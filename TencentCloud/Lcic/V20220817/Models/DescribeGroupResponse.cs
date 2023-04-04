@@ -37,7 +37,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeacherId")]
         public string TeacherId{ get; set; }
@@ -49,7 +50,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? GroupType{ get; set; }
 
         /// <summary>
-        /// The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubGroupIds")]
         public string[] SubGroupIds{ get; set; }

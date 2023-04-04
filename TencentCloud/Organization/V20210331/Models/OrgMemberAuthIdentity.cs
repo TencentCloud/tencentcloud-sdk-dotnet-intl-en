@@ -32,14 +32,14 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? IdentityId{ get; set; }
 
         /// <summary>
-        /// Identity role name.
+        /// Role name of an identity
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityRoleName")]
         public string IdentityRoleName{ get; set; }
 
         /// <summary>
-        /// Identity role alias.
+        /// Role alias of an identity
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityRoleAliasName")]
@@ -66,6 +66,13 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// Identity type (`1`: Preset; `2`: Custom)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IdentityType")]
+        public ulong? IdentityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
         }
     }
 }

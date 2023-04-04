@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+        /// The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }

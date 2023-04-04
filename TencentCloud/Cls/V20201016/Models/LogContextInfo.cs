@@ -67,6 +67,20 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
+        /// <summary>
+        /// Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RawLog")]
+        public string RawLog{ get; set; }
+
+        /// <summary>
+        /// The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IndexStatus")]
+        public string IndexStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +94,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
             this.SetParamSimple(map, prefix + "BTime", this.BTime);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamSimple(map, prefix + "RawLog", this.RawLog);
+            this.SetParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
         }
     }
 }

@@ -180,7 +180,6 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to create multiple rooms at a time.
-        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchCreateRoomRequest"/></param>
         /// <returns><see cref="BatchCreateRoomResponse"/></returns>
@@ -201,7 +200,6 @@ namespace TencentCloud.Lcic.V20220817
 
         /// <summary>
         /// This API is used to create multiple rooms at a time.
-        /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="BatchCreateRoomRequest"/></param>
         /// <returns><see cref="BatchCreateRoomResponse"/></returns>
@@ -593,6 +591,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// This API is used to delete the custom elements. The `Scenes` parameter specifies the custom elements to delete. If `Scenes` is empty, all custom elements will be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppCustomContentRequest"/></param>
+        /// <returns><see cref="DeleteAppCustomContentResponse"/></returns>
+        public async Task<DeleteAppCustomContentResponse> DeleteAppCustomContent(DeleteAppCustomContentRequest req)
+        {
+             JsonResponseModel<DeleteAppCustomContentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAppCustomContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAppCustomContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete the custom elements. The `Scenes` parameter specifies the custom elements to delete. If `Scenes` is empty, all custom elements will be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppCustomContentRequest"/></param>
+        /// <returns><see cref="DeleteAppCustomContentResponse"/></returns>
+        public DeleteAppCustomContentResponse DeleteAppCustomContentSync(DeleteAppCustomContentRequest req)
+        {
+             JsonResponseModel<DeleteAppCustomContentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAppCustomContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAppCustomContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a document.
         /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
@@ -834,6 +872,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCurrentMemberList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurrentMemberListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the developer information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeveloperRequest"/></param>
+        /// <returns><see cref="DescribeDeveloperResponse"/></returns>
+        public async Task<DescribeDeveloperResponse> DescribeDeveloper(DescribeDeveloperRequest req)
+        {
+             JsonResponseModel<DescribeDeveloperResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeveloper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeveloperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the developer information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeveloperRequest"/></param>
+        /// <returns><see cref="DescribeDeveloperResponse"/></returns>
+        public DescribeDeveloperResponse DescribeDeveloperSync(DescribeDeveloperRequest req)
+        {
+             JsonResponseModel<DescribeDeveloperResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeveloper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeveloperResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1210,6 +1288,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the events of a room. It only works within one hour after a class ends.
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomEventRequest"/></param>
+        /// <returns><see cref="GetRoomEventResponse"/></returns>
+        public async Task<GetRoomEventResponse> GetRoomEvent(GetRoomEventRequest req)
+        {
+             JsonResponseModel<GetRoomEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRoomEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the events of a room. It only works within one hour after a class ends.
+        /// </summary>
+        /// <param name="req"><see cref="GetRoomEventRequest"/></param>
+        /// <returns><see cref="GetRoomEventResponse"/></returns>
+        public GetRoomEventResponse GetRoomEventSync(GetRoomEventRequest req)
+        {
+             JsonResponseModel<GetRoomEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRoomEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoomEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

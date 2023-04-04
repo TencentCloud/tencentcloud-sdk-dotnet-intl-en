@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+        /// Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -36,6 +36,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
+        /// <summary>
+        /// Parameter template engine. Default value: `InnoDB`.
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

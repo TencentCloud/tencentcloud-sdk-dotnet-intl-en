@@ -93,6 +93,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to aggregate the audit logs filtered by different conditions and aggregate the statistics of the specified data rows.
+        /// </summary>
+        /// <param name="req"><see cref="AnalyzeAuditLogsRequest"/></param>
+        /// <returns><see cref="AnalyzeAuditLogsResponse"/></returns>
+        public async Task<AnalyzeAuditLogsResponse> AnalyzeAuditLogs(AnalyzeAuditLogsRequest req)
+        {
+             JsonResponseModel<AnalyzeAuditLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AnalyzeAuditLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AnalyzeAuditLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to aggregate the audit logs filtered by different conditions and aggregate the statistics of the specified data rows.
+        /// </summary>
+        /// <param name="req"><see cref="AnalyzeAuditLogsRequest"/></param>
+        /// <returns><see cref="AnalyzeAuditLogsResponse"/></returns>
+        public AnalyzeAuditLogsResponse AnalyzeAuditLogsSync(AnalyzeAuditLogsRequest req)
+        {
+             JsonResponseModel<AnalyzeAuditLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AnalyzeAuditLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AnalyzeAuditLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -2981,6 +3021,8 @@ namespace TencentCloud.Cdb.V20170320
         /// <summary>
         /// 该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
         /// 
+        /// This API was disused. You can refer to the CreateDBInstance API, and initialize the instance when creating it.
+        /// 
         /// This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
@@ -3002,6 +3044,8 @@ namespace TencentCloud.Cdb.V20170320
 
         /// <summary>
         /// 该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
+        /// 
+        /// This API was disused. You can refer to the CreateDBInstance API, and initialize the instance when creating it.
         /// 
         /// This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
         /// </summary>

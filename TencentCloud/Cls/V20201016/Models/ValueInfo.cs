@@ -34,7 +34,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// Separator of fields. Each character represents a separator.
         /// Only symbols, \n\t\r, and escape character \ are supported.
         /// `long` and `double` fields need to be null.
-        /// Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+        /// Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
         /// </summary>
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }

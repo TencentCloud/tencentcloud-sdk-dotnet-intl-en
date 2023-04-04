@@ -31,7 +31,8 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MemberIds")]
         public string[] MemberIds{ get; set; }

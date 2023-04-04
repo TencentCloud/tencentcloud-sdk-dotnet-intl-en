@@ -58,7 +58,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+        /// The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
         /// <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
         /// <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
         /// <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -70,7 +70,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+        /// The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
         /// <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
         /// <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
         /// <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>

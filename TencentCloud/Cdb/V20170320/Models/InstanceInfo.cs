@@ -305,6 +305,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
+        /// <summary>
+        /// Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -356,6 +362,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

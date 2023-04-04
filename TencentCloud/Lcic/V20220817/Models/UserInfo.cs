@@ -25,25 +25,29 @@ namespace TencentCloud.Lcic.V20220817.Models
     {
         
         /// <summary>
-        /// The application ID. Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// The user ID. Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// The username. Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
