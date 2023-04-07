@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+        /// Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+        /// Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
 
         /// <summary>
-        /// Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+        /// Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public long? ReplicateSetNum{ get; set; }

@@ -773,7 +773,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query price of instance specification adjustment.
+        /// This API is used to query the price of instance specification adjustment.
         /// </summary>
         /// <param name="req"><see cref="InquirePriceModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="InquirePriceModifyDBInstanceSpecResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query price of instance specification adjustment.
+        /// This API is used to query the price of instance specification adjustment.
         /// </summary>
         /// <param name="req"><see cref="InquirePriceModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="InquirePriceModifyDBInstanceSpecResponse"/></returns>

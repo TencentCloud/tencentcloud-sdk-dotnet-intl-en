@@ -25,37 +25,37 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+        /// List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+        /// Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+        /// Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+        /// Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// VPC ID. This parameter can be left empty for the basic network
+        /// VPC ID. This parameter can be left empty for the classic network.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+        /// Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -67,25 +67,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+        /// Number of results returned per request. Default value: `20`. Value range: [1,100].
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0
+        /// Offset. Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+        /// Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+        /// Sorting method of the return result set. Valid values: `ASC`, `DESC`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// Search keyword, which can be instance ID, instance name, or complete IP
+        /// Search keyword, which can be instance ID, instance name, or complete IP.
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
@@ -106,7 +106,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// Tag information
         /// </summary>
         [JsonProperty("Tags")]
-        public TagInfo Tags{ get; set; }
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
-            this.SetParamObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

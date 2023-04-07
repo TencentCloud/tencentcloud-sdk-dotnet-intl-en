@@ -61,7 +61,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+        /// Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
