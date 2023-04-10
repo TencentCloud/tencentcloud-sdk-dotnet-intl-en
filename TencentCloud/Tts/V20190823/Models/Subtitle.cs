@@ -54,6 +54,13 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("EndIndex")]
         public long? EndIndex{ get; set; }
 
+        /// <summary>
+        /// The phonemes of the word.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Phoneme")]
+        public string Phoneme{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "BeginIndex", this.BeginIndex);
             this.SetParamSimple(map, prefix + "EndIndex", this.EndIndex);
+            this.SetParamSimple(map, prefix + "Phoneme", this.Phoneme);
         }
     }
 }
