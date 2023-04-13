@@ -36,6 +36,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("OverviewDisplay")]
         public string OverviewDisplay{ get; set; }
 
+        /// <summary>
+        /// Custom big key analysis separator for Redis only
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KeyDelimiters")]
+        public string[] KeyDelimiters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         {
             this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
             this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
+            this.SetParamArraySimple(map, prefix + "KeyDelimiters.", this.KeyDelimiters);
         }
     }
 }
