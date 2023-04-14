@@ -85,7 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+        /// Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
@@ -172,6 +172,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
+        /// <summary>
+        /// Number of current etcd in the cluster
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterEtcdNodeNum")]
+        public ulong? ClusterEtcdNodeNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -201,6 +208,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+            this.SetParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
         }
     }
 }

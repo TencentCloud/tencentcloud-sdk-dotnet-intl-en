@@ -51,6 +51,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ClearInstanceNameSettings")]
         public bool? ClearInstanceNameSettings{ get; set; }
 
+        /// <summary>
+        /// Whether to clear placement group information. This parameter is optional. Default value: `false`.
+        /// `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+        /// </summary>
+        [JsonProperty("ClearDisasterRecoverGroupIds")]
+        public bool? ClearDisasterRecoverGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +68,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
             this.SetParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
             this.SetParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
+            this.SetParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
         }
     }
 }

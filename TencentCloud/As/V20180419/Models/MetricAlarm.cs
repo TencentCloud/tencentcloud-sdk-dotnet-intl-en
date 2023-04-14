@@ -60,6 +60,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Statistic")]
         public string Statistic{ get; set; }
 
+        /// <summary>
+        /// Exact alarming threshold. This parameter is only used in API outputs. Values: <br><li>`CPU_UTILIZATION` (in %): (0, 100]</li><li>`MEM_UTILIZATION` (in %): (0, 100]</li><li>`LAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`LAN_TRAFFIC_IN` (in Mbps): > 0</li><li>`WAN_TRAFFIC_OUT` (in Mbps): > 0</li><li>`WAN_TRAFFIC_IN` (in Mbps): > 0</li>
+        /// </summary>
+        [JsonProperty("PreciseThreshold")]
+        public float? PreciseThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "ContinuousTime", this.ContinuousTime);
             this.SetParamSimple(map, prefix + "Statistic", this.Statistic);
+            this.SetParamSimple(map, prefix + "PreciseThreshold", this.PreciseThreshold);
         }
     }
 }

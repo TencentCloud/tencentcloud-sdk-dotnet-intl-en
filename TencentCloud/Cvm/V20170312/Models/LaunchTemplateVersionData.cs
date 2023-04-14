@@ -185,6 +185,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
+        /// <summary>
+        /// Whether to enable termination protection. Valid values:
+        /// 
+        /// TRUE: Termination protection is enabled.
+        /// FALSE: Termination protection is disabled.
+        /// 
+        /// Default value: `FALSE`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DisableApiTermination")]
+        public bool? DisableApiTermination{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +226,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         }
     }
 }

@@ -31,26 +31,49 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+        /// Region ID
+        /// - `1`: Guangzhou 
+        /// - `4`: Shanghai 
+        /// - `5`: Hong Kong (China) 
+        /// - `6`: Toronto 
+        /// - `7`: Shanghai Finance 
+        /// - `8`: Beijing 
+        /// - `9`: Singapore
+        /// - `11`: Shenzhen Finance
+        /// - `15`: Silicon Valley (West US)
+        /// - `16`: Chengdu 
+        /// - `17`: Germany 
+        /// - `18`: South Korea 
+        /// - `19`: Chongqing 
+        /// - `21`: India 
+        /// - `22`: Virginia (East US)
+        /// - `23`: Thailand 
+        /// - `24`: Russia 
+        /// - `25`: Japan
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Replication group info
+        /// Replication group ID
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
         /// Replication group name
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+        /// Status of replication group
+        /// - `37`: Associating replication group
+        /// - `38`: Reconnecting to replication group
+        /// - `51`: Disassociating replication group
+        /// - `52`: Switching with master instance in replication group
+        /// - `53`: Modifying the roles
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -62,15 +85,15 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Instances in replication group
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Instance information in replication groups
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Instances")]
         public Instances[] Instances{ get; set; }
 
         /// <summary>
         /// Remarks
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Keyword for fuzzy search, which can be an instance name or instance ID.
+        /// Key words for fuzzy query, which can be set as the ID or name of a replication group.
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

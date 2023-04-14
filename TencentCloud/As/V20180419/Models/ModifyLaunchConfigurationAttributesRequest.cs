@@ -169,6 +169,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("IPv6InternetAccessible")]
         public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
 
+        /// <summary>
+        /// Placement group ID. Only one is allowed.
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupIds")]
+        public string[] DisasterRecoverGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +201,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
+            this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         }
     }
 }

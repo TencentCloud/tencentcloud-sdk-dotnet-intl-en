@@ -34,7 +34,7 @@ namespace TencentCloud.As.V20180419.Models
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// Maximum outbound bandwidth of the public network, in Mbps. <br>The default value is 0, and no public network bandwidth is allocated to IPv6. The maximum bandwidth varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+        /// Outbound bandwidth cap of the public network (in Mbps). <br>It defaults to `0`, which indicates no public network bandwidth is allocated to IPv6. The value range of bandwidth caps varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]

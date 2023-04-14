@@ -373,6 +373,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to clone a complete instance based on the current instance backup file.
+        /// </summary>
+        /// <param name="req"><see cref="CloneInstancesRequest"/></param>
+        /// <returns><see cref="CloneInstancesResponse"/></returns>
+        public async Task<CloneInstancesResponse> CloneInstances(CloneInstancesRequest req)
+        {
+             JsonResponseModel<CloneInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to clone a complete instance based on the current instance backup file.
+        /// </summary>
+        /// <param name="req"><see cref="CloneInstancesRequest"/></param>
+        /// <returns><see cref="CloneInstancesResponse"/></returns>
+        public CloneInstancesResponse CloneInstancesSync(CloneInstancesRequest req)
+        {
+             JsonResponseModel<CloneInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to disable SSL.
         /// </summary>
         /// <param name="req"><see cref="CloseSSLRequest"/></param>
@@ -1893,7 +1933,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query SSL status.
+        /// This API is used to query the SSL authentication information of an instance, such as enablement status, configuration status, and certificate address.
         /// </summary>
         /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
         /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
@@ -1913,7 +1953,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query SSL status.
+        /// This API is used to query the SSL authentication information of an instance, such as enablement status, configuration status, and certificate address.
         /// </summary>
         /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
         /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
@@ -2453,7 +2493,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to change the Redis password.
+        /// This API is used to modify the access password for an instance.
         /// </summary>
         /// <param name="req"><see cref="ModfiyInstancePasswordRequest"/></param>
         /// <returns><see cref="ModfiyInstancePasswordResponse"/></returns>
@@ -2473,7 +2513,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to change the Redis password.
+        /// This API is used to modify the access password for an instance.
         /// </summary>
         /// <param name="req"><see cref="ModfiyInstancePasswordRequest"/></param>
         /// <returns><see cref="ModfiyInstancePasswordResponse"/></returns>

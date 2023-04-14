@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InstanceMarketOptionsRequest : AbstractModel
+    public class CloneInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// Spot-related options
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Request task ID
         /// </summary>
-        [JsonProperty("SpotOptions")]
-        public SpotMarketOptions SpotOptions{ get; set; }
+        [JsonProperty("DealId")]
+        public string DealId{ get; set; }
 
         /// <summary>
-        /// Market type. Valid value: `spot`.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Clone instance ID
         /// </summary>
-        [JsonProperty("MarketType")]
-        public string MarketType{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "SpotOptions.", this.SpotOptions);
-            this.SetParamSimple(map, prefix + "MarketType", this.MarketType);
+            this.SetParamSimple(map, prefix + "DealId", this.DealId);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

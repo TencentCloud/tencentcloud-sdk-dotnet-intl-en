@@ -87,7 +87,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public InstanceAdvancedSettings[] InstanceAdvancedSettingsOverrides{ get; set; }
 
         /// <summary>
-        /// Node image (it is required when creating a node)
+        /// Node image
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }

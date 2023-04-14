@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Alarm-based scaling policy ID
+        /// Auto-scaling policy ID. This parameter is not available to a target tracking policy.
         /// </summary>
         [JsonProperty("AutoScalingPolicyId")]
         public string AutoScalingPolicyId{ get; set; }

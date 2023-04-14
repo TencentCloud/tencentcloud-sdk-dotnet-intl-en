@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Certificate download address
+        /// Download address for SSL certificate
         /// </summary>
         [JsonProperty("CertDownloadUrl")]
         public string CertDownloadUrl{ get; set; }
@@ -37,19 +37,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public string UrlExpiredTime{ get; set; }
 
         /// <summary>
-        /// SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
+        /// Whether the SSL is enabled for the identified instance.
+        /// - `true`: Enabled
+        /// - `false`: Disabled
         /// </summary>
         [JsonProperty("SSLConfig")]
         public bool? SSLConfig{ get; set; }
 
         /// <summary>
-        /// Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
+        /// Whether SSL is supported for the identified instance.
+        /// -`true`: Supported
+        /// -`false`: Not supported
         /// </summary>
         [JsonProperty("FeatureSupport")]
         public bool? FeatureSupport{ get; set; }
 
         /// <summary>
-        /// SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+        /// Status of SSL configuration
+        /// - `1`: Configuring
+        /// - `2`: Configured successfully
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

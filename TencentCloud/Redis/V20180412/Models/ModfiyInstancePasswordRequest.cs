@@ -37,7 +37,10 @@ namespace TencentCloud.Redis.V20180412.Models
         public string OldPassword{ get; set; }
 
         /// <summary>
-        /// New password of an instance
+        /// New instance password, which has the following requirements:
+        /// - It must contain 8-30 characters, preferably 12 or more.
+        /// - It cannot start with a slash (/)
+        /// - It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

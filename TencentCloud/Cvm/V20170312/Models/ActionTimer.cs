@@ -25,19 +25,22 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Timer name. Currently `TerminateInstances` is the only supported value.
+        /// Timer action. Valid value: `TerminateInstances`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TimerAction")]
         public string TimerAction{ get; set; }
 
         /// <summary>
-        /// Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+        /// Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ActionTime")]
         public string ActionTime{ get; set; }
 
         /// <summary>
-        /// Additional data
+        /// Extended data
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Externals")]
         public Externals Externals{ get; set; }
