@@ -127,6 +127,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
 
+        /// <summary>
+        /// Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+        /// </summary>
+        [JsonProperty("IdleConnectTimeout")]
+        public long? IdleConnectTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +156,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
             this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
+            this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
         }
     }
 }

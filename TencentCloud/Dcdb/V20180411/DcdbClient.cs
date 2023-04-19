@@ -537,6 +537,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to query the list of backup files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public async Task<DescribeBackupFilesResponse> DescribeBackupFiles(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of backup files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public DescribeBackupFilesResponse DescribeBackupFilesSync(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of various logs of a database, including cold backups, binlogs, errlogs, and slowlogs.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBLogFilesRequest"/></param>
@@ -728,6 +768,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBSyncMode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSyncModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of a TDSQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstanceDetailResponse"/></returns>
+        public async Task<DescribeDCDBInstanceDetailResponse> DescribeDCDBInstanceDetail(DescribeDCDBInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeDCDBInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDCDBInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the details of a TDSQL instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstanceDetailResponse"/></returns>
+        public DescribeDCDBInstanceDetailResponse DescribeDCDBInstanceDetailSync(DescribeDCDBInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeDCDBInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDCDBInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBInstanceDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

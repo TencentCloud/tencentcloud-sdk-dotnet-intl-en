@@ -213,6 +213,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API shows you how to create an ACL rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAclRuleRequest"/></param>
+        /// <returns><see cref="CreateAclRuleResponse"/></returns>
+        public async Task<CreateAclRuleResponse> CreateAclRule(CreateAclRuleRequest req)
+        {
+             JsonResponseModel<CreateAclRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAclRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAclRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API shows you how to create an ACL rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAclRuleRequest"/></param>
+        /// <returns><see cref="CreateAclRuleResponse"/></returns>
+        public CreateAclRuleResponse CreateAclRuleSync(CreateAclRuleRequest req)
+        {
+             JsonResponseModel<CreateAclRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAclRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAclRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a consumer group.
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
@@ -804,6 +844,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "DescribeACL");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeACLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the ACL rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAclRuleRequest"/></param>
+        /// <returns><see cref="DescribeAclRuleResponse"/></returns>
+        public async Task<DescribeAclRuleResponse> DescribeAclRule(DescribeAclRuleRequest req)
+        {
+             JsonResponseModel<DescribeAclRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAclRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAclRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the ACL rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAclRuleRequest"/></param>
+        /// <returns><see cref="DescribeAclRuleResponse"/></returns>
+        public DescribeAclRuleResponse DescribeAclRuleSync(DescribeAclRuleRequest req)
+        {
+             JsonResponseModel<DescribeAclRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAclRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAclRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1726,6 +1806,86 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "InquireCkafkaPrice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireCkafkaPriceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
+        /// <returns><see cref="ModifyAclRuleResponse"/></returns>
+        public async Task<ModifyAclRuleResponse> ModifyAclRule(ModifyAclRuleRequest req)
+        {
+             JsonResponseModel<ModifyAclRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAclRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAclRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
+        /// <returns><see cref="ModifyAclRuleResponse"/></returns>
+        public ModifyAclRuleResponse ModifyAclRuleSync(ModifyAclRuleRequest req)
+        {
+             JsonResponseModel<ModifyAclRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAclRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAclRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the DataHub topic attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
+        /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
+        public async Task<ModifyDatahubTopicResponse> ModifyDatahubTopic(ModifyDatahubTopicRequest req)
+        {
+             JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatahubTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the DataHub topic attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
+        /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
+        public ModifyDatahubTopicResponse ModifyDatahubTopicSync(ModifyDatahubTopicRequest req)
+        {
+             JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatahubTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatahubTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
