@@ -497,6 +497,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the list of backup files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public async Task<DescribeBackupFilesResponse> DescribeBackupFiles(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of backup files.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public DescribeBackupFilesResponse DescribeBackupFilesSync(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the encryption status of the instance data.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBEncryptAttributesRequest"/></param>
@@ -528,6 +568,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBEncryptAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a specified instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDetailResponse"/></returns>
+        public async Task<DescribeDBInstanceDetailResponse> DescribeDBInstanceDetail(DescribeDBInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a specified instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDetailResponse"/></returns>
+        public DescribeDBInstanceDetailResponse DescribeDBInstanceDetailSync(DescribeDBInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

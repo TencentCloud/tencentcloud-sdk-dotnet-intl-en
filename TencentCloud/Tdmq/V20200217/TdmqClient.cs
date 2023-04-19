@@ -413,6 +413,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to create a TDMQ for RabbitMQ exclusive instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQVipInstanceResponse"/></returns>
+        public async Task<CreateRabbitMQVipInstanceResponse> CreateRabbitMQVipInstance(CreateRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a TDMQ for RabbitMQ exclusive instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQVipInstanceResponse"/></returns>
+        public CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstanceSync(CreateRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a RocketMQ cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQClusterRequest"/></param>

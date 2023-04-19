@@ -94,7 +94,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+        /// Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
         /// </summary>
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }

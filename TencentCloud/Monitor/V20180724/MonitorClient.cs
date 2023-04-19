@@ -253,7 +253,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to create a Cloud Monitor alarm policy.
+        /// This API is used to create an alarm policy.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmPolicyRequest"/></param>
         /// <returns><see cref="CreateAlarmPolicyResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to create a Cloud Monitor alarm policy.
+        /// This API is used to create an alarm policy.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmPolicyRequest"/></param>
         /// <returns><see cref="CreateAlarmPolicyResponse"/></returns>
@@ -617,7 +617,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to associate a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance with a cluster.
+        /// This API is used to associate a cluster with a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance.
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusClusterAgentRequest"/></param>
         /// <returns><see cref="CreatePrometheusClusterAgentResponse"/></returns>
@@ -637,7 +637,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to associate a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance with a cluster.
+        /// This API is used to associate a cluster with a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance.
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusClusterAgentRequest"/></param>
         /// <returns><see cref="CreatePrometheusClusterAgentResponse"/></returns>
@@ -1021,7 +1021,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to delete alarm notification templates.
+        /// This API is used to delete an alarm notification template.
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmNoticesRequest"/></param>
         /// <returns><see cref="DeleteAlarmNoticesResponse"/></returns>
@@ -1041,7 +1041,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to delete alarm notification templates.
+        /// This API is used to delete an alarm notification template.
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmNoticesRequest"/></param>
         /// <returns><see cref="DeleteAlarmNoticesResponse"/></returns>
@@ -1905,7 +1905,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to get all the callback URLs of an alarm notification template.
+        /// This API is used to obtain all the callback URLs of an alarm notification template.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticeCallbacksRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticeCallbacksResponse"/></returns>
@@ -1925,7 +1925,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to get all the callback URLs of an alarm notification template.
+        /// This API is used to obtain all the callback URLs of an alarm notification template.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticeCallbacksRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticeCallbacksResponse"/></returns>
@@ -2705,7 +2705,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to list all the monitor types supported by CM.
+        /// This API is used to list all the monitoring types supported by CM.
         /// </summary>
         /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>
         /// <returns><see cref="DescribeMonitorTypesResponse"/></returns>
@@ -2725,7 +2725,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to list all the monitor types supported by CM.
+        /// This API is used to list all the monitoring types supported by CM.
         /// </summary>
         /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>
         /// <returns><see cref="DescribeMonitorTypesResponse"/></returns>
@@ -4323,7 +4323,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to modify the task triggered by an alarm policy. The `TriggerTasks` field contains the list of triggered tasks. If an empty array is passed in for `TriggerTasks`, it indicates to unbind all the triggered tasks from this policy.
+        /// This API is used to modify the tasks triggered by alarm policy, which are listed by the value of the `TriggerTasks` field. If an empty array is passed in for `TriggerTasks`, it means unbinding all the trigger tasks from the policy.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyTasksRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyTasksResponse"/></returns>
@@ -4343,7 +4343,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to modify the task triggered by an alarm policy. The `TriggerTasks` field contains the list of triggered tasks. If an empty array is passed in for `TriggerTasks`, it indicates to unbind all the triggered tasks from this policy.
+        /// This API is used to modify the tasks triggered by alarm policy, which are listed by the value of the `TriggerTasks` field. If an empty array is passed in for `TriggerTasks`, it means unbinding all the trigger tasks from the policy.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyTasksRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyTasksResponse"/></returns>
@@ -4763,6 +4763,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
+        /// 
         /// The default API request rate limit is 50 requests/sec.
         /// The default upper limit on metrics of a single tenant is 100.
         /// A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
@@ -4789,6 +4791,8 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
+        /// 
         /// The default API request rate limit is 50 requests/sec.
         /// The default upper limit on metrics of a single tenant is 100.
         /// A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SendCustomAlarmMsgRequest : AbstractModel
+    public class DescribeDBInstanceDetailRequest : AbstractModel
     {
         
         /// <summary>
-        /// API component name. The value for the current API is monitor.
+        /// Instance ID in the format of `tdsql-ow728lmc`
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
-
-        /// <summary>
-        /// Message policy ID, which is configured on the custom message page.
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
-
-        /// <summary>
-        /// Custom message content that a user wants to send.
-        /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }
