@@ -85,7 +85,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public bool? IsCreditLimited{ get; set; }
 
         /// <summary>
-        /// Credit limit. Credit limit－available credit balance = consumption amount
+        /// Credit limit in cents. Credit limit－available credit balance = consumption amount
         /// </summary>
         [JsonProperty("CreditAmount")]
         public float? CreditAmount{ get; set; }

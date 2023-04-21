@@ -1371,6 +1371,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 接口已经废弃，请使用+DescribeCdbProxyInfo+进行替换。
+        /// 
         /// This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
         /// </summary>
         /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
@@ -1391,6 +1393,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 接口已经废弃，请使用+DescribeCdbProxyInfo+进行替换。
+        /// 
         /// This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
         /// </summary>
         /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
@@ -2377,6 +2381,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+DescribeCdbProxyInfo+替代。
+        /// 
         /// This API is used to query the connection pool configuration of database proxy.
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyConnectionPoolConfRequest"/></param>
@@ -2397,6 +2403,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+DescribeCdbProxyInfo+替代。
+        /// 
         /// This API is used to query the connection pool configuration of database proxy.
         /// </summary>
         /// <param name="req"><see cref="DescribeProxyConnectionPoolConfRequest"/></param>
@@ -3433,6 +3441,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
+        /// 
         /// This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
@@ -3453,6 +3463,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
+        /// 
         /// This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
@@ -3473,6 +3485,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
+        /// 
         /// This API is used to modify the description of database proxy.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyDescRequest"/></param>
@@ -3493,6 +3507,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
+        /// 
         /// This API is used to modify the description of database proxy.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyDescRequest"/></param>
@@ -3513,6 +3529,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
+        /// 
         /// This API is used to modify the VIP or port of database proxy.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyVipVPortRequest"/></param>
@@ -3533,6 +3551,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
+        /// 
         /// This API is used to modify the VIP or port of database proxy.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDBProxyVipVPortRequest"/></param>
@@ -4305,6 +4325,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+DescribeCdbProxyInfo+进行替代。
+        /// 
         /// This API is used to query the proxy details.
         /// </summary>
         /// <param name="req"><see cref="QueryCDBProxyRequest"/></param>
@@ -4325,6 +4347,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 当前接口已经废弃，请使用+DescribeCdbProxyInfo+进行替代。
+        /// 
         /// This API is used to query the proxy details.
         /// </summary>
         /// <param name="req"><see cref="QueryCDBProxyRequest"/></param>

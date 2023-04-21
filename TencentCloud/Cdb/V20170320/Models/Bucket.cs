@@ -32,7 +32,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// Number of keys in the statistic report
+        /// Number of occurrences of the key value
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }

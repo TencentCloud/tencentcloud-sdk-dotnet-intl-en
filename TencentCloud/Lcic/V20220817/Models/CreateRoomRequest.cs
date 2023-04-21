@@ -79,6 +79,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? AutoMic{ get; set; }
 
         /// <summary>
+        /// Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+        /// </summary>
+        [JsonProperty("TurnOffMic")]
+        public ulong? TurnOffMic{ get; set; }
+
+        /// <summary>
         /// Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
         /// </summary>
         [JsonProperty("AudioQuality")]
@@ -95,6 +101,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         /// </summary>
         [JsonProperty("Assistants")]
         public string[] Assistants{ get; set; }
+
+        /// <summary>
+        /// The number of RTC users.
+        /// </summary>
+        [JsonProperty("RTCAudienceNumber")]
+        public ulong? RTCAudienceNumber{ get; set; }
+
+        /// <summary>
+        /// The audience type.
+        /// </summary>
+        [JsonProperty("AudienceType")]
+        public ulong? AudienceType{ get; set; }
 
         /// <summary>
         /// Recording layout
@@ -123,9 +141,12 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "SubType", this.SubType);
             this.SetParamSimple(map, prefix + "TeacherId", this.TeacherId);
             this.SetParamSimple(map, prefix + "AutoMic", this.AutoMic);
+            this.SetParamSimple(map, prefix + "TurnOffMic", this.TurnOffMic);
             this.SetParamSimple(map, prefix + "AudioQuality", this.AudioQuality);
             this.SetParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
             this.SetParamArraySimple(map, prefix + "Assistants.", this.Assistants);
+            this.SetParamSimple(map, prefix + "RTCAudienceNumber", this.RTCAudienceNumber);
+            this.SetParamSimple(map, prefix + "AudienceType", this.AudienceType);
             this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
