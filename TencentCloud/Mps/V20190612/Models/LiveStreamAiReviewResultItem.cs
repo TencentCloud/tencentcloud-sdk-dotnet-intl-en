@@ -25,11 +25,11 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The type of the moderation result. Valid values:
+        /// The type of moderation result. Valid values:
         /// <li>ImagePorn</li>
         /// <li>ImageTerrorism</li>
         /// <li>ImagePolitical</li>
-        /// <li>PornVoice (pornographic content in speech)</li>
+        /// <li>VoicePorn</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -53,7 +53,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamAiReviewImagePoliticalResult[] ImagePoliticalResultSet{ get; set; }
 
         /// <summary>
-        /// Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+        /// The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
         /// </summary>
         [JsonProperty("VoicePornResultSet")]
         public LiveStreamAiReviewVoicePornResult[] VoicePornResultSet{ get; set; }

@@ -59,6 +59,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
+        /// <summary>
+        /// The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HighlightTask")]
+        public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "CoverTask.", this.CoverTask);
             this.SetParamObj(map, prefix + "TagTask.", this.TagTask);
             this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
+            this.SetParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
         }
     }
 }

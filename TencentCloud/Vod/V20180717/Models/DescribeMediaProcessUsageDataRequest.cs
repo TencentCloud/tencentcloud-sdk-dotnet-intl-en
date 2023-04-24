@@ -44,17 +44,18 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// The type of media processing task. Valid values:
-        /// <li>Transcoding: General transcoding</li>
-        /// <li>Transcoding-TESHD: Top Speed Codec transcoding</li>
-        /// <li>Editing: Video editing</li>
-        /// <li>Editing-TESHD: Top Speed Codec editing</li>
-        /// <li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-        /// <li>ContentAudit: Content moderation</li>
-        /// <li> ContentRecognition: Content recognition</li>
-        /// <li>RemoveWatermark: Watermark removal</li>
-        /// <li> ExtractTraceWatermark: Digital watermark extraction</li>
-        /// <li> AddTraceWatermark: Digital watermarking</li>
-        /// <li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+        /// <li>`Transcoding`: General transcoding</li>
+        /// <li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
+        /// <li>`Editing`: Video editing</li>
+        /// <li>`Editing-TESHD`: Top Speed Codec editing</li>
+        /// <li>`AdaptiveBitrateStreaming`: Adaptive bitrate streaming</li>
+        /// <li>`ContentAudit`: Content moderation</li>
+        /// <li>`ContentRecognition`: Content recognition</li>
+        /// <li>`RemoveWatermark`: Watermark removal</li>
+        /// <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
+        /// <li>`AddTraceWatermark`: Digital watermarking</li>
+        /// <li>`RebuildMedia`: Remaster</li>
+        /// <li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

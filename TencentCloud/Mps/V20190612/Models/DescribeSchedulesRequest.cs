@@ -31,10 +31,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public long?[] ScheduleIds{ get; set; }
 
         /// <summary>
+        /// The trigger type. Valid values:
+        /// <li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+        /// <li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+        /// If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+        /// </summary>
+        [JsonProperty("TriggerType")]
+        public string TriggerType{ get; set; }
+
+        /// <summary>
         /// The scheme status. Valid values:
         /// <li>`Enabled`</li>
         /// <li>`Disabled`</li>
-        /// If you do not specify this parameter, schemes in both statuses will be returned.
+        /// If you do not specify this parameter, all schemes will be returned regardless of the status.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -58,6 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "ScheduleIds.", this.ScheduleIds);
+            this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

@@ -178,13 +178,20 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] MediaTypes{ get; set; }
 
         /// <summary>
-        /// 
+        /// The file statuses.
+        /// <li>`Normal`</li>
+        /// <li>`SystemForbidden` (blocked by VOD)</li>
+        /// <li>`Forbidden` (blocked by you)</li>
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// The types of moderation result.
+        /// <li>`pass`</li>
+        /// <li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+        /// <li>`block` (the content is non-compliant and should be blocked)</li>
+        /// <li>`notModerated` (the file hasn't been moderated yet)</li>
         /// </summary>
         [JsonProperty("ReviewResults")]
         public string[] ReviewResults{ get; set; }

@@ -56,7 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// The directory to save the output file.
+        /// The directory to save the media processing output file, which must start and end with `/`.
         /// Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
         /// </summary>
         [JsonProperty("OutputDir")]

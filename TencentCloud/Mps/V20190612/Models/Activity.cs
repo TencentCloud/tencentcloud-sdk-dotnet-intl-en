@@ -37,18 +37,21 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>`action-image-sprite`: Image sprite generation.</li>
         /// <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
         /// <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
         /// The indexes of the subsequent actions.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReardriveIndex")]
         public long?[] ReardriveIndex{ get; set; }
 
         /// <summary>
         /// The parameters of a subtask.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ActivityPara")]
         public ActivityPara ActivityPara{ get; set; }

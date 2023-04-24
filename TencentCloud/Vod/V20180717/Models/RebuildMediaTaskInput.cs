@@ -43,6 +43,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
+        /// The ID of the remaster template.
+        /// </summary>
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
+
+        /// <summary>
         /// The video quality remastering parameters.
         /// </summary>
         [JsonProperty("RepairInfo")]
@@ -129,6 +135,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RepairInfo.", this.RepairInfo);
             this.SetParamObj(map, prefix + "VideoFrameInterpolationInfo.", this.VideoFrameInterpolationInfo);
             this.SetParamObj(map, prefix + "SuperResolutionInfo.", this.SuperResolutionInfo);

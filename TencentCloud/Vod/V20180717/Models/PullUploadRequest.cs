@@ -32,6 +32,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string MediaUrl{ get; set; }
 
         /// <summary>
+        /// The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+        /// If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public string MediaType{ get; set; }
+
+        /// <summary>
         /// <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -106,6 +113,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "MediaName", this.MediaName);
             this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);

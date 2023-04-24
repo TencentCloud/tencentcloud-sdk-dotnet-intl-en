@@ -49,7 +49,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// The directory to save the output file, such as `/movie/201907/`. If you do not specify this parameter, the directory of the source file will be used.
+        /// The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+        /// If you do not specify this, the file will be saved to the trigger directory.
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }

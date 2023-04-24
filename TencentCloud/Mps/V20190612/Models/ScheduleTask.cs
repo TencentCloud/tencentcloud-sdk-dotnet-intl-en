@@ -39,6 +39,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+        /// </summary>
+        [JsonProperty("ErrCode")]
+        public long? ErrCode{ get; set; }
+
+        /// <summary>
+        /// If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
         /// The information of the file processed.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -67,6 +79,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamArrayObj(map, prefix + "ActivityResultSet.", this.ActivityResultSet);

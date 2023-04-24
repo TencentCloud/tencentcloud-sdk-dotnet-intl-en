@@ -37,10 +37,23 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+        /// The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+        /// If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
+
+        /// <summary>
+        /// The scheme ID.
+        /// Note 1: About `OutputStorage` and `OutputDir`
+        /// <li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+        /// <li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+        /// Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+        /// 
+        /// Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public long? ScheduleId{ get; set; }
 
         /// <summary>
         /// The media processing parameters to use.
@@ -67,6 +80,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
+        /// The parameters of a quality control task.
+        /// </summary>
+        [JsonProperty("AiQualityControlTask")]
+        public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
+
+        /// <summary>
         /// Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
@@ -91,18 +110,6 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// The scheme ID.
-        /// Note 1: About `OutputStorage` and `OutputDir`
-        /// <li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-        /// <li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-        /// Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-        /// 
-        /// Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-        /// </summary>
-        [JsonProperty("ScheduleId")]
-        public long? ScheduleId{ get; set; }
-
-        /// <summary>
         /// The task type.
         /// <li> `Online` (default): A task that is executed immediately.</li>
         /// <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
@@ -119,15 +126,16 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+            this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
-            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }

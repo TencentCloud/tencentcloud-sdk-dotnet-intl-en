@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// An array of image processing operations. The operations will be performed in the specified order.
-        /// <li>Length limit: 3.</li>
+        /// <li>Length limit: 10.</li>
         /// </summary>
         [JsonProperty("Operations")]
         public ImageOperation[] Operations{ get; set; }
