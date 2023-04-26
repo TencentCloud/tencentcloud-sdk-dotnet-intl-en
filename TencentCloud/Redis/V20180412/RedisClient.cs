@@ -373,7 +373,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to clone a complete instance based on the current instance backup file.
+        /// This API is used to clone a complete new instance based on the current instance backup file.
         /// </summary>
         /// <param name="req"><see cref="CloneInstancesRequest"/></param>
         /// <returns><see cref="CloneInstancesResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to clone a complete instance based on the current instance backup file.
+        /// This API is used to clone a complete new instance based on the current instance backup file.
         /// </summary>
         /// <param name="req"><see cref="CloneInstancesRequest"/></param>
         /// <returns><see cref="CloneInstancesResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to create a Redis instance.
+        /// This API is used to create an TencentDB or Redis instance.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to create a Redis instance.
+        /// This API is used to create an TencentDB or Redis instance.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -764,6 +764,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupUrl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of instance bandwidth.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthRangeRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthRangeResponse"/></returns>
+        public async Task<DescribeBandwidthRangeResponse> DescribeBandwidthRange(DescribeBandwidthRangeRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthRangeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthRange");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthRangeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the information of instance bandwidth.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthRangeRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthRangeResponse"/></returns>
+        public DescribeBandwidthRangeResponse DescribeBandwidthRangeSync(DescribeBandwidthRangeRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthRangeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBandwidthRange");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthRangeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1653,7 +1693,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the parameter template details.
+        /// This API is used to query the details of a parameter template.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -1673,7 +1713,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the parameter template details.
+        /// This API is used to query the details of a parameter template.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -3004,6 +3044,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseWanAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseWanAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove a member from a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveReplicationInstanceRequest"/></param>
+        /// <returns><see cref="RemoveReplicationInstanceResponse"/></returns>
+        public async Task<RemoveReplicationInstanceResponse> RemoveReplicationInstance(RemoveReplicationInstanceRequest req)
+        {
+             JsonResponseModel<RemoveReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove a member from a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveReplicationInstanceRequest"/></param>
+        /// <returns><see cref="RemoveReplicationInstanceResponse"/></returns>
+        public RemoveReplicationInstanceResponse RemoveReplicationInstanceSync(RemoveReplicationInstanceRequest req)
+        {
+             JsonResponseModel<RemoveReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveReplicationInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

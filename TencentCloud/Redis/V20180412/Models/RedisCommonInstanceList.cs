@@ -37,13 +37,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// User ID
+        /// User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Instance project ID
+        /// Project ID of the instance
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -61,25 +61,30 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance network ID
+        /// Instance VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// VPC subnet ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+        /// Instance status information
+        /// - `1`: Task running.
+        /// - `2`: Instance running.
+        /// - `-2`: Instance isolated.
+        /// - `-3`: Instance being eliminated.
+        /// - `-4`: Instance eliminated.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Instance network IP
+        /// Private network IP address of an instance
         /// </summary>
         [JsonProperty("Vips")]
         public string[] Vips{ get; set; }
@@ -97,13 +102,17 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Createtime{ get; set; }
 
         /// <summary>
-        /// Billing mode. 0: pay-as-you-go; 1: monthly subscription
+        /// Billing type
+        /// - `0`: Pay-as-you-go.
+        /// - `1`: Monthly subscription.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: 0 (classic network); 1 (VPC).
+        /// Network Type
+        /// - `0`: Classic network.
+        /// - `1`: VPC.
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }

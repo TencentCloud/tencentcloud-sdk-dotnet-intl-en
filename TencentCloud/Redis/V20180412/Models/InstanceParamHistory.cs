@@ -31,19 +31,22 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Value before modification
+        /// The value of the parameter before modification
         /// </summary>
         [JsonProperty("PreValue")]
         public string PreValue{ get; set; }
 
         /// <summary>
-        /// Value after modification
+        /// The value of the parameter after modification
         /// </summary>
         [JsonProperty("NewValue")]
         public string NewValue{ get; set; }
 
         /// <summary>
-        /// Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+        /// Parameter configuration status
+        /// - `1`: The parameter configuration is being modified.
+        /// - `2`: The parameter configuration has been modified successfully.
+        /// - `3`: Failed to modify the parameter configuration.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

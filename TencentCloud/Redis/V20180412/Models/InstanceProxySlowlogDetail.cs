@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Duration of the slow query in ms.
+        /// Slow query duration in milliseconds
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Client{ get; set; }
 
         /// <summary>
-        /// Command
+        /// Slow query command
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// Command line details
+        /// Detailed command line information of slow query
         /// </summary>
         [JsonProperty("CommandLine")]
         public string CommandLine{ get; set; }

@@ -25,19 +25,21 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Shard node name
+        /// The name of a shard node
         /// </summary>
         [JsonProperty("ShardName")]
         public string ShardName{ get; set; }
 
         /// <summary>
-        /// Shard node ID
+        /// The serial number of a shard node
         /// </summary>
         [JsonProperty("ShardId")]
         public string ShardId{ get; set; }
 
         /// <summary>
-        /// Role
+        /// The role of a shard node
+        /// - `0`: Master node.
+        /// - `1`: Replica node.
         /// </summary>
         [JsonProperty("Role")]
         public long? Role{ get; set; }
@@ -55,7 +57,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Slots{ get; set; }
 
         /// <summary>
-        /// Storage capacity
+        /// Used Capacity
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -67,13 +69,15 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? StorageSlope{ get; set; }
 
         /// <summary>
-        /// ID of the runtime node of the instance
+        /// Instance runtime node ID
         /// </summary>
         [JsonProperty("Runid")]
         public string Runid{ get; set; }
 
         /// <summary>
-        /// Service status. 0: down; 1: on
+        /// Service status
+        /// - `0`: Down.
+        /// - `1`: On.
         /// </summary>
         [JsonProperty("Connected")]
         public long? Connected{ get; set; }

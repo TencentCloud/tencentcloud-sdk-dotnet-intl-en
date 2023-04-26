@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Data type of the parameter
+        /// Parameter Type
         /// </summary>
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
@@ -49,13 +49,15 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Current value
+        /// Current value of the parameter
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+        /// Whether to restart the database for the modified parameters to take effect
+        /// - `0`: No restart.
+        /// - `1`: Restart required.
         /// </summary>
         [JsonProperty("NeedReboot")]
         public long? NeedReboot{ get; set; }
@@ -75,7 +77,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Min{ get; set; }
 
         /// <summary>
-        /// Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+        /// Enumerated values of the parameter. It is null if the parameter is non-enumerated
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnumValue")]

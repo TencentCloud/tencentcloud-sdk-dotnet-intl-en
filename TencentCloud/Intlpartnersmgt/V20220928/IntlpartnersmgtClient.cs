@@ -149,6 +149,126 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
+        /// This API is used to obtain the total amount of customer bills by payment mode.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>
+        public async Task<DescribeBillSummaryByPayModeResponse> DescribeBillSummaryByPayMode(DescribeBillSummaryByPayModeRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryByPayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the total amount of customer bills by payment mode.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>
+        public DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayModeSync(DescribeBillSummaryByPayModeRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByPayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the total amount of customer bills by product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryByProductRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByProductResponse"/></returns>
+        public async Task<DescribeBillSummaryByProductResponse> DescribeBillSummaryByProduct(DescribeBillSummaryByProductRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryByProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the total amount of customer bills by product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryByProductRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByProductResponse"/></returns>
+        public DescribeBillSummaryByProductResponse DescribeBillSummaryByProductSync(DescribeBillSummaryByProductRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the total amount of customer bills by region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryByRegionRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByRegionResponse"/></returns>
+        public async Task<DescribeBillSummaryByRegionResponse> DescribeBillSummaryByRegion(DescribeBillSummaryByRegionRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryByRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the total amount of customer bills by region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryByRegionRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByRegionResponse"/></returns>
+        public DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegionSync(DescribeBillSummaryByRegionRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the customer bill details.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>

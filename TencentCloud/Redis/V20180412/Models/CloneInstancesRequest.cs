@@ -25,13 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// ID of the current instance
+        /// The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+        /// The number of clone instances at a time
+        /// - The maximum number of monthly subscribed instances is 100 for each purchase.
+        /// - The maximum number of pay-as-you-go instances is 30 for each purchase.
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
@@ -73,13 +75,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// VPC ID. If this parameter is not passed in, the classic network will be selected by default.
+        /// The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID, which is not required for the classic network.
+        /// The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -97,7 +99,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+        /// The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
@@ -115,7 +117,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+        /// Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -127,13 +129,15 @@ namespace TencentCloud.Redis.V20180412.Models
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
+        /// The parameter template ID associated with the clone instance
+        /// - If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+        /// - You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+        /// The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public string[] AlarmPolicyList{ get; set; }

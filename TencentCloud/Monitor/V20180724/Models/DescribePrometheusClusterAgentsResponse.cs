@@ -37,6 +37,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
+        /// Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+        /// </summary>
+        [JsonProperty("IsFirstBind")]
+        public bool? IsFirstBind{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamArrayObj(map, prefix + "Agents.", this.Agents);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "IsFirstBind", this.IsFirstBind);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// User AppID
+        /// User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -129,7 +129,17 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? GrocerySysId{ get; set; }
 
         /// <summary>
-        /// Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+        /// Instance type
+        /// - `2`: Redis 2.8 Memory Edition (Standard Architecture).
+        /// - `3`: CKV 3.2 Memory Edition (Standard Architecture).
+        /// - `4`: CKV 3.2 Memory Edition (Cluster Architecture)
+        /// - `5`: Redis 2.8 Memory Edition (Standalone)
+        /// - `6`: Redis 4.0 Memory Edition (Standard Architecture).
+        /// - `7`: Redis 4.0 Memory Edition (Cluster Architecture)
+        /// - `8`: Redis 5.0 Memory Edition (Standard Architecture).
+        /// - `9`: Redis 5.0 Memory Edition (Cluster Architecture)
+        /// - `15`: Redis 6.2 Memory Edition (Standard Architecture).
+        /// - `16`: Redis 6.2 Memory Edition (Cluster Architecture)
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }

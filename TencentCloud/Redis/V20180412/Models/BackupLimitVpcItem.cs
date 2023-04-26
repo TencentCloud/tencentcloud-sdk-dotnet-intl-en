@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Region of the VPC of the custom backup file download address.
+        /// The region of the VPC that corresponds to the download address of the backup file
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// VPC list of the custom backup file download address.
+        /// The list of VPCs that correspond to the download addresses of the backup files
         /// </summary>
         [JsonProperty("VpcList")]
         public string[] VpcList{ get; set; }

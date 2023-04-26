@@ -43,7 +43,17 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
+        /// Instance type
+        /// - `2`: Redis 2.8 Memory Edition (Standard Architecture).
+        /// - `3`: CKV 3.2 Memory Edition (Standard Architecture).
+        /// - `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+        /// - `5`: Redis 2.8 Memory Edition (Standalone).
+        /// - `6`: Redis 4.0 Memory Edition (Standard Architecture).
+        /// - `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+        /// - `8`: Redis 5.0 Memory Edition (Standard Architecture).
+        /// - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+        /// - `15`: Redis 6.2 Memory Edition (Standard Architecture).
+        /// - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
         /// </summary>
         [JsonProperty("ProductType")]
         public ulong? ProductType{ get; set; }

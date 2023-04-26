@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Tag value
+        /// The value corresponding to the tag key
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

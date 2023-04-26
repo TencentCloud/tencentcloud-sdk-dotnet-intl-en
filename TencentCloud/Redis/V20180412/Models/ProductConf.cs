@@ -25,13 +25,23 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+        /// Product type
+        /// - `2`: Redis 2.8 Memory Edition (Standard Architecture).
+        /// - `3`: CKV 3.2 Memory Edition (Standard Architecture).
+        /// - `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+        /// - `5`: Redis 2.8 Memory Edition (Standalone).
+        /// - `6`: Redis 4.0 Memory Edition (Standard Architecture).
+        /// - `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+        /// - `8`: Redis 5.0 Memory Edition (Standard Architecture).
+        /// - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+        /// - `15`: Redis 6.2 Memory Edition (Standard Architecture).
+        /// - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+        /// Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
@@ -50,18 +60,20 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Whether a product is sold out
+        /// - `true`: Sold out.
+        /// - `false`: Not sold out.
         /// </summary>
         [JsonProperty("Saleout")]
         public bool? Saleout{ get; set; }
 
         /// <summary>
-        /// Product engine: Tencent Cloud CKV or Redis community edition
+        /// Product engines, including Tencent Cloud CKV and Redis Community Edition.
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+        /// Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
@@ -79,25 +91,29 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] ShardSize{ get; set; }
 
         /// <summary>
-        /// Number of replicas
+        /// Quantity of replicas
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public string[] ReplicaNum{ get; set; }
 
         /// <summary>
-        /// Number of shards
+        /// Quantity of shards
         /// </summary>
         [JsonProperty("ShardNum")]
         public string[] ShardNum{ get; set; }
 
         /// <summary>
-        /// Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+        /// Supported billing modes
+        /// - `1`: Monthly subscription.
+        /// - `0`: Pay-as-you-go.
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
         /// Whether to support read-only replicas
+        /// - `true`: Supported.
+        /// -`false`: Not supported.
         /// </summary>
         [JsonProperty("EnableRepicaReadOnly")]
         public bool? EnableRepicaReadOnly{ get; set; }

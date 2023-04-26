@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// User App ID
+        /// User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Replication group ID
+        /// Replication group ID in the format of "crs-rpl-deind****"
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

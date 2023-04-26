@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// User AppID
+        /// User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
@@ -91,25 +91,35 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Instance creation time
+        /// Instance creation time in the format of "2020-01-15 10:20:00"
         /// </summary>
         [JsonProperty("Createtime")]
         public string Createtime{ get; set; }
 
         /// <summary>
-        /// Instance capacity in MB
+        /// Instance memory capacity in MB (1 MB = 1024 KB)
         /// </summary>
         [JsonProperty("Size")]
         public float? Size{ get; set; }
 
         /// <summary>
-        /// This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+        /// This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
         /// </summary>
         [JsonProperty("SizeUsed")]
         public float? SizeUsed{ get; set; }
 
         /// <summary>
-        /// Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+        /// Instance type
+        /// - `2`: Redis 2.8 Memory Edition (Standard Architecture).
+        /// - `3`: CKV 3.2 Memory Edition (Standard Architecture).
+        /// - `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+        /// - `5`: Redis 2.8 Memory Edition (Standalone).
+        /// - `6`: Redis 4.0 Memory Edition (Standard Architecture).
+        /// - `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+        /// - `8`: Redis 5.0 Memory Edition (Standard Architecture).
+        /// - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+        /// - `15`: Redis 6.2 Memory Edition (Standard Architecture).
+        /// - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -121,7 +131,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Instance expiration time
+        /// The time when a monthly subscribed instance expires
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
@@ -163,7 +173,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceTitle{ get; set; }
 
         /// <summary>
-        /// Scheduled deactivation time
+        /// The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
@@ -211,7 +221,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? PriceId{ get; set; }
 
         /// <summary>
-        /// Isolation time
+        /// The time when an instance start to be isolated
         /// </summary>
         [JsonProperty("CloseTime")]
         public string CloseTime{ get; set; }
@@ -300,7 +310,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+        /// Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MonitorVersion")]
@@ -342,8 +352,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public string WanAddress{ get; set; }
 
         /// <summary>
-        /// Polaris service address
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Polaris service address, which is for internal use.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolarisServer")]
         public string PolarisServer{ get; set; }
