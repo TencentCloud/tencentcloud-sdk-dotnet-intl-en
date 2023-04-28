@@ -45,6 +45,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Tag")]
         public RuleTagInfo Tag{ get; set; }
 
+        /// <summary>
+        /// Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DynamicIndex")]
+        public DynamicIndex DynamicIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "FullText.", this.FullText);
             this.SetParamObj(map, prefix + "KeyValue.", this.KeyValue);
             this.SetParamObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamObj(map, prefix + "DynamicIndex.", this.DynamicIndex);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// HTTPS Service
+        /// HTTPS (enabled by default), which will incur charges.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

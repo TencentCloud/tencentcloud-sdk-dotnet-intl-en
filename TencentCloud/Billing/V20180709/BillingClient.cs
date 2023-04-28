@@ -133,7 +133,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to query bill resources summary. 
+        /// This API is used to query bill resources summary.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to query bill resources summary. 
+        /// This API is used to query bill resources summary.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>

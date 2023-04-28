@@ -169,6 +169,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? IngressCount{ get; set; }
 
         /// <summary>
+        /// IPs of the primary nodes
+        /// </summary>
+        [JsonProperty("MasterIps")]
+        public string MasterIps{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -204,6 +210,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "PodCount", this.PodCount);
             this.SetParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
             this.SetParamSimple(map, prefix + "IngressCount", this.IngressCount);
+            this.SetParamSimple(map, prefix + "MasterIps", this.MasterIps);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

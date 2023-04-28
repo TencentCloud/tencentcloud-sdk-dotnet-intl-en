@@ -26,24 +26,28 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// Analysis name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Type of data being analyzed. Valid values: `query`; `field`; `original`
+        /// Type of data being analyzed. Valid values: `query`, `field`, `original`
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Analysis content
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
         /// Configuration
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConfigInfo")]
         public AlarmAnalysisConfig[] ConfigInfo{ get; set; }

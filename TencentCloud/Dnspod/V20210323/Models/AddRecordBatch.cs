@@ -55,8 +55,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string RecordLineId{ get; set; }
 
         /// <summary>
-        /// Record weight (not supported).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The record weight (not supported).
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

@@ -93,6 +93,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to add a CDN acceleration domain name. Up to 100 domain names can be added per minute.
+        /// </summary>
+        /// <param name="req"><see cref="AddCdnDomainRequest"/></param>
+        /// <returns><see cref="AddCdnDomainResponse"/></returns>
+        public async Task<AddCdnDomainResponse> AddCdnDomain(AddCdnDomainRequest req)
+        {
+             JsonResponseModel<AddCdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddCdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add a CDN acceleration domain name. Up to 100 domain names can be added per minute.
+        /// </summary>
+        /// <param name="req"><see cref="AddCdnDomainRequest"/></param>
+        /// <returns><see cref="AddCdnDomainResponse"/></returns>
+        public AddCdnDomainResponse AddCdnDomainSync(AddCdnDomainRequest req)
+        {
+             JsonResponseModel<AddCdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddCdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a log topic. Up to 10 log topics can be created under one logset.
         /// </summary>
         /// <param name="req"><see cref="CreateClsLogTopicRequest"/></param>

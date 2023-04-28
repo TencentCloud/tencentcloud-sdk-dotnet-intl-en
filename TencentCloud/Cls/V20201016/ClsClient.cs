@@ -1173,6 +1173,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to get alarm records, such as today's uncleared alarms.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlertRecordHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAlertRecordHistoryResponse"/></returns>
+        public async Task<DescribeAlertRecordHistoryResponse> DescribeAlertRecordHistory(DescribeAlertRecordHistoryRequest req)
+        {
+             JsonResponseModel<DescribeAlertRecordHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlertRecordHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlertRecordHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get alarm records, such as today's uncleared alarms.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlertRecordHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAlertRecordHistoryResponse"/></returns>
+        public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistorySync(DescribeAlertRecordHistoryRequest req)
+        {
+             JsonResponseModel<DescribeAlertRecordHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlertRecordHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlertRecordHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the machine group bound to a collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigMachineGroupsRequest"/></param>

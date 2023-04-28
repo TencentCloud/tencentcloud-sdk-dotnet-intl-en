@@ -93,6 +93,13 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("MX")]
         public ulong? MX{ get; set; }
 
+        /// <summary>
+        /// The record weight.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "MX", this.MX);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Cost allocation tag key
+        /// Cost allocation tag key, which can be customized.
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }

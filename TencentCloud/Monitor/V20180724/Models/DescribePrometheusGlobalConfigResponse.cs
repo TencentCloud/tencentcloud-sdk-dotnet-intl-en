@@ -52,6 +52,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public PrometheusConfigItem[] RawJobs{ get; set; }
 
         /// <summary>
+        /// List of probes and the corresponding targets information
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Probes")]
+        public PrometheusConfigItem[] Probes{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -67,6 +74,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
             this.SetParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
             this.SetParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
+            this.SetParamArrayObj(map, prefix + "Probes.", this.Probes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

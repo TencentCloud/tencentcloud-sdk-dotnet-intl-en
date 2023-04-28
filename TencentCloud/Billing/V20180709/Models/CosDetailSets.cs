@@ -43,7 +43,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string DosageEndTime{ get; set; }
 
         /// <summary>
-        /// Sub-product name
+        /// Subproduct name
         /// </summary>
         [JsonProperty("SubProductCodeName")]
         public string SubProductCodeName{ get; set; }

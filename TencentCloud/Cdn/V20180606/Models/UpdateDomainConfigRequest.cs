@@ -315,7 +315,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public QnPrivateAccess QnPrivateAccess{ get; set; }
 
         /// <summary>
-        /// HTTPS service
+        /// Origin-pull authentication for other origins
+        /// </summary>
+        [JsonProperty("OthersPrivateAccess")]
+        public OthersPrivateAccess OthersPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
         /// </summary>
         [JsonProperty("HttpsBilling")]
         public HttpsBilling HttpsBilling{ get; set; }
@@ -373,6 +379,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
             this.SetParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
             this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
+            this.SetParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
             this.SetParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
         }
     }

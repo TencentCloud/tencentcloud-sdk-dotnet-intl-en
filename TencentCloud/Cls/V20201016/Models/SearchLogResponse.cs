@@ -83,6 +83,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public Column[] Columns{ get; set; }
 
         /// <summary>
+        /// Sample rate used in this statistical analysis
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SamplingRate")]
+        public float? SamplingRate{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -102,6 +109,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
             this.SetParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
+            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

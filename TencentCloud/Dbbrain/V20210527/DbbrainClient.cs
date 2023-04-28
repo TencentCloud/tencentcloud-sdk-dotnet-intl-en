@@ -373,6 +373,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// This API is used to delete health report generation tasks by task ID.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBDiagReportTasksRequest"/></param>
+        /// <returns><see cref="DeleteDBDiagReportTasksResponse"/></returns>
+        public async Task<DeleteDBDiagReportTasksResponse> DeleteDBDiagReportTasks(DeleteDBDiagReportTasksRequest req)
+        {
+             JsonResponseModel<DeleteDBDiagReportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDBDiagReportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBDiagReportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete health report generation tasks by task ID.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBDiagReportTasksRequest"/></param>
+        /// <returns><see cref="DeleteDBDiagReportTasksResponse"/></returns>
+        public DeleteDBDiagReportTasksResponse DeleteDBDiagReportTasksSync(DeleteDBDiagReportTasksRequest req)
+        {
+             JsonResponseModel<DeleteDBDiagReportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDBDiagReportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBDiagReportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a security audit log export task.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityAuditLogExportTasksRequest"/></param>
@@ -1164,6 +1204,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSlowLogUserHostStats");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogUserHostStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the slow query log details of a SQL template in a specified time period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public async Task<DescribeSlowLogsResponse> DescribeSlowLogs(DescribeSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the slow query log details of a SQL template in a specified time period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public DescribeSlowLogsResponse DescribeSlowLogsSync(DescribeSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -72,6 +72,25 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
+        /// <summary>
+        /// Log topic description
+        /// </summary>
+        [JsonProperty("Describes")]
+        public string Describes{ get; set; }
+
+        /// <summary>
+        /// `0`: Disable log transitioning.
+        /// A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+        /// </summary>
+        [JsonProperty("HotPeriod")]
+        public ulong? HotPeriod{ get; set; }
+
+        /// <summary>
+        /// Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+        /// </summary>
+        [JsonProperty("IsWebTracking")]
+        public bool? IsWebTracking{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +105,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "Describes", this.Describes);
+            this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+            this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         }
     }
 }

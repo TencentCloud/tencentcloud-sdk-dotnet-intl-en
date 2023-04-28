@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// CWPP UUID
+        /// TCSS UUID
         /// </summary>
         [JsonProperty("UUID")]
         public string UUID{ get; set; }

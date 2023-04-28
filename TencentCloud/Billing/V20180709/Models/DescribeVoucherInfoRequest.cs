@@ -73,13 +73,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherName{ get; set; }
 
         /// <summary>
-        /// The start time of the promotional campaign.
+        /// The start date of the voucher issuance, such as `2021-01-01`.
         /// </summary>
         [JsonProperty("TimeFrom")]
         public string TimeFrom{ get; set; }
 
         /// <summary>
-        /// The end time of the promotional campaign.
+        /// The end date of the voucher issuance, such as `2021-01-01`.
         /// </summary>
         [JsonProperty("TimeTo")]
         public string TimeTo{ get; set; }

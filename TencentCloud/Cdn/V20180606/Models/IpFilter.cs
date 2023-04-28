@@ -58,8 +58,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public IpFilterPathRule[] FilterRules{ get; set; }
 
         /// <summary>
-        /// [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }

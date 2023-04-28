@@ -43,6 +43,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
+        /// <summary>
+        /// Number of targets
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Targets")]
+        public Targets Targets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Config", this.Config);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamObj(map, prefix + "Targets.", this.Targets);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// The start date of the usage query
+        /// The start date of the usage query, such as `2020-09-01`.
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// The end date of the usage query (end date must be in the same month as the start date)
+        /// The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }

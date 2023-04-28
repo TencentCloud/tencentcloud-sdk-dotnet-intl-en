@@ -53,6 +53,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Acceleration service status
         /// `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
         /// `processing`: Deploying
+        /// `closing`: Disabling
         /// `online`: Enabled
         /// `offline`: Disabled
         /// </summary>
@@ -490,11 +491,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         public QnPrivateAccess QnPrivateAccess{ get; set; }
 
         /// <summary>
-        /// HTTPS service
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// HTTPS (enabled by default)
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HttpsBilling")]
         public HttpsBilling HttpsBilling{ get; set; }
+
+        /// <summary>
+        /// Origin-pull authentication for other origins
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OthersPrivateAccess")]
+        public OthersPrivateAccess OthersPrivateAccess{ get; set; }
 
 
         /// <summary>
@@ -567,6 +575,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
             this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
             this.SetParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
+            this.SetParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
         }
     }
 }

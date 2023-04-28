@@ -52,7 +52,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// Acceleration service status
         /// `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
         /// `processing`: Deploying
-        /// `online`: Activated
+        /// `closing`: Disabling
+        /// `online`: Enabled
         /// `offline`: Disabled
         /// </summary>
         [JsonProperty("Status")]

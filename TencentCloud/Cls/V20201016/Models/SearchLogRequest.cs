@@ -97,9 +97,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public float? SamplingRate{ get; set; }
 
         /// <summary>
-        /// Search syntax.
+        /// Search syntax
         /// `0` (default): Lucene; `1`: CQL.
-        /// For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+        /// For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
