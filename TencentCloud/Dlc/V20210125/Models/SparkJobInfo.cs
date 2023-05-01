@@ -252,6 +252,25 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SparkImageVersion")]
         public string SparkImageVersion{ get; set; }
 
+        /// <summary>
+        /// The ID of the associated Data Lake Compute query script.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DataEngineClusterType")]
+        public string DataEngineClusterType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DataEngineImageVersion")]
+        public string DataEngineImageVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +313,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
             this.SetParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
             this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
+            this.SetParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
         }
     }
 }

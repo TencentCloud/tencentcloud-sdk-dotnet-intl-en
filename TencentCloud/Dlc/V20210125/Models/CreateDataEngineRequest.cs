@@ -187,13 +187,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string MainClusterName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
         /// </summary>
         [JsonProperty("ElasticSwitch")]
         public bool? ElasticSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
         /// </summary>
         [JsonProperty("ElasticLimit")]
         public long? ElasticLimit{ get; set; }

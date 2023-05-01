@@ -1853,6 +1853,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to obtain the information of a TDMQ for Pulsar pro cluster instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePulsarProInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribePulsarProInstanceDetailResponse"/></returns>
+        public async Task<DescribePulsarProInstanceDetailResponse> DescribePulsarProInstanceDetail(DescribePulsarProInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribePulsarProInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePulsarProInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePulsarProInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the information of a TDMQ for Pulsar pro cluster instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePulsarProInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribePulsarProInstanceDetailResponse"/></returns>
+        public DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetailSync(DescribePulsarProInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribePulsarProInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePulsarProInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePulsarProInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of the purchased TDMQ for Pulsar pro instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePulsarProInstancesRequest"/></param>
+        /// <returns><see cref="DescribePulsarProInstancesResponse"/></returns>
+        public async Task<DescribePulsarProInstancesResponse> DescribePulsarProInstances(DescribePulsarProInstancesRequest req)
+        {
+             JsonResponseModel<DescribePulsarProInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePulsarProInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePulsarProInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of the purchased TDMQ for Pulsar pro instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePulsarProInstancesRequest"/></param>
+        /// <returns><see cref="DescribePulsarProInstancesResponse"/></returns>
+        public DescribePulsarProInstancesResponse DescribePulsarProInstancesSync(DescribePulsarProInstancesRequest req)
+        {
+             JsonResponseModel<DescribePulsarProInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePulsarProInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePulsarProInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQNodeListRequest"/></param>

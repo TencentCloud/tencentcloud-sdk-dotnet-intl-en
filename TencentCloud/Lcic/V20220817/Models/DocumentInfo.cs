@@ -108,6 +108,34 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
+        /// <summary>
+        /// The number of pages.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Pages")]
+        public ulong? Pages{ get; set; }
+
+        /// <summary>
+        /// The width. This parameter is valid only if static document transcoding is used.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Width")]
+        public ulong? Width{ get; set; }
+
+        /// <summary>
+        /// The height. This parameter is valid only if static document transcoding is used.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Height")]
+        public ulong? Height{ get; set; }
+
+        /// <summary>
+        /// The thumbnail. Only transcoded courseware has thumbnails.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Cover")]
+        public string Cover{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +156,10 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "DocumentType", this.DocumentType);
             this.SetParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Pages", this.Pages);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "Cover", this.Cover);
         }
     }
 }

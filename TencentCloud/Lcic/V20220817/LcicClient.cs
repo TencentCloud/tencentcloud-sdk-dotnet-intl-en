@@ -303,6 +303,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// This API is used to get courseware information.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDescribeDocumentRequest"/></param>
+        /// <returns><see cref="BatchDescribeDocumentResponse"/></returns>
+        public async Task<BatchDescribeDocumentResponse> BatchDescribeDocument(BatchDescribeDocumentRequest req)
+        {
+             JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDescribeDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDescribeDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get courseware information.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDescribeDocumentRequest"/></param>
+        /// <returns><see cref="BatchDescribeDocumentResponse"/></returns>
+        public BatchDescribeDocumentResponse BatchDescribeDocumentSync(BatchDescribeDocumentRequest req)
+        {
+             JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDescribeDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDescribeDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
         /// A maximum of 20 requests can be initiated per second for this API.
         /// </summary>
@@ -839,6 +879,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// This API is used to delete spectators.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSupervisorRequest"/></param>
+        /// <returns><see cref="DeleteSupervisorResponse"/></returns>
+        public async Task<DeleteSupervisorResponse> DeleteSupervisor(DeleteSupervisorRequest req)
+        {
+             JsonResponseModel<DeleteSupervisorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSupervisor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSupervisorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete spectators.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSupervisorRequest"/></param>
+        /// <returns><see cref="DeleteSupervisorResponse"/></returns>
+        public DeleteSupervisorResponse DeleteSupervisorSync(DeleteSupervisorRequest req)
+        {
+             JsonResponseModel<DeleteSupervisorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSupervisor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSupervisorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the answers to a quiz question in a room.
         /// </summary>
         /// <param name="req"><see cref="DescribeAnswerListRequest"/></param>
@@ -994,6 +1074,54 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDocument");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 有新接口替换
+        /// 
+        /// A new API is offered for this action now.
+        /// 
+        /// This API is used to query courseware. It has been deprecated. Please use `BatchDescribeDocument` instead.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocumentsRequest"/></param>
+        /// <returns><see cref="DescribeDocumentsResponse"/></returns>
+        public async Task<DescribeDocumentsResponse> DescribeDocuments(DescribeDocumentsRequest req)
+        {
+             JsonResponseModel<DescribeDocumentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDocuments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDocumentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 有新接口替换
+        /// 
+        /// A new API is offered for this action now.
+        /// 
+        /// This API is used to query courseware. It has been deprecated. Please use `BatchDescribeDocument` instead.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocumentsRequest"/></param>
+        /// <returns><see cref="DescribeDocumentsResponse"/></returns>
+        public DescribeDocumentsResponse DescribeDocumentsSync(DescribeDocumentsRequest req)
+        {
+             JsonResponseModel<DescribeDocumentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDocuments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDocumentsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1408,6 +1536,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to end a room.
+        /// </summary>
+        /// <param name="req"><see cref="EndRoomRequest"/></param>
+        /// <returns><see cref="EndRoomResponse"/></returns>
+        public async Task<EndRoomResponse> EndRoom(EndRoomRequest req)
+        {
+             JsonResponseModel<EndRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EndRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EndRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to end a room.
+        /// </summary>
+        /// <param name="req"><see cref="EndRoomRequest"/></param>
+        /// <returns><see cref="EndRoomResponse"/></returns>
+        public EndRoomResponse EndRoomSync(EndRoomRequest req)
+        {
+             JsonResponseModel<EndRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EndRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EndRoomResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1940,6 +2108,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "SetWatermark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a room. Before you call this API, make sure a user has entered the room so that the class is initialized.
+        /// </summary>
+        /// <param name="req"><see cref="StartRoomRequest"/></param>
+        /// <returns><see cref="StartRoomResponse"/></returns>
+        public async Task<StartRoomResponse> StartRoom(StartRoomRequest req)
+        {
+             JsonResponseModel<StartRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start a room. Before you call this API, make sure a user has entered the room so that the class is initialized.
+        /// </summary>
+        /// <param name="req"><see cref="StartRoomRequest"/></param>
+        /// <returns><see cref="StartRoomResponse"/></returns>
+        public StartRoomResponse StartRoomSync(StartRoomRequest req)
+        {
+             JsonResponseModel<StartRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartRoomResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

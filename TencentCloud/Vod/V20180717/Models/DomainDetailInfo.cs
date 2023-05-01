@@ -74,6 +74,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// The QUIC configuration for the domain.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("QUICConfig")]
+        public DomainQUICConfig QUICConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
             this.SetParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
         }
     }
 }

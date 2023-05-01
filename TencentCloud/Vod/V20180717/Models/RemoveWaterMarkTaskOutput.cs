@@ -25,10 +25,28 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The file ID of the video.
+        /// The file ID.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
+
+        /// <summary>
+        /// The file type, such as MP4 or MP3.
+        /// </summary>
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
+
+        /// <summary>
+        /// The playback URL of the output file.
+        /// </summary>
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
+
+        /// <summary>
+        /// The filename, which can be up to 64 characters long.
+        /// </summary>
+        [JsonProperty("MediaName")]
+        public string MediaName{ get; set; }
 
         /// <summary>
         /// The metadata of the video, including size, duration, video stream information, and audio stream information.
@@ -43,6 +61,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "MediaName", this.MediaName);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
         }
     }

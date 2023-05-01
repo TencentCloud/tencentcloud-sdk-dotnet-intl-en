@@ -43,25 +43,25 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Update start time
+        /// The update start time in the format of yyyy-mm-dd HH:MM:SS.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Update end time
+        /// The update end time in the format of yyyy-mm-dd HH:MM:SS.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Query list offset
+        /// The query list offset, which defaults to 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Query list limit
+        /// The maximum number of queries allowed in the list, which defaults to 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

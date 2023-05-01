@@ -69,7 +69,8 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// Host IP.
+        /// The IP address of the host.
+        /// If the stream is published from a private network, this parameter will be `-`.
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
