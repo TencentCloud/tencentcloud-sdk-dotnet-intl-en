@@ -344,6 +344,20 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("SlaveZones")]
         public SlaveZones SlaveZones{ get; set; }
 
+        /// <summary>
+        /// Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Architecture")]
+        public string Architecture{ get; set; }
+
+        /// <summary>
+        /// Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Style")]
+        public string Style{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -402,6 +416,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamSimple(map, prefix + "IsDrZone", this.IsDrZone);
             this.SetParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
+            this.SetParamSimple(map, prefix + "Architecture", this.Architecture);
+            this.SetParamSimple(map, prefix + "Style", this.Style);
         }
     }
 }

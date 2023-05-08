@@ -1133,6 +1133,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the attributes of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesAttributeRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesAttributeResponse"/></returns>
+        public async Task<DescribeDBInstancesAttributeResponse> DescribeDBInstancesAttribute(DescribeDBInstancesAttributeRequest req)
+        {
+             JsonResponseModel<DescribeDBInstancesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstancesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the attributes of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesAttributeRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesAttributeResponse"/></returns>
+        public DescribeDBInstancesAttributeResponse DescribeDBInstancesAttributeSync(DescribeDBInstancesAttributeRequest req)
+        {
+             JsonResponseModel<DescribeDBInstancesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstancesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of databases
         /// </summary>
         /// <param name="req"><see cref="DescribeDBsRequest"/></param>
@@ -1684,6 +1724,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUploadBackupInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadBackupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of extended events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeXEventsRequest"/></param>
+        /// <returns><see cref="DescribeXEventsResponse"/></returns>
+        public async Task<DescribeXEventsResponse> DescribeXEvents(DescribeXEventsRequest req)
+        {
+             JsonResponseModel<DescribeXEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeXEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeXEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of extended events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeXEventsRequest"/></param>
+        /// <returns><see cref="DescribeXEventsResponse"/></returns>
+        public DescribeXEventsResponse DescribeXEventsSync(DescribeXEventsRequest req)
+        {
+             JsonResponseModel<DescribeXEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeXEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeXEventsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2577,7 +2657,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to restore an instance from a backup file.
+        /// This API is used to roll back the database by backup set.
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
         /// <returns><see cref="RestoreInstanceResponse"/></returns>
@@ -2597,7 +2677,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to restore an instance from a backup file.
+        /// This API is used to roll back the database by backup set.
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
         /// <returns><see cref="RestoreInstanceResponse"/></returns>
@@ -2617,7 +2697,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to roll back an instance.
+        /// This API is used to roll back the instance by time point.
         /// </summary>
         /// <param name="req"><see cref="RollbackInstanceRequest"/></param>
         /// <returns><see cref="RollbackInstanceResponse"/></returns>
@@ -2637,7 +2717,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to roll back an instance.
+        /// This API is used to roll back the instance by time point.
         /// </summary>
         /// <param name="req"><see cref="RollbackInstanceRequest"/></param>
         /// <returns><see cref="RollbackInstanceResponse"/></returns>
@@ -2768,6 +2848,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "StartIncrementalMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start and stop an extended event.
+        /// </summary>
+        /// <param name="req"><see cref="StartInstanceXEventRequest"/></param>
+        /// <returns><see cref="StartInstanceXEventResponse"/></returns>
+        public async Task<StartInstanceXEventResponse> StartInstanceXEvent(StartInstanceXEventRequest req)
+        {
+             JsonResponseModel<StartInstanceXEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartInstanceXEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartInstanceXEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start and stop an extended event.
+        /// </summary>
+        /// <param name="req"><see cref="StartInstanceXEventRequest"/></param>
+        /// <returns><see cref="StartInstanceXEventResponse"/></returns>
+        public StartInstanceXEventResponse StartInstanceXEventSync(StartInstanceXEventRequest req)
+        {
+             JsonResponseModel<StartInstanceXEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartInstanceXEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartInstanceXEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

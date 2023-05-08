@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerType{ get; set; }
 
         /// <summary>
-        /// The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+        /// The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy).
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ForwardHost{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+        /// Whether to enable SNI. Values: `on` (enable), `off` (disable). For creation of HTTP listener forwarding rules, SNI is disabled by default.
         /// </summary>
         [JsonProperty("ServerNameIndicationSwitch")]
         public string ServerNameIndicationSwitch{ get; set; }

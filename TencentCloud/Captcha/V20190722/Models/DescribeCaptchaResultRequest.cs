@@ -61,13 +61,13 @@ namespace TencentCloud.Captcha.V20190722.Models
         public string AppSecretKey{ get; set; }
 
         /// <summary>
-        /// Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+        /// Reserved field.
         /// </summary>
         [JsonProperty("BusinessId")]
         public ulong? BusinessId{ get; set; }
 
         /// <summary>
-        /// Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+        /// Reserved field.
         /// </summary>
         [JsonProperty("SceneId")]
         public ulong? SceneId{ get; set; }

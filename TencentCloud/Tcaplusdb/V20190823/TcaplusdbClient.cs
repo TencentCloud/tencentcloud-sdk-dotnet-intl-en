@@ -333,6 +333,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// This API is used to delete a manual backup.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupRecordsRequest"/></param>
+        /// <returns><see cref="DeleteBackupRecordsResponse"/></returns>
+        public async Task<DeleteBackupRecordsResponse> DeleteBackupRecords(DeleteBackupRecordsRequest req)
+        {
+             JsonResponseModel<DeleteBackupRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackupRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a manual backup.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupRecordsRequest"/></param>
+        /// <returns><see cref="DeleteBackupRecordsResponse"/></returns>
+        public DeleteBackupRecordsResponse DeleteBackupRecordsSync(DeleteBackupRecordsRequest req)
+        {
+             JsonResponseModel<DeleteBackupRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackupRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a TcaplusDB cluster, which will succeed only after all resources (including table groups and tables) in the cluster are released.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterRequest"/></param>
@@ -604,6 +644,54 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query backup records.
+        /// 
+        /// When querying the cluster level, set `TableGroupId` to `-1` and `TableName` to `-1`.
+        /// When querying the cluster and table group levels, set `TableName` to `-1`.
+        /// When querying the cluster, table group, and table levels, both `TableGroupId` and `TableName` cannot be set to `-1`.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupRecordsRequest"/></param>
+        /// <returns><see cref="DescribeBackupRecordsResponse"/></returns>
+        public async Task<DescribeBackupRecordsResponse> DescribeBackupRecords(DescribeBackupRecordsRequest req)
+        {
+             JsonResponseModel<DescribeBackupRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query backup records.
+        /// 
+        /// When querying the cluster level, set `TableGroupId` to `-1` and `TableName` to `-1`.
+        /// When querying the cluster and table group levels, set `TableName` to `-1`.
+        /// When querying the cluster, table group, and table levels, both `TableGroupId` and `TableName` cannot be set to `-1`.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupRecordsRequest"/></param>
+        /// <returns><see cref="DescribeBackupRecordsResponse"/></returns>
+        public DescribeBackupRecordsResponse DescribeBackupRecordsSync(DescribeBackupRecordsRequest req)
+        {
+             JsonResponseModel<DescribeBackupRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupRecordsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1844,6 +1932,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "RollbackTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add/delete/modify backup expiration policy. `ClusterId` must be a specific cluster ID (appid).
+        /// </summary>
+        /// <param name="req"><see cref="SetBackupExpireRuleRequest"/></param>
+        /// <returns><see cref="SetBackupExpireRuleResponse"/></returns>
+        public async Task<SetBackupExpireRuleResponse> SetBackupExpireRule(SetBackupExpireRuleRequest req)
+        {
+             JsonResponseModel<SetBackupExpireRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetBackupExpireRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetBackupExpireRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add/delete/modify backup expiration policy. `ClusterId` must be a specific cluster ID (appid).
+        /// </summary>
+        /// <param name="req"><see cref="SetBackupExpireRuleRequest"/></param>
+        /// <returns><see cref="SetBackupExpireRuleResponse"/></returns>
+        public SetBackupExpireRuleResponse SetBackupExpireRuleSync(SetBackupExpireRuleRequest req)
+        {
+             JsonResponseModel<SetBackupExpireRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetBackupExpireRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetBackupExpireRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

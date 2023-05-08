@@ -64,6 +64,23 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Args")]
         public string Args{ get; set; }
 
+        /// <summary>
+        /// Whether to enable image acceleration. It defaults to `False`.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ContainerImageAccelerate")]
+        public bool? ContainerImageAccelerate{ get; set; }
+
+        /// <summary>
+        /// Image function port settings
+        /// `-1`: No port-specific image functions
+        /// `0`: Default port (Port 9000)
+        /// Others: Special ports
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ImagePort")]
+        public long? ImagePort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +93,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "Args", this.Args);
+            this.SetParamSimple(map, prefix + "ContainerImageAccelerate", this.ContainerImageAccelerate);
+            this.SetParamSimple(map, prefix + "ImagePort", this.ImagePort);
         }
     }
 }

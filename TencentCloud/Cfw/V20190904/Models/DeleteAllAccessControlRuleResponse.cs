@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// Status value. 0: modified successfully; !0: modification failed
+        /// Status of the task. `0`: Modified successfully; Others: Modification failed
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

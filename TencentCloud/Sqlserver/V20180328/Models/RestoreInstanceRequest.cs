@@ -49,7 +49,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public RenameRestoreDatabase[] RenameRestore{ get; set; }
 
         /// <summary>
-        /// Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+        /// Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
+
+        /// <summary>
+        /// Database to be overwritten, which is required when overwriting a rollback database.
+        /// </summary>
+        [JsonProperty("DBList")]
+        public string[] DBList{ get; set; }
+
+        /// <summary>
+        /// Group ID of unarchived backup files grouped by backup task
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -64,6 +76,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
             this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "DBList.", this.DBList);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }

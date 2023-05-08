@@ -133,7 +133,47 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// This API is used to create rules.
+        /// This API is used to add NAT access control rules.
+        /// </summary>
+        /// <param name="req"><see cref="AddNatAcRuleRequest"/></param>
+        /// <returns><see cref="AddNatAcRuleResponse"/></returns>
+        public async Task<AddNatAcRuleResponse> AddNatAcRule(AddNatAcRuleRequest req)
+        {
+             JsonResponseModel<AddNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to add NAT access control rules.
+        /// </summary>
+        /// <param name="req"><see cref="AddNatAcRuleRequest"/></param>
+        /// <returns><see cref="AddNatAcRuleResponse"/></returns>
+        public AddNatAcRuleResponse AddNatAcRuleSync(AddNatAcRuleRequest req)
+        {
+             JsonResponseModel<AddNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create access control rules.
         /// </summary>
         /// <param name="req"><see cref="CreateAcRulesRequest"/></param>
         /// <returns><see cref="CreateAcRulesResponse"/></returns>
@@ -153,7 +193,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// This API is used to create rules.
+        /// This API is used to create access control rules.
         /// </summary>
         /// <param name="req"><see cref="CreateAcRulesRequest"/></param>
         /// <returns><see cref="CreateAcRulesResponse"/></returns>
@@ -613,6 +653,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// This API is used to get allowlists or blocklists for intrusion prevention.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBlockIgnoreListResponse"/></returns>
+        public async Task<DescribeBlockIgnoreListResponse> DescribeBlockIgnoreList(DescribeBlockIgnoreListRequest req)
+        {
+             JsonResponseModel<DescribeBlockIgnoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBlockIgnoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlockIgnoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get allowlists or blocklists for intrusion prevention.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlockIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBlockIgnoreListResponse"/></returns>
+        public DescribeBlockIgnoreListResponse DescribeBlockIgnoreListSync(DescribeBlockIgnoreListRequest req)
+        {
+             JsonResponseModel<DescribeBlockIgnoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBlockIgnoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlockIgnoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the most frequent attacker.
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockStaticListRequest"/></param>
@@ -804,6 +884,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIPStatusList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStatusListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the NAT access control list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatAcRuleRequest"/></param>
+        /// <returns><see cref="DescribeNatAcRuleResponse"/></returns>
+        public async Task<DescribeNatAcRuleResponse> DescribeNatAcRule(DescribeNatAcRuleRequest req)
+        {
+             JsonResponseModel<DescribeNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the NAT access control list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatAcRuleRequest"/></param>
+        /// <returns><see cref="DescribeNatAcRuleResponse"/></returns>
+        public DescribeNatAcRuleResponse DescribeNatAcRuleSync(DescribeNatAcRuleRequest req)
+        {
+             JsonResponseModel<DescribeNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatAcRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1613,10 +1733,10 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// This API is used to:
-        /// add IPs/domains in the blocklist or ignored list
-        /// delete IPs/domains in the blocklist or ignored list
-        /// modify IPs/domains in the blocklist or ignored list
+        /// This API is used to manage blocked/allowed IPs and domains.
+        /// Add IPs/domains to the blocked/allowed list
+        /// Remove IPs/domains from the blocked/allowed list
+        /// Modify events related with the IPs/domains in the blocked/allowed list
         /// </summary>
         /// <param name="req"><see cref="ModifyBlockIgnoreListRequest"/></param>
         /// <returns><see cref="ModifyBlockIgnoreListResponse"/></returns>
@@ -1636,10 +1756,10 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// This API is used to:
-        /// add IPs/domains in the blocklist or ignored list
-        /// delete IPs/domains in the blocklist or ignored list
-        /// modify IPs/domains in the blocklist or ignored list
+        /// This API is used to manage blocked/allowed IPs and domains.
+        /// Add IPs/domains to the blocked/allowed list
+        /// Remove IPs/domains from the blocked/allowed list
+        /// Modify events related with the IPs/domains in the blocked/allowed list
         /// </summary>
         /// <param name="req"><see cref="ModifyBlockIgnoreListRequest"/></param>
         /// <returns><see cref="ModifyBlockIgnoreListResponse"/></returns>
@@ -1690,6 +1810,126 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBlockTop");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlockTopResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the publishing status of an enterprise security group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnterpriseSecurityDispatchStatusRequest"/></param>
+        /// <returns><see cref="ModifyEnterpriseSecurityDispatchStatusResponse"/></returns>
+        public async Task<ModifyEnterpriseSecurityDispatchStatusResponse> ModifyEnterpriseSecurityDispatchStatus(ModifyEnterpriseSecurityDispatchStatusRequest req)
+        {
+             JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEnterpriseSecurityDispatchStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the publishing status of an enterprise security group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnterpriseSecurityDispatchStatusRequest"/></param>
+        /// <returns><see cref="ModifyEnterpriseSecurityDispatchStatusResponse"/></returns>
+        public ModifyEnterpriseSecurityDispatchStatusResponse ModifyEnterpriseSecurityDispatchStatusSync(ModifyEnterpriseSecurityDispatchStatusRequest req)
+        {
+             JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEnterpriseSecurityDispatchStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnterpriseSecurityDispatchStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a new enterprise security group rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnterpriseSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="ModifyEnterpriseSecurityGroupRuleResponse"/></returns>
+        public async Task<ModifyEnterpriseSecurityGroupRuleResponse> ModifyEnterpriseSecurityGroupRule(ModifyEnterpriseSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEnterpriseSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a new enterprise security group rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnterpriseSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="ModifyEnterpriseSecurityGroupRuleResponse"/></returns>
+        public ModifyEnterpriseSecurityGroupRuleResponse ModifyEnterpriseSecurityGroupRuleSync(ModifyEnterpriseSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEnterpriseSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify NAT access control rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatAcRuleRequest"/></param>
+        /// <returns><see cref="ModifyNatAcRuleResponse"/></returns>
+        public async Task<ModifyNatAcRuleResponse> ModifyNatAcRule(ModifyNatAcRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify NAT access control rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatAcRuleRequest"/></param>
+        /// <returns><see cref="ModifyNatAcRuleResponse"/></returns>
+        public ModifyNatAcRuleResponse ModifyNatAcRuleSync(ModifyNatAcRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatAcRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1810,6 +2050,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNatFwVpcDnsSwitch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatFwVpcDnsSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to change the sequence number of NAT firewall rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatSequenceRulesRequest"/></param>
+        /// <returns><see cref="ModifyNatSequenceRulesResponse"/></returns>
+        public async Task<ModifyNatSequenceRulesResponse> ModifyNatSequenceRules(ModifyNatSequenceRulesRequest req)
+        {
+             JsonResponseModel<ModifyNatSequenceRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatSequenceRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatSequenceRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to change the sequence number of NAT firewall rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatSequenceRulesRequest"/></param>
+        /// <returns><see cref="ModifyNatSequenceRulesResponse"/></returns>
+        public ModifyNatSequenceRulesResponse ModifyNatSequenceRulesSync(ModifyNatSequenceRulesRequest req)
+        {
+             JsonResponseModel<ModifyNatSequenceRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNatSequenceRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatSequenceRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2061,6 +2341,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// This API is used to modify the log retention period or to clear logs.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStorageSettingRequest"/></param>
+        /// <returns><see cref="ModifyStorageSettingResponse"/></returns>
+        public async Task<ModifyStorageSettingResponse> ModifyStorageSetting(ModifyStorageSettingRequest req)
+        {
+             JsonResponseModel<ModifyStorageSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyStorageSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStorageSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the log retention period or to clear logs.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStorageSettingRequest"/></param>
+        /// <returns><see cref="ModifyStorageSettingResponse"/></returns>
+        public ModifyStorageSettingResponse ModifyStorageSettingSync(ModifyStorageSettingRequest req)
+        {
+             JsonResponseModel<ModifyStorageSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyStorageSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStorageSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify rule list status.
         /// </summary>
         /// <param name="req"><see cref="ModifyTableStatusRequest"/></param>
@@ -2172,6 +2492,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "RemoveEnterpriseSecurityGroupRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete NAT access control rules.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveNatAcRuleRequest"/></param>
+        /// <returns><see cref="RemoveNatAcRuleResponse"/></returns>
+        public async Task<RemoveNatAcRuleResponse> RemoveNatAcRule(RemoveNatAcRuleRequest req)
+        {
+             JsonResponseModel<RemoveNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveNatAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete NAT access control rules.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveNatAcRuleRequest"/></param>
+        /// <returns><see cref="RemoveNatAcRuleResponse"/></returns>
+        public RemoveNatAcRuleResponse RemoveNatAcRuleSync(RemoveNatAcRuleRequest req)
+        {
+             JsonResponseModel<RemoveNatAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveNatAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveNatAcRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

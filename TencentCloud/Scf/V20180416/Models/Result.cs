@@ -67,7 +67,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string FunctionRequestId{ get; set; }
 
         /// <summary>
-        /// `0` indicates successful execution. Null is returned for asynchronous invocations.
+        /// The [status code](https://intl.cloud.tencent.com/document/product/583/42611?from_cn_redirect=1) of the request. It’s not available for `Invoke` API. 
         /// </summary>
         [JsonProperty("InvokeResult")]
         public long? InvokeResult{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 1: blocklist; 2: ignore list
+        /// Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+        /// End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
