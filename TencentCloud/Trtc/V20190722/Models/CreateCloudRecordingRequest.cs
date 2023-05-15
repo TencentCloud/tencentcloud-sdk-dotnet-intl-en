@@ -55,7 +55,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public RecordParams RecordParams{ get; set; }
 
         /// <summary>
-        /// The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+        /// The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
         /// </summary>
         [JsonProperty("StorageParams")]
         public StorageParams StorageParams{ get; set; }

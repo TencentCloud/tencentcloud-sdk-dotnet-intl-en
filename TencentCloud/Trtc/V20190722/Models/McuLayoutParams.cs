@@ -48,6 +48,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MaxVideoUser")]
         public MaxVideoUser MaxVideoUser{ get; set; }
 
+        /// <summary>
+        /// The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+        /// </summary>
+        [JsonProperty("RenderMode")]
+        public ulong? RenderMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
             this.SetParamArrayObj(map, prefix + "MixLayoutList.", this.MixLayoutList);
             this.SetParamObj(map, prefix + "MaxVideoUser.", this.MaxVideoUser);
+            this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
         }
     }
 }

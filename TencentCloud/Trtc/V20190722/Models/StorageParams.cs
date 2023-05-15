@@ -25,13 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+        /// The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
         /// </summary>
         [JsonProperty("CloudStorage")]
         public CloudStorage CloudStorage{ get; set; }
 
         /// <summary>
-        /// The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+        /// The account information for VOD storage.
         /// </summary>
         [JsonProperty("CloudVod")]
         public CloudVod CloudVod{ get; set; }

@@ -119,6 +119,19 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
 
+        /// <summary>
+        /// Edge cluster component version 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EdgeVersion")]
+        public string EdgeVersion{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +153,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
+            this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

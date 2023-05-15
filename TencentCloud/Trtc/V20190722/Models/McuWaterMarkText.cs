@@ -56,21 +56,18 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// The font size.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontSize")]
         public ulong? FontSize{ get; set; }
 
         /// <summary>
-        /// The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }
 
         /// <summary>
-        /// The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
         /// </summary>
         [JsonProperty("BackGroundColor")]
         public string BackGroundColor{ get; set; }

@@ -73,8 +73,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MaxMediaFileDuration{ get; set; }
 
         /// <summary>
-        /// The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
         /// </summary>
         [JsonProperty("MediaId")]
         public ulong? MediaId{ get; set; }

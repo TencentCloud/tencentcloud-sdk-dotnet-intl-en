@@ -38,7 +38,6 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WaterMarkText")]
         public McuWaterMarkText WaterMarkText{ get; set; }

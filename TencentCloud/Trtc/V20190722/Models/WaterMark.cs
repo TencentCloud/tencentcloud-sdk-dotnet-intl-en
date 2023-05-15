@@ -36,6 +36,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("WaterMarkImage")]
         public WaterMarkImage WaterMarkImage{ get; set; }
 
+        /// <summary>
+        /// The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+        /// </summary>
+        [JsonProperty("WaterMarkChar")]
+        public WaterMarkChar WaterMarkChar{ get; set; }
+
+        /// <summary>
+        /// The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+        /// </summary>
+        [JsonProperty("WaterMarkTimestamp")]
+        public WaterMarkTimestamp WaterMarkTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
             this.SetParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+            this.SetParamObj(map, prefix + "WaterMarkChar.", this.WaterMarkChar);
+            this.SetParamObj(map, prefix + "WaterMarkTimestamp.", this.WaterMarkTimestamp);
         }
     }
 }

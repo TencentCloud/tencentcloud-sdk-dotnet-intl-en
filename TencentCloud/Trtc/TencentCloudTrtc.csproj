@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.689</VersionPrefix>
+    <VersionPrefix>3.0.690</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
 
   <ItemGroup>
     <Compile Include="V20190722\TrtcClient.cs" />
+    <Compile Include="V20190722\Models\AbnormalEvent.cs" />
+    <Compile Include="V20190722\Models\AbnormalExperience.cs" />
     <Compile Include="V20190722\Models\AgentParams.cs" />
     <Compile Include="V20190722\Models\AudioEncode.cs" />
     <Compile Include="V20190722\Models\AudioParams.cs" />
@@ -57,6 +59,8 @@
     <Compile Include="V20190722\Models\CreateCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCallDetailInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCallDetailInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\DescribeMixTranscodingUsageRequest.cs" />
@@ -65,14 +69,26 @@
     <Compile Include="V20190722\Models\DescribeRecordingUsageResponse.cs" />
     <Compile Include="V20190722\Models\DescribeRelayUsageRequest.cs" />
     <Compile Include="V20190722\Models\DescribeRelayUsageResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeRoomInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeRoomInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeScaleInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeScaleInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcRoomUsageRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcRoomUsageResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcUsageRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcUsageResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeUnusualEventRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeUnusualEventResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeUserEventRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeUserEventResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeUserInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeUserInfoResponse.cs" />
     <Compile Include="V20190722\Models\DismissRoomByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\DismissRoomByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="V20190722\Models\DismissRoomResponse.cs" />
+    <Compile Include="V20190722\Models\EventList.cs" />
+    <Compile Include="V20190722\Models\EventMessage.cs" />
     <Compile Include="V20190722\Models\MaxVideoUser.cs" />
     <Compile Include="V20190722\Models\McuAudioParams.cs" />
     <Compile Include="V20190722\Models\McuCustomCrop.cs" />
@@ -94,11 +110,14 @@
     <Compile Include="V20190722\Models\MixUserInfo.cs" />
     <Compile Include="V20190722\Models\ModifyCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\ModifyCloudRecordingResponse.cs" />
+    <Compile Include="V20190722\Models\QualityData.cs" />
     <Compile Include="V20190722\Models\RecordParams.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\RemoveUserRequest.cs" />
     <Compile Include="V20190722\Models\RemoveUserResponse.cs" />
+    <Compile Include="V20190722\Models\RoomState.cs" />
+    <Compile Include="V20190722\Models\ScaleInfomation.cs" />
     <Compile Include="V20190722\Models\SetUserBlockedByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\SetUserBlockedByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\SetUserBlockedRequest.cs" />
@@ -112,13 +131,17 @@
     <Compile Include="V20190722\Models\StorageParams.cs" />
     <Compile Include="V20190722\Models\SubscribeStreamUserIds.cs" />
     <Compile Include="V20190722\Models\TencentVod.cs" />
+    <Compile Include="V20190722\Models\TimeValue.cs" />
     <Compile Include="V20190722\Models\TrtcUsage.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamRequest.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamResponse.cs" />
+    <Compile Include="V20190722\Models\UserInformation.cs" />
     <Compile Include="V20190722\Models\UserMediaStream.cs" />
     <Compile Include="V20190722\Models\VideoEncode.cs" />
     <Compile Include="V20190722\Models\VideoParams.cs" />
     <Compile Include="V20190722\Models\WaterMark.cs" />
+    <Compile Include="V20190722\Models\WaterMarkChar.cs" />
     <Compile Include="V20190722\Models\WaterMarkImage.cs" />
+    <Compile Include="V20190722\Models\WaterMarkTimestamp.cs" />
   </ItemGroup>
 </Project>

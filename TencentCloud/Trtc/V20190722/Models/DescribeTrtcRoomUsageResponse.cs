@@ -25,6 +25,12 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
+        /// The usage data grouped by room, in CSV format.
+        /// </summary>
+        [JsonProperty("Data")]
+        public string Data{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

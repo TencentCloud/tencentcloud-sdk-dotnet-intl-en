@@ -49,13 +49,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public AgentParams AgentParams{ get; set; }
 
         /// <summary>
-        /// Whether to transcode the streams. 0: No; 1: Yes.
+        /// Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
         /// </summary>
         [JsonProperty("WithTranscoding")]
         public ulong? WithTranscoding{ get; set; }
 
         /// <summary>
-        /// The audio encoding parameters for relaying.
+        /// The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
         /// </summary>
         [JsonProperty("AudioParams")]
         public McuAudioParams AudioParams{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public SingleSubscribeParams SingleSubscribeParams{ get; set; }
 
         /// <summary>
-        /// The CDN information.
+        /// The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
         /// </summary>
         [JsonProperty("PublishCdnParams")]
         public McuPublishCdnParam[] PublishCdnParams{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public McuSeiParams SeiParams{ get; set; }
 
         /// <summary>
-        /// The information of the room to which streams are relayed.
+        /// The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
         /// </summary>
         [JsonProperty("FeedBackRoomParams")]
         public McuFeedBackRoomParams[] FeedBackRoomParams{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.689</VersionPrefix>
+    <VersionPrefix>3.0.690</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="V20180525\Models\AutoUpgradeClusterLevel.cs" />
     <Compile Include="V20180525\Models\AutoscalingAdded.cs" />
+    <Compile Include="V20180525\Models\BackupStorageLocation.cs" />
     <Compile Include="V20180525\Models\CUDNN.cs" />
     <Compile Include="V20180525\Models\CheckEdgeClusterCIDRRequest.cs" />
     <Compile Include="V20180525\Models\CheckEdgeClusterCIDRResponse.cs" />
@@ -80,6 +81,8 @@
     <Compile Include="V20180525\Models\ClusterStatus.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CommonName.cs" />
+    <Compile Include="V20180525\Models\CreateBackupStorageLocationRequest.cs" />
+    <Compile Include="V20180525\Models\CreateBackupStorageLocationResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointVipRequest.cs" />
@@ -108,6 +111,8 @@
     <Compile Include="V20180525\Models\CreateTKEEdgeClusterResponse.cs" />
     <Compile Include="V20180525\Models\CustomDriver.cs" />
     <Compile Include="V20180525\Models\DataDisk.cs" />
+    <Compile Include="V20180525\Models\DeleteBackupStorageLocationRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteBackupStorageLocationResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterEndpointRequest.cs" />
@@ -142,6 +147,8 @@
     <Compile Include="V20180525\Models\DescribeAvailableClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableTKEEdgeVersionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableTKEEdgeVersionResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeBackupStorageLocationsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeBackupStorageLocationsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
@@ -323,6 +330,8 @@
     <Compile Include="V20180525\Models\UnavailableReason.cs" />
     <Compile Include="V20180525\Models\UninstallEdgeLogAgentRequest.cs" />
     <Compile Include="V20180525\Models\UninstallEdgeLogAgentResponse.cs" />
+    <Compile Include="V20180525\Models\UpdateClusterKubeconfigRequest.cs" />
+    <Compile Include="V20180525\Models\UpdateClusterKubeconfigResponse.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\UpdateEdgeClusterVersionRequest.cs" />

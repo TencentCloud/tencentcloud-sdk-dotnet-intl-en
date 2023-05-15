@@ -293,6 +293,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to create a backup repository. You can specify the storage type (such as COS), the bucket region and the name. Up to 100 repositories can be created. Note that the settings of this API apply globally. You only need to create one backup repository, and back up TKE clusters in different regions in it.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupStorageLocationRequest"/></param>
+        /// <returns><see cref="CreateBackupStorageLocationResponse"/></returns>
+        public async Task<CreateBackupStorageLocationResponse> CreateBackupStorageLocation(CreateBackupStorageLocationRequest req)
+        {
+             JsonResponseModel<CreateBackupStorageLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackupStorageLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupStorageLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a backup repository. You can specify the storage type (such as COS), the bucket region and the name. Up to 100 repositories can be created. Note that the settings of this API apply globally. You only need to create one backup repository, and back up TKE clusters in different regions in it.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupStorageLocationRequest"/></param>
+        /// <returns><see cref="CreateBackupStorageLocationResponse"/></returns>
+        public CreateBackupStorageLocationResponse CreateBackupStorageLocationSync(CreateBackupStorageLocationRequest req)
+        {
+             JsonResponseModel<CreateBackupStorageLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackupStorageLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupStorageLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>
@@ -804,6 +844,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "CreateTKEEdgeCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTKEEdgeClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a backup repository.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupStorageLocationRequest"/></param>
+        /// <returns><see cref="DeleteBackupStorageLocationResponse"/></returns>
+        public async Task<DeleteBackupStorageLocationResponse> DeleteBackupStorageLocation(DeleteBackupStorageLocationRequest req)
+        {
+             JsonResponseModel<DeleteBackupStorageLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackupStorageLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupStorageLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a backup repository.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupStorageLocationRequest"/></param>
+        /// <returns><see cref="DeleteBackupStorageLocationResponse"/></returns>
+        public DeleteBackupStorageLocationResponse DeleteBackupStorageLocationSync(DeleteBackupStorageLocationRequest req)
+        {
+             JsonResponseModel<DeleteBackupStorageLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackupStorageLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupStorageLocationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1484,6 +1564,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAvailableTKEEdgeVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query backup repositories.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupStorageLocationsRequest"/></param>
+        /// <returns><see cref="DescribeBackupStorageLocationsResponse"/></returns>
+        public async Task<DescribeBackupStorageLocationsResponse> DescribeBackupStorageLocations(DescribeBackupStorageLocationsRequest req)
+        {
+             JsonResponseModel<DescribeBackupStorageLocationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupStorageLocations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupStorageLocationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query backup repositories.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupStorageLocationsRequest"/></param>
+        /// <returns><see cref="DescribeBackupStorageLocationsResponse"/></returns>
+        public DescribeBackupStorageLocationsResponse DescribeBackupStorageLocationsSync(DescribeBackupStorageLocationsRequest req)
+        {
+             JsonResponseModel<DescribeBackupStorageLocationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupStorageLocations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupStorageLocationsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3924,6 +4044,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UninstallEdgeLogAgent");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallEdgeLogAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Kubeconfig information of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterKubeconfigRequest"/></param>
+        /// <returns><see cref="UpdateClusterKubeconfigResponse"/></returns>
+        public async Task<UpdateClusterKubeconfigResponse> UpdateClusterKubeconfig(UpdateClusterKubeconfigRequest req)
+        {
+             JsonResponseModel<UpdateClusterKubeconfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateClusterKubeconfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClusterKubeconfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update the Kubeconfig information of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterKubeconfigRequest"/></param>
+        /// <returns><see cref="UpdateClusterKubeconfigResponse"/></returns>
+        public UpdateClusterKubeconfigResponse UpdateClusterKubeconfigSync(UpdateClusterKubeconfigRequest req)
+        {
+             JsonResponseModel<UpdateClusterKubeconfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateClusterKubeconfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClusterKubeconfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

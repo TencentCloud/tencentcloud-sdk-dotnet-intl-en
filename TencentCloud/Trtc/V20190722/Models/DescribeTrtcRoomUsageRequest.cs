@@ -25,19 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 
+        /// The `SDKAppID` of the room.
         /// </summary>
         [JsonProperty("SdkAppid")]
         public ulong? SdkAppid{ get; set; }
 
         /// <summary>
-        /// 
+        /// The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
