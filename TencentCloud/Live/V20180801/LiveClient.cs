@@ -1687,6 +1687,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to query the data of billable LVB bandwidth and traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
+        /// <returns><see cref="DescribeBillBandwidthAndFluxListResponse"/></returns>
+        public async Task<DescribeBillBandwidthAndFluxListResponse> DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req)
+        {
+             JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillBandwidthAndFluxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the data of billable LVB bandwidth and traffic.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
+        /// <returns><see cref="DescribeBillBandwidthAndFluxListResponse"/></returns>
+        public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxListSync(DescribeBillBandwidthAndFluxListRequest req)
+        {
+             JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillBandwidthAndFluxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
         /// </summary>
         /// <param name="req"><see cref="DescribeConcurrentRecordStreamNumRequest"/></param>
