@@ -45,13 +45,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string SecureLevel{ get; set; }
 
         /// <summary>
-        /// The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
+        /// The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// The pass-through parameter.
+        /// The pass-through parameter, which can be omitted if there are no special requirements.
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }

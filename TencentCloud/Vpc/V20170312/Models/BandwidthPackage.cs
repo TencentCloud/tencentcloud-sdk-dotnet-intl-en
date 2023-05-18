@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+        /// Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }

@@ -106,6 +106,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteTableFlag")]
         public bool? RouteTableFlag{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsSecurityLock")]
+        public bool? IsSecurityLock{ get; set; }
+
+        /// <summary>
+        /// Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RouteBroadcastPolicyFlag")]
+        public bool? RouteBroadcastPolicyFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +138,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
             this.SetParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
             this.SetParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
+            this.SetParamSimple(map, prefix + "IsSecurityLock", this.IsSecurityLock);
+            this.SetParamSimple(map, prefix + "RouteBroadcastPolicyFlag", this.RouteBroadcastPolicyFlag);
         }
     }
 }
