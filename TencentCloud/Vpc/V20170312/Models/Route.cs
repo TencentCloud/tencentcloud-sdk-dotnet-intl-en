@@ -46,7 +46,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GatewayType{ get; set; }
 
         /// <summary>
-        /// Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+        /// Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+        /// Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }

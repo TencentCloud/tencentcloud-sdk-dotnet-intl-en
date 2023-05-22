@@ -70,6 +70,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("State")]
         public string State{ get; set; }
 
+        /// <summary>
+        /// IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+        /// </summary>
+        [JsonProperty("QosLevel")]
+        public string QosLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsWanIpBlocked", this.IsWanIpBlocked);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
         }
     }
 }

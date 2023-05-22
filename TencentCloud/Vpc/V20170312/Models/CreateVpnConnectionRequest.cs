@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+        /// The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("CustomerGatewayId")]
         public string CustomerGatewayId{ get; set; }
@@ -80,19 +80,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Whether the tunnel health check is supported.
+        /// Whether the tunnel health check is supported. The default value is `False`.
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }
 
         /// <summary>
-        /// Local IP address for the health check
+        /// Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
         /// </summary>
         [JsonProperty("HealthCheckLocalIp")]
         public string HealthCheckLocalIp{ get; set; }
 
         /// <summary>
-        /// Peer IP address for the health check
+        /// Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
         /// </summary>
         [JsonProperty("HealthCheckRemoteIp")]
         public string HealthCheckRemoteIp{ get; set; }

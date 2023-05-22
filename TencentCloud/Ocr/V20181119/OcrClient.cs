@@ -541,6 +541,50 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="SmartStructuralOCRV2Request"/></param>
+        /// <returns><see cref="SmartStructuralOCRV2Response"/></returns>
+        public async Task<SmartStructuralOCRV2Response> SmartStructuralOCRV2(SmartStructuralOCRV2Request req)
+        {
+             JsonResponseModel<SmartStructuralOCRV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SmartStructuralOCRV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmartStructuralOCRV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="SmartStructuralOCRV2Request"/></param>
+        /// <returns><see cref="SmartStructuralOCRV2Response"/></returns>
+        public SmartStructuralOCRV2Response SmartStructuralOCRV2Sync(SmartStructuralOCRV2Request req)
+        {
+             JsonResponseModel<SmartStructuralOCRV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SmartStructuralOCRV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmartStructuralOCRV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
         /// 
         /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).

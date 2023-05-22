@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+        /// Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

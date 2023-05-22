@@ -55,6 +55,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }
 
         /// <summary>
+        /// IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+        /// </summary>
+        [JsonProperty("QosLevel")]
+        public string QosLevel{ get; set; }
+
+        /// <summary>
         /// Specifies the security group to be bound with, such as ['sg-1dd51d'].
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
@@ -89,6 +95,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
             this.SetParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
+            this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

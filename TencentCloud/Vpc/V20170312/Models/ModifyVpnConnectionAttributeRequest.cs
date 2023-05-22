@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string PreShareKey{ get; set; }
 
         /// <summary>
-        /// The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+        /// SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
         /// </summary>
         [JsonProperty("SecurityPolicyDatabases")]
         public SecurityPolicyDatabase[] SecurityPolicyDatabases{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public IPSECOptionsSpecification IPSECOptionsSpecification{ get; set; }
 
         /// <summary>
-        /// Whether to enable the tunnel health check.
+        /// Whether to enable the tunnel health check. The default value is `False`.
         /// </summary>
         [JsonProperty("EnableHealthCheck")]
         public bool? EnableHealthCheck{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DpdAction")]
         public string DpdAction{ get; set; }
 
+        /// <summary>
+        /// Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+        /// </summary>
+        [JsonProperty("CustomerGatewayId")]
+        public string CustomerGatewayId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
             this.SetParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
             this.SetParamSimple(map, prefix + "DpdAction", this.DpdAction);
+            this.SetParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
         }
     }
 }

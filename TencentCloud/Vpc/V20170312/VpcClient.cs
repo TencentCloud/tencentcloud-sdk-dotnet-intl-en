@@ -1869,8 +1869,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateRoutes) is used to create a routing policy.
-        /// * You can create routing policies in batch for a specified route table.
+        /// This API is used to create routes. 
+        /// * You can batch add routes to a specified route table.
         /// </summary>
         /// <param name="req"><see cref="CreateRoutesRequest"/></param>
         /// <returns><see cref="CreateRoutesResponse"/></returns>
@@ -1890,8 +1890,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (CreateRoutes) is used to create a routing policy.
-        /// * You can create routing policies in batch for a specified route table.
+        /// This API is used to create routes. 
+        /// * You can batch add routes to a specified route table.
         /// </summary>
         /// <param name="req"><see cref="CreateRoutesRequest"/></param>
         /// <returns><see cref="CreateRoutesResponse"/></returns>
@@ -3843,7 +3843,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteVpnConnection) is used to delete VPN tunnels.
+        /// This API is used to delete a VPN tunnel.
         /// </summary>
         /// <param name="req"><see cref="DeleteVpnConnectionRequest"/></param>
         /// <returns><see cref="DeleteVpnConnectionResponse"/></returns>
@@ -3863,7 +3863,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (DeleteVpnConnection) is used to delete VPN tunnels.
+        /// This API is used to delete a VPN tunnel.
         /// </summary>
         /// <param name="req"><see cref="DeleteVpnConnectionRequest"/></param>
         /// <returns><see cref="DeleteVpnConnectionResponse"/></returns>
@@ -5933,6 +5933,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the subnet resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubnetResourceDashboardRequest"/></param>
+        /// <returns><see cref="DescribeSubnetResourceDashboardResponse"/></returns>
+        public async Task<DescribeSubnetResourceDashboardResponse> DescribeSubnetResourceDashboard(DescribeSubnetResourceDashboardRequest req)
+        {
+             JsonResponseModel<DescribeSubnetResourceDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubnetResourceDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetResourceDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the subnet resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubnetResourceDashboardRequest"/></param>
+        /// <returns><see cref="DescribeSubnetResourceDashboardResponse"/></returns>
+        public DescribeSubnetResourceDashboardResponse DescribeSubnetResourceDashboardSync(DescribeSubnetResourceDashboardRequest req)
+        {
+             JsonResponseModel<DescribeSubnetResourceDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubnetResourceDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetResourceDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeSubnets) is used to query the list of subnets.
         /// </summary>
         /// <param name="req"><see cref="DescribeSubnetsRequest"/></param>
@@ -6044,6 +6084,48 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTrafficPackages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query IP usage of a subnet or VPC. 
+        /// If the IP is taken, the associated resource type and ID are returned. Otherwise it returns null.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsedIpAddressRequest"/></param>
+        /// <returns><see cref="DescribeUsedIpAddressResponse"/></returns>
+        public async Task<DescribeUsedIpAddressResponse> DescribeUsedIpAddress(DescribeUsedIpAddressRequest req)
+        {
+             JsonResponseModel<DescribeUsedIpAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUsedIpAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsedIpAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query IP usage of a subnet or VPC. 
+        /// If the IP is taken, the associated resource type and ID are returned. Otherwise it returns null.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsedIpAddressRequest"/></param>
+        /// <returns><see cref="DescribeUsedIpAddressResponse"/></returns>
+        public DescribeUsedIpAddressResponse DescribeUsedIpAddressSync(DescribeUsedIpAddressRequest req)
+        {
+             JsonResponseModel<DescribeUsedIpAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUsedIpAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsedIpAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6417,7 +6499,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        ///  This API (DescribeVpnConnections) is used to query the VPN tunnel list.
+        /// This API is used to used to query the list of VPN tunnels.
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnConnectionsRequest"/></param>
         /// <returns><see cref="DescribeVpnConnectionsResponse"/></returns>
@@ -6437,7 +6519,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        ///  This API (DescribeVpnConnections) is used to query the VPN tunnel list.
+        /// This API is used to used to query the list of VPN tunnels.
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnConnectionsRequest"/></param>
         /// <returns><see cref="DescribeVpnConnectionsResponse"/></returns>
@@ -7681,9 +7763,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        ///  This API is used to migrate the private IPs between ENIs.
-        /// * This API is used to migrate a private IP from one ENI to another. Primary IPs cannot be migrated.
-        /// * The source and destination ENIs must be in the same subnet.  
+        /// This API is used to migrate the private IPs between ENIs. 
+        /// * Note that primary IPs cannot be migrated. 
+        /// * The source and destination ENI must be within the same subnet.  
         /// 
         /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
@@ -7705,9 +7787,9 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        ///  This API is used to migrate the private IPs between ENIs.
-        /// * This API is used to migrate a private IP from one ENI to another. Primary IPs cannot be migrated.
-        /// * The source and destination ENIs must be in the same subnet.  
+        /// This API is used to migrate the private IPs between ENIs. 
+        /// * Note that primary IPs cannot be migrated. 
+        /// * The source and destination ENI must be within the same subnet.  
         /// 
         /// This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
         /// </summary>
@@ -9939,7 +10021,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// The API (ResetVpnConnection) is used to reset VPN tunnels.
+        /// The API is used to reset a VPN tunnel.
         /// </summary>
         /// <param name="req"><see cref="ResetVpnConnectionRequest"/></param>
         /// <returns><see cref="ResetVpnConnectionResponse"/></returns>
@@ -9959,7 +10041,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// The API (ResetVpnConnection) is used to reset VPN tunnels.
+        /// The API is used to reset a VPN tunnel.
         /// </summary>
         /// <param name="req"><see cref="ResetVpnConnectionRequest"/></param>
         /// <returns><see cref="ResetVpnConnectionResponse"/></returns>
@@ -9979,7 +10061,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ResetVpnGatewayInternetMaxBandwidth) is used to adjust the bandwidth cap of VPN gateways. Currently, only configuration upgrade is supported. VPN gateways with monthly subscription must be within the validity period.
+        /// This API is used to adjust the bandwidth cap of a VPN gateway. The adjustment of the VPN gateway bandwidth is limited to [5,100] Mbps and [200,1000] Mbps. 
         /// </summary>
         /// <param name="req"><see cref="ResetVpnGatewayInternetMaxBandwidthRequest"/></param>
         /// <returns><see cref="ResetVpnGatewayInternetMaxBandwidthResponse"/></returns>
@@ -9999,7 +10081,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (ResetVpnGatewayInternetMaxBandwidth) is used to adjust the bandwidth cap of VPN gateways. Currently, only configuration upgrade is supported. VPN gateways with monthly subscription must be within the validity period.
+        /// This API is used to adjust the bandwidth cap of a VPN gateway. The adjustment of the VPN gateway bandwidth is limited to [5,100] Mbps and [200,1000] Mbps. 
         /// </summary>
         /// <param name="req"><see cref="ResetVpnGatewayInternetMaxBandwidthRequest"/></param>
         /// <returns><see cref="ResetVpnGatewayInternetMaxBandwidthResponse"/></returns>

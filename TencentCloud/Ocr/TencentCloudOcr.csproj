@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.693</VersionPrefix>
+    <VersionPrefix>3.0.694</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,13 +57,18 @@
     <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GroupInfo.cs" />
     <Compile Include="V20181119\Models\HKIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\HKIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\ItemCoord.cs" />
+    <Compile Include="V20181119\Models\ItemInfo.cs" />
+    <Compile Include="V20181119\Models\Key.cs" />
+    <Compile Include="V20181119\Models\LineInfo.cs" />
     <Compile Include="V20181119\Models\MLIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\MLIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRRequest.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRResponse.cs" />
+    <Compile Include="V20181119\Models\Polygon.cs" />
     <Compile Include="V20181119\Models\RecognizeIndonesiaIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeIndonesiaIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizePhilippinesDrivingLicenseOCRRequest.cs" />
@@ -74,10 +79,14 @@
     <Compile Include="V20181119\Models\RecognizePhilippinesTinIDOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizePhilippinesVoteIDOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizePhilippinesVoteIDOCRResponse.cs" />
+    <Compile Include="V20181119\Models\SmartStructuralOCRV2Request.cs" />
+    <Compile Include="V20181119\Models\SmartStructuralOCRV2Response.cs" />
     <Compile Include="V20181119\Models\TableOCRRequest.cs" />
     <Compile Include="V20181119\Models\TableOCRResponse.cs" />
     <Compile Include="V20181119\Models\TextDetection.cs" />
     <Compile Include="V20181119\Models\TextDetectionResult.cs" />
     <Compile Include="V20181119\Models\TextTable.cs" />
+    <Compile Include="V20181119\Models\Value.cs" />
+    <Compile Include="V20181119\Models\WordItem.cs" />
   </ItemGroup>
 </Project>

@@ -50,7 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ServiceTemplateSpecification ServiceTemplate{ get; set; }
 
         /// <summary>
-        /// IP range or IP (mutually exclusive).
+        /// Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the VPC instance
+        /// ID of the VPC instance.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

@@ -25,19 +25,22 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+        /// The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Outbound policy.
+        /// Outbound rule. 
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Egress")]
         public SecurityGroupPolicy[] Egress{ get; set; }
 
         /// <summary>
-        /// Inbound policy.
+        /// Inbound rule. 
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Ingress")]
         public SecurityGroupPolicy[] Ingress{ get; set; }

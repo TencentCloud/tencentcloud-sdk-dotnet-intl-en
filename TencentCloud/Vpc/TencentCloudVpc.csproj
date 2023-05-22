@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.693</VersionPrefix>
+    <VersionPrefix>3.0.694</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -357,12 +357,16 @@
     <Compile Include="V20170312\Models\DescribeSnapshotFilesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotPoliciesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSnapshotPoliciesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSubnetResourceDashboardRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSubnetResourceDashboardResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="V20170312\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTrafficPackagesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeTrafficPackagesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeUsedIpAddressRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeUsedIpAddressResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointServiceRequest.cs" />
@@ -458,6 +462,7 @@
     <Compile Include="V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse.cs" />
     <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20170312\Models\InstanceStatistic.cs" />
+    <Compile Include="V20170312\Models\IpAddressStates.cs" />
     <Compile Include="V20170312\Models\IpField.cs" />
     <Compile Include="V20170312\Models\IpGeolocationInfo.cs" />
     <Compile Include="V20170312\Models\Ipv6Address.cs" />
@@ -600,6 +605,8 @@
     <Compile Include="V20170312\Models\ResetVpnGatewayInternetMaxBandwidthResponse.cs" />
     <Compile Include="V20170312\Models\Resource.cs" />
     <Compile Include="V20170312\Models\ResourceDashboard.cs" />
+    <Compile Include="V20170312\Models\ResourceStatistics.cs" />
+    <Compile Include="V20170312\Models\ResourceStatisticsItem.cs" />
     <Compile Include="V20170312\Models\ResumeSnapshotInstanceRequest.cs" />
     <Compile Include="V20170312\Models\ResumeSnapshotInstanceResponse.cs" />
     <Compile Include="V20170312\Models\ReturnNormalAddressesRequest.cs" />
