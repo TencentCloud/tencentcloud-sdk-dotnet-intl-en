@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Bundle ID.
+        /// Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
 
         /// <summary>
-        /// Image ID
+        /// Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("BlueprintId")]
         public string BlueprintId{ get; set; }

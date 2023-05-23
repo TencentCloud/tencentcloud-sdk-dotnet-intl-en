@@ -42,6 +42,17 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// Whether to forcibly shut down the instance before creating the image 
+        /// Valid values: 
+        /// `True`: Shut down and instance first 
+        /// `False`: Create the image when the instance is running 
+        /// Default: `True` 
+        /// Note that if you create an image when the instance is running, there might be data loss.
+        /// </summary>
+        [JsonProperty("ForcePowerOff")]
+        public bool? ForcePowerOff{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +62,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ForcePowerOff", this.ForcePowerOff);
         }
     }
 }

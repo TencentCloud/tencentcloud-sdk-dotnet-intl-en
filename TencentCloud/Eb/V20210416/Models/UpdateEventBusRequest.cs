@@ -42,6 +42,24 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("EventBusName")]
         public string EventBusName{ get; set; }
 
+        /// <summary>
+        /// Log retention period
+        /// </summary>
+        [JsonProperty("SaveDays")]
+        public long? SaveDays{ get; set; }
+
+        /// <summary>
+        /// EventBridge log topic ID
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
+        /// <summary>
+        /// Whether to enable log retention
+        /// </summary>
+        [JsonProperty("EnableStore")]
+        public bool? EnableStore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
+            this.SetParamSimple(map, prefix + "SaveDays", this.SaveDays);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "EnableStore", this.EnableStore);
         }
     }
 }

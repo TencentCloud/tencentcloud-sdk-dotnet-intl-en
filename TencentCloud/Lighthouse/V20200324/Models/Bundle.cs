@@ -99,12 +99,26 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string BundleSalesState{ get; set; }
 
         /// <summary>
-        /// Package type.
-        /// Valid values:
-        /// <li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+        /// Bundle type. 
+        /// Valid values: 
+        /// <li>STARTER_BUNDLE: Starter bundle</li>
+        /// <li>GENERAL_BUNDLE: General bundle</li>
+        /// <li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+        /// <li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+        /// <li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+        /// <li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+        /// <li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+        /// <li>BEFAST_BUNDLE: BeFast bundle </li>
         /// </summary>
         [JsonProperty("BundleType")]
         public string BundleType{ get; set; }
+
+        /// <summary>
+        /// Bundle type description 
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BundleTypeDescription")]
+        public string BundleTypeDescription{ get; set; }
 
         /// <summary>
         /// Package tag.
@@ -135,6 +149,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
             this.SetParamSimple(map, prefix + "BundleSalesState", this.BundleSalesState);
             this.SetParamSimple(map, prefix + "BundleType", this.BundleType);
+            this.SetParamSimple(map, prefix + "BundleTypeDescription", this.BundleTypeDescription);
             this.SetParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
         }
     }

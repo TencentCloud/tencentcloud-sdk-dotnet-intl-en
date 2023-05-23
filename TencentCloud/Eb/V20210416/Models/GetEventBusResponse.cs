@@ -73,6 +73,40 @@ namespace TencentCloud.Eb.V20210416.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// Billing mode
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// EventBridge log storage period
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SaveDays")]
+        public long? SaveDays{ get; set; }
+
+        /// <summary>
+        /// EventBridge log topic ID
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
+        /// <summary>
+        /// Whether to enable log storage
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnableStore")]
+        public bool? EnableStore{ get; set; }
+
+        /// <summary>
+        /// Whether to sort the message
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LinkMode")]
+        public string LinkMode{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +126,11 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "EventBusName", this.EventBusName);
             this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "SaveDays", this.SaveDays);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "EnableStore", this.EnableStore);
+            this.SetParamSimple(map, prefix + "LinkMode", this.LinkMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

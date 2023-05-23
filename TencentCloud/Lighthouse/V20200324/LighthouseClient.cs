@@ -2197,6 +2197,54 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// This API is used to return one or more Lighthouse instances. 
+        /// * Only `RUNNING` and `STOPPED` instances can be returned. 
+        /// * The instance status goes to `SHUTDOWN` after the API is called successfully. 
+        /// * Batch operations are supported. Up to 20 resources (including instances and data disks) can be returned in each request. 
+        /// * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateInstancesRequest"/></param>
+        /// <returns><see cref="IsolateInstancesResponse"/></returns>
+        public async Task<IsolateInstancesResponse> IsolateInstances(IsolateInstancesRequest req)
+        {
+             JsonResponseModel<IsolateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to return one or more Lighthouse instances. 
+        /// * Only `RUNNING` and `STOPPED` instances can be returned. 
+        /// * The instance status goes to `SHUTDOWN` after the API is called successfully. 
+        /// * Batch operations are supported. Up to 20 resources (including instances and data disks) can be returned in each request. 
+        /// * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateInstancesRequest"/></param>
+        /// <returns><see cref="IsolateInstancesResponse"/></returns>
+        public IsolateInstancesResponse IsolateInstancesSync(IsolateInstancesRequest req)
+        {
+             JsonResponseModel<IsolateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify an image attribute.
         /// </summary>
         /// <param name="req"><see cref="ModifyBlueprintAttributeRequest"/></param>
@@ -2437,10 +2485,9 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to modify the attributes of instances.
-        /// * The instance name is used only for users’ convenience.
-        /// * Batch operations are supported. Each request can contain up to 100 instances at a time.
-        /// * This API is async. A successful request will return a `RequestId`, it does not mean the operation is completed. You can call the `DescribeInstances` API to query the operation result. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// This API is used to modify an instance attribute. 
+        /// * The instance name is used only for users’ convenience. 
+        /// * Batch operations are supported. The maximum number of instances in each request is 100.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesAttributeRequest"/></param>
         /// <returns><see cref="ModifyInstancesAttributeResponse"/></returns>
@@ -2460,10 +2507,9 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to modify the attributes of instances.
-        /// * The instance name is used only for users’ convenience.
-        /// * Batch operations are supported. Each request can contain up to 100 instances at a time.
-        /// * This API is async. A successful request will return a `RequestId`, it does not mean the operation is completed. You can call the `DescribeInstances` API to query the operation result. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// This API is used to modify an instance attribute. 
+        /// * The instance name is used only for users’ convenience. 
+        /// * Batch operations are supported. The maximum number of instances in each request is 100.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesAttributeRequest"/></param>
         /// <returns><see cref="ModifyInstancesAttributeResponse"/></returns>
@@ -2474,6 +2520,52 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "ModifyInstancesAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used change one or more Lighthouse instance bundles. 
+        /// * Only `RUNNING` and `STOPPED` instances can be changed. 
+        /// * Batch operations are supported. The maximum number of instances in each request is 30. 
+        /// * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesBundleRequest"/></param>
+        /// <returns><see cref="ModifyInstancesBundleResponse"/></returns>
+        public async Task<ModifyInstancesBundleResponse> ModifyInstancesBundle(ModifyInstancesBundleRequest req)
+        {
+             JsonResponseModel<ModifyInstancesBundleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstancesBundle");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesBundleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used change one or more Lighthouse instance bundles. 
+        /// * Only `RUNNING` and `STOPPED` instances can be changed. 
+        /// * Batch operations are supported. The maximum number of instances in each request is 30. 
+        /// * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesBundleRequest"/></param>
+        /// <returns><see cref="ModifyInstancesBundleResponse"/></returns>
+        public ModifyInstancesBundleResponse ModifyInstancesBundleSync(ModifyInstancesBundleRequest req)
+        {
+             JsonResponseModel<ModifyInstancesBundleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstancesBundle");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesBundleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2525,11 +2617,10 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to modify the renewal flags of monthly subscribed instances.
+        /// This API is used to change the auto-renewal setting of monthly-subscribed instances. 
         /// 
-        /// * Instances marked with "auto-renewal" will be automatically renewed for one month when they expire.
-        /// * Batch operations are supported. The maximum number of instances in each request is 100.
-        /// * The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// * Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 
+        /// * Batch operations are supported. Up to 100 instances per request is allowed.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyInstancesRenewFlagResponse"/></returns>
@@ -2549,11 +2640,10 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to modify the renewal flags of monthly subscribed instances.
+        /// This API is used to change the auto-renewal setting of monthly-subscribed instances. 
         /// 
-        /// * Instances marked with "auto-renewal" will be automatically renewed for one month when they expire.
-        /// * Batch operations are supported. The maximum number of instances in each request is 100.
-        /// * The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// * Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 
+        /// * Batch operations are supported. Up to 100 instances per request is allowed.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyInstancesRenewFlagResponse"/></returns>
