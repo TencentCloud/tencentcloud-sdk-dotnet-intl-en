@@ -93,6 +93,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ElasticLimit")]
         public ulong? ElasticLimit{ get; set; }
 
+        /// <summary>
+        /// Protection bandwidth after the plan downgrade, in Gbps. 
+        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DownGradeProtect")]
+        public ulong? DownGradeProtect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "ChannelEditionFlag", this.ChannelEditionFlag);
             this.SetParamSimple(map, prefix + "EnterpriseFlag", this.EnterpriseFlag);
             this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
+            this.SetParamSimple(map, prefix + "DownGradeProtect", this.DownGradeProtect);
         }
     }
 }
