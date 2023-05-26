@@ -51,6 +51,25 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("IntelligenceRule")]
         public IntelligenceRule IntelligenceRule{ get; set; }
 
+        /// <summary>
+        /// Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+        /// </summary>
+        [JsonProperty("BotUserRules")]
+        public BotUserRule[] BotUserRules{ get; set; }
+
+        /// <summary>
+        /// Active bot detection rule.
+        /// </summary>
+        [JsonProperty("AlgDetectRule")]
+        public AlgDetectRule[] AlgDetectRule{ get; set; }
+
+        /// <summary>
+        /// Settings of the bot managed rule. It is only used for output.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Customizes")]
+        public BotUserRule[] Customizes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +80,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "BotManagedRule.", this.BotManagedRule);
             this.SetParamObj(map, prefix + "BotPortraitRule.", this.BotPortraitRule);
             this.SetParamObj(map, prefix + "IntelligenceRule.", this.IntelligenceRule);
+            this.SetParamArrayObj(map, prefix + "BotUserRules.", this.BotUserRules);
+            this.SetParamArrayObj(map, prefix + "AlgDetectRule.", this.AlgDetectRule);
+            this.SetParamArrayObj(map, prefix + "Customizes.", this.Customizes);
         }
     }
 }

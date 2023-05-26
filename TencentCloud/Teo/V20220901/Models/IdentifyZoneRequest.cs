@@ -30,6 +30,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
+        /// <summary>
+        /// A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

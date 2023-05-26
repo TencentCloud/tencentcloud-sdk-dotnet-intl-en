@@ -76,6 +76,16 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ApplyType")]
         public string ApplyType{ get; set; }
 
+        /// <summary>
+        /// Cipher suite. Values:
+        /// <li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+        /// <li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+        /// <li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CipherSuite")]
+        public string CipherSuite{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +98,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Hsts.", this.Hsts);
             this.SetParamArrayObj(map, prefix + "CertInfo.", this.CertInfo);
             this.SetParamSimple(map, prefix + "ApplyType", this.ApplyType);
+            this.SetParamSimple(map, prefix + "CipherSuite", this.CipherSuite);
         }
     }
 }

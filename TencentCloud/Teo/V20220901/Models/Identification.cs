@@ -31,6 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
+        /// The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
         /// The verification status. Values:
         /// <li>`pending`: The verification is ongoing.</li>
         /// <li>`finished`: The verification completed.</li>
@@ -64,6 +71,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Ascription.", this.Ascription);
             this.SetParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);

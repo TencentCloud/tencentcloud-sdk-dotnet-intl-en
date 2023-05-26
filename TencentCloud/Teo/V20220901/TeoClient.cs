@@ -1253,6 +1253,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query DDoS attack events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSAttackEventRequest"/></param>
+        /// <returns><see cref="DescribeDDoSAttackEventResponse"/></returns>
+        public async Task<DescribeDDoSAttackEventResponse> DescribeDDoSAttackEvent(DescribeDDoSAttackEventRequest req)
+        {
+             JsonResponseModel<DescribeDDoSAttackEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSAttackEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSAttackEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query DDoS attack events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSAttackEventRequest"/></param>
+        /// <returns><see cref="DescribeDDoSAttackEventResponse"/></returns>
+        public DescribeDDoSAttackEventResponse DescribeDDoSAttackEventSync(DescribeDDoSAttackEventRequest req)
+        {
+             JsonResponseModel<DescribeDDoSAttackEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDoSAttackEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSAttackEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the top-ranked DDoS attack data.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackTopDataRequest"/></param>

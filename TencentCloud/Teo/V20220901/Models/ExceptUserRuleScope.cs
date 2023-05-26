@@ -34,10 +34,12 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// The module to be activated. Values:
-        /// <li>`waf`: Managed rules</li>
-        /// <li>`cc`: Rate limiting rules</li>
-        /// <li>`bot`: bot protection</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <li>`waf`: Tencent Cloud-managed rules</li>
+        /// <li>`rate`: Rate limiting rules</li>
+        /// <li>`acl`: Custom rule</li>
+        /// <li>`cc`: CC attack defense</li>
+        /// <li>`bot`: Bot protection</li>
+        /// Note: this field may return `null`, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Modules")]
         public string[] Modules{ get; set; }

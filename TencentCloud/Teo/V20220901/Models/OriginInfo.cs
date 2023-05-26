@@ -25,42 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The origin type. Values:
+        /// The origin type. Values: 
         /// <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
         /// <li>`COS`: COS bucket address</li>
         /// <li>`ORIGIN_GROUP`: Origin group</li>
         /// <li>`AWS_S3`: AWS S3 bucket address</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
         /// The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
         /// ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupOrigin")]
         public string BackupOrigin{ get; set; }
 
         /// <summary>
-        /// Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+        /// Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
         /// <li>`on`: Enable private authentication.</li>
         /// <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }
 
         /// <summary>
         /// The private authentication parameters. This field is valid when `PrivateAccess=on`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrivateParameters")]
         public PrivateParameter[] PrivateParameters{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.697</VersionPrefix>
+    <VersionPrefix>3.0.698</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -342,6 +342,7 @@
     <Compile Include="V20220106\Models\Zone.cs" />
     <Compile Include="V20220106\Models\ZoneFilter.cs" />
     <Compile Include="V20220901\TeoClient.cs" />
+    <Compile Include="V20220901\Models\AccelerateMainland.cs" />
     <Compile Include="V20220901\Models\AccelerateType.cs" />
     <Compile Include="V20220901\Models\AccelerationDomain.cs" />
     <Compile Include="V20220901\Models\AclCondition.cs" />
@@ -350,6 +351,10 @@
     <Compile Include="V20220901\Models\Action.cs" />
     <Compile Include="V20220901\Models\AdvancedFilter.cs" />
     <Compile Include="V20220901\Models\AiRule.cs" />
+    <Compile Include="V20220901\Models\AlgDetectJS.cs" />
+    <Compile Include="V20220901\Models\AlgDetectResult.cs" />
+    <Compile Include="V20220901\Models\AlgDetectRule.cs" />
+    <Compile Include="V20220901\Models\AlgDetectSession.cs" />
     <Compile Include="V20220901\Models\AliasDomain.cs" />
     <Compile Include="V20220901\Models\ApplicationProxy.cs" />
     <Compile Include="V20220901\Models\ApplicationProxyRule.cs" />
@@ -357,8 +362,10 @@
     <Compile Include="V20220901\Models\BindZoneToPlanRequest.cs" />
     <Compile Include="V20220901\Models\BindZoneToPlanResponse.cs" />
     <Compile Include="V20220901\Models\BotConfig.cs" />
+    <Compile Include="V20220901\Models\BotExtendAction.cs" />
     <Compile Include="V20220901\Models\BotManagedRule.cs" />
     <Compile Include="V20220901\Models\BotPortraitRule.cs" />
+    <Compile Include="V20220901\Models\BotUserRule.cs" />
     <Compile Include="V20220901\Models\CC.cs" />
     <Compile Include="V20220901\Models\Cache.cs" />
     <Compile Include="V20220901\Models\CacheConfig.cs" />
@@ -399,6 +406,8 @@
     <Compile Include="V20220901\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220901\Models\CreateZoneResponse.cs" />
     <Compile Include="V20220901\Models\DDoS.cs" />
+    <Compile Include="V20220901\Models\DDoSAttackEvent.cs" />
+    <Compile Include="V20220901\Models\DDoSBlockData.cs" />
     <Compile Include="V20220901\Models\DefaultServerCertInfo.cs" />
     <Compile Include="V20220901\Models\DeleteAccelerationDomainsRequest.cs" />
     <Compile Include="V20220901\Models\DeleteAccelerationDomainsResponse.cs" />
@@ -430,6 +439,8 @@
     <Compile Include="V20220901\Models\DescribeContentQuotaResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackDataResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeDDoSAttackEventRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeDDoSAttackEventResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeDDoSAttackTopDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeDefaultCertificatesRequest.cs" />
@@ -524,6 +535,7 @@
     <Compile Include="V20220901\Models\Identification.cs" />
     <Compile Include="V20220901\Models\IdentifyZoneRequest.cs" />
     <Compile Include="V20220901\Models\IdentifyZoneResponse.cs" />
+    <Compile Include="V20220901\Models\ImageOptimize.cs" />
     <Compile Include="V20220901\Models\IntelligenceRule.cs" />
     <Compile Include="V20220901\Models\IntelligenceRuleItem.cs" />
     <Compile Include="V20220901\Models\IpTableConfig.cs" />

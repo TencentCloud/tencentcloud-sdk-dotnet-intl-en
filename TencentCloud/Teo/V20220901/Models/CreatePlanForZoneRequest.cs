@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
         /// <li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
         /// <li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-        /// <li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://tcloud4api.woa.com/document/product/1657/80124?!preview&!document=1">DescribeAvailablePlans</a>.
+        /// <li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
         /// </summary>
         [JsonProperty("PlanType")]
         public string PlanType{ get; set; }

@@ -37,11 +37,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The query metric. Values:
-        /// <li>`l7Flow_outFlux`: Access traffic;</li>
-        /// <li>`l7Flow_request`: Access requests;</li>
-        /// <li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-        /// <li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
+        /// The metric to query. Values:
+        /// <li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+        /// <li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+        /// <li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+        /// <li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+        /// <li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+        /// <li>`l7Flow_request`: Access requests</li>
+        /// <li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+        /// <li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
@@ -81,8 +85,9 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Filters
-        /// <li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-        /// <li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+        /// <li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+        /// <li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+        /// <li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }

@@ -33,13 +33,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+        /// IDs of the rules to be disabled.
         /// </summary>
         [JsonProperty("BlockRuleIDs")]
         public long?[] BlockRuleIDs{ get; set; }
 
         /// <summary>
-        /// IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+        /// IDs of the rules to be executed in Observe mode.
         /// </summary>
         [JsonProperty("ObserveRuleIDs")]
         public long?[] ObserveRuleIDs{ get; set; }

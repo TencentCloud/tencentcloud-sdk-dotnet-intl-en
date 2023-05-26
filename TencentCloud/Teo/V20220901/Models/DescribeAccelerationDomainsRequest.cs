@@ -31,11 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Filter criteria. Each filter criteria can have up to 20 entries. Values:
-        /// <li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No
-        /// <li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No
-        /// <li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No
-        /// <li>`backup-origin`<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No
+        /// Filters. Each filter can have up to 20 entries. See below for details: 
+        /// <li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
+        /// <li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
+        /// <li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
+        /// <li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
+        /// <li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
+        /// <li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }

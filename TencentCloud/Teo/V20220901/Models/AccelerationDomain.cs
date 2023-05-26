@@ -73,7 +73,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Cname{ get; set; }
 
         /// <summary>
-        /// 
+        /// Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentificationStatus")]
         public string IdentificationStatus{ get; set; }

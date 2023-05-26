@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Common feature operation. Values:
+        /// Common operation. Values:
         /// <li>`AccessUrlRedirect`: Access URL rewrite</li>
         /// <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
         /// <li>`QUIC`: QUIC</li>
@@ -46,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`Compression`: Smart compression</li>
         /// <li>`Hsts`</li>
         /// <li>`ClientIpHeader`</li>
-        /// <li>`TlsVersion`</li>
+        /// <li>`SslTlsSecureConf`</li>
         /// <li>`OcspStapling`</li>
         /// <li>`Http2`: HTTP/2 access</li>
         /// <li>`UpstreamFollowRedirect`: Follow origin redirect</li>

@@ -38,6 +38,11 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`header`: Request header</li>
         /// <li>`app_proto`: Application layer protocol</li>
         /// <li>`sip_proto`: Network layer protocol</li>
+        /// <li>`uabot`: UA rules (only available in custom bot rules)</li>
+        /// <li>`idcid`: IDC rules (only available in custom bot rules)</li>
+        /// <li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+        /// <li>`portrait`: Client reputation (only available in custom bot rules)</li>
+        /// <li>`header_seq`: Header sequence (only available in custom bot rules)</li>
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string MatchFrom{ get; set; }
