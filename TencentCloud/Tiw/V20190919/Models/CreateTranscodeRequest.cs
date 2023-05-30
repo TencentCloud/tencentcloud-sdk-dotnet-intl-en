@@ -31,7 +31,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Address of the file for transcoding
+        /// URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -44,9 +44,11 @@ namespace TencentCloud.Tiw.V20190919.Models
         public bool? IsStaticPPT{ get; set; }
 
         /// <summary>
+        /// Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
+        /// 
         /// Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
         /// 
-        ///  
+        /// Example: 1280x720. Note that the character between the numbers is the letter x.
         /// </summary>
         [JsonProperty("MinResolution")]
         public string MinResolution{ get; set; }
@@ -68,6 +70,42 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("CompressFileType")]
         public string CompressFileType{ get; set; }
 
+        /// <summary>
+        /// Internal parameter.
+        /// </summary>
+        [JsonProperty("ExtraData")]
+        public string ExtraData{ get; set; }
+
+        /// <summary>
+        /// Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+        /// - low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+        /// - null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+        /// <br/>
+        /// Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+        /// </summary>
+        [JsonProperty("Priority")]
+        public string Priority{ get; set; }
+
+        /// <summary>
+        /// Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+        /// Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+        /// 
+        /// Example: 1280x720. Note that the character between the numbers is the letter x.
+        /// </summary>
+        [JsonProperty("MinScaleResolution")]
+        public string MinScaleResolution{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+        /// 
+        /// If auto handling is enabled, the following processes are performed:
+        /// 1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+        /// 2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+        /// 3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+        /// </summary>
+        [JsonProperty("AutoHandleUnsupportedElement")]
+        public bool? AutoHandleUnsupportedElement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +118,10 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "MinResolution", this.MinResolution);
             this.SetParamSimple(map, prefix + "ThumbnailResolution", this.ThumbnailResolution);
             this.SetParamSimple(map, prefix + "CompressFileType", this.CompressFileType);
+            this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
+            this.SetParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
         }
     }
 }

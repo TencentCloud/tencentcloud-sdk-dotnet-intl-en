@@ -37,8 +37,8 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? RoomId{ get; set; }
 
         /// <summary>
-        /// User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-        /// The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+        /// User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+        /// The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
         /// </summary>
         [JsonProperty("RecordUserId")]
         public string RecordUserId{ get; set; }
@@ -96,6 +96,32 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("RecordControl")]
         public RecordControl RecordControl{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RecordMode")]
+        public string RecordMode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ChatGroupId")]
+        public string ChatGroupId{ get; set; }
+
+        /// <summary>
+        /// Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+        /// 
+        /// If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+        /// </summary>
+        [JsonProperty("AutoStopTimeout")]
+        public long? AutoStopTimeout{ get; set; }
+
+        /// <summary>
+        /// Internal parameter. You can ignore this parameter.
+        /// </summary>
+        [JsonProperty("ExtraData")]
+        public string ExtraData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +139,10 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamArraySimple(map, prefix + "Extras.", this.Extras);
             this.SetParamSimple(map, prefix + "AudioFileNeeded", this.AudioFileNeeded);
             this.SetParamObj(map, prefix + "RecordControl.", this.RecordControl);
+            this.SetParamSimple(map, prefix + "RecordMode", this.RecordMode);
+            this.SetParamSimple(map, prefix + "ChatGroupId", this.ChatGroupId);
+            this.SetParamSimple(map, prefix + "AutoStopTimeout", this.AutoStopTimeout);
+            this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
         }
     }
 }

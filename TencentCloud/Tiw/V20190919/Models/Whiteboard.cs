@@ -25,13 +25,13 @@ namespace TencentCloud.Tiw.V20190919.Models
     {
         
         /// <summary>
-        /// Whiteboard video width in the real-time recording result. The default value is 1280.
+        /// Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Whiteboard video height in the real-time recording result. The default value is 960.
+        /// Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

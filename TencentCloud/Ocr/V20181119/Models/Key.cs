@@ -30,6 +30,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("AutoName")]
         public string AutoName{ get; set; }
 
+        /// <summary>
+        /// The name of a defined field (the key passed in).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ConfigName")]
+        public string ConfigName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AutoName", this.AutoName);
+            this.SetParamSimple(map, prefix + "ConfigName", this.ConfigName);
         }
     }
 }

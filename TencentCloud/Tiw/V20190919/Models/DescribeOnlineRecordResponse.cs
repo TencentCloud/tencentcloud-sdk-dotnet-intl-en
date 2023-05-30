@@ -26,9 +26,10 @@ namespace TencentCloud.Tiw.V20190919.Models
         
         /// <summary>
         /// Recording stop reason
-        /// - AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-        /// - USER_CALL: the API for stopping recording is called.
-        /// - EXCEPTION: an exception occurred during recording.
+        /// - AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+        /// - USER_CALL: The API for stopping recording is called.
+        /// - EXCEPTION: An exception occurred.
+        /// - FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
         /// </summary>
         [JsonProperty("FinishReason")]
         public string FinishReason{ get; set; }
@@ -105,6 +106,19 @@ namespace TencentCloud.Tiw.V20190919.Models
         public VideoInfo[] VideoInfos{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ReplayUrl")]
+        public string ReplayUrl{ get; set; }
+
+        /// <summary>
+        /// Number of video stream interruptions during recording.
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Interrupts")]
+        public Interrupt[] Interrupts{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -128,6 +142,8 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "ExceptionCnt", this.ExceptionCnt);
             this.SetParamArrayObj(map, prefix + "OmittedDurations.", this.OmittedDurations);
             this.SetParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
+            this.SetParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
+            this.SetParamArrayObj(map, prefix + "Interrupts.", this.Interrupts);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

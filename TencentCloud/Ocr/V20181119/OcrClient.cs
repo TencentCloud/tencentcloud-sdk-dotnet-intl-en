@@ -377,6 +377,86 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// This API is used to recognize a South Korean driver's license.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeKoreanDrivingLicenseOCRRequest"/></param>
+        /// <returns><see cref="RecognizeKoreanDrivingLicenseOCRResponse"/></returns>
+        public async Task<RecognizeKoreanDrivingLicenseOCRResponse> RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req)
+        {
+             JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeKoreanDrivingLicenseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize a South Korean driver's license.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeKoreanDrivingLicenseOCRRequest"/></param>
+        /// <returns><see cref="RecognizeKoreanDrivingLicenseOCRResponse"/></returns>
+        public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCRSync(RecognizeKoreanDrivingLicenseOCRRequest req)
+        {
+             JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeKoreanDrivingLicenseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize a South Korean ID card.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeKoreanIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeKoreanIDCardOCRResponse"/></returns>
+        public async Task<RecognizeKoreanIDCardOCRResponse> RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req)
+        {
+             JsonResponseModel<RecognizeKoreanIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeKoreanIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeKoreanIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize a South Korean ID card.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeKoreanIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeKoreanIDCardOCRResponse"/></returns>
+        public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCRSync(RecognizeKoreanIDCardOCRRequest req)
+        {
+             JsonResponseModel<RecognizeKoreanIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeKoreanIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeKoreanIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to recognize a Philippine driver's license.
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesDrivingLicenseOCRRequest"/></param>
