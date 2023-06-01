@@ -25,13 +25,22 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The final comparison result.
+        /// The final verification result code.
+        /// 0: Success.
+        /// 1001: Failed to call the liveness detection engine.
+        /// 1004: Face detection failed.
+        /// 2004: The uploaded face image is too large or too small.
+        /// 2012: The face is not fully exposed.
+        /// 2013: No face is detected.
+        /// 2014: The resolution of the uploaded image is too low . Please upload a new one.
+        /// 2015: Face comparison failed.
+        /// 2016: The similarity did not reach the passing standard.
         /// </summary>
         [JsonProperty("ErrorCode")]
         public string ErrorCode{ get; set; }
 
         /// <summary>
-        /// The description of the final comparison result.
+        /// The description of the final verification result.
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
@@ -43,13 +52,16 @@ namespace TencentCloud.Faceid.V20180301.Models
         public FileInfo LiveData{ get; set; }
 
         /// <summary>
-        /// The video for this liveness detection process. The URL is valid for 10 minutes.
+        /// The download URL of the video used for verification, which is valid for 10 minutes.
         /// </summary>
         [JsonProperty("LiveVideo")]
         public FileInfo LiveVideo{ get; set; }
 
         /// <summary>
-        /// The code of the liveness detection result.
+        /// The liveness detection result code.
+        /// 0: Success.
+        /// 1001: Failed to call the liveness detection engine.
+        /// 1004: Face detection failed.
         /// </summary>
         [JsonProperty("LiveErrorCode")]
         public string LiveErrorCode{ get; set; }
@@ -61,21 +73,28 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string LiveErrorMsg{ get; set; }
 
         /// <summary>
-        /// The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The download URL of the face screenshot during verification, which is valid for 10 minutes.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("BestFrame")]
         public FileInfo BestFrame{ get; set; }
 
         /// <summary>
-        /// The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+        /// The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
         /// </summary>
         [JsonProperty("ProfileImage")]
         public FileInfo ProfileImage{ get; set; }
 
         /// <summary>
-        /// The code of the face comparison result.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The face comparison result code.
+        /// 0: Success.
+        /// 2004: The uploaded face image is too large or too small.
+        /// 2012: The face is not fully exposed.
+        /// 2013: No face is detected.
+        /// 2014: The resolution of the uploaded image is too low . Please upload a new one.
+        /// 2015: Face comparison failed.
+        /// 2016: The similarity did not reach the passing standard.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CompareErrorCode")]
         public string CompareErrorCode{ get; set; }
@@ -88,8 +107,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string CompareErrorMsg{ get; set; }
 
         /// <summary>
-        /// Similarity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The similarity score of face comparison.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Sim")]
         public float? Sim{ get; set; }

@@ -31,68 +31,84 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? IsPass{ get; set; }
 
         /// <summary>
-        /// The video for ID card authentication. This field is returned only if the video-based ID card authentication is enabled. The URL is valid for 10 minutes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CardVideo")]
         public FileInfo CardVideo{ get; set; }
 
         /// <summary>
-        /// The identity document image. The URL is valid for 10 minutes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The download URL of the identity document image, which is valid for 10 minutes.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CardImage")]
         public FileInfo CardImage{ get; set; }
 
         /// <summary>
-        /// The OCR result (in JSON) of the identity document image. If authentication or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
+        /// The OCR result (in JSON) of the identity document image. If verification or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
+        /// (1) Hong Kong (China) identity card
         /// When the value of `IdCardType` is `HK`:
-        /// - CnName (string): Chinese name.
-        /// - EnName (string): English name.
-        /// - TelexCode (string): The code corresponding to the Chinese name.
+        /// - CnName (string): Name in Chinese.
+        /// - EnName (string): Name in English.
+        /// - TelexCode (string): The code corresponding to the name in Chinese.
         /// - Sex (string): Gender. Valid values: `M` (male) and `F` (female).
         /// - Birthday (string): Date of birth.
         /// - Permanent (int): Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-        /// - IdNum (string): ID number.
+        /// - IdNum (string): Identity card number.
         /// - Symbol (string): The ID symbol below the date of birth, such as "***AZ".
-        /// - FirstIssueDate (string): The date of first issuance.
+        /// - FirstIssueDate (string): Month and year of first registration.
         /// - CurrentIssueDate (string): The date of latest issuance.
         /// 
+        /// (2) Malaysian identity card
         /// When the value of `IdCardType` is `ML`:
-        /// - Sex (string): `LELAKI` (male) and `PEREMPUAN` (female).
+        /// - Sex (string): Gender. Valid values: `LELAKI` (male) and `PEREMPUAN` (female).
         /// - Birthday (string): Date of birth.
-        /// - ID (string): ID number.
+        /// - ID (string): Identity card number.
         /// - Name (string): Name.
         /// - Address (string): Address.
         /// - Type (string): Identity document type.
         /// 
+        /// (3) Philippine identity document
         /// When the value of `IdCardType` is `PhilippinesVoteID`:
         /// - Birthday (string): Date of birth.
         /// - Address (string): Address.
-        /// - LastName (string): Family name.
+        /// - LastName (string): Last name.
         /// - FirstName (string): First name.
-        /// - VIN (string): VIN number.
-        /// - CivilStatus (string): Marital status.
+        /// - VIN (string): Voter's identification number (VIN).
+        /// - CivilStatus (string): Civil status.
         /// - Citizenship (string): Citizenship.
-        /// - PrecinctNo (string): Region.
+        /// - PrecinctNo (string): Precinct.
         /// 
         /// When the value of `IdCardType` is `PhilippinesDrivingLicense`:
         /// - Sex (string): Gender.
         /// - Birthday (string): Date of birth.
         /// - Name (string): Name.
         /// - Address (string): Address.
-        /// - LastName (string): Family name.
+        /// - LastName (string): Last name.
         /// - FirstName (string): First name.
         /// - MiddleName (string): Middle name.
         /// - Nationality (string): Nationality.
         /// - LicenseNo (string): License number.
-        /// - ExpiresDate (string): Validity period.
+        /// - ExpiresDate (string): Expiration date.
         /// - AgencyCode (string): Agency code.
         /// 
+        /// When the value of `IdCardType` is `PhilippinesTinID`:
+        /// - LicenseNumber (string): Tax identification number (TIN).
+        /// - FullName (string): Full name.
+        /// - Address (string): Address.
+        /// - Birthday (string): Date of birth.
+        /// - IssueDate (string): Issue date.
+        /// 
+        /// When the value of `IdCardType` is `PhilippinesSSSID`:
+        /// - LicenseNumber (string): Common reference number (CRN).
+        /// - FullName (string): Full name.
+        /// - Birthday (string): Date of birth.
+        /// 
+        /// (4) Indonesian identity card
         /// When the value of `IdCardType` is `IndonesiaIDCard`:
-        /// - NIK (string): Identity document No.
-        /// - Nama (string): Name.
-        /// - TempatTglLahir (string): Place/Date of birth.
+        /// - NIK (string): Single Identity Number.
+        /// - Nama (string): Full name.
+        /// - TempatTglLahir (string): Place and date of birth.
         /// - JenisKelamin (string): Gender.
         /// - GolDarah (string): Blood type.
         /// - Alamat (string): Address.
@@ -101,12 +117,22 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// - Kecamatan (string): Region.
         /// - Agama (string): Religion.
         /// - StatusPerkawinan (string): Marital status.
-        /// - Perkerjaan (string): Profession.
+        /// - Perkerjaan (string): Occupation.
         /// - KewargaNegaraan (string): Nationality.
-        /// - BerlakuHingga (string): Expiry date of the identity document.
-        /// - IssuedDate (string): Date of issuance.
+        /// - BerlakuHingga (string): Expiry date.
+        /// - IssuedDate (string): Issue date.
         /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// (5) A passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+        /// When the value of `IdCardType` is `MLIDPassport`:
+        /// - FullName (string): Full name.
+        /// - Surname (string): Surname.
+        /// - GivenName (string): Given name.
+        /// - Birthday (string): Date of birth.
+        /// - Sex (string): Gender. Valid values: `F` (female) and `M` (male).
+        /// - DateOfExpiration (string): Expiration date.
+        /// - IssuingCountry (string): Issuing country.
+        /// - NationalityCode (string): Country/region code.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CardInfoOcrJson")]
         public FileInfo CardInfoOcrJson{ get; set; }

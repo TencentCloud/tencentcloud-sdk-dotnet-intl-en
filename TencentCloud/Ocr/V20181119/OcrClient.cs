@@ -577,6 +577,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// This API is used to recognize a Philippine Unified Multi-Purpose ID (UMID) card.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesUMIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesUMIDOCRResponse"/></returns>
+        public async Task<RecognizePhilippinesUMIDOCRResponse> RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesUMIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize a Philippine Unified Multi-Purpose ID (UMID) card.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesUMIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesUMIDOCRResponse"/></returns>
+        public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCRSync(RecognizePhilippinesUMIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesUMIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to recognize a Philippine voters ID card. It can recognize fields such as first name, family name, date of birth, civil status, citizenship, address, precinct, and voter's identification number (VIN).
         /// 
         /// The API request rate is limited to 20 requests/sec by default.

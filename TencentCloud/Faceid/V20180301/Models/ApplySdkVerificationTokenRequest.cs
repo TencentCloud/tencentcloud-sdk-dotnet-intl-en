@@ -31,19 +31,19 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? NeedVerifyIdCard{ get; set; }
 
         /// <summary>
-        /// The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
+        /// The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
 
         /// <summary>
-        /// Disable the modification of the OCR result by the user. Default value: `false` (modification allowed).
+        /// Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
         /// </summary>
         [JsonProperty("DisableChangeOcrResult")]
         public bool? DisableChangeOcrResult{ get; set; }
 
         /// <summary>
-        /// Disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned based on the warnings. If the value of `NeedVerifyIdCard` is `true`, the value of this field will also be `true`.
+        /// Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
         /// </summary>
         [JsonProperty("DisableCheckOcrWarnings")]
         public bool? DisableCheckOcrWarnings{ get; set; }
