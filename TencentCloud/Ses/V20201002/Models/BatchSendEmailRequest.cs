@@ -87,7 +87,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public TimedEmailParam TimedParam{ get; set; }
 
         /// <summary>
-        /// Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+        /// Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
         /// </summary>
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }

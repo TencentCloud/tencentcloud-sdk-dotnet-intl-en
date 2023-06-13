@@ -51,6 +51,18 @@ namespace TencentCloud.Ses.V20201002.Models
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Cc")]
+        public string[] Cc{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Bcc")]
+        public string[] Bcc{ get; set; }
+
+        /// <summary>
         /// Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
         /// </summary>
         [JsonProperty("Template")]
@@ -69,7 +81,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public Attachment[] Attachments{ get; set; }
 
         /// <summary>
-        /// Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+        /// Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
         /// </summary>
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
@@ -90,6 +102,8 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamArraySimple(map, prefix + "Destination.", this.Destination);
             this.SetParamSimple(map, prefix + "Subject", this.Subject);
             this.SetParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
+            this.SetParamArraySimple(map, prefix + "Cc.", this.Cc);
+            this.SetParamArraySimple(map, prefix + "Bcc.", this.Bcc);
             this.SetParamObj(map, prefix + "Template.", this.Template);
             this.SetParamObj(map, prefix + "Simple.", this.Simple);
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
