@@ -135,6 +135,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// CloneCDNDomain.
+        /// </summary>
+        /// <param name="req"><see cref="CloneCDNDomainRequest"/></param>
+        /// <returns><see cref="CloneCDNDomainResponse"/></returns>
+        public async Task<CloneCDNDomainResponse> CloneCDNDomain(CloneCDNDomainRequest req)
+        {
+             JsonResponseModel<CloneCDNDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneCDNDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneCDNDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CloneCDNDomain.
+        /// </summary>
+        /// <param name="req"><see cref="CloneCDNDomainRequest"/></param>
+        /// <returns><see cref="CloneCDNDomainResponse"/></returns>
+        public CloneCDNDomainResponse CloneCDNDomainSync(CloneCDNDomainRequest req)
+        {
+             JsonResponseModel<CloneCDNDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneCDNDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneCDNDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to confirm the result of uploading a media file (and cover file) to VOD, store the media information, and return the playback address and ID of the file.
         /// </summary>
         /// <param name="req"><see cref="CommitUploadRequest"/></param>
@@ -432,6 +472,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "CreateAnimatedGraphicsTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAnimatedGraphicsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This interface is used to add domain names to VOD, and a user can add at most 20 domains. 1. After the domain name is successfully added, VOD will deploy the domain name. It takes about 2 minutes for the domain name to change from the deployed state to the online state.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCDNDomainRequest"/></param>
+        /// <returns><see cref="CreateCDNDomainResponse"/></returns>
+        public async Task<CreateCDNDomainResponse> CreateCDNDomain(CreateCDNDomainRequest req)
+        {
+             JsonResponseModel<CreateCDNDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCDNDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCDNDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This interface is used to add domain names to VOD, and a user can add at most 20 domains. 1. After the domain name is successfully added, VOD will deploy the domain name. It takes about 2 minutes for the domain name to change from the deployed state to the online state.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCDNDomainRequest"/></param>
+        /// <returns><see cref="CreateCDNDomainResponse"/></returns>
+        public CreateCDNDomainResponse CreateCDNDomainSync(CreateCDNDomainRequest req)
+        {
+             JsonResponseModel<CreateCDNDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCDNDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCDNDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1347,6 +1427,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// DeleteCDNDomain.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCDNDomainRequest"/></param>
+        /// <returns><see cref="DeleteCDNDomainResponse"/></returns>
+        public async Task<DeleteCDNDomainResponse> DeleteCDNDomain(DeleteCDNDomainRequest req)
+        {
+             JsonResponseModel<DeleteCDNDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCDNDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCDNDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeleteCDNDomain.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCDNDomainRequest"/></param>
+        /// <returns><see cref="DeleteCDNDomainResponse"/></returns>
+        public DeleteCDNDomainResponse DeleteCDNDomainSync(DeleteCDNDomainRequest req)
+        {
+             JsonResponseModel<DeleteCDNDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCDNDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCDNDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * A category can be deleted only if it has no subcategories and associated media files;
         /// * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
         /// </summary>
@@ -2234,6 +2354,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAnimatedGraphicsTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeCDNDomains.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCDNDomainsRequest"/></param>
+        /// <returns><see cref="DescribeCDNDomainsResponse"/></returns>
+        public async Task<DescribeCDNDomainsResponse> DescribeCDNDomains(DescribeCDNDomainsRequest req)
+        {
+             JsonResponseModel<DescribeCDNDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCDNDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDNDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeCDNDomains.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCDNDomainsRequest"/></param>
+        /// <returns><see cref="DescribeCDNDomainsResponse"/></returns>
+        public DescribeCDNDomainsResponse DescribeCDNDomainsSync(DescribeCDNDomainsRequest req)
+        {
+             JsonResponseModel<DescribeCDNDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCDNDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDNDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4135,6 +4295,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// ModifyCDNDomainConfig.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDNDomainConfigRequest"/></param>
+        /// <returns><see cref="ModifyCDNDomainConfigResponse"/></returns>
+        public async Task<ModifyCDNDomainConfigResponse> ModifyCDNDomainConfig(ModifyCDNDomainConfigRequest req)
+        {
+             JsonResponseModel<ModifyCDNDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDNDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDNDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ModifyCDNDomainConfig.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDNDomainConfigRequest"/></param>
+        /// <returns><see cref="ModifyCDNDomainConfigResponse"/></returns>
+        public ModifyCDNDomainConfigResponse ModifyCDNDomainConfigSync(ModifyCDNDomainConfigRequest req)
+        {
+             JsonResponseModel<ModifyCDNDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDNDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDNDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the category of a media file.
         /// </summary>
         /// <param name="req"><see cref="ModifyClassRequest"/></param>
@@ -5858,6 +6058,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "SimpleHlsClip");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SimpleHlsClipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This interface is used to enable/disable CDN accelerated domain names.
+        /// </summary>
+        /// <param name="req"><see cref="StartCDNDomainRequest"/></param>
+        /// <returns><see cref="StartCDNDomainResponse"/></returns>
+        public async Task<StartCDNDomainResponse> StartCDNDomain(StartCDNDomainRequest req)
+        {
+             JsonResponseModel<StartCDNDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartCDNDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartCDNDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This interface is used to enable/disable CDN accelerated domain names.
+        /// </summary>
+        /// <param name="req"><see cref="StartCDNDomainRequest"/></param>
+        /// <returns><see cref="StartCDNDomainResponse"/></returns>
+        public StartCDNDomainResponse StartCDNDomainSync(StartCDNDomainRequest req)
+        {
+             JsonResponseModel<StartCDNDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartCDNDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartCDNDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
