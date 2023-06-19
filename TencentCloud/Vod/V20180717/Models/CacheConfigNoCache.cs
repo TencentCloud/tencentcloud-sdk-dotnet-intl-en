@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// No-cache configuration switch: <li>on: Enable;</li> <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Always forwards to the origin server for verification:<li>on: Enable;</li> <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Revalidate")]
         public string Revalidate{ get; set; }

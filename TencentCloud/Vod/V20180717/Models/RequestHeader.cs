@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Custom request header configuration switch: <li>on：Enable;</li> <li>off：Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom request header configuration rules
         /// </summary>
         [JsonProperty("HeaderRules")]
         public HttpHeaderPathRule[] HeaderRules{ get; set; }

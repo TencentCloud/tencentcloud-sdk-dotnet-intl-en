@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Huawei Cloud OBS origin authentication configuration switch, the values are: <li>on:Enable;</li> <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access ID
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// BucketName
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Rule types: <li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
         /// </summary>
         [JsonProperty("MaxAgeType")]
         public string MaxAgeType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content for each MaxAgeType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li> <b>Note: the all rule cannot be deleted, and it follows the origin site by default, which can be modified.</b>
         /// </summary>
         [JsonProperty("MaxAgeContents")]
         public string[] MaxAgeContents{ get; set; }
 
         /// <summary>
-        /// 
+        /// Note: The value 0 means not to cache. <b>Note: The value 0 means not to cache.</b>
         /// </summary>
         [JsonProperty("MaxAgeTime")]
         public ulong? MaxAgeTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public string FollowOrigin{ get; set; }

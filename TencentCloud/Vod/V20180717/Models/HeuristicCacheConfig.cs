@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Heuristic cache configuration switch:<li>on:Enable.</li> <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("HeuristicCacheTimeSwitch")]
         public string HeuristicCacheTimeSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unit: seconds.
         /// </summary>
         [JsonProperty("HeuristicCacheTime")]
         public ulong? HeuristicCacheTime{ get; set; }

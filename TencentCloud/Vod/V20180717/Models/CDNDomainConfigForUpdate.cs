@@ -25,115 +25,115 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin Server Configuration.
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// 
+        /// IP blocklist/allowlist configuration. This is disabled by default.
         /// </summary>
         [JsonProperty("IpFilter")]
         public IpFilter IpFilter{ get; set; }
 
         /// <summary>
-        /// 
+        /// UserAgent:blacklist/whitelist configuration.
         /// </summary>
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }
 
         /// <summary>
-        /// 
+        /// Back to the source 301/302 status code automatically follows the configuration, the default is off
         /// </summary>
         [JsonProperty("FollowRedirect")]
         public FollowRedirect FollowRedirect{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom request header configuration. This is disabled by default.
         /// </summary>
         [JsonProperty("RequestHeader")]
         public RequestHeader RequestHeader{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom response header configuration. This is disabled by default.
         /// </summary>
         [JsonProperty("ResponseHeader")]
         public ResponseHeader ResponseHeader{ get; set; }
 
         /// <summary>
-        /// 
+        /// Node cache expiration time configuration.
         /// </summary>
         [JsonProperty("Cache")]
         public Cache Cache{ get; set; }
 
         /// <summary>
-        /// 
+        /// Domain name HTTPS acceleration configuration. This is disabled by default.
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
         /// <summary>
-        /// 
+        /// Timestamp hotlink protection configuration.
         /// </summary>
         [JsonProperty("Authentication")]
         public Authentication Authentication{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access protocol forced redirect configuration. This is disabled by default.
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// 
+        /// Referer blacklist/whitelist configuration. This is disabled by default.
         /// </summary>
         [JsonProperty("Referer")]
         public Referer Referer{ get; set; }
 
         /// <summary>
-        /// 
+        /// Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
         /// </summary>
         [JsonProperty("MaxAge")]
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// 
+        /// IPv6 access configuration.
         /// </summary>
         [JsonProperty("Ipv6Access")]
         public Ipv6Access Ipv6Access{ get; set; }
 
         /// <summary>
-        /// 
+        /// QUIC configuration item.
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin access authentication for S3 bucket.
         /// </summary>
         [JsonProperty("AwsPrivateAccess")]
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access authentication configuration for OSS origin.
         /// </summary>
         [JsonProperty("OssPrivateAccess")]
         public OssPrivateAccess OssPrivateAccess{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access authentication for Huawei Cloud OBS origin
         /// </summary>
         [JsonProperty("HwPrivateAccess")]
         public HwPrivateAccess HwPrivateAccess{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin-pull authentication for other origins.
         /// </summary>
         [JsonProperty("OthersPrivateAccess")]
         public OthersPrivateAccess OthersPrivateAccess{ get; set; }

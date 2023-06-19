@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Cache configuration switch: <li>on:enable；</li> <li>off: disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
         /// </summary>
         [JsonProperty("CacheTime")]
         public ulong? CacheTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node: <li>on: Enable;</li> <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("CompareMaxAge")]
         public string CompareMaxAge{ get; set; }
 
         /// <summary>
-        /// 
+        /// Force cache: <li>on: Enable;</li> <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]
         public string IgnoreCacheControl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to ignore the header and body on cache nodes if the origin server returns the header Set-Cookie. <li>on: Ignore; do not cache the header and body.</li> <li>off: Do not ignore; follow the custom cache rules of cache nodes.</li>
         /// </summary>
         [JsonProperty("IgnoreSetCookie")]
         public string IgnoreSetCookie{ get; set; }

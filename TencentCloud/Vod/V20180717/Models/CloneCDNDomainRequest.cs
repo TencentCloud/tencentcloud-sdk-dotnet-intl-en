@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Domain name.
+        /// Domain
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The cloned domain name.
+        /// The cloned domain.
         /// </summary>
         [JsonProperty("ReferenceDomain")]
         public string ReferenceDomain{ get; set; }

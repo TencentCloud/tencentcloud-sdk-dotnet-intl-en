@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of domain names. If this field is left blank, all domain name information will be listed by default.
+        /// List of domain. If this field is left blank, all domain information will be listed by default.
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
