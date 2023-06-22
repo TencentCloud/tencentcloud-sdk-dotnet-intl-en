@@ -91,7 +91,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Whether IPv6 is supported.
+        /// Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }
@@ -123,7 +123,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public DBParamValue[] InitParams{ get; set; }
 
         /// <summary>
-        /// ID of the instance whose backup data will be rolled back to the new instance you create.
+        /// ID of the instance to be rolled back, such as “2021-11-22 00:00:00”.
         /// </summary>
         [JsonProperty("RollbackInstanceId")]
         public string RollbackInstanceId{ get; set; }

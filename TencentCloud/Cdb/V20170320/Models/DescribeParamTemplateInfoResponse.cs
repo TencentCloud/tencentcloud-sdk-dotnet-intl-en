@@ -67,6 +67,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string TemplateType{ get; set; }
 
         /// <summary>
+        /// Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +92,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

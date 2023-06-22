@@ -54,6 +54,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// Whether to record the thread killing history. The default value is `true`, indicating “yes”. You can set it to `false` (“no”) to speed up the killing process.
+        /// </summary>
+        [JsonProperty("RecordHistory")]
+        public bool? RecordHistory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamArraySimple(map, prefix + "Threads.", this.Threads);
             this.SetParamSimple(map, prefix + "SqlExecId", this.SqlExecId);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "RecordHistory", this.RecordHistory);
         }
     }
 }

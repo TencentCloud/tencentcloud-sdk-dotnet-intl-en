@@ -1001,7 +1001,7 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// This API is used to get the developer information.
+        /// This API is used to get developer information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDeveloperRequest"/></param>
         /// <returns><see cref="DescribeDeveloperResponse"/></returns>
@@ -1021,7 +1021,7 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// This API is used to get the developer information.
+        /// This API is used to get developer information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDeveloperRequest"/></param>
         /// <returns><see cref="DescribeDeveloperResponse"/></returns>
@@ -1738,6 +1738,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "GetWatermark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove a user from the room.
+        /// </summary>
+        /// <param name="req"><see cref="KickUserFromRoomRequest"/></param>
+        /// <returns><see cref="KickUserFromRoomResponse"/></returns>
+        public async Task<KickUserFromRoomResponse> KickUserFromRoom(KickUserFromRoomRequest req)
+        {
+             JsonResponseModel<KickUserFromRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KickUserFromRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KickUserFromRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to remove a user from the room.
+        /// </summary>
+        /// <param name="req"><see cref="KickUserFromRoomRequest"/></param>
+        /// <returns><see cref="KickUserFromRoomResponse"/></returns>
+        public KickUserFromRoomResponse KickUserFromRoomSync(KickUserFromRoomRequest req)
+        {
+             JsonResponseModel<KickUserFromRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KickUserFromRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KickUserFromRoomResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

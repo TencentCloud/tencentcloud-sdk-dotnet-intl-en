@@ -31,12 +31,6 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
-
-        /// <summary>
         /// Name of new cloud disk.
         /// </summary>
         [JsonProperty("DiskName")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         [JsonProperty("Portable")]
         public bool? Portable{ get; set; }
+
+        /// <summary>
+        /// The new project ID of the cloud disk. Only the project ID of elastic cloud disk can be modified. The available projects and their IDs can be queried via the API [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
 
         /// <summary>
         /// Whether the cloud disk is terminated with the CVM after it has been successfully mounted. `TRUE` indicates that it is terminated with the CVM. `FALSE` indicates that it is not terminated with the CVM. This is only supported for cloud disks and data disks that are pay-as-you-go.
@@ -60,6 +60,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
+        /// <summary>
+        /// Enable/disable disk bursting.
+        /// </summary>
+        [JsonProperty("BurstPerformanceOperation")]
+        public string BurstPerformanceOperation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,11 +73,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
             this.SetParamSimple(map, prefix + "Portable", this.Portable);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "BurstPerformanceOperation", this.BurstPerformanceOperation);
         }
     }
 }

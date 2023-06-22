@@ -31,8 +31,16 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
-        /// The event type. Valid values:
+        /// The event type. Valid values: 
         /// `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+        /// ·Camera0n·: The camera is turned on.
+        /// `Camera0ff`: The camera is turned off.
+        /// `MicOn`: The mic is turned on.
+        /// `MicOff`: The mic is turned off.
+        /// `ScreenOn`: Screen sharing is enabled.
+        /// `ScreenOff`: Screen sharing is disabled.
+        /// `VisibleOn`: The page is visible.
+        /// `VisibleOff`: The page is invisible.
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }

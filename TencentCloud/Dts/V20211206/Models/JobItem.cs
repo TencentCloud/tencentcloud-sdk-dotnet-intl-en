@@ -74,8 +74,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string BriefMsg{ get; set; }
 
         /// <summary>
-        /// Task status. Valid values: `creating`, `created`, `checking`, `checkPass`, `checkNotPass`, `readyRun`, `running`, `readyComplete`, `success`, `failed`, `stopping`, `completing`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task status. Valid values: `creating` (Creating), `created`(Created), `checking` (Checking), `checkPass` (Check passed), `checkNotPass` (Check not passed), `readyRun` (Ready for running), `running` (Running), `readyComplete` (Preparation completed), `success` (Successful), `failed` (Failed), `stopping` (Stopping), `completing` (Completing), `pausing` (Pausing), `manualPaused` (Paused). Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

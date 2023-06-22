@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
+        /// <summary>
+        /// Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

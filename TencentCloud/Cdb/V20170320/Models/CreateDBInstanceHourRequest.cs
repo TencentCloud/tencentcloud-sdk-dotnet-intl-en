@@ -85,7 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+        /// Region information of the source instance, which is required when purchasing a read-only or disaster recovery instance.
         /// </summary>
         [JsonProperty("MasterRegion")]
         public string MasterRegion{ get; set; }
@@ -151,7 +151,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+        /// Instance name For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, and their instance names are db1, db2, and db3, respectively.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -187,7 +187,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+        /// Array of alarm policy IDs,  which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public long?[] AlarmPolicyList{ get; set; }

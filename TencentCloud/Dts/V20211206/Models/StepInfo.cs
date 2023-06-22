@@ -74,8 +74,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public StepTip[] Warnings{ get; set; }
 
         /// <summary>
-        /// Progress of the current step. Value range: 0-100.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Current step progress. Value range: 0-100. The value `-1` indicates that the progress of the current step is unavailable. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

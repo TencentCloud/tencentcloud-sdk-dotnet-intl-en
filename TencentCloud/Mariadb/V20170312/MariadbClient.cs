@@ -295,7 +295,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
+        /// This API is used to create a monthly subscribed TencentDB for MariaDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
+        /// This API is used to create a monthly subscribed TencentDB for MariaDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -335,7 +335,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to create pay-as-you-go instances.
+        /// This API is used to create a pay-as-you-go TencentDB for MariaDB instance.
         /// </summary>
         /// <param name="req"><see cref="CreateHourDBInstanceRequest"/></param>
         /// <returns><see cref="CreateHourDBInstanceResponse"/></returns>
@@ -355,7 +355,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to create pay-as-you-go instances.
+        /// This API is used to create a pay-as-you-go TencentDB for MariaDB instance.
         /// </summary>
         /// <param name="req"><see cref="CreateHourDBInstanceRequest"/></param>
         /// <returns><see cref="CreateHourDBInstanceResponse"/></returns>
@@ -1259,7 +1259,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to terminate a pay-as-you-go instance.
+        /// This API is used to terminate a pay-as-you-go TencentDB for MariaDB instance.
         /// </summary>
         /// <param name="req"><see cref="DestroyHourDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyHourDBInstanceResponse"/></returns>
@@ -1279,7 +1279,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to terminate a pay-as-you-go instance.
+        /// This API is used to terminate a pay-as-you-go TencentDB for MariaDB instance.
         /// </summary>
         /// <param name="req"><see cref="DestroyHourDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyHourDBInstanceResponse"/></returns>
@@ -1381,7 +1381,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to isolate a monthly subscribed TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to overdue payments, top up your account as soon as possible.
+        /// This API is used to isolate a monthly subscribed TencentDB for MariaDB instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
@@ -1401,7 +1401,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to isolate a monthly subscribed TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to overdue payments, top up your account as soon as possible.
+        /// This API is used to isolate a monthly subscribed TencentDB for MariaDB instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
@@ -1543,12 +1543,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the permissions of a TencentDB instance account.
-        /// 
-        /// **Notes**
-        /// - Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
-        /// - An error will be reported if read-write permissions are granted to a read-only account.
-        /// - If the parameter of permissions at a level is left empty, no change will be made to the permissions at the level that have been granted. To clear granted permissions at a level, set `GlobalPrivileges.N` or `Privileges` to an empty array.
+        /// This API is used to modify the permissions of a TencentDB instance account. \n\n**Note**\n-Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.An error will be reported if read-write permissions are granted to a read-only account. If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted view permissions, set `Privileges` to an empty array.
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
         /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
@@ -1568,12 +1563,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the permissions of a TencentDB instance account.
-        /// 
-        /// **Notes**
-        /// - Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
-        /// - An error will be reported if read-write permissions are granted to a read-only account.
-        /// - If the parameter of permissions at a level is left empty, no change will be made to the permissions at the level that have been granted. To clear granted permissions at a level, set `GlobalPrivileges.N` or `Privileges` to an empty array.
+        /// This API is used to modify the permissions of a TencentDB instance account. \n\n**Note**\n-Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.An error will be reported if read-write permissions are granted to a read-only account. If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted view permissions, set `Privileges` to an empty array.
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
         /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
@@ -1986,6 +1976,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "TerminateDedicatedDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to expand the dedicated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDedicatedDBInstanceResponse"/></returns>
+        public async Task<UpgradeDedicatedDBInstanceResponse> UpgradeDedicatedDBInstance(UpgradeDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to expand the dedicated TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDedicatedDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDedicatedDBInstanceResponse"/></returns>
+        public UpgradeDedicatedDBInstanceResponse UpgradeDedicatedDBInstanceSync(UpgradeDedicatedDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDedicatedDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDedicatedDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDedicatedDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

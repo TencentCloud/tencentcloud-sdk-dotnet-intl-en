@@ -37,6 +37,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public SlowLogHost[] Items{ get; set; }
 
         /// <summary>
+        /// Detailed list of the percentages of slow logs from different source usernames
+        /// </summary>
+        [JsonProperty("UserNameItems")]
+        public SlowLogUser[] UserNameItems{ get; set; }
+
+        /// <summary>
+        /// The number of source users
+        /// </summary>
+        [JsonProperty("UserTotalCount")]
+        public long? UserTotalCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +62,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "UserNameItems.", this.UserNameItems);
+            this.SetParamSimple(map, prefix + "UserTotalCount", this.UserTotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

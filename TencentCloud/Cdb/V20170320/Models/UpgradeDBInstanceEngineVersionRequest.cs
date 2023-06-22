@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// Mode of switch to a new instance. Value range: 0 (switch immediately), 1 (switch within a time window). Default value: 0. If the value is 1, the switch process will be performed within a time window. Or, you can call the [switching to new instance API](https://intl.cloud.tencent.com/document/product/236/15864?from_cn_redirect=1) to trigger the process.
+        /// Switch mode for accessing the new instance.  Valid values:  `0` (switch immediately), `1` (switch within a time window). Default value: `0`. If the value is `1`, the switch process will be performed within a time window. Or, you can call the [SwitchForUpgrade](https://intl.cloud.tencent.com/document/product/236/15864?from_cn_redirect=1) API to trigger the process.
         /// </summary>
         [JsonProperty("WaitSwitch")]
         public long? WaitSwitch{ get; set; }

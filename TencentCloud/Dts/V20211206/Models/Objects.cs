@@ -25,8 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Sync object type. Valid value: `Partial` (default).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
@@ -39,8 +38,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public Database[] Databases{ get; set; }
 
         /// <summary>
-        /// Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdvancedObjects")]
         public string[] AdvancedObjects{ get; set; }

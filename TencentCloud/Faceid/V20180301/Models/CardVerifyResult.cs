@@ -104,6 +104,15 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// - FullName (string): Full name.
         /// - Birthday (string): Date of birth.
         /// 
+        /// When the value of `IdCardType` is `PhilippinesUMID`:
+        /// - Surname (string): Surname.
+        /// - MiddleName (string):Middle name.
+        /// - GivenName (string): Given name.
+        /// - Sex (string): Gender.
+        /// - Birthday (string): Date of birth.
+        /// - Address (string): Address.
+        /// - CRN (string): Common reference number (CRN).
+        /// 
         /// (4) Indonesian identity card
         /// When the value of `IdCardType` is `IndonesiaIDCard`:
         /// - NIK (string): Single Identity Number.
@@ -132,7 +141,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// - DateOfExpiration (string): Expiration date.
         /// - IssuingCountry (string): Issuing country.
         /// - NationalityCode (string): Country/region code.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CardInfoOcrJson")]
         public FileInfo CardInfoOcrJson{ get; set; }

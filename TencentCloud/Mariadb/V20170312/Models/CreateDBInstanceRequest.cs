@@ -118,7 +118,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Whether IPv6 is supported.
+        /// Whether IPv6 is supported. Valid values: `0` (unsupported), `1` (supported).
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }

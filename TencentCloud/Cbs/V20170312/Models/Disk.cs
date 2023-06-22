@@ -285,6 +285,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ErrorPrompt")]
         public string ErrorPrompt{ get; set; }
 
+        /// <summary>
+        /// Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BurstPerformance")]
+        public bool? BurstPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -332,6 +338,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
             this.SetParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
+            this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
         }
     }
 }

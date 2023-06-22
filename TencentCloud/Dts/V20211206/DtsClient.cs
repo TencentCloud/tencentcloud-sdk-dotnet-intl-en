@@ -381,6 +381,46 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to check whether the current data sync task supports object modification after the task configuration is modified.
+        /// </summary>
+        /// <param name="req"><see cref="CreateModifyCheckSyncJobRequest"/></param>
+        /// <returns><see cref="CreateModifyCheckSyncJobResponse"/></returns>
+        public async Task<CreateModifyCheckSyncJobResponse> CreateModifyCheckSyncJob(CreateModifyCheckSyncJobRequest req)
+        {
+             JsonResponseModel<CreateModifyCheckSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateModifyCheckSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModifyCheckSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to check whether the current data sync task supports object modification after the task configuration is modified.
+        /// </summary>
+        /// <param name="req"><see cref="CreateModifyCheckSyncJobRequest"/></param>
+        /// <returns><see cref="CreateModifyCheckSyncJobResponse"/></returns>
+        public CreateModifyCheckSyncJobResponse CreateModifyCheckSyncJobSync(CreateModifyCheckSyncJobRequest req)
+        {
+             JsonResponseModel<CreateModifyCheckSyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateModifyCheckSyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModifyCheckSyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a sync task.
         /// </summary>
         /// <param name="req"><see cref="CreateSyncJobRequest"/></param>
@@ -736,6 +776,46 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMigrationJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrationJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the result of the created check task for object modification.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyCheckSyncJobResultRequest"/></param>
+        /// <returns><see cref="DescribeModifyCheckSyncJobResultResponse"/></returns>
+        public async Task<DescribeModifyCheckSyncJobResultResponse> DescribeModifyCheckSyncJobResult(DescribeModifyCheckSyncJobResultRequest req)
+        {
+             JsonResponseModel<DescribeModifyCheckSyncJobResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeModifyCheckSyncJobResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModifyCheckSyncJobResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the result of the created check task for object modification.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyCheckSyncJobResultRequest"/></param>
+        /// <returns><see cref="DescribeModifyCheckSyncJobResultResponse"/></returns>
+        public DescribeModifyCheckSyncJobResultResponse DescribeModifyCheckSyncJobResultSync(DescribeModifyCheckSyncJobResultRequest req)
+        {
+             JsonResponseModel<DescribeModifyCheckSyncJobResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeModifyCheckSyncJobResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModifyCheckSyncJobResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1136,6 +1216,46 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMigrationJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrationJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration of a data sync task after the task is started.\n Configuration modification steps:  Modify sync task configuration -> Create a modification check task -> Query the check task result -> Start the configuration modification check task
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncJobConfigRequest"/></param>
+        /// <returns><see cref="ModifySyncJobConfigResponse"/></returns>
+        public async Task<ModifySyncJobConfigResponse> ModifySyncJobConfig(ModifySyncJobConfigRequest req)
+        {
+             JsonResponseModel<ModifySyncJobConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySyncJobConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncJobConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration of a data sync task after the task is started.\n Configuration modification steps:  Modify sync task configuration -> Create a modification check task -> Query the check task result -> Start the configuration modification check task
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncJobConfigRequest"/></param>
+        /// <returns><see cref="ModifySyncJobConfigResponse"/></returns>
+        public ModifySyncJobConfigResponse ModifySyncJobConfigSync(ModifySyncJobConfigRequest req)
+        {
+             JsonResponseModel<ModifySyncJobConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySyncJobConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncJobConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1576,6 +1696,46 @@ namespace TencentCloud.Dts.V20211206
              {
                  var strResp = this.InternalRequestSync(req, "StartMigrateJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMigrateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start the configuration modification process when the modification check task status becomes “success”.
+        /// </summary>
+        /// <param name="req"><see cref="StartModifySyncJobRequest"/></param>
+        /// <returns><see cref="StartModifySyncJobResponse"/></returns>
+        public async Task<StartModifySyncJobResponse> StartModifySyncJob(StartModifySyncJobRequest req)
+        {
+             JsonResponseModel<StartModifySyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartModifySyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartModifySyncJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start the configuration modification process when the modification check task status becomes “success”.
+        /// </summary>
+        /// <param name="req"><see cref="StartModifySyncJobRequest"/></param>
+        /// <returns><see cref="StartModifySyncJobResponse"/></returns>
+        public StartModifySyncJobResponse StartModifySyncJobSync(StartModifySyncJobRequest req)
+        {
+             JsonResponseModel<StartModifySyncJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartModifySyncJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartModifySyncJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -37,7 +37,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
+        /// Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
         /// </summary>
         [JsonProperty("Deadline")]
         public string Deadline{ get; set; }

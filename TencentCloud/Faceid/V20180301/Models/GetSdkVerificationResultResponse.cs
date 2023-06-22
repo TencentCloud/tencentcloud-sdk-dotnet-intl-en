@@ -25,13 +25,13 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The result of the entire verification process.
+        /// The result code of the verification result.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// The result description.
+        /// The verification result description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Faceid.V20180301.Models
         public long? ChargeCount{ get; set; }
 
         /// <summary>
-        /// The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+        /// The results of multiple OCR processes (in order). The result of the final process is used as the valid result.
         /// </summary>
         [JsonProperty("CardVerifyResults")]
         public CardVerifyResult[] CardVerifyResults{ get; set; }
 
         /// <summary>
-        /// The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+        /// The results of multiple liveness detection processes (in order). The result of the final process is used as the valid result.
         /// </summary>
         [JsonProperty("CompareResults")]
         public CompareResult[] CompareResults{ get; set; }
 
         /// <summary>
-        /// Info passed in the process of getting the token.
+        /// Data passed through in the process of getting the token.
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }

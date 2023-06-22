@@ -90,6 +90,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MinFunc")]
         public string MinFunc{ get; set; }
 
+        /// <summary>
+        /// Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsNotSupportEdit")]
+        public bool? IsNotSupportEdit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
             this.SetParamSimple(map, prefix + "MaxFunc", this.MaxFunc);
             this.SetParamSimple(map, prefix + "MinFunc", this.MinFunc);
+            this.SetParamSimple(map, prefix + "IsNotSupportEdit", this.IsNotSupportEdit);
         }
     }
 }

@@ -120,6 +120,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskBackupQuota")]
         public ulong? DiskBackupQuota{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to enable disk bursting.
+        /// </summary>
+        [JsonProperty("BurstPerformance")]
+        public bool? BurstPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
             this.SetParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
             this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
+            this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
         }
     }
 }

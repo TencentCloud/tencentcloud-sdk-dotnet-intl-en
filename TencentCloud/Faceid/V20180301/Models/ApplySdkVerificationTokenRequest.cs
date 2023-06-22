@@ -31,19 +31,56 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? NeedVerifyIdCard{ get; set; }
 
         /// <summary>
-        /// The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+        /// The verification mode. Valid values:
+        /// 1: OCR + liveness detection + face comparison
+        /// 2: Liveness detection + face comparison
+        /// 3: Liveness detection
+        /// Default value: 1
+        /// </summary>
+        [JsonProperty("CheckMode")]
+        public long? CheckMode{ get; set; }
+
+        /// <summary>
+        /// The security level of the verification. Valid values:
+        /// 1: Video-based liveness detection
+        /// 2: Motion-based liveness detection
+        /// 3: Reflection-based liveness detection
+        /// 4: Motion- and reflection-based liveness detection
+        /// Default value: 4
+        /// </summary>
+        [JsonProperty("SecurityLevel")]
+        public long? SecurityLevel{ get; set; }
+
+        /// <summary>
+        /// The identity document type. Valid values: 
+        /// 1. `HK` (default): Identity card of Hong Kong (China)
+        /// 2. `ML`: Malaysian identity card
+        /// 3. `IndonesiaIDCard`: Indonesian identity card
+        /// 4. `PhilippinesVoteID`: Philippine voters ID card
+        /// 5. `PhilippinesDrivingLicense`: Philippine driver's license
+        /// 6. `PhilippinesTinID`: Philippine TIN ID card
+        /// 7. `PhilippinesSSSID`: Philippine SSS ID card
+        /// 8. `PhilippinesUMID`: Philippine UMID card
+        /// 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
 
         /// <summary>
-        /// Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+        /// The Base64-encoded value of the photo to compare, which is required only when `CheckMode` is set to `2`.
+        /// </summary>
+        [JsonProperty("CompareImage")]
+        public string CompareImage{ get; set; }
+
+        /// <summary>
+        /// Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
         /// </summary>
         [JsonProperty("DisableChangeOcrResult")]
         public bool? DisableChangeOcrResult{ get; set; }
 
         /// <summary>
-        /// Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+        /// Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
+        /// This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
         /// </summary>
         [JsonProperty("DisableCheckOcrWarnings")]
         public bool? DisableCheckOcrWarnings{ get; set; }
@@ -61,7 +98,10 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NeedVerifyIdCard", this.NeedVerifyIdCard);
+            this.SetParamSimple(map, prefix + "CheckMode", this.CheckMode);
+            this.SetParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
+            this.SetParamSimple(map, prefix + "CompareImage", this.CompareImage);
             this.SetParamSimple(map, prefix + "DisableChangeOcrResult", this.DisableChangeOcrResult);
             this.SetParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);

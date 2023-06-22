@@ -115,6 +115,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string GroupId{ get; set; }
 
         /// <summary>
+        /// Whether the students' consent is required to control their cameras/microphones.
+        /// </summary>
+        [JsonProperty("EnableDirectControl")]
+        public ulong? EnableDirectControl{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -141,6 +147,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

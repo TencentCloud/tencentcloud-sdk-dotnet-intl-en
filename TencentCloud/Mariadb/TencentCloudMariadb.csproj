@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0D2899B4-58E8-3E59-BC9E-E832FA5AC4D6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.716</VersionPrefix>
+    <VersionPrefix>3.0.717</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -164,6 +164,7 @@
     <Compile Include="V20170312\Models\ParamDesc.cs" />
     <Compile Include="V20170312\Models\ParamModifyResult.cs" />
     <Compile Include="V20170312\Models\ProcedurePrivilege.cs" />
+    <Compile Include="V20170312\Models\ReservedNetResource.cs" />
     <Compile Include="V20170312\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20170312\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20170312\Models\ResourceTag.cs" />
@@ -174,6 +175,8 @@
     <Compile Include="V20170312\Models\TablePrivilege.cs" />
     <Compile Include="V20170312\Models\TerminateDedicatedDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\TerminateDedicatedDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\UpgradeDedicatedDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\UpgradeDedicatedDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\ViewPrivileges.cs" />
   </ItemGroup>
 </Project>

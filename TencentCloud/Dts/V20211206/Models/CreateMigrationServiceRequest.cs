@@ -25,13 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+        /// Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+        /// Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb` ,`postgresql`, `sqlserver`, `mariadb`, and `cynosdbmysql`.
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }

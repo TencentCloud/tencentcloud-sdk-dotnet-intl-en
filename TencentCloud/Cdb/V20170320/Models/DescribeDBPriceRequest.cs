@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// Instance isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
+        /// Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

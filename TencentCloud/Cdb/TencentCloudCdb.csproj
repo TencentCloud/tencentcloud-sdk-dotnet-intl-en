@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.716</VersionPrefix>
+    <VersionPrefix>3.0.717</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,10 @@
     <Compile Include="V20170320\Models\AddTimeWindowRequest.cs" />
     <Compile Include="V20170320\Models\AddTimeWindowResponse.cs" />
     <Compile Include="V20170320\Models\Address.cs" />
+    <Compile Include="V20170320\Models\AdjustCdbProxyAddressRequest.cs" />
+    <Compile Include="V20170320\Models\AdjustCdbProxyAddressResponse.cs" />
+    <Compile Include="V20170320\Models\AdjustCdbProxyRequest.cs" />
+    <Compile Include="V20170320\Models\AdjustCdbProxyResponse.cs" />
     <Compile Include="V20170320\Models\AggregationCondition.cs" />
     <Compile Include="V20170320\Models\AnalyzeAuditLogsRequest.cs" />
     <Compile Include="V20170320\Models\AnalyzeAuditLogsResponse.cs" />
@@ -63,6 +67,7 @@
     <Compile Include="V20170320\Models\AuditLogFilter.cs" />
     <Compile Include="V20170320\Models\AuditPolicy.cs" />
     <Compile Include="V20170320\Models\AuditRule.cs" />
+    <Compile Include="V20170320\Models\AuditRuleFilters.cs" />
     <Compile Include="V20170320\Models\BackupConfig.cs" />
     <Compile Include="V20170320\Models\BackupInfo.cs" />
     <Compile Include="V20170320\Models\BackupItem.cs" />
@@ -81,6 +86,8 @@
     <Compile Include="V20170320\Models\CloneItem.cs" />
     <Compile Include="V20170320\Models\CloseCDBProxyRequest.cs" />
     <Compile Include="V20170320\Models\CloseCDBProxyResponse.cs" />
+    <Compile Include="V20170320\Models\CloseCdbProxyAddressRequest.cs" />
+    <Compile Include="V20170320\Models\CloseCdbProxyAddressResponse.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceRequest.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceResponse.cs" />
     <Compile Include="V20170320\Models\ColumnPrivilege.cs" />
@@ -92,6 +99,10 @@
     <Compile Include="V20170320\Models\CreateAuditPolicyResponse.cs" />
     <Compile Include="V20170320\Models\CreateBackupRequest.cs" />
     <Compile Include="V20170320\Models\CreateBackupResponse.cs" />
+    <Compile Include="V20170320\Models\CreateCdbProxyAddressRequest.cs" />
+    <Compile Include="V20170320\Models\CreateCdbProxyAddressResponse.cs" />
+    <Compile Include="V20170320\Models\CreateCdbProxyRequest.cs" />
+    <Compile Include="V20170320\Models\CreateCdbProxyResponse.cs" />
     <Compile Include="V20170320\Models\CreateCloneInstanceRequest.cs" />
     <Compile Include="V20170320\Models\CreateCloneInstanceResponse.cs" />
     <Compile Include="V20170320\Models\CreateDBImportJobRequest.cs" />
@@ -128,6 +139,8 @@
     <Compile Include="V20170320\Models\DescribeAuditRulesResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupConfigResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupDecryptionKeyRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupDecryptionKeyResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupDownloadRestrictionRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBackupDownloadRestrictionResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBackupEncryptionStatusRequest.cs" />
@@ -144,6 +157,8 @@
     <Compile Include="V20170320\Models\DescribeBinlogsResponse.cs" />
     <Compile Include="V20170320\Models\DescribeCDBProxyRequest.cs" />
     <Compile Include="V20170320\Models\DescribeCDBProxyResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeCdbProxyInfoRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeCdbProxyInfoResponse.cs" />
     <Compile Include="V20170320\Models\DescribeCdbZoneConfigRequest.cs" />
     <Compile Include="V20170320\Models\DescribeCdbZoneConfigResponse.cs" />
     <Compile Include="V20170320\Models\DescribeCloneListRequest.cs" />
@@ -196,6 +211,8 @@
     <Compile Include="V20170320\Models\DescribeProxyConnectionPoolConfResponse.cs" />
     <Compile Include="V20170320\Models\DescribeProxyCustomConfRequest.cs" />
     <Compile Include="V20170320\Models\DescribeProxyCustomConfResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeProxySupportParamRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeProxySupportParamResponse.cs" />
     <Compile Include="V20170320\Models\DescribeRemoteBackupConfigRequest.cs" />
     <Compile Include="V20170320\Models\DescribeRemoteBackupConfigResponse.cs" />
     <Compile Include="V20170320\Models\DescribeRoGroupsRequest.cs" />
@@ -265,6 +282,12 @@
     <Compile Include="V20170320\Models\ModifyCDBProxyDescResponse.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyVipVPortRequest.cs" />
     <Compile Include="V20170320\Models\ModifyCDBProxyVipVPortResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyCdbProxyAddressDescRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyCdbProxyAddressDescResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyCdbProxyAddressVipAndVPortRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyCdbProxyAddressVipAndVPortResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyCdbProxyParamRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyCdbProxyParamResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20170320\Models\ModifyDBInstanceProjectRequest.cs" />
@@ -308,8 +331,14 @@
     <Compile Include="V20170320\Models\Parameter.cs" />
     <Compile Include="V20170320\Models\ParameterDetail.cs" />
     <Compile Include="V20170320\Models\PoolConf.cs" />
+    <Compile Include="V20170320\Models\ProxyAddress.cs" />
+    <Compile Include="V20170320\Models\ProxyAllocation.cs" />
     <Compile Include="V20170320\Models\ProxyGroup.cs" />
+    <Compile Include="V20170320\Models\ProxyGroupInfo.cs" />
     <Compile Include="V20170320\Models\ProxyGroups.cs" />
+    <Compile Include="V20170320\Models\ProxyInst.cs" />
+    <Compile Include="V20170320\Models\ProxyNode.cs" />
+    <Compile Include="V20170320\Models\ProxyNodeCustom.cs" />
     <Compile Include="V20170320\Models\ProxyNodeInfo.cs" />
     <Compile Include="V20170320\Models\QueryCDBProxyRequest.cs" />
     <Compile Include="V20170320\Models\QueryCDBProxyResponse.cs" />
@@ -340,6 +369,7 @@
     <Compile Include="V20170320\Models\RollbackTask.cs" />
     <Compile Include="V20170320\Models\RollbackTimeRange.cs" />
     <Compile Include="V20170320\Models\Rule.cs" />
+    <Compile Include="V20170320\Models\RuleFilters.cs" />
     <Compile Include="V20170320\Models\SecurityGroup.cs" />
     <Compile Include="V20170320\Models\SlaveConfig.cs" />
     <Compile Include="V20170320\Models\SlaveInfo.cs" />

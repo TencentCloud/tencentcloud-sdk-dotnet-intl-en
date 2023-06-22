@@ -37,8 +37,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
-        /// Default value: `mysql`.
+        /// Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

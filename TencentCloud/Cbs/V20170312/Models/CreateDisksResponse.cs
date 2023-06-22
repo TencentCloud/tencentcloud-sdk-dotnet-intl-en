@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// List of IDs of the created cloud disks.
+        /// ID list of the created cloud disks. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskIdSet")]
         public string[] DiskIdSet{ get; set; }

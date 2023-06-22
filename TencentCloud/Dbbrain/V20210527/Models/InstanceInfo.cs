@@ -193,14 +193,14 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string AuditRunningStatus{ get; set; }
 
         /// <summary>
-        /// Private VIP
+        /// Private VIP 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternalVip")]
         public string InternalVip{ get; set; }
 
         /// <summary>
-        /// Private network port
+        /// Private network port 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternalVport")]
@@ -211,6 +211,20 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Cluster ID. This field is only required for cluster database products like TDSQL-C. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Cluster name. This field is only required for cluster database products like TDSQL-C. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
 
 
         /// <summary>
@@ -249,6 +263,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "InternalVip", this.InternalVip);
             this.SetParamSimple(map, prefix + "InternalVport", this.InternalVport);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
         }
     }
 }

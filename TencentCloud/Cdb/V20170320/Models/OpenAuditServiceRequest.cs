@@ -31,28 +31,28 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Retention period of audit logs. Valid values:
-        /// 7: seven days (a week);
-        /// 30: 30 days (a month);
-        /// 180: 180 days (six months);
-        /// 365: 365 days (a year);
-        /// 1095: 1095 days (three years);
-        /// 1825: 1825 days (five years).
+        /// Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// Retention period of high-frequency audit logs. Valid values:
-        /// 7: seven days (a week);
-        /// 30: 30 days (a month);
-        /// 180: 180 days (six months);
-        /// 365: 365 days (a year);
-        /// 1095: 1095 days (three years);
-        /// 1825: 1825 days (five years).
+        /// Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
+
+        /// <summary>
+        /// Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+        /// </summary>
+        [JsonProperty("AuditRuleFilters")]
+        public AuditRuleFilters[] AuditRuleFilters{ get; set; }
+
+        /// <summary>
+        /// Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+        /// </summary>
+        [JsonProperty("RuleTemplateIds")]
+        public string[] RuleTemplateIds{ get; set; }
 
 
         /// <summary>
@@ -63,6 +63,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
             this.SetParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
+            this.SetParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
+            this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
         }
     }
 }

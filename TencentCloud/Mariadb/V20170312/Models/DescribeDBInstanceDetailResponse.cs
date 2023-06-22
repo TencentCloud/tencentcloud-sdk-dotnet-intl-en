@@ -374,6 +374,18 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? RsAccessStrategy{ get; set; }
 
         /// <summary>
+        /// Unclaimed network resource
+        /// </summary>
+        [JsonProperty("ReservedNetResources")]
+        public ReservedNetResource[] ReservedNetResources{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsPhysicalReplicationSupported")]
+        public bool? IsPhysicalReplicationSupported{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -440,6 +452,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
             this.SetParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
+            this.SetParamArrayObj(map, prefix + "ReservedNetResources.", this.ReservedNetResources);
+            this.SetParamSimple(map, prefix + "IsPhysicalReplicationSupported", this.IsPhysicalReplicationSupported);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

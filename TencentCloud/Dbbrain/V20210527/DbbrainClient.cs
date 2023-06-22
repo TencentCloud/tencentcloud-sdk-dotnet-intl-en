@@ -1213,7 +1213,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// This API is used to obtain the slow query log details of a SQL template in a specified time period.
+        /// This API is used to obtain the slow log details of a SQL template in a specified time period.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
@@ -1233,7 +1233,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// This API is used to obtain the slow query log details of a SQL template in a specified time period.
+        /// This API is used to obtain the slow log details of a SQL template in a specified time period.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeSlowLogsResponse"/></returns>

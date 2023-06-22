@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the new snapshot.
+        /// ID of the created snapshot <br/>Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }

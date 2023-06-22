@@ -46,7 +46,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 
+        /// The liveness algorithm package generated during this SDK-based liveness detection.
         /// </summary>
         [JsonProperty("LiveData")]
         public FileInfo LiveData{ get; set; }
@@ -108,38 +108,19 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// The similarity score of face comparison.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Sim")]
         public float? Sim{ get; set; }
 
         /// <summary>
-        /// This field is disused.
+        /// This parameter is disused.
         /// </summary>
         [JsonProperty("IsNeedCharge")]
         public bool? IsNeedCharge{ get; set; }
 
         /// <summary>
-        /// The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
-        /// When the value of `IdCardType` is `HK`:
-        /// - CnName string: Chinese name
-        /// - EnName string: English name
-        /// - TelexCode string: The code corresponding to the Chinese name
-        /// - Sex string: Gender. Valid values: `M` (male) and `F` (female).
-        /// - Birthday string: Date of birth.
-        /// - Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-        /// - IdNum string: ID number.
-        /// - Symbol string: The ID symbol below the date of birth, such as "***AZ".
-        /// - FirstIssueDate string: The date of first issuance.
-        /// - CurrentIssueDate string: The date of latest issuance.
-        /// 
-        /// When the value of `IdCardType` is `ML`:
-        /// - Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-        /// - Birthday string
-        /// - ID string
-        /// - Name string
-        /// - Address string
-        /// - Type string: Identity document type.
+        /// The identity document photo info edited by the user. Currently, this parameter is not applied.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CardInfoInputJson")]

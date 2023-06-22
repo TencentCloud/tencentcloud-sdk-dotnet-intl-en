@@ -37,7 +37,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public ulong? International{ get; set; }
 
         /// <summary>
-        /// Template application status. Valid values: 0: approved; 1: under review; -1: application rejected or failed.
+        /// Template application status. Valid values: 0: approved and effective; 1: under review; 2: approved but to be effective; -1: application rejected or failed.
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }

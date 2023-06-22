@@ -67,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// Weight value.
+        /// This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

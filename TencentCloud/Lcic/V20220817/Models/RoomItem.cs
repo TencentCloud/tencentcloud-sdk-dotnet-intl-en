@@ -103,6 +103,20 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
 
+        /// <summary>
+        /// The maximum number of users allowed (including teachers) in the room. The default value is `0`, which indicates that no limit is set. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxMicNumber")]
+        public ulong? MaxMicNumber{ get; set; }
+
+        /// <summary>
+        /// Whether the students' consent is required to control their cameras/microphones.
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("EnableDirectControl")]
+        public ulong? EnableDirectControl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +134,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "MaxRTCMember", this.MaxRTCMember);
             this.SetParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
             this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+            this.SetParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
+            this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
         }
     }
 }
