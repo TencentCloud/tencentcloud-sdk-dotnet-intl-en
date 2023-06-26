@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.717</VersionPrefix>
+    <VersionPrefix>3.0.718</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,27 +48,54 @@
 
   <ItemGroup>
     <Compile Include="V20181119\OcrClient.cs" />
+    <Compile Include="V20181119\Models\AirTransport.cs" />
     <Compile Include="V20181119\Models\BankCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\BankCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\BusInvoice.cs" />
     <Compile Include="V20181119\Models\Coord.cs" />
     <Compile Include="V20181119\Models\DetectedWordCoordPoint.cs" />
     <Compile Include="V20181119\Models\DetectedWords.cs" />
+    <Compile Include="V20181119\Models\FlightItem.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralMachineItem.cs" />
     <Compile Include="V20181119\Models\GroupInfo.cs" />
     <Compile Include="V20181119\Models\HKIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\HKIDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\HmtResidentPermitOCRRequest.cs" />
+    <Compile Include="V20181119\Models\HmtResidentPermitOCRResponse.cs" />
+    <Compile Include="V20181119\Models\IDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\IDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\InvoiceItem.cs" />
     <Compile Include="V20181119\Models\ItemCoord.cs" />
     <Compile Include="V20181119\Models\ItemInfo.cs" />
     <Compile Include="V20181119\Models\Key.cs" />
+    <Compile Include="V20181119\Models\LicensePlateInfo.cs" />
+    <Compile Include="V20181119\Models\LicensePlateOCRRequest.cs" />
+    <Compile Include="V20181119\Models\LicensePlateOCRResponse.cs" />
     <Compile Include="V20181119\Models\LineInfo.cs" />
     <Compile Include="V20181119\Models\MLIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\MLIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRRequest.cs" />
     <Compile Include="V20181119\Models\MLIDPassportOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MachinePrintedInvoice.cs" />
+    <Compile Include="V20181119\Models\MainlandPermitOCRRequest.cs" />
+    <Compile Include="V20181119\Models\MainlandPermitOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MedicalInvoice.cs" />
+    <Compile Include="V20181119\Models\MotorVehicleSaleInvoice.cs" />
+    <Compile Include="V20181119\Models\NonTaxIncomeBill.cs" />
+    <Compile Include="V20181119\Models\NonTaxItem.cs" />
+    <Compile Include="V20181119\Models\OtherInvoice.cs" />
+    <Compile Include="V20181119\Models\OtherInvoiceItem.cs" />
+    <Compile Include="V20181119\Models\OtherInvoiceList.cs" />
+    <Compile Include="V20181119\Models\PermitOCRRequest.cs" />
+    <Compile Include="V20181119\Models\PermitOCRResponse.cs" />
     <Compile Include="V20181119\Models\Polygon.cs" />
+    <Compile Include="V20181119\Models\QuotaInvoice.cs" />
+    <Compile Include="V20181119\Models\RecognizeGeneralInvoiceRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeGeneralInvoiceResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeIndonesiaIDCardOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeIndonesiaIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeKoreanDrivingLicenseOCRRequest.cs" />
@@ -85,14 +112,38 @@
     <Compile Include="V20181119\Models\RecognizePhilippinesUMIDOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizePhilippinesVoteIDOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizePhilippinesVoteIDOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeTableAccurateOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeTableAccurateOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\Rect.cs" />
+    <Compile Include="V20181119\Models\SealInfo.cs" />
+    <Compile Include="V20181119\Models\SealOCRRequest.cs" />
+    <Compile Include="V20181119\Models\SealOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ShippingInvoice.cs" />
+    <Compile Include="V20181119\Models\SingleInvoiceItem.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRV2Request.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRV2Response.cs" />
+    <Compile Include="V20181119\Models\TableCellInfo.cs" />
+    <Compile Include="V20181119\Models\TableInfo.cs" />
     <Compile Include="V20181119\Models\TableOCRRequest.cs" />
     <Compile Include="V20181119\Models\TableOCRResponse.cs" />
+    <Compile Include="V20181119\Models\TaxiTicket.cs" />
     <Compile Include="V20181119\Models\TextDetection.cs" />
     <Compile Include="V20181119\Models\TextDetectionResult.cs" />
     <Compile Include="V20181119\Models\TextTable.cs" />
+    <Compile Include="V20181119\Models\TollInvoice.cs" />
+    <Compile Include="V20181119\Models\TrainTicket.cs" />
+    <Compile Include="V20181119\Models\UsedCarPurchaseInvoice.cs" />
     <Compile Include="V20181119\Models\Value.cs" />
+    <Compile Include="V20181119\Models\VatElectronicInfo.cs" />
+    <Compile Include="V20181119\Models\VatElectronicItemInfo.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceItemInfo.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceRoll.cs" />
+    <Compile Include="V20181119\Models\VatRollItem.cs" />
+    <Compile Include="V20181119\Models\VinOCRRequest.cs" />
+    <Compile Include="V20181119\Models\VinOCRResponse.cs" />
     <Compile Include="V20181119\Models\WordItem.cs" />
   </ItemGroup>
 </Project>

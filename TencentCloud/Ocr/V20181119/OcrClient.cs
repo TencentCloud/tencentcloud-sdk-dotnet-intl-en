@@ -245,6 +245,228 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// This API is used to recognize key fields on the front and back sides of a residence permit for Hong Kong, Macao, or Taiwan residents, including name, gender, date of birth, address, ID number, issuing authority, validity period, number of issues, and permit number. It can be used for residence permit OCR in scenarios such as bank account opening and user registration.
+        /// 
+        /// A maximum of 20 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="HmtResidentPermitOCRRequest"/></param>
+        /// <returns><see cref="HmtResidentPermitOCRResponse"/></returns>
+        public async Task<HmtResidentPermitOCRResponse> HmtResidentPermitOCR(HmtResidentPermitOCRRequest req)
+        {
+             JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "HmtResidentPermitOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HmtResidentPermitOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize key fields on the front and back sides of a residence permit for Hong Kong, Macao, or Taiwan residents, including name, gender, date of birth, address, ID number, issuing authority, validity period, number of issues, and permit number. It can be used for residence permit OCR in scenarios such as bank account opening and user registration.
+        /// 
+        /// A maximum of 20 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="HmtResidentPermitOCRRequest"/></param>
+        /// <returns><see cref="HmtResidentPermitOCRResponse"/></returns>
+        public HmtResidentPermitOCRResponse HmtResidentPermitOCRSync(HmtResidentPermitOCRRequest req)
+        {
+             JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "HmtResidentPermitOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HmtResidentPermitOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize all fields on the front and back sides of a second-generation resident identity card for the Chinese mainland: name, gender, ethnicity, date of birth, domicile, identification number, issuing authority, and validity period, with a recognition accuracy of over 99%.
+        /// 
+        /// In addition, this API supports multiple value-added capabilities to meet the needs of different scenarios. It can crop ID card photos and profile photos, and provide warnings for nine cases, as detailed below.
+        /// 
+        /// <table style="width:650px">
+        ///       <thead>
+        ///         <tr>
+        ///        <th width="150">Capability</th>
+        ///           <th width="500">Description</th>
+        ///         </tr>
+        ///       </thead>
+        ///       <tbody>
+        ///         <tr>
+        ///           <td rowspan="2">Cropping</td>
+        ///           <td>Crops the ID card photo (by removing extra edges outside the ID card and automatically correcting the shooting angle).</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td>Crops the profile photo (by automatically cutting out the face area in the ID card).</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td rowspan="9">Warning</td>
+        ///           <td>Warns about invalid ID card validity periods.</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td>Warns about  incomplete ID card borders.</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td>Warns about photocopied images.</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td>Warns about spoofed images.</td>
+        ///         </tr>
+        ///           <tr>
+        ///           <td>Warns about border and frame occlusions.</td>
+        ///         </tr>
+        ///          <tr>
+        ///           <td>Warns about temporary ID cards.</td>
+        ///         </tr>
+        ///           <tr>
+        ///           <td>Warns about photoshopped images.</td>
+        ///         </tr>
+        ///           <tr>
+        ///           <td>Warns about blurry ID card images (blurriness can be determined based on the image quality score).</td>
+        ///         </tr>
+        ///       </tbody>
+        ///     </table>
+        /// 
+        /// A maximum of 20 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="IDCardOCRRequest"/></param>
+        /// <returns><see cref="IDCardOCRResponse"/></returns>
+        public async Task<IDCardOCRResponse> IDCardOCR(IDCardOCRRequest req)
+        {
+             JsonResponseModel<IDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize all fields on the front and back sides of a second-generation resident identity card for the Chinese mainland: name, gender, ethnicity, date of birth, domicile, identification number, issuing authority, and validity period, with a recognition accuracy of over 99%.
+        /// 
+        /// In addition, this API supports multiple value-added capabilities to meet the needs of different scenarios. It can crop ID card photos and profile photos, and provide warnings for nine cases, as detailed below.
+        /// 
+        /// <table style="width:650px">
+        ///       <thead>
+        ///         <tr>
+        ///        <th width="150">Capability</th>
+        ///           <th width="500">Description</th>
+        ///         </tr>
+        ///       </thead>
+        ///       <tbody>
+        ///         <tr>
+        ///           <td rowspan="2">Cropping</td>
+        ///           <td>Crops the ID card photo (by removing extra edges outside the ID card and automatically correcting the shooting angle).</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td>Crops the profile photo (by automatically cutting out the face area in the ID card).</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td rowspan="9">Warning</td>
+        ///           <td>Warns about invalid ID card validity periods.</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td>Warns about  incomplete ID card borders.</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td>Warns about photocopied images.</td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td>Warns about spoofed images.</td>
+        ///         </tr>
+        ///           <tr>
+        ///           <td>Warns about border and frame occlusions.</td>
+        ///         </tr>
+        ///          <tr>
+        ///           <td>Warns about temporary ID cards.</td>
+        ///         </tr>
+        ///           <tr>
+        ///           <td>Warns about photoshopped images.</td>
+        ///         </tr>
+        ///           <tr>
+        ///           <td>Warns about blurry ID card images (blurriness can be determined based on the image quality score).</td>
+        ///         </tr>
+        ///       </tbody>
+        ///     </table>
+        /// 
+        /// A maximum of 20 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="IDCardOCRRequest"/></param>
+        /// <returns><see cref="IDCardOCRResponse"/></returns>
+        public IDCardOCRResponse IDCardOCRSync(IDCardOCRRequest req)
+        {
+             JsonResponseModel<IDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize a license plate attached to a motor vehicle in the Chinese mainland and return the regional code, license plate number, and license plate color.
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="LicensePlateOCRRequest"/></param>
+        /// <returns><see cref="LicensePlateOCRResponse"/></returns>
+        public async Task<LicensePlateOCRResponse> LicensePlateOCR(LicensePlateOCRRequest req)
+        {
+             JsonResponseModel<LicensePlateOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LicensePlateOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LicensePlateOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize a license plate attached to a motor vehicle in the Chinese mainland and return the regional code, license plate number, and license plate color.
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="LicensePlateOCRRequest"/></param>
+        /// <returns><see cref="LicensePlateOCRResponse"/></returns>
+        public LicensePlateOCRResponse LicensePlateOCRSync(LicensePlateOCRRequest req)
+        {
+             JsonResponseModel<LicensePlateOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LicensePlateOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LicensePlateOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to recognize a Malaysian identity card, including identity card number, name, gender, and address. It is also used to crop identity photos and give alarms for photographed or photocopied certificates.
         /// 
         /// This API is not fully available for the time being. For more information, contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
@@ -324,6 +546,386 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "MLIDPassportOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDPassportOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize all fields on the front of a mainland travel permit for Hong Kong, Macao, or Taiwan residents: name in Chinese, name in English, gender, date of birth, issuing authority, validity period, document number, place of issuance, number of issues, and document type.
+        /// 
+        /// A maximum of 20 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="MainlandPermitOCRRequest"/></param>
+        /// <returns><see cref="MainlandPermitOCRResponse"/></returns>
+        public async Task<MainlandPermitOCRResponse> MainlandPermitOCR(MainlandPermitOCRRequest req)
+        {
+             JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MainlandPermitOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MainlandPermitOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize all fields on the front of a mainland travel permit for Hong Kong, Macao, or Taiwan residents: name in Chinese, name in English, gender, date of birth, issuing authority, validity period, document number, place of issuance, number of issues, and document type.
+        /// 
+        /// A maximum of 20 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="MainlandPermitOCRRequest"/></param>
+        /// <returns><see cref="MainlandPermitOCRResponse"/></returns>
+        public MainlandPermitOCRResponse MainlandPermitOCRSync(MainlandPermitOCRRequest req)
+        {
+             JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MainlandPermitOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MainlandPermitOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize the fields on an exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan, including place of issuance, issuing authority, validity period, gender, date of birth, name in English, name in Chinese, and document number.
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="PermitOCRRequest"/></param>
+        /// <returns><see cref="PermitOCRResponse"/></returns>
+        public async Task<PermitOCRResponse> PermitOCR(PermitOCRRequest req)
+        {
+             JsonResponseModel<PermitOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PermitOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PermitOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize the fields on an exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan, including place of issuance, issuing authority, validity period, gender, date of birth, name in English, name in Chinese, and document number.
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="PermitOCRRequest"/></param>
+        /// <returns><see cref="PermitOCRResponse"/></returns>
+        public PermitOCRResponse PermitOCRSync(PermitOCRRequest req)
+        {
+             JsonResponseModel<PermitOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PermitOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PermitOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize various types of invoices or tickets in an image or PDF file. You can also specify a type. 14 types of standard expense reimbursement invoices are supported, including value-added tax (VAT) invoice (special, general, roll, blockchain, and toll), fully digitalized electronic invoice (special and general), non-tax revenue invoice (general receipt and general payment voucher), quota invoice, general machine-printed invoice, car sales invoice (motor vehicle sales invoice and used car invoice), train ticket, taxi receipt, itinerary/receipt of e-ticket for air transportation, bus ticket, ship ticket, toll receipt, and medical invoice (inpatient and outpatient). This API can also be used for intelligent recognition of other types of invoices. To try now, click [here](https://intl.cloud.tencent.com/product/ocr?from_cn_redirect=1).
+        /// 
+        /// A maximum of 5 requests can be initiated per second for this API.
+        /// 
+        /// 
+        /// The invoice/ticket subtype (SubType), subtype description (TypeDescription), and parent type (Type) can be returned, as described below:
+        /// <table style="width:715px">
+        ///       <thead>
+        ///         <tr>
+        ///           <th style="width:200px">SubType</th>
+        ///           <th style="width:200px">TypeDescription</th>
+        ///           <th >Type</th>
+        ///         </tr>
+        ///       </thead>
+        ///       <tbody>
+        ///         <tr>
+        ///           <td> VatSpecialInvoice</td>
+        ///           <td> Special VAT invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatCommonInvoice</td>
+        ///           <td> General VAT invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicCommonInvoice </td>
+        ///           <td> Electronic general VAT invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicSpecialInvoice </td>
+        ///           <td> Electronic special VAT invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicInvoiceBlockchain</td>
+        ///           <td> Blockchain electronic invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicInvoiceToll</td>
+        ///           <td> Electronic general VAT invoice (toll)</td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicSpecialInvoiceFull</td>
+        ///           <td> Electronic invoice (special)</td>
+        ///           <td> 16 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicInvoiceFull</td>
+        ///           <td> Electronic invoice (general) </td>
+        ///           <td> 16 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> MotorVehicleSaleInvoice </td>
+        ///           <td> Motor vehicle sales invoice </td>
+        ///           <td> 12 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> UsedCarPurchaseInvoice </td>
+        ///           <td> Used car invoice </td>
+        ///           <td> 12 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatInvoiceRoll </td>
+        ///           <td> General VAT invoice (roll) </td>
+        ///           <td> 11 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> TaxiTicket </td>
+        ///           <td> Taxi receipt </td>
+        ///           <td> 0 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> QuotaInvoice </td>
+        ///           <td> Quota invoice </td>
+        ///           <td> 1 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> TrainTicket </td>
+        ///           <td> Train ticket </td>
+        ///           <td> 2 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> AirTransport </td>
+        ///           <td> Itinerary/Receipt of e-ticket for air transportation </td>
+        ///           <td> 5 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> MachinePrintedInvoice </td>
+        ///           <td> General machine-printed invoice </td>
+        ///           <td> 8 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> BusInvoice </td>
+        ///           <td> Bus ticket </td>
+        ///           <td> 9 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> ShippingInvoice </td>
+        ///           <td> Ship ticket </td>
+        ///           <td> 10 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> NonTaxIncomeGeneralBill </td>
+        ///           <td> General receipt for non-tax revenue </td>
+        ///           <td> 15 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> NonTaxIncomeElectronicBill </td>
+        ///           <td> General payment voucher for non-tax revenue (electronic) </td>
+        ///           <td> 15 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> TollInvoice </td>
+        ///           <td> Toll receipt </td>
+        ///           <td> 13 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> OtherInvoice </td>
+        ///           <td> Other </td>
+        ///           <td> -1 </td>
+        ///         </tr>
+        ///       </tbody>
+        ///     </table>
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeGeneralInvoiceRequest"/></param>
+        /// <returns><see cref="RecognizeGeneralInvoiceResponse"/></returns>
+        public async Task<RecognizeGeneralInvoiceResponse> RecognizeGeneralInvoice(RecognizeGeneralInvoiceRequest req)
+        {
+             JsonResponseModel<RecognizeGeneralInvoiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeGeneralInvoice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeGeneralInvoiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize various types of invoices or tickets in an image or PDF file. You can also specify a type. 14 types of standard expense reimbursement invoices are supported, including value-added tax (VAT) invoice (special, general, roll, blockchain, and toll), fully digitalized electronic invoice (special and general), non-tax revenue invoice (general receipt and general payment voucher), quota invoice, general machine-printed invoice, car sales invoice (motor vehicle sales invoice and used car invoice), train ticket, taxi receipt, itinerary/receipt of e-ticket for air transportation, bus ticket, ship ticket, toll receipt, and medical invoice (inpatient and outpatient). This API can also be used for intelligent recognition of other types of invoices. To try now, click [here](https://intl.cloud.tencent.com/product/ocr?from_cn_redirect=1).
+        /// 
+        /// A maximum of 5 requests can be initiated per second for this API.
+        /// 
+        /// 
+        /// The invoice/ticket subtype (SubType), subtype description (TypeDescription), and parent type (Type) can be returned, as described below:
+        /// <table style="width:715px">
+        ///       <thead>
+        ///         <tr>
+        ///           <th style="width:200px">SubType</th>
+        ///           <th style="width:200px">TypeDescription</th>
+        ///           <th >Type</th>
+        ///         </tr>
+        ///       </thead>
+        ///       <tbody>
+        ///         <tr>
+        ///           <td> VatSpecialInvoice</td>
+        ///           <td> Special VAT invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatCommonInvoice</td>
+        ///           <td> General VAT invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicCommonInvoice </td>
+        ///           <td> Electronic general VAT invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicSpecialInvoice </td>
+        ///           <td> Electronic special VAT invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicInvoiceBlockchain</td>
+        ///           <td> Blockchain electronic invoice </td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicInvoiceToll</td>
+        ///           <td> Electronic general VAT invoice (toll)</td>
+        ///           <td> 3 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicSpecialInvoiceFull</td>
+        ///           <td> Electronic invoice (special)</td>
+        ///           <td> 16 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatElectronicInvoiceFull</td>
+        ///           <td> Electronic invoice (general) </td>
+        ///           <td> 16 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> MotorVehicleSaleInvoice </td>
+        ///           <td> Motor vehicle sales invoice </td>
+        ///           <td> 12 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> UsedCarPurchaseInvoice </td>
+        ///           <td> Used car invoice </td>
+        ///           <td> 12 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> VatInvoiceRoll </td>
+        ///           <td> General VAT invoice (roll) </td>
+        ///           <td> 11 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> TaxiTicket </td>
+        ///           <td> Taxi receipt </td>
+        ///           <td> 0 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> QuotaInvoice </td>
+        ///           <td> Quota invoice </td>
+        ///           <td> 1 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> TrainTicket </td>
+        ///           <td> Train ticket </td>
+        ///           <td> 2 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> AirTransport </td>
+        ///           <td> Itinerary/Receipt of e-ticket for air transportation </td>
+        ///           <td> 5 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> MachinePrintedInvoice </td>
+        ///           <td> General machine-printed invoice </td>
+        ///           <td> 8 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> BusInvoice </td>
+        ///           <td> Bus ticket </td>
+        ///           <td> 9 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> ShippingInvoice </td>
+        ///           <td> Ship ticket </td>
+        ///           <td> 10 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> NonTaxIncomeGeneralBill </td>
+        ///           <td> General receipt for non-tax revenue </td>
+        ///           <td> 15 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> NonTaxIncomeElectronicBill </td>
+        ///           <td> General payment voucher for non-tax revenue (electronic) </td>
+        ///           <td> 15 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> TollInvoice </td>
+        ///           <td> Toll receipt </td>
+        ///           <td> 13 </td>
+        ///         </tr>
+        ///         <tr>
+        ///           <td> OtherInvoice </td>
+        ///           <td> Other </td>
+        ///           <td> -1 </td>
+        ///         </tr>
+        ///       </tbody>
+        ///     </table>
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeGeneralInvoiceRequest"/></param>
+        /// <returns><see cref="RecognizeGeneralInvoiceResponse"/></returns>
+        public RecognizeGeneralInvoiceResponse RecognizeGeneralInvoiceSync(RecognizeGeneralInvoiceRequest req)
+        {
+             JsonResponseModel<RecognizeGeneralInvoiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeGeneralInvoice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeGeneralInvoiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -661,6 +1263,140 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// This API is used to recognize regular tables, borderless tables, or multi-tables in images or PDF files containing Chinese and English texts. It returns the text content of each cell, supports recognition of rotated table images, and can save the recognition results into an Excel document. It delivers higher recognition accuracy than that of table OCR v2 and applies to more scenarios. The recognition accuracy in difficult table scenarios, such as irregular tables and nested tables (borderless tables contained in bordered tables), is better than that of table OCR v2. To try it, click [here](https://intl.cloud.tencent.com/product/smart?from_cn_redirect=1-ocr).
+        /// 
+        /// A maximum of 2 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTableAccurateOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTableAccurateOCRResponse"/></returns>
+        public async Task<RecognizeTableAccurateOCRResponse> RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req)
+        {
+             JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeTableAccurateOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTableAccurateOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize regular tables, borderless tables, or multi-tables in images or PDF files containing Chinese and English texts. It returns the text content of each cell, supports recognition of rotated table images, and can save the recognition results into an Excel document. It delivers higher recognition accuracy than that of table OCR v2 and applies to more scenarios. The recognition accuracy in difficult table scenarios, such as irregular tables and nested tables (borderless tables contained in bordered tables), is better than that of table OCR v2. To try it, click [here](https://intl.cloud.tencent.com/product/smart?from_cn_redirect=1-ocr).
+        /// 
+        /// A maximum of 2 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTableAccurateOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTableAccurateOCRResponse"/></returns>
+        public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCRSync(RecognizeTableAccurateOCRRequest req)
+        {
+             JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeTableAccurateOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTableAccurateOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+        /// Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeThaiIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeThaiIDCardOCRResponse"/></returns>
+        public async Task<RecognizeThaiIDCardOCRResponse> RecognizeThaiIDCardOCR(RecognizeThaiIDCardOCRRequest req)
+        {
+             JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeThaiIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+        /// Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeThaiIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeThaiIDCardOCRResponse"/></returns>
+        public RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCRSync(RecognizeThaiIDCardOCRRequest req)
+        {
+             JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeThaiIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize various types of seals, including invoice seals and finance seals. It is suitable for scenarios such as official document and invoice/ticket OCR.
+        /// 
+        /// A maximum of 5 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="SealOCRRequest"/></param>
+        /// <returns><see cref="SealOCRResponse"/></returns>
+        public async Task<SealOCRResponse> SealOCR(SealOCRRequest req)
+        {
+             JsonResponseModel<SealOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SealOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SealOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize various types of seals, including invoice seals and finance seals. It is suitable for scenarios such as official document and invoice/ticket OCR.
+        /// 
+        /// A maximum of 5 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="SealOCRRequest"/></param>
+        /// <returns><see cref="SealOCRResponse"/></returns>
+        public SealOCRResponse SealOCRSync(SealOCRRequest req)
+        {
+             JsonResponseModel<SealOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SealOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SealOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
         /// 
         /// A maximum of 10 requests can be initiated per second for this API.
@@ -740,6 +1476,46 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "TableOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TableOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize the vehicle identification number (VIN) in an image.
+        /// </summary>
+        /// <param name="req"><see cref="VinOCRRequest"/></param>
+        /// <returns><see cref="VinOCRResponse"/></returns>
+        public async Task<VinOCRResponse> VinOCR(VinOCRRequest req)
+        {
+             JsonResponseModel<VinOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VinOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VinOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to recognize the vehicle identification number (VIN) in an image.
+        /// </summary>
+        /// <param name="req"><see cref="VinOCRRequest"/></param>
+        /// <returns><see cref="VinOCRResponse"/></returns>
+        public VinOCRResponse VinOCRSync(VinOCRRequest req)
+        {
+             JsonResponseModel<VinOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VinOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VinOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
