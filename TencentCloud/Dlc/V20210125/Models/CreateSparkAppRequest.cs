@@ -186,6 +186,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// Whether to inherit the task resource configuration from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+        /// </summary>
+        [JsonProperty("IsInherit")]
+        public ulong? IsInherit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
             this.SetParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
         }
     }
 }

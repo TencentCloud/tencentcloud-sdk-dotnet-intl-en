@@ -53,6 +53,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to cancel a Spark SQL batch task.
+        /// </summary>
+        /// <param name="req"><see cref="CancelSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="CancelSparkSessionBatchSQLResponse"/></returns>
+        public async Task<CancelSparkSessionBatchSQLResponse> CancelSparkSessionBatchSQL(CancelSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<CancelSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelSparkSessionBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to cancel a Spark SQL batch task.
+        /// </summary>
+        /// <param name="req"><see cref="CancelSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="CancelSparkSessionBatchSQLResponse"/></returns>
+        public CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQLSync(CancelSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<CancelSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelSparkSessionBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to cancel a task.
         /// </summary>
         /// <param name="req"><see cref="CancelTaskRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "CreateSparkAppTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkAppTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to submit a Spark SQL batch task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="CreateSparkSessionBatchSQLResponse"/></returns>
+        public async Task<CreateSparkSessionBatchSQLResponse> CreateSparkSessionBatchSQL(CreateSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<CreateSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkSessionBatchSQLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to submit a Spark SQL batch task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkSessionBatchSQLRequest"/></param>
+        /// <returns><see cref="CreateSparkSessionBatchSQLResponse"/></returns>
+        public CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQLSync(CreateSparkSessionBatchSQLRequest req)
+        {
+             JsonResponseModel<CreateSparkSessionBatchSQLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSparkSessionBatchSQL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkSessionBatchSQLResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -733,6 +813,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to obtain the logs of a Spark SQL batch task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>
+        /// <returns><see cref="DescribeSparkSessionBatchSqlLogResponse"/></returns>
+        public async Task<DescribeSparkSessionBatchSqlLogResponse> DescribeSparkSessionBatchSqlLog(DescribeSparkSessionBatchSqlLogRequest req)
+        {
+             JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSparkSessionBatchSqlLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain the logs of a Spark SQL batch task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>
+        /// <returns><see cref="DescribeSparkSessionBatchSqlLogResponse"/></returns>
+        public DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLogSync(DescribeSparkSessionBatchSqlLogRequest req)
+        {
+             JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSparkSessionBatchSqlLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the result of a task.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
@@ -924,6 +1044,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "ModifySparkApp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySparkAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify Spark job parameters in batches.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySparkAppBatchRequest"/></param>
+        /// <returns><see cref="ModifySparkAppBatchResponse"/></returns>
+        public async Task<ModifySparkAppBatchResponse> ModifySparkAppBatch(ModifySparkAppBatchRequest req)
+        {
+             JsonResponseModel<ModifySparkAppBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySparkAppBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySparkAppBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify Spark job parameters in batches.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySparkAppBatchRequest"/></param>
+        /// <returns><see cref="ModifySparkAppBatchResponse"/></returns>
+        public ModifySparkAppBatchResponse ModifySparkAppBatchSync(ModifySparkAppBatchRequest req)
+        {
+             JsonResponseModel<ModifySparkAppBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySparkAppBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySparkAppBatchResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -24,12 +24,28 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class DataGovernPolicy : AbstractModel
     {
         
+        /// <summary>
+        /// Governance rule type. Valid values: `Customize` (custom) and `Intelligence` (intelligent).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// The governance engine.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("GovernEngine")]
+        public string GovernEngine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "GovernEngine", this.GovernEngine);
         }
     }
 }

@@ -73,6 +73,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("SlaveConst")]
         public long? SlaveConst{ get; set; }
 
+        /// <summary>
+        /// Maximum number of connections. `0` indicates no limit.	
+        /// </summary>
+        [JsonProperty("MaxUserConnections")]
+        public long? MaxUserConnections{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
             this.SetParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
+            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }
     }
 }

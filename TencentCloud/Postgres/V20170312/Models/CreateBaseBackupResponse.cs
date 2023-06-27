@@ -25,6 +25,12 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
+        /// Full backup set ID
+        /// </summary>
+        [JsonProperty("BaseBackupId")]
+        public string BaseBackupId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BaseBackupId", this.BaseBackupId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

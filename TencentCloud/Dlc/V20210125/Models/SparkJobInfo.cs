@@ -260,16 +260,25 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 
+        /// `spark_emr_livy` indicates to create an EMR cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngineClusterType")]
         public string DataEngineClusterType{ get; set; }
 
         /// <summary>
-        /// 
+        /// `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngineImageVersion")]
         public string DataEngineImageVersion{ get; set; }
+
+        /// <summary>
+        /// Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsInherit")]
+        public ulong? IsInherit{ get; set; }
 
 
         /// <summary>
@@ -316,6 +325,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
             this.SetParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
+            this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
         }
     }
 }

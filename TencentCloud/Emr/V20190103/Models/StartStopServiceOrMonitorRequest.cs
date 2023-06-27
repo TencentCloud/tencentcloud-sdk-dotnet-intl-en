@@ -32,10 +32,11 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// The operation type. Valid values:
-        /// <li>`StartService`: Start services.</li>
-        /// <li>`StopService`: Stop services.</li>
-        /// <li>`StartMonitor`: Start the monitor.</li>
-        /// <li>`StopMonitor`: Stop the monitor.</li>
+        /// <li>StartService: Start service</li>
+        /// <li>StopService: Stop service</li>
+        /// <li>StartMonitor: Start maintenance</li>
+        /// <li>StopMonitor: Stop maintenance</li>
+        /// <li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
         /// </summary>
         [JsonProperty("OpType")]
         public string OpType{ get; set; }
@@ -46,6 +47,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("OpScope")]
         public OpScope OpScope{ get; set; }
 
+        /// <summary>
+        /// The operation policy.
+        /// </summary>
+        [JsonProperty("StrategyConfig")]
+        public StrategyConfig StrategyConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +62,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "OpType", this.OpType);
             this.SetParamObj(map, prefix + "OpScope.", this.OpScope);
+            this.SetParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
         }
     }
 }

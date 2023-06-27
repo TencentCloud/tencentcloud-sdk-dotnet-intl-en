@@ -233,6 +233,63 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
+        /// <summary>
+        /// The image version of the cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ImageVersion")]
+        public string ImageVersion{ get; set; }
+
+        /// <summary>
+        /// The driver size.
+        /// Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+        /// Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DriverSize")]
+        public string DriverSize{ get; set; }
+
+        /// <summary>
+        /// The executor size.
+        /// Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
+        /// Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExecutorSize")]
+        public string ExecutorSize{ get; set; }
+
+        /// <summary>
+        /// The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExecutorNums")]
+        public ulong? ExecutorNums{ get; set; }
+
+        /// <summary>
+        /// The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExecutorMaxNumbers")]
+        public ulong? ExecutorMaxNumbers{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CommonMetrics")]
+        public CommonMetrics CommonMetrics{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SparkMonitorMetrics")]
+        public SparkMonitorMetrics SparkMonitorMetrics{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PrestoMonitorMetrics")]
+        public PrestoMonitorMetrics PrestoMonitorMetrics{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -271,6 +328,14 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UiUrl", this.UiUrl);
             this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
             this.SetParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
+            this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
+            this.SetParamSimple(map, prefix + "DriverSize", this.DriverSize);
+            this.SetParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
+            this.SetParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
+            this.SetParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+            this.SetParamObj(map, prefix + "CommonMetrics.", this.CommonMetrics);
+            this.SetParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
+            this.SetParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
         }
     }
 }

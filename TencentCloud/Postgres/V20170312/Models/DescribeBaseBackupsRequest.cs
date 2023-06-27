@@ -37,10 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string MaxFinishTime{ get; set; }
 
         /// <summary>
-        /// Filter instances using one or more criteria. Valid filter names:
-        /// db-instance-id: Filter by instance ID (in string format).
-        /// db-instance-name: Filter by instance name (in string format).
-        /// db-instance-ip: Filter by instance VPC IP (in string format).
+        /// Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -85,6 +85,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("GovernPolicy")]
         public DataGovernPolicy GovernPolicy{ get; set; }
 
+        /// <summary>
+        /// Whether database data governance is disabled. Valid values: `true` (disabled) and `false` (not disabled).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DbGovernPolicyIsDisable")]
+        public string DbGovernPolicyIsDisable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
             this.SetParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
             this.SetParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
+            this.SetParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
         }
     }
 }
