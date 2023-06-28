@@ -37,7 +37,7 @@ namespace TencentCloud.Car.V20220110.Models
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// The client-side session data, which is obtained from the SDK.
+        /// The client-side session data, which is obtained from the SDK. If `RunMode` is `RunWithoutClient`, this parameter can be null.
         /// </summary>
         [JsonProperty("ClientSession")]
         public string ClientSession{ get; set; }
@@ -50,6 +50,29 @@ namespace TencentCloud.Car.V20220110.Models
         [JsonProperty("RunMode")]
         public string RunMode{ get; set; }
 
+        /// <summary>
+        /// Application startup parameter.
+        /// If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+        /// If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+        /// </summary>
+        [JsonProperty("ApplicationParameters")]
+        public string ApplicationParameters{ get; set; }
+
+        /// <summary>
+        /// The user ID of the host in **multi-person interaction** scenarios, which is required.
+        /// If the current user is the host, `HostUserId` must be the same as their `UserId`; otherwise, `HostUserId` should be the host's `UserId`.
+        /// </summary>
+        [JsonProperty("HostUserId")]
+        public string HostUserId{ get; set; }
+
+        /// <summary>
+        /// The role in **multi-person interaction** scenarios. Valid values:
+        /// `Player`: A user who can operate an application by using a keyboard and mouse
+        /// `Viewer`: A user who can only watch the video in the room but cannot operate the application
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +83,9 @@ namespace TencentCloud.Car.V20220110.Models
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "ClientSession", this.ClientSession);
             this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
+            this.SetParamSimple(map, prefix + "ApplicationParameters", this.ApplicationParameters);
+            this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

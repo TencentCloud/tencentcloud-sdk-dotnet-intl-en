@@ -25,22 +25,16 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Transaction type
+        /// Transaction type code
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// Transaction type name
+        /// Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }
-
-        /// <summary>
-        /// Actual cost
-        /// </summary>
-        [JsonProperty("RealTotalCost")]
-        public string RealTotalCost{ get; set; }
 
         /// <summary>
         /// Cost ratio, to two decimal points
@@ -49,22 +43,34 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCostRatio{ get; set; }
 
         /// <summary>
-        /// Cash amount
+        /// Total amount after discount
+        /// </summary>
+        [JsonProperty("RealTotalCost")]
+        public string RealTotalCost{ get; set; }
+
+        /// <summary>
+        /// Cash credit:  The amount paid from the user’s cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Trial credit amount
+        /// Free credit:  The amount paid by the user’s free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Voucher amount
+        /// Voucher payment:  The voucher deduction amount
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// Billing month, e.g. `2019-08`
@@ -86,11 +92,12 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "ActionTypeName", this.ActionTypeName);
-            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
             this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
         }

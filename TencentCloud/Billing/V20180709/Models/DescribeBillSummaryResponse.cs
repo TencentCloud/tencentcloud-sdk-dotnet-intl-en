@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateBusinessDBInstancesResponse : AbstractModel
+    public class DescribeBillSummaryResponse : AbstractModel
     {
         
         /// <summary>
-        /// Order name
+        /// Indicates whether the data is ready. `0`: Not ready. `1`: Ready.  If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
         /// </summary>
-        [JsonProperty("DealName")]
-        public string DealName{ get; set; }
+        [JsonProperty("Ready")]
+        public ulong? Ready{ get; set; }
 
         /// <summary>
-        /// Process ID Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detailed summary of costs by multiple dimensions
         /// </summary>
-        [JsonProperty("FlowId")]
-        public long? FlowId{ get; set; }
-
-        /// <summary>
-        /// IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("InstanceIdSet")]
-        public string[] InstanceIdSet{ get; set; }
+        [JsonProperty("SummaryDetail")]
+        public SummaryDetail[] SummaryDetail{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -54,9 +48,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+            this.SetParamSimple(map, prefix + "Ready", this.Ready);
+            this.SetParamArrayObj(map, prefix + "SummaryDetail.", this.SummaryDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

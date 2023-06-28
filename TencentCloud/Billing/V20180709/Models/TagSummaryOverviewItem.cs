@@ -32,18 +32,41 @@ namespace TencentCloud.Billing.V20180709.Models
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// Actual cost
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("RealTotalCost")]
-        public string RealTotalCost{ get; set; }
-
-        /// <summary>
         /// Cost percentage rounded to two decimal places
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RealTotalCostRatio")]
         public string RealTotalCostRatio{ get; set; }
+
+        /// <summary>
+        /// Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RealTotalCost")]
+        public string RealTotalCost{ get; set; }
+
+        /// <summary>
+        /// Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CashPayAmount")]
+        public string CashPayAmount{ get; set; }
+
+        /// <summary>
+        /// Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IncentivePayAmount")]
+        public string IncentivePayAmount{ get; set; }
+
+        /// <summary>
+        /// Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VoucherPayAmount")]
+        public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -52,34 +75,6 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
-        /// <summary>
-        /// Payment by cash credits
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("CashPayAmount")]
-        public string CashPayAmount{ get; set; }
-
-        /// <summary>
-        /// Payment by free credits
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("IncentivePayAmount")]
-        public string IncentivePayAmount{ get; set; }
-
-        /// <summary>
-        /// Payment by vouchers
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("VoucherPayAmount")]
-        public string VoucherPayAmount{ get; set; }
-
-        /// <summary>
-        /// Payment by commission credits
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("TransferPayAmount")]
-        public string TransferPayAmount{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,13 +82,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
-            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
-            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
         }
     }
 }

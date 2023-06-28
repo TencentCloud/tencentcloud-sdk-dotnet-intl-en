@@ -25,31 +25,31 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
+        /// Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1
+        /// Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
-        /// Billing mode
+        /// Billing mode,  which can be monthly subscription or pay-as-you-go.
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
 
         /// <summary>
-        /// Project: project of a resource
+        /// Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// Region: region of a resource, e.g. South China (Guangzhou)
+        /// Region:  The region to which a resource belongs, such as South China (Guangzhou).
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
@@ -61,49 +61,49 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// Transaction type
+        /// Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }
 
         /// <summary>
-        /// Order ID
+        /// Order ID:  The order number for a monthly subscription purchase
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// Transaction ID
+        /// Transaction ID:  The bill number for a deducted payment
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
 
         /// <summary>
-        /// Payment time
+        /// Transaction time:  The time at which a payment was deducted
         /// </summary>
         [JsonProperty("PayTime")]
         public string PayTime{ get; set; }
 
         /// <summary>
-        /// Service start time
+        /// Usage start time:  The time at which product or service usage starts
         /// </summary>
         [JsonProperty("FeeBeginTime")]
         public string FeeBeginTime{ get; set; }
 
         /// <summary>
-        /// Service end time
+        /// Usage end time:  The time at which product or service usage ends
         /// </summary>
         [JsonProperty("FeeEndTime")]
         public string FeeEndTime{ get; set; }
@@ -115,59 +115,55 @@ namespace TencentCloud.Billing.V20180709.Models
         public BillDetailComponent[] ComponentSet{ get; set; }
 
         /// <summary>
-        /// Payer's UIN
+        /// Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// User's UIN
+        /// Owner account ID:  The account ID of the actual resource user
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// Operator's UIN
+        /// Operator account ID:  The account or role ID of the operator who purchases or activates a resource
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// Tag information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Product code
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Product code. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// Subproduct code
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Subproduct code. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// Transaction type
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Transaction type code. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region ID. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// Project ID: ID of the project to which the resource belongs
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

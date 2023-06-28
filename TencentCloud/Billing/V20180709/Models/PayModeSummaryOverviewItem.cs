@@ -25,22 +25,16 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Billing mode
+        /// Billing mode code
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Billing mode name
+        /// Billing mode,  which can be monthly subscription or pay-as-you-go.
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
-
-        /// <summary>
-        /// Actual cost
-        /// </summary>
-        [JsonProperty("RealTotalCost")]
-        public string RealTotalCost{ get; set; }
 
         /// <summary>
         /// Cost ratio, to two decimal points
@@ -49,28 +43,34 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCostRatio{ get; set; }
 
         /// <summary>
-        /// Detailed summary of purchases by transaction type
+        /// Total amount after discount
         /// </summary>
-        [JsonProperty("Detail")]
-        public ActionSummaryOverviewItem[] Detail{ get; set; }
+        [JsonProperty("RealTotalCost")]
+        public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Cash amount
+        /// Cash credit:  The amount paid from the user’s cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Trial credit amount
+        /// Free credit:  The amount paid by the user’s free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Voucher amount
+        /// Voucher payment:  The voucher deduction amount
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// Commission credit:  The amount paid by the user’s commission credit.
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -79,10 +79,10 @@ namespace TencentCloud.Billing.V20180709.Models
         public string TotalCost{ get; set; }
 
         /// <summary>
-        /// Payment by commission credits
+        /// Detailed summary of costs by transaction type
         /// </summary>
-        [JsonProperty("TransferPayAmount")]
-        public string TransferPayAmount{ get; set; }
+        [JsonProperty("Detail")]
+        public ActionSummaryOverviewItem[] Detail{ get; set; }
 
 
         /// <summary>
@@ -92,14 +92,14 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "PayModeName", this.PayModeName);
-            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
-            this.SetParamArrayObj(map, prefix + "Detail.", this.Detail);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
-            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamArrayObj(map, prefix + "Detail.", this.Detail);
         }
     }
 }

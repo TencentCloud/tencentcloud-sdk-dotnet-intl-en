@@ -21,27 +21,26 @@ namespace TencentCloud.Billing.V20180709.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBillSummaryByRegionResponse : AbstractModel
+    public class DescribeBillSummaryRequest : AbstractModel
     {
         
         /// <summary>
-        /// Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates the current UIN is initializing for the first billing. Wait for 5-10 minutes and try again.
+        /// Bill month in the format of "2023-04"
         /// </summary>
-        [JsonProperty("Ready")]
-        public ulong? Ready{ get; set; }
+        [JsonProperty("Month")]
+        public string Month{ get; set; }
 
         /// <summary>
-        /// Detailed cost distribution for all regions
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
         /// </summary>
-        [JsonProperty("SummaryOverview")]
-        public RegionSummaryOverviewItem[] SummaryOverview{ get; set; }
+        [JsonProperty("GroupType")]
+        public string GroupType{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Tag key, which is used when `GroupType` is `tag`.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TagKey")]
+        public string[] TagKey{ get; set; }
 
 
         /// <summary>
@@ -49,9 +48,9 @@ namespace TencentCloud.Billing.V20180709.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Ready", this.Ready);
-            this.SetParamArrayObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Month", this.Month);
+            this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamArraySimple(map, prefix + "TagKey.", this.TagKey);
         }
     }
 }

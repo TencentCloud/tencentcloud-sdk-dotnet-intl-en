@@ -21,26 +21,26 @@ namespace TencentCloud.Billing.V20180709.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProjectSummaryOverviewItem : AbstractModel
+    public class SummaryDetail : AbstractModel
     {
         
         /// <summary>
-        /// Project ID
+        /// Bill dimension code. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
+        [JsonProperty("GroupKey")]
+        public string GroupKey{ get; set; }
 
         /// <summary>
-        /// Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+        /// Bill dimension value. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ProjectName")]
-        public string ProjectName{ get; set; }
+        [JsonProperty("GroupValue")]
+        public string GroupValue{ get; set; }
 
         /// <summary>
-        /// Cost ratio, to two decimal points
+        /// Original cost in USD. This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter.
         /// </summary>
-        [JsonProperty("RealTotalCostRatio")]
-        public string RealTotalCostRatio{ get; set; }
+        [JsonProperty("TotalCost")]
+        public string TotalCost{ get; set; }
 
         /// <summary>
         /// Total amount after discount
@@ -67,22 +67,16 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit:  The amount paid by the user’s commission credit.
+        /// Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
-        /// Billing month, e.g. `2019-08`
+        /// Detailed summary of products. Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("BillMonth")]
-        public string BillMonth{ get; set; }
-
-        /// <summary>
-        /// The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-        /// </summary>
-        [JsonProperty("TotalCost")]
-        public string TotalCost{ get; set; }
+        [JsonProperty("Business")]
+        public BusinessSummaryInfo[] Business{ get; set; }
 
 
         /// <summary>
@@ -90,16 +84,15 @@ namespace TencentCloud.Billing.V20180709.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
-            this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+            this.SetParamSimple(map, prefix + "GroupKey", this.GroupKey);
+            this.SetParamSimple(map, prefix + "GroupValue", this.GroupValue);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
-            this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
-            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamArrayObj(map, prefix + "Business.", this.Business);
         }
     }
 }

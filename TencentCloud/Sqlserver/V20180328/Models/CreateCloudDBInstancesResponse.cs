@@ -21,7 +21,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateBusinessDBInstancesResponse : AbstractModel
+    public class CreateCloudDBInstancesResponse : AbstractModel
     {
         
         /// <summary>
@@ -29,18 +29,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
-
-        /// <summary>
-        /// Process ID Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("FlowId")]
-        public long? FlowId{ get; set; }
-
-        /// <summary>
-        /// IDs of instances Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("InstanceIdSet")]
-        public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -55,8 +43,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

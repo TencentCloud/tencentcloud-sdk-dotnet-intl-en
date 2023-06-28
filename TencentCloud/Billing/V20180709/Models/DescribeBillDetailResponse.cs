@@ -31,11 +31,17 @@ namespace TencentCloud.Billing.V20180709.Models
         public BillDetail[] DetailSet{ get; set; }
 
         /// <summary>
-        /// Total number of records
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
+
+        /// <summary>
+        /// Context information returned by this request, and the value can be passed in as the value of parameters in the next request to accelerate queries. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Context")]
+        public string Context{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,6 +57,7 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamArrayObj(map, prefix + "DetailSet.", this.DetailSet);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

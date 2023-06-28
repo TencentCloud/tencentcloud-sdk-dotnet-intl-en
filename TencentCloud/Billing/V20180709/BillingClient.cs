@@ -93,7 +93,8 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to query bill details.
+        /// This API is used to get bill details. 
+        /// Notes: 1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails. 2. If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), bill data query via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
         /// <returns><see cref="DescribeBillDetailResponse"/></returns>
@@ -113,7 +114,8 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to query bill details.
+        /// This API is used to get bill details. 
+        /// Notes: 1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails. 2. If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), bill data query via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
         /// <returns><see cref="DescribeBillDetailResponse"/></returns>
@@ -173,7 +175,47 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// Gets the bill summarized according to billing mode
+        /// This API is used to get bill details by product, project, region, billing mode, and tag through passing in parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryResponse"/></returns>
+        public async Task<DescribeBillSummaryResponse> DescribeBillSummary(DescribeBillSummaryRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get bill details by product, project, region, billing mode, and tag through passing in parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryResponse"/></returns>
+        public DescribeBillSummaryResponse DescribeBillSummarySync(DescribeBillSummaryRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the bill summarized by billing mode.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>
@@ -193,7 +235,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// Gets the bill summarized according to billing mode
+        /// This API is used to get the bill summarized by billing mode.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>

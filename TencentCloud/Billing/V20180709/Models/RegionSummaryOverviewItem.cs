@@ -32,16 +32,10 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// Region name
+        /// Region:  The region to which a resource belongs, such as South China (Guangzhou).
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
-
-        /// <summary>
-        /// Actual cost
-        /// </summary>
-        [JsonProperty("RealTotalCost")]
-        public string RealTotalCost{ get; set; }
 
         /// <summary>
         /// Cost ratio, to two decimal points
@@ -50,22 +44,34 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCostRatio{ get; set; }
 
         /// <summary>
-        /// Cash amount
+        /// Total amount after discount
+        /// </summary>
+        [JsonProperty("RealTotalCost")]
+        public string RealTotalCost{ get; set; }
+
+        /// <summary>
+        /// Cash credit:  The amount paid from the user’s cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Trial credit amount
+        /// Free credit:  The amount paid by the user’s free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Voucher amount
+        /// Voucher payment:  The voucher deduction amount
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// Commission credit:  The amount paid by the user’s commission credit.
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
 
         /// <summary>
         /// Billing month, e.g. `2019-08`
@@ -79,12 +85,6 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
-        /// <summary>
-        /// Payment by commission credits
-        /// </summary>
-        [JsonProperty("TransferPayAmount")]
-        public string TransferPayAmount{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,14 +93,14 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
-            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+            this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
             this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
-            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         }
     }
 }
