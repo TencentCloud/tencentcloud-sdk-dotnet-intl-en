@@ -31,13 +31,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+        /// Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Original cost in USD.  This parameter has become valid since Bill 3.0 took effect in May 2021, and before that `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
+        /// Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalCost")]
@@ -50,25 +50,25 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Cash credit:  The amount paid from the user’s cash account
+        /// Cash credit: The amount paid from the user’s cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit:  The amount paid by the user’s free credit
+        /// Free credit: The amount paid with the user’s free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Voucher payment:  The voucher deduction amount
+        /// Voucher payment: The voucher deduction amount
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

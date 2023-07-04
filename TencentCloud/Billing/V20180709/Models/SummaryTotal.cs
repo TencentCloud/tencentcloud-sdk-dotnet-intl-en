@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }

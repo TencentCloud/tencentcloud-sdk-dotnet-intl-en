@@ -25,109 +25,109 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Product name:  The name of a Tencent Cloud product purchased by the user, such as  CVM.
+        /// Product name: The name of a Tencent Cloud product purchased by the user, such as CVM.
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Subproduct name:  The subcategory of a Tencent Cloud product purchased by the user, such as  CVM – Standard S1.
+        /// Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
-        /// Billing mode,  which can be monthly subscription or pay-as-you-go.
+        /// Billing mode, which can be monthly subscription or pay-as-you-go.
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
 
         /// <summary>
-        /// Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+        /// Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// Region:  The region to which a resource belongs, such as South China (Guangzhou).
+        /// Region: The region to which a resource belongs, such as South China (Guangzhou).
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// Availability zone:  The availability zone to which a resource belongs, such as Guangzhou Zone 3.
+        /// Availability zone: The availability zone to which a resource belongs, such as Guangzhou Zone 3.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Instance ID:  The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
+        /// Instance ID: The object ID of a billed resource, such as a CVM instance ID. This object ID may vary due to various forms and contents of resources in different products.	
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Instance name:  The resource name set by the user in the console. If it is not set, it will be empty by default.
+        /// Instance name: The resource name set by the user in the console. If it is not set, it will be empty by default.
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// Transaction type,  which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+        /// Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }
 
         /// <summary>
-        /// Order ID:  The order number for a monthly subscription purchase
+        /// Order ID: The order number for a monthly subscription purchase
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// Transaction time:  The time at which a payment was deducted
+        /// Transaction time: The time at which a payment was deducted
         /// </summary>
         [JsonProperty("PayTime")]
         public string PayTime{ get; set; }
 
         /// <summary>
-        /// Usage start time:  The time at which product or service usage starts
+        /// Usage start time: The time at which product or service usage starts
         /// </summary>
         [JsonProperty("FeeBeginTime")]
         public string FeeBeginTime{ get; set; }
 
         /// <summary>
-        /// Usage end time:  The time at which product or service usage ends
+        /// Usage end time: The time at which product or service usage ends
         /// </summary>
         [JsonProperty("FeeEndTime")]
         public string FeeEndTime{ get; set; }
 
         /// <summary>
-        /// Configuration description:  The billable item names and usage of a resource, which are displayed on the resource bill only.
+        /// Configuration description: The billable item names and usage of a resource, which are displayed on the resource bill only.
         /// </summary>
         [JsonProperty("ConfigDesc")]
         public string ConfigDesc{ get; set; }
 
         /// <summary>
-        /// Extended field 1:  Extended attribute information of a product, which is displayed on the resource bill only.
+        /// Extended field 1: Extended attribute information of a product, which is displayed on the resource bill only.
         /// </summary>
         [JsonProperty("ExtendField1")]
         public string ExtendField1{ get; set; }
 
         /// <summary>
-        /// Extended field 2:  Extended attribute information of a product, which is displayed on the resource bill only.
+        /// Extended field 2: Extended attribute information of a product, which is displayed on the resource bill only.
         /// </summary>
         [JsonProperty("ExtendField2")]
         public string ExtendField2{ get; set; }
 
         /// <summary>
-        /// Original cost:  The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+        /// Original cost: The original cost of a resource, which is "List price x Usage x Usage duration". If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
         /// <summary>
-        /// Discount multiplier:  The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or is in a refund scenario, this parameter will not be displayed by default.
+        /// Discount multiplier: The discount multiplier applied to the cost of the resource. If a customer has applied for a fixed preferential price or contract price or applied for a refund, this parameter will not be displayed by default.
         /// </summary>
         [JsonProperty("Discount")]
         public string Discount{ get; set; }
@@ -145,67 +145,67 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Voucher payment:  The voucher deduction amount
+        /// Voucher payment: The voucher deduction amount
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Cash credit:  The amount paid from the user’s cash account
+        /// Cash credit: The amount paid from the user’s cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit:  The amount paid by the user’s free credit
+        /// Free credit: The amount paid with the user’s free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
-        /// Extended field 3:  Extended attribute information of a product, which is displayed on the resource bill only.
+        /// Extended field 3: Extended attribute information of a product, which is displayed on the resource bill only.
         /// </summary>
         [JsonProperty("ExtendField3")]
         public string ExtendField3{ get; set; }
 
         /// <summary>
-        /// Extended field 4:  Extended attribute information of a product, which is displayed on the resource bill only.
+        /// Extended field 4: Extended attribute information of a product, which is displayed on the resource bill only.
         /// </summary>
         [JsonProperty("ExtendField4")]
         public string ExtendField4{ get; set; }
 
         /// <summary>
-        /// Extended field 5:  Extended attribute information of a product, which is displayed on the resource bill only.
+        /// Extended field 5: Extended attribute information of a product, which is displayed on the resource bill only.
         /// </summary>
         [JsonProperty("ExtendField5")]
         public string ExtendField5{ get; set; }
 
         /// <summary>
-        /// Tag information. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Tag information. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Payer account ID:  The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
+        /// Payer account ID: The account ID of the payer, which is the unique identifier of a Tencent Cloud user.
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// Owner account ID:  The account ID of the actual resource user
+        /// Owner account ID: The account ID of the actual resource user
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// Operator account ID:  The account or role ID of the operator who purchases or activates a resource.
+        /// Operator account ID: The account or role ID of the operator who purchases or activates a resource.
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
@@ -229,13 +229,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Instance type:  The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
+        /// Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// RI deduction (cost):  The amount deducted from the original cost by RI	
+        /// RI deduction (cost): The amount deducted from the original cost by RI	
         /// </summary>
         [JsonProperty("OriginalCostWithRI")]
         public string OriginalCostWithRI{ get; set; }
@@ -248,7 +248,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string SPDeduction{ get; set; }
 
         /// <summary>
-        /// SP deduction (cost):  SP deduction (cost) = Cost deduction by SP / SP deduction rate	
+        /// SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate	
         /// </summary>
         [JsonProperty("OriginalCostWithSP")]
         public string OriginalCostWithSP{ get; set; }

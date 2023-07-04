@@ -32,7 +32,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// Region:  The region to which a resource belongs, such as South China (Guangzhou).
+        /// Region: The region to which a resource belongs, such as South China (Guangzhou).
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
@@ -50,25 +50,25 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Cash credit:  The amount paid from the user’s cash account
+        /// Cash credit: The amount paid from the user’s cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit:  The amount paid by the user’s free credit
+        /// Free credit: The amount paid with the user’s free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Voucher payment:  The voucher deduction amount
+        /// Voucher payment: The voucher deduction amount
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit:  The amount paid by the user’s commission credit.
+        /// Commission credit: The amount paid with the user’s commission credit.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

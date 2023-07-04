@@ -37,7 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Bill month in the format of "yyyy-mm".  This value must be no earlier than March 2019, when Bill 2.0 was launched.
+        /// Bill month in the format of "yyyy-mm". This value must be no earlier than March 2019, when Bill 2.0 was launched.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }

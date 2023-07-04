@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Project name:  The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
+        /// Project name: The project to which a resource belongs, which is user-designated. If a resource has not been assigned to a project, it will automatically belong to the default project.
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
@@ -49,25 +49,25 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Cash credit:  The amount paid from the user’s cash account
+        /// Cash credit: The amount paid from the user’s cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit:  The amount paid by the user’s free credit
+        /// Free credit: The amount paid with the user’s free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Voucher payment:  The voucher deduction amount
+        /// Voucher payment: The voucher deduction amount
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit:  The amount paid by the user’s commission credit.
+        /// Commission credit: The amount paid with the user’s commission credit.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

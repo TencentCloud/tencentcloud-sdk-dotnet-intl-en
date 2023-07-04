@@ -39,31 +39,31 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCostRatio{ get; set; }
 
         /// <summary>
-        /// Total amount after discount. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Cash credit:  The amount paid from the user’s cash account. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit:  The amount paid by the user’s free credit. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Voucher payment:  The voucher deduction amount. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit:  The amount paid by the user’s commission credit. Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

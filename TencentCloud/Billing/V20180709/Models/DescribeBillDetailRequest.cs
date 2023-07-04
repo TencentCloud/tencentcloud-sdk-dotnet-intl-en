@@ -137,7 +137,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// Context information returned by the last request. You can set `Month` to `2023-05` for query by page to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
+        /// Context information returned by the last request. You can set `Month` to `2023-05` or later to accelerate queries. We recommend users whose data volume is over 100 thousand entries use the paginated query feature, which can help greatly speed up your queries.
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

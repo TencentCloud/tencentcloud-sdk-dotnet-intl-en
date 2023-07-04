@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Bill month in the format of "2023-04"
+        /// Bill month in the format of "yyyy-mm"
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// Bill dimension. Valid values:  `business`, `project`, `region`, `payMode`, and `tag`
+        /// Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
