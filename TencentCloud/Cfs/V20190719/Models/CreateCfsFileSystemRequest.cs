@@ -31,13 +31,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+        /// Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
         /// </summary>
         [JsonProperty("NetInterface")]
         public string NetInterface{ get; set; }
 
         /// <summary>
-        /// Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+        /// Permission group ID
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+        /// Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

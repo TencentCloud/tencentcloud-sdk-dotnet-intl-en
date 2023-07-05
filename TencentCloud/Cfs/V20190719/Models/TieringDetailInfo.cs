@@ -24,12 +24,20 @@ namespace TencentCloud.Cfs.V20190719.Models
     public class TieringDetailInfo : AbstractModel
     {
         
+        /// <summary>
+        /// STANDARD_IA storage usage
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TieringSizeInBytes")]
+        public long? TieringSizeInBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TieringSizeInBytes", this.TieringSizeInBytes);
         }
     }
 }

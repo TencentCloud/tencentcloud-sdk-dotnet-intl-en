@@ -293,6 +293,48 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to create a migration task.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
+        /// <returns><see cref="CreateMigrationTaskResponse"/></returns>
+        public async Task<CreateMigrationTaskResponse> CreateMigrationTask(CreateMigrationTaskRequest req)
+        {
+             JsonResponseModel<CreateMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a migration task.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
+        /// <returns><see cref="CreateMigrationTaskResponse"/></returns>
+        public CreateMigrationTaskResponse CreateMigrationTaskSync(CreateMigrationTaskRequest req)
+        {
+             JsonResponseModel<CreateMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a scheduled snapshot policy.
         /// </summary>
         /// <param name="req"><see cref="DeleteAutoSnapshotPolicyRequest"/></param>
@@ -493,6 +535,48 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to delete a migration task.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMigrationTaskRequest"/></param>
+        /// <returns><see cref="DeleteMigrationTaskResponse"/></returns>
+        public async Task<DeleteMigrationTaskResponse> DeleteMigrationTask(DeleteMigrationTaskRequest req)
+        {
+             JsonResponseModel<DeleteMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a migration task.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMigrationTaskRequest"/></param>
+        /// <returns><see cref="DeleteMigrationTaskResponse"/></returns>
+        public DeleteMigrationTaskResponse DeleteMigrationTaskSync(DeleteMigrationTaskRequest req)
+        {
+             JsonResponseModel<DeleteMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a mount target.
         /// </summary>
         /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
@@ -604,6 +688,48 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAvailableZoneInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableZoneInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of data source buckets.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBucketListRequest"/></param>
+        /// <returns><see cref="DescribeBucketListResponse"/></returns>
+        public async Task<DescribeBucketListResponse> DescribeBucketList(DescribeBucketListRequest req)
+        {
+             JsonResponseModel<DescribeBucketListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBucketList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBucketListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of data source buckets.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBucketListRequest"/></param>
+        /// <returns><see cref="DescribeBucketListResponse"/></returns>
+        public DescribeBucketListResponse DescribeBucketListSync(DescribeBucketListRequest req)
+        {
+             JsonResponseModel<DescribeBucketListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBucketList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBucketListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -893,6 +1019,48 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to get the list of migration tasks.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationTasksRequest"/></param>
+        /// <returns><see cref="DescribeMigrationTasksResponse"/></returns>
+        public async Task<DescribeMigrationTasksResponse> DescribeMigrationTasks(DescribeMigrationTasksRequest req)
+        {
+             JsonResponseModel<DescribeMigrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMigrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of migration tasks.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationTasksRequest"/></param>
+        /// <returns><see cref="DescribeMigrationTasksResponse"/></returns>
+        public DescribeMigrationTasksResponse DescribeMigrationTasksSync(DescribeMigrationTasksRequest req)
+        {
+             JsonResponseModel<DescribeMigrationTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMigrationTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrationTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the mount targets of a file system.
         /// </summary>
         /// <param name="req"><see cref="DescribeMountTargetsRequest"/></param>
@@ -973,6 +1141,86 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to modify the scaling policy of a file system.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
+        /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
+        public async Task<ModifyFileSystemAutoScaleUpRuleResponse> ModifyFileSystemAutoScaleUpRule(ModifyFileSystemAutoScaleUpRuleRequest req)
+        {
+             JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFileSystemAutoScaleUpRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the scaling policy of a file system.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
+        /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
+        public ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRuleSync(ModifyFileSystemAutoScaleUpRuleRequest req)
+        {
+             JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFileSystemAutoScaleUpRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to scale up a Turbo file system.
+        /// </summary>
+        /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>
+        /// <returns><see cref="ScaleUpFileSystemResponse"/></returns>
+        public async Task<ScaleUpFileSystemResponse> ScaleUpFileSystem(ScaleUpFileSystemRequest req)
+        {
+             JsonResponseModel<ScaleUpFileSystemResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleUpFileSystem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleUpFileSystemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to scale up a Turbo file system.
+        /// </summary>
+        /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>
+        /// <returns><see cref="ScaleUpFileSystemResponse"/></returns>
+        public ScaleUpFileSystemResponse ScaleUpFileSystemSync(ScaleUpFileSystemRequest req)
+        {
+             JsonResponseModel<ScaleUpFileSystemResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleUpFileSystem");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleUpFileSystemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to activate the CFS service.
         /// </summary>
         /// <param name="req"><see cref="SignUpCfsServiceRequest"/></param>
@@ -1004,6 +1252,48 @@ namespace TencentCloud.Cfs.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "SignUpCfsService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignUpCfsServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop a migration task.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="StopMigrationTaskRequest"/></param>
+        /// <returns><see cref="StopMigrationTaskResponse"/></returns>
+        public async Task<StopMigrationTaskResponse> StopMigrationTask(StopMigrationTaskRequest req)
+        {
+             JsonResponseModel<StopMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to stop a migration task.
+        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="StopMigrationTaskRequest"/></param>
+        /// <returns><see cref="StopMigrationTaskResponse"/></returns>
+        public StopMigrationTaskResponse StopMigrationTaskSync(StopMigrationTaskRequest req)
+        {
+             JsonResponseModel<StopMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMigrationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

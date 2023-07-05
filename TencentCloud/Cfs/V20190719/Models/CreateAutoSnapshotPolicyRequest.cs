@@ -49,7 +49,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? AliveDays{ get; set; }
 
         /// <summary>
-        /// The specific day (day 1 to day 31) of the month on which to create a snapshot.
+        /// The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }

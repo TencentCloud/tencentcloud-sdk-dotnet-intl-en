@@ -43,7 +43,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// File system status
+        /// File system status. Valid values:
+        /// - creating
+        /// - mounting
+        /// - create_failed
+        /// - available
+        /// - unserviced
+        /// - upgrading
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
