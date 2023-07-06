@@ -54,6 +54,24 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Destinations")]
         public EventSettingsDestinationReq[] Destinations{ get; set; }
 
+        /// <summary>
+        /// SCTE-35 configuration information.
+        /// </summary>
+        [JsonProperty("SCTE35SegmentationDescriptor")]
+        public SegmentationDescriptorInfo[] SCTE35SegmentationDescriptor{ get; set; }
+
+        /// <summary>
+        /// A 32-bit unique segmentation event identifier.Only one occurrence of a given segmentation_event_id value shall be active at any one time.
+        /// </summary>
+        [JsonProperty("SpliceEventID")]
+        public ulong? SpliceEventID{ get; set; }
+
+        /// <summary>
+        /// The duration of the segment in 90kHz ticks.It used to  give the splicer an indication of when the break will be over and when the network In Point will occur. If not specifyed,the splice_insert will continue when enter a return_to_network to end the splice_insert at the appropriate time.
+        /// </summary>
+        [JsonProperty("SpliceDuration")]
+        public ulong? SpliceDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "OutputGroupName", this.OutputGroupName);
             this.SetParamSimple(map, prefix + "ManifestName", this.ManifestName);
             this.SetParamArrayObj(map, prefix + "Destinations.", this.Destinations);
+            this.SetParamArrayObj(map, prefix + "SCTE35SegmentationDescriptor.", this.SCTE35SegmentationDescriptor);
+            this.SetParamSimple(map, prefix + "SpliceEventID", this.SpliceEventID);
+            this.SetParamSimple(map, prefix + "SpliceDuration", this.SpliceDuration);
         }
     }
 }

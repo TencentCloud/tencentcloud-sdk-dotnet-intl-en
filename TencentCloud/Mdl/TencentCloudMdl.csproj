@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{87BF3C79-D8D0-3C22-AE2A-DEE7C02ABAD4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.725</VersionPrefix>
+    <VersionPrefix>3.0.726</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,7 @@
     <Compile Include="V20200326\Models\DeleteStreamLivePlanResponse.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLiveWatermarkRequest.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLiveWatermarkResponse.cs" />
+    <Compile Include="V20200326\Models\DeliveryRestrictionsInfo.cs" />
     <Compile Include="V20200326\Models\DescribeImageSettings.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelAlertsRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelAlertsResponse.cs" />
@@ -155,6 +156,8 @@
     <Compile Include="V20200326\Models\RegionInfo.cs" />
     <Compile Include="V20200326\Models\SDMCSettingsInfo.cs" />
     <Compile Include="V20200326\Models\Scte35SettingsInfo.cs" />
+    <Compile Include="V20200326\Models\SegmentationDescriptorInfo.cs" />
+    <Compile Include="V20200326\Models\SegmentationDescriptorRespInfo.cs" />
     <Compile Include="V20200326\Models\StartStreamLiveChannelRequest.cs" />
     <Compile Include="V20200326\Models\StartStreamLiveChannelResponse.cs" />
     <Compile Include="V20200326\Models\StopStreamLiveChannelRequest.cs" />

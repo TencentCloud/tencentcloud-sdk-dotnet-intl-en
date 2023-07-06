@@ -333,7 +333,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create a pay-as-you-go instance.
+        /// This API is used to create a pay-as-you-go instance.  It will be deprecated in future versions. We recommend that you use the `CreatePostPaidInstance` API instead.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
         /// <returns><see cref="CreateInstancePostResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create a pay-as-you-go instance.
+        /// This API is used to create a pay-as-you-go instance.  It will be deprecated in future versions. We recommend that you use the `CreatePostPaidInstance` API instead.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
         /// <returns><see cref="CreateInstancePostResponse"/></returns>
@@ -404,6 +404,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "CreatePartition");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePartitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to replace `CreateInstancePost`  to create a pay-as-you-go instance.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePostPaidInstanceRequest"/></param>
+        /// <returns><see cref="CreatePostPaidInstanceResponse"/></returns>
+        public async Task<CreatePostPaidInstanceResponse> CreatePostPaidInstance(CreatePostPaidInstanceRequest req)
+        {
+             JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePostPaidInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePostPaidInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to replace `CreateInstancePost`  to create a pay-as-you-go instance.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePostPaidInstanceRequest"/></param>
+        /// <returns><see cref="CreatePostPaidInstanceResponse"/></returns>
+        public CreatePostPaidInstanceResponse CreatePostPaidInstanceSync(CreatePostPaidInstanceRequest req)
+        {
+             JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePostPaidInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePostPaidInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1404,6 +1444,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRoute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the task status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public async Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the task status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public DescribeTaskStatusResponse DescribeTaskStatusSync(DescribeTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

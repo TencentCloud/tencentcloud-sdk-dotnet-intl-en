@@ -39,11 +39,16 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Instance ID.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DealNameInstanceIdMapping")]
+        public DealInstanceDTO[] DealNameInstanceIdMapping{ get; set; }
 
 
         /// <summary>
@@ -54,6 +59,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
         }
     }
 }

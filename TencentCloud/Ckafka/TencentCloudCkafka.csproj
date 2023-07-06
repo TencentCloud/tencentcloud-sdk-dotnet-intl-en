@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.725</VersionPrefix>
+    <VersionPrefix>3.0.726</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,12 +78,16 @@
     <Compile Include="V20190819\Models\CreateConsumerResponse.cs" />
     <Compile Include="V20190819\Models\CreateDatahubTopicRequest.cs" />
     <Compile Include="V20190819\Models\CreateDatahubTopicResponse.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePostData.cs" />
     <Compile Include="V20190819\Models\CreateInstancePostRequest.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePostResp.cs" />
     <Compile Include="V20190819\Models\CreateInstancePostResponse.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreData.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreResp.cs" />
     <Compile Include="V20190819\Models\CreatePartitionRequest.cs" />
     <Compile Include="V20190819\Models\CreatePartitionResponse.cs" />
+    <Compile Include="V20190819\Models\CreatePostPaidInstanceRequest.cs" />
+    <Compile Include="V20190819\Models\CreatePostPaidInstanceResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicRequest.cs" />
@@ -93,6 +97,7 @@
     <Compile Include="V20190819\Models\CreateUserResponse.cs" />
     <Compile Include="V20190819\Models\DatahubTopicDTO.cs" />
     <Compile Include="V20190819\Models\DatahubTopicResp.cs" />
+    <Compile Include="V20190819\Models\DealInstanceDTO.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePreRequest.cs" />
@@ -141,6 +146,8 @@
     <Compile Include="V20190819\Models\DescribeRegionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeRouteRequest.cs" />
     <Compile Include="V20190819\Models\DescribeRouteResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicAttributesRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicDetailRequest.cs" />
@@ -209,12 +216,14 @@
     <Compile Include="V20190819\Models\Price.cs" />
     <Compile Include="V20190819\Models\Region.cs" />
     <Compile Include="V20190819\Models\Route.cs" />
+    <Compile Include="V20190819\Models\RouteDTO.cs" />
     <Compile Include="V20190819\Models\RouteResponse.cs" />
     <Compile Include="V20190819\Models\SaleInfo.cs" />
     <Compile Include="V20190819\Models\SendMessageRequest.cs" />
     <Compile Include="V20190819\Models\SendMessageResponse.cs" />
     <Compile Include="V20190819\Models\SubscribedInfo.cs" />
     <Compile Include="V20190819\Models\Tag.cs" />
+    <Compile Include="V20190819\Models\TaskStatusResponse.cs" />
     <Compile Include="V20190819\Models\Topic.cs" />
     <Compile Include="V20190819\Models\TopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\TopicDetail.cs" />

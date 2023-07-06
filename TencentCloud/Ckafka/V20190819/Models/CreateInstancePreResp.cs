@@ -44,10 +44,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public CreateInstancePreData Data{ get; set; }
 
         /// <summary>
-        /// Deletion time.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Deletion time.  This parameter has been deprecated and will be deleted.  Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DeleteRouteTimestamp")]
+        [System.Obsolete]
         public string DeleteRouteTimestamp{ get; set; }
 
 
