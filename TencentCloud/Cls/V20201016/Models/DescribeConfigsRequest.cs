@@ -25,27 +25,20 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li> configName
+        /// configName
+        /// - Filter by fuzzy match of **collection configuration name**
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// Filter by fuzzy match of **collection configuration name**
-        /// Type: String
+        /// configId
+        /// - Filter by **collection configuration ID**
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// Required: no
-        /// 
-        /// <br><li> configId
-        /// 
-        /// Filter by **collection configuration ID**.
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> topicId
-        /// 
-        /// Filter by **log topic**.
-        /// 
-        /// Type: String
-        /// 
-        /// Required: no
+        /// topicId
+        /// - Filter by **log topic**
+        /// - Type: String
+        /// - Required: No
         /// 
         /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
         /// </summary>

@@ -37,13 +37,15 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// List of engines to be supported. All values are selected by default.
+        /// List of engines to be supported.
+        /// Valid values: `android`, `ios`, `unity`, `cocos`, `unreal`, `windows`. All values are selected by default.
         /// </summary>
         [JsonProperty("EngineList")]
         public string[] EngineList{ get; set; }
 
         /// <summary>
-        /// Service region list. All values are selected by default.
+        /// List of regions.
+        /// Valid values: `mainland` (Chinese mainland), `hmt` (Hong Kong, Macao and Taiwan (China)), `sea` (Southeast Asia), `na` (North America), `eu` (Europe), `jpkr` (Japan, Korea and Asia Pacific), `sa` (South America), `oc` (Oceania), `me` (Middle East). All values are selected by default.
         /// </summary>
         [JsonProperty("RegionList")]
         public string[] RegionList{ get; set; }
@@ -55,7 +57,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public RealtimeSpeechConf RealtimeSpeechConf{ get; set; }
 
         /// <summary>
-        /// Configuration information of Voice Message Service
+        /// Configuration information of Voice Messaging
         /// </summary>
         [JsonProperty("VoiceMessageConf")]
         public VoiceMessageConf VoiceMessageConf{ get; set; }
@@ -65,6 +67,12 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         [JsonProperty("VoiceFilterConf")]
         public VoiceFilterConf VoiceFilterConf{ get; set; }
+
+        /// <summary>
+        /// Configuration information of Speech-to-Text
+        /// </summary>
+        [JsonProperty("AsrConf")]
+        public AsrConf AsrConf{ get; set; }
 
         /// <summary>
         /// List of tags to be added
@@ -85,6 +93,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamObj(map, prefix + "RealtimeSpeechConf.", this.RealtimeSpeechConf);
             this.SetParamObj(map, prefix + "VoiceMessageConf.", this.VoiceMessageConf);
             this.SetParamObj(map, prefix + "VoiceFilterConf.", this.VoiceFilterConf);
+            this.SetParamObj(map, prefix + "AsrConf.", this.AsrConf);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

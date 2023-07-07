@@ -173,6 +173,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// This API is used to purchase a certificate.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateRequest"/></param>
+        /// <returns><see cref="CreateCertificateResponse"/></returns>
+        public async Task<CreateCertificateResponse> CreateCertificate(CreateCertificateRequest req)
+        {
+             JsonResponseModel<CreateCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to purchase a certificate.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateRequest"/></param>
+        /// <returns><see cref="CreateCertificateResponse"/></returns>
+        public CreateCertificateResponse CreateCertificateSync(CreateCertificateRequest req)
+        {
+             JsonResponseModel<CreateCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a certificate.
         /// </summary>
         /// <param name="req"><see cref="DeleteCertificateRequest"/></param>
@@ -604,6 +644,46 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "UploadCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upload the confirmation letter for a certificate.
+        /// </summary>
+        /// <param name="req"><see cref="UploadConfirmLetterRequest"/></param>
+        /// <returns><see cref="UploadConfirmLetterResponse"/></returns>
+        public async Task<UploadConfirmLetterResponse> UploadConfirmLetter(UploadConfirmLetterRequest req)
+        {
+             JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadConfirmLetter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadConfirmLetterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upload the confirmation letter for a certificate.
+        /// </summary>
+        /// <param name="req"><see cref="UploadConfirmLetterRequest"/></param>
+        /// <returns><see cref="UploadConfirmLetterResponse"/></returns>
+        public UploadConfirmLetterResponse UploadConfirmLetterSync(UploadConfirmLetterRequest req)
+        {
+             JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadConfirmLetter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadConfirmLetterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

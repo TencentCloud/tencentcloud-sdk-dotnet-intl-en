@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Offset.
+        /// Offset.  It must be an integer multiple of the value of `Limit`.  Default value: `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number of returned results. Maximum value: `50`.
+        /// The limit for the number of query results.  Value range:  1-50.  Default value:  `10`.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("IdentityId")]
         public ulong? IdentityId{ get; set; }
 
+        /// <summary>
+        /// Identity type.  Valid values: `1` (Preset), `2` (Custom).
+        /// </summary>
+        [JsonProperty("IdentityType")]
+        public ulong? IdentityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
             this.SetParamSimple(map, prefix + "IdentityId", this.IdentityId);
+            this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
         }
     }
 }

@@ -25,12 +25,6 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// ID of the log topic to be queried
-        /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
-
-        /// <summary>
         /// Start time of the log to be queried, which is a Unix timestamp in milliseconds
         /// </summary>
         [JsonProperty("From")]
@@ -49,10 +43,24 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
+        /// ID of the log topic to be queried
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
         /// Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
+
+        /// <summary>
+        /// Search syntax. Valid values:
+        /// `0` (default): Lucene; `1`: CQL
+        /// For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
 
 
         /// <summary>
@@ -60,11 +68,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         }
     }
 }

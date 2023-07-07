@@ -125,6 +125,13 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("ProjectStatus")]
         public long? ProjectStatus{ get; set; }
 
+        /// <summary>
+        /// Log access point, which can be ignored. 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccessPoint")]
+        public string AccessPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +154,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "IsStar", this.IsStar);
             this.SetParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
+            this.SetParamSimple(map, prefix + "AccessPoint", this.AccessPoint);
         }
     }
 }

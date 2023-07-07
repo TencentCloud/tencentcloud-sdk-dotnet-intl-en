@@ -25,37 +25,27 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li> logsetName
+        /// logsetName
+        /// - Filter by **logset name**
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// Filter by **logset name**.
-        /// Type: String
+        /// logsetId
+        /// - Filter by **logset ID**
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// Required: no
+        /// tagKey
+        /// - Filter by **tag key**
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// <br><li> logsetId
+        /// tag:tagKey
+        /// - Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// Filter by **logset ID**.
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> tagKey
-        /// 
-        /// Filter by **tag key**.
-        /// 
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> tag:tagKey
-        /// 
-        /// Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key.
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// 
-        /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+        /// Each request can have up to 10 `Filters` and 5 `Filter.Values`.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

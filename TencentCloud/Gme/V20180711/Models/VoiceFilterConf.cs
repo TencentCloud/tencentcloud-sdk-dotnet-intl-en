@@ -30,6 +30,13 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// Scenario configuration information, such as status and callback URL.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SceneInfos")]
+        public SceneInfo[] SceneInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "SceneInfos.", this.SceneInfos);
         }
     }
 }

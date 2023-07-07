@@ -91,6 +91,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
+        /// Instance type, which is used to indicate whether it is a serverless instance.
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
         /// Database type
         /// </summary>
         [JsonProperty("DbType")]
@@ -334,6 +340,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceNetInfo")]
         public InstanceNetInfo[] InstanceNetInfo{ get; set; }
 
+        /// <summary>
+        /// Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourcePackages")]
+        public ResourcePackage[] ResourcePackages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -351,6 +363,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
@@ -390,6 +403,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
             this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
+            this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         }
     }
 }

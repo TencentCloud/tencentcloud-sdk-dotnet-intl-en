@@ -249,6 +249,27 @@ namespace TencentCloud.Ssl.V20191205.Models
         public Tags[] Tags{ get; set; }
 
         /// <summary>
+        /// All encryption algorithms of a CA certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CAEncryptAlgorithms")]
+        public string[] CAEncryptAlgorithms{ get; set; }
+
+        /// <summary>
+        /// All common names of a CA certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CACommonNames")]
+        public string[] CACommonNames{ get; set; }
+
+        /// <summary>
+        /// All expiration time of a CA certificate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CAEndTimes")]
+        public string[] CAEndTimes{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -292,6 +313,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamObj(map, prefix + "SubmittedData.", this.SubmittedData);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "CAEncryptAlgorithms.", this.CAEncryptAlgorithms);
+            this.SetParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
+            this.SetParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

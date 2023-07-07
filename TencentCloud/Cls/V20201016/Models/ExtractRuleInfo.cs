@@ -134,6 +134,29 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ParseProtocol")]
         public string ParseProtocol{ get; set; }
 
+        /// <summary>
+        /// Metadata type. Valid values:
+        /// 0: Do not use metadata.
+        /// 1: Use machine group metadata.
+        /// 2: Use user-defined metadata.
+        /// 3: Use the collection path to extract metadata.
+        /// </summary>
+        [JsonProperty("MetadataType")]
+        public long? MetadataType{ get; set; }
+
+        /// <summary>
+        /// Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PathRegex")]
+        public string PathRegex{ get; set; }
+
+        /// <summary>
+        /// User-defined metadata, which is required when `MetadataType` is set to `2`.
+        /// </summary>
+        [JsonProperty("MetaTags")]
+        public MetaTagInfo[] MetaTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +178,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "ParseProtocol", this.ParseProtocol);
+            this.SetParamSimple(map, prefix + "MetadataType", this.MetadataType);
+            this.SetParamSimple(map, prefix + "PathRegex", this.PathRegex);
+            this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
         }
     }
 }

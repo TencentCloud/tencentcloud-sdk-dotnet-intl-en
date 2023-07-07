@@ -25,39 +25,28 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li> name
+        /// name
+        /// - Filter by **alarm policy name**
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// Filter by **alarm policy name**
-        /// Type: string
+        /// alarmId
+        /// - Filter by **alarm policy ID**
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// Required: no
+        /// topicId
+        /// - Filter by **log topic ID**
+        /// - Type: String
+        /// - Required: No
         /// 
-        /// <br><li> alarmId
+        /// enable
+        /// - Filter by **enablement status**
+        /// - Type: String
+        /// - Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an "invalid parameter" error will be returned.
+        /// - Required: No
         /// 
-        /// Filter by **alarm policy ID**
-        /// Type: string
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> topicId
-        /// 
-        /// Filter by **log topic ID**
-        /// 
-        /// Type: string
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> enable
-        /// 
-        /// Filter by **enablement status**
-        /// 
-        /// Type: string
-        /// 
-        /// Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
-        /// 
-        /// Required: no
-        /// 
-        /// Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+        /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

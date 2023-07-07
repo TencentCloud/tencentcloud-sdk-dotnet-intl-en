@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Voice Chat sound quality. Valid value: `high`.
+        /// Voice Chat sound quality type. Valid values: `high` (HD), `ordinary` (SD).
         /// </summary>
         [JsonProperty("Quality")]
         public string Quality{ get; set; }

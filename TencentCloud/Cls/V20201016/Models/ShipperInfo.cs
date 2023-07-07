@@ -112,6 +112,46 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("FilenameMode")]
         public ulong? FilenameMode{ get; set; }
 
+        /// <summary>
+        /// Start time for data shipping
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// End time for data shipping
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// Progress of historical data shipping (valid only when the selected data scope contains historical data)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Progress")]
+        public float? Progress{ get; set; }
+
+        /// <summary>
+        /// Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RemainTime")]
+        public long? RemainTime{ get; set; }
+
+        /// <summary>
+        /// Status of historical data shipping. Valid values:
+        /// 0: Real-time data is being shipped.
+        /// 1: The system is preparing for historical data shipping.
+        /// 2: Historical data is being shipped.
+        /// 3: An error occurred while shipping historical data.
+        /// 4: Historical data shipping ended.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HistoryStatus")]
+        public long? HistoryStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +172,11 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "RemainTime", this.RemainTime);
+            this.SetParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
         }
     }
 }

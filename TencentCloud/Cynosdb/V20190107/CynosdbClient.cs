@@ -173,6 +173,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to bind a resource pack to a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="BindClusterResourcePackagesRequest"/></param>
+        /// <returns><see cref="BindClusterResourcePackagesResponse"/></returns>
+        public async Task<BindClusterResourcePackagesResponse> BindClusterResourcePackages(BindClusterResourcePackagesRequest req)
+        {
+             JsonResponseModel<BindClusterResourcePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindClusterResourcePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindClusterResourcePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a resource pack to a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="BindClusterResourcePackagesRequest"/></param>
+        /// <returns><see cref="BindClusterResourcePackagesResponse"/></returns>
+        public BindClusterResourcePackagesResponse BindClusterResourcePackagesSync(BindClusterResourcePackagesRequest req)
+        {
+             JsonResponseModel<BindClusterResourcePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindClusterResourcePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindClusterResourcePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to disable the audit service for a TDSQL-C for MySQL instance.
         /// </summary>
         /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
@@ -204,6 +244,126 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "CloseAuditService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable the password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CloseClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="CloseClusterPasswordComplexityResponse"/></returns>
+        public async Task<CloseClusterPasswordComplexityResponse> CloseClusterPasswordComplexity(CloseClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<CloseClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable the password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CloseClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="CloseClusterPasswordComplexityResponse"/></returns>
+        public CloseClusterPasswordComplexityResponse CloseClusterPasswordComplexitySync(CloseClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<CloseClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable the public network.
+        /// </summary>
+        /// <param name="req"><see cref="CloseWanRequest"/></param>
+        /// <returns><see cref="CloseWanResponse"/></returns>
+        public async Task<CloseWanResponse> CloseWan(CloseWanRequest req)
+        {
+             JsonResponseModel<CloseWanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseWan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseWanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable the public network.
+        /// </summary>
+        /// <param name="req"><see cref="CloseWanRequest"/></param>
+        /// <returns><see cref="CloseWanResponse"/></returns>
+        public CloseWanResponse CloseWanSync(CloseWanRequest req)
+        {
+             JsonResponseModel<CloseWanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseWan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseWanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to replicate the password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CopyClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="CopyClusterPasswordComplexityResponse"/></returns>
+        public async Task<CopyClusterPasswordComplexityResponse> CopyClusterPasswordComplexity(CopyClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<CopyClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CopyClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to replicate the password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CopyClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="CopyClusterPasswordComplexityResponse"/></returns>
+        public CopyClusterPasswordComplexityResponse CopyClusterPasswordComplexitySync(CopyClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<CopyClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CopyClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyClusterPasswordComplexityResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,6 +493,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to create a database.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterDatabaseRequest"/></param>
+        /// <returns><see cref="CreateClusterDatabaseResponse"/></returns>
+        public async Task<CreateClusterDatabaseResponse> CreateClusterDatabase(CreateClusterDatabaseRequest req)
+        {
+             JsonResponseModel<CreateClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a database.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterDatabaseRequest"/></param>
+        /// <returns><see cref="CreateClusterDatabaseResponse"/></returns>
+        public CreateClusterDatabaseResponse CreateClusterDatabaseSync(CreateClusterDatabaseRequest req)
+        {
+             JsonResponseModel<CreateClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>
@@ -364,6 +564,126 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "CreateClusters");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
+        /// <returns><see cref="CreateParamTemplateResponse"/></returns>
+        public async Task<CreateParamTemplateResponse> CreateParamTemplate(CreateParamTemplateRequest req)
+        {
+             JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
+        /// <returns><see cref="CreateParamTemplateResponse"/></returns>
+        public CreateParamTemplateResponse CreateParamTemplateSync(CreateParamTemplateRequest req)
+        {
+             JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to purchase a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourcePackageRequest"/></param>
+        /// <returns><see cref="CreateResourcePackageResponse"/></returns>
+        public async Task<CreateResourcePackageResponse> CreateResourcePackage(CreateResourcePackageRequest req)
+        {
+             JsonResponseModel<CreateResourcePackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateResourcePackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResourcePackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to purchase a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourcePackageRequest"/></param>
+        /// <returns><see cref="CreateResourcePackageResponse"/></returns>
+        public CreateResourcePackageResponse CreateResourcePackageSync(CreateResourcePackageRequest req)
+        {
+             JsonResponseModel<CreateResourcePackageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateResourcePackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResourcePackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an account.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
+        /// <returns><see cref="DeleteAccountsResponse"/></returns>
+        public async Task<DeleteAccountsResponse> DeleteAccounts(DeleteAccountsRequest req)
+        {
+             JsonResponseModel<DeleteAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an account.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
+        /// <returns><see cref="DeleteAccountsResponse"/></returns>
+        public DeleteAccountsResponse DeleteAccountsSync(DeleteAccountsRequest req)
+        {
+             JsonResponseModel<DeleteAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -444,6 +764,126 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DeleteBackup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a database.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterDatabaseRequest"/></param>
+        /// <returns><see cref="DeleteClusterDatabaseResponse"/></returns>
+        public async Task<DeleteClusterDatabaseResponse> DeleteClusterDatabase(DeleteClusterDatabaseRequest req)
+        {
+             JsonResponseModel<DeleteClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a database.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterDatabaseRequest"/></param>
+        /// <returns><see cref="DeleteClusterDatabaseResponse"/></returns>
+        public DeleteClusterDatabaseResponse DeleteClusterDatabaseSync(DeleteClusterDatabaseRequest req)
+        {
+             JsonResponseModel<DeleteClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
+        public async Task<DeleteParamTemplateResponse> DeleteParamTemplate(DeleteParamTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
+        /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
+        public DeleteParamTemplateResponse DeleteParamTemplateSync(DeleteParamTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the existing permissions of an account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
+        public async Task<DescribeAccountPrivilegesResponse> DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the existing permissions of an account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
+        public DescribeAccountPrivilegesResponse DescribeAccountPrivilegesSync(DescribeAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountPrivilegesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -853,6 +1293,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to query the database list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDetailDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDetailDatabasesResponse"/></returns>
+        public async Task<DescribeClusterDetailDatabasesResponse> DescribeClusterDetailDatabases(DescribeClusterDetailDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterDetailDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterDetailDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterDetailDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the database list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDetailDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDetailDatabasesResponse"/></returns>
+        public DescribeClusterDetailDatabasesResponse DescribeClusterDetailDatabasesSync(DescribeClusterDetailDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeClusterDetailDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterDetailDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterDetailDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query instance groups.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstanceGrpsRequest"/></param>
@@ -924,6 +1404,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusterParams");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="DescribeClusterPasswordComplexityResponse"/></returns>
+        public async Task<DescribeClusterPasswordComplexityResponse> DescribeClusterPasswordComplexity(DescribeClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<DescribeClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="DescribeClusterPasswordComplexityResponse"/></returns>
+        public DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexitySync(DescribeClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<DescribeClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPasswordComplexityResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1093,6 +1613,86 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to query the list of error logs for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceErrorLogsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceErrorLogsResponse"/></returns>
+        public async Task<DescribeInstanceErrorLogsResponse> DescribeInstanceErrorLogs(DescribeInstanceErrorLogsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceErrorLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceErrorLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceErrorLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of error logs for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceErrorLogsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceErrorLogsResponse"/></returns>
+        public DescribeInstanceErrorLogsResponse DescribeInstanceErrorLogsSync(DescribeInstanceErrorLogsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceErrorLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceErrorLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceErrorLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the parameter list of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public async Task<DescribeInstanceParamsResponse> DescribeInstanceParams(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the parameter list of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the slow query logs of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSlowQueriesRequest"/></param>
@@ -1253,6 +1853,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to query the details of a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplateDetailRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplateDetailResponse"/></returns>
+        public async Task<DescribeParamTemplateDetailResponse> DescribeParamTemplateDetail(DescribeParamTemplateDetailRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplateDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamTemplateDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplateDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplateDetailRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplateDetailResponse"/></returns>
+        public DescribeParamTemplateDetailResponse DescribeParamTemplateDetailSync(DescribeParamTemplateDetailRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplateDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParamTemplateDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplateDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query all parameter templates information of a user-specified product.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
@@ -1324,6 +1964,126 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProjectSecurityGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the usage details of a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePackageDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourcePackageDetailResponse"/></returns>
+        public async Task<DescribeResourcePackageDetailResponse> DescribeResourcePackageDetail(DescribeResourcePackageDetailRequest req)
+        {
+             JsonResponseModel<DescribeResourcePackageDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourcePackageDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcePackageDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the usage details of a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePackageDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourcePackageDetailResponse"/></returns>
+        public DescribeResourcePackageDetailResponse DescribeResourcePackageDetailSync(DescribeResourcePackageDetailRequest req)
+        {
+             JsonResponseModel<DescribeResourcePackageDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourcePackageDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcePackageDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of the resource packs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePackageListRequest"/></param>
+        /// <returns><see cref="DescribeResourcePackageListResponse"/></returns>
+        public async Task<DescribeResourcePackageListResponse> DescribeResourcePackageList(DescribeResourcePackageListRequest req)
+        {
+             JsonResponseModel<DescribeResourcePackageListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourcePackageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcePackageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of the resource packs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePackageListRequest"/></param>
+        /// <returns><see cref="DescribeResourcePackageListResponse"/></returns>
+        public DescribeResourcePackageListResponse DescribeResourcePackageListSync(DescribeResourcePackageListRequest req)
+        {
+             JsonResponseModel<DescribeResourcePackageListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourcePackageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcePackageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the specifications of a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePackageSaleSpecRequest"/></param>
+        /// <returns><see cref="DescribeResourcePackageSaleSpecResponse"/></returns>
+        public async Task<DescribeResourcePackageSaleSpecResponse> DescribeResourcePackageSaleSpec(DescribeResourcePackageSaleSpecRequest req)
+        {
+             JsonResponseModel<DescribeResourcePackageSaleSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourcePackageSaleSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcePackageSaleSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the specifications of a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcePackageSaleSpecRequest"/></param>
+        /// <returns><see cref="DescribeResourcePackageSaleSpecResponse"/></returns>
+        public DescribeResourcePackageSaleSpecResponse DescribeResourcePackageSaleSpecSync(DescribeResourcePackageSaleSpecRequest req)
+        {
+             JsonResponseModel<DescribeResourcePackageSaleSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourcePackageSaleSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcePackageSaleSpecResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1484,6 +2244,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeZones");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to export the error logs of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ExportInstanceErrorLogsRequest"/></param>
+        /// <returns><see cref="ExportInstanceErrorLogsResponse"/></returns>
+        public async Task<ExportInstanceErrorLogsResponse> ExportInstanceErrorLogs(ExportInstanceErrorLogsRequest req)
+        {
+             JsonResponseModel<ExportInstanceErrorLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportInstanceErrorLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportInstanceErrorLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to export the error logs of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ExportInstanceErrorLogsRequest"/></param>
+        /// <returns><see cref="ExportInstanceErrorLogsResponse"/></returns>
+        public ExportInstanceErrorLogsResponse ExportInstanceErrorLogsSync(ExportInstanceErrorLogsRequest req)
+        {
+             JsonResponseModel<ExportInstanceErrorLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportInstanceErrorLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportInstanceErrorLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1693,6 +2493,126 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify the descriptions of a database account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyAccountDescriptionResponse"/></returns>
+        public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescription(ModifyAccountDescriptionRequest req)
+        {
+             JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the descriptions of a database account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyAccountDescriptionResponse"/></returns>
+        public ModifyAccountDescriptionResponse ModifyAccountDescriptionSync(ModifyAccountDescriptionRequest req)
+        {
+             JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the account host.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyAccountHostResponse"/></returns>
+        public async Task<ModifyAccountHostResponse> ModifyAccountHost(ModifyAccountHostRequest req)
+        {
+             JsonResponseModel<ModifyAccountHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the account host.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyAccountHostResponse"/></returns>
+        public ModifyAccountHostResponse ModifyAccountHostSync(ModifyAccountHostRequest req)
+        {
+             JsonResponseModel<ModifyAccountHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the account permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public async Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the account permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify an audit rule template.
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
@@ -1853,6 +2773,86 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify the binlog retention period in days.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBinlogSaveDaysRequest"/></param>
+        /// <returns><see cref="ModifyBinlogSaveDaysResponse"/></returns>
+        public async Task<ModifyBinlogSaveDaysResponse> ModifyBinlogSaveDays(ModifyBinlogSaveDaysRequest req)
+        {
+             JsonResponseModel<ModifyBinlogSaveDaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBinlogSaveDays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBinlogSaveDaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the binlog retention period in days.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBinlogSaveDaysRequest"/></param>
+        /// <returns><see cref="ModifyBinlogSaveDaysResponse"/></returns>
+        public ModifyBinlogSaveDaysResponse ModifyBinlogSaveDaysSync(ModifyBinlogSaveDaysRequest req)
+        {
+             JsonResponseModel<ModifyBinlogSaveDaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBinlogSaveDays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBinlogSaveDaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterDatabaseRequest"/></param>
+        /// <returns><see cref="ModifyClusterDatabaseResponse"/></returns>
+        public async Task<ModifyClusterDatabaseResponse> ModifyClusterDatabase(ModifyClusterDatabaseRequest req)
+        {
+             JsonResponseModel<ModifyClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterDatabaseRequest"/></param>
+        /// <returns><see cref="ModifyClusterDatabaseResponse"/></returns>
+        public ModifyClusterDatabaseResponse ModifyClusterDatabaseSync(ModifyClusterDatabaseRequest req)
+        {
+             JsonResponseModel<ModifyClusterDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify cluster name.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterNameRequest"/></param>
@@ -1924,6 +2924,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ModifyClusterParam");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify or enable the password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="ModifyClusterPasswordComplexityResponse"/></returns>
+        public async Task<ModifyClusterPasswordComplexityResponse> ModifyClusterPasswordComplexity(ModifyClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<ModifyClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify or enable the password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="ModifyClusterPasswordComplexityResponse"/></returns>
+        public ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexitySync(ModifyClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<ModifyClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterPasswordComplexityResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2053,6 +3093,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify the instance parameters.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamResponse"/></returns>
+        public async Task<ModifyInstanceParamResponse> ModifyInstanceParam(ModifyInstanceParamRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the instance parameters.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamResponse"/></returns>
+        public ModifyInstanceParamResponse ModifyInstanceParamSync(ModifyInstanceParamRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the maintenance time configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintainPeriodConfigRequest"/></param>
@@ -2084,6 +3164,126 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMaintainPeriodConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMaintainPeriodConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
+        public async Task<ModifyParamTemplateResponse> ModifyParamTemplate(ModifyParamTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a parameter template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
+        /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
+        public ModifyParamTemplateResponse ModifyParamTemplateSync(ModifyParamTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a resource pack to a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePackageClustersRequest"/></param>
+        /// <returns><see cref="ModifyResourcePackageClustersResponse"/></returns>
+        public async Task<ModifyResourcePackageClustersResponse> ModifyResourcePackageClusters(ModifyResourcePackageClustersRequest req)
+        {
+             JsonResponseModel<ModifyResourcePackageClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourcePackageClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcePackageClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind a resource pack to a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePackageClustersRequest"/></param>
+        /// <returns><see cref="ModifyResourcePackageClustersResponse"/></returns>
+        public ModifyResourcePackageClustersResponse ModifyResourcePackageClustersSync(ModifyResourcePackageClustersRequest req)
+        {
+             JsonResponseModel<ModifyResourcePackageClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyResourcePackageClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcePackageClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the name of a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePackageNameRequest"/></param>
+        /// <returns><see cref="ModifyResourcePackageNameResponse"/></returns>
+        public async Task<ModifyResourcePackageNameResponse> ModifyResourcePackageName(ModifyResourcePackageNameRequest req)
+        {
+             JsonResponseModel<ModifyResourcePackageNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourcePackageName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcePackageNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the name of a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePackageNameRequest"/></param>
+        /// <returns><see cref="ModifyResourcePackageNameResponse"/></returns>
+        public ModifyResourcePackageNameResponse ModifyResourcePackageNameSync(ModifyResourcePackageNameRequest req)
+        {
+             JsonResponseModel<ModifyResourcePackageNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyResourcePackageName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcePackageNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2253,6 +3453,126 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to enable the password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="OpenClusterPasswordComplexityResponse"/></returns>
+        public async Task<OpenClusterPasswordComplexityResponse> OpenClusterPasswordComplexity(OpenClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<OpenClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the password complexity for a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterPasswordComplexityRequest"/></param>
+        /// <returns><see cref="OpenClusterPasswordComplexityResponse"/></returns>
+        public OpenClusterPasswordComplexityResponse OpenClusterPasswordComplexitySync(OpenClusterPasswordComplexityRequest req)
+        {
+             JsonResponseModel<OpenClusterPasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenClusterPasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenClusterPasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the dedicated access group for a read-only instance.
+        /// </summary>
+        /// <param name="req"><see cref="OpenReadOnlyInstanceExclusiveAccessRequest"/></param>
+        /// <returns><see cref="OpenReadOnlyInstanceExclusiveAccessResponse"/></returns>
+        public async Task<OpenReadOnlyInstanceExclusiveAccessResponse> OpenReadOnlyInstanceExclusiveAccess(OpenReadOnlyInstanceExclusiveAccessRequest req)
+        {
+             JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenReadOnlyInstanceExclusiveAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the dedicated access group for a read-only instance.
+        /// </summary>
+        /// <param name="req"><see cref="OpenReadOnlyInstanceExclusiveAccessRequest"/></param>
+        /// <returns><see cref="OpenReadOnlyInstanceExclusiveAccessResponse"/></returns>
+        public OpenReadOnlyInstanceExclusiveAccessResponse OpenReadOnlyInstanceExclusiveAccessSync(OpenReadOnlyInstanceExclusiveAccessRequest req)
+        {
+             JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenReadOnlyInstanceExclusiveAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the public network.
+        /// </summary>
+        /// <param name="req"><see cref="OpenWanRequest"/></param>
+        /// <returns><see cref="OpenWanResponse"/></returns>
+        public async Task<OpenWanResponse> OpenWan(OpenWanRequest req)
+        {
+             JsonResponseModel<OpenWanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenWan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenWanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the public network.
+        /// </summary>
+        /// <param name="req"><see cref="OpenWanRequest"/></param>
+        /// <returns><see cref="OpenWanResponse"/></returns>
+        public OpenWanResponse OpenWanSync(OpenWanRequest req)
+        {
+             JsonResponseModel<OpenWanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenWan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenWanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to pause a serverless cluster.
         /// </summary>
         /// <param name="req"><see cref="PauseServerlessRequest"/></param>
@@ -2284,6 +3604,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "PauseServerless");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseServerlessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to refund a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="RefundResourcePackageRequest"/></param>
+        /// <returns><see cref="RefundResourcePackageResponse"/></returns>
+        public async Task<RefundResourcePackageResponse> RefundResourcePackage(RefundResourcePackageRequest req)
+        {
+             JsonResponseModel<RefundResourcePackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefundResourcePackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundResourcePackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to refund a resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="RefundResourcePackageRequest"/></param>
+        /// <returns><see cref="RefundResourcePackageResponse"/></returns>
+        public RefundResourcePackageResponse RefundResourcePackageSync(RefundResourcePackageRequest req)
+        {
+             JsonResponseModel<RefundResourcePackageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefundResourcePackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundResourcePackageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2684,6 +4044,86 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "SwitchProxyVpc");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchProxyVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a TDSQL-C for MySQL resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindClusterResourcePackagesRequest"/></param>
+        /// <returns><see cref="UnbindClusterResourcePackagesResponse"/></returns>
+        public async Task<UnbindClusterResourcePackagesResponse> UnbindClusterResourcePackages(UnbindClusterResourcePackagesRequest req)
+        {
+             JsonResponseModel<UnbindClusterResourcePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindClusterResourcePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindClusterResourcePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to unbind a TDSQL-C for MySQL resource pack.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindClusterResourcePackagesRequest"/></param>
+        /// <returns><see cref="UnbindClusterResourcePackagesResponse"/></returns>
+        public UnbindClusterResourcePackagesResponse UnbindClusterResourcePackagesSync(UnbindClusterResourcePackagesRequest req)
+        {
+             JsonResponseModel<UnbindClusterResourcePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindClusterResourcePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindClusterResourcePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the kernel version of a TDSQL-C for MySQL cluster.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
+        /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
+        public async Task<UpgradeClusterVersionResponse> UpgradeClusterVersion(UpgradeClusterVersionRequest req)
+        {
+             JsonResponseModel<UpgradeClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the kernel version of a TDSQL-C for MySQL cluster.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
+        /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
+        public UpgradeClusterVersionResponse UpgradeClusterVersionSync(UpgradeClusterVersionRequest req)
+        {
+             JsonResponseModel<UpgradeClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

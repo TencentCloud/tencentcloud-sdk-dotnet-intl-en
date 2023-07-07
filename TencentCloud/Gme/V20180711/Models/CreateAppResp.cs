@@ -61,7 +61,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public RealtimeSpeechConf RealtimeSpeechConf{ get; set; }
 
         /// <summary>
-        /// Configuration information of Voice Message Service
+        /// Configuration information of Voice Messaging
         /// </summary>
         [JsonProperty("VoiceMessageConf")]
         public VoiceMessageConf VoiceMessageConf{ get; set; }
@@ -71,6 +71,12 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         [JsonProperty("VoiceFilterConf")]
         public VoiceFilterConf VoiceFilterConf{ get; set; }
+
+        /// <summary>
+        /// Configuration information of Speech-to-Text
+        /// </summary>
+        [JsonProperty("AsrConf")]
+        public AsrConf AsrConf{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamObj(map, prefix + "RealtimeSpeechConf.", this.RealtimeSpeechConf);
             this.SetParamObj(map, prefix + "VoiceMessageConf.", this.VoiceMessageConf);
             this.SetParamObj(map, prefix + "VoiceFilterConf.", this.VoiceFilterConf);
+            this.SetParamObj(map, prefix + "AsrConf.", this.AsrConf);
         }
     }
 }

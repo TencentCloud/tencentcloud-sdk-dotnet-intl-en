@@ -321,6 +321,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Ability")]
         public Ability Ability{ get; set; }
 
+        /// <summary>
+        /// Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourcePackages")]
+        public ResourcePackage[] ResourcePackages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -369,6 +375,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
             this.SetParamSimple(map, prefix + "OrderSource", this.OrderSource);
             this.SetParamObj(map, prefix + "Ability.", this.Ability);
+            this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         }
     }
 }

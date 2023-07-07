@@ -25,29 +25,11 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li> shipperName
+        /// - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
+        /// - shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
+        /// - topicId: Filter by **log topic**. Type: String. Required: No.
         /// 
-        /// Filter by **shipping rule name**.
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> shipperId
-        /// 
-        /// Filter by **shipping rule ID**.
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// <br><li> topicId
-        /// 
-        /// Filter by **log topic**.
-        /// 
-        /// Type: String
-        /// 
-        /// Required: no
-        /// 
-        /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+        /// Each request can have up to 10 `Filters` and 100 `Filter.Values`.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

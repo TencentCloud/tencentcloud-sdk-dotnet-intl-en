@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+        /// Certificate type. Valid values: `CA` (CA certificate) and `SVR` (server certificate). Default value: `SVR`
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }

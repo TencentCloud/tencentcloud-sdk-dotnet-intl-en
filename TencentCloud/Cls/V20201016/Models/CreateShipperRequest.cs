@@ -90,6 +90,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("FilenameMode")]
         public ulong? FilenameMode{ get; set; }
 
+        /// <summary>
+        /// Start time for data shipping, which cannot be earlier than the lifecycle start time of the log topic. If you do not specify this parameter, it will be set to the time when you create the data shipping task.
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// End time for data shipping, which cannot be set to a future time. If you do not specify this parameter, it indicates continuous data shipping.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Compress.", this.Compress);
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

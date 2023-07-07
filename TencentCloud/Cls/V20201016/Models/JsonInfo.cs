@@ -37,6 +37,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetaFields")]
         public string[] MetaFields{ get; set; }
 
+        /// <summary>
+        /// JSON format for shipping. `0`: String format; `1`: Structured format.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("JsonType")]
+        public long? JsonType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "EnableTag", this.EnableTag);
             this.SetParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
+            this.SetParamSimple(map, prefix + "JsonType", this.JsonType);
         }
     }
 }

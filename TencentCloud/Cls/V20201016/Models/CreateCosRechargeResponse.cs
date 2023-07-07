@@ -25,6 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
+        /// cos_recharge record ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
