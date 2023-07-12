@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+        /// VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

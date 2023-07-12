@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The description of the flow log instance
+        /// The description of the flow log.
         /// </summary>
         [JsonProperty("FlowLogDescription")]
         public string FlowLogDescription{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CloudLogId{ get; set; }
 
         /// <summary>
-        /// Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+        /// Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The `ID` of a `VPC` instance, such as `vpc-12345678`.
+        /// The ID of a VPC instance, such as `vpc-12345678`.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -51,23 +51,25 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <summary>
         /// Type of the next hop. Valid values:
         /// `VPN`: VPN gateway;
-        /// `DIRECTCONNECT`: direct connect gateway;
-        /// `PEERCONNECTION`: peering connection;
+        /// `DIRECTCONNECT`: Direct connect gateway;
+        /// `PEERCONNECTION`: Peering connection;
         /// `NAT`: NAT gateway;
-        /// `NORMAL_CVM`: normal CVM;
-        /// `CCN`: CCN gateway.
+        /// `NORMAL_CVM`: CVM instance;
+        /// `CCN`: CCN instance;
+        /// `NONEXTHOP`: No next hop.
         /// </summary>
         [JsonProperty("NextHopType")]
         public string NextHopType{ get; set; }
 
         /// <summary>
-        /// Next-hop destination gateway. Its value is determined by `NextHopType`.
-        /// If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
-        /// If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
-        /// If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
-        /// If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
-        /// If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
-        /// If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+        /// ID of the next-hop gateway. 
+        /// `NextHopType` = `VPN`: VPN gateway ID, such as `vpngw-12345678`.
+        /// `NextHopType` = `DIRECTCONNECT`: Direct connect gateway ID, such as `dcg-12345678`.
+        /// `NextHopType` = `PEERCONNECTION`: Peering connection ID, such as `pcx-12345678`.
+        /// `NextHopType` = `NAT`: NAT gateway ID, such as `nat-12345678`.
+        /// `NextHopType` = `NORMAL_CVM`: CVM IPv4 address, such as `10.0.0.12`.
+        /// `NextHopType` = `CCN`: CCN instance ID, such as `ccn-12345678`.
+        /// `NextHopType` = `NONEXTHOP`: No next hop.
         /// </summary>
         [JsonProperty("NextHopDestination")]
         public string NextHopDestination{ get; set; }

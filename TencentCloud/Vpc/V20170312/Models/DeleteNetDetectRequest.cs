@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The `ID` of a network detection instance, such as `netd-12345678`.
+        /// ID of a network probe, such as `netd-12345678`.
         /// </summary>
         [JsonProperty("NetDetectId")]
         public string NetDetectId{ get; set; }

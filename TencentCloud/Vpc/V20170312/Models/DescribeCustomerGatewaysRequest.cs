@@ -40,7 +40,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+        /// Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

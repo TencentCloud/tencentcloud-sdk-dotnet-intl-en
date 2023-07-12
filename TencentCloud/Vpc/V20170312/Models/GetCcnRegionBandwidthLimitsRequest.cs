@@ -45,13 +45,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SortedBy{ get; set; }
 
         /// <summary>
-        /// The offset.
+        /// Offset
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The returned quantity.
+        /// Quantity of returned items
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

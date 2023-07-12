@@ -151,6 +151,26 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// The expiration time.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeadlineDate")]
+        public string DeadlineDate{ get; set; }
+
+        /// <summary>
+        /// The type of instance bound with the EIP
+        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AntiDDoSPackageId")]
+        public string AntiDDoSPackageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -176,6 +196,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "DeadlineDate", this.DeadlineDate);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         }
     }
 }

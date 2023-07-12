@@ -67,13 +67,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// The creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// The update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

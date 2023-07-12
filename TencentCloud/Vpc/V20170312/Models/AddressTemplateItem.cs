@@ -25,13 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Start address
+        /// ipm-xxxxxxxx
+        /// </summary>
+        [JsonProperty("AddressTemplateId")]
+        public string AddressTemplateId{ get; set; }
+
+        /// <summary>
+        /// IP template name
+        /// </summary>
+        [JsonProperty("AddressTemplateName")]
+        public string AddressTemplateName{ get; set; }
+
+        /// <summary>
+        /// Disused
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// End address
+        /// Disused
         /// </summary>
         [JsonProperty("To")]
         public string To{ get; set; }
@@ -42,6 +54,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
+            this.SetParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
         }

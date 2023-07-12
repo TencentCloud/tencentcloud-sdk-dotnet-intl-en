@@ -73,6 +73,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("MarketId")]
         public string MarketId{ get; set; }
 
+        /// <summary>
+        /// The list of tags to be bound.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
             this.SetParamSimple(map, prefix + "MarketId", this.MarketId);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

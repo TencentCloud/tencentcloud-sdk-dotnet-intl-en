@@ -97,9 +97,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
-        /// <li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-        /// <li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+        /// Filter condition. `FlowLogId` and `Filters` cannot be specified at the same time.
+        /// <li> `tag-key` - String - Optional - Filter by the tag key.</li>
+        /// <li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter Filters{ get; set; }

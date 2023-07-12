@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public PrivateIpAddressSpecification[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// The number of private IP addresses you can apply for. The total number of private IP addresses cannot exceed the quota.
+        /// The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
         /// </summary>
         [JsonProperty("SecondaryPrivateIpAddressCount")]
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceDescription{ get; set; }
 
         /// <summary>
-        /// The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+        /// The number of private IP addresses you apply for. The total number of private IP addresses cannot exceed the quota.
         /// </summary>
         [JsonProperty("SecondaryPrivateIpAddressCount")]
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }

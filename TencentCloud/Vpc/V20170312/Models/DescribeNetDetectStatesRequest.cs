@@ -25,14 +25,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The array of network detection instance `IDs`, such as [`netd-12345678`].
+        /// The array of network probe IDs, such as [`netd-12345678`].
         /// </summary>
         [JsonProperty("NetDetectIds")]
         public string[] NetDetectIds{ get; set; }
 
         /// <summary>
         /// Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
-        /// <li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
+        /// <li>`net-detect-id` - String - The network probe ID, such as `netd-12345678`.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

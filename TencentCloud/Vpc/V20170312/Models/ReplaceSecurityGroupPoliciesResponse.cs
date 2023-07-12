@@ -21,23 +21,9 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetCcnRegionBandwidthLimitsResponse : AbstractModel
+    public class ReplaceSecurityGroupPoliciesResponse : AbstractModel
     {
         
-        /// <summary>
-        /// The outbound bandwidth limits of regions in a CCN instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("CcnBandwidthSet")]
-        public CcnBandwidthInfo[] CcnBandwidthSet{ get; set; }
-
-        /// <summary>
-        /// The number of eligible objects.
-        /// Note: this field may return null, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -50,8 +36,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "CcnBandwidthSet.", this.CcnBandwidthSet);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
