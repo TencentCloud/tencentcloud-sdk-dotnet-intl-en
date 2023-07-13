@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Only `INPUT_SWITCH` is supported currently.
+        /// Valid values: INPUT_SWITCH, TIMED_RECORD, SCTE35_TIME_SIGNAL, SCTE35_SPLICE_INSERT, SCTE35_RETURN_TO_NETWORK.
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }

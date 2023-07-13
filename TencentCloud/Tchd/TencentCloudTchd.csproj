@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>TencentCloud</RootNamespace>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
-    <ProjectGuid>{431E4B21-89A7-339C-9107-DF999EDE302D}</ProjectGuid>
+    <ProjectGuid>{ACD3F8C4-7808-3116-8014-3FA03BE27700}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <VersionPrefix>3.0.731</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
@@ -11,7 +11,7 @@
     <Company>Tencent Ltd.</Company>
     <Product />
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageId>TencentCloudSDKIntlEN.Dms</PackageId>
+    <PackageId>TencentCloudSDKIntlEN.Tchd</PackageId>
     <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
     <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
@@ -47,10 +47,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20200819\DmsClient.cs" />
-    <Compile Include="V20200819\Models\SendEmailRequest.cs" />
-    <Compile Include="V20200819\Models\SendEmailResponse.cs" />
-    <Compile Include="V20200819\Models\SendTemplatedEmailRequest.cs" />
-    <Compile Include="V20200819\Models\SendTemplatedEmailResponse.cs" />
+    <Compile Include="V20230306\TchdClient.cs" />
+    <Compile Include="V20230306\Models\DescribeEventsRequest.cs" />
+    <Compile Include="V20230306\Models\DescribeEventsResponse.cs" />
+    <Compile Include="V20230306\Models\EventDetail.cs" />
+    <Compile Include="V20230306\Models\ProductEventList.cs" />
   </ItemGroup>
 </Project>
