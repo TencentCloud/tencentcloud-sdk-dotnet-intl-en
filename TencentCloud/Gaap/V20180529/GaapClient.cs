@@ -1297,6 +1297,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// This API is used to get a request signature that can prevent parameter tampering in the process of triggering orders, getting quotes, or activating subscription services.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthSignatureRequest"/></param>
+        /// <returns><see cref="DescribeAuthSignatureResponse"/></returns>
+        public async Task<DescribeAuthSignatureResponse> DescribeAuthSignature(DescribeAuthSignatureRequest req)
+        {
+             JsonResponseModel<DescribeAuthSignatureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuthSignature");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuthSignatureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get a request signature that can prevent parameter tampering in the process of triggering orders, getting quotes, or activating subscription services.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthSignatureRequest"/></param>
+        /// <returns><see cref="DescribeAuthSignatureResponse"/></returns>
+        public DescribeAuthSignatureResponse DescribeAuthSignatureSync(DescribeAuthSignatureRequest req)
+        {
+             JsonResponseModel<DescribeAuthSignatureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuthSignature");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuthSignatureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query names of blocked custom headers.
         /// </summary>
         /// <param name="req"><see cref="DescribeBlackHeaderRequest"/></param>
