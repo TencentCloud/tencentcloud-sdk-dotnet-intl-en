@@ -349,6 +349,86 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
+        /// This API is used to query the customer information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerInfoRequest"/></param>
+        /// <returns><see cref="DescribeCustomerInfoResponse"/></returns>
+        public async Task<DescribeCustomerInfoResponse> DescribeCustomerInfo(DescribeCustomerInfoRequest req)
+        {
+             JsonResponseModel<DescribeCustomerInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomerInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the customer information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerInfoRequest"/></param>
+        /// <returns><see cref="DescribeCustomerInfoResponse"/></returns>
+        public DescribeCustomerInfoResponse DescribeCustomerInfoSync(DescribeCustomerInfoRequest req)
+        {
+             JsonResponseModel<DescribeCustomerInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomerInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of customer UINs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerUinRequest"/></param>
+        /// <returns><see cref="DescribeCustomerUinResponse"/></returns>
+        public async Task<DescribeCustomerUinResponse> DescribeCustomerUin(DescribeCustomerUinRequest req)
+        {
+             JsonResponseModel<DescribeCustomerUinResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomerUin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerUinResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of customer UINs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerUinRequest"/></param>
+        /// <returns><see cref="DescribeCustomerUinResponse"/></returns>
+        public DescribeCustomerUinResponse DescribeCustomerUinSync(DescribeCustomerUinRequest req)
+        {
+             JsonResponseModel<DescribeCustomerUinResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomerUin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerUinResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain country/region codes.
         /// </summary>
         /// <param name="req"><see cref="GetCountryCodesRequest"/></param>
@@ -380,6 +460,46 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
              {
                  var strResp = this.InternalRequestSync(req, "GetCountryCodes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCountryCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the account verification status.
+        /// </summary>
+        /// <param name="req"><see cref="QueryAccountVerificationStatusRequest"/></param>
+        /// <returns><see cref="QueryAccountVerificationStatusResponse"/></returns>
+        public async Task<QueryAccountVerificationStatusResponse> QueryAccountVerificationStatus(QueryAccountVerificationStatusRequest req)
+        {
+             JsonResponseModel<QueryAccountVerificationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryAccountVerificationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAccountVerificationStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the account verification status.
+        /// </summary>
+        /// <param name="req"><see cref="QueryAccountVerificationStatusRequest"/></param>
+        /// <returns><see cref="QueryAccountVerificationStatusResponse"/></returns>
+        public QueryAccountVerificationStatusResponse QueryAccountVerificationStatusSync(QueryAccountVerificationStatusRequest req)
+        {
+             JsonResponseModel<QueryAccountVerificationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryAccountVerificationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAccountVerificationStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -460,6 +580,46 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
              {
                  var strResp = this.InternalRequestSync(req, "QueryCreditByUinList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCreditByUinListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query customer credits.
+        /// </summary>
+        /// <param name="req"><see cref="QueryCreditQuotaRequest"/></param>
+        /// <returns><see cref="QueryCreditQuotaResponse"/></returns>
+        public async Task<QueryCreditQuotaResponse> QueryCreditQuota(QueryCreditQuotaRequest req)
+        {
+             JsonResponseModel<QueryCreditQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCreditQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCreditQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query customer credits.
+        /// </summary>
+        /// <param name="req"><see cref="QueryCreditQuotaRequest"/></param>
+        /// <returns><see cref="QueryCreditQuotaResponse"/></returns>
+        public QueryCreditQuotaResponse QueryCreditQuotaSync(QueryCreditQuotaRequest req)
+        {
+             JsonResponseModel<QueryCreditQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCreditQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCreditQuotaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

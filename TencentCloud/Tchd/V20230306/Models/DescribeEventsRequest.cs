@@ -37,8 +37,8 @@ namespace TencentCloud.Tchd.V20230306.Models
         public string[] ProductIds{ get; set; }
 
         /// <summary>
-        /// 1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
-        /// 2. The region ID for non-region-specific products should be set to "non-regional".
+        ///  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+        /// 2. The region ID for non-region-specific products should be set to non-regional.
         /// </summary>
         [JsonProperty("RegionIds")]
         public string[] RegionIds{ get; set; }

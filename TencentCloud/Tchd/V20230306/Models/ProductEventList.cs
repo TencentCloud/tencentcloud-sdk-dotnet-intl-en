@@ -26,6 +26,7 @@ namespace TencentCloud.Tchd.V20230306.Models
         
         /// <summary>
         /// Detailed event information.
+        /// Note: this field may return null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("EventList")]
         public EventDetail[] EventList{ get; set; }

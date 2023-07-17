@@ -25,31 +25,31 @@ namespace TencentCloud.Tchd.V20230306.Models
     {
         
         /// <summary>
-        /// Product ID
+        /// Product ID.
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// Product name
+        /// Product name.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// Region ID.
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// Region name
+        /// Region name.
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// Event start time
+        /// Event start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Tchd.V20230306.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Current status: Normally, Informational, Degradation
+        /// Current status: Normally, Informational, Degradation.
         /// </summary>
         [JsonProperty("CurrentStatus")]
         public string CurrentStatus{ get; set; }
