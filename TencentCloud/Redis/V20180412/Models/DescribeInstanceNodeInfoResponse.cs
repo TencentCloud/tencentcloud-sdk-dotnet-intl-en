@@ -31,34 +31,34 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// Proxy node information
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Proxy node information 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Proxy")]
         public ProxyNodes[] Proxy{ get; set; }
 
         /// <summary>
-        /// The number of redis nodes
+        /// The number of Redis nodes
         /// </summary>
         [JsonProperty("RedisCount")]
         public long? RedisCount{ get; set; }
 
         /// <summary>
-        /// Redis node information
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Redis node information 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Redis")]
         public RedisNodes[] Redis{ get; set; }
 
         /// <summary>
-        /// The number of tendis nodes
+        /// This parameter has been disused.
         /// </summary>
         [JsonProperty("TendisCount")]
         public long? TendisCount{ get; set; }
 
         /// <summary>
-        /// Tendis node information
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// This parameter has been disused. 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tendis")]
         public TendisNodes[] Tendis{ get; set; }

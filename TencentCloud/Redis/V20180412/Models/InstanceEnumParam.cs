@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Parameter type: Enum
+        /// Parameter type, such as `Enum`.
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// Whether restart is required after a modification is made. Valid values: true, false
+        /// Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Parameter description
+        /// Description
         /// </summary>
         [JsonProperty("Tips")]
         public string Tips{ get; set; }
 
         /// <summary>
-        /// Valid values of the parameter
+        /// Acceptable values for the parameter
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// Parameter status. 1: modifying; 2: modified
+        /// Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

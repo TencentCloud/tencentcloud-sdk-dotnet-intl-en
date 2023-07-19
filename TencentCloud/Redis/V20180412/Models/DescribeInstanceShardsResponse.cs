@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Information list of instance shards
+        /// List information of the instance shards, which includes  node information, node ID, key count, used capacity, and capacity slope.
         /// </summary>
         [JsonProperty("InstanceShards")]
         public InstanceClusterShard[] InstanceShards{ get; set; }
 
         /// <summary>
-        /// Total number of instance shard nodes
+        /// Number of instance shard nodes
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

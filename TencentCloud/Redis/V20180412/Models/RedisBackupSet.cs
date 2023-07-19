@@ -31,28 +31,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Backup ID
+        /// Backup task ID
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// Backup type
-        /// 
-        /// - `1`: Manual backup initiated by the user.
-        /// - `0`: Automatic backup in the early morning initiated by the system.
+        /// Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// Backup status 
-        /// 
-        /// - `1`: The backup is locked by another process.
-        /// - `2`: The backup is normal and not locked by any process.
-        /// - `-1`: The backup expired.
-        /// - `3`: The backup is being exported.
-        /// - `4`: The backup was exported successfully.
+        /// Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -64,10 +55,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Whether the backup is locked
-        /// 
-        /// - `0`: Not locked.
-        /// - `1`: Locked.
+        /// Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }

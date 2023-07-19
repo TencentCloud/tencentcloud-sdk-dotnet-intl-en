@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Automatic backup type: 1 (scheduled rollback)
+        /// Automatic backup type.  Valid value:  `1` (scheduled backup).
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] WeekDays{ get; set; }
 
         /// <summary>
-        /// Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+        /// Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
         /// </summary>
         [JsonProperty("TimePeriod")]
         public string TimePeriod{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The start time
+        /// Start time for prequerying a slow log
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// The end time
+        /// End time for prequerying a slow log
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The average execution time threshold of slow query in ms.
+        /// The average execution time threshold of slow query  in microseconds
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// Number of slow queries displayed per page. Default value: `20`.
+        /// Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Slow query offset, which is an integral multiple of `Limit`.
+        /// Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

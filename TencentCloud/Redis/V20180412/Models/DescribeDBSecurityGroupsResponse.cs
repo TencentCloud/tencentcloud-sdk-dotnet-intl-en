@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public SecurityGroup[] Groups{ get; set; }
 
         /// <summary>
-        /// Private IP for which the security group takes effect
+        /// Private IPv4 address of an instance
         /// </summary>
         [JsonProperty("VIP")]
         public string VIP{ get; set; }
 
         /// <summary>
-        /// Private port for which the security group takes effect
+        /// Private network port
         /// </summary>
         [JsonProperty("VPort")]
         public string VPort{ get; set; }

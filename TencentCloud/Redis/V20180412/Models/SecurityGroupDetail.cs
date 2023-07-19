@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Security group creation time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string SecurityGroupRemark{ get; set; }
 
         /// <summary>
-        /// Security group inbound rule
+        /// Inbound rules of the security group, which control the access source to the database.
         /// </summary>
         [JsonProperty("InboundRule")]
         public SecurityGroupsInboundAndOutbound[] InboundRule{ get; set; }

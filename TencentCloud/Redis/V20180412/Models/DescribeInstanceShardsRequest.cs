@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether to filter out the replica node information
+        /// Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
         /// </summary>
         [JsonProperty("FilterSlave")]
         public bool? FilterSlave{ get; set; }

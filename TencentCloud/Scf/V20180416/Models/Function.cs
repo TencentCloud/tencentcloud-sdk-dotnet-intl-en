@@ -37,7 +37,8 @@ namespace TencentCloud.Scf.V20180416.Models
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// Running
+        /// Runtime 
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }

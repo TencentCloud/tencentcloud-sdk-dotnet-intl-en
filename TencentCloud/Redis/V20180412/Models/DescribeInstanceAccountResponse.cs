@@ -25,15 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Account details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Account details 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// Number of accounts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of accounts 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,49 +37,49 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+        /// Number of taskss returned per page.  Default value: `20`. Maximum value: `100`.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit` (rounded down automatically).
+        /// Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// Task type
+        /// Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. - `FLOW_BACKUPINSTANCE`: Back up an instance.
         /// </summary>
         [JsonProperty("TaskTypes")]
         public string[] TaskTypes{ get; set; }
 
         /// <summary>
-        /// Start time
+        /// Start time for executing a task,  in the format of  “2020-10-12 00:00:00”.
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time for executing a task,  in the format of  “2021-12-30 20:59:35”.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Task status
+        /// This parameter is only for internal use and can be ignored.
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long?[] TaskStatus{ get; set; }
 
         /// <summary>
-        /// Task status
+        /// Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed)
         /// </summary>
         [JsonProperty("Result")]
         public long?[] Result{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] OperatorUin{ get; set; }
 
         /// <summary>
-        /// Operator Uin
+        /// Operator account ID or UIN
         /// </summary>
         [JsonProperty("OperateUin")]
         public string[] OperateUin{ get; set; }

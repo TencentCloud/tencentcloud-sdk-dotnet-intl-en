@@ -25,25 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-        /// 2. It cannot start with a slash (/).
-        /// 3. It must contain characters in at least two of the following types:
-        ///     a. Lowercase letters (a–z)
-        ///     b. Uppercase letters (A–Z)
-        ///     c. Digits (0–9)
-        ///     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+        /// A parameter used to configure the access password for a specified instance. If password-free authentication is enabled, this parameter will not be required. Required password strength. - It must contains 8-30 characters. We recommend that you use a password of more than 12 characters. - It must contain at least two of the following types: lowercase letters, uppercase letters, digits, and symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/), and it cannot start with a slash (/).
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Node information of a single-AZ deployed instance
+        /// Shard ID of a sharded cluster
         /// </summary>
         [JsonProperty("ShardIds")]
         public long?[] ShardIds{ get; set; }

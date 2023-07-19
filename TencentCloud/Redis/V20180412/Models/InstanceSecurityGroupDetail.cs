@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Security group information
+        /// Security group information, which includes  security group ID, name, outbound and inbound rules.
         /// </summary>
         [JsonProperty("SecurityGroupDetails")]
         public SecurityGroupDetail[] SecurityGroupDetails{ get; set; }

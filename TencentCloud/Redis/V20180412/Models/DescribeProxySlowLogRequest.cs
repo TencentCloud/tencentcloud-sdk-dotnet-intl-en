@@ -25,31 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time
+        /// Start time of slow query
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time of slow query
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Slow query threshold in milliseconds
+        /// Slow query threshold  in milliseconds
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// Maximum number of results returned per page
+        /// Number of results per page.  Default value: `20`. Value range: [20,1000].
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

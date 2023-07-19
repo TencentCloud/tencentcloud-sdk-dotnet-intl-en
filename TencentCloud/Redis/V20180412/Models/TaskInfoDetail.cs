@@ -25,64 +25,64 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Task ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task ID 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// Start time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task start time 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Task type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task type. Valid values:  - `FLOW_CREATE`: Create an instance. - `FLOW_MODIFYCONNECTIONCONFIG`: Adjust the number of bandwidth connections. - `FLOW_MODIFYINSTANCEPASSWORDFREE`: Modify the process of password-free access. - `FLOW_CLEARNETWORK`: Returning VPC - `FLOW_SETPWD`: Set the access password. - `FLOW_EXPORSHR`: Expand or reduce the capacity. - `FLOW_UpgradeArch`: Upgrade the instance architecture. - `FLOW_MODIFYINSTANCEPARAMS`: Modify the instance parameters. - `FLOW_MODIFYINSTACEREADONLY`: Modify read-only process. - `FLOW_CLOSE`: Disable the instance. - `FLOW_DELETE`: Delete the instance. - `FLOW_OPEN_WAN`: Enable the public network. - `FLOW_FLOW_CLEAN`: Clear the instance. - `FLOW_MODIFYINSTANCEACCOUNT`: Modify the instance account. - `FLOW_ENABLEINSTANCE_REPLICATE`: Enable the replica read-only feature. - `FLOW_DISABLEINSTANCE_REPLICATE`: Disable the replica read-only feature. - `FLOW_SWITCHINSTANCEVIP`: Swap the VIPs of instances. - FLOW_CHANGE_REPLICA_TO_MSTER: Promote the replica node to the mater node. Backup instance 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Instance name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance ID 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Project ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Project ID 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Task progress
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task progress 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
         /// <summary>
-        /// End time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task end time 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Task status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task execution status. Valid values: - `0` (initilized) - `1` (executing) - `2` (completed) - `4` (failed) 
+        /// Note:  This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Result")]
         public long? Result{ get; set; }

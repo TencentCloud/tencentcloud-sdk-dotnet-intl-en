@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Action to be executed
+        /// Identify whether the IP and port for accessing the database are allowed
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// IP addresses
+        /// IP address for accessing the database
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

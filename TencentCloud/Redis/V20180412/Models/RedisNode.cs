@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Number of keys on the node
+        /// Number of keys on Redis nodes
         /// </summary>
         [JsonProperty("Keys")]
         public long? Keys{ get; set; }
 
         /// <summary>
-        /// Distribution of node slots
+        /// Slot distribution range for Redis node.  Value range:  0-5460.
         /// </summary>
         [JsonProperty("Slot")]
         public string Slot{ get; set; }
 
         /// <summary>
-        /// Node ID
+        /// Node sequence ID
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Number of instance parameters
+        /// Total number of the parameter lists
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

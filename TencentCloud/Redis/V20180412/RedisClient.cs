@@ -253,7 +253,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
+        /// This API is used to promote a replica node group to a master node group or a replica node to a master node for an instance.
         /// </summary>
         /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
         /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
+        /// This API is used to promote a replica node group to a master node group or a replica node to a master node for an instance.
         /// </summary>
         /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
         /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
@@ -653,7 +653,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to get the backup configuration.
+        /// This API is used to get the configuration rules for an automatic backup.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoBackupConfigRequest"/></param>
         /// <returns><see cref="DescribeAutoBackupConfigResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to get the backup configuration.
+        /// This API is used to get the configuration rules for an automatic backup.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoBackupConfigRequest"/></param>
         /// <returns><see cref="DescribeAutoBackupConfigResponse"/></returns>
@@ -893,7 +893,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to view instance sub-account information.
+        /// This API is used to query the information of an instance sub-account.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
         /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to view instance sub-account information.
+        /// This API is used to query the information of an instance sub-account.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
         /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
@@ -1373,7 +1373,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query instance node information.
+        /// This API is used to query the information of an instance node.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
@@ -1393,7 +1393,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query instance node information.
+        /// This API is used to query the information of an instance node.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
@@ -1453,7 +1453,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of instance parameters.
+        /// This API is used to query the parameter list of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -1473,7 +1473,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of instance parameters.
+        /// This API is used to query the parameter list of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -1533,7 +1533,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to get the information of Cluster Edition instance shards.
+        /// This API is used to get the shard information of the instance on cluster architecture.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceShardsRequest"/></param>
         /// <returns><see cref="DescribeInstanceShardsResponse"/></returns>
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to get the information of Cluster Edition instance shards.
+        /// This API is used to get the shard information of the instance on cluster architecture.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceShardsRequest"/></param>
         /// <returns><see cref="DescribeInstanceShardsResponse"/></returns>
@@ -1573,7 +1573,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the Redis node details.
+        /// This API is used to query the details of a Redis node.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
@@ -1593,7 +1593,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the Redis node details.
+        /// This API is used to query the details of a Redis node.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
@@ -2093,7 +2093,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of tasks.
+        /// This API is used to query the task list information of a specified instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskListRequest"/></param>
         /// <returns><see cref="DescribeTaskListResponse"/></returns>
@@ -2113,7 +2113,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of tasks.
+        /// This API is used to query the task list information of a specified instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskListRequest"/></param>
         /// <returns><see cref="DescribeTaskListResponse"/></returns>
@@ -2453,7 +2453,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to perform a failure simulation.
+        /// This API is used to simulate the failure.
         /// </summary>
         /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
         /// <returns><see cref="KillMasterGroupResponse"/></returns>
@@ -2473,7 +2473,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to perform a failure simulation.
+        /// This API is used to simulate the failure.
         /// </summary>
         /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
         /// <returns><see cref="KillMasterGroupResponse"/></returns>
@@ -2573,7 +2573,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to configure automatic backup.
+        /// This API is used to set the configuration for an automatic backup.
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyAutoBackupConfigResponse"/></returns>
@@ -2593,7 +2593,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to configure automatic backup.
+        /// This API is used to set the configuration for an automatic backup.
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyAutoBackupConfigResponse"/></returns>

@@ -31,25 +31,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// ID of the runtime node of the instance
+        /// ID of the runtime node of an instance
         /// </summary>
         [JsonProperty("RunId")]
         public string RunId{ get; set; }
 
         /// <summary>
-        /// Cluster role. 0: master; 1: replica
+        /// Cluster role. Valid values:  - `0` (master) - `1` (replica)
         /// </summary>
         [JsonProperty("Role")]
         public long? Role{ get; set; }
 
         /// <summary>
-        /// Node status. 0: readwrite; 1: read; 2: backup
+        /// Node status. Valid values:  - `0` (read/write) - `1` (read) - `2` (backup)
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Service status. 0: down; 1: on
+        /// Service status. Valid values: `0` (down), `1` (on).
         /// </summary>
         [JsonProperty("Connected")]
         public long? Connected{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string DownTime{ get; set; }
 
         /// <summary>
-        /// Distribution of node slots
+        /// Node slot distribution range
         /// </summary>
         [JsonProperty("Slots")]
         public string Slots{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Keys{ get; set; }
 
         /// <summary>
-        /// Node QPS
+        /// Node QPS Number of executions per second on sharded nodes Unit: Counts/sec
         /// </summary>
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// Node QPS slope
+        /// QPS slope of a node
         /// </summary>
         [JsonProperty("QpsSlope")]
         public float? QpsSlope{ get; set; }

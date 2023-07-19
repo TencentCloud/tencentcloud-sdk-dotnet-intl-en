@@ -61,8 +61,9 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// * Qualifier:
-        /// Function version, alias
+        /// * Qualifier: Version/Alias of trigger function 
+        /// *TriggerName: Name of the trigger 
+        /// *Description: Function trigger description
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
