@@ -127,7 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// 
+        /// Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }

@@ -811,6 +811,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to create a database in a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDatabaseResponse"/></returns>
+        public async Task<CreateDatabaseResponse> CreateDatabase(CreateDatabaseRequest req)
+        {
+             JsonResponseModel<CreateDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a database in a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDatabaseResponse"/></returns>
+        public CreateDatabaseResponse CreateDatabaseSync(CreateDatabaseRequest req)
+        {
+             JsonResponseModel<CreateDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
@@ -3729,7 +3769,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to set the default encryption status of an instance backup. 
+        /// This API is used to set the encryption status of an instance backup.
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupEncryptionStatusRequest"/></param>
         /// <returns><see cref="ModifyBackupEncryptionStatusResponse"/></returns>
@@ -3749,7 +3789,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API is used to set the default encryption status of an instance backup. 
+        /// This API is used to set the encryption status of an instance backup.
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupEncryptionStatusRequest"/></param>
         /// <returns><see cref="ModifyBackupEncryptionStatusResponse"/></returns>

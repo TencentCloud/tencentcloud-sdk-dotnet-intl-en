@@ -37,10 +37,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance type Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        public long? InstanceType{ get; set; }
 
         /// <summary>
         /// Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.

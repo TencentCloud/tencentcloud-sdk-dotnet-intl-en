@@ -21,38 +21,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBinlogsRequest : AbstractModel
+    public class CreateDatabaseRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+        /// Instance ID in the format of `cdb-c1nl9rpv`,  which is the same as the one displayed in the TencentDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Offset. Minimum value: 0.
+        /// 
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("DBName")]
+        public string DBName{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Value range: 1-100. Default value: 20.
+        /// Character set. Valid values:  `utf8`, `gbk`, `latin1`, `utf8mb4`.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// The earliest start time of binlog  in the format of 2016-03-17 02:10:37.
-        /// </summary>
-        [JsonProperty("MinStartTime")]
-        public string MinStartTime{ get; set; }
-
-        /// <summary>
-        /// The latest start time of binlog  in the format of 2016-03-17 02:10:37.
-        /// </summary>
-        [JsonProperty("MaxStartTime")]
-        public string MaxStartTime{ get; set; }
+        [JsonProperty("CharacterSetName")]
+        public string CharacterSetName{ get; set; }
 
 
         /// <summary>
@@ -61,10 +49,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "MinStartTime", this.MinStartTime);
-            this.SetParamSimple(map, prefix + "MaxStartTime", this.MaxStartTime);
+            this.SetParamSimple(map, prefix + "DBName", this.DBName);
+            this.SetParamSimple(map, prefix + "CharacterSetName", this.CharacterSetName);
         }
     }
 }
