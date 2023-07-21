@@ -45,7 +45,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// ID of the log topic to be searched
+        /// - The ID of the log topic to be searched for. Only one log topic can be specified.
+        /// - To search for multiple log topics at a time, use the `Topics` parameter.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -104,6 +105,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
 
+        /// <summary>
+        /// - The IDs of the log topics (up to 20) to be searched for.
+        /// - To search for a single log topic, use the `TopicId` parameter.
+        /// - You cannot use both `TopicId` and `Topics`.
+        /// </summary>
+        [JsonProperty("Topics")]
+        public MultiTopicSearchInformation[] Topics{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +129,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
             this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
         }
     }
 }

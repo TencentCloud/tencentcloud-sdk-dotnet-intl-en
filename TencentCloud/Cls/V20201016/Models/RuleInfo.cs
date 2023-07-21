@@ -47,7 +47,9 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This feature is currently in a beta test. To use it, please contact technical support.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DynamicIndex")]
         public DynamicIndex DynamicIndex{ get; set; }

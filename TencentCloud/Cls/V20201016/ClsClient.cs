@@ -133,6 +133,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to check whether the Kafka service cluster is accessible.
+        /// </summary>
+        /// <param name="req"><see cref="CheckRechargeKafkaServerRequest"/></param>
+        /// <returns><see cref="CheckRechargeKafkaServerResponse"/></returns>
+        public async Task<CheckRechargeKafkaServerResponse> CheckRechargeKafkaServer(CheckRechargeKafkaServerRequest req)
+        {
+             JsonResponseModel<CheckRechargeKafkaServerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckRechargeKafkaServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckRechargeKafkaServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to check whether the Kafka service cluster is accessible.
+        /// </summary>
+        /// <param name="req"><see cref="CheckRechargeKafkaServerRequest"/></param>
+        /// <returns><see cref="CheckRechargeKafkaServerResponse"/></returns>
+        public CheckRechargeKafkaServerResponse CheckRechargeKafkaServerSync(CheckRechargeKafkaServerRequest req)
+        {
+             JsonResponseModel<CheckRechargeKafkaServerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckRechargeKafkaServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckRechargeKafkaServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to disable Kafka consumption.
         /// </summary>
         /// <param name="req"><see cref="CloseKafkaConsumerRequest"/></param>
@@ -373,6 +413,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to create a data processing task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataTransformRequest"/></param>
+        /// <returns><see cref="CreateDataTransformResponse"/></returns>
+        public async Task<CreateDataTransformResponse> CreateDataTransform(CreateDataTransformRequest req)
+        {
+             JsonResponseModel<CreateDataTransformResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDataTransform");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataTransformResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a data processing task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataTransformRequest"/></param>
+        /// <returns><see cref="CreateDataTransformResponse"/></returns>
+        public CreateDataTransformResponse CreateDataTransformSync(CreateDataTransformRequest req)
+        {
+             JsonResponseModel<CreateDataTransformResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDataTransform");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataTransformResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
@@ -444,6 +524,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "CreateIndex");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Kafka data subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateKafkaRechargeRequest"/></param>
+        /// <returns><see cref="CreateKafkaRechargeResponse"/></returns>
+        public async Task<CreateKafkaRechargeResponse> CreateKafkaRecharge(CreateKafkaRechargeRequest req)
+        {
+             JsonResponseModel<CreateKafkaRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateKafkaRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKafkaRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a Kafka data subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateKafkaRechargeRequest"/></param>
+        /// <returns><see cref="CreateKafkaRechargeResponse"/></returns>
+        public CreateKafkaRechargeResponse CreateKafkaRechargeSync(CreateKafkaRechargeRequest req)
+        {
+             JsonResponseModel<CreateKafkaRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateKafkaRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKafkaRechargeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,6 +933,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to delete a data processing task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataTransformRequest"/></param>
+        /// <returns><see cref="DeleteDataTransformResponse"/></returns>
+        public async Task<DeleteDataTransformResponse> DeleteDataTransform(DeleteDataTransformRequest req)
+        {
+             JsonResponseModel<DeleteDataTransformResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDataTransform");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDataTransformResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a data processing task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataTransformRequest"/></param>
+        /// <returns><see cref="DeleteDataTransformResponse"/></returns>
+        public DeleteDataTransformResponse DeleteDataTransformSync(DeleteDataTransformRequest req)
+        {
+             JsonResponseModel<DeleteDataTransformResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDataTransform");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDataTransformResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete a log download task.
         /// </summary>
         /// <param name="req"><see cref="DeleteExportRequest"/></param>
@@ -884,6 +1044,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DeleteIndex");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Kafka data subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKafkaRechargeRequest"/></param>
+        /// <returns><see cref="DeleteKafkaRechargeResponse"/></returns>
+        public async Task<DeleteKafkaRechargeResponse> DeleteKafkaRecharge(DeleteKafkaRechargeRequest req)
+        {
+             JsonResponseModel<DeleteKafkaRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteKafkaRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteKafkaRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a Kafka data subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKafkaRechargeRequest"/></param>
+        /// <returns><see cref="DeleteKafkaRechargeResponse"/></returns>
+        public DeleteKafkaRechargeResponse DeleteKafkaRechargeSync(DeleteKafkaRechargeRequest req)
+        {
+             JsonResponseModel<DeleteKafkaRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteKafkaRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteKafkaRechargeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1013,7 +1213,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete a shipping rule.
+        /// This API is used to delete a COS shipping task.
         /// </summary>
         /// <param name="req"><see cref="DeleteShipperRequest"/></param>
         /// <returns><see cref="DeleteShipperResponse"/></returns>
@@ -1033,7 +1233,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete a shipping rule.
+        /// This API is used to delete a COS shipping task.
         /// </summary>
         /// <param name="req"><see cref="DeleteShipperRequest"/></param>
         /// <returns><see cref="DeleteShipperResponse"/></returns>
@@ -1373,6 +1573,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to get the basic information of data processing tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataTransformInfoRequest"/></param>
+        /// <returns><see cref="DescribeDataTransformInfoResponse"/></returns>
+        public async Task<DescribeDataTransformInfoResponse> DescribeDataTransformInfo(DescribeDataTransformInfoRequest req)
+        {
+             JsonResponseModel<DescribeDataTransformInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataTransformInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataTransformInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the basic information of data processing tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataTransformInfoRequest"/></param>
+        /// <returns><see cref="DescribeDataTransformInfoResponse"/></returns>
+        public DescribeDataTransformInfoResponse DescribeDataTransformInfoSync(DescribeDataTransformInfoRequest req)
+        {
+             JsonResponseModel<DescribeDataTransformInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataTransformInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataTransformInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the list of log download tasks.
         /// </summary>
         /// <param name="req"><see cref="DescribeExportsRequest"/></param>
@@ -1444,6 +1684,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIndex");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of Kafka data subscription tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaRechargesRequest"/></param>
+        /// <returns><see cref="DescribeKafkaRechargesResponse"/></returns>
+        public async Task<DescribeKafkaRechargesResponse> DescribeKafkaRecharges(DescribeKafkaRechargesRequest req)
+        {
+             JsonResponseModel<DescribeKafkaRechargesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKafkaRecharges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKafkaRechargesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the list of Kafka data subscription tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaRechargesRequest"/></param>
+        /// <returns><see cref="DescribeKafkaRechargesResponse"/></returns>
+        public DescribeKafkaRechargesResponse DescribeKafkaRechargesSync(DescribeKafkaRechargesRequest req)
+        {
+             JsonResponseModel<DescribeKafkaRechargesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKafkaRecharges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKafkaRechargesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2133,6 +2413,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to modify a data processing task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataTransformRequest"/></param>
+        /// <returns><see cref="ModifyDataTransformResponse"/></returns>
+        public async Task<ModifyDataTransformResponse> ModifyDataTransform(ModifyDataTransformRequest req)
+        {
+             JsonResponseModel<ModifyDataTransformResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDataTransform");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDataTransformResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a data processing task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataTransformRequest"/></param>
+        /// <returns><see cref="ModifyDataTransformResponse"/></returns>
+        public ModifyDataTransformResponse ModifyDataTransformSync(ModifyDataTransformRequest req)
+        {
+             JsonResponseModel<ModifyDataTransformResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDataTransform");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDataTransformResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the index configuration. It is subject to the default request frequency limit, and the number of concurrent requests to the same log topic cannot exceed 1, i.e., the index configuration of only one log topic can be modified at a time.
         /// </summary>
         /// <param name="req"><see cref="ModifyIndexRequest"/></param>
@@ -2164,6 +2484,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIndex");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a Kafka data subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaRechargeRequest"/></param>
+        /// <returns><see cref="ModifyKafkaRechargeResponse"/></returns>
+        public async Task<ModifyKafkaRechargeResponse> ModifyKafkaRecharge(ModifyKafkaRechargeRequest req)
+        {
+             JsonResponseModel<ModifyKafkaRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyKafkaRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyKafkaRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a Kafka data subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaRechargeRequest"/></param>
+        /// <returns><see cref="ModifyKafkaRechargeResponse"/></returns>
+        public ModifyKafkaRechargeResponse ModifyKafkaRechargeSync(ModifyKafkaRechargeRequest req)
+        {
+             JsonResponseModel<ModifyKafkaRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyKafkaRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyKafkaRechargeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2364,6 +2724,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "OpenKafkaConsumer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenKafkaConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to preview the logs of Kafka data subscription tasks.
+        /// </summary>
+        /// <param name="req"><see cref="PreviewKafkaRechargeRequest"/></param>
+        /// <returns><see cref="PreviewKafkaRechargeResponse"/></returns>
+        public async Task<PreviewKafkaRechargeResponse> PreviewKafkaRecharge(PreviewKafkaRechargeRequest req)
+        {
+             JsonResponseModel<PreviewKafkaRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PreviewKafkaRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PreviewKafkaRechargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to preview the logs of Kafka data subscription tasks.
+        /// </summary>
+        /// <param name="req"><see cref="PreviewKafkaRechargeRequest"/></param>
+        /// <returns><see cref="PreviewKafkaRechargeResponse"/></returns>
+        public PreviewKafkaRechargeResponse PreviewKafkaRechargeSync(PreviewKafkaRechargeRequest req)
+        {
+             JsonResponseModel<PreviewKafkaRechargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PreviewKafkaRecharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PreviewKafkaRechargeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -60,8 +60,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public string BeginRegex{ get; set; }
 
         /// <summary>
-        /// Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MetadataType{ get; set; }
 
         /// <summary>
-        /// Regular expression of the collection path, which is required when `MetadataType` is set to `3`.
+        /// Regular expression of the collection configuration path, which is required when `MetadataType` is set to `3`
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PathRegex")]

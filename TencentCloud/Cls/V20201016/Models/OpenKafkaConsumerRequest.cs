@@ -36,6 +36,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }
 
+        /// <summary>
+        /// Kafka consumer data format
+        /// </summary>
+        [JsonProperty("ConsumerContent")]
+        public KafkaConsumerContent ConsumerContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
         }
     }
 }

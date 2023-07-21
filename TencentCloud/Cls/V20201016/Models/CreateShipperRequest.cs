@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Interval{ get; set; }
 
         /// <summary>
-        /// Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100-256
+        /// Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
