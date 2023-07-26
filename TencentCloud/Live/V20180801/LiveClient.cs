@@ -3541,6 +3541,52 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// This API is used to retrieve a list of recording tasks that were started and ended within a specified time range. 
+        /// - Prerequisites: 
+        /// 1. This API is only used to query recording tasks created by the CreateRecordTask interface. 
+        /// 2. It cannot retrieve recording tasks that have been deleted by the DeleteRecordTask interface or tasks that have expired (platform retains for 3 months).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordTaskResponse"/></returns>
+        public async Task<DescribeRecordTaskResponse> DescribeRecordTask(DescribeRecordTaskRequest req)
+        {
+             JsonResponseModel<DescribeRecordTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to retrieve a list of recording tasks that were started and ended within a specified time range. 
+        /// - Prerequisites: 
+        /// 1. This API is only used to query recording tasks created by the CreateRecordTask interface. 
+        /// 2. It cannot retrieve recording tasks that have been deleted by the DeleteRecordTask interface or tasks that have expired (platform retains for 3 months).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordTaskResponse"/></returns>
+        public DescribeRecordTaskResponse DescribeRecordTaskSync(DescribeRecordTaskRequest req)
+        {
+             JsonResponseModel<DescribeRecordTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// The API is used to query the number of screenshots as an LVB value-added service.
         /// </summary>
         /// <param name="req"><see cref="DescribeScreenShotSheetNumListRequest"/></param>

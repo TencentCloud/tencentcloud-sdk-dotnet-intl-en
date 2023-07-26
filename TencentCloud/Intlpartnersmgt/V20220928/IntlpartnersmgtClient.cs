@@ -149,6 +149,46 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
+        /// This API is used to query the customer bill details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeBillDetailResponse"/></returns>
+        public async Task<DescribeBillDetailResponse> DescribeBillDetail(DescribeBillDetailRequest req)
+        {
+             JsonResponseModel<DescribeBillDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the customer bill details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeBillDetailResponse"/></returns>
+        public DescribeBillDetailResponse DescribeBillDetailSync(DescribeBillDetailRequest req)
+        {
+             JsonResponseModel<DescribeBillDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to obtain the total amount of customer bills by payment mode.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
