@@ -143,7 +143,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// 
+        /// The account ID of the payer, which is the unique identifier of a Tencent Cloud user. This account is allowed to query its own bills by default. If an organization admin account needs to query the self-pay bills of members, this field should be specified as the member account ID.
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }

@@ -68,13 +68,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string UsedAmountUnit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RealTotalMeasure")]
         public string RealTotalMeasure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DeductedMeasure")]
         public string DeductedMeasure{ get; set; }
