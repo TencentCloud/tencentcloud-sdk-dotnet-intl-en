@@ -21,34 +21,22 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Resource : AbstractModel
+    public class SpecAvailability : AbstractModel
     {
         
         /// <summary>
-        /// Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
-        /// </summary>
-        [JsonProperty("Type")]
-        public string[] Type{ get; set; }
-
-        /// <summary>
-        /// ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
-        /// </summary>
-        [JsonProperty("Isp")]
-        public string Isp{ get; set; }
-
-        /// <summary>
-        /// Available resources
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("AvailabilitySet")]
-        public ResourceAvailability[] AvailabilitySet{ get; set; }
-
-        /// <summary>
-        /// ISP Type
+        /// Specification type
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TypeSet")]
-        public TypeInfo[] TypeSet{ get; set; }
+        [JsonProperty("SpecType")]
+        public string SpecType{ get; set; }
+
+        /// <summary>
+        /// Specification availability
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Availability")]
+        public string Availability{ get; set; }
 
 
         /// <summary>
@@ -56,10 +44,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Type.", this.Type);
-            this.SetParamSimple(map, prefix + "Isp", this.Isp);
-            this.SetParamArrayObj(map, prefix + "AvailabilitySet.", this.AvailabilitySet);
-            this.SetParamArrayObj(map, prefix + "TypeSet.", this.TypeSet);
+            this.SetParamSimple(map, prefix + "SpecType", this.SpecType);
+            this.SetParamSimple(map, prefix + "Availability", this.Availability);
         }
     }
 }

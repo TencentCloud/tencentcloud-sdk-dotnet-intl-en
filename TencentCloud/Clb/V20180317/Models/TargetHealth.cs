@@ -55,9 +55,10 @@ namespace TencentCloud.Clb.V20180317.Models
         public string HealthStatusDetail{ get; set; }
 
         /// <summary>
-        /// Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
+        /// (**This parameter will be disused soon. Please use `HealthStatusDetail` instead.**) Details of the current health status. Values: `Alive` (healthy), `Dead` (abnormal), `Unknown` (Health check not started/checking/unknown status)
         /// </summary>
         [JsonProperty("HealthStatusDetial")]
+        [System.Obsolete]
         public string HealthStatusDetial{ get; set; }
 
 

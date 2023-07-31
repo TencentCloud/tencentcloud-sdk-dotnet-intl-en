@@ -38,7 +38,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? TimeOut{ get; set; }
 
         /// <summary>
-        /// Health check interval in seconds. Value range: 5-300. Default value: 5.
+        /// Health check probing interval period. It defaults to `5`. For IPv4 CLB instances, the range is 2-300. u200dFor IPv6 CLB instances, the range is 5-300. Unit: second
+        /// Note: For some IPv4 CLB instances created long ago, the range is 5-300.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IntervalTime")]

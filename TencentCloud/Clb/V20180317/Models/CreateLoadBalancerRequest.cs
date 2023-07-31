@@ -88,7 +88,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// CLB network billing mode. This parameter is applicable only to public network CLB instances.
+        /// It only works on LCU-supported instances on private networks and all instances on public networks.
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
@@ -127,8 +127,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// Creates an LCU-supported instance.
         /// <ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
-        /// <ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
-        /// <li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
+        /// <ul><li>The default specification is Super Large 1.
+        /// <li>If you have enabled Super u200dLarge LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
@@ -176,6 +176,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
+        /// <summary>
+        /// Upgrades to domain name-based CLB
+        /// </summary>
+        [JsonProperty("DynamicVip")]
+        public bool? DynamicVip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +212,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
         }
     }
 }

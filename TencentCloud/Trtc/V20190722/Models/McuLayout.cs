@@ -91,6 +91,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("CustomCrop")]
         public McuCustomCrop CustomCrop{ get; set; }
 
+        /// <summary>
+        /// The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+        /// </summary>
+        [JsonProperty("BackgroundRenderMode")]
+        public ulong? BackgroundRenderMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
             this.SetParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
             this.SetParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
+            this.SetParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
         }
     }
 }

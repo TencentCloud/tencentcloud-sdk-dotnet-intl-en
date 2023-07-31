@@ -66,6 +66,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("DeleteProtect")]
         public bool? DeleteProtect{ get; set; }
 
+        /// <summary>
+        /// Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+        /// </summary>
+        [JsonProperty("ModifyClassicDomain")]
+        public bool? ModifyClassicDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
+            this.SetParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);
         }
     }
 }

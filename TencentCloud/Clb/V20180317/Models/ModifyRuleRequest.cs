@@ -74,13 +74,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ForwardType{ get; set; }
 
         /// <summary>
-        /// TRPC callee server route, which is required when `ForwardType` is "TRPC".
+        /// TRPC callee server route, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
         /// </summary>
         [JsonProperty("TrpcCallee")]
         public string TrpcCallee{ get; set; }
 
         /// <summary>
-        /// TRPC calling service API, which is required when `ForwardType` is "TRPC".
+        /// TRPC calling service API, which is required when `ForwardType` is "TRPC". This is now only for internal usage.
         /// </summary>
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }
