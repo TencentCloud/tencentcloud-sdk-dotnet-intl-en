@@ -25,25 +25,29 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+        /// Constant parameter name This is only applicable when `ServiceType` is `HTTP`.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+        /// Constant parameter description This is only applicable when `ServiceType` is `HTTP`.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+        /// Constant paramter location This is only applicable when `ServiceType` is `HTTP`.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }
 
         /// <summary>
-        /// Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+        /// Default value of the constant parameter This is only applicable when `ServiceType` is `HTTP`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }

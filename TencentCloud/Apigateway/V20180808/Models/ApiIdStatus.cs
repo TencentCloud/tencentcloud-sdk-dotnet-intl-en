@@ -38,6 +38,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
 
         /// <summary>
         /// API description
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApiDesc")]
         public string ApiDesc{ get; set; }
@@ -127,6 +128,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RelationBuniessApiIds")]
+        [System.Obsolete]
         public string[] RelationBuniessApiIds{ get; set; }
 
         /// <summary>

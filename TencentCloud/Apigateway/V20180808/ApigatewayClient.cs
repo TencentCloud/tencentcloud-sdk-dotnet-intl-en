@@ -2771,46 +2771,6 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
-        /// </summary>
-        /// <param name="req"><see cref="GenerateApiDocumentRequest"/></param>
-        /// <returns><see cref="GenerateApiDocumentResponse"/></returns>
-        public async Task<GenerateApiDocumentResponse> GenerateApiDocument(GenerateApiDocumentRequest req)
-        {
-             JsonResponseModel<GenerateApiDocumentResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GenerateApiDocument");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateApiDocumentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
-        /// </summary>
-        /// <param name="req"><see cref="GenerateApiDocumentRequest"/></param>
-        /// <returns><see cref="GenerateApiDocumentResponse"/></returns>
-        public GenerateApiDocumentResponse GenerateApiDocumentSync(GenerateApiDocumentRequest req)
-        {
-             JsonResponseModel<GenerateApiDocumentResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GenerateApiDocument");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateApiDocumentResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is used to import an OpenAPI to API gateway. 
         /// </summary>
         /// <param name="req"><see cref="ImportOpenApiRequest"/></param>
@@ -3737,7 +3697,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+        /// u200dThis API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
         /// <returns><see cref="UpdateServiceResponse"/></returns>
@@ -3757,7 +3717,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+        /// u200dThis API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
         /// <returns><see cref="UpdateServiceResponse"/></returns>

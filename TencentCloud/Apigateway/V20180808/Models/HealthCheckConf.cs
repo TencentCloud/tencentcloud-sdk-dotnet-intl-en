@@ -26,24 +26,28 @@ namespace TencentCloud.Apigateway.V20180808.Models
         
         /// <summary>
         /// Whether health check is enabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsHealthCheck")]
         public bool? IsHealthCheck{ get; set; }
 
         /// <summary>
-        /// Health check threshold.
+        /// Health check threshold. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RequestVolumeThreshold")]
         public long? RequestVolumeThreshold{ get; set; }
 
         /// <summary>
-        /// Window size.
+        /// Window size. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SleepWindowInMilliseconds")]
         public long? SleepWindowInMilliseconds{ get; set; }
 
         /// <summary>
         /// Threshold percentage.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorThresholdPercentage")]
         public long? ErrorThresholdPercentage{ get; set; }

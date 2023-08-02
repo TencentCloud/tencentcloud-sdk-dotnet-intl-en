@@ -43,7 +43,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string UsagePlanName{ get; set; }
 
         /// <summary>
-        /// Usage plan description.
+        /// Usage plan description. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UsagePlanDesc")]
         public string UsagePlanDesc{ get; set; }
