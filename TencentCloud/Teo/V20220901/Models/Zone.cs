@@ -152,13 +152,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public string AliasZoneName{ get; set; }
 
         /// <summary>
-        /// Whether it’s a fake site. Values:
-        /// <li>`0`: Non-fake site</li>
-        /// <li>`1`: Fake site</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether it’s a fake site. Valid values: 
+        /// <li>`0`: Non-fake site;</li>
+        /// <li>`1`: Fake site.</li>
         /// </summary>
         [JsonProperty("IsFake")]
         public long? IsFake{ get; set; }
+
+        /// <summary>
+        /// Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+        /// </summary>
+        [JsonProperty("LockStatus")]
+        public string LockStatus{ get; set; }
 
 
         /// <summary>
@@ -185,6 +190,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
             this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
             this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
+            this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
         }
     }
 }

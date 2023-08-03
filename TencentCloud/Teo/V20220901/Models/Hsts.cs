@@ -33,8 +33,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The MaxAge value in seconds. Maximum value: `86400` (one day)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// MaxAge (in seconds). The maximum value is 1 day. 
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxAge")]
         public long? MaxAge{ get; set; }

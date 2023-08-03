@@ -31,8 +31,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of resources to be pre-warmed, for example:
-        /// http://www.example.com/example.txt
+        /// Resources to be pre-warmed, for example: 
+        /// http://www.example.com/example.txt 
+        /// Note: The number of submitted tasks is limited by the quota of the plan. For details, see [Billing Overview](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }

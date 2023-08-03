@@ -21,14 +21,14 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSpeedTestingDetailsResponse : AbstractModel
+    public class CreateSecurityIPGroupResponse : AbstractModel
     {
         
         /// <summary>
-        /// The site’s load speed across regions.
+        /// IP group ID.
         /// </summary>
-        [JsonProperty("SpeedTestingDetailData")]
-        public SpeedTestingDetailData SpeedTestingDetailData{ get; set; }
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,7 +42,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "SpeedTestingDetailData.", this.SpeedTestingDetailData);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

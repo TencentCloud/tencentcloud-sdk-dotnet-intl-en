@@ -148,6 +148,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ApplicationProxyRules")]
         public ApplicationProxyRule[] ApplicationProxyRules{ get; set; }
 
+        /// <summary>
+        /// Cross-MLC-border acceleration.
+        /// </summary>
+        [JsonProperty("AccelerateMainland")]
+        public AccelerateMainland AccelerateMainland{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +177,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArrayObj(map, prefix + "ApplicationProxyRules.", this.ApplicationProxyRules);
+            this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         }
     }
 }

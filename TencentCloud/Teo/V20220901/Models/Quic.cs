@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable QUIC. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Whether to enable QUIC. Valid values: 
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

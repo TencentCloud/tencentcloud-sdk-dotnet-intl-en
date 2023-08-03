@@ -43,12 +43,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OcspStapling{ get; set; }
 
         /// <summary>
-        /// TLS version. Values:
-        /// <li>`TLSv1`: TLSv1 version</li>
-        /// <li>`TLSV1.1`: TLSv1.1 version</li>
-        /// <li>`TLSV1.2`: TLSv1.2 version</li>
-        /// <li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// TLS version. Valid values: 
+        /// <li>`TLSv1`: TLSv1 version;</li>
+        /// <li>`TLSV1.1`: TLSv1.1 version;</li>
+        /// <li>`TLSV1.2`: TLSv1.2 version;</li>
+        /// <li>`TLSv1.3`: TLSv1.3 version.</li>Only consecutive versions can be enabled at the same time. 
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TlsVersion")]
         public string[] TlsVersion{ get; set; }

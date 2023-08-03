@@ -21,27 +21,20 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeWebProtectionClientIpListResponse : AbstractModel
+    public class CreateSecurityIPGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// The list of CC attacker IPs.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Site ID.
         /// </summary>
-        [JsonProperty("Data")]
-        public SecClientIp[] Data{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Total number of query results.
+        /// IP group information.
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("IPGroup")]
+        public IPGroup IPGroup{ get; set; }
 
 
         /// <summary>
@@ -49,9 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamObj(map, prefix + "IPGroup.", this.IPGroup);
         }
     }
 }

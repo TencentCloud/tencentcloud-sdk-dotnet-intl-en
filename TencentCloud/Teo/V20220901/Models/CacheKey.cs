@@ -43,8 +43,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string IgnoreCase{ get; set; }
 
         /// <summary>
-        /// Request parameter contained in `CacheKey`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Request parameter contained in `CacheKey`. 
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QueryString")]
         public QueryString QueryString{ get; set; }

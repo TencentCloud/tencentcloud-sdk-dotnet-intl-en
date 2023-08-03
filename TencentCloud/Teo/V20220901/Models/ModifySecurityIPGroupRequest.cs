@@ -21,14 +21,29 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSpeedTestingDetailsRequest : AbstractModel
+    public class ModifySecurityIPGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// IP group configuration.
+        /// </summary>
+        [JsonProperty("IPGroup")]
+        public IPGroup IPGroup{ get; set; }
+
+        /// <summary>
+        /// Operation type. Valid values: 
+        /// <li>`append`: Add information of `Content` to `IPGroup`;</li>
+        /// <li>`remove`: Delete information of `Content` from `IPGroup`;</li>
+        /// <li>`update`: Replace all information of `IPGroup` and modify the IPGroup name.</li>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
 
 
         /// <summary>
@@ -37,6 +52,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamObj(map, prefix + "IPGroup.", this.IPGroup);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }

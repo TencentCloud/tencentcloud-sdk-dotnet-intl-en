@@ -33,9 +33,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The name of the HTTP header that contains the client IP, which is used for forwarding.
-        /// If this field is not specified, the default value `X-Forwarded-IP` will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name of the request header that contains the client IP for origin-pull. 
+        /// The default value `X-Forwarded-IP` is used when it is not specified. 
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HeaderName")]
         public string HeaderName{ get; set; }

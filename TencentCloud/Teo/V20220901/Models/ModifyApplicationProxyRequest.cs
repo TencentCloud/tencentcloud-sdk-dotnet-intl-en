@@ -25,20 +25,20 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The proxy ID.
+        /// Proxy ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// The domain name or subdomain name when `ProxyType=hostname`.
-        /// The instance name when `ProxyType=instance`.
+        /// Domain name or subdomain name when `ProxyType=hostname`; 
+        /// Instance name when `ProxyType=instance`.
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
@@ -59,10 +59,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ProxyType{ get; set; }
 
         /// <summary>
-        /// The IPv6 access configuration. The original configuration will apply if this field is not specified.
+        /// IPv6 access configuration. The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
+
+        /// <summary>
+        /// Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+        /// </summary>
+        [JsonProperty("AccelerateMainland")]
+        public AccelerateMainland AccelerateMainland{ get; set; }
 
 
         /// <summary>
@@ -76,6 +82,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
+            this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         }
     }
 }

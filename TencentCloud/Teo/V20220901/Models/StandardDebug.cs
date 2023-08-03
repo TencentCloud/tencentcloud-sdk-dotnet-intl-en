@@ -21,20 +21,26 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReclaimAliasDomainRequest : AbstractModel
+    public class StandardDebug : AbstractModel
     {
         
         /// <summary>
-        /// The site ID.
+        /// 
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// The site name.
+        /// 
         /// </summary>
-        [JsonProperty("ZoneName")]
-        public string ZoneName{ get; set; }
+        [JsonProperty("AllowClientIPList")]
+        public string[] AllowClientIPList{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArraySimple(map, prefix + "AllowClientIPList.", this.AllowClientIPList);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

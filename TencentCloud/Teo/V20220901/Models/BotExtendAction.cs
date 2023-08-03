@@ -25,15 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The action. Values:
-        /// <li>`monitor`: Observe</li>
-        /// <li>`trans`: Allow</li>
-        /// <li>`alg`: JavaScript challenge</li>
-        /// <li>`captcha`: Managed challenge</li>
-        /// <li>`random`: Weighted random. Actions are executed based on the percentage specified in `ExtendActions`.</li>
-        /// <li>`silence`: Drop w/o response</li>
-        /// <li>`shortdelay`: Add short latency</li>
-        /// <li>`longdelay`: Add long latency</li>
+        /// Action. Valid values: 
+        /// <li>`monitor`: Observe;</li>
+        /// <li>`alg`: JavaScript challenge;</li>
+        /// <li>`captcha`: Managed challenge;</li>
+        /// <li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
+        /// <li>`silence`: Silence;</li>
+        /// <li>`shortdelay`: Add short latency;</li>
+        /// <li>`longdelay`: Add long latency.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

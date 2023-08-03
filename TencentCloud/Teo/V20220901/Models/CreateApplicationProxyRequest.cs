@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// When `ProxyType=hostname`, this field indicates a domain name or subdomain name.
-        /// When `ProxyType=instance`, it indicates a proxy instance.
+        /// Domain name or subdomain name when `ProxyType=hostname`; 
+        /// Instance name when `ProxyType=instance`.
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
@@ -77,8 +77,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// The IPv6 access configuration.
-        /// If this field is not specified, IPv6 access will be disabled.
+        /// Ipv6 access configuration. 
+        /// IPv6 access is disabled if it is not specified.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
@@ -89,6 +89,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("ApplicationProxyRules")]
         public ApplicationProxyRule[] ApplicationProxyRules{ get; set; }
+
+        /// <summary>
+        /// Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+        /// </summary>
+        [JsonProperty("AccelerateMainland")]
+        public AccelerateMainland AccelerateMainland{ get; set; }
 
 
         /// <summary>
@@ -105,6 +111,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamArrayObj(map, prefix + "ApplicationProxyRules.", this.ApplicationProxyRules);
+            this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         }
     }
 }

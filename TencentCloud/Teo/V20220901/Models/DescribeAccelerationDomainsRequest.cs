@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+        /// ID of the site related with the accelerated domain name.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }

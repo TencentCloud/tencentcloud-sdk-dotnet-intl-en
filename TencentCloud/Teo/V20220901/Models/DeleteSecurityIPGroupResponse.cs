@@ -21,15 +21,9 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDnsDataResponse : AbstractModel
+    public class DeleteSecurityIPGroupResponse : AbstractModel
     {
         
-        /// <summary>
-        /// DNS statistics.
-        /// </summary>
-        [JsonProperty("Data")]
-        public DnsData[] Data{ get; set; }
-
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

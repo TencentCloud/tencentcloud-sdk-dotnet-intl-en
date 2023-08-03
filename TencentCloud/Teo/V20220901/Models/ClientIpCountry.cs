@@ -33,8 +33,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Header name of ClientIpCountry. This field is valid only when `Switch=on`.
-        /// If it is left empty, the default value `EO-Client-IPCountry` will be used.
+        /// Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
+        /// The default value `EO-Client-IPCountry` is used when it is not specified.
         /// </summary>
         [JsonProperty("HeaderName")]
         public string HeaderName{ get; set; }

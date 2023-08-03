@@ -21,7 +21,7 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSpeedTestingResponse : AbstractModel
+    public class ModifySecurityIPGroupResponse : AbstractModel
     {
         
         /// <summary>

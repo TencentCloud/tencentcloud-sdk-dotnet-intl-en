@@ -49,10 +49,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginPullProtocol{ get; set; }
 
         /// <summary>
-        /// Whether to allow private access to buckets when `OriginType=cos`. Values:
-        /// <li>`on`: Allow private access.</li>
-        /// <li>`off`: Allow public access.</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
+        /// <li>`on`: Private access;</li>
+        /// <li>`off`: Public access.</li>
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CosPrivateAccess")]
         public string CosPrivateAccess{ get; set; }

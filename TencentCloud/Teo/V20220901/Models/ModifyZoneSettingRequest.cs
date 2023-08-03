@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID to be modified.
+        /// Site ID to modify.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -59,15 +59,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// The QUIC access configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// QUIC access configuration. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
         /// <summary>
-        /// The POST transport configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// POST transport configuration. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("PostMaxSize")]
         public PostMaxSize PostMaxSize{ get; set; }
@@ -80,22 +80,22 @@ namespace TencentCloud.Teo.V20220901.Models
         public Compression Compression{ get; set; }
 
         /// <summary>
-        /// The HTTP2 origin-pull configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// HTTP2 origin-pull configuration. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("UpstreamHttp2")]
         public UpstreamHttp2 UpstreamHttp2{ get; set; }
 
         /// <summary>
-        /// The force HTTPS redirect configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Force HTTPS redirect configuration. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// The HTTPS acceleration configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// HTTPS acceleration configuration. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
@@ -115,15 +115,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public SmartRouting SmartRouting{ get; set; }
 
         /// <summary>
-        /// The WebSocket configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// WebSocket configuration. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
         /// <summary>
-        /// The origin-pull client IP header configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Origin-pull client IP header configuration. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("ClientIpHeader")]
         public ClientIpHeader ClientIpHeader{ get; set; }
@@ -136,25 +136,38 @@ namespace TencentCloud.Teo.V20220901.Models
         public CachePrefresh CachePrefresh{ get; set; }
 
         /// <summary>
-        /// The IPv6 access configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Ipv6 access configuration. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// Whether to carry the location information of the client IP during origin-pull.
-        /// The original configuration will apply if this field is not specified.
+        /// Whether to carry the location information of the client IP during origin-pull. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("ClientIpCountry")]
         public ClientIpCountry ClientIpCountry{ get; set; }
 
         /// <summary>
-        /// Configuration of gRPC support
-        /// The original configuration will apply if this field is not specified.
+        /// Configuration of gRPC support. 
+        /// The original configuration will apply if it is not specified.
         /// </summary>
         [JsonProperty("Grpc")]
         public Grpc Grpc{ get; set; }
+
+        /// <summary>
+        /// Image optimization. 
+        /// It is disabled if this parameter is not specified.
+        /// </summary>
+        [JsonProperty("ImageOptimize")]
+        public ImageOptimize ImageOptimize{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StandardDebug")]
+        public StandardDebug StandardDebug{ get; set; }
 
 
         /// <summary>
@@ -181,6 +194,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
+            this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
+            this.SetParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
         }
     }
 }

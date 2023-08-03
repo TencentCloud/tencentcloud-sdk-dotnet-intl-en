@@ -21,15 +21,36 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCredentialRequest : AbstractModel
+    public class IPGroup : AbstractModel
     {
         
+        /// <summary>
+        /// Group ID. Enter `0`.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
+
+        /// <summary>
+        /// Group name.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// IP group information, including IP and IP mask.
+        /// </summary>
+        [JsonProperty("Content")]
+        public string[] Content{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "Content.", this.Content);
         }
     }
 }

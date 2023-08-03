@@ -172,10 +172,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public ImageOptimize ImageOptimize{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-MLC-border acceleration. 
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AccelerateMainland")]
         public AccelerateMainland AccelerateMainland{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StandardDebug")]
+        public StandardDebug StandardDebug{ get; set; }
 
 
         /// <summary>
@@ -205,6 +212,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
             this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
             this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
+            this.SetParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
         }
     }
 }
