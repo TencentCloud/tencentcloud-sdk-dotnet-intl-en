@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ListenerIds{ get; set; }
 
         /// <summary>
-        /// Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+        /// Type of the listener protocols to be queried. Values: TCP`, `UDP`, `HTTP`, `HTTPS`, `TCP_SSL` and `QUIC`.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

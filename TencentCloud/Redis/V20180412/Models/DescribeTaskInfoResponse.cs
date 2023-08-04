@@ -25,7 +25,12 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Task status. preparing: to be run; running: running; succeed: succeeded; failed: failed; error: running error.
+        /// Task status. Valid values: 
+        /// - `preparing`: To be run
+        /// - `running`: Running
+        /// - `succeed`: Succeedu200ded
+        /// - `failed`: Failed
+        /// - `Error`: Error occurred while running
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -37,7 +42,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Task type
+        /// Task type, including `Create`, `Configure`, u200d`Disable Instance`, `Clear Instance`, `Reset Password`, `Upgrade Version`, `Back up Instance`, `Modify Network`, `Migrate to New AZ` and `Promote to Master`.
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -49,7 +54,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+        /// Message returned by task execution, which will be au200dn error message when execution fails or be empty when the status is `running `or `succeed-`.
         /// </summary>
         [JsonProperty("TaskMessage")]
         public string TaskMessage{ get; set; }

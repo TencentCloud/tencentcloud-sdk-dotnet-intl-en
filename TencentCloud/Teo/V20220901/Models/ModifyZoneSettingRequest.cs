@@ -164,7 +164,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ImageOptimize ImageOptimize{ get; set; }
 
         /// <summary>
-        /// 
+        /// Standard debugging configuration.
         /// </summary>
         [JsonProperty("StandardDebug")]
         public StandardDebug StandardDebug{ get; set; }

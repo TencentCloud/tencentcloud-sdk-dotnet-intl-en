@@ -25,11 +25,12 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The origin type. Values: 
+        /// The origin type. Values:
         /// <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-        /// <li>`COS`: COS bucket address</li>
-        /// <li>`ORIGIN_GROUP`: Origin group</li>
-        /// <li>`AWS_S3`: AWS S3 bucket address</li>
+        /// <li>`COS`: COS bucket address </li>
+        /// <li>`ORIGIN_GROUP`: Origin group </li>
+        /// <li>`AWS_S3`: AWS S3 bucket address </li>
+        /// <li>`SPACE`: EdgeOne Shield Space </li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// Region ID. Valid values:
         /// - `1`: Guangzhou 
         /// - `4`: Shanghai 
         /// - `5`: Hong Kong (China) 
@@ -48,7 +48,6 @@ namespace TencentCloud.Redis.V20180412.Models
         /// - `21`: India 
         /// - `22`: Virginia (East US)
         /// - `23`: Thailand 
-        /// - `24`: Russia 
         /// - `25`: Japan
         /// </summary>
         [JsonProperty("RegionId")]

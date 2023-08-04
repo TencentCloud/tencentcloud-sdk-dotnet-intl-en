@@ -37,13 +37,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Replication group ID
+        /// ID of the specified replication group, such as `crs-rpl-m3zt****`. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get it in the global replication group list.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Key words for fuzzy query, which can be set as the ID or name of a replication group.
+        /// Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

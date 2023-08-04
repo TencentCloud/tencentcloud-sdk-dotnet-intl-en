@@ -50,7 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+        /// The domain name that Tencent Cloud assigned for the CLB instance.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

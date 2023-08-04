@@ -59,9 +59,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// The site access method. Values:
-        /// <li>`full`: Access through a name server.</li>
-        /// <li>`partial`: Access through a CNAME record.</li>
+        /// Access mode of the site. Values:
+        /// <li> `full`: Access through a name server.</li>
+        /// <li> `partial`: Access through a CNAME record.</li>
+        /// <li> `noDomainAccess`: Access without using a domain name </li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

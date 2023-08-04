@@ -44,8 +44,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Whether the certificate is managed by EdgeOne. Values:
-        /// <li>`apply`: Managed by EdgeOne</li>
-        /// <li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+        /// <li>`apply`: Managed by EdgeOne.</li>
+        /// <li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
         /// </summary>
         [JsonProperty("ApplyType")]
         public string ApplyType{ get; set; }

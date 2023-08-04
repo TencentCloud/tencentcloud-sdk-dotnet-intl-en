@@ -87,6 +87,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? SessionPersist{ get; set; }
 
         /// <summary>
+        /// Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+        /// </summary>
+        [JsonProperty("SessionPersistTime")]
+        public ulong? SessionPersistTime{ get; set; }
+
+        /// <summary>
         /// The origin port, which can be:
         /// <li>A single port, such as 80</li>
         /// <li>A port range, such as 81-82</li>
@@ -108,6 +114,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
             this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+            this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamSimple(map, prefix + "OriginPort", this.OriginPort);
         }
     }

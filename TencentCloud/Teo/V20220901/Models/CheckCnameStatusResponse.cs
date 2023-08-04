@@ -21,28 +21,20 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StandardDebug : AbstractModel
+    public class CheckCnameStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable standard debugging. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable </li>
+        /// List of CNAME statuses.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("CnameStatus")]
+        public CnameStatus[] CnameStatus{ get; set; }
 
         /// <summary>
-        /// The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("AllowClientIPList")]
-        public string[] AllowClientIPList{ get; set; }
-
-        /// <summary>
-        /// The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
-        /// </summary>
-        [JsonProperty("ExpireTime")]
-        public string ExpireTime{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArraySimple(map, prefix + "AllowClientIPList.", this.AllowClientIPList);
-            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamArrayObj(map, prefix + "CnameStatus.", this.CnameStatus);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

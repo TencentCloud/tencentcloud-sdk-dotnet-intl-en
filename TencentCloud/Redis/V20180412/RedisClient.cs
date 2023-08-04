@@ -213,7 +213,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to switch with master instance in a replication group.
+        /// This API is used to set a read-only instance in a replication group as a master instance.
         /// </summary>
         /// <param name="req"><see cref="ChangeMasterInstanceRequest"/></param>
         /// <returns><see cref="ChangeMasterInstanceResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to switch with master instance in a replication group.
+        /// This API is used to set a read-only instance in a replication group as a master instance.
         /// </summary>
         /// <param name="req"><see cref="ChangeMasterInstanceRequest"/></param>
         /// <returns><see cref="ChangeMasterInstanceResponse"/></returns>
@@ -2053,7 +2053,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the task result.
+        /// This API is used to get the execution of a specified task.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
         /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
@@ -2073,7 +2073,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the task result.
+        /// This API is used to get the execution of a specified task.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
         /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
@@ -3373,7 +3373,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to upgrade compatible instance version (for example, from Redis 2.8 to 4.0), or upgrade instance architecture (for example, from standard architecture to cluster architecture).
+        /// This API is used to upgrade the instance to a later version or u200dto upgrade the current standard architecture to the cluster architecture.
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
         /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>
@@ -3393,7 +3393,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to upgrade compatible instance version (for example, from Redis 2.8 to 4.0), or upgrade instance architecture (for example, from standard architecture to cluster architecture).
+        /// This API is used to upgrade the instance to a later version or u200dto upgrade the current standard architecture to the cluster architecture.
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
         /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>

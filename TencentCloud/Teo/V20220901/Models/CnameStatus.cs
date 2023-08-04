@@ -21,28 +21,30 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StandardDebug : AbstractModel
+    public class CnameStatus : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable standard debugging. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable </li>
+        /// The domain name.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("RecordName")]
+        public string RecordName{ get; set; }
 
         /// <summary>
-        /// The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+        /// The CNAME address.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("AllowClientIPList")]
-        public string[] AllowClientIPList{ get; set; }
+        [JsonProperty("Cname")]
+        public string Cname{ get; set; }
 
         /// <summary>
-        /// The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+        /// The CNAME status. Values:
+        /// <li>`active`: Activated</li>
+        /// <li>`moved`: Not activated </li>
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ExpireTime")]
-        public string ExpireTime{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -50,9 +52,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArraySimple(map, prefix + "AllowClientIPList.", this.AllowClientIPList);
-            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "RecordName", this.RecordName);
+            this.SetParamSimple(map, prefix + "Cname", this.Cname);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

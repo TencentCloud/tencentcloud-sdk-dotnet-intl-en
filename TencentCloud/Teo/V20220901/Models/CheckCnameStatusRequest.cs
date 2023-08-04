@@ -21,28 +21,20 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StandardDebug : AbstractModel
+    public class CheckCnameStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable standard debugging. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable </li>
+        /// ID of the site.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+        /// List of domain names.
         /// </summary>
-        [JsonProperty("AllowClientIPList")]
-        public string[] AllowClientIPList{ get; set; }
-
-        /// <summary>
-        /// The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
-        /// </summary>
-        [JsonProperty("ExpireTime")]
-        public string ExpireTime{ get; set; }
+        [JsonProperty("RecordNames")]
+        public string[] RecordNames{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArraySimple(map, prefix + "AllowClientIPList.", this.AllowClientIPList);
-            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArraySimple(map, prefix + "RecordNames.", this.RecordNames);
         }
     }
 }

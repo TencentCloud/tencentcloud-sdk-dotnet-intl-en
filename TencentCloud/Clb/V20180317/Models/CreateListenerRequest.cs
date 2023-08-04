@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ListenerNames{ get; set; }
 
         /// <summary>
-        /// Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+        /// Health check parameter. It is only applicable only to TCP, UDP, TCP_SSL and QUIC listeners.
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
@@ -67,8 +67,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-        /// They represent weighted round robin and least connections, respectively. Default value: WRR. This parameter is applicable only to TCP/UDP/TCP_SSL listeners.
+        /// Listener forwarding mode. u200dValues: `WRR` (weighted round robin) and `LEAST_CONN` (least connections). 
+        /// Default value: `WRR`. This parameter is only applicable to TCP, UDP, TCP_SSL and QUIC listeners.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }

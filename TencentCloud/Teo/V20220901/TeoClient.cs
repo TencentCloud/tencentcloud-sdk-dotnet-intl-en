@@ -93,6 +93,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the CNAME status of a domain name.
+        /// </summary>
+        /// <param name="req"><see cref="CheckCnameStatusRequest"/></param>
+        /// <returns><see cref="CheckCnameStatusResponse"/></returns>
+        public async Task<CheckCnameStatusResponse> CheckCnameStatus(CheckCnameStatusRequest req)
+        {
+             JsonResponseModel<CheckCnameStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckCnameStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckCnameStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the CNAME status of a domain name.
+        /// </summary>
+        /// <param name="req"><see cref="CheckCnameStatusRequest"/></param>
+        /// <returns><see cref="CheckCnameStatusResponse"/></returns>
+        public CheckCnameStatusResponse CheckCnameStatusSync(CheckCnameStatusRequest req)
+        {
+             JsonResponseModel<CheckCnameStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckCnameStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckCnameStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to connect a domain to EdgeOne.
         /// </summary>
         /// <param name="req"><see cref="CreateAccelerationDomainRequest"/></param>
@@ -373,7 +413,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a cache purging task.
+        /// When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves u200dthe latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+        /// 
+        /// </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
         /// <returns><see cref="CreatePurgeTaskResponse"/></returns>
@@ -393,7 +435,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a cache purging task.
+        /// When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves u200dthe latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+        /// 
+        /// </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
         /// <returns><see cref="CreatePurgeTaskResponse"/></returns>

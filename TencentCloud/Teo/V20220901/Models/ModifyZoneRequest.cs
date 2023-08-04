@@ -31,15 +31,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The site access method. Values:
-        /// <li>`full`: Access through a name server.</li>
-        /// <li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
+        /// Access mode of the site. Values:
+        /// <li> `full`: Access through a name server.</li>
+        /// <li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The custom name servers. If this field is not specified, the default name servers will be used.
+        /// The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
         /// </summary>
         [JsonProperty("VanityNameServers")]
         public VanityNameServers VanityNameServers{ get; set; }
@@ -49,6 +49,21 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }
+
+        /// <summary>
+        /// The region where the site requests access. Values:
+        /// <li> `global`: Global coverage</li>
+        /// <li> `mainland`: Chinese mainland</li>
+        /// <li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
+        /// Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
 
 
         /// <summary>
@@ -60,6 +75,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
             this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }
