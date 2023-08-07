@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get u200dthem in the global replication group list.
+        /// Keyword for fuzzy query, which can be a replication group ID or name. Log in to the [TencentDB for Redis console](https://console.cloud.tencent.com/redis/replication), and get them in the global replication group list.
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
