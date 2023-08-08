@@ -15,40 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Advice : AbstractModel
+    public class PostQuantumCryptoSignResponse : AbstractModel
     {
         
         /// <summary>
-        /// Problem Description
+        /// Base64-encoded signature You can use PostQuantumCryptoVerify to verify the signature value.
         /// </summary>
-        [JsonProperty("Problem")]
-        public string Problem{ get; set; }
+        [JsonProperty("Signature")]
+        public string Signature{ get; set; }
 
         /// <summary>
-        /// Problem Details
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Detail")]
-        public string Detail{ get; set; }
-
-        /// <summary>
-        /// Recommended resolutions
-        /// </summary>
-        [JsonProperty("Solution")]
-        public string Solution{ get; set; }
-
-        /// <summary>
-        /// u200dRisk level of the scaling group configuration. Valid values: <br>
-        /// <li>WARNING<br>
-        /// <li>CRITICAL<br>
-        /// </summary>
-        [JsonProperty("Level")]
-        public string Level{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -56,10 +42,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Problem", this.Problem);
-            this.SetParamSimple(map, prefix + "Detail", this.Detail);
-            this.SetParamSimple(map, prefix + "Solution", this.Solution);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "Signature", this.Signature);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -21,34 +21,24 @@ namespace TencentCloud.As.V20180419.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Advice : AbstractModel
+    public class RelatedInstance : AbstractModel
     {
         
         /// <summary>
-        /// Problem Description
+        /// Instance ID
         /// </summary>
-        [JsonProperty("Problem")]
-        public string Problem{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Problem Details
+        /// Status of the instance in the scaling activity. Valid values:
+        /// `INIT`: Initializing
+        /// `RUNNING`: u200dProcessing u200dthe instance
+        /// `SUCCESSFUL`: Task succeeded on the instance
+        /// `FAILED`: Task failed on the instance
         /// </summary>
-        [JsonProperty("Detail")]
-        public string Detail{ get; set; }
-
-        /// <summary>
-        /// Recommended resolutions
-        /// </summary>
-        [JsonProperty("Solution")]
-        public string Solution{ get; set; }
-
-        /// <summary>
-        /// u200dRisk level of the scaling group configuration. Valid values: <br>
-        /// <li>WARNING<br>
-        /// <li>CRITICAL<br>
-        /// </summary>
-        [JsonProperty("Level")]
-        public string Level{ get; set; }
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
 
 
         /// <summary>
@@ -56,10 +46,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Problem", this.Problem);
-            this.SetParamSimple(map, prefix + "Detail", this.Detail);
-            this.SetParamSimple(map, prefix + "Solution", this.Solution);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         }
     }
 }

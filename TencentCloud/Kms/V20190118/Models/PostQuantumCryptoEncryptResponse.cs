@@ -15,40 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Advice : AbstractModel
+    public class PostQuantumCryptoEncryptResponse : AbstractModel
     {
         
         /// <summary>
-        /// Problem Description
+        /// Base64-encoded ciphertext after encryption. This field contains the information of ciphertext and keys. It is not the result of encrypting the plaintext. To get the plaintext, you need to pass in this field to the PostQuantumCryptoDecrypt API.
         /// </summary>
-        [JsonProperty("Problem")]
-        public string Problem{ get; set; }
+        [JsonProperty("CiphertextBlob")]
+        public string CiphertextBlob{ get; set; }
 
         /// <summary>
-        /// Problem Details
+        /// Globally unique ID of the CMK used for encryption
         /// </summary>
-        [JsonProperty("Detail")]
-        public string Detail{ get; set; }
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
 
         /// <summary>
-        /// Recommended resolutions
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
-        [JsonProperty("Solution")]
-        public string Solution{ get; set; }
-
-        /// <summary>
-        /// u200dRisk level of the scaling group configuration. Valid values: <br>
-        /// <li>WARNING<br>
-        /// <li>CRITICAL<br>
-        /// </summary>
-        [JsonProperty("Level")]
-        public string Level{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -56,10 +48,9 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Problem", this.Problem);
-            this.SetParamSimple(map, prefix + "Detail", this.Detail);
-            this.SetParamSimple(map, prefix + "Solution", this.Solution);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

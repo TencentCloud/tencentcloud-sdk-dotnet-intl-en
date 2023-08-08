@@ -85,8 +85,8 @@ namespace TencentCloud.As.V20180419.Models
         public bool? DisableScaleIn{ get; set; }
 
         /// <summary>
-        /// Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-        /// If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
+        /// This parameter is diused. Please use [CreateNotificationConfiguration](https://intl.cloud.tencent.com/document/api/377/33185?from_cn_redirect=1) instead.
+        /// Notification group ID, which is the set of user group IDs.
         /// </summary>
         [JsonProperty("NotificationUserGroupIds")]
         public string[] NotificationUserGroupIds{ get; set; }
