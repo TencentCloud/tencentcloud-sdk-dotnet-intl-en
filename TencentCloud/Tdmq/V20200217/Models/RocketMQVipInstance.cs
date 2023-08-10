@@ -110,6 +110,27 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
+        /// <summary>
+        /// The maximum message retention period in hours
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxRetention")]
+        public long? MaxRetention{ get; set; }
+
+        /// <summary>
+        /// The minimum message retention period in hours
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MinRetention")]
+        public long? MinRetention{ get; set; }
+
+        /// <summary>
+        /// Instance message retention period in hours
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Retention")]
+        public long? Retention{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +151,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
+            this.SetParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
+            this.SetParamSimple(map, prefix + "MinRetention", this.MinRetention);
+            this.SetParamSimple(map, prefix + "Retention", this.Retention);
         }
     }
 }

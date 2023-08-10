@@ -37,13 +37,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+        /// This parameter is disused.
         /// </summary>
         [JsonProperty("Ttl")]
         public ulong? Ttl{ get; set; }
 
         /// <summary>
-        /// Retention time for persisted messages in milliseconds
+        /// This parameter is disused.
         /// </summary>
         [JsonProperty("RetentionTime")]
         public ulong? RetentionTime{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the public network access
+        /// </summary>
+        [JsonProperty("PublicAccessEnabled")]
+        public bool? PublicAccessEnabled{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
             this.SetParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
         }
     }
 }

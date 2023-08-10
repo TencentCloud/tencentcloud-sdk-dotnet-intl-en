@@ -133,6 +133,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// This API is used to apply for a BizToken before calling the web-based verification service each time. This token is required for initiating a verification process and getting the result after the verification is completed.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyWebVerificationBizTokenIntlRequest"/></param>
+        /// <returns><see cref="ApplyWebVerificationBizTokenIntlResponse"/></returns>
+        public async Task<ApplyWebVerificationBizTokenIntlResponse> ApplyWebVerificationBizTokenIntl(ApplyWebVerificationBizTokenIntlRequest req)
+        {
+             JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyWebVerificationBizTokenIntl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to apply for a BizToken before calling the web-based verification service each time. This token is required for initiating a verification process and getting the result after the verification is completed.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyWebVerificationBizTokenIntlRequest"/></param>
+        /// <returns><see cref="ApplyWebVerificationBizTokenIntlResponse"/></returns>
+        public ApplyWebVerificationBizTokenIntlResponse ApplyWebVerificationBizTokenIntlSync(ApplyWebVerificationBizTokenIntlRequest req)
+        {
+             JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyWebVerificationBizTokenIntl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
         /// </summary>
         /// <param name="req"><see cref="ApplyWebVerificationTokenRequest"/></param>
@@ -490,6 +530,46 @@ namespace TencentCloud.Faceid.V20180301
              {
                  var strResp = this.InternalRequestSync(req, "GetWebVerificationResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the verification result with the corresponding BizToken after the u200dweb-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+        /// </summary>
+        /// <param name="req"><see cref="GetWebVerificationResultIntlRequest"/></param>
+        /// <returns><see cref="GetWebVerificationResultIntlResponse"/></returns>
+        public async Task<GetWebVerificationResultIntlResponse> GetWebVerificationResultIntl(GetWebVerificationResultIntlRequest req)
+        {
+             JsonResponseModel<GetWebVerificationResultIntlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetWebVerificationResultIntl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultIntlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the verification result with the corresponding BizToken after the u200dweb-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+        /// </summary>
+        /// <param name="req"><see cref="GetWebVerificationResultIntlRequest"/></param>
+        /// <returns><see cref="GetWebVerificationResultIntlResponse"/></returns>
+        public GetWebVerificationResultIntlResponse GetWebVerificationResultIntlSync(GetWebVerificationResultIntlRequest req)
+        {
+             JsonResponseModel<GetWebVerificationResultIntlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetWebVerificationResultIntl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultIntlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

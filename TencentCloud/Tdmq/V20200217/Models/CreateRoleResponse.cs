@@ -44,6 +44,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
+        /// Namespaces that are bound in batches
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnvironmentRoleSets")]
+        public EnvironmentRoleSet[] EnvironmentRoleSets{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +65,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "EnvironmentRoleSets.", this.EnvironmentRoleSets);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

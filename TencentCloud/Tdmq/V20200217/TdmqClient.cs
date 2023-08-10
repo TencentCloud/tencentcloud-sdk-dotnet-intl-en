@@ -413,6 +413,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to create a TDMQ for RabbitMQ user.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQUserRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQUserResponse"/></returns>
+        public async Task<CreateRabbitMQUserResponse> CreateRabbitMQUser(CreateRabbitMQUserRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a TDMQ for RabbitMQ user.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQUserRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQUserResponse"/></returns>
+        public CreateRabbitMQUserResponse CreateRabbitMQUserSync(CreateRabbitMQUserRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a TDMQ for RabbitMQ exclusive instance.
         /// </summary>
         /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
@@ -444,6 +484,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "CreateRabbitMQVipInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a TDMQ for RabbitMQ vhost.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQVirtualHostResponse"/></returns>
+        public async Task<CreateRabbitMQVirtualHostResponse> CreateRabbitMQVirtualHost(CreateRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVirtualHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a TDMQ for RabbitMQ vhost.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQVirtualHostResponse"/></returns>
+        public CreateRabbitMQVirtualHostResponse CreateRabbitMQVirtualHostSync(CreateRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<CreateRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRabbitMQVirtualHostResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -964,6 +1044,126 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DeleteEnvironments");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a TDMQ for RabbitMQ user.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQUserRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQUserResponse"/></returns>
+        public async Task<DeleteRabbitMQUserResponse> DeleteRabbitMQUser(DeleteRabbitMQUserRequest req)
+        {
+             JsonResponseModel<DeleteRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a TDMQ for RabbitMQ user.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQUserRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQUserResponse"/></returns>
+        public DeleteRabbitMQUserResponse DeleteRabbitMQUserSync(DeleteRabbitMQUserRequest req)
+        {
+             JsonResponseModel<DeleteRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a TDMQ for RabbitMQ exclusive instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQVipInstanceResponse"/></returns>
+        public async Task<DeleteRabbitMQVipInstanceResponse> DeleteRabbitMQVipInstance(DeleteRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<DeleteRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a TDMQ for RabbitMQ exclusive instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQVipInstanceResponse"/></returns>
+        public DeleteRabbitMQVipInstanceResponse DeleteRabbitMQVipInstanceSync(DeleteRabbitMQVipInstanceRequest req)
+        {
+             JsonResponseModel<DeleteRabbitMQVipInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRabbitMQVipInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRabbitMQVipInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a TDMQ for RabbitMQ vhost.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQVirtualHostResponse"/></returns>
+        public async Task<DeleteRabbitMQVirtualHostResponse> DeleteRabbitMQVirtualHost(DeleteRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<DeleteRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRabbitMQVirtualHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a TDMQ for RabbitMQ vhost.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQVirtualHostResponse"/></returns>
+        public DeleteRabbitMQVirtualHostResponse DeleteRabbitMQVirtualHostSync(DeleteRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<DeleteRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRabbitMQVirtualHostResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1973,6 +2173,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ users.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQUserRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQUserResponse"/></returns>
+        public async Task<DescribeRabbitMQUserResponse> DescribeRabbitMQUser(DescribeRabbitMQUserRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ users.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQUserRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQUserResponse"/></returns>
+        public DescribeRabbitMQUserResponse DescribeRabbitMQUserSync(DescribeRabbitMQUserRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVipInstancesRequest"/></param>
@@ -2004,6 +2244,86 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRabbitMQVipInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVipInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ vhosts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVirtualHostResponse"/></returns>
+        public async Task<DescribeRabbitMQVirtualHostResponse> DescribeRabbitMQVirtualHost(DescribeRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVirtualHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ vhosts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVirtualHostResponse"/></returns>
+        public DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHostSync(DescribeRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVirtualHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ exclusive vhosts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVirtualHostListRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVirtualHostListResponse"/></returns>
+        public async Task<DescribeRabbitMQVirtualHostListResponse> DescribeRabbitMQVirtualHostList(DescribeRabbitMQVirtualHostListRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQVirtualHostListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRabbitMQVirtualHostList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVirtualHostListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ exclusive vhosts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVirtualHostListRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVirtualHostListResponse"/></returns>
+        public DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostListSync(DescribeRabbitMQVirtualHostListRequest req)
+        {
+             JsonResponseModel<DescribeRabbitMQVirtualHostListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRabbitMQVirtualHostList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRabbitMQVirtualHostListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2124,6 +2444,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRocketMQGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the TDMQ for RocketMQ message details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQMsgRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQMsgResponse"/></returns>
+        public async Task<DescribeRocketMQMsgResponse> DescribeRocketMQMsg(DescribeRocketMQMsgRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the TDMQ for RocketMQ message details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQMsgRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQMsgResponse"/></returns>
+        public DescribeRocketMQMsgResponse DescribeRocketMQMsgSync(DescribeRocketMQMsgRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQMsgResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2653,6 +3013,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to modify a TDMQ for RabbitMQ user.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQUserRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQUserResponse"/></returns>
+        public async Task<ModifyRabbitMQUserResponse> ModifyRabbitMQUser(ModifyRabbitMQUserRequest req)
+        {
+             JsonResponseModel<ModifyRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a TDMQ for RabbitMQ user.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQUserRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQUserResponse"/></returns>
+        public ModifyRabbitMQUserResponse ModifyRabbitMQUserSync(ModifyRabbitMQUserRequest req)
+        {
+             JsonResponseModel<ModifyRabbitMQUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRabbitMQUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRabbitMQUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a TDMQ for RabbitMQ vhost.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQVirtualHostResponse"/></returns>
+        public async Task<ModifyRabbitMQVirtualHostResponse> ModifyRabbitMQVirtualHost(ModifyRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<ModifyRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRabbitMQVirtualHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify a TDMQ for RabbitMQ vhost.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQVirtualHostRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQVirtualHostResponse"/></returns>
+        public ModifyRabbitMQVirtualHostResponse ModifyRabbitMQVirtualHostSync(ModifyRabbitMQVirtualHostRequest req)
+        {
+             JsonResponseModel<ModifyRabbitMQVirtualHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRabbitMQVirtualHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRabbitMQVirtualHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to update a RocketMQ cluster.
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQClusterRequest"/></param>
@@ -2724,6 +3164,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "ModifyRocketMQGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configurations of a TDMQ for RocketMQ exclusive instance, including the upgrade of the instance specification, node count, and storage, and the downgrade of the instance specification. After you call this API to place the order and make payments, the configuration modification will be in progress. You can query whether the modification has been completed through the `DescribeRocketMQVipInstances` API`.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQInstanceSpecResponse"/></returns>
+        public async Task<ModifyRocketMQInstanceSpecResponse> ModifyRocketMQInstanceSpec(ModifyRocketMQInstanceSpecRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRocketMQInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configurations of a TDMQ for RocketMQ exclusive instance, including the upgrade of the instance specification, node count, and storage, and the downgrade of the instance specification. After you call this API to place the order and make payments, the configuration modification will be in progress. You can query whether the modification has been completed through the `DescribeRocketMQVipInstances` API`.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQInstanceSpecResponse"/></returns>
+        public ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpecSync(ModifyRocketMQInstanceSpecRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRocketMQInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQInstanceSpecResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3215,7 +3695,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to send one message.
+        /// This API is used to send a single message.
+        /// The message cannot be sent to a persistent topic.
         /// </summary>
         /// <param name="req"><see cref="SendMessagesRequest"/></param>
         /// <returns><see cref="SendMessagesResponse"/></returns>
@@ -3235,7 +3716,8 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to send one message.
+        /// This API is used to send a single message.
+        /// The message cannot be sent to a persistent topic.
         /// </summary>
         /// <param name="req"><see cref="SendMessagesRequest"/></param>
         /// <returns><see cref="SendMessagesResponse"/></returns>
@@ -3286,6 +3768,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "SendMsg");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This document is used to send a TDMQ for RocketMQ message.
+        /// </summary>
+        /// <param name="req"><see cref="SendRocketMQMessageRequest"/></param>
+        /// <returns><see cref="SendRocketMQMessageResponse"/></returns>
+        public async Task<SendRocketMQMessageResponse> SendRocketMQMessage(SendRocketMQMessageRequest req)
+        {
+             JsonResponseModel<SendRocketMQMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendRocketMQMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRocketMQMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This document is used to send a TDMQ for RocketMQ message.
+        /// </summary>
+        /// <param name="req"><see cref="SendRocketMQMessageRequest"/></param>
+        /// <returns><see cref="SendRocketMQMessageResponse"/></returns>
+        public SendRocketMQMessageResponse SendRocketMQMessageSync(SendRocketMQMessageRequest req)
+        {
+             JsonResponseModel<SendRocketMQMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendRocketMQMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendRocketMQMessageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

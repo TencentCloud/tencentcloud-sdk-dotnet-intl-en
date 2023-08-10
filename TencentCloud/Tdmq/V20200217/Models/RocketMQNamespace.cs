@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+        /// Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
         /// </summary>
         [JsonProperty("Ttl")]
         public ulong? Ttl{ get; set; }
@@ -63,6 +63,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("VpcEndpoint")]
         public string VpcEndpoint{ get; set; }
 
+        /// <summary>
+        /// Internal access point address
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InternalEndpoint")]
+        public string InternalEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +82,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PublicEndpoint", this.PublicEndpoint);
             this.SetParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
+            this.SetParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
         }
     }
 }

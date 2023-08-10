@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.751</VersionPrefix>
+    <VersionPrefix>3.0.752</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -76,8 +76,12 @@
     <Compile Include="V20200217\Models\CreateEnvironmentResponse.cs" />
     <Compile Include="V20200217\Models\CreateEnvironmentRoleRequest.cs" />
     <Compile Include="V20200217\Models\CreateEnvironmentRoleResponse.cs" />
+    <Compile Include="V20200217\Models\CreateRabbitMQUserRequest.cs" />
+    <Compile Include="V20200217\Models\CreateRabbitMQUserResponse.cs" />
     <Compile Include="V20200217\Models\CreateRabbitMQVipInstanceRequest.cs" />
     <Compile Include="V20200217\Models\CreateRabbitMQVipInstanceResponse.cs" />
+    <Compile Include="V20200217\Models\CreateRabbitMQVirtualHostRequest.cs" />
+    <Compile Include="V20200217\Models\CreateRabbitMQVirtualHostResponse.cs" />
     <Compile Include="V20200217\Models\CreateRocketMQClusterRequest.cs" />
     <Compile Include="V20200217\Models\CreateRocketMQClusterResponse.cs" />
     <Compile Include="V20200217\Models\CreateRocketMQGroupRequest.cs" />
@@ -104,6 +108,12 @@
     <Compile Include="V20200217\Models\DeleteEnvironmentRolesResponse.cs" />
     <Compile Include="V20200217\Models\DeleteEnvironmentsRequest.cs" />
     <Compile Include="V20200217\Models\DeleteEnvironmentsResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteRabbitMQUserRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteRabbitMQUserResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteRabbitMQVipInstanceRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteRabbitMQVipInstanceResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteRabbitMQVirtualHostRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteRabbitMQVirtualHostResponse.cs" />
     <Compile Include="V20200217\Models\DeleteRocketMQClusterRequest.cs" />
     <Compile Include="V20200217\Models\DeleteRocketMQClusterResponse.cs" />
     <Compile Include="V20200217\Models\DeleteRocketMQGroupRequest.cs" />
@@ -154,14 +164,22 @@
     <Compile Include="V20200217\Models\DescribePulsarProInstancesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQNodeListRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQNodeListResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQUserRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQUserResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQVipInstancesRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRabbitMQVipInstancesResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQVirtualHostListRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQVirtualHostListResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQVirtualHostRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRabbitMQVirtualHostResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClusterRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClusterResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClustersRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQClustersResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQGroupsRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQGroupsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQMsgRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeRocketMQMsgResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQNamespacesRequest.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQNamespacesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeRocketMQTopicsRequest.cs" />
@@ -178,6 +196,7 @@
     <Compile Include="V20200217\Models\DescribeTopicsResponse.cs" />
     <Compile Include="V20200217\Models\Environment.cs" />
     <Compile Include="V20200217\Models\EnvironmentRole.cs" />
+    <Compile Include="V20200217\Models\EnvironmentRoleSet.cs" />
     <Compile Include="V20200217\Models\Filter.cs" />
     <Compile Include="V20200217\Models\FilterSubscription.cs" />
     <Compile Include="V20200217\Models\InstanceNodeDistribution.cs" />
@@ -193,10 +212,16 @@
     <Compile Include="V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />
     <Compile Include="V20200217\Models\ModifyEnvironmentRoleRequest.cs" />
     <Compile Include="V20200217\Models\ModifyEnvironmentRoleResponse.cs" />
+    <Compile Include="V20200217\Models\ModifyRabbitMQUserRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyRabbitMQUserResponse.cs" />
+    <Compile Include="V20200217\Models\ModifyRabbitMQVirtualHostRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyRabbitMQVirtualHostResponse.cs" />
     <Compile Include="V20200217\Models\ModifyRocketMQClusterRequest.cs" />
     <Compile Include="V20200217\Models\ModifyRocketMQClusterResponse.cs" />
     <Compile Include="V20200217\Models\ModifyRocketMQGroupRequest.cs" />
     <Compile Include="V20200217\Models\ModifyRocketMQGroupResponse.cs" />
+    <Compile Include="V20200217\Models\ModifyRocketMQInstanceSpecRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyRocketMQInstanceSpecResponse.cs" />
     <Compile Include="V20200217\Models\ModifyRocketMQNamespaceRequest.cs" />
     <Compile Include="V20200217\Models\ModifyRocketMQNamespaceResponse.cs" />
     <Compile Include="V20200217\Models\ModifyRocketMQTopicRequest.cs" />
@@ -214,7 +239,11 @@
     <Compile Include="V20200217\Models\PulsarProClusterSpecInfo.cs" />
     <Compile Include="V20200217\Models\PulsarProInstance.cs" />
     <Compile Include="V20200217\Models\RabbitMQPrivateNode.cs" />
+    <Compile Include="V20200217\Models\RabbitMQPrivateVirtualHost.cs" />
+    <Compile Include="V20200217\Models\RabbitMQUser.cs" />
     <Compile Include="V20200217\Models\RabbitMQVipInstance.cs" />
+    <Compile Include="V20200217\Models\RabbitMQVirtualHostInfo.cs" />
+    <Compile Include="V20200217\Models\RabbitMQVirtualHostStatistics.cs" />
     <Compile Include="V20200217\Models\ReceiveMessageRequest.cs" />
     <Compile Include="V20200217\Models\ReceiveMessageResponse.cs" />
     <Compile Include="V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
@@ -230,6 +259,7 @@
     <Compile Include="V20200217\Models\RocketMQClusterRecentStats.cs" />
     <Compile Include="V20200217\Models\RocketMQGroup.cs" />
     <Compile Include="V20200217\Models\RocketMQInstanceConfig.cs" />
+    <Compile Include="V20200217\Models\RocketMQMessageTrack.cs" />
     <Compile Include="V20200217\Models\RocketMQNamespace.cs" />
     <Compile Include="V20200217\Models\RocketMQTopic.cs" />
     <Compile Include="V20200217\Models\RocketMQTopicDistribution.cs" />
@@ -243,6 +273,8 @@
     <Compile Include="V20200217\Models\SendMessagesResponse.cs" />
     <Compile Include="V20200217\Models\SendMsgRequest.cs" />
     <Compile Include="V20200217\Models\SendMsgResponse.cs" />
+    <Compile Include="V20200217\Models\SendRocketMQMessageRequest.cs" />
+    <Compile Include="V20200217\Models\SendRocketMQMessageResponse.cs" />
     <Compile Include="V20200217\Models\Sort.cs" />
     <Compile Include="V20200217\Models\Subscription.cs" />
     <Compile Include="V20200217\Models\SubscriptionTopic.cs" />

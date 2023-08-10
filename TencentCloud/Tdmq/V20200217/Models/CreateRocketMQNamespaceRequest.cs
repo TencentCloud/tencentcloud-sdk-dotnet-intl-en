@@ -37,13 +37,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+        /// This parameter is disused.
         /// </summary>
         [JsonProperty("Ttl")]
         public ulong? Ttl{ get; set; }
 
         /// <summary>
-        /// Retention time of persisted messages in milliseconds
+        /// This parameter is disused.
         /// </summary>
         [JsonProperty("RetentionTime")]
         public ulong? RetentionTime{ get; set; }

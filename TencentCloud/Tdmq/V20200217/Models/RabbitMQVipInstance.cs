@@ -117,6 +117,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ExceptionInformation")]
         public string ExceptionInformation{ get; set; }
 
+        /// <summary>
+        /// Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+        /// This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+        /// </summary>
+        [JsonProperty("ClusterStatus")]
+        public long? ClusterStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +145,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
+            this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         }
     }
 }
