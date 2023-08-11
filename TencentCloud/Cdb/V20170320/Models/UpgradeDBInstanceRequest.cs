@@ -91,7 +91,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// The number of CPU cores after the instance is upgraded. If this parameter is left empty, it will be subject to the `Memory` value.
+        /// The number of CPU cores after the instance is upgraded. If this parameter is left empty, the minimum value will be automatically filled based on the value specified by `Memory`.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

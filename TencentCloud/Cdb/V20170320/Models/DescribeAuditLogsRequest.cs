@@ -21,7 +21,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AnalyzeAuditLogsRequest : AbstractModel
+    public class DescribeAuditLogsRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,31 +31,46 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
+        /// Start time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
+        /// End time
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Sorting conditions for aggregation dimension
+        /// The pagination parameter, which specifies the number of entries per page. Maximum value: 100 (default).
         /// </summary>
-        [JsonProperty("AggregationConditions")]
-        public AggregationCondition[] AggregationConditions{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+        /// Pagination offset
         /// </summary>
-        [JsonProperty("AuditLogFilter")]
-        public AuditLogFilter AuditLogFilter{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// The result set of the audit log filtered by this condition is set as the analysis Log.
+        /// Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// Sorting field Valid values: 
+        /// `timestamp`: Timestamp,
+        /// `affectRows`: Number of affected rows,
+        /// `execTime`: Execution time.
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// Filter, which can be used to filter logs.
         /// </summary>
         [JsonProperty("LogFilter")]
         public InstanceAuditLogFilters[] LogFilter{ get; set; }
@@ -69,8 +84,10 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamArrayObj(map, prefix + "AggregationConditions.", this.AggregationConditions);
-            this.SetParamObj(map, prefix + "AuditLogFilter.", this.AuditLogFilter);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
         }
     }

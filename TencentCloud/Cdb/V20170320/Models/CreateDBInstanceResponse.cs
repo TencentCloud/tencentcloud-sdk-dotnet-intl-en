@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Short order ID
+        /// Billing sub-order ID
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }

@@ -21,20 +21,27 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryCDBProxyRequest : AbstractModel
+    public class DescribeAuditLogsResponse : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Number of eligible audit logs
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Proxy ID
+        /// Audit log details
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ProxyGroupId")]
-        public string ProxyGroupId{ get; set; }
+        [JsonProperty("Items")]
+        public AuditLog[] Items{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
