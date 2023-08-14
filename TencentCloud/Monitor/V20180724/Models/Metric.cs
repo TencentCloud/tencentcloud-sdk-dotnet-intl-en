@@ -94,6 +94,20 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
+        /// <summary>
+        /// Matching operator
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Operators")]
+        public Operator[] Operators{ get; set; }
+
+        /// <summary>
+        /// Metric monitoring granularity
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Periods")]
+        public long?[] Periods{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +125,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
             this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamArrayObj(map, prefix + "Operators.", this.Operators);
+            this.SetParamArraySimple(map, prefix + "Periods.", this.Periods);
         }
     }
 }

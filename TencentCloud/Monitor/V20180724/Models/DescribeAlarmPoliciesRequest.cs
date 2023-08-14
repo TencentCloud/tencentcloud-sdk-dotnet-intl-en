@@ -111,7 +111,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// ID list of the notification template, which can be obtained by querying the notification template list.
+        /// List of the notification template IDs, which can be obtained by querying the notification template list.
         /// It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("NoticeIds")]
@@ -160,13 +160,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] OneClickPolicyType{ get; set; }
 
         /// <summary>
-        /// Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+        /// Whether the returned result needs to filter policies associated with all objects. Valid values: `1` (Yes), `0` (No).
         /// </summary>
         [JsonProperty("NotBindAll")]
         public long? NotBindAll{ get; set; }
 
         /// <summary>
-        /// Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+        /// Whether the returned result needs to filter policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
         /// </summary>
         [JsonProperty("NotInstanceGroup")]
         public long? NotInstanceGroup{ get; set; }
@@ -176,6 +176,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// ID of the TencentCloud Managed Service for Prometheus instance, which is used for customizing a metric policy.
+        /// </summary>
+        [JsonProperty("PromInsId")]
+        public string PromInsId{ get; set; }
+
+        /// <summary>
+        /// Search by schedule
+        /// </summary>
+        [JsonProperty("ReceiverOnCallFormIDs")]
+        public string[] ReceiverOnCallFormIDs{ get; set; }
 
 
         /// <summary>
@@ -207,6 +219,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NotBindAll", this.NotBindAll);
             this.SetParamSimple(map, prefix + "NotInstanceGroup", this.NotInstanceGroup);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "PromInsId", this.PromInsId);
+            this.SetParamArraySimple(map, prefix + "ReceiverOnCallFormIDs.", this.ReceiverOnCallFormIDs);
         }
     }
 }

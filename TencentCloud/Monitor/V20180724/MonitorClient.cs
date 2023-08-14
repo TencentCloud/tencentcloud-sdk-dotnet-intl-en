@@ -377,7 +377,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to create a Grafana instance.
+        /// This API is used to create a monthly subscribed TCMG instance of the Basic Edition, with auto-renewal enabled and vouchers not allowed by default.
         /// </summary>
         /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
         /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
@@ -397,7 +397,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to create a Grafana instance.
+        /// This API is used to create a monthly subscribed TCMG instance of the Basic Edition, with auto-renewal enabled and vouchers not allowed by default.
         /// </summary>
         /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
         /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
@@ -1181,7 +1181,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to delete a Grafana instance.
+        /// This API is used to refund a monthly subscribed TCMG instance. Once it is called, the instance cannot be used and will be automatically terminated seven days later.
         /// </summary>
         /// <param name="req"><see cref="DeleteGrafanaInstanceRequest"/></param>
         /// <returns><see cref="DeleteGrafanaInstanceResponse"/></returns>
@@ -1201,7 +1201,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to delete a Grafana instance.
+        /// This API is used to refund a monthly subscribed TCMG instance. Once it is called, the instance cannot be used and will be automatically terminated seven days later.
         /// </summary>
         /// <param name="req"><see cref="DeleteGrafanaInstanceRequest"/></param>
         /// <returns><see cref="DeleteGrafanaInstanceResponse"/></returns>
@@ -2256,6 +2256,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBindingPolicyObjectList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to u200dobtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAgentCreatingProgressRequest"/></param>
+        /// <returns><see cref="DescribeClusterAgentCreatingProgressResponse"/></returns>
+        public async Task<DescribeClusterAgentCreatingProgressResponse> DescribeClusterAgentCreatingProgress(DescribeClusterAgentCreatingProgressRequest req)
+        {
+             JsonResponseModel<DescribeClusterAgentCreatingProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterAgentCreatingProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAgentCreatingProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to u200dobtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAgentCreatingProgressRequest"/></param>
+        /// <returns><see cref="DescribeClusterAgentCreatingProgressResponse"/></returns>
+        public DescribeClusterAgentCreatingProgressResponse DescribeClusterAgentCreatingProgressSync(DescribeClusterAgentCreatingProgressRequest req)
+        {
+             JsonResponseModel<DescribeClusterAgentCreatingProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterAgentCreatingProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAgentCreatingProgressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4763,67 +4803,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
-        /// 
-        /// This API is not deprecated, but its related console features and backend services were deactivated two years ago.
-        /// 
-        /// The default API request rate limit is 50 requests/sec.
-        /// The default upper limit on metrics of a single tenant is 100.
-        /// A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
-        /// 
-        /// The reporting timestamp is the timestamp when you want to save the data. We recommend that you construct a timestamp at integer minutes.
-        /// The time range of a timestamp is from 300 seconds before the current time to the current time.
-        /// The data of the same IP metric/value pair must be reported by minute in chronological order.
-        /// </summary>
-        /// <param name="req"><see cref="PutMonitorDataRequest"/></param>
-        /// <returns><see cref="PutMonitorDataResponse"/></returns>
-        public async Task<PutMonitorDataResponse> PutMonitorData(PutMonitorDataRequest req)
-        {
-             JsonResponseModel<PutMonitorDataResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PutMonitorData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutMonitorDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
-        /// 
-        /// This API is not deprecated, but its related console features and backend services were deactivated two years ago.
-        /// 
-        /// The default API request rate limit is 50 requests/sec.
-        /// The default upper limit on metrics of a single tenant is 100.
-        /// A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
-        /// 
-        /// The reporting timestamp is the timestamp when you want to save the data. We recommend that you construct a timestamp at integer minutes.
-        /// The time range of a timestamp is from 300 seconds before the current time to the current time.
-        /// The data of the same IP metric/value pair must be reported by minute in chronological order.
-        /// </summary>
-        /// <param name="req"><see cref="PutMonitorDataRequest"/></param>
-        /// <returns><see cref="PutMonitorDataResponse"/></returns>
-        public PutMonitorDataResponse PutMonitorDataSync(PutMonitorDataRequest req)
-        {
-             JsonResponseModel<PutMonitorDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PutMonitorData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutMonitorDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to restore a Grafana instance.
+        /// This API is used to renew a monthly subscribed TCMG instance for a month without changing the instance edition. It doesn't apply to running instances.
         /// </summary>
         /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
         /// <returns><see cref="ResumeGrafanaInstanceResponse"/></returns>
@@ -4843,7 +4823,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to restore a Grafana instance.
+        /// This API is used to renew a monthly subscribed TCMG instance for a month without changing the instance edition. It doesn't apply to running instances.
         /// </summary>
         /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
         /// <returns><see cref="ResumeGrafanaInstanceResponse"/></returns>

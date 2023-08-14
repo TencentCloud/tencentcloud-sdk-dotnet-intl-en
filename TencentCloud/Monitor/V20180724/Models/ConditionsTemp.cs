@@ -26,7 +26,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         
         /// <summary>
         /// Template name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }

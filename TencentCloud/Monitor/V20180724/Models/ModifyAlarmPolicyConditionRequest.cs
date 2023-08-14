@@ -73,7 +73,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public LogAlarmReq LogAlarmReqInfo{ get; set; }
 
         /// <summary>
-        /// Template ID, which is dedicated to TMP.
+        /// Template ID, which is dedicated to TencentCloud Managed Service for Prometheus.
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }

@@ -21,29 +21,15 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MetricDatum : AbstractModel
+    public class DescribeClusterAgentCreatingProgressRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Metric name.
-        /// </summary>
-        [JsonProperty("MetricName")]
-        public string MetricName{ get; set; }
-
-        /// <summary>
-        /// Metric value.
-        /// </summary>
-        [JsonProperty("Value")]
-        public ulong? Value{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

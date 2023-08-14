@@ -21,7 +21,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PutMonitorDataResponse : AbstractModel
+    public class DescribeClusterAgentCreatingProgressResponse : AbstractModel
     {
         
         /// <summary>
