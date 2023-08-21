@@ -78,6 +78,33 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
+        /// <summary>
+        /// Execution start time in seconds from 0:00	
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaintainStartTime")]
+        public long? MaintainStartTime{ get; set; }
+
+        /// <summary>
+        /// Duration in seconds	
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaintainDuration")]
+        public long? MaintainDuration{ get; set; }
+
+        /// <summary>
+        /// Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaintainWeekDays")]
+        public string[] MaintainWeekDays{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ServerlessStatus")]
+        public string ServerlessStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +120,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceMemory", this.InstanceMemory);
             this.SetParamSimple(map, prefix + "InstanceStorage", this.InstanceStorage);
             this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
+            this.SetParamSimple(map, prefix + "MaintainStartTime", this.MaintainStartTime);
+            this.SetParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
+            this.SetParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
+            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         }
     }
 }

@@ -78,6 +78,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
+        /// <summary>
+        /// Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// Sorting order. Valid values: `asc`, `desc`.
+        /// </summary>
+        [JsonProperty("OrderByType")]
+        public string OrderByType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Database", this.Database);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }
     }
 }

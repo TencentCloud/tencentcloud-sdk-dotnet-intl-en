@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PackageRegion{ get; set; }
 
         /// <summary>
-        /// Resource pack type. Valid values:  `CCU` (compute resource pack), `DISK` (storage resource pack).
+        /// Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }

@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// The description of a template
+        /// Template description
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }
 
         /// <summary>
-        /// (Optional) ID of the template to be copied
+        /// ID of the template to be copied
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

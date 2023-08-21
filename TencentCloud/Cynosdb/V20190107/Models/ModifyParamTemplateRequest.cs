@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// Template Name
+        /// Template name
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// The template description
+        /// Template description
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }
