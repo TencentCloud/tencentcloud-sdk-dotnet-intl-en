@@ -166,7 +166,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
         /// </summary>
         [JsonProperty("AntiDDoSPackageId")]
         public string AntiDDoSPackageId{ get; set; }

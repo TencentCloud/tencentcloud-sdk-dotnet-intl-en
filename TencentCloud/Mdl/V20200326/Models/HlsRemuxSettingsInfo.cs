@@ -49,7 +49,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? PdtDuration{ get; set; }
 
         /// <summary>
-        /// Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+        /// Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
@@ -67,6 +67,24 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("H265PackageType")]
         public string H265PackageType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LowLatency")]
+        public ulong? LowLatency{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PartialSegmentDuration")]
+        public ulong? PartialSegmentDuration{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PartialSegmentPlaySite")]
+        public ulong? PartialSegmentPlaySite{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +98,9 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
             this.SetParamSimple(map, prefix + "H265PackageType", this.H265PackageType);
+            this.SetParamSimple(map, prefix + "LowLatency", this.LowLatency);
+            this.SetParamSimple(map, prefix + "PartialSegmentDuration", this.PartialSegmentDuration);
+            this.SetParamSimple(map, prefix + "PartialSegmentPlaySite", this.PartialSegmentPlaySite);
         }
     }
 }

@@ -21,26 +21,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssociateDirectConnectGatewayNatGatewayRequest : AbstractModel
+    public class GenerateVpnConnectionDefaultHealthCheckIpRequest : AbstractModel
     {
         
         /// <summary>
-        /// VPC instance ID. VPC instance ID, which can be obtained from the `VpcId` field in the response of the `DescribeVpcs` API.
+        /// VPN gateway ID, such as `vpngw-1w9tue3d`
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
-        /// The NAT Gateway ID.
-        /// </summary>
-        [JsonProperty("NatGatewayId")]
-        public string NatGatewayId{ get; set; }
-
-        /// <summary>
-        /// The direct connect gateway ID.
-        /// </summary>
-        [JsonProperty("DirectConnectGatewayId")]
-        public string DirectConnectGatewayId{ get; set; }
+        [JsonProperty("VpnGatewayId")]
+        public string VpnGatewayId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
-            this.SetParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
+            this.SetParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
         }
     }
 }

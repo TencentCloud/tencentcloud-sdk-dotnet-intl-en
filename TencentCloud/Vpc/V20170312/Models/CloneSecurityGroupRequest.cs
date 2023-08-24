@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+        /// Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the <a href="https://intl.cloud.tencent.com/document/product/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API.
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GroupDescription{ get; set; }
 
         /// <summary>
-        /// Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+        /// Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

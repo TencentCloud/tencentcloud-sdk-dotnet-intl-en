@@ -25,14 +25,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Resource ID
+        /// Resource ID. It can be left empty if `ResourceType` is `USERDEFINED`.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Resource type. Valid values: SUBNET, NETWORKINTERFACE
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Resource type. Valid values: `SUBNET`, `NETWORKINTERFACE`, `USERDEFINED`
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

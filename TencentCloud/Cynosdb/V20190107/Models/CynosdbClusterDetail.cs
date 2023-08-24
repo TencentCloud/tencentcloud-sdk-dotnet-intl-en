@@ -193,7 +193,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// vport for read/write separation
+        /// VIP u200dand vport of the read-only instance in a cluster
         /// </summary>
         [JsonProperty("RoAddr")]
         public Addr[] RoAddr{ get; set; }

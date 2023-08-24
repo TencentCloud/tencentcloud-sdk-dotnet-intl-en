@@ -100,7 +100,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] MaintainWeekDays{ get; set; }
 
         /// <summary>
-        /// 
+        /// Serverless instance u200denablement status
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }

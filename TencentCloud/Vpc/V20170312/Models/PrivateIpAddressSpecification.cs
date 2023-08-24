@@ -71,7 +71,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string State{ get; set; }
 
         /// <summary>
-        /// IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+        /// IP u200dservice level. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT` (Default).
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }

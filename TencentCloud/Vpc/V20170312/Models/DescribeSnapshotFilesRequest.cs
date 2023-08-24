@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// ID of the instance.
+        /// Service instance ID. It's corresponding to the `BusinessType`. 
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 200.
+        /// Number of returned results. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

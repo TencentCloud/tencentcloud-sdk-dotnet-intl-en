@@ -54,6 +54,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
+        /// <summary>
+        /// Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+        /// </summary>
+        [JsonProperty("EnableCdcPublish")]
+        public bool? EnableCdcPublish{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
             this.SetParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "EnableCdcPublish", this.EnableCdcPublish);
         }
     }
 }

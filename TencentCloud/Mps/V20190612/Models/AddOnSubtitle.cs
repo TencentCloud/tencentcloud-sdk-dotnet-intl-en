@@ -21,25 +21,25 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TEHDConfigForUpdate : AbstractModel
+    public class AddOnSubtitle : AbstractModel
     {
         
         /// <summary>
-        /// The TSC type. Valid values:
-        /// <li>`TEHD-100`: TSC-100 (video TSC). </li>
-        /// <li>`TEHD-200`: TSC-200 (audio TSC). </li>
-        /// If this parameter is left blank, no modification will be made.
+        /// The mode. Valid values:
+        /// <li>`subtitle-stream`: Add a subtitle track.</li>
+        /// <li>`close-caption-708`: u200dEmbed EA-708 subtitles in SEI frames.</li>
+        /// <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
         /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
+        /// The subtitle file.
         /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("MaxVideoBitrate")]
-        public ulong? MaxVideoBitrate{ get; set; }
+        [JsonProperty("Subtitle")]
+        public MediaInputInfo Subtitle{ get; set; }
 
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "MaxVideoBitrate", this.MaxVideoBitrate);
+            this.SetParamObj(map, prefix + "Subtitle.", this.Subtitle);
         }
     }
 }

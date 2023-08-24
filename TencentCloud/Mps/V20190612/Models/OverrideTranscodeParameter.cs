@@ -59,13 +59,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// TESHD transcoding parameter.
+        /// The TSC transcoding parameters.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
 
         /// <summary>
         /// The subtitle settings.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
@@ -76,6 +78,20 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("AddonAudioStream")]
         public MediaInputInfo[] AddonAudioStream{ get; set; }
+
+        /// <summary>
+        /// An extended field for transcoding.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
+
+        /// <summary>
+        /// The subtitle file to add.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AddOnSubtitles")]
+        public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
 
         /// <summary>
@@ -91,6 +107,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
             this.SetParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+            this.SetParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
         }
     }
 }

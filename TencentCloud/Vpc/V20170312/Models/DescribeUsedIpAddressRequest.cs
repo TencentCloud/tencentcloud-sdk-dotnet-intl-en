@@ -37,19 +37,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// IPs to query
+        /// List of IPs to be queried. The IPs must be within the VPC or subnet. Up to 100 IPs can be queried at a time.
         /// </summary>
         [JsonProperty("IpAddresses")]
         public string[] IpAddresses{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// The offset. Default value: 0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The number of requested objects.
+        /// The number of returned results. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

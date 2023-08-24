@@ -38,10 +38,10 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// Filter conditions:
-        /// <li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
-        /// <li>instance-type - String - (Filter condition) The associated instance type.</li>
-        /// <li>instance-region - String - (Filter condition) The associated instance region.</li>
-        /// <li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+        /// <li>`ccn-id` - String - The CCN instance ID. </li>
+        /// <li>`instance-type` - String - The associated instance type. </li>
+        /// <li>`instance-region` - String - The associated instance region. </li>
+        /// <li>`instance-id` - String - The instance ID of the associated instance. </li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

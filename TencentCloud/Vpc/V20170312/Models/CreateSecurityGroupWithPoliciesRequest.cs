@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GroupDescription{ get; set; }
 
         /// <summary>
-        /// The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+        /// Project ID. Default value: 0. You can query it on the <a href="https://console.cloud.tencent.com/project">project management page</a> of the Tencent Cloud console.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

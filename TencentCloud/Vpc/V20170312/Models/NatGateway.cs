@@ -147,6 +147,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RestrictState")]
         public string RestrictState{ get; set; }
 
+        /// <summary>
+        /// NAT gateway major version. `1`: Classic, `2`: Standard
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NatProductVersion")]
+        public ulong? NatProductVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +179,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
             this.SetParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
             this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
+            this.SetParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
         }
     }
 }

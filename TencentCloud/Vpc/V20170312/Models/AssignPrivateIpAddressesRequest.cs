@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }
 
         /// <summary>
-        /// IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+        /// IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: PT` u200d(Gold), `AU` u200d(Silver), `AG `(Bronze) and DEFAULT (Default).
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }

@@ -26,44 +26,50 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// The URL of the subtitles to add to the video.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// The subtitle track to add to the video. If both `Path` and `StreamIndex` are specified, `Path` will be used. You need to specify at least one of the two parameters.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StreamIndex")]
         public long? StreamIndex{ get; set; }
 
         /// <summary>
         /// The font. Valid values:
-        /// <li>hei.ttf</li>
-        /// <li>song.ttf</li>
-        /// <li>simkai.ttf</li>
-        /// <li>arial.ttf (for English only)</li>
+        /// <li>`hei.ttf`: Heiti.</li>
+        /// <li>`song.ttf`: Songti.</li>
+        /// <li>`simkai.ttf`: Kaiti.</li>
+        /// <li>`arial.ttf`: Arial.</li>
         /// The default is `hei.ttf`.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontType")]
         public string FontType{ get; set; }
 
         /// <summary>
         /// The font size (pixels). If this is not specified, the font size in the subtitle file will be used.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontSize")]
         public string FontSize{ get; set; }
 
         /// <summary>
         /// The font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }
 
         /// <summary>
         /// The text transparency. Value range: 0-1.
-        /// <li>0: Completely transparent</li>
-        /// <li>1: Completely opaque</li>
+        /// <li>`0`: Fully transparent.</li>
+        /// <li>`1`: u200dFully opaque.</li>
         /// Default value: 1.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontAlpha")]
         public float? FontAlpha{ get; set; }

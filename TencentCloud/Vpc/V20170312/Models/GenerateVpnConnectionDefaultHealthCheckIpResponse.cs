@@ -15,31 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TEHDConfigForUpdate : AbstractModel
+    public class GenerateVpnConnectionDefaultHealthCheckIpResponse : AbstractModel
     {
         
         /// <summary>
-        /// The TSC type. Valid values:
-        /// <li>`TEHD-100`: TSC-100 (video TSC). </li>
-        /// <li>`TEHD-200`: TSC-200 (audio TSC). </li>
-        /// If this parameter is left blank, no modification will be made.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Local IP used for VPN tunnel health check
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("HealthCheckLocalIp")]
+        public string HealthCheckLocalIp{ get; set; }
 
         /// <summary>
-        /// u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Remote IP used for VPN tunnel health check
         /// </summary>
-        [JsonProperty("MaxVideoBitrate")]
-        public ulong? MaxVideoBitrate{ get; set; }
+        [JsonProperty("HealthCheckRemoteIp")]
+        public string HealthCheckRemoteIp{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -47,8 +48,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "MaxVideoBitrate", this.MaxVideoBitrate);
+            this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+            this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

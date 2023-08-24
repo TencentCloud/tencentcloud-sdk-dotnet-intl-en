@@ -25,7 +25,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The ID of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of the bound cluster
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -42,6 +43,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// ID of the instance in the bound cluster
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtendIds")]
+        public string[] ExtendIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArraySimple(map, prefix + "ExtendIds.", this.ExtendIds);
         }
     }
 }
