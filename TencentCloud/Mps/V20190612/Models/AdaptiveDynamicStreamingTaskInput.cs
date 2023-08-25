@@ -63,7 +63,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// The subtitle file to add.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }

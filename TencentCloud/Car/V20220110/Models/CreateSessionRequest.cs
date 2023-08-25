@@ -53,7 +53,11 @@ namespace TencentCloud.Car.V20220110.Models
         /// <summary>
         /// Application startup parameter.
         /// If the user requests a multi-application project or a prelaunch-disabled single-application project, this parameter takes effect.
+        ///  
         /// If the user requests a prelaunch-enabled single-application project, this parameter is invalid.
+        /// 
+        /// Note: When this parameter takes effect, the `ApplicationParameters` parameter will be appended to the end of the application startup parameter. The application startup parameter is set in the application or project configuration in the console.
+        /// For example, for a prelaunch-disabled single-application project, if its application startup parameter `bar` is `0` and the `ApplicationParameters` parameter `foo` is `1`, the actual application startup parameters will be `bar=0 foo=1`.
         /// </summary>
         [JsonProperty("ApplicationParameters")]
         public string ApplicationParameters{ get; set; }

@@ -29,14 +29,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>`TEHD-100`: TSC-100 (video TSC). </li>
         /// <li>`TEHD-200`: TSC-200 (audio TSC). </li>
         /// If this parameter is left blank, no modification will be made.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// u200dThe maximum video bitrate. If this parameter is not specified, no modifications will be made.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// The maximum video bitrate. If this parameter is not specified, no modifications will be made.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public ulong? MaxVideoBitrate{ get; set; }

@@ -15,31 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Car.V20220110.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddOnSubtitle : AbstractModel
+    public class StartPublishStreamRequest : AbstractModel
     {
         
         /// <summary>
-        /// The mode. Valid values:
-        /// <li>`subtitle-stream`: Add a subtitle track.</li>
-        /// <li>`close-caption-708`: Embed EA-708 subtitles in SEI frames.</li>
-        /// <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// The subtitle file.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Push parameter, which is a custom parameter carried during stream pushing.
         /// </summary>
-        [JsonProperty("Subtitle")]
-        public MediaInputInfo Subtitle{ get; set; }
+        [JsonProperty("PublishStreamArgs")]
+        public string PublishStreamArgs{ get; set; }
 
 
         /// <summary>
@@ -47,8 +42,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamObj(map, prefix + "Subtitle.", this.Subtitle);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "PublishStreamArgs", this.PublishStreamArgs);
         }
     }
 }
