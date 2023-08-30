@@ -3883,6 +3883,66 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
+        /// 
+        /// 1. Clipping a file in VOD to generate a new video;
+        /// 2. Splicing multiple files in VOD to generate a new video;
+        /// 3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
+        /// 4. Directly generating a new video from a stream in VOD;
+        /// 5. Clipping a stream in VOD to generate a new video;
+        /// 6. Splicing multiple streams in VOD to generate a new video;
+        /// 7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
+        /// 
+        /// You can also specify whether to perform a task flow for the generated new video.
+        /// </summary>
+        /// <param name="req"><see cref="EditMediaRequest"/></param>
+        /// <returns><see cref="EditMediaResponse"/></returns>
+        public async Task<EditMediaResponse> EditMedia(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
+        /// 
+        /// 1. Clipping a file in VOD to generate a new video;
+        /// 2. Splicing multiple files in VOD to generate a new video;
+        /// 3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
+        /// 4. Directly generating a new video from a stream in VOD;
+        /// 5. Clipping a stream in VOD to generate a new video;
+        /// 6. Splicing multiple streams in VOD to generate a new video;
+        /// 7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
+        /// 
+        /// You can also specify whether to perform a task flow for the generated new video.
+        /// </summary>
+        /// <param name="req"><see cref="EditMediaRequest"/></param>
+        /// <returns><see cref="EditMediaResponse"/></returns>
+        public EditMediaResponse EditMediaSync(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
         /// </summary>
         /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
