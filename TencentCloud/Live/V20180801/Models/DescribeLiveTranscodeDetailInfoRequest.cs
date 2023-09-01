@@ -39,7 +39,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// Query date (UTC+8)
         /// Format: yyyymmdd
-        /// Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
+        /// Note: you can query the statistics for a day in the past three months, with yesterday as the latest date allowed.
         /// </summary>
         [JsonProperty("DayTime")]
         public string DayTime{ get; set; }
@@ -59,9 +59,9 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// Start day time (Beijing time),
-        /// In the format of `yyyymmdd`.
-        /// Note: details for the last month can be queried.
+        /// Start date (UTC+8)
+        /// Format: yyyymmdd
+        /// Note: details for the last three months can be queried.
         /// </summary>
         [JsonProperty("StartDayTime")]
         public string StartDayTime{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// End date (UTC+8)
         /// Format: yyyymmdd
-        /// Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+        /// Note: you can query the statistics for a period in the past three months, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
         /// </summary>
         [JsonProperty("EndDayTime")]
         public string EndDayTime{ get; set; }

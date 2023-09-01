@@ -3420,7 +3420,6 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// This API is used to query the information of downstream playback error codes, i.e., the occurrences of each HTTP error code (4xx and 5xx) at a 1-minute granularity in a certain period of time.
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribePlayErrorCodeDetailInfoListRequest"/></param>
         /// <returns><see cref="DescribePlayErrorCodeDetailInfoListResponse"/></returns>
@@ -3441,7 +3440,6 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// This API is used to query the information of downstream playback error codes, i.e., the occurrences of each HTTP error code (4xx and 5xx) at a 1-minute granularity in a certain period of time.
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DescribePlayErrorCodeDetailInfoListRequest"/></param>
         /// <returns><see cref="DescribePlayErrorCodeDetailInfoListResponse"/></returns>

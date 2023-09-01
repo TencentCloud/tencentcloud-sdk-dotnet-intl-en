@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// The time point queried, whose value is the same as that of the corresponding request parameter.
+        /// The time point queried, whose format is the same as that of the corresponding request parameter.
         /// </summary>
         [JsonProperty("QueryTime")]
         public string QueryTime{ get; set; }
