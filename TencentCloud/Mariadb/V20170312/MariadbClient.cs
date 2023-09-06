@@ -819,6 +819,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// This API is used to obtain a temp u200drollback instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
+        public async Task<DescribeDBTmpInstancesResponse> DescribeDBTmpInstances(DescribeDBTmpInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBTmpInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBTmpInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain a temp u200drollback instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
+        public DescribeDBTmpInstancesResponse DescribeDBTmpInstancesSync(DescribeDBTmpInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBTmpInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBTmpInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>

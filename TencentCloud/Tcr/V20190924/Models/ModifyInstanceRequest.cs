@@ -31,10 +31,19 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// Instance specification
+        /// Instance edition
+        /// Basic: `basic`
+        /// Standard: `standard`
+        /// Premium: `premium`
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
+
+        /// <summary>
+        /// Whether to enable deletion protection. It defaults to `false`. 
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -44,6 +53,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         {
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "RegistryType", this.RegistryType);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

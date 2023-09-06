@@ -133,6 +133,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// This API is used to create a custom account.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomAccountRequest"/></param>
+        /// <returns><see cref="CreateCustomAccountResponse"/></returns>
+        public async Task<CreateCustomAccountResponse> CreateCustomAccount(CreateCustomAccountRequest req)
+        {
+             JsonResponseModel<CreateCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a custom account.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomAccountRequest"/></param>
+        /// <returns><see cref="CreateCustomAccountResponse"/></returns>
+        public CreateCustomAccountResponse CreateCustomAccountSync(CreateCustomAccountRequest req)
+        {
+             JsonResponseModel<CreateCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an image acceleration service.
         /// </summary>
         /// <param name="req"><see cref="CreateImageAccelerationServiceRequest"/></param>
@@ -533,6 +573,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// This API is used to create a service account.
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceAccountRequest"/></param>
+        /// <returns><see cref="CreateServiceAccountResponse"/></returns>
+        public async Task<CreateServiceAccountResponse> CreateServiceAccount(CreateServiceAccountRequest req)
+        {
+             JsonResponseModel<CreateServiceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateServiceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a service account.
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceAccountRequest"/></param>
+        /// <returns><see cref="CreateServiceAccountResponse"/></returns>
+        public CreateServiceAccountResponse CreateServiceAccountSync(CreateServiceAccountRequest req)
+        {
+             JsonResponseModel<CreateServiceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateServiceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a signature for an image tag.
         /// </summary>
         /// <param name="req"><see cref="CreateSignatureRequest"/></param>
@@ -724,6 +804,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "CreateWebhookTrigger");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWebhookTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a custom account.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomAccountRequest"/></param>
+        /// <returns><see cref="DeleteCustomAccountResponse"/></returns>
+        public async Task<DeleteCustomAccountResponse> DeleteCustomAccount(DeleteCustomAccountRequest req)
+        {
+             JsonResponseModel<DeleteCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a custom account.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomAccountRequest"/></param>
+        /// <returns><see cref="DeleteCustomAccountResponse"/></returns>
+        public DeleteCustomAccountResponse DeleteCustomAccountSync(DeleteCustomAccountRequest req)
+        {
+             JsonResponseModel<DeleteCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1173,7 +1293,9 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// This API is used to delete a public network access allowlist policy of an instance.
+        /// This API is used to delete a public network access allow policy.
+        /// 
+        /// Note: When both `PolicyIndex` and `CidrBlock` are specified, `CidrBlock` takes the higher priority
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityPolicyRequest"/></param>
         /// <returns><see cref="DeleteSecurityPolicyResponse"/></returns>
@@ -1193,7 +1315,9 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// This API is used to delete a public network access allowlist policy of an instance.
+        /// This API is used to delete a public network access allow policy.
+        /// 
+        /// Note: When both `PolicyIndex` and `CidrBlock` are specified, `CidrBlock` takes the higher priority
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityPolicyRequest"/></param>
         /// <returns><see cref="DeleteSecurityPolicyResponse"/></returns>
@@ -1204,6 +1328,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSecurityPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a service account.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceAccountRequest"/></param>
+        /// <returns><see cref="DeleteServiceAccountResponse"/></returns>
+        public async Task<DeleteServiceAccountResponse> DeleteServiceAccount(DeleteServiceAccountRequest req)
+        {
+             JsonResponseModel<DeleteServiceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteServiceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a service account.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceAccountRequest"/></param>
+        /// <returns><see cref="DeleteServiceAccountResponse"/></returns>
+        public DeleteServiceAccountResponse DeleteServiceAccountSync(DeleteServiceAccountRequest req)
+        {
+             JsonResponseModel<DeleteServiceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteServiceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1364,6 +1528,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DescribeChartDownloadInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChartDownloadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query custom accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
+        /// <returns><see cref="DescribeCustomAccountsResponse"/></returns>
+        public async Task<DescribeCustomAccountsResponse> DescribeCustomAccounts(DescribeCustomAccountsRequest req)
+        {
+             JsonResponseModel<DescribeCustomAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query custom accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
+        /// <returns><see cref="DescribeCustomAccountsResponse"/></returns>
+        public DescribeCustomAccountsResponse DescribeCustomAccountsSync(DescribeCustomAccountsRequest req)
+        {
+             JsonResponseModel<DescribeCustomAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2133,6 +2337,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// This API is used to query service accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceAccountsRequest"/></param>
+        /// <returns><see cref="DescribeServiceAccountsResponse"/></returns>
+        public async Task<DescribeServiceAccountsResponse> DescribeServiceAccounts(DescribeServiceAccountsRequest req)
+        {
+             JsonResponseModel<DescribeServiceAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServiceAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query service accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceAccountsRequest"/></param>
+        /// <returns><see cref="DescribeServiceAccountsResponse"/></returns>
+        public DescribeServiceAccountsResponse DescribeServiceAccountsSync(DescribeServiceAccountsRequest req)
+        {
+             JsonResponseModel<DescribeServiceAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServiceAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query tag retention execution records.
         /// </summary>
         /// <param name="req"><see cref="DescribeTagRetentionExecutionRequest"/></param>
@@ -2493,6 +2737,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// This API is used to update a custom account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomAccountRequest"/></param>
+        /// <returns><see cref="ModifyCustomAccountResponse"/></returns>
+        public async Task<ModifyCustomAccountResponse> ModifyCustomAccount(ModifyCustomAccountRequest req)
+        {
+             JsonResponseModel<ModifyCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a custom account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomAccountRequest"/></param>
+        /// <returns><see cref="ModifyCustomAccountResponse"/></returns>
+        public ModifyCustomAccountResponse ModifyCustomAccountSync(ModifyCustomAccountRequest req)
+        {
+             JsonResponseModel<ModifyCustomAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to update the tag immutability rule.
         /// </summary>
         /// <param name="req"><see cref="ModifyImmutableTagRulesRequest"/></param>
@@ -2724,6 +3008,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "ModifySecurityPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a service account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceAccountRequest"/></param>
+        /// <returns><see cref="ModifyServiceAccountResponse"/></returns>
+        public async Task<ModifyServiceAccountResponse> ModifyServiceAccount(ModifyServiceAccountRequest req)
+        {
+             JsonResponseModel<ModifyServiceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyServiceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyServiceAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update a service account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceAccountRequest"/></param>
+        /// <returns><see cref="ModifyServiceAccountResponse"/></returns>
+        public ModifyServiceAccountResponse ModifyServiceAccountSync(ModifyServiceAccountRequest req)
+        {
+             JsonResponseModel<ModifyServiceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyServiceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyServiceAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

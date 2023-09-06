@@ -380,7 +380,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public ReservedNetResource[] ReservedNetResources{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether physical replication is supported.
         /// </summary>
         [JsonProperty("IsPhysicalReplicationSupported")]
         public bool? IsPhysicalReplicationSupported{ get; set; }

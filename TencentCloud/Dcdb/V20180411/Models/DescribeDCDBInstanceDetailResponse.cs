@@ -348,7 +348,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public ReservedNetResource[] ReservedNetResources{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether physical replication is supported.
         /// </summary>
         [JsonProperty("IsPhysicalReplicationSupported")]
         public bool? IsPhysicalReplicationSupported{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.771</VersionPrefix>
+    <VersionPrefix>3.0.772</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="V20190924\Models\CheckInstanceNameResponse.cs" />
     <Compile Include="V20190924\Models\CheckInstanceRequest.cs" />
     <Compile Include="V20190924\Models\CheckInstanceResponse.cs" />
+    <Compile Include="V20190924\Models\CreateCustomAccountRequest.cs" />
+    <Compile Include="V20190924\Models\CreateCustomAccountResponse.cs" />
     <Compile Include="V20190924\Models\CreateImageAccelerationServiceRequest.cs" />
     <Compile Include="V20190924\Models\CreateImageAccelerationServiceResponse.cs" />
     <Compile Include="V20190924\Models\CreateImmutableTagRulesRequest.cs" />
@@ -73,6 +75,8 @@
     <Compile Include="V20190924\Models\CreateRepositoryResponse.cs" />
     <Compile Include="V20190924\Models\CreateSecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\CreateSecurityPolicyResponse.cs" />
+    <Compile Include="V20190924\Models\CreateServiceAccountRequest.cs" />
+    <Compile Include="V20190924\Models\CreateServiceAccountResponse.cs" />
     <Compile Include="V20190924\Models\CreateSignaturePolicyRequest.cs" />
     <Compile Include="V20190924\Models\CreateSignaturePolicyResponse.cs" />
     <Compile Include="V20190924\Models\CreateSignatureRequest.cs" />
@@ -83,7 +87,10 @@
     <Compile Include="V20190924\Models\CreateTagRetentionRuleResponse.cs" />
     <Compile Include="V20190924\Models\CreateWebhookTriggerRequest.cs" />
     <Compile Include="V20190924\Models\CreateWebhookTriggerResponse.cs" />
+    <Compile Include="V20190924\Models\CustomAccount.cs" />
     <Compile Include="V20190924\Models\CustomizedDomainInfo.cs" />
+    <Compile Include="V20190924\Models\DeleteCustomAccountRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteCustomAccountResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageAccelerateServiceRequest.cs" />
     <Compile Include="V20190924\Models\DeleteImageAccelerateServiceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageRequest.cs" />
@@ -108,6 +115,8 @@
     <Compile Include="V20190924\Models\DeleteRepositoryTagsResponse.cs" />
     <Compile Include="V20190924\Models\DeleteSecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\DeleteSecurityPolicyResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteServiceAccountRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteServiceAccountResponse.cs" />
     <Compile Include="V20190924\Models\DeleteSignaturePolicyRequest.cs" />
     <Compile Include="V20190924\Models\DeleteSignaturePolicyResponse.cs" />
     <Compile Include="V20190924\Models\DeleteTagRetentionRuleRequest.cs" />
@@ -116,6 +125,8 @@
     <Compile Include="V20190924\Models\DeleteWebhookTriggerResponse.cs" />
     <Compile Include="V20190924\Models\DescribeChartDownloadInfoRequest.cs" />
     <Compile Include="V20190924\Models\DescribeChartDownloadInfoResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeCustomAccountsRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeCustomAccountsResponse.cs" />
     <Compile Include="V20190924\Models\DescribeExternalEndpointStatusRequest.cs" />
     <Compile Include="V20190924\Models\DescribeExternalEndpointStatusResponse.cs" />
     <Compile Include="V20190924\Models\DescribeGCJobsRequest.cs" />
@@ -154,6 +165,8 @@
     <Compile Include="V20190924\Models\DescribeRepositoriesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeSecurityPoliciesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeSecurityPoliciesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeServiceAccountsRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeServiceAccountsResponse.cs" />
     <Compile Include="V20190924\Models\DescribeTagRetentionExecutionRequest.cs" />
     <Compile Include="V20190924\Models\DescribeTagRetentionExecutionResponse.cs" />
     <Compile Include="V20190924\Models\DescribeTagRetentionExecutionTaskRequest.cs" />
@@ -177,6 +190,8 @@
     <Compile Include="V20190924\Models\ManageInternalEndpointResponse.cs" />
     <Compile Include="V20190924\Models\ManageReplicationRequest.cs" />
     <Compile Include="V20190924\Models\ManageReplicationResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyCustomAccountRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyCustomAccountResponse.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceRequest.cs" />
@@ -189,11 +204,14 @@
     <Compile Include="V20190924\Models\ModifyRepositoryResponse.cs" />
     <Compile Include="V20190924\Models\ModifySecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\ModifySecurityPolicyResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyServiceAccountRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyServiceAccountResponse.cs" />
     <Compile Include="V20190924\Models\ModifyTagRetentionRuleRequest.cs" />
     <Compile Include="V20190924\Models\ModifyTagRetentionRuleResponse.cs" />
     <Compile Include="V20190924\Models\ModifyWebhookTriggerRequest.cs" />
     <Compile Include="V20190924\Models\ModifyWebhookTriggerResponse.cs" />
     <Compile Include="V20190924\Models\PeerReplicationOption.cs" />
+    <Compile Include="V20190924\Models\Permission.cs" />
     <Compile Include="V20190924\Models\Region.cs" />
     <Compile Include="V20190924\Models\Registry.cs" />
     <Compile Include="V20190924\Models\RegistryChargePrepaid.cs" />
@@ -211,6 +229,7 @@
     <Compile Include="V20190924\Models\RetentionTask.cs" />
     <Compile Include="V20190924\Models\Schedule.cs" />
     <Compile Include="V20190924\Models\SecurityPolicy.cs" />
+    <Compile Include="V20190924\Models\ServiceAccount.cs" />
     <Compile Include="V20190924\Models\Tag.cs" />
     <Compile Include="V20190924\Models\TagSpecification.cs" />
     <Compile Include="V20190924\Models\TaskDetail.cs" />

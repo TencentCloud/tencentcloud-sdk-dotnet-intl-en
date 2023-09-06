@@ -375,6 +375,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to create a dedicated TDSQL cluster instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterDCDBInstanceResponse"/></returns>
+        public async Task<CreateDedicatedClusterDCDBInstanceResponse> CreateDedicatedClusterDCDBInstance(CreateDedicatedClusterDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDedicatedClusterDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a dedicated TDSQL cluster instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterDCDBInstanceResponse"/></returns>
+        public CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstanceSync(CreateDedicatedClusterDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDedicatedClusterDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a pay-as-you-go TDSQL instance.
         /// </summary>
         /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
@@ -817,6 +857,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// This API is used to obtain u200da temp rollback instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
+        public async Task<DescribeDBTmpInstancesResponse> DescribeDBTmpInstances(DescribeDBTmpInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBTmpInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBTmpInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain u200da temp rollback instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
+        public DescribeDBTmpInstancesResponse DescribeDBTmpInstancesSync(DescribeDBTmpInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBTmpInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBTmpInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the details of a TDSQL instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDCDBInstanceDetailRequest"/></param>
@@ -1250,6 +1330,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to view the backup log retention days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
+        /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
+        public async Task<DescribeLogFileRetentionPeriodResponse> DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req)
+        {
+             JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogFileRetentionPeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to view the backup log retention days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
+        /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
+        public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriodSync(DescribeLogFileRetentionPeriodRequest req)
+        {
+             JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogFileRetentionPeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2296,6 +2416,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "TerminateDedicatedDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to u200dupgrade a dedicated TDSQL cluster instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDedicatedDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDedicatedDCDBInstanceResponse"/></returns>
+        public async Task<UpgradeDedicatedDCDBInstanceResponse> UpgradeDedicatedDCDBInstance(UpgradeDedicatedDCDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDedicatedDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to u200dupgrade a dedicated TDSQL cluster instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDedicatedDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDedicatedDCDBInstanceResponse"/></returns>
+        public UpgradeDedicatedDCDBInstanceResponse UpgradeDedicatedDCDBInstanceSync(UpgradeDedicatedDCDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDedicatedDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
