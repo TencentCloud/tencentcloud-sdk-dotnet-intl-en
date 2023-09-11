@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.774</VersionPrefix>
+    <VersionPrefix>3.0.775</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,18 +48,47 @@
 
   <ItemGroup>
     <Compile Include="V20191205\SslClient.cs" />
+    <Compile Include="V20191205\Models\ApiGatewayInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\ApiGatewayInstanceList.cs" />
     <Compile Include="V20191205\Models\ApplyCertificateRequest.cs" />
     <Compile Include="V20191205\Models\ApplyCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\BatchDeleteCSRRequest.cs" />
+    <Compile Include="V20191205\Models\BatchDeleteCSRResponse.cs" />
+    <Compile Include="V20191205\Models\BindResourceRegionResult.cs" />
+    <Compile Include="V20191205\Models\BindResourceResult.cs" />
+    <Compile Include="V20191205\Models\CSRItem.cs" />
     <Compile Include="V20191205\Models\CancelCertificateOrderRequest.cs" />
     <Compile Include="V20191205\Models\CancelCertificateOrderResponse.cs" />
+    <Compile Include="V20191205\Models\CdnInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\CdnInstanceList.cs" />
+    <Compile Include="V20191205\Models\CertTaskId.cs" />
+    <Compile Include="V20191205\Models\Certificate.cs" />
     <Compile Include="V20191205\Models\CertificateExtra.cs" />
     <Compile Include="V20191205\Models\Certificates.cs" />
+    <Compile Include="V20191205\Models\ClbInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\ClbInstanceList.cs" />
+    <Compile Include="V20191205\Models\ClbListener.cs" />
+    <Compile Include="V20191205\Models\ClbListenerRule.cs" />
     <Compile Include="V20191205\Models\CommitCertificateInformationRequest.cs" />
     <Compile Include="V20191205\Models\CommitCertificateInformationResponse.cs" />
+    <Compile Include="V20191205\Models\CreateCSRRequest.cs" />
+    <Compile Include="V20191205\Models\CreateCSRResponse.cs" />
+    <Compile Include="V20191205\Models\CreateCertificateBindResourceSyncTaskRequest.cs" />
+    <Compile Include="V20191205\Models\CreateCertificateBindResourceSyncTaskResponse.cs" />
     <Compile Include="V20191205\Models\CreateCertificateRequest.cs" />
     <Compile Include="V20191205\Models\CreateCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\DdosInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\DdosInstanceList.cs" />
     <Compile Include="V20191205\Models\DeleteCertificateRequest.cs" />
     <Compile Include="V20191205\Models\DeleteCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCSRRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCSRResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCSRSetRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCSRSetResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskDetailRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskDetailResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskResultRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateBindResourceTaskResultResponse.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateDetailRequest.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateDetailResponse.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateOperateLogsRequest.cs" />
@@ -72,6 +101,11 @@
     <Compile Include="V20191205\Models\DownloadCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DvAuthDetail.cs" />
     <Compile Include="V20191205\Models\DvAuths.cs" />
+    <Compile Include="V20191205\Models\Error.cs" />
+    <Compile Include="V20191205\Models\LiveInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\LiveInstanceList.cs" />
+    <Compile Include="V20191205\Models\ModifyCSRRequest.cs" />
+    <Compile Include="V20191205\Models\ModifyCSRResponse.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateAliasRequest.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateAliasResponse.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateProjectRequest.cs" />
@@ -85,10 +119,29 @@
     <Compile Include="V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\SubmittedData.cs" />
+    <Compile Include="V20191205\Models\SyncTaskBindResourceResult.cs" />
+    <Compile Include="V20191205\Models\TCBAccessInstance.cs" />
+    <Compile Include="V20191205\Models\TCBAccessService.cs" />
+    <Compile Include="V20191205\Models\TCBEnvironment.cs" />
+    <Compile Include="V20191205\Models\TCBEnvironments.cs" />
+    <Compile Include="V20191205\Models\TCBHostInstance.cs" />
+    <Compile Include="V20191205\Models\TCBHostService.cs" />
+    <Compile Include="V20191205\Models\TCBInstanceList.cs" />
     <Compile Include="V20191205\Models\Tags.cs" />
+    <Compile Include="V20191205\Models\TeoInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TeoInstanceList.cs" />
+    <Compile Include="V20191205\Models\TkeIngressDetail.cs" />
+    <Compile Include="V20191205\Models\TkeInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TkeInstanceList.cs" />
+    <Compile Include="V20191205\Models\TkeNameSpaceDetail.cs" />
+    <Compile Include="V20191205\Models\TkeSecretDetail.cs" />
     <Compile Include="V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="V20191205\Models\UploadCertificateResponse.cs" />
     <Compile Include="V20191205\Models\UploadConfirmLetterRequest.cs" />
     <Compile Include="V20191205\Models\UploadConfirmLetterResponse.cs" />
+    <Compile Include="V20191205\Models\VODInstanceList.cs" />
+    <Compile Include="V20191205\Models\VodInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\WafInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\WafInstanceList.cs" />
   </ItemGroup>
 </Project>

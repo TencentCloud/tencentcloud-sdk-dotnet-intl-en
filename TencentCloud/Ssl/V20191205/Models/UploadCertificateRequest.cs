@@ -61,6 +61,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateUse{ get; set; }
 
         /// <summary>
+        /// The list of tags.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
+        /// <summary>
         /// Whether a certificate can be repeatedly uploaded.
         /// </summary>
         [JsonProperty("Repeatable")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "CertificateUse", this.CertificateUse);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Repeatable", this.Repeatable);
         }
     }

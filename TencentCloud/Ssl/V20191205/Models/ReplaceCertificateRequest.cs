@@ -60,6 +60,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
+        /// <summary>
+        /// The CSR encryption algorithm. Valid values: `RSA` (default), `ECC1`, and `SM2`.
+        /// This parameter is available for selection only when the value of `CsrType` is `Online`.
+        /// </summary>
+        [JsonProperty("CertCSREncryptAlgo")]
+        public string CertCSREncryptAlgo{ get; set; }
+
+        /// <summary>
+        /// The CSR encryption parameters. When `CsrEncryptAlgo` is set to `RSA`, `2048` (default) and `4096` are available for selection; and when`CsrEncryptAlgo` is set to `ECC`, `prime256v1` (default) and `secp384r1` are available for selection. 
+        /// </summary>
+        [JsonProperty("CertCSRKeyParameter")]
+        public string CertCSRKeyParameter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +85,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CsrContent", this.CsrContent);
             this.SetParamSimple(map, prefix + "CsrkeyPassword", this.CsrkeyPassword);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "CertCSREncryptAlgo", this.CertCSREncryptAlgo);
+            this.SetParamSimple(map, prefix + "CertCSRKeyParameter", this.CertCSRKeyParameter);
         }
     }
 }

@@ -304,6 +304,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
+        /// The authentication value for DV certificate revocation.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DvRevokeAuthDetail")]
+        public DvAuths[] DvRevokeAuthDetail{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -355,6 +362,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CertFingerprint", this.CertFingerprint);
             this.SetParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
             this.SetParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
+            this.SetParamArrayObj(map, prefix + "DvRevokeAuthDetail.", this.DvRevokeAuthDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

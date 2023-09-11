@@ -93,6 +93,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// This API is used to batch delete CSRs.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteCSRRequest"/></param>
+        /// <returns><see cref="BatchDeleteCSRResponse"/></returns>
+        public async Task<BatchDeleteCSRResponse> BatchDeleteCSR(BatchDeleteCSRRequest req)
+        {
+             JsonResponseModel<BatchDeleteCSRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeleteCSR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteCSRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch delete CSRs.
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteCSRRequest"/></param>
+        /// <returns><see cref="BatchDeleteCSRResponse"/></returns>
+        public BatchDeleteCSRResponse BatchDeleteCSRSync(BatchDeleteCSRRequest req)
+        {
+             JsonResponseModel<BatchDeleteCSRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeleteCSR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteCSRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to cancel a certificate order.
         /// </summary>
         /// <param name="req"><see cref="CancelCertificateOrderRequest"/></param>
@@ -173,6 +213,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// This API is used to create a CSR.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCSRRequest"/></param>
+        /// <returns><see cref="CreateCSRResponse"/></returns>
+        public async Task<CreateCSRResponse> CreateCSR(CreateCSRRequest req)
+        {
+             JsonResponseModel<CreateCSRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCSR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCSRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a CSR.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCSRRequest"/></param>
+        /// <returns><see cref="CreateCSRResponse"/></returns>
+        public CreateCSRResponse CreateCSRSync(CreateCSRRequest req)
+        {
+             JsonResponseModel<CreateCSRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCSR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCSRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to purchase a certificate.
         /// </summary>
         /// <param name="req"><see cref="CreateCertificateRequest"/></param>
@@ -204,6 +284,46 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "CreateCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an async task for querying the cloud resources associated with a certificate. If such a task already exists under the certificate ID, the ID of this task is returned as the result. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE). You can query the result of this task using the `DescribeCertificateBindResourceTaskResult` API.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateBindResourceSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateCertificateBindResourceSyncTaskResponse"/></returns>
+        public async Task<CreateCertificateBindResourceSyncTaskResponse> CreateCertificateBindResourceSyncTask(CreateCertificateBindResourceSyncTaskRequest req)
+        {
+             JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCertificateBindResourceSyncTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an async task for querying the cloud resources associated with a certificate. If such a task already exists under the certificate ID, the ID of this task is returned as the result. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE). You can query the result of this task using the `DescribeCertificateBindResourceTaskResult` API.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateBindResourceSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateCertificateBindResourceSyncTaskResponse"/></returns>
+        public CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTaskSync(CreateCertificateBindResourceSyncTaskRequest req)
+        {
+             JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCertificateBindResourceSyncTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -253,6 +373,86 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// This API is used to query the details of a CSR.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSRRequest"/></param>
+        /// <returns><see cref="DescribeCSRResponse"/></returns>
+        public async Task<DescribeCSRResponse> DescribeCSR(DescribeCSRRequest req)
+        {
+             JsonResponseModel<DescribeCSRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCSR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCSRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a CSR.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSRRequest"/></param>
+        /// <returns><see cref="DescribeCSRResponse"/></returns>
+        public DescribeCSRResponse DescribeCSRSync(DescribeCSRRequest req)
+        {
+             JsonResponseModel<DescribeCSRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCSR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCSRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the CSR list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSRSetRequest"/></param>
+        /// <returns><see cref="DescribeCSRSetResponse"/></returns>
+        public async Task<DescribeCSRSetResponse> DescribeCSRSet(DescribeCSRSetRequest req)
+        {
+             JsonResponseModel<DescribeCSRSetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCSRSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCSRSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the CSR list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCSRSetRequest"/></param>
+        /// <returns><see cref="DescribeCSRSetResponse"/></returns>
+        public DescribeCSRSetResponse DescribeCSRSetSync(DescribeCSRSetRequest req)
+        {
+             JsonResponseModel<DescribeCSRSetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCSRSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCSRSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get certificate information.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateRequest"/></param>
@@ -284,6 +484,86 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the result of an async task created with `CreateCertificateBindResourceSyncTask` to query cloud resources associated with a certificate. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateBindResourceTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeCertificateBindResourceTaskDetailResponse"/></returns>
+        public async Task<DescribeCertificateBindResourceTaskDetailResponse> DescribeCertificateBindResourceTaskDetail(DescribeCertificateBindResourceTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCertificateBindResourceTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the result of an async task created with `CreateCertificateBindResourceSyncTask` to query cloud resources associated with a certificate. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateBindResourceTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeCertificateBindResourceTaskDetailResponse"/></returns>
+        public DescribeCertificateBindResourceTaskDetailResponse DescribeCertificateBindResourceTaskDetailSync(DescribeCertificateBindResourceTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCertificateBindResourceTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the result of an async task created with `CreateCertificateBindResourceSyncTask` to query cloud resources associated with a certificate. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateBindResourceTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeCertificateBindResourceTaskResultResponse"/></returns>
+        public async Task<DescribeCertificateBindResourceTaskResultResponse> DescribeCertificateBindResourceTaskResult(DescribeCertificateBindResourceTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCertificateBindResourceTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the result of an async task created with `CreateCertificateBindResourceSyncTask` to query cloud resources associated with a certificate. The following types of cloud resources are supported: CLB, CDN, WAF, LIVE, VOD, DDOS, TKE, APIGATEWAY, TCB, and TEO (EDGEONE).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertificateBindResourceTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeCertificateBindResourceTaskResultResponse"/></returns>
+        public DescribeCertificateBindResourceTaskResultResponse DescribeCertificateBindResourceTaskResultSync(DescribeCertificateBindResourceTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCertificateBindResourceTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -444,6 +724,46 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "DownloadCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the information of a CSR.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCSRRequest"/></param>
+        /// <returns><see cref="ModifyCSRResponse"/></returns>
+        public async Task<ModifyCSRResponse> ModifyCSR(ModifyCSRRequest req)
+        {
+             JsonResponseModel<ModifyCSRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCSR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCSRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the information of a CSR.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCSRRequest"/></param>
+        /// <returns><see cref="ModifyCSRResponse"/></returns>
+        public ModifyCSRResponse ModifyCSRSync(ModifyCSRRequest req)
+        {
+             JsonResponseModel<ModifyCSRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCSR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCSRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
