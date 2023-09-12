@@ -72,6 +72,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("EventNotifySettings")]
         public EventNotifySetting EventNotifySettings{ get; set; }
 
+        /// <summary>
+        /// Complement the last video frame settings.
+        /// </summary>
+        [JsonProperty("InputLossBehavior")]
+        public InputLossBehaviorInfo InputLossBehavior{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
             this.SetParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
             this.SetParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
+            this.SetParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
         }
     }
 }
