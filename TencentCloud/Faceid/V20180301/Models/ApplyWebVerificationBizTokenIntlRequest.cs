@@ -43,6 +43,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
+        /// <summary>
+        /// The parameter control the page configuration.
+        /// </summary>
+        [JsonProperty("Config")]
+        public WebVerificationConfigIntl Config{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "CompareImageBase64", this.CompareImageBase64);
             this.SetParamSimple(map, prefix + "RedirectURL", this.RedirectURL);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamObj(map, prefix + "Config.", this.Config);
         }
     }
 }

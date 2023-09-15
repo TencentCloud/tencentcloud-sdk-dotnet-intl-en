@@ -28,6 +28,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
         /// </summary>
         [JsonProperty("VerificationUrl")]
+        [System.Obsolete]
         public string VerificationUrl{ get; set; }
 
         /// <summary>
@@ -35,6 +36,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         [JsonProperty("BizToken")]
         public string BizToken{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VerificationURL")]
+        public string VerificationURL{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -50,6 +57,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "VerificationUrl", this.VerificationUrl);
             this.SetParamSimple(map, prefix + "BizToken", this.BizToken);
+            this.SetParamSimple(map, prefix + "VerificationURL", this.VerificationURL);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
