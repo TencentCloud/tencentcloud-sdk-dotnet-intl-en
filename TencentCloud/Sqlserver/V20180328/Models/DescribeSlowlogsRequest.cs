@@ -31,13 +31,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Query start time
+        /// Start time in the format of `yyyy-MM-dd HH:mm:ss`
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time
+        /// End time in the format of `yyyy-MM-dd HH:mm:ss`
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

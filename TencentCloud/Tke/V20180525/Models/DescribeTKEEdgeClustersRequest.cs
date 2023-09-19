@@ -44,7 +44,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter condition (only filtering by a single ClusterName is supported)
+        /// Filter conditions. Values: `ClusterName` and tags in the format of ["key1:value1","key2:value2"].
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

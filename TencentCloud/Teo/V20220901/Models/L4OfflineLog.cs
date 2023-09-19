@@ -25,43 +25,54 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The start time of the log packaging.
-        /// </summary>
-        [JsonProperty("LogTime")]
-        public long? LogTime{ get; set; }
-
-        /// <summary>
-        /// The L4 proxy ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// L4 proxy instance ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// The log size, in bytes.
+        /// Log query area. Valid values:
+        /// <li>`mainland`: Chinese mainland;</li>
+        /// <li>`overseas`: Global (outside the Chinese mainland). </li>
         /// </summary>
-        [JsonProperty("Size")]
-        public long? Size{ get; set; }
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
         /// <summary>
-        /// The download address.
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// The log package name.
+        /// Log packet name.
         /// </summary>
         [JsonProperty("LogPacketName")]
         public string LogPacketName{ get; set; }
 
         /// <summary>
-        /// The acceleration region. Values:
-        /// <li>`mainland`: Chinese mainland;</li>
-        /// <li>`overseas`: Global (outside the Chinese mainland);</li>
+        /// Log download address.
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// (Disused) Log packaging time. 
+        /// </summary>
+        [JsonProperty("LogTime")]
+        public long? LogTime{ get; set; }
+
+        /// <summary>
+        /// Start time of log packaging.
+        /// </summary>
+        [JsonProperty("LogStartTime")]
+        public string LogStartTime{ get; set; }
+
+        /// <summary>
+        /// End time of the log package.
+        /// </summary>
+        [JsonProperty("LogEndTime")]
+        public string LogEndTime{ get; set; }
+
+        /// <summary>
+        /// Log size (in bytes).
+        /// </summary>
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
 
 
         /// <summary>
@@ -69,12 +80,14 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LogTime", this.LogTime);
             this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
-            this.SetParamSimple(map, prefix + "Size", this.Size);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "LogTime", this.LogTime);
+            this.SetParamSimple(map, prefix + "LogStartTime", this.LogStartTime);
+            this.SetParamSimple(map, prefix + "LogEndTime", this.LogEndTime);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

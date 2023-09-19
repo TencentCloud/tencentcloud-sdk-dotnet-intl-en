@@ -253,7 +253,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to create a Spark application.
+        /// This API is used to create a Spark job.
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppRequest"/></param>
         /// <returns><see cref="CreateSparkAppResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to create a Spark application.
+        /// This API is used to create a Spark job.
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppRequest"/></param>
         /// <returns><see cref="CreateSparkAppResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to create a Spark task.
+        /// This API is used to start a Spark job.
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppTaskRequest"/></param>
         /// <returns><see cref="CreateSparkAppTaskResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to create a Spark task.
+        /// This API is used to start a Spark job.
         /// </summary>
         /// <param name="req"><see cref="CreateSparkAppTaskRequest"/></param>
         /// <returns><see cref="CreateSparkAppTaskResponse"/></returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to submit a Spark SQL batch task.
+        /// This API is used to submit a Spark SQL batch task to the job engine.
         /// </summary>
         /// <param name="req"><see cref="CreateSparkSessionBatchSQLRequest"/></param>
         /// <returns><see cref="CreateSparkSessionBatchSQLResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to submit a Spark SQL batch task.
+        /// This API is used to submit a Spark SQL batch task to the job engine.
         /// </summary>
         /// <param name="req"><see cref="CreateSparkSessionBatchSQLRequest"/></param>
         /// <returns><see cref="CreateSparkSessionBatchSQLResponse"/></returns>
@@ -373,7 +373,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
+        /// This API is used to create and execute a SQL task. (`CreateTasks` is recommended.)
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to create a SQL query task. (We recommend you use the `CreateTasks` API instead.)
+        /// This API is used to create and execute a SQL task. (`CreateTasks` is recommended.)
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -413,7 +413,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to create tasks in batches.
+        /// This API is used to create and execute SQL tasks in batches.
         /// </summary>
         /// <param name="req"><see cref="CreateTasksRequest"/></param>
         /// <returns><see cref="CreateTasksResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to create tasks in batches.
+        /// This API is used to create and execute SQL tasks in batches.
         /// </summary>
         /// <param name="req"><see cref="CreateTasksRequest"/></param>
         /// <returns><see cref="CreateTasksResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to delete a Spark application.
+        /// This API is used to delete a Spark job.
         /// </summary>
         /// <param name="req"><see cref="DeleteSparkAppRequest"/></param>
         /// <returns><see cref="DeleteSparkAppResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to delete a Spark application.
+        /// This API is used to delete a Spark job.
         /// </summary>
         /// <param name="req"><see cref="DeleteSparkAppRequest"/></param>
         /// <returns><see cref="DeleteSparkAppResponse"/></returns>
@@ -533,7 +533,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to get the list of disabled table attributes.
+        /// This API is used to get the list of disabled table attributes (new).
         /// </summary>
         /// <param name="req"><see cref="DescribeForbiddenTableProRequest"/></param>
         /// <returns><see cref="DescribeForbiddenTableProResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to get the list of disabled table attributes.
+        /// This API is used to get the list of disabled table attributes (new).
         /// </summary>
         /// <param name="req"><see cref="DescribeForbiddenTableProRequest"/></param>
         /// <returns><see cref="DescribeForbiddenTableProResponse"/></returns>
@@ -693,7 +693,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to query a specific Spark application.
+        /// u200cThis API is used to query the information of a Spark job.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobResponse"/></returns>
@@ -713,7 +713,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to query a specific Spark application.
+        /// u200cThis API is used to query the information of a Spark job.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobResponse"/></returns>
@@ -733,7 +733,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to get the list of Spark applications.
+        /// This API is used to query the list of Spark jobs.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobsRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobsResponse"/></returns>
@@ -753,7 +753,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to get the list of Spark applications.
+        /// This API is used to query the list of Spark jobs.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppJobsRequest"/></param>
         /// <returns><see cref="DescribeSparkAppJobsResponse"/></returns>
@@ -773,7 +773,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to query the list of running task instances of a Spark application.
+        /// This API is used to query the list of running task instances of a Spark job.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppTasksRequest"/></param>
         /// <returns><see cref="DescribeSparkAppTasksResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to query the list of running task instances of a Spark application.
+        /// This API is used to query the list of running task instances of a Spark job.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkAppTasksRequest"/></param>
         /// <returns><see cref="DescribeSparkAppTasksResponse"/></returns>
@@ -933,6 +933,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to enumerate user roles.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRolesRequest"/></param>
+        /// <returns><see cref="DescribeUserRolesResponse"/></returns>
+        public async Task<DescribeUserRolesResponse> DescribeUserRoles(DescribeUserRolesRequest req)
+        {
+             JsonResponseModel<DescribeUserRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enumerate user roles.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRolesRequest"/></param>
+        /// <returns><see cref="DescribeUserRolesResponse"/></returns>
+        public DescribeUserRolesResponse DescribeUserRolesSync(DescribeUserRolesRequest req)
+        {
+             JsonResponseModel<DescribeUserRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to generate SQL statements for creating a managed table.
         /// </summary>
         /// <param name="req"><see cref="GenerateCreateMangedTableSqlRequest"/></param>
@@ -1013,7 +1053,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to update a Spark application.
+        /// This API is used to update a Spark job.
         /// </summary>
         /// <param name="req"><see cref="ModifySparkAppRequest"/></param>
         /// <returns><see cref="ModifySparkAppResponse"/></returns>
@@ -1033,7 +1073,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to update a Spark application.
+        /// This API is used to update a Spark job.
         /// </summary>
         /// <param name="req"><see cref="ModifySparkAppRequest"/></param>
         /// <returns><see cref="ModifySparkAppResponse"/></returns>
@@ -1093,7 +1133,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to suspend or resume a data engine.
+        /// This API is used to suspend or start a data engine.
         /// </summary>
         /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
         /// <returns><see cref="SuspendResumeDataEngineResponse"/></returns>
@@ -1113,7 +1153,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to suspend or resume a data engine.
+        /// This API is used to suspend or start a data engine.
         /// </summary>
         /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
         /// <returns><see cref="SuspendResumeDataEngineResponse"/></returns>

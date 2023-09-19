@@ -280,6 +280,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("IsInherit")]
         public ulong? IsInherit{ get; set; }
 
+        /// <summary>
+        /// Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsSessionStarted")]
+        public bool? IsSessionStarted{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -326,6 +333,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
             this.SetParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
+            this.SetParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.780</VersionPrefix>
+    <VersionPrefix>3.0.781</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -93,9 +93,11 @@
     <Compile Include="V20180328\Models\DBPrivilegeModifyInfo.cs" />
     <Compile Include="V20180328\Models\DBRemark.cs" />
     <Compile Include="V20180328\Models\DBRenameRes.cs" />
+    <Compile Include="V20180328\Models\DBTDEEncrypt.cs" />
     <Compile Include="V20180328\Models\DbNormalDetail.cs" />
     <Compile Include="V20180328\Models\DbRollbackTimeInfo.cs" />
     <Compile Include="V20180328\Models\DealInfo.cs" />
+    <Compile Include="V20180328\Models\DealInstance.cs" />
     <Compile Include="V20180328\Models\DeleteAccountRequest.cs" />
     <Compile Include="V20180328\Models\DeleteAccountResponse.cs" />
     <Compile Include="V20180328\Models\DeleteBackupMigrationRequest.cs" />
@@ -138,6 +140,8 @@
     <Compile Include="V20180328\Models\DescribeFlowStatusResponse.cs" />
     <Compile Include="V20180328\Models\DescribeIncrementalMigrationRequest.cs" />
     <Compile Include="V20180328\Models\DescribeIncrementalMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeInstanceByOrdersRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeInstanceByOrdersResponse.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceParamRecordsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceParamRecordsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeInstanceParamsRequest.cs" />
@@ -189,6 +193,8 @@
     <Compile Include="V20180328\Models\ModifyBackupMigrationResponse.cs" />
     <Compile Include="V20180328\Models\ModifyBackupStrategyRequest.cs" />
     <Compile Include="V20180328\Models\ModifyBackupStrategyResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyDBEncryptAttributesRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyDBEncryptAttributesResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="V20180328\Models\ModifyDBInstanceNetworkRequest.cs" />
@@ -207,6 +213,8 @@
     <Compile Include="V20180328\Models\ModifyDatabaseMdfResponse.cs" />
     <Compile Include="V20180328\Models\ModifyIncrementalMigrationRequest.cs" />
     <Compile Include="V20180328\Models\ModifyIncrementalMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\ModifyInstanceEncryptAttributesRequest.cs" />
+    <Compile Include="V20180328\Models\ModifyInstanceEncryptAttributesResponse.cs" />
     <Compile Include="V20180328\Models\ModifyInstanceParamRequest.cs" />
     <Compile Include="V20180328\Models\ModifyInstanceParamResponse.cs" />
     <Compile Include="V20180328\Models\ModifyMigrationRequest.cs" />
@@ -240,6 +248,7 @@
     <Compile Include="V20180328\Models\StartIncrementalMigrationResponse.cs" />
     <Compile Include="V20180328\Models\StartInstanceXEventRequest.cs" />
     <Compile Include="V20180328\Models\StartInstanceXEventResponse.cs" />
+    <Compile Include="V20180328\Models\TDEConfigAttribute.cs" />
     <Compile Include="V20180328\Models\TerminateDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\TerminateDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\UpgradeDBInstanceRequest.cs" />

@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+        /// Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API (Querying archived backup record is not supported).
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

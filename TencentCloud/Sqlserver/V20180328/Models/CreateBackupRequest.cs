@@ -37,7 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] DBNames{ get; set; }
 
         /// <summary>
-        /// Instance ID in the format of mssql-i1z41iwd
+        /// (Required) Instance ID in the format of mssql-i1z41iwd
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StorageStrategy")]
+        public long? StorageStrategy{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "DBNames.", this.DBNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "StorageStrategy", this.StorageStrategy);
         }
     }
 }

@@ -79,10 +79,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SessionName{ get; set; }
 
         /// <summary>
-        /// Session configurations. `dlc.eni`, `dlc.role.arn`, `dlc.sql.set.config`, and user-defined configurations are supported.
+        /// The session configurations. Valid values: `1.dlc.eni` for user-defined ENI gateway information;
+        /// `2.dlc.role.arn` for user-defined roleArn configurations;
+        /// and `3.dlc.sql.set.config` for user-defined cluster configurations.
         /// </summary>
         [JsonProperty("Arguments")]
         public KVPair[] Arguments{ get; set; }
+
+        /// <summary>
+        /// Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+        /// </summary>
+        [JsonProperty("IsInherit")]
+        public long? IsInherit{ get; set; }
 
 
         /// <summary>
@@ -100,6 +108,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionName", this.SessionName);
             this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
+            this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
         }
     }
 }

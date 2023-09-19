@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string JobName{ get; set; }
 
         /// <summary>
-        /// Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+        /// The input parameters of the Spark job, separated by space. They are generally used for periodic calls.
         /// </summary>
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }

@@ -38,7 +38,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string BizToken{ get; set; }
 
         /// <summary>
-        /// 
+        /// The verification URL to be opened with a browser to start the verification process.
         /// </summary>
         [JsonProperty("VerificationURL")]
         public string VerificationURL{ get; set; }

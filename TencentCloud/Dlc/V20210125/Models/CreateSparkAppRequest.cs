@@ -25,43 +25,43 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// Spark application name
+        /// The Spark job name.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 1: Spark JAR application; 2: Spark streaming application
+        /// The Spark job type. Valid values: `1` for Spark JAR job and `2` for Spark streaming job.
         /// </summary>
         [JsonProperty("AppType")]
         public long? AppType{ get; set; }
 
         /// <summary>
-        /// The data engine executing the Spark job
+        /// The data engine executing the Spark job.
         /// </summary>
         [JsonProperty("DataEngine")]
         public string DataEngine{ get; set; }
 
         /// <summary>
-        /// Execution entry of the Spark application
+        /// The path of the Spark job package.
         /// </summary>
         [JsonProperty("AppFile")]
         public string AppFile{ get; set; }
 
         /// <summary>
-        /// Execution role ID of the Spark job
+        /// The data access policy (CAM role arn).
         /// </summary>
         [JsonProperty("RoleArn")]
         public long? RoleArn{ get; set; }
 
         /// <summary>
-        /// Driver resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+        /// The driver size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
         /// </summary>
         [JsonProperty("AppDriverSize")]
         public string AppDriverSize{ get; set; }
 
         /// <summary>
-        /// Executor resource specification of the Spark job. Valid values: `small`, `medium`, `large`, `xlarge`.
+        /// The executor size. Valid values: `small` (default, 1 CU), `medium` (2 CUs), `large` (4 CUs), and `xlarge` (8 CUs).
         /// </summary>
         [JsonProperty("AppExecutorSize")]
         public string AppExecutorSize{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Eni{ get; set; }
 
         /// <summary>
-        /// Whether it is upload locally. Valid values: `cos`, `lakefs`.
+        /// The source of the Spark job package. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
         /// </summary>
         [JsonProperty("IsLocal")]
         public string IsLocal{ get; set; }
 
         /// <summary>
-        /// Main class of the Spark JAR job during execution
+        /// The main class of the Spark job.
         /// </summary>
         [JsonProperty("MainClass")]
         public string MainClass{ get; set; }
@@ -97,67 +97,67 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string AppConf{ get; set; }
 
         /// <summary>
-        /// Whether it is upload locally. Valid values: `cos`, `lakefs`.
+        /// The source of the dependency JAR packages of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
         /// </summary>
         [JsonProperty("IsLocalJars")]
         public string IsLocalJars{ get; set; }
 
         /// <summary>
-        /// Dependency JAR packages of the Spark JAR job separated by comma
+        /// The dependency JAR packages of the Spark JAR job (JAR packages), separated by comma.
         /// </summary>
         [JsonProperty("AppJars")]
         public string AppJars{ get; set; }
 
         /// <summary>
-        /// Whether it is upload locally. Valid values: `cos`, `lakefs`.
+        /// The source of the dependency files of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
         /// </summary>
         [JsonProperty("IsLocalFiles")]
         public string IsLocalFiles{ get; set; }
 
         /// <summary>
-        /// Dependency resources of the Spark job separated by comma
+        /// The dependency files of the Spark job (files other than JAR and ZIP packages) separated by comma.
         /// </summary>
         [JsonProperty("AppFiles")]
         public string AppFiles{ get; set; }
 
         /// <summary>
-        /// Command line parameters of the Spark job
+        /// The input parameters of the Spark job, separated by comma.
         /// </summary>
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
         /// <summary>
-        /// This parameter takes effect only for Spark flow tasks.
+        /// The maximum number of retries, valid for Spark streaming tasks only.
         /// </summary>
         [JsonProperty("MaxRetries")]
         public long? MaxRetries{ get; set; }
 
         /// <summary>
-        /// Data source name
+        /// The data source name.
         /// </summary>
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }
 
         /// <summary>
-        /// PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+        /// The source of the PySpark dependencies. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
         /// </summary>
         [JsonProperty("IsLocalPythonFiles")]
         public string IsLocalPythonFiles{ get; set; }
 
         /// <summary>
-        /// PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
+        /// The PySpark dependencies (Python files), separated by comma, with .py, .zip, and .egg formats supported.
         /// </summary>
         [JsonProperty("AppPythonFiles")]
         public string AppPythonFiles{ get; set; }
 
         /// <summary>
-        /// Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
+        /// The source of the dependency archives of the Spark job. Valid values: `cos` for COS and `lakefs` for the local system (for use in the console, but this method does not support direct API calls).
         /// </summary>
         [JsonProperty("IsLocalArchives")]
         public string IsLocalArchives{ get; set; }
 
         /// <summary>
-        /// Archives: Dependency resources
+        /// The dependency archives of the Spark job, separated by comma, with tar.gz, .tgz, and .tar formats supported.
         /// </summary>
         [JsonProperty("AppArchives")]
         public string AppArchives{ get; set; }
@@ -191,6 +191,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("IsInherit")]
         public ulong? IsInherit{ get; set; }
+
+        /// <summary>
+        /// Whether to run the task with the session SQLs. Valid values: `false` for no and `true` for yes.
+        /// </summary>
+        [JsonProperty("IsSessionStarted")]
+        public bool? IsSessionStarted{ get; set; }
 
 
         /// <summary>
@@ -226,6 +232,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
+            this.SetParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
         }
     }
 }

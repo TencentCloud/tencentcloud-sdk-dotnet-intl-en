@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// The house ID.
+        /// The data engine ID.
         /// </summary>
         [JsonProperty("DataEngineId")]
         public string DataEngineId{ get; set; }

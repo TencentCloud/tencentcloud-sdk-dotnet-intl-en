@@ -43,10 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// The action. Values:
-        /// <li>`monitor`: Observe</li>
-        /// <li>`drop`: Block</li>
-        /// <li>`alg`: JavaScript challenge</li>
+        /// Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -87,8 +84,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as an output parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID, which is only used as an output parameter.
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
@@ -109,10 +106,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// The statistical dimension. Values:
-        /// <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-        /// <li>`client_to_eo`: Requests from the client to EdgeOne</li>
-        /// Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+        /// Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
+        /// <li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+        /// <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FreqScope")]
         public string[] FreqScope{ get; set; }

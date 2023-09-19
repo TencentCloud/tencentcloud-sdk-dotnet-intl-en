@@ -74,6 +74,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public string GridDaemon{ get; set; }
 
         /// <summary>
+        /// Access kins clusters over the public network
+        /// </summary>
+        [JsonProperty("UnitCluster")]
+        public string UnitCluster{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -93,6 +99,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "HealthRegion", this.HealthRegion);
             this.SetParamSimple(map, prefix + "Health", this.Health);
             this.SetParamSimple(map, prefix + "GridDaemon", this.GridDaemon);
+            this.SetParamSimple(map, prefix + "UnitCluster", this.UnitCluster);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,13 +25,15 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 
+        /// The shuffle data (in bytes) that overflows to COS.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ShuffleWriteBytesCos")]
         public long? ShuffleWriteBytesCos{ get; set; }
 
         /// <summary>
-        /// 
+        /// The total shuffle data (in bytes).
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ShuffleWriteBytesTotal")]
         public long? ShuffleWriteBytesTotal{ get; set; }

@@ -131,6 +131,27 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("TargetUin")]
         public ulong? TargetUin{ get; set; }
 
+        /// <summary>
+        /// Rotation frequency in days. It takes effect when the rotation feature is enabled. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RotationFrequency")]
+        public long? RotationFrequency{ get; set; }
+
+        /// <summary>
+        /// ID of Tencent Cloud resource corresponding with the Secret. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResourceID")]
+        public string ResourceID{ get; set; }
+
+        /// <summary>
+        /// The rotation start time.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RotationBeginTime")]
+        public string RotationBeginTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -153,6 +174,9 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
             this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
+            this.SetParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
+            this.SetParamSimple(map, prefix + "ResourceID", this.ResourceID);
+            this.SetParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
         }
     }
 }

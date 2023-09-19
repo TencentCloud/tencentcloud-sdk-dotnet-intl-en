@@ -70,6 +70,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// Whether the cluster is the default one.
         /// </summary>
         [JsonProperty("DefaultDataEngine")]
+        [System.Obsolete]
         public bool? DefaultDataEngine{ get; set; }
 
         /// <summary>
@@ -139,7 +140,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public CrontabResumeSuspendStrategy CrontabResumeSuspendStrategy{ get; set; }
 
         /// <summary>
-        /// The type of tasks to be executed by the engine, which defaults to SQL.
+        /// The type of tasks to be executed by the engine, which defaults to SQL. Valid values: `SQL` and `BATCH`.
         /// </summary>
         [JsonProperty("EngineExecType")]
         public string EngineExecType{ get; set; }
@@ -181,7 +182,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string ImageVersionName{ get; set; }
 
         /// <summary>
-        /// The name of the primary cluster.
+        /// The primary cluster, which is specified when a failover cluster is created.
         /// </summary>
         [JsonProperty("MainClusterName")]
         public string MainClusterName{ get; set; }

@@ -66,6 +66,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("InternalStatus")]
         public string InternalStatus{ get; set; }
 
+        /// <summary>
+        /// TDE status. Valid values: `enable` (enabled), `disable` (disabled).
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public string Encryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
             this.SetParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
+            this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
         }
     }
 }

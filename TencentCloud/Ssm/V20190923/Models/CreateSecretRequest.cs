@@ -25,13 +25,13 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// Secret name, which must be unique within a region. The name can be up to 128 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+        /// Secret name, which must be unique in the same region. It can contain 128 bytes ([a-z], [A-Z], [0-9], [-_]). It must begin with a letter or digit. Note that it cannot be modified once created. 
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information.
+        /// Secret version. It can contain up to 64 bytes ([a-z], [A-Z], [0-9], [-_.]). It must begin with a letter or digit. `SecretName` and `VersionId` are used to query the Secret information. If it is left empty, the initial Secret version number is used by default.
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
@@ -49,6 +49,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string KmsKeyId{ get; set; }
 
         /// <summary>
+        /// Secret type. It defaults to `custom`.
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public ulong? SecretType{ get; set; }
+
+        /// <summary>
         /// Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
         /// </summary>
         [JsonProperty("SecretBinary")]
@@ -59,6 +65,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         [JsonProperty("SecretString")]
         public string SecretString{ get; set; }
+
+        /// <summary>
+        /// Additional configuration of the Secret in JSON format
+        /// </summary>
+        [JsonProperty("AdditionalConfig")]
+        public string AdditionalConfig{ get; set; }
 
         /// <summary>
         /// List of tags.
@@ -76,8 +88,10 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
             this.SetParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
             this.SetParamSimple(map, prefix + "SecretString", this.SecretString);
+            this.SetParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

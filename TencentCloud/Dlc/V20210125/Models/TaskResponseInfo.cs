@@ -61,7 +61,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
+        /// The task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), `-1` (failed), and `-3` (canceled).
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
@@ -273,19 +273,22 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ulong? ExecutorMaxNumbers{ get; set; }
 
         /// <summary>
-        /// 
+        /// Common task metrics
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CommonMetrics")]
         public CommonMetrics CommonMetrics{ get; set; }
 
         /// <summary>
-        /// 
+        /// The Spark task metrics.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparkMonitorMetrics")]
         public SparkMonitorMetrics SparkMonitorMetrics{ get; set; }
 
         /// <summary>
-        /// 
+        /// The Presto task metrics.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrestoMonitorMetrics")]
         public PrestoMonitorMetrics PrestoMonitorMetrics{ get; set; }

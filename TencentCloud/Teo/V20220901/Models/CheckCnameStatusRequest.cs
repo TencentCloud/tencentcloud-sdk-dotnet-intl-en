@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of domain names.
+        /// List of accelerated domain names.
         /// </summary>
         [JsonProperty("RecordNames")]
         public string[] RecordNames{ get; set; }

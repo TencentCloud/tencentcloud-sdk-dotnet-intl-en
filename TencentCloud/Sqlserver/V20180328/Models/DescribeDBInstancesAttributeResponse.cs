@@ -73,6 +73,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? EventSaveDays{ get; set; }
 
         /// <summary>
+        /// TDE u200dconfiguration
+        /// </summary>
+        [JsonProperty("TDEConfig")]
+        public TDEConfigAttribute TDEConfig{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "RegularBackupStartTime", this.RegularBackupStartTime);
             this.SetParamSimple(map, prefix + "BlockedThreshold", this.BlockedThreshold);
             this.SetParamSimple(map, prefix + "EventSaveDays", this.EventSaveDays);
+            this.SetParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

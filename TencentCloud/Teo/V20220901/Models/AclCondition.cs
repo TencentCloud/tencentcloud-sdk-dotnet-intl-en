@@ -25,24 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The field to match. Values:
-        /// <li>`host`: Request domain name</li>
-        /// <li>`sip`: Client IP</li>
-        /// <li>`ua`: User-Agent</li>
-        /// <li>`cookie`: Cookie</li>
-        /// <li>`cgi`: CGI script</li>
-        /// <li>`xff`: XFF header</li>
-        /// <li>`url`: Request URL</li>
-        /// <li>`accept`: Request content type</li>
-        /// <li>`method`: Request method</li>
-        /// <li>`header`: Request header</li>
-        /// <li>`app_proto`: Application layer protocol</li>
-        /// <li>`sip_proto`: Network layer protocol</li>
-        /// <li>`uabot`: UA rules (only available in custom bot rules)</li>
-        /// <li>`idcid`: IDC rules (only available in custom bot rules)</li>
-        /// <li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
-        /// <li>`portrait`: Client reputation (only available in custom bot rules)</li>
-        /// <li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+        /// Filters: 
+        /// <li>`host`: Request domain name;</li>
+        /// <li>`sip`: Client IP;</li>
+        /// <li>`ua`: User-Agent;</li>
+        /// <li>`cookie`: Cookie;</li>
+        /// <li>`cgi`: CGI script;</li>
+        /// <li>`xff`: XFF header;</li></li>
+        /// <li>`url`: Request URL;<li></li>
+        /// <li>`accept`: Request content type;</li>
+        /// <li>`method`: Request method<;/li>
+        /// <li>`header`: Request header;</li>
+        /// <li>`app_proto`: Application layer protocol;</li>
+        /// <li>`sip_proto`: Network layer protocol;</li>
+        /// <li>`uabot`: UA rules (only available in custom bot rules);</li>
+        /// <li>`idcid`: IDC rules (only available in custom bot rules);</li>
+        /// <li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
+        /// <li>`portrait`: Client reputation (only available in custom bot rules);</li>
+        /// <li>`header_seq`: Header sequence (only available in custom bot rules);</li>
+        /// <li>`hdr`: Request body (only available in custom Web protection rules). </li>
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string MatchFrom{ get; set; }

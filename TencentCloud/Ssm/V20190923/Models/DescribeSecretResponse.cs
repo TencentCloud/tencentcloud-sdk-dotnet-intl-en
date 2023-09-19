@@ -130,6 +130,13 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? TargetUin{ get; set; }
 
         /// <summary>
+        /// Additional configuration of the Secret
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AdditionalConfig")]
+        public string AdditionalConfig{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -157,6 +164,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
             this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
+            this.SetParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

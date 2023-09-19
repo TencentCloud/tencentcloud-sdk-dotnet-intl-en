@@ -57,7 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SQLType{ get; set; }
 
         /// <summary>
-        /// Current status of the task. `0`: initial; `1`: task running; `2`: task execution succeeded; `-1`: task execution failed; `-3`: task terminated manually by the user. The task execution result will be returned only if task execution succeeds.
+        /// u200cThe current task status. Valid values: `0` (initializing), `1` (executing), `2` (executed), `3` (writing data), `4` (queuing), u200c`-1` (failed), and `-3` (canceled). Only when the task is successfully executed, a task execution result will be returned.
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }

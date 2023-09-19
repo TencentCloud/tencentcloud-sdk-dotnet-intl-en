@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Sorting{ get; set; }
 
         /// <summary>
-        /// Filter by this parameter, which can be `spark-job-name`.
+        /// The filters. The following types are supported, and `Name` of the parameter passed in must be one of them: `spark-job-name` (job name), `spark-job-id` (job ID), `spark-app-type` (job type: `1` for batch, `2` for streaming, and `4` for SQL), `user-name` (creator), and `key-word` (job name or ID keywords for fuzzy search).
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

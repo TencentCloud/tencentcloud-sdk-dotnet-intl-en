@@ -292,6 +292,27 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HostingStatus")]
+        public long? HostingStatus{ get; set; }
+
+        /// <summary>
+        /// The hosting completion time.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HostingCompleteTime")]
+        public string HostingCompleteTime{ get; set; }
+
+        /// <summary>
+        /// The hosted new certificate ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HostingRenewCertId")]
+        public string HostingRenewCertId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -336,6 +357,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
             this.SetParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
+            this.SetParamSimple(map, prefix + "HostingCompleteTime", this.HostingCompleteTime);
+            this.SetParamSimple(map, prefix + "HostingRenewCertId", this.HostingRenewCertId);
         }
     }
 }

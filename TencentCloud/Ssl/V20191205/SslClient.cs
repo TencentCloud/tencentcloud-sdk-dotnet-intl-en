@@ -133,6 +133,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// This API is used to cancel certificate review.
+        /// </summary>
+        /// <param name="req"><see cref="CancelAuditCertificateRequest"/></param>
+        /// <returns><see cref="CancelAuditCertificateResponse"/></returns>
+        public async Task<CancelAuditCertificateResponse> CancelAuditCertificate(CancelAuditCertificateRequest req)
+        {
+             JsonResponseModel<CancelAuditCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelAuditCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelAuditCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to cancel certificate review.
+        /// </summary>
+        /// <param name="req"><see cref="CancelAuditCertificateRequest"/></param>
+        /// <returns><see cref="CancelAuditCertificateResponse"/></returns>
+        public CancelAuditCertificateResponse CancelAuditCertificateSync(CancelAuditCertificateRequest req)
+        {
+             JsonResponseModel<CancelAuditCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelAuditCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelAuditCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to cancel a certificate order.
         /// </summary>
         /// <param name="req"><see cref="CancelCertificateOrderRequest"/></param>
@@ -844,6 +884,46 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCertificateProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to re-submit a review application for a paid certificate whose review failed or was canceled.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCertificateResubmitRequest"/></param>
+        /// <returns><see cref="ModifyCertificateResubmitResponse"/></returns>
+        public async Task<ModifyCertificateResubmitResponse> ModifyCertificateResubmit(ModifyCertificateResubmitRequest req)
+        {
+             JsonResponseModel<ModifyCertificateResubmitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCertificateResubmit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateResubmitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to re-submit a review application for a paid certificate whose review failed or was canceled.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCertificateResubmitRequest"/></param>
+        /// <returns><see cref="ModifyCertificateResubmitResponse"/></returns>
+        public ModifyCertificateResubmitResponse ModifyCertificateResubmitSync(ModifyCertificateResubmitRequest req)
+        {
+             JsonResponseModel<ModifyCertificateResubmitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCertificateResubmit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateResubmitResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

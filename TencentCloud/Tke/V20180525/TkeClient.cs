@@ -413,7 +413,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// Create an external network access port for the managed cluster (the old way, only the external network port for the managed cluster is supported)
+        /// This API is used to create a public network access port for a managed cluster. Note: This API will be disused soon. Please call `CreateClusterEndpoint` instead.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointVipRequest"/></param>
         /// <returns><see cref="CreateClusterEndpointVipResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// Create an external network access port for the managed cluster (the old way, only the external network port for the managed cluster is supported)
+        /// This API is used to create a public network access port for a managed cluster. Note: This API will be disused soon. Please call `CreateClusterEndpoint` instead.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointVipRequest"/></param>
         /// <returns><see cref="CreateClusterEndpointVipResponse"/></returns>
@@ -844,6 +844,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "CreateTKEEdgeCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTKEEdgeClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an add-on.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddonRequest"/></param>
+        /// <returns><see cref="DeleteAddonResponse"/></returns>
+        public async Task<DeleteAddonResponse> DeleteAddon(DeleteAddonRequest req)
+        {
+             JsonResponseModel<DeleteAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete an add-on.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddonRequest"/></param>
+        /// <returns><see cref="DeleteAddonResponse"/></returns>
+        public DeleteAddonResponse DeleteAddonSync(DeleteAddonRequest req)
+        {
+             JsonResponseModel<DeleteAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAddonResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1484,6 +1524,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTKEEdgeCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTKEEdgeClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of add-ons.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddonRequest"/></param>
+        /// <returns><see cref="DescribeAddonResponse"/></returns>
+        public async Task<DescribeAddonResponse> DescribeAddon(DescribeAddonRequest req)
+        {
+             JsonResponseModel<DescribeAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of add-ons.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddonRequest"/></param>
+        /// <returns><see cref="DescribeAddonResponse"/></returns>
+        public DescribeAddonResponse DescribeAddonSync(DescribeAddonRequest req)
+        {
+             JsonResponseModel<DescribeAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query parameters of an add-on.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddonValuesRequest"/></param>
+        /// <returns><see cref="DescribeAddonValuesResponse"/></returns>
+        public async Task<DescribeAddonValuesResponse> DescribeAddonValues(DescribeAddonValuesRequest req)
+        {
+             JsonResponseModel<DescribeAddonValuesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAddonValues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddonValuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query parameters of an add-on.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddonValuesRequest"/></param>
+        /// <returns><see cref="DescribeAddonValuesResponse"/></returns>
+        public DescribeAddonValuesResponse DescribeAddonValuesSync(DescribeAddonValuesRequest req)
+        {
+             JsonResponseModel<DescribeAddonValuesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAddonValues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddonValuesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2733,6 +2853,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query the encryption status of etcd data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeEncryptionStatusResponse"/></returns>
+        public async Task<DescribeEncryptionStatusResponse> DescribeEncryptionStatus(DescribeEncryptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the encryption status of etcd data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEncryptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeEncryptionStatusResponse"/></returns>
+        public DescribeEncryptionStatusResponse DescribeEncryptionStatusSync(DescribeEncryptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeEncryptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEncryptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEncryptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query one or more existing node and determine whether they can be added to a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeExistedInstancesRequest"/></param>
@@ -3293,6 +3453,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to disable encryption protection.
+        /// </summary>
+        /// <param name="req"><see cref="DisableEncryptionProtectionRequest"/></param>
+        /// <returns><see cref="DisableEncryptionProtectionResponse"/></returns>
+        public async Task<DisableEncryptionProtectionResponse> DisableEncryptionProtection(DisableEncryptionProtectionRequest req)
+        {
+             JsonResponseModel<DisableEncryptionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableEncryptionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableEncryptionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable encryption protection.
+        /// </summary>
+        /// <param name="req"><see cref="DisableEncryptionProtectionRequest"/></param>
+        /// <returns><see cref="DisableEncryptionProtectionResponse"/></returns>
+        public DisableEncryptionProtectionResponse DisableEncryptionProtectionSync(DisableEncryptionProtectionRequest req)
+        {
+             JsonResponseModel<DisableEncryptionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableEncryptionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableEncryptionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to drain a virtual node.
         /// </summary>
         /// <param name="req"><see cref="DrainClusterVirtualNodeRequest"/></param>
@@ -3364,6 +3564,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "EnableClusterDeletionProtection");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable encryption protection.
+        /// </summary>
+        /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
+        /// <returns><see cref="EnableEncryptionProtectionResponse"/></returns>
+        public async Task<EnableEncryptionProtectionResponse> EnableEncryptionProtection(EnableEncryptionProtectionRequest req)
+        {
+             JsonResponseModel<EnableEncryptionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableEncryptionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableEncryptionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable encryption protection.
+        /// </summary>
+        /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
+        /// <returns><see cref="EnableEncryptionProtectionResponse"/></returns>
+        public EnableEncryptionProtectionResponse EnableEncryptionProtectionSync(EnableEncryptionProtectionRequest req)
+        {
+             JsonResponseModel<EnableEncryptionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableEncryptionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableEncryptionProtectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3524,6 +3764,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "GetUpgradeInstanceProgress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUpgradeInstanceProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to install an add-on on the target cluster.
+        /// </summary>
+        /// <param name="req"><see cref="InstallAddonRequest"/></param>
+        /// <returns><see cref="InstallAddonResponse"/></returns>
+        public async Task<InstallAddonResponse> InstallAddon(InstallAddonRequest req)
+        {
+             JsonResponseModel<InstallAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InstallAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to install an add-on on the target cluster.
+        /// </summary>
+        /// <param name="req"><see cref="InstallAddonRequest"/></param>
+        /// <returns><see cref="InstallAddonResponse"/></returns>
+        public InstallAddonResponse InstallAddonSync(InstallAddonRequest req)
+        {
+             JsonResponseModel<InstallAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InstallAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallAddonResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4044,6 +4324,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UninstallEdgeLogAgent");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallEdgeLogAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update parameters and version of an add-on.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAddonRequest"/></param>
+        /// <returns><see cref="UpdateAddonResponse"/></returns>
+        public async Task<UpdateAddonResponse> UpdateAddon(UpdateAddonRequest req)
+        {
+             JsonResponseModel<UpdateAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAddonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update parameters and version of an add-on.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAddonRequest"/></param>
+        /// <returns><see cref="UpdateAddonResponse"/></returns>
+        public UpdateAddonResponse UpdateAddonSync(UpdateAddonRequest req)
+        {
+             JsonResponseModel<UpdateAddonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAddon");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAddonResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// List of sites to be queried. All sites will be selected if this field is not specified.
+        /// List of sites. This parameter is required. A `null` will be returned if it is left empty.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

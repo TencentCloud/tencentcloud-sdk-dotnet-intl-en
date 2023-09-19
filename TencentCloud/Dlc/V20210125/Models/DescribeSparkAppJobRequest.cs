@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// Spark job ID. If it co-exists with `JobName`, `JobName` will become invalid.
+        /// The Spark job ID. If it co-exists with `JobName`, `JobName` is invalid. At least `JobId` or `JobName` must be used.
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

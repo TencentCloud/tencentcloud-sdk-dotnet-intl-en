@@ -127,7 +127,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public string EdgeVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// u200dTags bound with the cluster
+        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification TagSpecification{ get; set; }

@@ -49,13 +49,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Update start time
+        /// The update start time in the format of yyyy-MM-dd HH:mm:ss.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Update end time
+        /// The update end time in the format of yyyy-MM-dd HH:mm:ss.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

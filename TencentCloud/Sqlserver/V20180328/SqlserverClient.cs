@@ -893,7 +893,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to query the list of unarchived database backup files.
+        /// This API is used to query the details of an unarchived backup.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
         /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to query the list of unarchived database backup files.
+        /// This API is used to query the details of an unarchived backup.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
         /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
@@ -1404,6 +1404,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIncrementalMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the instance ID by the order number.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceByOrdersRequest"/></param>
+        /// <returns><see cref="DescribeInstanceByOrdersResponse"/></returns>
+        public async Task<DescribeInstanceByOrdersResponse> DescribeInstanceByOrders(DescribeInstanceByOrdersRequest req)
+        {
+             JsonResponseModel<DescribeInstanceByOrdersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceByOrders");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceByOrdersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the instance ID by the order number.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceByOrdersRequest"/></param>
+        /// <returns><see cref="DescribeInstanceByOrdersResponse"/></returns>
+        public DescribeInstanceByOrdersResponse DescribeInstanceByOrdersSync(DescribeInstanceByOrdersRequest req)
+        {
+             JsonResponseModel<DescribeInstanceByOrdersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceByOrders");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceByOrdersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1933,7 +1973,8 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to query the upgrade price of an instance.
+        /// This API is used to query the upgrade prices of a monthly subscribed instance
+        /// .
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>
@@ -1953,7 +1994,8 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to query the upgrade price of an instance.
+        /// This API is used to query the upgrade prices of a monthly subscribed instance
+        /// .
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>
@@ -2124,6 +2166,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBackupStrategy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to u200denable or disable TDE of a database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
+        public async Task<ModifyDBEncryptAttributesResponse> ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to u200denable or disable TDE of a database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
+        public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributesSync(ModifyDBEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBEncryptAttributesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2484,6 +2566,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIncrementalMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable TDE of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEncryptAttributesResponse"/></returns>
+        public async Task<ModifyInstanceEncryptAttributesResponse> ModifyInstanceEncryptAttributes(ModifyInstanceEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyInstanceEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceEncryptAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable TDE of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEncryptAttributesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEncryptAttributesResponse"/></returns>
+        public ModifyInstanceEncryptAttributesResponse ModifyInstanceEncryptAttributesSync(ModifyInstanceEncryptAttributesRequest req)
+        {
+             JsonResponseModel<ModifyInstanceEncryptAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceEncryptAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceEncryptAttributesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
