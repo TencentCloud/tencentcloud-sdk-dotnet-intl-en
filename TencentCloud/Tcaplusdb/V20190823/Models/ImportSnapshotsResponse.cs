@@ -32,6 +32,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string TaskId{ get; set; }
 
         /// <summary>
+        /// `ApplicationId` is in the format of `AppInstanceId-applicationId`, which is used to identify applications of different clusters.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +51,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
