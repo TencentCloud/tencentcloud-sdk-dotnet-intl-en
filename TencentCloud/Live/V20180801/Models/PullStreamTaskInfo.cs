@@ -249,6 +249,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("VodLocalMode")]
         public long? VodLocalMode{ get; set; }
 
+        /// <summary>
+        ///  Recording template ID.
+        /// </summary>
+        [JsonProperty("RecordTemplateId")]
+        public string RecordTemplateId{ get; set; }
+
+        /// <summary>
+        /// Newly added streaming address. Used for the scenario of pushing two streams with a single task.
+        /// </summary>
+        [JsonProperty("BackupToUrl")]
+        public string BackupToUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +294,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
             this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
             this.SetParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
+            this.SetParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
+            this.SetParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
         }
     }
 }

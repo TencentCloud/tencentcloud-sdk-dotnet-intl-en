@@ -4605,6 +4605,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// Restart the running live streaming pull task.
+        /// </summary>
+        /// <param name="req"><see cref="RestartLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="RestartLivePullStreamTaskResponse"/></returns>
+        public async Task<RestartLivePullStreamTaskResponse> RestartLivePullStreamTask(RestartLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<RestartLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Restart the running live streaming pull task.
+        /// </summary>
+        /// <param name="req"><see cref="RestartLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="RestartLivePullStreamTaskResponse"/></returns>
+        public RestartLivePullStreamTaskResponse RestartLivePullStreamTaskSync(RestartLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<RestartLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to cancel the delay setting and recover the real-time display of the live streaming image.
         /// </summary>
         /// <param name="req"><see cref="ResumeDelayLiveStreamRequest"/></param>
