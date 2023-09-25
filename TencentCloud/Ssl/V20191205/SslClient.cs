@@ -733,6 +733,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// This API is used to query the list of EDGEONE instances to which a certificate can be deployed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostTeoInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostTeoInstanceListResponse"/></returns>
+        public async Task<DescribeHostTeoInstanceListResponse> DescribeHostTeoInstanceList(DescribeHostTeoInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostTeoInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostTeoInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of EDGEONE instances to which a certificate can be deployed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostTeoInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeHostTeoInstanceListResponse"/></returns>
+        public DescribeHostTeoInstanceListResponse DescribeHostTeoInstanceListSync(DescribeHostTeoInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostTeoInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostTeoInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to download a certificate.
         /// </summary>
         /// <param name="req"><see cref="DownloadCertificateRequest"/></param>
