@@ -120,6 +120,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public ScheduleTask ScheduleTask{ get; set; }
 
         /// <summary>
+        /// The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LiveScheduleTask")]
+        public LiveScheduleTask LiveScheduleTask{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -145,6 +152,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamObj(map, prefix + "ScheduleTask.", this.ScheduleTask);
+            this.SetParamObj(map, prefix + "LiveScheduleTask.", this.LiveScheduleTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

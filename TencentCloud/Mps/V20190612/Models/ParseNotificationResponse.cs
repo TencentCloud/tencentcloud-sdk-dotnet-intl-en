@@ -67,6 +67,20 @@ namespace TencentCloud.Mps.V20190612.Models
         public ScheduleTask ScheduleTaskEvent{ get; set; }
 
         /// <summary>
+        /// - The expiration time (Unix timestamp) of the notification's signature.
+        /// - By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
+        /// - The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public long? Timestamp{ get; set; }
+
+        /// <summary>
+        /// The notification signature. Sign = MD5 (Timestamp + NotifyKey) MPS concatenates `Timestamp` and `NotifyKey` in `TaskNotifyConfig` and calculates a signature using the MD5 algorithm. This signature is included in the notification sent to your backend server. If the signature in the notification matches your own calculation result, it indicates that the notification is from MPS.
+        /// </summary>
+        [JsonProperty("Sign")]
+        public string Sign{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -84,6 +98,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "Sign", this.Sign);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

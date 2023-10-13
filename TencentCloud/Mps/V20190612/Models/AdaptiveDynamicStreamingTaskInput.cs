@@ -37,8 +37,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// Target bucket of an output file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -62,14 +62,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SegmentObjectName{ get; set; }
 
         /// <summary>
-        /// The subtitle file to add.
+        /// 
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
         /// <summary>
-        /// Information of Drm.   Note: This field may return·null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }

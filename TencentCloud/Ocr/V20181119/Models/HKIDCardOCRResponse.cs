@@ -108,7 +108,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
         /// -9102: Alarm for photocopied document
         /// -9103: Alarm for spoofed document
-        /// -9104: Alarm for photoshopped document
         /// </summary>
         [JsonProperty("WarningCode")]
         public long?[] WarningCode{ get; set; }

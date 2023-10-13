@@ -31,16 +31,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// Start time offset of video clipping in seconds.
+        /// The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of video clipping in seconds.
+        /// The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
+
+        /// <summary>
+        /// The ID of the material associated with an element. This parameter is required for video compositing tasks.
+        /// 
+        /// Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
 
         /// <summary>
@@ -51,6 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

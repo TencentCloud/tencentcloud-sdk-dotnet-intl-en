@@ -25,13 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// The encryption type.
+        /// <li>`simpleaes`: AES-128 encryption.</li>
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// The AES-128 encryption details.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SimpleAesDrm")]
         public SimpleAesDrm SimpleAesDrm{ get; set; }

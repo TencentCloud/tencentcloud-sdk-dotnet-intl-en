@@ -61,6 +61,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AiAnalysisTask")]
+        public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AiQualityControlTask")]
+        public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
+
+        /// <summary>
         /// The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
         /// </summary>
         [JsonProperty("SessionId")]
@@ -71,6 +83,16 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
+
+        /// <summary>
+        /// The live scheme ID.
+        /// Note 1:
+        /// <li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are specified for a subtask of the scheme, those output settings will be applied. </li>
+        /// u200c<li>If an output storage (`OutputStorage`) and directory (`OutputDir`) are not specified for a subtask of the scheme, the output parameters specified for `ProcessLiveStream` (if any) will be applied. </li>
+        /// Note 2: If `TaskNotifyConfig` is specified when `ProcessLiveStream` is called, the specified settings will be applied instead of the default callback settings of the scheme.
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public long? ScheduleId{ get; set; }
 
 
         /// <summary>
@@ -84,8 +106,11 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+            this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+            this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         }
     }
 }

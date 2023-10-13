@@ -38,15 +38,25 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// The path to save the media processing output file.
+        /// 
+        /// Note: For complex compositing tasks, the filename can be up to 64 characters long and can only contain digits, letters, and special characters -_
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// Configuration for output files of video editing
+        /// The output settings for a video clipping task.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public EditMediaOutputConfig OutputConfig{ get; set; }
+
+        /// <summary>
+        /// The settings for a video compositing task.
+        /// 
+        /// Note: If this parameter is not empty, the task is a video compositing task. Otherwise, the task is a video clipping task.
+        /// </summary>
+        [JsonProperty("ComposeConfig")]
+        public ComposeMediaConfig ComposeConfig{ get; set; }
 
         /// <summary>
         /// Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
@@ -82,6 +92,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamObj(map, prefix + "ComposeConfig.", this.ComposeConfig);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

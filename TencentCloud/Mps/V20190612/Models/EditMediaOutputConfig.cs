@@ -25,13 +25,15 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+        /// The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+        /// The clip mode. Valid values: `normal` (default), `fast`.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

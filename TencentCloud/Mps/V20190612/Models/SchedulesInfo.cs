@@ -38,13 +38,22 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ScheduleName{ get; set; }
 
         /// <summary>
+        /// The scheme type. Valid values:
+        ///  <li>`Preset`</li>
+        /// <li>`Custom` </li>
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// The scheme status. Valid values:
         /// `Enabled`
         /// `Disabled`
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
-        public string[] Status{ get; set; }
+        public string Status{ get; set; }
 
         /// <summary>
         /// The trigger of the scheme.
@@ -103,7 +112,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
             this.SetParamSimple(map, prefix + "ScheduleName", this.ScheduleName);
-            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Trigger.", this.Trigger);
             this.SetParamArrayObj(map, prefix + "Activities.", this.Activities);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
