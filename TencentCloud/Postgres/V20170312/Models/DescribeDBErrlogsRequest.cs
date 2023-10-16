@@ -25,19 +25,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of postgres-5bq3wfjd
+        /// Instance ID	
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Query start time in the format of 2018-01-01 00:00:00, which cannot be more than 7 days ago
+        /// u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time in the format of 2018-01-01 00:00:00
+        /// u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// Search keyword
+        /// Keywords used for search
         /// </summary>
         [JsonProperty("SearchKeys")]
         public string[] SearchKeys{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page. Value range: 1-100
+        /// Number of results returned per page. Value range: 1-100. Default value: `50`.	
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Page number for data return in paged query. Pagination starts from 0
+        /// Data offset, which starts from 0. Default value: `0`.	
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

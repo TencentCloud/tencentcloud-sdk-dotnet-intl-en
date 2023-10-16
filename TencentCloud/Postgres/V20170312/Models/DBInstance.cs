@@ -25,31 +25,25 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
+        /// Instance region such as ap-guangzhou, which corresponds to the`Region` field in `RegionSet`.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
+        /// Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Project ID
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
-
-        /// <summary>
-        /// VPC ID
+        /// VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// SubnetId
+        /// VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets ](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -67,7 +61,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceName{ get; set; }
 
         /// <summary>
-        /// Instance status.  Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolating`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, `upgrading` (upgrading kernel version).
+        /// Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolating`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`, `upgrading` (upgrading kernel version), `audit-switching` (changing audit status), `primary-switching` (primary-standby switching).
         /// </summary>
         [JsonProperty("DBInstanceStatus")]
         public string DBInstanceStatus{ get; set; }
@@ -97,28 +91,48 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceClass{ get; set; }
 
         /// <summary>
-        /// Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+        /// The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DBMajorVersion")]
+        public string DBMajorVersion{ get; set; }
+
+        /// <summary>
+        /// Number of the major PostgreSQL community version and minor version, such as 12.4, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+        /// </summary>
+        [JsonProperty("DBVersion")]
+        public string DBVersion{ get; set; }
+
+        /// <summary>
+        /// PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DBKernelVersion")]
+        public string DBKernelVersion{ get; set; }
+
+        /// <summary>
+        /// Instance type. Valid values:
+        /// <li>`primary`: Primary instance
+        /// <li>`readonly`: Read-only instance
+        /// <li>`guard`: Disaster recovery instance
+        /// <li>`temp`: Temp instance
         /// </summary>
         [JsonProperty("DBInstanceType")]
         public string DBInstanceType{ get; set; }
 
         /// <summary>
-        /// Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+        /// Instance version. Valid value: `standard` (dual-server high-availability; one-primary-one-standby).
         /// </summary>
         [JsonProperty("DBInstanceVersion")]
         public string DBInstanceVersion{ get; set; }
 
         /// <summary>
-        /// Instance database character set
+        /// Instance character set. Valid values:
+        /// <li>`UTF8`
+        /// <li>`LATIN1`
         /// </summary>
         [JsonProperty("DBCharset")]
         public string DBCharset{ get; set; }
-
-        /// <summary>
-        /// PostgreSQL version number
-        /// </summary>
-        [JsonProperty("DBVersion")]
-        public string DBVersion{ get; set; }
 
         /// <summary>
         /// Instance creation time
@@ -127,7 +141,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Instance last modified time
+        /// Last updated time of the instance attribute
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -145,13 +159,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string IsolatedTime{ get; set; }
 
         /// <summary>
-        /// Billing mode. postpaid: pay-as-you-go
+        /// Billing mode. Valid values:
+        /// <li>`PREPAID`: Monthly subscription
+        /// <li>`postpaid`: Pay-as-you-go
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
 
         /// <summary>
-        /// Whether to renew automatically. 1: yes, 0: no
+        /// Whether auto-renewal is enabled. Valid values:
+        /// <li>`0`: Manual renewal.
+        /// <li>`1`: Automatic renewal.
+        /// Default value: `0`.
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
@@ -181,52 +200,87 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Uid{ get; set; }
 
         /// <summary>
-        /// Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+        /// Project ID
         /// </summary>
-        [JsonProperty("SupportIpv6")]
-        public ulong? SupportIpv6{ get; set; }
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// The information of tags associated with instances.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The information of tags associated with instances
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// Primary instance information, which is returned only when the instance is read-only
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Primary instance information, which is returned only when the instance is read-only.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
 
         /// <summary>
         /// Number of read-only instances
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReadOnlyInstanceNum")]
         public long? ReadOnlyInstanceNum{ get; set; }
 
         /// <summary>
-        /// The status of a instance in a read-only group
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The status of a read-only instance in a read-only group
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusInReadonlyGroup")]
         public string StatusInReadonlyGroup{ get; set; }
 
         /// <summary>
-        /// Elimination time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Offline time
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// Database kernel version
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Instance node information
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("DBKernelVersion")]
-        public string DBKernelVersion{ get; set; }
+        [JsonProperty("DBNodeSet")]
+        public DBNode[] DBNodeSet{ get; set; }
+
+        /// <summary>
+        /// Whether the instance supports TDE. Valid values: 
+        /// <li>`0`: No.
+        /// <li>`1`: Yes.
+        /// Default value: `0`.
+        /// For more information, see [TDE](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsSupportTDE")]
+        public long? IsSupportTDE{ get; set; }
+
+        /// <summary>
+        /// Database engines. Valid values:
+        /// <li>`postgresql`: TencentDB for PostgreSQL
+        /// <li>`mssql_compatible`: MSSQL compatible-TencentDB for PostgreSQL
+        /// Default value: `postgresql`.
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DBEngine")]
+        public string DBEngine{ get; set; }
+
+        /// <summary>
+        /// Configuration information of database engine in the following format:
+        /// {"$key1":"$value1", "$key2":"$value2"}
+        /// Valid values:
+        /// mssql_compatible engine:
+        /// <li>`migrationMode`: Database mode. Valid values: `single-db` (single-database mode), `multi-db` (multi-database mode). Default value: `single-db`.
+        /// <li>`defaultLocale`: Default locale, which can’t be modified after the initialization. Default value: `en_US`. Valid values:
+        /// "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".
+        /// <li>`serverCollationName`: Default collation name, which can’t be modified after the initialization. Default value: "sql_latin1_general_cp1_ci_as". Valid values: "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as".
+        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DBEngineConfig")]
+        public string DBEngineConfig{ get; set; }
 
         /// <summary>
         /// Network access list of the instance (this field has been deprecated)
@@ -236,38 +290,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public NetworkAccess[] NetworkAccessList{ get; set; }
 
         /// <summary>
-        /// PostgreSQL major version number
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether the instance supports IPv6. Valid values:
+        /// <li>`0`: No.
+        /// <li>`1`: Yes.
+        /// Default value: `0`.
         /// </summary>
-        [JsonProperty("DBMajorVersion")]
-        public string DBMajorVersion{ get; set; }
-
-        /// <summary>
-        /// Instance node information
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DBNodeSet")]
-        public DBNode[] DBNodeSet{ get; set; }
-
-        /// <summary>
-        /// Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("IsSupportTDE")]
-        public long? IsSupportTDE{ get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("DBEngine")]
-        public string DBEngine{ get; set; }
-
-        /// <summary>
-        /// Configuration information of database engine
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DBEngineConfig")]
-        public string DBEngineConfig{ get; set; }
+        [JsonProperty("SupportIpv6")]
+        public ulong? SupportIpv6{ get; set; }
 
 
         /// <summary>
@@ -277,7 +306,6 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
@@ -287,10 +315,12 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBInstanceStorage", this.DBInstanceStorage);
             this.SetParamSimple(map, prefix + "DBInstanceCpu", this.DBInstanceCpu);
             this.SetParamSimple(map, prefix + "DBInstanceClass", this.DBInstanceClass);
+            this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
+            this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
             this.SetParamSimple(map, prefix + "DBInstanceType", this.DBInstanceType);
             this.SetParamSimple(map, prefix + "DBInstanceVersion", this.DBInstanceVersion);
             this.SetParamSimple(map, prefix + "DBCharset", this.DBCharset);
-            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
@@ -301,19 +331,18 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
-            this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
             this.SetParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
             this.SetParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
-            this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
-            this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
-            this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
             this.SetParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
             this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
             this.SetParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
+            this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
+            this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
         }
     }
 }

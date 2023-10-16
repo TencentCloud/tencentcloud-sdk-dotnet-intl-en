@@ -133,7 +133,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to disable the public network link to an instance.
+        /// This API is used to disable the public network address of an instance.
         /// </summary>
         /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseDBExtranetAccessResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to disable the public network link to an instance.
+        /// This API is used to disable the public network address of an instance.
         /// </summary>
         /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseDBExtranetAccessResponse"/></returns>
@@ -173,7 +173,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to disable public network access for a PostgreSQL for Serverless instance.
+        /// This API is used to disable the public network address of a PostgreSQL for Serverless instance.
         /// </summary>
         /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to disable public network access for a PostgreSQL for Serverless instance.
+        /// This API is used to disable the public network address of a PostgreSQL for Serverless instance.
         /// </summary>
         /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to add a network for an instance.
+        /// This API is used to create a network for an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceNetworkAccessRequest"/></param>
         /// <returns><see cref="CreateDBInstanceNetworkAccessResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to add a network for an instance.
+        /// This API is used to create a network for an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceNetworkAccessRequest"/></param>
         /// <returns><see cref="CreateDBInstanceNetworkAccessResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances.
+        /// This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances.
+        /// This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -334,6 +334,8 @@ namespace TencentCloud.Postgres.V20170312
 
         /// <summary>
         /// This API is used to create and initialize one or more TencentDB for PostgreSQL instances.
+        /// <li>After an instance is created successfully, it will start up automatically and enter the "Running" status.
+        /// <li>If you create a monthly subscribed instance, you will be billed for the instance before the creation; if you create a pay-as-you-go instance billed on an hourly basis, the amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -354,6 +356,8 @@ namespace TencentCloud.Postgres.V20170312
 
         /// <summary>
         /// This API is used to create and initialize one or more TencentDB for PostgreSQL instances.
+        /// <li>After an instance is created successfully, it will start up automatically and enter the "Running" status.
+        /// <li>If you create a monthly subscribed instance, you will be billed for the instance before the creation; if you create a pay-as-you-go instance billed on an hourly basis, the amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -493,7 +497,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to add a network for an RO group.
+        /// This API is used to create a network for an RO group.
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyGroupNetworkAccessRequest"/></param>
         /// <returns><see cref="CreateReadOnlyGroupNetworkAccessResponse"/></returns>
@@ -513,7 +517,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to add a network for an RO group.
+        /// This API is used to create a network for an RO group.
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyGroupNetworkAccessRequest"/></param>
         /// <returns><see cref="CreateReadOnlyGroupNetworkAccessResponse"/></returns>
@@ -853,7 +857,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the instance user list.
+        /// This API is used to query the list of the database accounts for an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
         /// <returns><see cref="DescribeAccountsResponse"/></returns>
@@ -873,7 +877,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the instance user list.
+        /// This API is used to query the list of the database accounts for an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
         /// <returns><see cref="DescribeAccountsResponse"/></returns>
@@ -973,7 +977,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the download URL of a backup.
+        /// u200cThis API is used to query the download address of a specified backup set, including full backup sets and incremental log backup sets.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadURLRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadURLResponse"/></returns>
@@ -993,7 +997,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the download URL of a backup.
+        /// u200cThis API is used to query the download address of a specified backup set, including full backup sets and incremental log backup sets.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadURLRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadURLResponse"/></returns>
@@ -1253,7 +1257,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the instance backup list.
+        /// This API is used to query the backup list of an instance. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
@@ -1273,7 +1277,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the instance backup list.
+        /// This API is used to query the backup list of an instance. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
@@ -1293,7 +1297,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get error logs.
+        /// This API is used to query an error log.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBErrlogsRequest"/></param>
         /// <returns><see cref="DescribeDBErrlogsResponse"/></returns>
@@ -1313,7 +1317,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get error logs.
+        /// This API is used to query an error log.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBErrlogsRequest"/></param>
         /// <returns><see cref="DescribeDBErrlogsResponse"/></returns>
@@ -1373,7 +1377,51 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the list of modifiable parameters of an instance.
+        /// This API is used to query the HA configuration of an instance, u200cwhich includes:
+        /// <li>Allow a standby node to promote to a primary node.
+        /// <li>Allow a semi-sync instance to adopt sync or async replication.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceHAConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceHAConfigResponse"/></returns>
+        public async Task<DescribeDBInstanceHAConfigResponse> DescribeDBInstanceHAConfig(DescribeDBInstanceHAConfigRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceHAConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceHAConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceHAConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the HA configuration of an instance, u200cwhich includes:
+        /// <li>Allow a standby node to promote to a primary node.
+        /// <li>Allow a semi-sync instance to adopt sync or async replication.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceHAConfigRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceHAConfigResponse"/></returns>
+        public DescribeDBInstanceHAConfigResponse DescribeDBInstanceHAConfigSync(DescribeDBInstanceHAConfigRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceHAConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceHAConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceHAConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the parameters of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceParametersResponse"/></returns>
@@ -1393,7 +1441,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the list of modifiable parameters of an instance.
+        /// This API is used to query the parameters of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceParametersResponse"/></returns>
@@ -1413,7 +1461,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the security group information of an instance.
+        /// This API is used to query the security group of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceSecurityGroupsResponse"/></returns>
@@ -1433,7 +1481,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the security group information of an instance.
+        /// This API is used to query the security group of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceSecurityGroupsResponse"/></returns>
@@ -1493,7 +1541,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API was used to get slow query logs. Since it was deprecated on September 1, 2021, it has no longer returned data. Please use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
+        /// This API is used to get a slow query log. Since it was deprecated on September 1, 2021, it has no longer returned data. You need to use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
         /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
@@ -1513,7 +1561,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API was used to get slow query logs. Since it was deprecated on September 1, 2021, it has no longer returned data. Please use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
+        /// This API is used to get a slow query log. Since it was deprecated on September 1, 2021, it has no longer returned data. You need to use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
         /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
@@ -1573,7 +1621,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the instance Xlog list.
+        /// This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
         /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
@@ -1593,7 +1641,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the instance Xlog list.
+        /// This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
         /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
@@ -1613,7 +1661,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to pull the list of databases.
+        /// This API is used to query the database list of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
         /// <returns><see cref="DescribeDatabasesResponse"/></returns>
@@ -1633,7 +1681,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to pull the list of databases.
+        /// This API is used to query the database list of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
         /// <returns><see cref="DescribeDatabasesResponse"/></returns>
@@ -1693,7 +1741,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get instance key list.
+        /// This API is used to query the instance key list.
         /// </summary>
         /// <param name="req"><see cref="DescribeEncryptionKeysRequest"/></param>
         /// <returns><see cref="DescribeEncryptionKeysResponse"/></returns>
@@ -1713,7 +1761,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get instance key list.
+        /// This API is used to query the instance key list.
         /// </summary>
         /// <param name="req"><see cref="DescribeEncryptionKeysRequest"/></param>
         /// <returns><see cref="DescribeEncryptionKeysResponse"/></returns>
@@ -1773,7 +1821,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get order information.
+        /// This API is used to query the order information.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
         /// <returns><see cref="DescribeOrdersResponse"/></returns>
@@ -1793,7 +1841,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get order information.
+        /// This API is used to query the order information.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
         /// <returns><see cref="DescribeOrdersResponse"/></returns>
@@ -1893,7 +1941,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the details of parameter modification events.
+        /// This API is used to query the parameter modification event.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
         /// <returns><see cref="DescribeParamsEventResponse"/></returns>
@@ -1913,7 +1961,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the details of parameter modification events.
+        /// This API is used to query the parameter modification event.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
         /// <returns><see cref="DescribeParamsEventResponse"/></returns>
@@ -1933,7 +1981,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the purchasable specification configuration.
+        /// This API is used to query the purchasable specification configuration. u200cThis API is disused and replaced by the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
         /// <returns><see cref="DescribeProductConfigResponse"/></returns>
@@ -1953,7 +2001,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the purchasable specification configuration.
+        /// This API is used to query the purchasable specification configuration. u200cThis API is disused and replaced by the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
         /// <returns><see cref="DescribeProductConfigResponse"/></returns>
@@ -1973,7 +2021,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query RO group information by specifying the primary instance IDs.
+        /// This API is used to query the list of RO groups.
         /// </summary>
         /// <param name="req"><see cref="DescribeReadOnlyGroupsRequest"/></param>
         /// <returns><see cref="DescribeReadOnlyGroupsResponse"/></returns>
@@ -1993,7 +2041,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query RO group information by specifying the primary instance IDs.
+        /// This API is used to query the list of RO groups.
         /// </summary>
         /// <param name="req"><see cref="DescribeReadOnlyGroupsRequest"/></param>
         /// <returns><see cref="DescribeReadOnlyGroupsResponse"/></returns>
@@ -2213,7 +2261,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an terminated instance will be deleted and cannot be recovered.
+        /// This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of a terminated instance will be deleted and cannot be recovered. Be cautious with this API calling. Only the instance in isolation can be terminated.
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -2233,7 +2281,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an terminated instance will be deleted and cannot be recovered.
+        /// This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of a terminated instance will be deleted and cannot be recovered. Be cautious with this API calling. Only the instance in isolation can be terminated.
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -2293,7 +2341,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to initialize a TencentDB for PostgreSQL instance.
+        /// This API is used to initialize a TencentDB for PostgreSQL instance. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
         /// <returns><see cref="InitDBInstancesResponse"/></returns>
@@ -2313,7 +2361,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to initialize a TencentDB for PostgreSQL instance.
+        /// This API is used to initialize a TencentDB for PostgreSQL instance. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
         /// <returns><see cref="InitDBInstancesResponse"/></returns>
@@ -2333,7 +2381,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the purchase price of one or multiple instances.
+        /// This API is used to query the purchase price of an instance.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateDBInstancesRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateDBInstancesResponse"/></returns>
@@ -2353,7 +2401,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the purchase price of one or multiple instances.
+        /// This API is used to query the purchase price of an instance.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateDBInstancesRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateDBInstancesResponse"/></returns>
@@ -2453,7 +2501,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to isolate one or more instances.
+        /// This API is used to isolate an instance.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstancesRequest"/></param>
         /// <returns><see cref="IsolateDBInstancesResponse"/></returns>
@@ -2473,7 +2521,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to isolate one or more instances.
+        /// This API is used to isolate an instance.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstancesRequest"/></param>
         /// <returns><see cref="IsolateDBInstancesResponse"/></returns>
@@ -2613,7 +2661,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the expiration time of the specified full backup of an instance.
+        /// This API is used to modify the specified expiration time of a full backup for an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
         /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
@@ -2633,7 +2681,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the expiration time of the specified full backup of an instance.
+        /// This API is used to modify the specified expiration time of a full backup for an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
         /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
@@ -2733,6 +2781,50 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the HA configuration of an instance. u200cwhich includes:
+        /// <li>Allow the standby node to promote to the primary node.
+        /// <li>Allow a semi-sync instance to adopt sync or async replication.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceHAConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceHAConfigResponse"/></returns>
+        public async Task<ModifyDBInstanceHAConfigResponse> ModifyDBInstanceHAConfig(ModifyDBInstanceHAConfigRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceHAConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceHAConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceHAConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the HA configuration of an instance. u200cwhich includes:
+        /// <li>Allow the standby node to promote to the primary node.
+        /// <li>Allow a semi-sync instance to adopt sync or async replication.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceHAConfigRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceHAConfigResponse"/></returns>
+        public ModifyDBInstanceHAConfigResponse ModifyDBInstanceHAConfigSync(ModifyDBInstanceHAConfigRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceHAConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceHAConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceHAConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to rename a TencentDB for PostgreSQL instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
@@ -2773,7 +2865,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify parameters in batches.
+        /// This API is used to modify instance parameters.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceParametersRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceParametersResponse"/></returns>
@@ -2793,7 +2885,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify parameters in batches.
+        /// This API is used to modify instance parameters.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceParametersRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceParametersResponse"/></returns>
@@ -2893,7 +2985,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify instance specifications including memory and disk size.
+        /// This API is used to modify instance specifications, including memory and disk size.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -2913,7 +3005,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify instance specifications including memory and disk size.
+        /// This API is used to modify instance specifications, including memory and disk size.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -2933,7 +3025,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to transfer an instance to another project.
+        /// This API is used to modify the project of an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
         /// <returns><see cref="ModifyDBInstancesProjectResponse"/></returns>
@@ -2953,7 +3045,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to transfer an instance to another project.
+        /// This API is used to modify the project of an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
         /// <returns><see cref="ModifyDBInstancesProjectResponse"/></returns>
@@ -2973,7 +3065,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the parameter template name and description, and add or delete parameter template parameters.
+        /// This API is used to modify the configurations, such as parameter template name and description. It can also be used to manage the parameter list in the parameter template.
         /// </summary>
         /// <param name="req"><see cref="ModifyParameterTemplateRequest"/></param>
         /// <returns><see cref="ModifyParameterTemplateResponse"/></returns>
@@ -2993,7 +3085,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the parameter template name and description, and add or delete parameter template parameters.
+        /// This API is used to modify the configurations, such as parameter template name and description. It can also be used to manage the parameter list in the parameter template.
         /// </summary>
         /// <param name="req"><see cref="ModifyParameterTemplateRequest"/></param>
         /// <returns><see cref="ModifyParameterTemplateResponse"/></returns>
@@ -3093,7 +3185,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to enable public network access.
+        /// This API is used to enable the public network access of an instance.
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenDBExtranetAccessResponse"/></returns>
@@ -3113,7 +3205,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to enable public network access.
+        /// This API is used to enable the public network access of an instance.
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenDBExtranetAccessResponse"/></returns>
@@ -3133,7 +3225,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to enable public network access for a PostgreSQL for Serverless instance.
+        /// This API is used to enable the public network address of a PostgreSQL for Serverless instance.
         /// </summary>
         /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
@@ -3153,7 +3245,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to enable public network access for a PostgreSQL for Serverless instance.
+        /// This API is used to enable the public network address of a PostgreSQL for Serverless instance.
         /// </summary>
         /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
         /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
@@ -3413,7 +3505,53 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to upgrade instance configurations.
+        /// This API is used to enable the primary-standby switch of an instance.
+        /// <li>By initiating a switch, you can verify whether the primary-standby switch is performed correctly.
+        /// <li>By using forced switch, you can forcibly initiate the primary-standby switch when the delay of replica node failed to meet the switch requirement.
+        /// <li>This operation can only be performed for the primary instance.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstancePrimaryRequest"/></param>
+        /// <returns><see cref="SwitchDBInstancePrimaryResponse"/></returns>
+        public async Task<SwitchDBInstancePrimaryResponse> SwitchDBInstancePrimary(SwitchDBInstancePrimaryRequest req)
+        {
+             JsonResponseModel<SwitchDBInstancePrimaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDBInstancePrimary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstancePrimaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable the primary-standby switch of an instance.
+        /// <li>By initiating a switch, you can verify whether the primary-standby switch is performed correctly.
+        /// <li>By using forced switch, you can forcibly initiate the primary-standby switch when the delay of replica node failed to meet the switch requirement.
+        /// <li>This operation can only be performed for the primary instance.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstancePrimaryRequest"/></param>
+        /// <returns><see cref="SwitchDBInstancePrimaryResponse"/></returns>
+        public SwitchDBInstancePrimaryResponse SwitchDBInstancePrimarySync(SwitchDBInstancePrimaryRequest req)
+        {
+             JsonResponseModel<SwitchDBInstancePrimaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDBInstancePrimary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstancePrimaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to upgrade instance configurations. u200cThis API is disused and replaced by the [ModifyDBInstanceSpec](https://intl.cloud.tencent.com/document/api/409/63689?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
@@ -3433,7 +3571,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to upgrade instance configurations.
+        /// This API is used to upgrade instance configurations. u200cThis API is disused and replaced by the [ModifyDBInstanceSpec](https://intl.cloud.tencent.com/document/api/409/63689?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>

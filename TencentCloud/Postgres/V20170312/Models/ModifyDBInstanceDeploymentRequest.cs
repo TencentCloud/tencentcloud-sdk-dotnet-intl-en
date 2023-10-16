@@ -31,13 +31,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Instance node information.
+        /// Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
+        /// The information of AZ can be obtained from the `Zone` field in the returned value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+        /// Switch time for the specified instance after configuration modification.
+        /// <li>`0`: Switch now. 
+        /// <li>`1`: Switch at the specified time.
+        /// <li>`2`: Switch in the maintenance time.
+        /// Default value: `0`. 
         /// </summary>
         [JsonProperty("SwitchTag")]
         public long? SwitchTag{ get; set; }

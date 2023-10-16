@@ -25,19 +25,22 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Filter condition, which is not supported for `SQL`. The search conditions are supported as follows:
+        /// Filter condition. The search conditions are supported as follows:
         /// 
-        /// `Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for 
-        /// `host` (Client IP),
-        /// `user` (Username),
-        /// and `DBName` (Database name).
+        /// Include/Exclude, and Include/Exclude (segment dimension) can be used to search for:
+        /// `sql` - SQL details.
         /// 
-        /// `Equal to` and `Not equal to` can be used to search for 
-        /// `sqlType`- SQL u200dtype,
+        /// `Equal to`, `Not equal to`, `Include`, and `Exclude` can be used to search for:
+        /// `host` - Client IP,
+        /// `user` - Username,
+        /// `DBName` - Database name.
+        /// 
+        /// `Equal to` and `Not equal to` can be used to search for:
+        /// `sqlType` - SQL u200dtype,
         /// `errCode` - Error code,
-        /// `threadId`- Thread ID.
+        /// `threadId` - Thread ID.
         /// 
-        /// Range search is supported for the fields, such as 
+        /// Range search is supported for:
         /// `execTime`- Execution time (μs),
         /// `lockWaitTime`u200d - Lock wait time (μs),
         /// `ioWaitTime` - IO wait time (μs),
@@ -51,9 +54,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Filter, including:
+        /// Filter. Valid values:
+        /// `WINC` - Include (segment dimension)
+        /// `WEXC` - Exclude (segment dimension)
         /// `INC` - Include,
-        /// `EXC` -Exclude,
+        /// `EXC` - Exclude,
         /// `EQS` - Equal to,
         /// `NEQ` - Not equal to.
         /// u200d`RA` - Range
@@ -62,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Compare{ get; set; }
 
         /// <summary>
-        /// The filter value
+        /// The filter value. In a reverse query, multiple values are in an "AND" relationship; while in a forward query, multiple values are in an "OR" relationship.
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

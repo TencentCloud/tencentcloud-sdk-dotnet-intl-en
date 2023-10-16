@@ -70,7 +70,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Filter, which can be used to filter logs.
+        /// Filter. Multiple values are in `AND` relationship.
         /// </summary>
         [JsonProperty("LogFilter")]
         public InstanceAuditLogFilters[] LogFilter{ get; set; }

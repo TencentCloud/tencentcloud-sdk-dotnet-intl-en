@@ -43,7 +43,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+        /// Whether to use vouchers automatically. Valid values:
+        /// <li>`0`: No.
+        /// <li>`1`: Yes.
+        /// Default value: `0`.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public ulong? AutoVoucher{ get; set; }
@@ -61,7 +64,11 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ActivityId{ get; set; }
 
         /// <summary>
-        /// Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+        /// Switch time for the specified instance after configuration modification.
+        /// <li>`0`: Switch now. 
+        /// <li>`1`: Switch at the specified time.
+        /// <li>`2`: Switch in the maintenance time.
+        /// Default value: `0`. 
         /// </summary>
         [JsonProperty("SwitchTag")]
         public ulong? SwitchTag{ get; set; }

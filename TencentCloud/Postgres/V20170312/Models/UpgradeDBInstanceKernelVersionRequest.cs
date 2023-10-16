@@ -31,16 +31,17 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
+        /// Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field in the returned value of the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TargetDBKernelVersion")]
         public string TargetDBKernelVersion{ get; set; }
 
         /// <summary>
-        /// Switch time after the kernel version upgrade. Valid values:
-        /// `0` (default value): Switch now.
-        /// `1`: Switch at the specified time.
-        /// `2`: Switch in the maintenance time.
+        /// Switch time after the kernel version upgrade for the specified instance. Valid values:
+        /// <li>`0`: Switch now.
+        /// <li>`1`: Switch at the specified time.
+        /// <li>`2`: Switch in the maintenance time.
+        /// Default value: `0`. 
         /// </summary>
         [JsonProperty("SwitchTag")]
         public ulong? SwitchTag{ get; set; }
@@ -58,9 +59,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SwitchEndTime{ get; set; }
 
         /// <summary>
-        /// Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
-        /// `true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-        /// `false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed.
+        /// Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
+        /// u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
+        /// u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+        /// Default value: `false`.
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

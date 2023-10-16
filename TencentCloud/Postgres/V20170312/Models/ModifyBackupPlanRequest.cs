@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string MaxBackupStartTime{ get; set; }
 
         /// <summary>
-        /// Backup retention period in days. Value range: 3-7
+        /// Backup retention period in days. Value range: 7-1830
         /// </summary>
         [JsonProperty("BaseBackupRetentionPeriod")]
         public ulong? BaseBackupRetentionPeriod{ get; set; }

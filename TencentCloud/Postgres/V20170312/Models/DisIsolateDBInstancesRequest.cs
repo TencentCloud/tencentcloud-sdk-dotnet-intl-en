@@ -25,19 +25,24 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+        /// Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+        /// Validity period in months
+        /// <li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+        /// <li>Pay-as-you-go: `1`.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+        /// Whether to use vouchers. Valid values:
+        /// <li>`true`: Yes.
+        /// u200c<li>`false`: No.
+        /// Default value: `false`.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }

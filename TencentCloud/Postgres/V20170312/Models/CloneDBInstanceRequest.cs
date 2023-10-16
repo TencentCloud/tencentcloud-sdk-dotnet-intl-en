@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+        /// Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
@@ -43,43 +43,51 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+        /// Validity period in months. Valid values:
+        /// <li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+        /// <li>Pay-as-you-go: `1`.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+        /// Auto-renewal flag. Valid values:
+        /// <li>`0`: Manual renewal.
+        /// <li>`1`: Automatic renewal.
+        /// Default value: `0`.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// VPC ID.
+        /// VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// ID of a subnet in the VPC specified by `VpcId`.
+        /// VPC subnet ID in the format of `subnet-xxxxxxxx`, which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Name of the purchased instance.
+        /// Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+        /// Instance billing mode. Valid values:
+        /// <li>`PREPAID`: Monthly subscription.
+        /// <li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+        /// Default value: `PREPAID`.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Security group ID.
+        /// Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
@@ -91,19 +99,23 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// The information of tags to be bound with the purchased instance. This parameter is left empty by default.
+        /// The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// This parameter is required if you purchase a multi-AZ deployed instance.
+        /// Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
+        /// The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+        /// Whether to use vouchers automatically. Valid values:
+        /// <li>`0`: No.
+        /// <li>`1`: Yes.
+        /// Default value: `0`.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
@@ -132,6 +144,16 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("RecoveryTargetTime")]
         public string RecoveryTargetTime{ get; set; }
 
+        /// <summary>
+        /// Primary-standby sync mode. Valid values:  
+        /// <li>`Semi-sync`
+        /// <li>`Async`
+        /// Default value for the primary instance: `Semi-sync`.
+        /// Default value for the standby instance: `Async`.
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public string SyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +178,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
             this.SetParamSimple(map, prefix + "RecoveryTargetTime", this.RecoveryTargetTime);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
         }
     }
 }

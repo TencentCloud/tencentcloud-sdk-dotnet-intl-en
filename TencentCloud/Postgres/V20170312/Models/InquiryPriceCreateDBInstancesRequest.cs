@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+        /// Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }

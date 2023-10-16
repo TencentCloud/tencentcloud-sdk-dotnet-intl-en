@@ -31,25 +31,36 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Instance billing mode.  Valid values:  `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). Default value:  `PREPAID`.
+        /// Instance billing mode. Valid values:
+        /// <li>`PREPAID`: Monthly subscription.
+        /// <li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
+        /// Default value: `PREPAID`.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Validity period  in months. Valid values:  Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+        /// Validity period in months
+        /// <li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+        /// <li>Pay-as-you-go: `1`.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Renewal flag. Valid values；  Valid values: `0` (manual renewal), `1` (auto-renewal).
+        /// Auto-renewal flag. Valid values:
+        /// <li>`0`: Manual renewal.
+        /// <li>`1`: Automatic renewal.
+        /// Default value: `0`.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+        /// Whether to use vouchers automatically. Valid values:
+        /// <li>`0`: No.
+        /// <li>`1`: Yes.
+        /// Default value: `0`.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }

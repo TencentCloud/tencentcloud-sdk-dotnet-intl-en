@@ -1811,6 +1811,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the elastic expansion policy of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCpuExpandStrategyRequest"/></param>
+        /// <returns><see cref="DescribeCpuExpandStrategyResponse"/></returns>
+        public async Task<DescribeCpuExpandStrategyResponse> DescribeCpuExpandStrategy(DescribeCpuExpandStrategyRequest req)
+        {
+             JsonResponseModel<DescribeCpuExpandStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCpuExpandStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCpuExpandStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the elastic expansion policy of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCpuExpandStrategyRequest"/></param>
+        /// <returns><see cref="DescribeCpuExpandStrategyResponse"/></returns>
+        public DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategySync(DescribeCpuExpandStrategyRequest req)
+        {
+             JsonResponseModel<DescribeCpuExpandStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCpuExpandStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCpuExpandStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query database version attributes, including supported features such as database encryption and audit.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBFeaturesRequest"/></param>
@@ -4873,6 +4913,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// u200cThis API is used to enable elastic CPU expansion manually or automatically.
+        /// </summary>
+        /// <param name="req"><see cref="StartCpuExpandRequest"/></param>
+        /// <returns><see cref="StartCpuExpandResponse"/></returns>
+        public async Task<StartCpuExpandResponse> StartCpuExpand(StartCpuExpandRequest req)
+        {
+             JsonResponseModel<StartCpuExpandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartCpuExpand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartCpuExpandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// u200cThis API is used to enable elastic CPU expansion manually or automatically.
+        /// </summary>
+        /// <param name="req"><see cref="StartCpuExpandRequest"/></param>
+        /// <returns><see cref="StartCpuExpandResponse"/></returns>
+        public StartCpuExpandResponse StartCpuExpandSync(StartCpuExpandRequest req)
+        {
+             JsonResponseModel<StartCpuExpandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartCpuExpand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartCpuExpandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to start the data replication from the source instance to the read-only instance.
         /// </summary>
         /// <param name="req"><see cref="StartReplicationRequest"/></param>
@@ -4904,6 +4984,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "StartReplication");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable elastic CPU expansion.
+        /// </summary>
+        /// <param name="req"><see cref="StopCpuExpandRequest"/></param>
+        /// <returns><see cref="StopCpuExpandResponse"/></returns>
+        public async Task<StopCpuExpandResponse> StopCpuExpand(StopCpuExpandRequest req)
+        {
+             JsonResponseModel<StopCpuExpandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopCpuExpand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopCpuExpandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable elastic CPU expansion.
+        /// </summary>
+        /// <param name="req"><see cref="StopCpuExpandRequest"/></param>
+        /// <returns><see cref="StopCpuExpandResponse"/></returns>
+        public StopCpuExpandResponse StopCpuExpandSync(StopCpuExpandRequest req)
+        {
+             JsonResponseModel<StopCpuExpandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopCpuExpand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopCpuExpandResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

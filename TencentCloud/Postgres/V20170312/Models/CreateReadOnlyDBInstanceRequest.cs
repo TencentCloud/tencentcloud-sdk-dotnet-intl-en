@@ -25,7 +25,20 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+        /// Primary AZ of an instance, such as "ap-guangzhou-3".
+        /// The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// ID of the primary instance to which the read-only instance belongs
+        /// </summary>
+        [JsonProperty("MasterDBInstanceId")]
+        public string MasterDBInstanceId{ get; set; }
+
+        /// <summary>
+        /// Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
@@ -37,49 +50,45 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// Number of instances purchased at a time. Value range: 1–100.
+        /// The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+        /// Validity period in months, valid values:
+        /// <li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
+        /// <li>Pay-as-you-go: `1`.
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// ID of the primary instance to which the read-only replica belongs
+        /// VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
         /// </summary>
-        [JsonProperty("MasterDBInstanceId")]
-        public string MasterDBInstanceId{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
-        /// Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+        /// VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Project ID
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
-
-        /// <summary>
-        /// (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
-        /// </summary>
-        [JsonProperty("DBVersion")]
-        public string DBVersion{ get; set; }
-
-        /// <summary>
-        /// Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+        /// Instance billing mode. Valid values: 
+        /// <li>`PREPAID`: Monthly subscription
+        /// <li>`POSTPAID_BY_HOUR`: Pay-as-you-go
+        /// Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+        /// Whether to use vouchers automatically. Valid values:
+        /// <li>`0`: No.
+        /// <li>`1`: Yes.
+        /// Default value: `0`.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public ulong? AutoVoucher{ get; set; }
@@ -91,22 +100,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+        /// Auto-renewal flag. Valid values:
+        /// <li>`0`: Manual renewal.
+        /// <li>`1`: Automatic renewal.
+        /// Default value: `0`.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// Project ID
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
-        /// VPC subnet ID
-        /// </summary>
-        [JsonProperty("SubnetId")]
-        public string SubnetId{ get; set; }
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
 
         /// <summary>
         /// Special offer ID
@@ -115,34 +121,43 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ActivityId{ get; set; }
 
         /// <summary>
-        /// Instance name (which will be supported in the future)
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-        /// </summary>
-        [JsonProperty("NeedSupportIpv6")]
-        public ulong? NeedSupportIpv6{ get; set; }
-
-        /// <summary>
         /// RO group ID
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+        /// The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TagList")]
         public Tag TagList{ get; set; }
 
         /// <summary>
-        /// Security group ID
+        /// Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// Whether IPv6 is supported.
+        /// <li>`0`: No.
+        /// <li>`1`: Yes.
+        /// Default value: `0`.
+        /// </summary>
+        [JsonProperty("NeedSupportIpv6")]
+        public ulong? NeedSupportIpv6{ get; set; }
+
+        /// <summary>
+        /// Instance name (which will be supported in the future)
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+        /// </summary>
+        [JsonProperty("DBVersion")]
+        public string DBVersion{ get; set; }
 
 
         /// <summary>
@@ -150,26 +165,26 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
             this.SetParamSimple(map, prefix + "SpecCode", this.SpecCode);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "Period", this.Period);
-            this.SetParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
             this.SetParamSimple(map, prefix + "ReadOnlyGroupId", this.ReadOnlyGroupId);
             this.SetParamObj(map, prefix + "TagList.", this.TagList);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
         }
     }
 }

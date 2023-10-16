@@ -25,7 +25,8 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// The list of security groups to be associated with the instance or RO groups
+        /// The list of security groups to be associated with the instance or RO groups.
+        /// Information of security groups can be obtained from the `sgld` field in the returned value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("SecurityGroupIdSet")]
         public string[] SecurityGroupIdSet{ get; set; }

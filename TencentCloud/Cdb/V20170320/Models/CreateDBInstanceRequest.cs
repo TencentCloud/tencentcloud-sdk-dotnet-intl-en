@@ -97,7 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// The root account password. It can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and symbols (_+-&=!@#$%^*()). This parameter can be specified when purchasing a replica instance and is invalid for read-only or disaster recovery instances.
+        /// The root account password, which can contain 8-64 characters and must contain at least two of the following types of characters: letters, digits, and symbols `_+-&=!@#$%^*()`. This parameter applies to source instances but not to read-only or disaster recovery instances.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -193,7 +193,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+        /// Array of alarm policy IDs, which can be obtained through the `OriginId` field in the return value of the `DescribeAlarmPolicy` API of TCOP.
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public long?[] AlarmPolicyList{ get; set; }

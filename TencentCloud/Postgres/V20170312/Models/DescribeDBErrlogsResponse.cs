@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Number of date entries returned for this call
+        /// Number of logs returned in a single query. Maximum value: `10000`.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Error log list
+        /// Detailed sets of error logs
         /// </summary>
         [JsonProperty("Details")]
         public ErrLogDetail[] Details{ get; set; }
