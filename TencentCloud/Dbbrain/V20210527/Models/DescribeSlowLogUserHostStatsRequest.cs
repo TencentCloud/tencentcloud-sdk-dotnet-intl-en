@@ -49,7 +49,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// MD5 value of SOL template
+        /// MD5 value of the SQL template
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }

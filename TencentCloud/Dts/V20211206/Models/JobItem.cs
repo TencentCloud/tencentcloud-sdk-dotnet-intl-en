@@ -149,6 +149,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("AutoRetryTimeRangeMinutes")]
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
+        /// <summary>
+        /// Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DumperResumeCtrl")]
+        public string DumperResumeCtrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +180,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+            this.SetParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
         }
     }
 }

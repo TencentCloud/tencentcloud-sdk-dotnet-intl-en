@@ -46,8 +46,8 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Progress of the current step
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Progress of the current step. Value range: 0-100. The value of `-1` indicates that you can't check the progress of the current step.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CurrentStepProgress")]
         public long? CurrentStepProgress{ get; set; }
@@ -87,6 +87,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("CauseOfCompareDisable")]
         public string CauseOfCompareDisable{ get; set; }
 
+        /// <summary>
+        /// Task error and the corresponding solution
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ErrInfo")]
+        public ErrInfo ErrInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArrayObj(map, prefix + "StepInfos.", this.StepInfos);
             this.SetParamSimple(map, prefix + "CauseOfCompareDisable", this.CauseOfCompareDisable);
+            this.SetParamObj(map, prefix + "ErrInfo.", this.ErrInfo);
         }
     }
 }

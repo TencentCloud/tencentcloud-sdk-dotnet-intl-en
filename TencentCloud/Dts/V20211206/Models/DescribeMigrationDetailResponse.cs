@@ -164,6 +164,19 @@ namespace TencentCloud.Dts.V20211206.Models
         public ErrorInfoItem[] ErrorInfo{ get; set; }
 
         /// <summary>
+        /// Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+        /// </summary>
+        [JsonProperty("DumperResumeCtrl")]
+        public string DumperResumeCtrl{ get; set; }
+
+        /// <summary>
+        /// Task throttling information
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RateLimitOption")]
+        public RateLimitOption RateLimitOption{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -195,6 +208,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "CheckStepInfo.", this.CheckStepInfo);
             this.SetParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
             this.SetParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+            this.SetParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
+            this.SetParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -130,6 +130,20 @@ namespace TencentCloud.Dts.V20211206.Models
         public Endpoint SrcInfo{ get; set; }
 
         /// <summary>
+        /// Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SrcNodeType")]
+        public string SrcNodeType{ get; set; }
+
+        /// <summary>
+        /// Source database information. This parameter is used for multi-node databases.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SrcInfos")]
+        public SyncDBEndpointInfos SrcInfos{ get; set; }
+
+        /// <summary>
         /// Target database region, such as `ap-guangzhou`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -156,6 +170,20 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         [JsonProperty("DstInfo")]
         public Endpoint DstInfo{ get; set; }
+
+        /// <summary>
+        /// Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DstNodeType")]
+        public string DstNodeType{ get; set; }
+
+        /// <summary>
+        /// Target database information. This parameter is used for multi-node databases.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DstInfos")]
+        public SyncDBEndpointInfos DstInfos{ get; set; }
 
         /// <summary>
         /// Creation time in the format of `yyyy-mm-dd hh:mm:ss`
@@ -234,6 +262,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("AutoRetryTimeRangeMinutes")]
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
+        /// <summary>
+        /// Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DumperResumeCtrl")]
+        public string DumperResumeCtrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -255,10 +290,14 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SrcDatabaseType", this.SrcDatabaseType);
             this.SetParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
             this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+            this.SetParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
+            this.SetParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
             this.SetParamSimple(map, prefix + "DstRegion", this.DstRegion);
             this.SetParamSimple(map, prefix + "DstDatabaseType", this.DstDatabaseType);
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
+            this.SetParamSimple(map, prefix + "DstNodeType", this.DstNodeType);
+            this.SetParamObj(map, prefix + "DstInfos.", this.DstInfos);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
@@ -270,6 +309,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+            this.SetParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
         }
     }
 }

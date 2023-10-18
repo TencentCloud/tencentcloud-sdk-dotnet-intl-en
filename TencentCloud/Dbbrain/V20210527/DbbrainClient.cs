@@ -93,6 +93,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// This API is used to disable database audit as needed.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public async Task<CloseAuditServiceResponse> CloseAuditService(CloseAuditServiceRequest req)
+        {
+             JsonResponseModel<CloseAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to disable database audit as needed.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public CloseAuditServiceResponse CloseAuditServiceSync(CloseAuditServiceRequest req)
+        {
+             JsonResponseModel<CloseAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create a health report and send it via email as configured.
         /// </summary>
         /// <param name="req"><see cref="CreateDBDiagReportTaskRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "CreateProxySessionKillTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProxySessionKillTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an ad hoc big key analysis task for Redis instances. By default, there can only be up to five running ad hoc analysis tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRedisBigKeyAnalysisTaskRequest"/></param>
+        /// <returns><see cref="CreateRedisBigKeyAnalysisTaskResponse"/></returns>
+        public async Task<CreateRedisBigKeyAnalysisTaskResponse> CreateRedisBigKeyAnalysisTask(CreateRedisBigKeyAnalysisTaskRequest req)
+        {
+             JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRedisBigKeyAnalysisTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create an ad hoc big key analysis task for Redis instances. By default, there can only be up to five running ad hoc analysis tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRedisBigKeyAnalysisTaskRequest"/></param>
+        /// <returns><see cref="CreateRedisBigKeyAnalysisTaskResponse"/></returns>
+        public CreateRedisBigKeyAnalysisTaskResponse CreateRedisBigKeyAnalysisTaskSync(CreateRedisBigKeyAnalysisTaskRequest req)
+        {
+             JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRedisBigKeyAnalysisTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -524,6 +604,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAllUserGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllUserGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public async Task<DescribeAuditInstanceListResponse> DescribeAuditInstanceList(DescribeAuditInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeAuditInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeAuditInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditInstanceListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1493,6 +1613,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// u200cThis API is used to modify audit configurations such as the frequent access storage period.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public async Task<ModifyAuditServiceResponse> ModifyAuditService(ModifyAuditServiceRequest req)
+        {
+             JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// u200cThis API is used to modify audit configurations such as the frequent access storage period.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public ModifyAuditServiceResponse ModifyAuditServiceSync(ModifyAuditServiceRequest req)
+        {
+             JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to enable/disable instance inspection.
         /// </summary>
         /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>
@@ -1524,6 +1684,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDiagDBInstanceConf");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiagDBInstanceConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable database audit.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public async Task<OpenAuditServiceResponse> OpenAuditService(OpenAuditServiceRequest req)
+        {
+             JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable database audit.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public OpenAuditServiceResponse OpenAuditServiceSync(OpenAuditServiceRequest req)
+        {
+             JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenAuditServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

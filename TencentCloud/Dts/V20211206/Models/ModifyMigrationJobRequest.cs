@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string RunMode{ get; set; }
 
         /// <summary>
-        /// Migration task configuration options, which describe how the task performs migration.
+        /// Migration task configuration options, which describe how the task performs migration. The `RateLimitOption` option cannot be configured. To modify the speed limit settings of the task, use the `ModifyMigrateRateLimit` API after the task starts running.
         /// </summary>
         [JsonProperty("MigrateOption")]
         public MigrateOption MigrateOption{ get; set; }

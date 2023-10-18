@@ -109,7 +109,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DstNodeType{ get; set; }
 
         /// <summary>
-        /// Sync task options
+        /// Sync task options. The `RateLimitOption` option cannot take effect currently. To modify the speed limit settings, use the `ModifySyncRateLimit` API.
         /// </summary>
         [JsonProperty("Options")]
         public Options Options{ get; set; }

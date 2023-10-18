@@ -80,6 +80,20 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("KafkaOption")]
         public KafkaOption KafkaOption{ get; set; }
 
+        /// <summary>
+        /// Task speed limit information. This parameter can only be used as an output parameter.
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RateLimitOption")]
+        public RateLimitOption RateLimitOption{ get; set; }
+
+        /// <summary>
+        /// Settings of the automatic retry time range
+        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AutoRetryTimeRangeMinutes")]
+        public long? AutoRetryTimeRangeMinutes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
             this.SetParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
             this.SetParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
+            this.SetParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
+            this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         }
     }
 }

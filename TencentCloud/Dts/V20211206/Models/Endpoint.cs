@@ -206,6 +206,13 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("DatabaseNetEnv")]
         public string DatabaseNetEnv{ get; set; }
 
+        /// <summary>
+        /// The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
+        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CcnOwnerUin")]
+        public string CcnOwnerUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +245,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TmpToken", this.TmpToken);
             this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
             this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
+            this.SetParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
         }
     }
 }
