@@ -58,6 +58,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("AVTemplateNames")]
         public string[] AVTemplateNames{ get; set; }
 
+        /// <summary>
+        /// Meta information controls configuration.
+        /// </summary>
+        [JsonProperty("TimedMetadataSettings")]
+        public TimedMetadataSettingInfo TimedMetadataSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +75,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArraySimple(map, prefix + "VideoTemplateNames.", this.VideoTemplateNames);
             this.SetParamObj(map, prefix + "Scte35Settings.", this.Scte35Settings);
             this.SetParamArraySimple(map, prefix + "AVTemplateNames.", this.AVTemplateNames);
+            this.SetParamObj(map, prefix + "TimedMetadataSettings.", this.TimedMetadataSettings);
         }
     }
 }

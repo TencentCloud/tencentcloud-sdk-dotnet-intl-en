@@ -72,6 +72,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("SpliceDuration")]
         public ulong? SpliceDuration{ get; set; }
 
+        /// <summary>
+        /// Meta information plan configuration.
+        /// </summary>
+        [JsonProperty("TimedMetadataSetting")]
+        public TimedMetadataInfo TimedMetadataSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArrayObj(map, prefix + "SCTE35SegmentationDescriptor.", this.SCTE35SegmentationDescriptor);
             this.SetParamSimple(map, prefix + "SpliceEventID", this.SpliceEventID);
             this.SetParamSimple(map, prefix + "SpliceDuration", this.SpliceDuration);
+            this.SetParamObj(map, prefix + "TimedMetadataSetting.", this.TimedMetadataSetting);
         }
     }
 }
