@@ -213,6 +213,46 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// This API is used to start stream push to the specified URL. It is billed separately. For billing details, see the [Push to third-party address](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6) section.
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
+        /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
+        public async Task<StartPublishStreamWithURLResponse> StartPublishStreamWithURL(StartPublishStreamWithURLRequest req)
+        {
+             JsonResponseModel<StartPublishStreamWithURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartPublishStreamWithURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamWithURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to start stream push to the specified URL. It is billed separately. For billing details, see the [Push to third-party address](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6) section.
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
+        /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
+        public StartPublishStreamWithURLResponse StartPublishStreamWithURLSync(StartPublishStreamWithURLRequest req)
+        {
+             JsonResponseModel<StartPublishStreamWithURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartPublishStreamWithURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamWithURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to stop stream push.
         /// </summary>
         /// <param name="req"><see cref="StopPublishStreamRequest"/></param>
