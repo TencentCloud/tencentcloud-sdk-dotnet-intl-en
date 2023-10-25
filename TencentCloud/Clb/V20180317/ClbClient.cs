@@ -2227,6 +2227,166 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// This API is used to query the price of creating a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateLoadBalancerResponse"/></returns>
+        public async Task<InquiryPriceCreateLoadBalancerResponse> InquiryPriceCreateLoadBalancer(InquiryPriceCreateLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceCreateLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of creating a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateLoadBalancerResponse"/></returns>
+        public InquiryPriceCreateLoadBalancerResponse InquiryPriceCreateLoadBalancerSync(InquiryPriceCreateLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceCreateLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of adjusting the specification of a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyLoadBalancerResponse"/></returns>
+        public async Task<InquiryPriceModifyLoadBalancerResponse> InquiryPriceModifyLoadBalancer(InquiryPriceModifyLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceModifyLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceModifyLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceModifyLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of adjusting the specification of a CLB instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyLoadBalancerResponse"/></returns>
+        public InquiryPriceModifyLoadBalancerResponse InquiryPriceModifyLoadBalancerSync(InquiryPriceModifyLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceModifyLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceModifyLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceModifyLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the refund amount of returning a CLB instance. 
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRefundLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceRefundLoadBalancerResponse"/></returns>
+        public async Task<InquiryPriceRefundLoadBalancerResponse> InquiryPriceRefundLoadBalancer(InquiryPriceRefundLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceRefundLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRefundLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRefundLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the refund amount of returning a CLB instance. 
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRefundLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceRefundLoadBalancerResponse"/></returns>
+        public InquiryPriceRefundLoadBalancerResponse InquiryPriceRefundLoadBalancerSync(InquiryPriceRefundLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceRefundLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceRefundLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRefundLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of renewing a CLB instance. It's only available to prepaid CLB instances.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewLoadBalancerResponse"/></returns>
+        public async Task<InquiryPriceRenewLoadBalancerResponse> InquiryPriceRenewLoadBalancer(InquiryPriceRenewLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRenewLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the price of renewing a CLB instance. It's only available to prepaid CLB instances.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewLoadBalancerRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewLoadBalancerResponse"/></returns>
+        public InquiryPriceRenewLoadBalancerResponse InquiryPriceRenewLoadBalancerSync(InquiryPriceRenewLoadBalancerRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceRenewLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// After the original access address and the address to be redirected are configured manually, the system will automatically redirect requests made to the original access address to the target address of the corresponding path. Multiple paths can be configured as a redirection policy under one domain name to achieve automatic redirection between HTTP and HTTPS. A redirection policy should meet the following rules: if A has already been redirected to B, then it cannot be redirected to C (unless the original redirection relationship is deleted and a new one is created), and B cannot be redirected to any other addresses.
         /// </summary>
         /// <param name="req"><see cref="ManualRewriteRequest"/></param>
@@ -2598,6 +2758,46 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLoadBalancerSla");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerSlaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the projects of CLB instances. 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancersProjectRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancersProjectResponse"/></returns>
+        public async Task<ModifyLoadBalancersProjectResponse> ModifyLoadBalancersProject(ModifyLoadBalancersProjectRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancersProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancersProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancersProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the projects of CLB instances. 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancersProjectRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancersProjectResponse"/></returns>
+        public ModifyLoadBalancersProjectResponse ModifyLoadBalancersProjectSync(ModifyLoadBalancersProjectRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancersProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancersProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancersProjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

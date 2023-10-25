@@ -277,8 +277,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
@@ -289,6 +289,13 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }
+
+        /// <summary>
+        /// Network egress
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
 
 
         /// <summary>
@@ -334,6 +341,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
         }
     }
 }

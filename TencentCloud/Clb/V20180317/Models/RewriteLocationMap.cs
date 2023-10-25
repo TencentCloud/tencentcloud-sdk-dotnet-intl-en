@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SourceLocationId{ get; set; }
 
         /// <summary>
-        /// Forwarding rule ID of a redirect target
+        /// ID of the forwarding rule of the destination
         /// </summary>
         [JsonProperty("TargetLocationId")]
         public string TargetLocationId{ get; set; }

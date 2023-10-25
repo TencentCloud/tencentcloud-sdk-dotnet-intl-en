@@ -70,7 +70,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// It's only applicable to public network CLB instances. u200dValues: `CMCC` (China Mobile), `CTCC`·(China Telecom) and `CUCC` (China Unicom). If it is not specified, BGP line is used by default. To query ISPs available in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). If this parameter is specified, the network billing mode must be `BANDWIDTH_PACKAGE`.
+        /// ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
         /// </summary>
         [JsonProperty("VipIsp")]
         public string VipIsp{ get; set; }

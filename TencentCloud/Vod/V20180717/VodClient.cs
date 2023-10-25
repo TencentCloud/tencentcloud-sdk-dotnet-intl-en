@@ -5271,6 +5271,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="ProcessMediaRequest"/></param>
+        /// <returns><see cref="ProcessMediaResponse"/></returns>
+        public async Task<ProcessMediaResponse> ProcessMedia(ProcessMediaRequest req)
+        {
+             JsonResponseModel<ProcessMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ProcessMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="ProcessMediaRequest"/></param>
+        /// <returns><see cref="ProcessMediaResponse"/></returns>
+        public ProcessMediaResponse ProcessMediaSync(ProcessMediaRequest req)
+        {
+             JsonResponseModel<ProcessMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ProcessMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to start a task flow on a video.
         /// There are two ways to create a task flow template:
         /// 1. Create and modify a task flow template in the console;

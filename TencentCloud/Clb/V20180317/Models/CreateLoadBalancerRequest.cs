@@ -75,8 +75,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Number{ get; set; }
 
         /// <summary>
-        /// Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-        /// Note: By default, the traffic goes to the primary AZ. The secondary AZs only carry traffic when the primary AZ is unavailable. The optimal secondary AZ is chosen automatically. You can query the primary and secondary AZ of a region by calling [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1).
+        /// ID of the primary AZ for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`. It's only available to public CLB instances. 
+        /// Note: The traffic only goes to the primary AZ in normal cases. The secondary AZ is used only when the primary AZ is unavailable. To query the list of primary AZs in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("MasterZoneId")]
         public string MasterZoneId{ get; set; }
@@ -94,7 +94,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// It's only applicable to public network CLB instances. u200dValues: `CMCC` (China Mobile), `CTCC`·(China Telecom) and `CUCC` (China Unicom). If it is not specified, BGP line is used by default. To query ISPs available in a region, use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). If this parameter is specified, the network billing mode must be `BANDWIDTH_PACKAGE`.
+        /// ISP of VIP. Values: `CMCC` (China Mobile), `CUCC` (China Unicom) and `CTCC` (China Telecom). You need to activate static single-line IPs. This feature is in beta and is only available in Guangzhou, Shanghai, Nanjing, Jinan, Hangzhou, Fuzhou, Beijing, Shijiazhuang, Wuhan, Changsha, Chengdu and Chongqing regions. To try it out, please contact your sales rep. If it's specified, the network billing mode must be `BANDWIDTH_PACKAGE`. If it's not specified, BGP is used by default. To query ISPs supported in a region, please use [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1). 
         /// </summary>
         [JsonProperty("VipIsp")]
         public string VipIsp{ get; set; }
@@ -125,9 +125,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public ExclusiveCluster ExclusiveCluster{ get; set; }
 
         /// <summary>
-        /// Creates an LCU-supported instance.
-        /// <ul><li>To create an LCU-supported instance, this parameter must be set to `SLA`, which indicates the Super Large 1 specification. 
-        /// <ul><li>If you have activated Super Large LCU-supported instances, `SLA` indicates the Super Large 4 specification. Super u200dLarge LCU-supported specification is in beta now. u200cu200dTo join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category). </li></ul></li><li>It’s not required for a shared CLB instance. </li></ul>
+        /// Specification of LCU-supported instance.
+        /// <ul><li>This parameter is required to create LCU-supported instances. Values: <ul><li>`SLA`: Super Large 4. When you have activated Super Large models, `SLA` refers to Super Large 4.</li><li>`clb.c2.medium`: Standard</li><li>`clb.c3.small`: Advanced 1</li><li>`clb.c3.medium`: Advanced 1</li><li>`clb.c4.small`: Super Large 1</li><li>`clb.c4.medium`: Super Large 2</li><li>`clb.c4.large`: Super Large 3</li><li>`clb.c4.xlarge`: Super Large 4</li> For Super Large 2 and above models, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).</ul></li><li> This parameter is not required for creating shared instances.</li></ul>For more details, see [Instance Specifications](https://intl.cloud.tencent.com/document/product/214/84689?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
@@ -181,6 +180,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("DynamicVip")]
         public bool? DynamicVip{ get; set; }
 
+        /// <summary>
+        /// Network egress point
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +217,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
             this.SetParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
         }
     }
 }

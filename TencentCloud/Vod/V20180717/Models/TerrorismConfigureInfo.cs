@@ -25,18 +25,18 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Parameters for recognition of terrorism content in images
-        /// Note: This field may return `null`, indicating that no valid value can be found.
-        /// </summary>
-        [JsonProperty("ImgReviewInfo")]
-        public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
-
-        /// <summary>
         /// Parameters for OCR-based recognition of terrorism content
         /// Note: This field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }
+
+        /// <summary>
+        /// Parameters for recognition of terrorism content in images
+        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// </summary>
+        [JsonProperty("ImgReviewInfo")]
+        public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
 
         /// <summary>
@@ -44,8 +44,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
             this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
+            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
         }
     }
 }

@@ -71,8 +71,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Whether to enable the SNI feature (this parameter is only meaningful for HTTPS listeners)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }

@@ -74,6 +74,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EdgeZone")]
         public bool? EdgeZone{ get; set; }
 
+        /// <summary>
+        /// Network egress
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +95,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
             this.SetParamSimple(map, prefix + "ZoneResourceType", this.ZoneResourceType);
             this.SetParamSimple(map, prefix + "EdgeZone", this.EdgeZone);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
         }
     }
 }

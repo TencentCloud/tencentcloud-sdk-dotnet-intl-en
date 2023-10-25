@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ReferenceDomain{ get; set; }
 
         /// <summary>
-        /// VOD[Subapplication](/document/product/266/14574) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
+        /// VOD[Subapplication](https://www.tencentcloud.com/document/product/266/33987) ID。If you want to access resources in a Subapplication, fill this field with the Subapplication ID; otherwise, you don't need to fill in this field.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

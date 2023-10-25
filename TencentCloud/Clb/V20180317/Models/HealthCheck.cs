@@ -75,8 +75,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string HttpCheckPath{ get; set; }
 
         /// <summary>
-        /// Health check domain name. It is only applicable to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. For HTTP health checks of TCP listeners, this parameter is required.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HttpCheckDomain")]
         public string HttpCheckDomain{ get; set; }

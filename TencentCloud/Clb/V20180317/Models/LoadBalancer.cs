@@ -398,6 +398,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }
 
+        /// <summary>
+        /// Network egress
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -458,6 +465,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
             this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
         }
     }
 }
