@@ -31,14 +31,15 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string CompareImageBase64{ get; set; }
 
         /// <summary>
-        /// The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. Example: `https://www.tencentcloud.com/products/faceid`.
-        /// After the verification process is completed, the `BizToken` of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
+        /// The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+        /// Example: https://www.tencentcloud.com/products/faceid.
+        /// After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
         /// </summary>
         [JsonProperty("RedirectURL")]
         public string RedirectURL{ get; set; }
 
         /// <summary>
-        /// The passthrough parameter of the business, max 1,000 characters, which will be returned in `GetWebVerificationResultIntl`.
+        /// The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }

@@ -169,11 +169,32 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Price attribute
+        /// Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PriceInfo")]
         public string[] PriceInfo{ get; set; }
+
+        /// <summary>
+        /// Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AssociatedOrder")]
+        public BillDetailAssociatedOrder AssociatedOrder{ get; set; }
+
+        /// <summary>
+        /// Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Formula")]
+        public string Formula{ get; set; }
+
+        /// <summary>
+        /// Billing rules: Official website links for detailed billing rules of each product.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FormulaUrl")]
+        public string FormulaUrl{ get; set; }
 
 
         /// <summary>
@@ -206,6 +227,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "PriceInfo.", this.PriceInfo);
+            this.SetParamObj(map, prefix + "AssociatedOrder.", this.AssociatedOrder);
+            this.SetParamSimple(map, prefix + "Formula", this.Formula);
+            this.SetParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
         }
     }
 }

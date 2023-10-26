@@ -105,6 +105,19 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
+        /// <summary>
+        /// Cost allocation tag key, which can be customized. This parameter can be used for querying bills after January 2021.
+        /// </summary>
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
+
+        /// <summary>
+        /// Resource tag value. If it is left empty, there are no records with tag values set under this tag key.
+        /// This parameter can be used for querying bills after January 2021.
+        /// </summary>
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +134,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

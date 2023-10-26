@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Whether to automatically redirect to `RedirectUrl` after successful verification. Default value: `false`.
+        /// Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
         /// </summary>
         [JsonProperty("AutoSkip")]
         public bool? AutoSkip{ get; set; }

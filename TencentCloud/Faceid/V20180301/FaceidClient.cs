@@ -213,6 +213,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// This interface supports judgment of real person and photo comparison to verify the user's identity online. By passing the video and photo into the interface, it will first judge whether the person in the video is real. If yes, it judges whether the person in the video is the same one as the uploaded photo and returns authentication result.
+        /// </summary>
+        /// <param name="req"><see cref="CompareFaceLivenessRequest"/></param>
+        /// <returns><see cref="CompareFaceLivenessResponse"/></returns>
+        public async Task<CompareFaceLivenessResponse> CompareFaceLiveness(CompareFaceLivenessRequest req)
+        {
+             JsonResponseModel<CompareFaceLivenessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CompareFaceLiveness");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompareFaceLivenessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This interface supports judgment of real person and photo comparison to verify the user's identity online. By passing the video and photo into the interface, it will first judge whether the person in the video is real. If yes, it judges whether the person in the video is the same one as the uploaded photo and returns authentication result.
+        /// </summary>
+        /// <param name="req"><see cref="CompareFaceLivenessRequest"/></param>
+        /// <returns><see cref="CompareFaceLivenessResponse"/></returns>
+        public CompareFaceLivenessResponse CompareFaceLivenessSync(CompareFaceLivenessRequest req)
+        {
+             JsonResponseModel<CompareFaceLivenessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CompareFaceLiveness");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompareFaceLivenessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 
         /// The data will be stored in a COS bucket in the region specified by the parameter `Region` for two hours.
         /// </summary>

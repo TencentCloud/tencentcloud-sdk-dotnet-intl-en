@@ -25,14 +25,14 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The URL of this verification process, which will be returned to the frontend of the browser for starting the process.
+        /// The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
         /// </summary>
         [JsonProperty("VerificationUrl")]
         [System.Obsolete]
         public string VerificationUrl{ get; set; }
 
         /// <summary>
-        /// The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
+        /// The token for the web-based verification, which is generated using the ApplyWebVerificationBizTokenIntl API.
         /// </summary>
         [JsonProperty("BizToken")]
         public string BizToken{ get; set; }

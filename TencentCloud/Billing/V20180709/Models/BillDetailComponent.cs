@@ -200,6 +200,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("BlendedDiscount")]
         public string BlendedDiscount{ get; set; }
 
+        /// <summary>
+        /// Configuration description: The specification configuration of an instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ComponentConfig")]
+        public BillDetailComponentConfig[] ComponentConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -235,6 +242,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
             this.SetParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
             this.SetParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
+            this.SetParamArrayObj(map, prefix + "ComponentConfig.", this.ComponentConfig);
         }
     }
 }

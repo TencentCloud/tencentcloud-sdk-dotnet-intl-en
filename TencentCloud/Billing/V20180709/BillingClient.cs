@@ -53,6 +53,86 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to batch set cost allocation tags.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationTagRequest"/></param>
+        /// <returns><see cref="CreateAllocationTagResponse"/></returns>
+        public async Task<CreateAllocationTagResponse> CreateAllocationTag(CreateAllocationTagRequest req)
+        {
+             JsonResponseModel<CreateAllocationTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAllocationTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAllocationTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to batch set cost allocation tags.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationTagRequest"/></param>
+        /// <returns><see cref="CreateAllocationTagResponse"/></returns>
+        public CreateAllocationTagResponse CreateAllocationTagSync(CreateAllocationTagRequest req)
+        {
+             JsonResponseModel<CreateAllocationTagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAllocationTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAllocationTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// u200cThis API is used to batch cancel cost allocation tags.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationTagRequest"/></param>
+        /// <returns><see cref="DeleteAllocationTagResponse"/></returns>
+        public async Task<DeleteAllocationTagResponse> DeleteAllocationTag(DeleteAllocationTagRequest req)
+        {
+             JsonResponseModel<DeleteAllocationTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAllocationTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAllocationTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// u200cThis API is used to batch cancel cost allocation tags.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationTagRequest"/></param>
+        /// <returns><see cref="DeleteAllocationTagResponse"/></returns>
+        public DeleteAllocationTagResponse DeleteAllocationTagSync(DeleteAllocationTagRequest req)
+        {
+             JsonResponseModel<DeleteAllocationTagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAllocationTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAllocationTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to check the Tencent Cloud account balance.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountBalanceRequest"/></param>
@@ -93,8 +173,10 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to get bill details. 
-        /// Notes: 1. The API request may fail due to network instability or other network exceptions. In this case, we recommend you manually retry the request when the API request fails. 2. If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), querying bill data via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
+        /// u200cThis API is used to get bill details.
+        /// Note:
+        /// 1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
+        /// 2.If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), bill data query via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
         /// <returns><see cref="DescribeBillDetailResponse"/></returns>
@@ -114,8 +196,10 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to get bill details. 
-        /// Notes: 1. The API request may fail due to network instability or other network exceptions. In this case, we recommend you manually retry the request when the API request fails. 2. If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), querying bill data via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
+        /// u200cThis API is used to get bill details.
+        /// Note:
+        /// 1. The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
+        /// 2.If the volume of your bill data is high (for example, if over 200 thousand bill entries are generated for a month), bill data query via APIs may be slow. We recommend you enable bill storage so that you can obtain bill files from COS buckets for analysis. For details, see [Saving Bills to COS](https://intl.cloud.tencent.com/document/product/555/61275?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
         /// <returns><see cref="DescribeBillDetailResponse"/></returns>
@@ -135,7 +219,89 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to query bill resources summary.
+        /// This API is used to get pay-on-behalf bills of the admin account (bill details).
+        /// Note: The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDetailForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillDetailForOrganizationResponse"/></returns>
+        public async Task<DescribeBillDetailForOrganizationResponse> DescribeBillDetailForOrganization(DescribeBillDetailForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillDetailForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillDetailForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get pay-on-behalf bills of the admin account (bill details).
+        /// Note: The API request may fail due to network instability or other exceptions. In this case, we recommend you manually retry the request when the API request fails.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDetailForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillDetailForOrganizationResponse"/></returns>
+        public DescribeBillDetailForOrganizationResponse DescribeBillDetailForOrganizationSync(DescribeBillDetailForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillDetailForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillDetailForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get bill download URLs for L0, L1, L2, and L3 bills and bill packs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBillDownloadUrlResponse"/></returns>
+        public async Task<DescribeBillDownloadUrlResponse> DescribeBillDownloadUrl(DescribeBillDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeBillDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get bill download URLs for L0, L1, L2, and L3 bills and bill packs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBillDownloadUrlResponse"/></returns>
+        public DescribeBillDownloadUrlResponse DescribeBillDownloadUrlSync(DescribeBillDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeBillDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get the bill summarized by instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>
@@ -155,7 +321,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to query bill resources summary.
+        /// This API is used to get the bill summarized by instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>
@@ -166,6 +332,46 @@ namespace TencentCloud.Billing.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBillResourceSummary");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillResourceSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get pay-on-behalf bills of the admin account (bills by instance).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillResourceSummaryForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillResourceSummaryForOrganizationResponse"/></returns>
+        public async Task<DescribeBillResourceSummaryForOrganizationResponse> DescribeBillResourceSummaryForOrganization(DescribeBillResourceSummaryForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillResourceSummaryForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillResourceSummaryForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillResourceSummaryForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get pay-on-behalf bills of the admin account (bills by instance).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillResourceSummaryForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillResourceSummaryForOrganizationResponse"/></returns>
+        public DescribeBillResourceSummaryForOrganizationResponse DescribeBillResourceSummaryForOrganizationSync(DescribeBillResourceSummaryForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillResourceSummaryForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillResourceSummaryForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillResourceSummaryForOrganizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -415,6 +621,46 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to get bills summarized by product, project, region, billing mode, and tag by passing in parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryForOrganizationResponse"/></returns>
+        public async Task<DescribeBillSummaryForOrganizationResponse> DescribeBillSummaryForOrganization(DescribeBillSummaryForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get bills summarized by product, project, region, billing mode, and tag by passing in parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryForOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryForOrganizationResponse"/></returns>
+        public DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganizationSync(DescribeBillSummaryForOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryForOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryForOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryForOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query COS usage details.
         /// </summary>
         /// <param name="req"><see cref="DescribeDosageCosDetailByDateRequest"/></param>
@@ -446,6 +692,46 @@ namespace TencentCloud.Billing.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDosageCosDetailByDate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get cost allocation tags.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagListRequest"/></param>
+        /// <returns><see cref="DescribeTagListResponse"/></returns>
+        public async Task<DescribeTagListResponse> DescribeTagList(DescribeTagListRequest req)
+        {
+             JsonResponseModel<DescribeTagListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to get cost allocation tags.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagListRequest"/></param>
+        /// <returns><see cref="DescribeTagListResponse"/></returns>
+        public DescribeTagListResponse DescribeTagListSync(DescribeTagListRequest req)
+        {
+             JsonResponseModel<DescribeTagListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTagList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
