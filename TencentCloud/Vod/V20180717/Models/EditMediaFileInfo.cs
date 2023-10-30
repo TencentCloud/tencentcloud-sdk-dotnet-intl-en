@@ -31,15 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Start time offset of video clipping in seconds.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of video clipping in seconds.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

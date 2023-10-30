@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// The parameters for the output file of remastering.
+        /// 
         /// </summary>
         [JsonProperty("OutputConfig")]
         public RebuildMediaOutputConfig OutputConfig{ get; set; }

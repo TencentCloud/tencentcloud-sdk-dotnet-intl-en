@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// MaxAge rule.
+        /// MaxAge rule
         /// </summary>
         [JsonProperty("MaxAgeRules")]
         public MaxAgeRule[] MaxAgeRules{ get; set; }

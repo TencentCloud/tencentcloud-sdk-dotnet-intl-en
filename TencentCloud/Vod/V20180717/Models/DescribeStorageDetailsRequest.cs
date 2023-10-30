@@ -53,21 +53,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Storage class to query. Valid values:
-        /// <li>`TotalStorage`: total storage usage in classes of STANDARD, STANDARD_IA, ARCHIVE, and DEEP ARCHIVE, excluding the storage usage for data deleted in advance.</li>
-        /// <li>`StandardStorage`: STANDARD</li>
-        /// <li>`InfrequentStorage`: STANDARD_IA</li>
-        /// <li>`ArchiveStorage`: ARCHIVE</li>
-        /// <li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
-        /// <li>`DeletedInfrequentStorage`: STANDARD_IA data deleted in advance</li>
-        /// <li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
-        /// <li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
-        /// <li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
-        /// <li>`ArchiveExpeditedRetrieval`: ARCHIVE data retrieved using expedited retrievals</li>
-        /// <li>`ArchiveBulkRetrieval`: ARCHIVE data retrieved using bulk retrievals</li>
-        /// <li>`DeepArchiveStandardRetrieval`: DEEP ARCHIVE data retrieved using standard retrievals</li>
-        /// <li>`DeepArchiveBulkRetrieval`: DEEP ARCHIVE data retrieved using bulk retrievals</li>
-        /// Default value: `TotalStorage`
+        /// 
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

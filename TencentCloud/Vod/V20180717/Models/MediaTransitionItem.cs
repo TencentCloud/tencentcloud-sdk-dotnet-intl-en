@@ -35,7 +35,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Transitions")]
+        [System.Obsolete]
         public TransitionOpertion[] Transitions{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MediaTransitions")]
+        public TransitionOperation[] MediaTransitions{ get; set; }
 
 
         /// <summary>
@@ -45,6 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamArrayObj(map, prefix + "Transitions.", this.Transitions);
+            this.SetParamArrayObj(map, prefix + "MediaTransitions.", this.MediaTransitions);
         }
     }
 }

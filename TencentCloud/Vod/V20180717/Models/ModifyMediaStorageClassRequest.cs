@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The unique IDs of media files
+        /// 
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }

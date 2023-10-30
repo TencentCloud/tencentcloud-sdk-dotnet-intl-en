@@ -60,9 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Size{ get; set; }
 
         /// <summary>
-        /// The watermark type. Valid values:
-        /// <li>Trace: Digital watermark</li>
-        /// <li>None: Regular watermark</li>
+        /// 
         /// </summary>
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
@@ -72,6 +70,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("SubStreamSet")]
         public MediaSubStreamInfoItem[] SubStreamSet{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CopyRightWatermarkText")]
+        public string CopyRightWatermarkText{ get; set; }
 
 
         /// <summary>
@@ -86,6 +90,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
             this.SetParamArrayObj(map, prefix + "SubStreamSet.", this.SubStreamSet);
+            this.SetParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
         }
     }
 }

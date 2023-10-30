@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Domain operation, value: <li>start: enable;</li> <li>stop: disable. </li>
+        /// 
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

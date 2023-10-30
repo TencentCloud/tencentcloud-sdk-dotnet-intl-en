@@ -56,6 +56,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("RepeatType")]
         public string RepeatType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Transparency")]
+        public long? Transparency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "RepeatType", this.RepeatType);
+            this.SetParamSimple(map, prefix + "Transparency", this.Transparency);
         }
     }
 }

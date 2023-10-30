@@ -108,6 +108,27 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string Ext{ get; set; }
 
         /// <summary>
+        /// Document transcoding task creation time, unit: seconds.
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// Document transcoding task assignment time, unit: seconds.
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AssignTime")]
+        public ulong? AssignTime{ get; set; }
+
+        /// <summary>
+        /// Document transcoding task finished time, unit: seconds.
+        /// Note: This parameter may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FinishedTime")]
+        public ulong? FinishedTime{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -131,6 +152,9 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
             this.SetParamSimple(map, prefix + "ResourceListUrl", this.ResourceListUrl);
             this.SetParamSimple(map, prefix + "Ext", this.Ext);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "AssignTime", this.AssignTime);
+            this.SetParamSimple(map, prefix + "FinishedTime", this.FinishedTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

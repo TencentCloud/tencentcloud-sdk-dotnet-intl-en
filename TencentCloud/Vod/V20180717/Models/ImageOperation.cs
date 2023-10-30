@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The image processing type. Valid values:
-        /// <li>`Scale`: Scaling</li>
-        /// <li>`CenterCut`: Cropping</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

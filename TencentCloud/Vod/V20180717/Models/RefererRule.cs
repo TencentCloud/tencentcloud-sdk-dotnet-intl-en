@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Rule types: <li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+        /// 
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+        /// 
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// Referer configuration types:<li>whitelist：Allowlist;</li> <li>blacklist:Blocklist.</li>
+        /// 
         /// </summary>
         [JsonProperty("RefererType")]
         public string RefererType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Referers{ get; set; }
 
         /// <summary>
-        /// Whether to allow empty referer：true: Allow empty referer when RefererType = whitelist; false: Reject empty refer when RefererType = blacklist.
+        /// 
         /// </summary>
         [JsonProperty("AllowEmpty")]
         public bool? AllowEmpty{ get; set; }

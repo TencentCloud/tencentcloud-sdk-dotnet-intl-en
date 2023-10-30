@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+        /// 
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string PrivateKey{ get; set; }
 
         /// <summary>
-        /// Time when the certificate expires;Can be left blank when used as an input parameter.
+        /// 
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

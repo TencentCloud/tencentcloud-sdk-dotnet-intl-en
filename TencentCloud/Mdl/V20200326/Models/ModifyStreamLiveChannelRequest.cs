@@ -84,6 +84,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("InputLossBehavior")]
         public InputLossBehaviorInfo InputLossBehavior{ get; set; }
 
+        /// <summary>
+        /// Pipeline configuration.
+        /// </summary>
+        [JsonProperty("PipelineInputSettings")]
+        public PipelineInputSettingsInfo PipelineInputSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
             this.SetParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
             this.SetParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
+            this.SetParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
         }
     }
 }

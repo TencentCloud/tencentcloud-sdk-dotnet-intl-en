@@ -115,44 +115,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public TimeRange ExpireTime{ get; set; }
 
         /// <summary>
-        /// Sorting order.
-        /// <li>Valid value of `Sort.Field`: CreateTime.</li>
-        /// <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
-        /// </summary>
-        [JsonProperty("Sort")]
-        public SortBy Sort{ get; set; }
-
-        /// <summary>
-        /// <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-        /// <li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-        /// <li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-        /// <li>basicInfo (basic video information).</li>
-        /// <li>metaData (video metadata).</li>
-        /// <li>transcodeInfo (result information of video transcoding).</li>
-        /// <li>animatedGraphicsInfo (result information of animated image generating task).</li>
-        /// <li>imageSpriteInfo (image sprite information).</li>
-        /// <li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-        /// <li>sampleSnapshotInfo (sampled screenshot information).</li>
-        /// <li>keyFrameDescInfo (timestamp information).</li>
-        /// <li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-        /// <li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-        /// </summary>
-        [JsonProperty("Filters")]
-        public string[] Filters{ get; set; }
-
-        /// <summary>
         /// Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
         /// <li>Length limit for a single region: 20 characters</li>
         /// <li>Array length limit: 20</li>
@@ -210,6 +172,44 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("TrtcRoomIds")]
         public string[] TrtcRoomIds{ get; set; }
+
+        /// <summary>
+        /// Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
+        /// <li>basicInfo (basic video information).</li>
+        /// <li>metaData (video metadata).</li>
+        /// <li>transcodeInfo (result information of video transcoding).</li>
+        /// <li>animatedGraphicsInfo (result information of animated image generating task).</li>
+        /// <li>imageSpriteInfo (image sprite information).</li>
+        /// <li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
+        /// <li>sampleSnapshotInfo (sampled screenshot information).</li>
+        /// <li>keyFrameDescInfo (timestamp information).</li>
+        /// <li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
+        /// <li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public string[] Filters{ get; set; }
+
+        /// <summary>
+        /// Sorting order.
+        /// <li>Valid value of `Sort.Field`: CreateTime.</li>
+        /// <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+        /// </summary>
+        [JsonProperty("Sort")]
+        public SortBy Sort{ get; set; }
+
+        /// <summary>
+        /// <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+        /// <li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
+        /// <li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
         /// (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -282,10 +282,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
             this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
             this.SetParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
-            this.SetParamObj(map, prefix + "Sort.", this.Sort);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
             this.SetParamArraySimple(map, prefix + "MediaTypes.", this.MediaTypes);
@@ -293,6 +289,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "ReviewResults.", this.ReviewResults);
             this.SetParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
             this.SetParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
+            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);

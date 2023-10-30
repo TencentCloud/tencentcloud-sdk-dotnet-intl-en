@@ -25,22 +25,22 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Source of a media file:
-        /// <li>`Record`: recording, such as live or time-shift recording</li>
-        /// <li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
-        /// <li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
-        /// <li>`WebPageRecord`: panoramic recording </li>
-        /// <li>`Unknown`: unknown source</li>
+        /// Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// Field passed through when a file is created.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// User-transparent transmission field when creating a file.
         /// </summary>
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
+
+        /// <summary>
+        /// Live streaming recording information, valid when the file source is Record.
+        /// </summary>
+        [JsonProperty("LiveRecordInfo")]
+        public LiveRecordInfo LiveRecordInfo{ get; set; }
 
         /// <summary>
         /// The TRTC recording information.
@@ -48,6 +48,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("TrtcRecordInfo")]
         public TrtcRecordInfo TrtcRecordInfo{ get; set; }
+
+        /// <summary>
+        /// Panoramic recording information, valid when the file source is WebPageRecord.
+        /// </summary>
+        [JsonProperty("WebPageRecordInfo")]
+        public WebPageRecordInfo WebPageRecordInfo{ get; set; }
 
 
         /// <summary>
@@ -57,7 +63,9 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamObj(map, prefix + "LiveRecordInfo.", this.LiveRecordInfo);
             this.SetParamObj(map, prefix + "TrtcRecordInfo.", this.TrtcRecordInfo);
+            this.SetParamObj(map, prefix + "WebPageRecordInfo.", this.WebPageRecordInfo);
         }
     }
 }

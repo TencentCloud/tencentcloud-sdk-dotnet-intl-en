@@ -413,9 +413,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves u200dthe latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+        /// When the origin server resource is updated but the node cache TTL has not expired, the user will still access the old resource. To solve this problem, you can use this API to purge the node cache. There are two action options: <li>Delete directly: Delete the node cache directly without any verification. Trigger origin-pull when the resource is requested.</li><li>Mark as expired: Set the node resource as expired, and trigger origin-pull verification when the resource, that is, send an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin responds with 200, the node pulls new resources from the origin and update the cache. If the origin responds with 304, the node does not update the cache</li>.
         /// 
-        /// </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
+        /// For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
         /// <returns><see cref="CreatePurgeTaskResponse"/></returns>
@@ -435,9 +435,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves u200dthe latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+        /// When the origin server resource is updated but the node cache TTL has not expired, the user will still access the old resource. To solve this problem, you can use this API to purge the node cache. There are two action options: <li>Delete directly: Delete the node cache directly without any verification. Trigger origin-pull when the resource is requested.</li><li>Mark as expired: Set the node resource as expired, and trigger origin-pull verification when the resource, that is, send an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin responds with 200, the node pulls new resources from the origin and update the cache. If the origin responds with 304, the node does not update the cache</li>.
         /// 
-        /// </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
+        /// For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
         /// <returns><see cref="CreatePurgeTaskResponse"/></returns>
@@ -528,6 +528,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "CreateSecurityIPGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityIPGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a shared CNAME.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
+        /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
+        public async Task<CreateSharedCNAMEResponse> CreateSharedCNAME(CreateSharedCNAMERequest req)
+        {
+             JsonResponseModel<CreateSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a shared CNAME.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
+        /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
+        public CreateSharedCNAMEResponse CreateSharedCNAMESync(CreateSharedCNAMERequest req)
+        {
+             JsonResponseModel<CreateSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSharedCNAMEResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

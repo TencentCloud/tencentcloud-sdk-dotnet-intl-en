@@ -39,8 +39,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string PlayDomain{ get; set; }
 
         /// <summary>
-        /// Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("StartoverWindow")]
         public long? StartoverWindow{ get; set; }

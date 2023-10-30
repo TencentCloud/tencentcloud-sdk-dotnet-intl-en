@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Rule types:<li>all: effective for all files.</li> <li>file: effective for specified file suffixes.</li> <li>directory: effective for specified paths.</li> <li>path: effective for specified absolute paths.</li>
+        /// 
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Content for each CacheType: <li>For all, enter a wildcard *.</li> <li>For file, enter the suffix, e.g., jpg or txt.</li> <li>For directory, enter the path, e.g., /xxx/test/.</li> <li>For path, enter the absolute path, e.g., /xxx/test.html.</li>
+        /// 
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }

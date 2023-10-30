@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Other vendor object storage back-to-source authentication configuration switches, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

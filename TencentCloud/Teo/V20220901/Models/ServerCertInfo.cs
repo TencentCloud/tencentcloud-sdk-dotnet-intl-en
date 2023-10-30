@@ -40,10 +40,10 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Type of the certificate. Values:
-        /// <li>`default`: Default certificate</lil>
-        /// <li>`upload`: Specified certificate</li>
-        /// <li>`managed`: Tencent Cloud-managed certificate</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// u200c<li>`default`: Default certificate</li>
+        /// u200c<li>`upload`: Custom certificate</li>
+        /// u200c<li>`managed`: Tencent Cloud-managed certificate</li>
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

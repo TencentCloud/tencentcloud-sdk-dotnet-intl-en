@@ -49,13 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// The video remaster parameters.
+        /// 
         /// </summary>
         [JsonProperty("RebuildVideoInfo")]
         public RebuildVideoInfo RebuildVideoInfo{ get; set; }
 
         /// <summary>
-        /// The audio remaster parameters.
+        /// 
         /// </summary>
         [JsonProperty("RebuildAudioInfo")]
         public RebuildAudioInfo RebuildAudioInfo{ get; set; }

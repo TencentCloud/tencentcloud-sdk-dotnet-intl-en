@@ -44,10 +44,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+        /// 
         /// </summary>
-        [JsonProperty("HeadTailSet")]
-        public HeadTailTaskInput[] HeadTailSet{ get; set; }
+        [JsonProperty("CopyRightWatermark")]
+        public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
         /// List of blurs. Up to 10 ones can be supported.
@@ -56,13 +56,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
-        /// End time offset of a transcoded video, in seconds.
-        /// <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+        /// List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
         /// </summary>
-        [JsonProperty("EndTimeOffset")]
-        public float? EndTimeOffset{ get; set; }
+        [JsonProperty("HeadTailSet")]
+        public HeadTailTaskInput[] HeadTailSet{ get; set; }
 
         /// <summary>
         /// Start time offset of a transcoded video, in seconds.
@@ -73,6 +70,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
+        /// <summary>
+        /// End time offset of a transcoded video, in seconds.
+        /// <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+        /// </summary>
+        [JsonProperty("EndTimeOffset")]
+        public float? EndTimeOffset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,10 +88,11 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
-            this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
+            this.SetParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
-            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         }
     }
 }

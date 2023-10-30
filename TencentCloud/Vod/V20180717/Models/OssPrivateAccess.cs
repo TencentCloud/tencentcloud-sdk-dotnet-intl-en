@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Alibaba Cloud OSS back-to-origin authentication configuration switch, the values are:<li>on:Enable;</li> <li>off: Disable.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

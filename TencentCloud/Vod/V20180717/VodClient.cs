@@ -1715,7 +1715,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to delete a custom task flow template.  
+        /// 
         /// </summary>
         /// <param name="req"><see cref="DeleteProcedureTemplateRequest"/></param>
         /// <returns><see cref="DeleteProcedureTemplateResponse"/></returns>
@@ -1735,7 +1735,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to delete a custom task flow template.  
+        /// 
         /// </summary>
         /// <param name="req"><see cref="DeleteProcedureTemplateRequest"/></param>
         /// <returns><see cref="DeleteProcedureTemplateResponse"/></returns>
@@ -3883,66 +3883,6 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
-        /// 
-        /// 1. Clipping a file in VOD to generate a new video;
-        /// 2. Splicing multiple files in VOD to generate a new video;
-        /// 3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
-        /// 4. Directly generating a new video from a stream in VOD;
-        /// 5. Clipping a stream in VOD to generate a new video;
-        /// 6. Splicing multiple streams in VOD to generate a new video;
-        /// 7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
-        /// 
-        /// You can also specify whether to perform a task flow for the generated new video.
-        /// </summary>
-        /// <param name="req"><see cref="EditMediaRequest"/></param>
-        /// <returns><see cref="EditMediaResponse"/></returns>
-        public async Task<EditMediaResponse> EditMedia(EditMediaRequest req)
-        {
-             JsonResponseModel<EditMediaResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EditMedia");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
-        /// 
-        /// 1. Clipping a file in VOD to generate a new video;
-        /// 2. Splicing multiple files in VOD to generate a new video;
-        /// 3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
-        /// 4. Directly generating a new video from a stream in VOD;
-        /// 5. Clipping a stream in VOD to generate a new video;
-        /// 6. Splicing multiple streams in VOD to generate a new video;
-        /// 7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
-        /// 
-        /// You can also specify whether to perform a task flow for the generated new video.
-        /// </summary>
-        /// <param name="req"><see cref="EditMediaRequest"/></param>
-        /// <returns><see cref="EditMediaResponse"/></returns>
-        public EditMediaResponse EditMediaSync(EditMediaRequest req)
-        {
-             JsonResponseModel<EditMediaResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EditMedia");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
         /// </summary>
         /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
@@ -4065,30 +4005,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// Live clipping means that during a live broadcast (before it ends), you can select a segment of previous live broadcast content to generate a new video (in HLS format) in real time and share it immediately or store it persistently.
         /// 
-        /// VOD supports two live clipping modes:
-        /// - Persistent clipping: in this mode, the clipped video is saved as an independent video file with a `FileId`, which is suitable for **persistently storing** highlights;
-        /// - Temporary clipping: in this mode, the clipped video is part of the LVB recording file with no `FileId`, which is suitable for **temporarily sharing** highlights;
-        /// 
-        /// Note:
-        /// - The live clipping feature can be used only when [time shifting](https://intl.cloud.tencent.com/document/product/267/32742?from_cn_redirect=1) has been enabled for the target live stream.
-        /// - Live clipping is performed based on the m3u8 file generated by LVB recording, so its minimum clipping granularity is one ts segment rather than at or below the second level.
-        /// 
-        /// 
-        /// ### Persistent clipping
-        /// In persistent clipping mode, the clipped video is saved as an independent video file with a `FileId`, and its lifecycle is not subject to the source LVB recording video (even if the source video is deleted, the clipped video will not be affected in any way). It can be further processed (transcoded, published on WeChat, etc.).
-        /// 
-        /// An example is as follows: for a complete football match, the source LVB recording video may be up to 2 hours in length. You want to store this video for only 2 months for the purpose of cost savings. However, you want to specify a longer retention period for the "highlights" video created by live clipping and perform additional VOD operations on it such as transcoding and release on WeChat. In this case, you need to choose the persistent clipping mode of live clipping.
-        /// 
-        /// The advantage of persistent clipping is that the clipped video has a lifecycle independent of the source recording video and can be managed independently and stored persistently.
-        /// 
-        /// ### Temporary clipping
-        /// In temporary clipping mode, the clipped video (m3u8 file) shares the same ts segments with the LVB recording video instead of being an independent video. It only has a playback URL but has no `FileId`, and its validity period is the same as that of the LVB recording video; therefore, if the LVB recording video is deleted, it cannot be played back.
-        /// 
-        /// For temporary clipping, as the clipping result is not an independent video, it will not be included in VOD's media asset management (for example, it will not be counted in the total videos in the console), and no video processing operations can be separately performed on it, such as transcoding and release on WeChat.
-        /// 
-        /// The advantage of temporary clipping is that the clipping operation is very "lightweight" and does not incur additional storage fees. However, the clipped video has the same lifecycle as the source recording video and cannot be further transcoded or processed.
         /// </summary>
         /// <param name="req"><see cref="LiveRealTimeClipRequest"/></param>
         /// <returns><see cref="LiveRealTimeClipResponse"/></returns>
@@ -4108,30 +4025,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// Live clipping means that during a live broadcast (before it ends), you can select a segment of previous live broadcast content to generate a new video (in HLS format) in real time and share it immediately or store it persistently.
         /// 
-        /// VOD supports two live clipping modes:
-        /// - Persistent clipping: in this mode, the clipped video is saved as an independent video file with a `FileId`, which is suitable for **persistently storing** highlights;
-        /// - Temporary clipping: in this mode, the clipped video is part of the LVB recording file with no `FileId`, which is suitable for **temporarily sharing** highlights;
-        /// 
-        /// Note:
-        /// - The live clipping feature can be used only when [time shifting](https://intl.cloud.tencent.com/document/product/267/32742?from_cn_redirect=1) has been enabled for the target live stream.
-        /// - Live clipping is performed based on the m3u8 file generated by LVB recording, so its minimum clipping granularity is one ts segment rather than at or below the second level.
-        /// 
-        /// 
-        /// ### Persistent clipping
-        /// In persistent clipping mode, the clipped video is saved as an independent video file with a `FileId`, and its lifecycle is not subject to the source LVB recording video (even if the source video is deleted, the clipped video will not be affected in any way). It can be further processed (transcoded, published on WeChat, etc.).
-        /// 
-        /// An example is as follows: for a complete football match, the source LVB recording video may be up to 2 hours in length. You want to store this video for only 2 months for the purpose of cost savings. However, you want to specify a longer retention period for the "highlights" video created by live clipping and perform additional VOD operations on it such as transcoding and release on WeChat. In this case, you need to choose the persistent clipping mode of live clipping.
-        /// 
-        /// The advantage of persistent clipping is that the clipped video has a lifecycle independent of the source recording video and can be managed independently and stored persistently.
-        /// 
-        /// ### Temporary clipping
-        /// In temporary clipping mode, the clipped video (m3u8 file) shares the same ts segments with the LVB recording video instead of being an independent video. It only has a playback URL but has no `FileId`, and its validity period is the same as that of the LVB recording video; therefore, if the LVB recording video is deleted, it cannot be played back.
-        /// 
-        /// For temporary clipping, as the clipping result is not an independent video, it will not be included in VOD's media asset management (for example, it will not be counted in the total videos in the console), and no video processing operations can be separately performed on it, such as transcoding and release on WeChat.
-        /// 
-        /// The advantage of temporary clipping is that the clipping operation is very "lightweight" and does not incur additional storage fees. However, the clipped video has the same lifecycle as the source recording video and cannot be further transcoded or processed.
         /// </summary>
         /// <param name="req"><see cref="LiveRealTimeClipRequest"/></param>
         /// <returns><see cref="LiveRealTimeClipResponse"/></returns>
@@ -5262,46 +5156,6 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ParseStreamingManifest");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseStreamingManifestResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="req"><see cref="ProcessMediaRequest"/></param>
-        /// <returns><see cref="ProcessMediaResponse"/></returns>
-        public async Task<ProcessMediaResponse> ProcessMedia(ProcessMediaRequest req)
-        {
-             JsonResponseModel<ProcessMediaResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ProcessMedia");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessMediaResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="req"><see cref="ProcessMediaRequest"/></param>
-        /// <returns><see cref="ProcessMediaResponse"/></returns>
-        public ProcessMediaResponse ProcessMediaSync(ProcessMediaRequest req)
-        {
-             JsonResponseModel<ProcessMediaResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ProcessMedia");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessMediaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Access forced redirect configuration switch:<li>on:Enable;</li> <li>off:Disable.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Access forced redirect types: <li>http:forced HTTP redirect</li> <li>https: forced HTTPS redirect</li>
+        /// 
         /// </summary>
         [JsonProperty("RedirectType")]
         public string RedirectType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Acceleration region:<li>mainland:Acceleration inside the Chinese mainland;</li> <li>overseas: Acceleration outside the Chinese mainland;</li> <li>Acceleration over the globe.</li>
+        /// 
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

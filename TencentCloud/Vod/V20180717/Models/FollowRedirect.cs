@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Access forced redirect configuration switch <li>on：Enable;</li> <li>off：Disable.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

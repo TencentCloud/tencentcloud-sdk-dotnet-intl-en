@@ -87,14 +87,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? ImageSpriteDefinition{ get; set; }
 
         /// <summary>
-        /// Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
-        /// <li>MinEdgeLength: 240, Name: LD;</li>
-        /// <li>MinEdgeLength: 480, Name: SD;</li>
-        /// <li>MinEdgeLength: 720, Name: HD;</li>
-        /// <li>MinEdgeLength: 1080, Name: FHD;</li>
-        /// <li>MinEdgeLength: 1440, Name: 2K;</li>
-        /// <li>MinEdgeLength: 2160, Name: 4K;</li>
-        /// <li>MinEdgeLength: 4320, Name: 8K.</li>
+        /// 
         /// </summary>
         [JsonProperty("ResolutionNames")]
         public ResolutionNameInfo[] ResolutionNames{ get; set; }

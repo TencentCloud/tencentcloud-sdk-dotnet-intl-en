@@ -55,6 +55,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PlayBackMode")]
+        public string PlayBackMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
         }
     }
 }

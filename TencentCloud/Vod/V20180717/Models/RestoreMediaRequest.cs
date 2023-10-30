@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
+        /// The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// The number of days during which the restored files will remain available.
         /// </summary>
         [JsonProperty("RestoreDay")]
@@ -48,12 +54,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("RestoreTier")]
         public string RestoreTier{ get; set; }
 
-        /// <summary>
-        /// The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,9 +61,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
             this.SetParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

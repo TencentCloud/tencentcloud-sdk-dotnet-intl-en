@@ -61,8 +61,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public SDMCSettingsInfo SDMCSettings{ get; set; }
 
         /// <summary>
-        /// The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`, `PLAYREADY`. For HLS, this can be `FAIRPLAY` or `AES128` or `PLAYREADY`. For DASH, valid values: `WIDEVINE` or `PLAYREADY`. 
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }

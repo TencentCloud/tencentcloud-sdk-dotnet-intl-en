@@ -25,6 +25,12 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OwnershipVerification")]
+        public OwnershipVerification OwnershipVerification{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -49,7 +49,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// Limit on paginated queries. Default value: 20. Maximum value: 1000.
+        /// Limit on paginated queries. Default value: 20. Maximum value: 300.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

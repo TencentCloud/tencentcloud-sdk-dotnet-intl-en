@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+        /// 
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

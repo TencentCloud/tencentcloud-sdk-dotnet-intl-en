@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// The starting offset for page fetching. Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

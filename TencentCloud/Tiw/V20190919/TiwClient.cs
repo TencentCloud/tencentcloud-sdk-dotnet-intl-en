@@ -133,6 +133,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// This API is used to create an offline recording task.
         /// </summary>
         /// <param name="req"><see cref="CreateOfflineRecordRequest"/></param>
@@ -153,6 +155,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// This API is used to create an offline recording task.
         /// </summary>
         /// <param name="req"><see cref="CreateOfflineRecordRequest"/></param>
@@ -493,6 +497,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// This API is used to query the information about an offline recording task, including the recording progress and recording result.
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineRecordRequest"/></param>
@@ -513,6 +519,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// This API is used to query the information about an offline recording task, including the recording progress and recording result.
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineRecordRequest"/></param>
@@ -533,6 +541,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// This API is used to query the offline recording callback URL.
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineRecordCallbackRequest"/></param>
@@ -553,6 +563,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// This API is used to query the offline recording callback URL.
         /// </summary>
         /// <param name="req"><see cref="DescribeOfflineRecordCallbackRequest"/></param>
@@ -1741,6 +1753,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// This API is used to set the offline recording callback URL.
         /// </summary>
         /// <param name="req"><see cref="SetOfflineRecordCallbackRequest"/></param>
@@ -1761,6 +1775,8 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 课后录制服务已下线
+        /// 
         /// This API is used to set the offline recording callback URL.
         /// </summary>
         /// <param name="req"><see cref="SetOfflineRecordCallbackRequest"/></param>

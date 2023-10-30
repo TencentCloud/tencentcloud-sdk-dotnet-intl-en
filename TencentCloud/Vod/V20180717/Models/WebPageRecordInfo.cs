@@ -21,20 +21,20 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProcessMediaResponse : AbstractModel
+    public class WebPageRecordInfo : AbstractModel
     {
         
         /// <summary>
-        /// Task ID
+        /// Panoramic recording Url.
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("RecordUrl")]
+        public string RecordUrl{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Panoramic recording task ID.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RecordTaskId")]
+        public string RecordTaskId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+            this.SetParamSimple(map, prefix + "RecordTaskId", this.RecordTaskId);
         }
     }
 }

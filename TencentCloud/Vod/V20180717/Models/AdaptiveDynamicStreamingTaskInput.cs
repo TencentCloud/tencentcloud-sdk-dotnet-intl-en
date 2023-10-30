@@ -44,6 +44,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CopyRightWatermark")]
+        public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
+
+        /// <summary>
         /// List of subtitle IDs (maximum: 16)
         /// </summary>
         [JsonProperty("SubtitleSet")]
@@ -58,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
+            this.SetParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
             this.SetParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
         }
     }

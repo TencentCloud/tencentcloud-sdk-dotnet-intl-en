@@ -61,6 +61,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Output")]
         public AiRecognitionTaskAsrFullTextResultOutput Output{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BeginProcessTime")]
+        public string BeginProcessTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +91,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

@@ -71,130 +71,124 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// Video processing task information. This field has a value only when `TaskType` is `Procedure`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ProcedureTask")]
         public ProcedureTask ProcedureTask{ get; set; }
 
         /// <summary>
-        /// Video editing task information. This field has a value only when `TaskType` is `EditMedia`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EditMediaTask")]
         public EditMediaTask EditMediaTask{ get; set; }
 
         /// <summary>
-        /// Release on WeChat task information. This field has a value only when `TaskType` is `WechatPublish`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WechatPublishTask")]
         public WechatPublishTask WechatPublishTask{ get; set; }
 
         /// <summary>
-        /// Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ComposeMediaTask")]
         public ComposeMediaTask ComposeMediaTask{ get; set; }
 
         /// <summary>
-        /// Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SplitMediaTask")]
         public SplitMediaTask SplitMediaTask{ get; set; }
 
         /// <summary>
-        /// Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WechatMiniProgramPublishTask")]
         public WechatMiniProgramPublishTask WechatMiniProgramPublishTask{ get; set; }
 
         /// <summary>
-        /// Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("PullUploadTask")]
         public PullUploadTask PullUploadTask{ get; set; }
 
         /// <summary>
-        /// Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public TranscodeTask2017 TranscodeTask{ get; set; }
 
         /// <summary>
-        /// Video splicing task information. This field has a value only when `TaskType` is `Concat`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ConcatTask")]
         public ConcatTask2017 ConcatTask{ get; set; }
 
         /// <summary>
-        /// Video clipping task information. This field has a value only when `TaskType` is `Clip`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ClipTask")]
         public ClipTask2017 ClipTask{ get; set; }
 
         /// <summary>
-        /// Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CreateImageSpriteTask")]
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
-        /// The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("RemoveWatermarkTask")]
         public RemoveWatermarkTask RemoveWatermarkTask{ get; set; }
 
         /// <summary>
-        /// The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("RebuildMediaTask")]
         public RebuildMediaTask RebuildMediaTask{ get; set; }
 
         /// <summary>
-        /// The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ExtractTraceWatermarkTask")]
         public ExtractTraceWatermarkTask ExtractTraceWatermarkTask{ get; set; }
 
         /// <summary>
-        /// The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// </summary>
+        [JsonProperty("ExtractCopyRightWatermarkTask")]
+        public ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask{ get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         [JsonProperty("ReviewAudioVideoTask")]
         public ReviewAudioVideoTask ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
-        /// This parameter is invalid now.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ReduceMediaBitrateTask")]
         public ReduceMediaBitrateTask ReduceMediaBitrateTask{ get; set; }
 
         /// <summary>
-        /// The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("DescribeFileAttributesTask")]
         public DescribeFileAttributesTask DescribeFileAttributesTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("QualityInspectTask")]
+        public QualityInspectTask QualityInspectTask{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -228,9 +222,11 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
             this.SetParamObj(map, prefix + "RebuildMediaTask.", this.RebuildMediaTask);
             this.SetParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
+            this.SetParamObj(map, prefix + "ExtractCopyRightWatermarkTask.", this.ExtractCopyRightWatermarkTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
             this.SetParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
             this.SetParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
+            this.SetParamObj(map, prefix + "QualityInspectTask.", this.QualityInspectTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

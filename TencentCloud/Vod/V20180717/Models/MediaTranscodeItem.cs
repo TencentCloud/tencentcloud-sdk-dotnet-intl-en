@@ -32,8 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -109,6 +108,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CopyRightWatermarkText")]
+        public string CopyRightWatermarkText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +132,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
+            this.SetParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
         }
     }
 }

@@ -45,8 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string VodTaskId{ get; set; }
 
         /// <summary>
-        /// Metadata of clipped video.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

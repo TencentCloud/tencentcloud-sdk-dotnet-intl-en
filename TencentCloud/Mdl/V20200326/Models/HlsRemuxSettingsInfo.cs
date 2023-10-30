@@ -68,22 +68,34 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string H265PackageType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
         /// </summary>
         [JsonProperty("LowLatency")]
         public ulong? LowLatency{ get; set; }
 
         /// <summary>
-        /// 
+        /// Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
         /// </summary>
         [JsonProperty("PartialSegmentDuration")]
         public ulong? PartialSegmentDuration{ get; set; }
 
         /// <summary>
-        /// 
+        /// Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
         /// </summary>
         [JsonProperty("PartialSegmentPlaySite")]
         public ulong? PartialSegmentPlaySite{ get; set; }
+
+        /// <summary>
+        /// Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+        /// </summary>
+        [JsonProperty("StreamOrder")]
+        public ulong? StreamOrder{ get; set; }
+
+        /// <summary>
+        /// Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+        /// </summary>
+        [JsonProperty("VideoResolution")]
+        public ulong? VideoResolution{ get; set; }
 
 
         /// <summary>
@@ -101,6 +113,8 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "LowLatency", this.LowLatency);
             this.SetParamSimple(map, prefix + "PartialSegmentDuration", this.PartialSegmentDuration);
             this.SetParamSimple(map, prefix + "PartialSegmentPlaySite", this.PartialSegmentPlaySite);
+            this.SetParamSimple(map, prefix + "StreamOrder", this.StreamOrder);
+            this.SetParamSimple(map, prefix + "VideoResolution", this.VideoResolution);
         }
     }
 }

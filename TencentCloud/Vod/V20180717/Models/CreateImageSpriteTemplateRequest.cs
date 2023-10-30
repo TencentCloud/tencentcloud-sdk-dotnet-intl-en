@@ -41,13 +41,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SampleInterval{ get; set; }
 
         /// <summary>
-        /// Subimage row count of an image sprite.
+        /// 
         /// </summary>
         [JsonProperty("RowCount")]
         public ulong? RowCount{ get; set; }
 
         /// <summary>
-        /// Subimage column count of an image sprite.
+        /// 
         /// </summary>
         [JsonProperty("ColumnCount")]
         public ulong? ColumnCount{ get; set; }
@@ -80,23 +80,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FillType{ get; set; }
 
         /// <summary>
-        /// Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-        /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-        /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-        /// <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-        /// <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-        /// Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-        /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-        /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-        /// <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-        /// <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-        /// Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

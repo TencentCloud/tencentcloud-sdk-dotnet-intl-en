@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The key for signature calculation 6-32 characters. Only digits and letters are allowed.
+        /// 
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// Signature parameter name Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
+        /// 
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// File extension list settings determining if authentication should be performed;If it contains an asterisk (*), this indicates all files.
+        /// 
         /// </summary>
         [JsonProperty("FileExtensions")]
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
-        /// whitelist: All file types apart from the FileExtensions list are authenticated;blacklist: Only the file types in the FileExtensions list are authenticated.
+        /// 
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// Backup key, which is used to calculate a signature. 6-32 characters. Only digits and letters are allowed.
+        /// 
         /// </summary>
         [JsonProperty("BackupSecretKey")]
         public string BackupSecretKey{ get; set; }

@@ -27,10 +27,11 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// The origin type. Values:
         /// <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-        /// <li>`COS`: COS bucket address </li>
-        /// <li>`ORIGIN_GROUP`: Origin group </li>
-        /// <li>`AWS_S3`: AWS S3 bucket address </li>
-        /// <li>`SPACE`: EdgeOne Shield Space </li>
+        /// <li>`COS`: COS bucket address</li>
+        /// <li>`ORIGIN_GROUP`: Origin group</li>
+        /// <li>`AWS_S3`: AWS S3 bucket address</li>
+        /// <li>`LB`: Tencent Cloud CLB instance</li>
+        /// <li>`SPACE`: EdgeOne Shield Space</li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
@@ -42,15 +43,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Origin{ get; set; }
 
         /// <summary>
-        /// ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+        /// ID of the backup origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates not to use backup origins.
         /// </summary>
         [JsonProperty("BackupOrigin")]
         public string BackupOrigin{ get; set; }
 
         /// <summary>
-        /// Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
-        /// <li>`on`: Enable private authentication.</li>
-        /// <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
+        /// Whether to allow access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+        /// u200c<li>`on`: Enable private authentication.</li>
+        /// <li>`off`: (Default) Disable private authentication.</li>
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }

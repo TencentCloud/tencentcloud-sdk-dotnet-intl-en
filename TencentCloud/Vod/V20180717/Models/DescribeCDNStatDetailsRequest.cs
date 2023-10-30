@@ -25,10 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Metrics to query. Valid values:
-        /// <li>`Traffic`: traffic in bytes</li>
-        /// <li>`Bandwidth`: bandwidth in bps</li>
-        /// <li>`Requests`: the number of requests</li>
+        /// 
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// HTTP header setting methods: <li>set: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.</li> <li>del: deletes a header parameter.</li> <li>add: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.</li>
+        /// 
         /// </summary>
         [JsonProperty("HeaderMode")]
         public string HeaderMode{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string HeaderName{ get; set; }
 
         /// <summary>
-        /// HTTP header value. Up to 1000 characters can be set.<li>Not required when Mode is del.</li> <li>Required when Mode is add/set.</li>
+        /// 
         /// </summary>
         [JsonProperty("HeaderValue")]
         public string HeaderValue{ get; set; }
 
         /// <summary>
-        /// Rule types:<li>all: Apply to all files.</li> <li>file: Apply to files with the specified suffixes.</li> <li>directory: Apply to specified paths.</li> <li>path: Apply to specified absolute paths.</li>
+        /// 
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Content for each RuleType:<li>For all, enter a wildcard *.</li> <li>For file, enter a suffix, e.g., jpg or txt.</li> <li>For directory, enter a path, e.g., /xxx/test/.</li> <li>For path, enter an absolute path, e.g., /xxx/test.html.</li>
+        /// 
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }

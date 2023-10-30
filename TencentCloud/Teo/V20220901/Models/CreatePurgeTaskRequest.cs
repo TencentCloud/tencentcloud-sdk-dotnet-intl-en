@@ -42,7 +42,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
+        /// Configures how cache are purged. It works when `Type` is `purge_prefix`, `purge_host` or `purge_all`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated.</li>Note that when Type` is `purge_prefix`, it defaults to `invalidate`.
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }

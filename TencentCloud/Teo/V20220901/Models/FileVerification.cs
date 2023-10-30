@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EditMediaResponse : AbstractModel
+    public class FileVerification : AbstractModel
     {
         
         /// <summary>
-        /// Video editing task ID, which can be used to query the status of editing task (with task type being `EditMedia`).
+        /// 
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// 
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
         }
     }
 }

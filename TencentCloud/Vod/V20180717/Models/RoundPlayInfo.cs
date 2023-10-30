@@ -54,6 +54,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PlayBackMode")]
+        public string PlayBackMode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }
