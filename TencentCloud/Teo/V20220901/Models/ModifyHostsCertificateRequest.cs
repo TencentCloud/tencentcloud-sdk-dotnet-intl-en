@@ -31,23 +31,34 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of domain names that the certificate will be attached to.
+        /// Domain names that you need to modify the certificate configuration
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }
 
         /// <summary>
-        /// Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+        /// Certificate configuration mode. Values:
+        /// <li>`disable`: (Default) Do not configure the certificate</li>
+        /// <li>`eofreecert`: Use a free certificate provided by EdgeOne</li>
+        /// <li>`sslcert`: Configure an SSL certificate.</li>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
         /// </summary>
         [JsonProperty("ServerCertInfo")]
         public ServerCertInfo[] ServerCertInfo{ get; set; }
 
         /// <summary>
         /// Whether the certificate is managed by EdgeOne. Values:
-        /// <li>`apply`: Managed by EdgeOne.</li>
-        /// <li>`none`: Not managed by EdgeOne.</li>If not specified, this field uses the default value `none`.
+        /// <li>`none`: Not managed by EdgeOne</li>
+        /// <li>`apply`: Managed by EdgeOne</li>
+        /// Default value: `none`.
         /// </summary>
         [JsonProperty("ApplyType")]
+        [System.Obsolete]
         public string ApplyType{ get; set; }
 
 
@@ -58,6 +69,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
             this.SetParamSimple(map, prefix + "ApplyType", this.ApplyType);
         }

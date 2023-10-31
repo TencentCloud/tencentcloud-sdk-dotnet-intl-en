@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of matched accelerated domain names.
+        /// Total of matched alias domain names.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of accelerated domain names.
+        /// Information of all matched acceleration domain names
         /// </summary>
         [JsonProperty("AccelerationDomains")]
         public AccelerationDomain[] AccelerationDomains{ get; set; }

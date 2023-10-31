@@ -21,14 +21,28 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class NsVerification : AbstractModel
+    public class VerifyOwnershipResponse : AbstractModel
     {
         
         /// <summary>
-        /// The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+        /// Result of ownership verification
+        /// <li>`success`: Verification passed</li>
+        /// <li>`fail`: Verification failed</li>
         /// </summary>
-        [JsonProperty("NameServers")]
-        public string[] NameServers{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// When the ownership verification result is `fail`, this field returns the reason of failure.
+        /// </summary>
+        [JsonProperty("Result")]
+        public string Result{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +50,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

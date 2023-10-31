@@ -21,14 +21,21 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class NsVerification : AbstractModel
+    public class AccelerationDomainCertificate : AbstractModel
     {
         
         /// <summary>
-        /// The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+        /// Certificate configuration mode. Values: <li>`disable`: Do not configure the certificate;</li><li>`eofreecert`: Use a free certificate provided by EdgeOne; </li><li>`sslcert`: Configure an SSL certificate.</li>
         /// </summary>
-        [JsonProperty("NameServers")]
-        public string[] NameServers{ get; set; }
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// List of certificates
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("List")]
+        public CertificateInfo[] List{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
         }
     }
 }

@@ -35,14 +35,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Operator{ get; set; }
 
         /// <summary>
-        /// The match type. Values:
-        /// <li>`filename`: File name</li>
-        /// <li>`extension`: File extension</li>
-        /// <li>`host`: Host</li>
-        /// <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
-        /// <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-        /// <li>`query_string`: Query string in the request URL</li>
-        /// <li>`request_header`: HTTP request header</li>
+        /// Match fields. Values: <li>`filename`: File name;</li><li>`extension`: File suffix;</li><li>`host`: HOST;</li><li>`full_url`: The complete URL path under the current site, including the HTTP protocol, Host and path;</li><li>`url`: The URL path request under the current site;</li><li>`client_country`: Client country;</li><li>`query_string`: The query string of the URL requested under the current site;</li><li>`request_header`: HTTP request header. </li>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }
@@ -81,6 +74,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IgnoreNameCase")]
+        [System.Obsolete]
         public bool? IgnoreNameCase{ get; set; }
 
 

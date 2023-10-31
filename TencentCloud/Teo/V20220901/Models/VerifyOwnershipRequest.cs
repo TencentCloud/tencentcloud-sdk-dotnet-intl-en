@@ -21,14 +21,14 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class NsVerification : AbstractModel
+    public class VerifyOwnershipRequest : AbstractModel
     {
         
         /// <summary>
-        /// The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+        /// Site or acceleration domain name
         /// </summary>
-        [JsonProperty("NameServers")]
-        public string[] NameServers{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

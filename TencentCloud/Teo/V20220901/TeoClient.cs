@@ -133,7 +133,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to connect a domain to EdgeOne.
+        /// This API is used to create an acceleration domain name. 
+        /// 
+        /// For sites connected via the CNAME, if you have not verified the ownership of the domain name, the ownership verification information of the domain name is returned. To verify your ownership of the domain name, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateAccelerationDomainRequest"/></param>
         /// <returns><see cref="CreateAccelerationDomainResponse"/></returns>
@@ -153,7 +155,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to connect a domain to EdgeOne.
+        /// This API is used to create an acceleration domain name. 
+        /// 
+        /// For sites connected via the CNAME, if you have not verified the ownership of the domain name, the ownership verification information of the domain name is returned. To verify your ownership of the domain name, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateAccelerationDomainRequest"/></param>
         /// <returns><see cref="CreateAccelerationDomainResponse"/></returns>
@@ -577,7 +581,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to access a new site.
+        /// This API is used to create a site. After you create the site, you can connect it to EdgeOne via the CNAME or NS (see [Quick Start](https://intl.cloud.tencent.com/document/product/1552/87601?from_cn_redirect=1)), or connect it without a domain name (see [Quick Access to L4 Proxy Service](https://intl.cloud.tencent.com/document/product/1552/96051?from_cn_redirect=1)).
+        /// 
+        /// If there are already EdgeOne plans under the current account, it is recommended to pass in the `PlanId` to bind the site with the plan directly. If `PlanId` is not passed in, the created site is not activated. You need to call [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1) to bind the site with a plan. To purchase a plan, please go to the EdgeOne console.
         /// </summary>
         /// <param name="req"><see cref="CreateZoneRequest"/></param>
         /// <returns><see cref="CreateZoneResponse"/></returns>
@@ -597,7 +603,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to access a new site.
+        /// This API is used to create a site. After you create the site, you can connect it to EdgeOne via the CNAME or NS (see [Quick Start](https://intl.cloud.tencent.com/document/product/1552/87601?from_cn_redirect=1)), or connect it without a domain name (see [Quick Access to L4 Proxy Service](https://intl.cloud.tencent.com/document/product/1552/96051?from_cn_redirect=1)).
+        /// 
+        /// If there are already EdgeOne plans under the current account, it is recommended to pass in the `PlanId` to bind the site with the plan directly. If `PlanId` is not passed in, the created site is not activated. You need to call [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1) to bind the site with a plan. To purchase a plan, please go to the EdgeOne console.
         /// </summary>
         /// <param name="req"><see cref="CreateZoneRequest"/></param>
         /// <returns><see cref="CreateZoneResponse"/></returns>
@@ -937,7 +945,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query accelerated domain names. Paging, sorting and filtering are supported.
+        /// This API is used to query domain name information of a site, including the acceleration domain name, origin, and domain name status. You can query the information of all domain names, or specific domain names by specifying filters information.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccelerationDomainsRequest"/></param>
         /// <returns><see cref="DescribeAccelerationDomainsResponse"/></returns>
@@ -957,7 +965,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query accelerated domain names. Paging, sorting and filtering are supported.
+        /// This API is used to query domain name information of a site, including the acceleration domain name, origin, and domain name status. You can query the information of all domain names, or specific domain names by specifying filters information.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccelerationDomainsRequest"/></param>
         /// <returns><see cref="DescribeAccelerationDomainsResponse"/></returns>
@@ -1897,7 +1905,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of user sites.
+        /// This API is used to query the information of sites that you have access to. You can filter sites based on different query criteria.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -1917,7 +1925,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of user sites.
+        /// This API is used to query the information of sites that you have access to. You can filter sites based on different query criteria.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -2377,7 +2385,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the certificate of a domain name.
+        /// This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
+        /// To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
+        ///  
         /// </summary>
         /// <param name="req"><see cref="ModifyHostsCertificateRequest"/></param>
         /// <returns><see cref="ModifyHostsCertificateResponse"/></returns>
@@ -2397,7 +2407,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the certificate of a domain name.
+        /// This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
+        /// To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
+        ///  
         /// </summary>
         /// <param name="req"><see cref="ModifyHostsCertificateRequest"/></param>
         /// <returns><see cref="ModifyHostsCertificateResponse"/></returns>
@@ -2688,6 +2700,50 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "ModifyZoneStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyZoneStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify your ownership of a site or domain name. It's required in the CNAME access mode. After a site is verified, you don't need to verify the ownership again for domain names added to it in the future. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+        /// 
+        /// For sites connected via the NS, you can query whether the NS is successfully switched through this API. For details, see [Modifying DNS Servers](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="VerifyOwnershipRequest"/></param>
+        /// <returns><see cref="VerifyOwnershipResponse"/></returns>
+        public async Task<VerifyOwnershipResponse> VerifyOwnership(VerifyOwnershipRequest req)
+        {
+             JsonResponseModel<VerifyOwnershipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyOwnership");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyOwnershipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify your ownership of a site or domain name. It's required in the CNAME access mode. After a site is verified, you don't need to verify the ownership again for domain names added to it in the future. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+        /// 
+        /// For sites connected via the NS, you can query whether the NS is successfully switched through this API. For details, see [Modifying DNS Servers](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="VerifyOwnershipRequest"/></param>
+        /// <returns><see cref="VerifyOwnershipResponse"/></returns>
+        public VerifyOwnershipResponse VerifyOwnershipSync(VerifyOwnershipRequest req)
+        {
+             JsonResponseModel<VerifyOwnershipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyOwnership");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyOwnershipResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

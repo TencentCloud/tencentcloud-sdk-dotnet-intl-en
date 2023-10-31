@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`ORIGIN_GROUP`: Origin group</li>
         /// <li>`AWS_S3`: AWS S3 bucket address</li>
         /// <li>`LB`: Tencent Cloud CLB instance</li>
-        /// <li>`SPACE`: EdgeOne Shield Space</li>
+        /// <li>`SPACE`: EdgeOne Shield Space</li>  
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }

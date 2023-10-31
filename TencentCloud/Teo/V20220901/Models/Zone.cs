@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -50,19 +50,21 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// The site status. Values:
-        /// <li>`active`: The name server is switched.</li>
-        /// <li>`pending`: The name server is not switched.</li>
-        /// <li>`moved`: The name server is moved.</li>
-        /// <li>`deactivated`: The site is blocked.</li>
+        /// u200c<li>`active`: The name server is switched to EdgeOne.</li>
+        /// u200c<li>`pending`: The name server is not switched.</li>
+        /// u200c<li>`moved`: The name server is changed to other service providers.</li>
+        /// u200c<li>`deactivated`: The site is blocked.</li>
+        /// <li>`initializing`: The site is not bound with any plan. </li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Access mode of the site. Values:
-        /// <li> `full`: Access through a name server.</li>
-        /// <li> `partial`: Access through a CNAME record.</li>
-        /// <li> `noDomainAccess`: Access without using a domain name </li>
+        /// Connection mode of the site. Values:
+        /// <li>`full`: Connect via the name server.</li>
+        /// <li>`partial`: Connect via the CNAME record.</li>
+        /// <li>`noDomainAccess`: Connect without using a domain name
+        ///  
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -161,10 +163,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? IsFake{ get; set; }
 
         /// <summary>
-        /// Lock status. Valid values: <li>`enable`: Normal. Modifying is allowed;</li><li>`disable`: Locked. Modifying is not allowed.</li>
+        /// Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
         /// </summary>
         [JsonProperty("LockStatus")]
         public string LockStatus{ get; set; }
+
+        /// <summary>
+        /// Ownership verification information
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OwnershipVerification")]
+        public OwnershipVerification OwnershipVerification{ get; set; }
 
 
         /// <summary>
@@ -192,6 +201,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
             this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
             this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
+            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
         }
     }
 }

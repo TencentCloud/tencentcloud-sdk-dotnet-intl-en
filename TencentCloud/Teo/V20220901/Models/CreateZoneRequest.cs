@@ -25,28 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site name.
-        /// </summary>
-        [JsonProperty("ZoneName")]
-        public string ZoneName{ get; set; }
-
-        /// <summary>
-        /// The access mode. Values:
-        /// <li> `full`: Access through a name server.</li>
-        /// <li> `partial`: Access through a CNAME. Before using this access mode, first verify your site with the site verification API (IdentifyZone).<li>`noDomainAccess`: Access without using a domain name. If this value is passed, only the Tags field needs to be set. </li>
-        /// If not specified, this field uses the default value `full`.
+        /// Site access types. Options include:
+        /// <li>`partial`: (Default) Access through a CNAME record</li>
+        /// <li>`full`: Access through a name server</li>
+        /// <li>`noDomainAccess`: Access without using a domain name</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Whether to skip scanning the existing DNS records of the site. Default value: false.
+        /// Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
         /// </summary>
-        [JsonProperty("JumpStart")]
-        public bool? JumpStart{ get; set; }
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
 
         /// <summary>
-        /// The resource tag.
+        /// The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
+        /// <li>`global`: Global AZs</li>
+        /// <li>`mainland`: AZs in the Chinese mainland</li>
+        /// <li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
+        /// ID of the plan to which you want to bind the site. If you don't have an EdgeOne plan, purchase one in the EdgeOne console.
+        /// </summary>
+        [JsonProperty("PlanId")]
+        public string PlanId{ get; set; }
+
+        /// <summary>
+        /// The site alias. It allows up to 20 characters, including [0-9], [a-z], [A-Z] and [-_]. For details, see [Glossary](https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). If you don't want to use it, just leave it blank.
+        /// </summary>
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
+
+        /// <summary>
+        /// Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -57,13 +72,15 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
         /// </summary>
         [JsonProperty("AllowDuplicates")]
+        [System.Obsolete]
         public bool? AllowDuplicates{ get; set; }
 
         /// <summary>
-        /// The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+        /// Whether to skip scanning the existing DNS records of the site. Default value: false.
         /// </summary>
-        [JsonProperty("AliasZoneName")]
-        public string AliasZoneName{ get; set; }
+        [JsonProperty("JumpStart")]
+        [System.Obsolete]
+        public bool? JumpStart{ get; set; }
 
 
         /// <summary>
@@ -71,12 +88,14 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "JumpStart", this.JumpStart);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AllowDuplicates", this.AllowDuplicates);
-            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+            this.SetParamSimple(map, prefix + "JumpStart", this.JumpStart);
         }
     }
 }

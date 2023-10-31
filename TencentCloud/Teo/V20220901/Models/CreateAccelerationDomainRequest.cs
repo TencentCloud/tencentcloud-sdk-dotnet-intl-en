@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site related with the accelerated domain name.
+        /// ID of the site related with the acceleration domain name.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Accelerated domain name
+        /// Acceleration domain name
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
@@ -42,6 +42,30 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OriginInfo")]
         public OriginInfo OriginInfo{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OriginProtocol")]
+        public string OriginProtocol{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HttpOriginPort")]
+        public ulong? HttpOriginPort{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HttpsOriginPort")]
+        public ulong? HttpsOriginPort{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IPv6Status")]
+        public string IPv6Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +75,10 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamObj(map, prefix + "OriginInfo.", this.OriginInfo);
+            this.SetParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+            this.SetParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
+            this.SetParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
+            this.SetParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
         }
     }
 }

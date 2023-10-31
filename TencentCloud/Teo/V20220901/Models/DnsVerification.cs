@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// The host record.
         /// </summary>
         [JsonProperty("Subdomain")]
         public string Subdomain{ get; set; }
 
         /// <summary>
-        /// 
+        /// The record type.
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// 
+        /// The record value.
         /// </summary>
         [JsonProperty("RecordValue")]
         public string RecordValue{ get; set; }

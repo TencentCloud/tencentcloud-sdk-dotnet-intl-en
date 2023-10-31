@@ -31,34 +31,34 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The paginated query limit. Default value: 20. Maximum value: 1000.
+        /// Limit on paginated queries. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter criteria. Each filter criteria can have up to 20 entries.
-        /// <li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+        /// Filter conditions. Up to 20 values for each filter. If this parameter is not filled in, the information of all sites under the current account is returned. Detailed filtering conditions are as follows:
+        /// <li>`zone-name`: Site name </li><li>`zone-id`: Site ID, such as zone-2noz78a8ev6k</li><li>`status`: Site status </li><li>`tag-key`: Tag key </li><li>`tag-value`: Tag value </li>Only `zone-name` supports fuzzy query.
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// The sorting field. Values:
-        /// <li>`type`: Access mode</li>
+        /// Sort the returned results according to this field. Values include:
+        /// <li>`type`: Connection mode</li>
         /// <li>`area`: Acceleration region</li>
-        /// <li>`create-time`: Creation date</li>
+        /// <li>`create-time`: Creation time</li>
         /// <li>`zone-name`: Site name</li>
-        /// <li>`use-time`: Last used date</li>
-        /// <li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+        /// <li>`use-time`: Last used time</li>
+        /// <li>`active-status` Effective status</li> Default value: `create-time`
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// The sorting direction. Values:
-        /// <li>`asc`: From smallest to largest</li>
-        /// <li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+        /// Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
+        /// <li>`asc`: From the smallest to largest</li>
+        /// <li>`desc`: From the largest to smallest.</li>Default value: `desc`
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }

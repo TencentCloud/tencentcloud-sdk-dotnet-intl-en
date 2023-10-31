@@ -25,27 +25,47 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site related with the accelerated domain name.
+        /// ID of the site related with the acceleration domain name.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Filters. Each filter can have up to 20 entries. See below for details: 
-        /// <li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
-        /// <li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
-        /// <li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
-        /// <li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
-        /// <li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
-        /// <li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+        /// Offset for paginated queries. Default value: 0.
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// Limit on paginated queries. Default value: 20. Maximum value: 200.
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// Filter conditions. Up to 20 values for each filter. If it is not passed in, all domain names related with the specific zone-id are returned. 
+        /// <li>`domain-name`: Acceleration domain name</li>
+        /// <li>`origin-type`: Type of the origin</li>
+        /// <li>`origin`: Primary origin address</li>
+        /// <li>`backup-origin`: Secondary origin address</li>
+        /// <li>`domain-cname`: CNAME</li>
+        /// <li>`share-cname`: Shared CNAME</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// The sorting order. Values:
+        /// Sort the returned results according to this field. Values include:
+        /// <li>`created_on`: Creation time of the acceleration domain name</li>
+        /// <li>`domain-name`: (Default) Acceleration domain name.</li> 
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
         /// <li>`asc`: Ascending order.</li>
-        /// <li>`desc`: Descending order.</li>Default value: `asc`.
+        /// <li>`desc`: Descending order.</li> Default value: `asc`.
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }
@@ -58,27 +78,6 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Match")]
         public string Match{ get; set; }
 
-        /// <summary>
-        /// Limit on paginated queries. Default value: 20. Maximum value: 200.
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// Offset for paginated queries. Default value: 0.
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// The sorting criteria. Values:
-        /// <li>`created_on`: Creation time of the accelerated domain name.</li>
-        /// <li>`domain-name`: Acceleration domain name.</li>
-        /// </li>Default value: `domain-name`.
-        /// </summary>
-        [JsonProperty("Order")]
-        public string Order{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,12 +85,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
             this.SetParamSimple(map, prefix + "Match", this.Match);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }
