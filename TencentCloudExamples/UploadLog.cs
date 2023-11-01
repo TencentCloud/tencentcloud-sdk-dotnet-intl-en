@@ -29,10 +29,10 @@ namespace TencentCloudExamples
     {
         static void UploadLogMain(string[] args)
         {
-            // 这里需要使用客户实际的topicId，不能输入topicname
+            // The customer's actual topicId needs to be used here, and topicname cannot be entered.
             // 详情参考: https://cloud.tencent.com/document/product/614/59470
             string topicId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
-            // 需要根据客户的实际地域自行填写
+            // It needs to be filled in according to the actual region of the customer.
             string region = "xx";
 
             Credential cred = new Credential
@@ -43,7 +43,7 @@ namespace TencentCloudExamples
 
             ClientProfile clientProfile = new ClientProfile();
             HttpProfile httpProfile = new HttpProfile();
-            // UploadLog 必须使用 POST 请求方法
+            // UploadLog must use the POST request method
             httpProfile.ReqMethod = "POST";
             clientProfile.HttpProfile = httpProfile;
 
@@ -52,12 +52,12 @@ namespace TencentCloudExamples
             UploadLogRequest req = new UploadLogRequest();
 
             req.TopicId = topicId;
-            // 通过 OctetBody 来设置二进制数据
+            // Set binary data through OctetBody
             req.OctetBody = BuildLogBody();
 
             UploadLogResponse resp = client.UploadLog(req).Result;
 
-            // 输出json格式的字符串回包
+            // Output string return packet in json format
             Console.WriteLine(AbstractModel.ToJsonString(resp));
         }
 
