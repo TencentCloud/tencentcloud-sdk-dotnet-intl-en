@@ -30,7 +30,7 @@ namespace TencentCloudExamples
         static void UploadLogMain(string[] args)
         {
             // The customer's actual topicId needs to be used here, and topicname cannot be entered.
-            // 详情参考: https://cloud.tencent.com/document/product/614/59470
+            // For details, please refer to: https://www.tencentcloud.com/document/product/614/42787?lang=en
             string topicId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
             // It needs to be filled in according to the actual region of the customer.
             string region = "xx";
