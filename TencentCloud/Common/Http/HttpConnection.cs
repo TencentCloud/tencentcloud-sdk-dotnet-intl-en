@@ -35,9 +35,9 @@ namespace TencentCloud.Common.Http
 
             public static HttpClient GetClient(string proxy)
             {
-                string           key      = string.IsNullOrEmpty(proxy) ? "" : proxy;
-                HttpClientHolder result   = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
-                TimeSpan         timeSpan = DateTime.Now - result.createTime;
+                string key = string.IsNullOrEmpty(proxy) ? "" : proxy;
+                HttpClientHolder result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
+                TimeSpan timeSpan = DateTime.Now - result.createTime;
 
                 // A new connection is created every 5 minutes
                 // and old connections are discarded to avoid DNS flushing issues.
@@ -45,7 +45,7 @@ namespace TencentCloud.Common.Http
                 {
                     ICollection<KeyValuePair<string, HttpClientHolder>> kv = httpclients;
                     kv.Remove(new KeyValuePair<string, HttpClientHolder>(key, result));
-                    result   = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
+                    result = httpclients.GetOrAdd(key, (k) => { return new HttpClientHolder(k); });
                     timeSpan = DateTime.Now - result.createTime;
                 }
 
@@ -74,7 +74,7 @@ namespace TencentCloud.Common.Http
                 }
 
                 this.client.Timeout = TimeSpan.FromSeconds(60);
-                this.createTime     = DateTime.Now;
+                this.createTime = DateTime.Now;
             }
         }
 
@@ -88,7 +88,7 @@ namespace TencentCloud.Common.Http
 
         public HttpConnection(string baseUrl, int timeout, string proxy, HttpClient http)
         {
-            this.proxy   = string.IsNullOrEmpty(proxy) ? "" : proxy;
+            this.proxy = string.IsNullOrEmpty(proxy) ? "" : proxy;
             this.timeout = timeout;
             this.baseUrl = baseUrl;
             if (http != null)
@@ -113,15 +113,15 @@ namespace TencentCloud.Common.Http
 
         public async Task<HttpResponseMessage> GetRequestAsync(string url, Dictionary<string, string> param)
         {
-            StringBuilder              urlBuilder = new StringBuilder($"{baseUrl.TrimEnd('/')}{url}?");
-            string                     fullurl    = AppendQuery(urlBuilder, param);
-            string                     payload    = "";
-            Dictionary<string, string> headers    = new Dictionary<string, string>();
+            StringBuilder urlBuilder = new StringBuilder($"{baseUrl.TrimEnd('/')}{url}?");
+            string fullurl = AppendQuery(urlBuilder, param);
+            string payload = "";
+            Dictionary<string, string> headers = new Dictionary<string, string>();
             return await this.Send(HttpMethod.Get, fullurl, payload, headers);
         }
 
         public async Task<HttpResponseMessage> GetRequestAsync(string path, string queryString,
-            Dictionary<string, string>                                headers)
+            Dictionary<string, string> headers)
         {
             string fullurl = $"{this.baseUrl.TrimEnd('/')}{path}?{queryString}";
             string payload = "";
@@ -129,7 +129,14 @@ namespace TencentCloud.Common.Http
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string path, string payload,
-            Dictionary<string, string>                                 headers)
+            Dictionary<string, string> headers)
+        {
+            string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
+        }
+        
+        public async Task<HttpResponseMessage> PostRequestAsync(string path, byte[] payload,
+            Dictionary<string, string> headers)
         {
             string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
             return await this.Send(HttpMethod.Post, fullurl, payload, headers);
@@ -137,16 +144,22 @@ namespace TencentCloud.Common.Http
 
         public async Task<HttpResponseMessage> PostRequestAsync(string url, Dictionary<string, string> param)
         {
-            string                     fullurl        = $"{this.baseUrl.TrimEnd('/')}{url}?";
-            StringBuilder              payloadBuilder = new StringBuilder();
-            string                     payload        = AppendQuery(payloadBuilder, param);
-            Dictionary<string, string> headers        = new Dictionary<string, string>();
+            string fullurl = $"{this.baseUrl.TrimEnd('/')}{url}?";
+            StringBuilder payloadBuilder = new StringBuilder();
+            string payload = AppendQuery(payloadBuilder, param);
+            Dictionary<string, string> headers = new Dictionary<string, string>();
             headers["Content-Type"] = "application/x-www-form-urlencoded";
             return await this.Send(HttpMethod.Post, fullurl, payload, headers);
         }
 
         private async Task<HttpResponseMessage> Send(HttpMethod method, string url, string payload,
-            Dictionary<string, string>                          headers)
+            Dictionary<string, string> headers)
+        {
+            return await Send(method, url, Encoding.UTF8.GetBytes(payload), headers);
+        }
+        
+        private async Task<HttpResponseMessage> Send(
+            HttpMethod method, string url, byte[] payload, Dictionary<string, string> headers)
         {
             using (var cts = new System.Threading.CancellationTokenSource(timeout * 1000))
             {
@@ -156,7 +169,10 @@ namespace TencentCloud.Common.Http
                     {
                         if (kvp.Key.Equals("Content-Type"))
                         {
-                            msg.Content = new StringContent(payload, Encoding.UTF8, kvp.Value);
+                            ByteArrayContent content = new ByteArrayContent(payload);
+                            content.Headers.Remove("Content-Type");
+                            content.Headers.Add("Content-Type", kvp.Value);
+                            msg.Content = content;
                         }
                         else if (kvp.Key.Equals("Host"))
                         {

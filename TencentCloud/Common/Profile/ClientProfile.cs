@@ -14,6 +14,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace TencentCloud.Common.Profile
 {
     /// <summary>
@@ -30,13 +31,12 @@ namespace TencentCloud.Common.Profile
         {
             this.SignMethod = signMethod;
             this.HttpProfile = httpProfile;
-            this.Language = Language.EN_US;
+            this.Language = Language.DEFAULT;
         }
 
         public ClientProfile(string signMethod)
             : this(signMethod, new HttpProfile())
         {
-            
         }
 
         public ClientProfile()

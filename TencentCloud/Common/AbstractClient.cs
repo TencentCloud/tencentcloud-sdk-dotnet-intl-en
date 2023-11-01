@@ -14,6 +14,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,8 @@ namespace TencentCloud.Common
         public const int HTTP_RSP_OK = 200;
         public const string SDK_VERSION = "SDK_NET_3.0.807";
 
-        public AbstractClient(string endpoint, string version, Credential credential, string region, ClientProfile profile)
+        public AbstractClient(string endpoint, string version, Credential credential, string region,
+            ClientProfile profile)
         {
             this.Credential = credential;
             this.Profile = profile;
@@ -85,7 +87,8 @@ namespace TencentCloud.Common
 
         protected async Task<string> InternalRequest(AbstractModel request, string actionName)
         {
-            if ((this.Profile.HttpProfile.ReqMethod != HttpProfile.REQ_GET) && (this.Profile.HttpProfile.ReqMethod != HttpProfile.REQ_POST))
+            if ((this.Profile.HttpProfile.ReqMethod != HttpProfile.REQ_GET) &&
+                (this.Profile.HttpProfile.ReqMethod != HttpProfile.REQ_POST))
             {
                 throw new TencentCloudSDKException("Method only support (GET, POST)");
             }
@@ -95,23 +98,26 @@ namespace TencentCloud.Common
                 || ClientProfile.SIGN_SHA256.Equals(this.Profile.SignMethod))
             {
                 response = await RequestV1(request, actionName);
-            } else
+            }
+            else
             {
                 response = await RequestV3(request, actionName);
             }
 
             if (response.StatusCode != HttpStatusCode.OK)
             {
-                throw new TencentCloudSDKException(response.StatusCode + await response.Content.ReadAsStringAsync());
+                throw new TencentCloudSDKException(
+                    $"invalid http status: {response.StatusCode}, body: {await response.Content.ReadAsStringAsync()}");
             }
+
             string strResp = null;
             try
             {
                 strResp = await response.Content.ReadAsStringAsync();
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new TencentCloudSDKException($"The API responded with HTTP: {ex.Message}");
+                throw new TencentCloudSDKException("API request failed", e);
             }
 
             JsonResponseModel<JsonResponseErrModel> errResp = null;
@@ -123,28 +129,30 @@ namespace TencentCloud.Common
             {
                 throw new TencentCloudSDKException(e.Message);
             }
+
             if (errResp.Response.Error != null)
             {
-                throw new TencentCloudSDKException($"code:{errResp.Response.Error.Code} message:{errResp.Response.Error.Message} ",
-                        errResp.Response.RequestId);
+                throw new TencentCloudSDKException(
+                    $"code:{errResp.Response.Error.Code} message:{errResp.Response.Error.Message} ",
+                    errResp.Response.RequestId);
             }
+
             return strResp;
         }
 
         protected string InternalRequestSync(AbstractModel request, string actionName)
         {
-            Task<string> task = Task.Run(() => this.InternalRequest(request, actionName) );
-            task.Wait();
-            return task.Result;
+            return InternalRequest(request, actionName).Result;
         }
 
         private async Task<HttpResponseMessage> RequestV3(AbstractModel request, string actionName)
         {
             string canonicalQueryString = this.BuildCanonicalQueryString(request);
-            string requestPayload = this.BuildRequestPayload(request);
-            string contentType = this.BuildContentType();
+            byte[] requestPayload = this.BuildRequestPayload(request);
+            string contentType = this.BuildContentType(request);
 
-            Dictionary<string, string> headers = this.BuildHeaders(contentType, requestPayload, canonicalQueryString);
+            Dictionary<string, string> headers =
+                this.BuildHeaders(contentType, requestPayload, canonicalQueryString, request);
             headers.Add("X-TC-Action", actionName);
             string endpoint = headers["Host"];
 
@@ -153,54 +161,56 @@ namespace TencentCloud.Common
                 this.Profile.HttpProfile.Timeout,
                 this.Profile.HttpProfile.WebProxy,
                 this.HttpClient);
+
             try
             {
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                {
                     return await conn.GetRequestAsync(this.Path, canonicalQueryString, headers);
-                } 
-                else if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                {
+
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
                     return await conn.PostRequestAsync(this.Path, requestPayload, headers);
-                }
-                return null;
             }
             catch (Exception e)
             {
-                throw new TencentCloudSDKException($"The request with exception: {e.Message}");
+                throw new TencentCloudSDKException("API request failed", e);
             }
+
+            return null;
         }
 
-        private Dictionary<string, string> BuildHeaders(string contentType, string requestPayload, string canonicalQueryString)
+        private Dictionary<string, string> BuildHeaders(string contentType, byte[] requestPayload,
+            string canonicalQueryString, AbstractModel request)
         {
             string endpoint = this.Endpoint;
             if (!string.IsNullOrEmpty(this.Profile.HttpProfile.Endpoint))
             {
                 endpoint = this.Profile.HttpProfile.Endpoint;
             }
+
             string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
             string canonicalURI = "/";
-            string canonicalHeaders = "content-type:" + contentType + "; charset=utf-8\nhost:" + endpoint + "\n";
+            string canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
             string signedHeaders = "content-type;host";
             string hashedRequestPayload = SignHelper.SHA256Hex(requestPayload);
             string canonicalRequest = httpRequestMethod + "\n"
-                + canonicalURI + "\n"
-                + canonicalQueryString + "\n"
-                + canonicalHeaders + "\n"
-                + signedHeaders + "\n"
-                + hashedRequestPayload;
+                                                        + canonicalURI + "\n"
+                                                        + canonicalQueryString + "\n"
+                                                        + canonicalHeaders + "\n"
+                                                        + signedHeaders + "\n"
+                                                        + hashedRequestPayload;
 
             string algorithm = "TC3-HMAC-SHA256";
             long timestamp = ToTimestamp() / 1000;
             string requestTimestamp = timestamp.ToString();
-            string date = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(timestamp).ToString("yyyy-MM-dd");
+            string date = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(timestamp)
+                .ToString("yyyy-MM-dd");
             string service = endpoint.Split('.')[0];
             string credentialScope = date + "/" + service + "/" + "tc3_request";
             string hashedCanonicalRequest = SignHelper.SHA256Hex(canonicalRequest);
             string stringToSign = algorithm + "\n"
-                + requestTimestamp + "\n"
-                + credentialScope + "\n"
-                + hashedCanonicalRequest;
+                                            + requestTimestamp + "\n"
+                                            + credentialScope + "\n"
+                                            + hashedCanonicalRequest;
 
             byte[] tc3SecretKey = Encoding.UTF8.GetBytes("TC3" + Credential.SecretKey);
             byte[] secretDate = SignHelper.HmacSHA256(tc3SecretKey, Encoding.UTF8.GetBytes(date));
@@ -210,9 +220,9 @@ namespace TencentCloud.Common
             string signature = BitConverter.ToString(signatureBytes).Replace("-", "").ToLower();
 
             string authorization = algorithm + " "
-                + "Credential=" + Credential.SecretId + "/" + credentialScope + ", "
-                + "SignedHeaders=" + signedHeaders + ", "
-                + "Signature=" + signature;
+                                             + "Credential=" + Credential.SecretId + "/" + credentialScope + ", "
+                                             + "SignedHeaders=" + signedHeaders + ", "
+                                             + "Signature=" + signature;
 
             Dictionary<string, string> headers = new Dictionary<string, string>();
             headers.Add("Authorization", authorization);
@@ -226,6 +236,7 @@ namespace TencentCloud.Common
             {
                 headers.Add("X-TC-Token", this.Credential.Token);
             }
+
             if (this.Profile.Language == Language.EN_US)
             {
                 headers.Add("X-TC-Language", "en-US");
@@ -234,11 +245,23 @@ namespace TencentCloud.Common
             {
                 headers.Add("X-TC-Language", "zh-CN");
             }
+
+            if (contentType == "application/octet-stream")
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>();
+                request.ToMap(param, "X-" + service.ToUpper() + "-");
+                foreach (KeyValuePair<string, string> kv in param)
+                    headers.Add(kv.Key, kv.Value);
+            }
+
             return headers;
         }
 
-        private string BuildContentType()
+        private string BuildContentType(AbstractModel request)
         {
+            if (request is IOctetRequest)
+                return "application/octet-stream";
+
             string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
             if (HttpProfile.REQ_GET.Equals(httpRequestMethod))
             {
@@ -257,6 +280,7 @@ namespace TencentCloud.Common
             {
                 return "";
             }
+
             Dictionary<string, string> param = new Dictionary<string, string>();
             request.ToMap(param, "");
             StringBuilder urlBuilder = new StringBuilder();
@@ -264,22 +288,34 @@ namespace TencentCloud.Common
             {
                 urlBuilder.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
             }
+
             return urlBuilder.ToString().TrimEnd('&');
         }
 
-        private string BuildRequestPayload(AbstractModel request)
+        private byte[] BuildRequestPayload(AbstractModel request)
         {
             string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
             if (HttpProfile.REQ_GET.Equals(httpRequestMethod))
             {
-                return "";
+                return Encoding.UTF8.GetBytes("");
             }
+
             var serializableRequest = request as ISerializable;
             if (serializableRequest != null)
-                return serializableRequest.Serialize();
-            return JsonConvert.SerializeObject(request,
-                    Newtonsoft.Json.Formatting.None,
-                    new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+                return Encoding.UTF8.GetBytes(serializableRequest.Serialize());
+            
+            var octetRequest = request as IOctetRequest;
+            if (octetRequest != null)
+            {
+                byte[] octetBody = octetRequest.OctetBody;
+                if (octetBody != null)
+                    return octetBody;
+                return Encoding.UTF8.GetBytes("");
+            }
+
+            return Encoding.UTF8.GetBytes(
+                JsonConvert.SerializeObject(request, Formatting.None,
+                    new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }));
         }
 
         private Dictionary<string, string> BuildParam(AbstractModel request, string actionName)
@@ -299,27 +335,27 @@ namespace TencentCloud.Common
             {
                 endpoint = this.Profile.HttpProfile.Endpoint;
             }
+
             HttpConnection conn = new HttpConnection(
-                $"{this.Profile.HttpProfile.Protocol }{endpoint}",
+                $"{this.Profile.HttpProfile.Protocol}{endpoint}",
                 this.Profile.HttpProfile.Timeout,
                 this.Profile.HttpProfile.WebProxy,
                 this.HttpClient);
+
             try
             {
                 if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                {
                     return await conn.GetRequestAsync(this.Path, param);
-                }
-                else if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                {
+
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
                     return await conn.PostRequestAsync(this.Path, param);
-                }
-                return null;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new TencentCloudSDKException($"The request with exception: {ex.Message }");
+                throw new TencentCloudSDKException("API request failed", e);
             }
+
+            return null;
         }
 
         private Dictionary<string, string> FormatRequestData(string action, Dictionary<string, string> param)
@@ -327,7 +363,7 @@ namespace TencentCloud.Common
             param.Add("Action", action);
             param.Add("RequestClient", this.SdkVersion);
             param.Add("Nonce", Math.Abs(new Random().Next()).ToString());
-            
+
             long unixTime = ToTimestamp();
             param.Add("Timestamp", (unixTime / 1000).ToString());
             param.Add("Version", this.ApiVersion);
@@ -362,11 +398,13 @@ namespace TencentCloud.Common
             }
 
             string endpoint = this.Endpoint;
-            if (!string.IsNullOrEmpty(this.Profile.HttpProfile.Endpoint)) {
+            if (!string.IsNullOrEmpty(this.Profile.HttpProfile.Endpoint))
+            {
                 endpoint = this.Profile.HttpProfile.Endpoint;
             }
 
-            string sigInParam = SignHelper.MakeSignPlainText(new SortedDictionary<string, string>(param, StringComparer.Ordinal),
+            string sigInParam = SignHelper.MakeSignPlainText(
+                new SortedDictionary<string, string>(param, StringComparer.Ordinal),
                 this.Profile.HttpProfile.ReqMethod, endpoint, this.Path);
             string sigOutParam = SignHelper.Sign(this.Credential.SecretKey, sigInParam, this.Profile.SignMethod);
             param.Add("Signature", sigOutParam);
@@ -387,7 +425,6 @@ namespace TencentCloud.Common
             var totalSeconds = expiresAtOffset.ToUnixTimeMilliseconds();
             return totalSeconds;
 #endif
-
         }
     }
 }
