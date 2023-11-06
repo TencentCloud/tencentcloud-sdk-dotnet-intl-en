@@ -3883,6 +3883,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="EditMediaRequest"/></param>
+        /// <returns><see cref="EditMediaResponse"/></returns>
+        public async Task<EditMediaResponse> EditMedia(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="EditMediaRequest"/></param>
+        /// <returns><see cref="EditMediaResponse"/></returns>
+        public EditMediaResponse EditMediaSync(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
         /// </summary>
         /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
@@ -5156,6 +5196,70 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ParseStreamingManifest");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseStreamingManifestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to initiate a media processing task on a VOD file. The task may include:
+        /// 1. Video transcoding (with watermark)
+        /// 2. Animated image generating
+        /// 3. Time point screenshot
+        /// 4. Sampled screenshot
+        /// 5. Image sprite generating
+        /// 6. Taking a screenshot to use as the thumbnail
+        /// 7. Adaptive bitrate streaming and encryption
+        /// 8. Moderation (pornographic, terrorist, and politically sensitive content). We <font color=red>do not recommend</font> using this API to initiate a moderation task. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
+        /// 9. Content analysis for labeling, categorization, thumbnail generation, or labeling by frame.
+        /// 10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
+        /// 
+        /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="ProcessMediaRequest"/></param>
+        /// <returns><see cref="ProcessMediaResponse"/></returns>
+        public async Task<ProcessMediaResponse> ProcessMedia(ProcessMediaRequest req)
+        {
+             JsonResponseModel<ProcessMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ProcessMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to initiate a media processing task on a VOD file. The task may include:
+        /// 1. Video transcoding (with watermark)
+        /// 2. Animated image generating
+        /// 3. Time point screenshot
+        /// 4. Sampled screenshot
+        /// 5. Image sprite generating
+        /// 6. Taking a screenshot to use as the thumbnail
+        /// 7. Adaptive bitrate streaming and encryption
+        /// 8. Moderation (pornographic, terrorist, and politically sensitive content). We <font color=red>do not recommend</font> using this API to initiate a moderation task. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
+        /// 9. Content analysis for labeling, categorization, thumbnail generation, or labeling by frame.
+        /// 10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
+        /// 
+        /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="ProcessMediaRequest"/></param>
+        /// <returns><see cref="ProcessMediaResponse"/></returns>
+        public ProcessMediaResponse ProcessMediaSync(ProcessMediaRequest req)
+        {
+             JsonResponseModel<ProcessMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ProcessMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessMediaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
