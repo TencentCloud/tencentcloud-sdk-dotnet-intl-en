@@ -21,30 +21,20 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSharedCNAMERequest : AbstractModel
+    public class DeleteSharedCNAMERequest : AbstractModel
     {
         
         /// <summary>
-        /// ID of the site to which the shared CNAME belongs.	
+        /// ID of the site to which the shared CNAME belongs.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Prefix of the shared CNAME (up to 50 characters). Format: "test-api", "test-api.com". 
-        /// 
-        /// The complete format of a shared CNAME: <Custom Prefix> + <12-bit random string in ZoneId> + "share.dnse[0-5].com"
-        /// 
-        /// For example, if the prefix is `example.com`, the generated shared CNAME is `example.com.sai2ig51kaa5.share.dnse2.com`.
+        /// The shared CNAME to be deleted
         /// </summary>
-        [JsonProperty("SharedCNAMEPrefix")]
-        public string SharedCNAMEPrefix{ get; set; }
-
-        /// <summary>
-        /// Description. It supports 1-50 characters.
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("SharedCNAME")]
+        public string SharedCNAME{ get; set; }
 
 
         /// <summary>
@@ -53,8 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "SharedCNAMEPrefix", this.SharedCNAMEPrefix);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "SharedCNAME", this.SharedCNAME);
         }
     }
 }

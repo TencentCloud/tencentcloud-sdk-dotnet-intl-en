@@ -63,8 +63,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// Connection mode of the site. Values:
         /// <li>`full`: Connect via the name server.</li>
         /// <li>`partial`: Connect via the CNAME record.</li>
-        /// <li>`noDomainAccess`: Connect without using a domain name
-        ///  
+        /// <li>`noDomainAccess`: Connect without using a domain name</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

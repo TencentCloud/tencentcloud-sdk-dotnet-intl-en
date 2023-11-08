@@ -53,6 +53,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
+        /// </summary>
+        /// <param name="req"><see cref="BindSharedCNAMERequest"/></param>
+        /// <returns><see cref="BindSharedCNAMEResponse"/></returns>
+        public async Task<BindSharedCNAMEResponse> BindSharedCNAME(BindSharedCNAMERequest req)
+        {
+             JsonResponseModel<BindSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
+        /// </summary>
+        /// <param name="req"><see cref="BindSharedCNAMERequest"/></param>
+        /// <returns><see cref="BindSharedCNAMEResponse"/></returns>
+        public BindSharedCNAMEResponse BindSharedCNAMESync(BindSharedCNAMERequest req)
+        {
+             JsonResponseModel<BindSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to bind a site to a plan.
         /// </summary>
         /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>
@@ -541,7 +581,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a shared CNAME.
+        /// This API is used to create a shared CNAME. It is now only available to beta users.
         /// </summary>
         /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
         /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
@@ -561,7 +601,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a shared CNAME.
+        /// This API is used to create a shared CNAME. It is now only available to beta users.
         /// </summary>
         /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
         /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
@@ -896,6 +936,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSecurityIPGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityIPGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a shared CNAME. It is now only available to beta users.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSharedCNAMERequest"/></param>
+        /// <returns><see cref="DeleteSharedCNAMEResponse"/></returns>
+        public async Task<DeleteSharedCNAMEResponse> DeleteSharedCNAME(DeleteSharedCNAMERequest req)
+        {
+             JsonResponseModel<DeleteSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSharedCNAMEResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to delete a shared CNAME. It is now only available to beta users.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSharedCNAMERequest"/></param>
+        /// <returns><see cref="DeleteSharedCNAMEResponse"/></returns>
+        public DeleteSharedCNAMEResponse DeleteSharedCNAMESync(DeleteSharedCNAMERequest req)
+        {
+             JsonResponseModel<DeleteSharedCNAMEResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSharedCNAME");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSharedCNAMEResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

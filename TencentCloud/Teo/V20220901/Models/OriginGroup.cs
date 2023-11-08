@@ -25,52 +25,40 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// 
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
-        /// The site name.
+        /// 
         /// </summary>
-        [JsonProperty("ZoneName")]
-        public string ZoneName{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// The ID of the origin group.
+        /// 
         /// </summary>
-        [JsonProperty("OriginGroupId")]
-        public string OriginGroupId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// The origin type. Values:
-        /// <li>`self`: Customer origin</li>
-        /// <li>`third_party`: Third-party origin</li>
-        /// <li>`cos`: Tencent Cloud COS origin</li>
+        /// 
         /// </summary>
-        [JsonProperty("OriginType")]
-        public string OriginType{ get; set; }
+        [JsonProperty("Records")]
+        public OriginRecord[] Records{ get; set; }
 
         /// <summary>
-        /// The name of the origin group.
+        /// 
         /// </summary>
-        [JsonProperty("OriginGroupName")]
-        public string OriginGroupName{ get; set; }
+        [JsonProperty("References")]
+        public OriginGroupReference[] References{ get; set; }
 
         /// <summary>
-        /// The origin configuration type when `OriginType=self`. Values:
-        /// <li>`area`: Configure by region.</li>
-        /// <li>`weight`: Configure by weight.</li>
-        /// <li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+        /// 
         /// </summary>
-        [JsonProperty("ConfigurationType")]
-        public string ConfigurationType{ get; set; }
-
-        /// <summary>
-        /// The origin record information.
-        /// </summary>
-        [JsonProperty("OriginRecords")]
-        public OriginRecord[] OriginRecords{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
         /// The update time of the origin group.
@@ -79,8 +67,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// The origin domain when `OriginType=self`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Origin-pull host header
+        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostHeader")]
         public string HostHeader{ get; set; }
@@ -91,13 +79,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
-            this.SetParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
-            this.SetParamSimple(map, prefix + "OriginType", this.OriginType);
-            this.SetParamSimple(map, prefix + "OriginGroupName", this.OriginGroupName);
-            this.SetParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
-            this.SetParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "Records.", this.Records);
+            this.SetParamArrayObj(map, prefix + "References.", this.References);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
         }
