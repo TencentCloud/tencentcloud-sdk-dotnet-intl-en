@@ -68,7 +68,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SourceContext{ get; set; }
 
         /// <summary>
-        /// The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
+        /// The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
         /// </summary>
         [JsonProperty("MediaType")]
         public ulong? MediaType{ get; set; }
