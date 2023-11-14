@@ -181,7 +181,7 @@ namespace TencentCloud.Ams.V20201229
         }
 
         /// <summary>
-        /// This API is used to view the details of an audio moderation task, including task status, detection result, recognized text content of the audio file, maliciousness tag that corresponds to the detection result, and suggested operation. For the specific output content, see the sample output parameters.<br>Default API request rate limit: **100 requests/sec**.
+        /// This API is used to view the details of an audio moderation task, including task status, detection result, recognized text content of the audio file, maliciousness tag that corresponds to the detection result, and suggested operation. For the specific output content, see the sample output parameters.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
@@ -201,7 +201,7 @@ namespace TencentCloud.Ams.V20201229
         }
 
         /// <summary>
-        /// This API is used to view the details of an audio moderation task, including task status, detection result, recognized text content of the audio file, maliciousness tag that corresponds to the detection result, and suggested operation. For the specific output content, see the sample output parameters.<br>Default API request rate limit: **100 requests/sec**.
+        /// This API is used to view the details of an audio moderation task, including task status, detection result, recognized text content of the audio file, maliciousness tag that corresponds to the detection result, and suggested operation. For the specific output content, see the sample output parameters.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
