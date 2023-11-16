@@ -66,6 +66,36 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RTMPPullSettings")]
+        public CreateInputRTMPPullSettings RTMPPullSettings{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RTSPPullSettings")]
+        public CreateInputRTSPPullSettings RTSPPullSettings{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HLSPullSettings")]
+        public CreateInputHLSPullSettings HLSPullSettings{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResilientStream")]
+        public ResilientStreamConf ResilientStream{ get; set; }
+
+        /// <summary>
+        /// The bound security group IDs.
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +109,11 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
             this.SetParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
             this.SetParamSimple(map, prefix + "FailOver", this.FailOver);
+            this.SetParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
+            this.SetParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
+            this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+            this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

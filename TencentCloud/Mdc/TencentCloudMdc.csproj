@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{468070DF-0A9C-33D2-AFC7-D2A39B59B45C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.821</VersionPrefix>
+    <VersionPrefix>3.0.822</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,7 +49,10 @@
   <ItemGroup>
     <Compile Include="V20200828\MdcClient.cs" />
     <Compile Include="V20200828\Models\CreateInput.cs" />
+    <Compile Include="V20200828\Models\CreateInputHLSPullSettings.cs" />
+    <Compile Include="V20200828\Models\CreateInputRTMPPullSettings.cs" />
     <Compile Include="V20200828\Models\CreateInputRTPSettings.cs" />
+    <Compile Include="V20200828\Models\CreateInputRTSPPullSettings.cs" />
     <Compile Include="V20200828\Models\CreateInputSRTSettings.cs" />
     <Compile Include="V20200828\Models\CreateOutputInfo.cs" />
     <Compile Include="V20200828\Models\CreateOutputInfoRTPSettings.cs" />
@@ -67,16 +70,26 @@
     <Compile Include="V20200828\Models\DeleteStreamLinkOutputRequest.cs" />
     <Compile Include="V20200828\Models\DeleteStreamLinkOutputResponse.cs" />
     <Compile Include="V20200828\Models\DescribeFlow.cs" />
+    <Compile Include="V20200828\Models\DescribeHLSPullSourceAddress.cs" />
     <Compile Include="V20200828\Models\DescribeInput.cs" />
+    <Compile Include="V20200828\Models\DescribeInputHLSPullSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeInputRTMPPullSettings.cs" />
     <Compile Include="V20200828\Models\DescribeInputRTMPSettings.cs" />
     <Compile Include="V20200828\Models\DescribeInputRTPSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeInputRTSPPullSettings.cs" />
     <Compile Include="V20200828\Models\DescribeInputSRTSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutput.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputHLSPullServerUrl.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputHLSPullSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutputRTMPPullServerUrl.cs" />
     <Compile Include="V20200828\Models\DescribeOutputRTMPPullSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutputRTMPSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutputRTPSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputRTSPPullServerUrl.cs" />
+    <Compile Include="V20200828\Models\DescribeOutputRTSPPullSettings.cs" />
     <Compile Include="V20200828\Models\DescribeOutputSRTSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeRTMPPullSourceAddress.cs" />
+    <Compile Include="V20200828\Models\DescribeRTSPPullSourceAddress.cs" />
     <Compile Include="V20200828\Models\DescribeStreamLinkFlowLogsRequest.cs" />
     <Compile Include="V20200828\Models\DescribeStreamLinkFlowLogsResponse.cs" />
     <Compile Include="V20200828\Models\DescribeStreamLinkFlowMediaStatisticsRequest.cs" />
@@ -107,6 +120,7 @@
     <Compile Include="V20200828\Models\FlowStatistics.cs" />
     <Compile Include="V20200828\Models\FlowStatisticsArray.cs" />
     <Compile Include="V20200828\Models\FlowVideo.cs" />
+    <Compile Include="V20200828\Models\HLSPullSourceAddress.cs" />
     <Compile Include="V20200828\Models\InputAddress.cs" />
     <Compile Include="V20200828\Models\ModifyInput.cs" />
     <Compile Include="V20200828\Models\ModifyOutputInfo.cs" />
@@ -119,8 +133,11 @@
     <Compile Include="V20200828\Models\OutputAddress.cs" />
     <Compile Include="V20200828\Models\OutputSRTSourceAddressResp.cs" />
     <Compile Include="V20200828\Models\RTMPAddressDestination.cs" />
+    <Compile Include="V20200828\Models\RTMPPullSourceAddress.cs" />
     <Compile Include="V20200828\Models\RTPAddressDestination.cs" />
+    <Compile Include="V20200828\Models\RTSPPullSourceAddress.cs" />
     <Compile Include="V20200828\Models\RegionInfo.cs" />
+    <Compile Include="V20200828\Models\ResilientStreamConf.cs" />
     <Compile Include="V20200828\Models\SRTAddressDestination.cs" />
     <Compile Include="V20200828\Models\SRTSourceAddressReq.cs" />
     <Compile Include="V20200828\Models\SRTSourceAddressResp.cs" />

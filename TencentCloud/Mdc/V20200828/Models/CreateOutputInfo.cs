@@ -73,6 +73,18 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MaxConcurrent")]
+        public ulong? MaxConcurrent{ get; set; }
+
+        /// <summary>
+        /// The bound security group IDs.
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +99,8 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
             this.SetParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
+            this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }
