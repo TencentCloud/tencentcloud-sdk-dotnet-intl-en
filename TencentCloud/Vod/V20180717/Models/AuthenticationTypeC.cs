@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
         /// </summary>
         [JsonProperty("FileExtensions")]
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
-        /// 
+        /// whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Timestamp base setting: <li>dec: decimal</li> <li>hex: hexadecimal</li>
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
         /// <summary>
-        /// 
+        /// Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
         /// </summary>
         [JsonProperty("BackupSecretKey")]
         public string BackupSecretKey{ get; set; }

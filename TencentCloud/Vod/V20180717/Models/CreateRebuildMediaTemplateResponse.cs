@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The remaster template ID.
+        /// Rebuild Media Template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

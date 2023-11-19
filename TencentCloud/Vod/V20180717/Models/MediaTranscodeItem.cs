@@ -32,7 +32,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
+        /// <font color=red>Note: A value of 0 represents the original file. </font>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

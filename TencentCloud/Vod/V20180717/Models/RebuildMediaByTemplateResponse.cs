@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The ID of the remaster task. You need to provide this ID to query the task status.
+        /// The task ID of the rebuild, through which the status of the rebuild task can be queried.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

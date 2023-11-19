@@ -41,13 +41,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SampleInterval{ get; set; }
 
         /// <summary>
-        /// 
+        /// The number of rows of small images in the sprite image. 
+        /// Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
         /// </summary>
         [JsonProperty("RowCount")]
         public ulong? RowCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// The number of columns of small images in the sprite image. 
+        /// Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
         /// </summary>
         [JsonProperty("ColumnCount")]
         public ulong? ColumnCount{ get; set; }
@@ -80,13 +82,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FillType{ get; set; }
 
         /// <summary>
-        /// 
+        /// The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+        /// <li>When Width and Height are both 0, the resolution is from the same source;</li>
+        /// <li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+        /// < li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+        /// <li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+        /// Default value: 0. 
+        /// Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 
+        /// The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
+        /// <li>When Width and Height are both 0, the resolution is from the same source;</li>
+        /// <li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
+        /// < li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
+        /// <li>When both Width and Height are non-0, the resolution is specified by the user. </li>
+        /// Default value: 0. 
+        /// Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

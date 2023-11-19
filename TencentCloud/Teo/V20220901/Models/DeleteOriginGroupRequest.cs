@@ -25,16 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// ID of the site.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The ID of the origin group.
+        /// (Required) Origin group IDe group ID. This parameter is required.
         /// </summary>
-        [JsonProperty("OriginGroupId")]
-        public string OriginGroupId{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

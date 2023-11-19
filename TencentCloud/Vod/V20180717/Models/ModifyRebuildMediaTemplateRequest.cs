@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The remaster template ID.
+        /// Rebuild Media Template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// The remaster template name.
+        /// Rebuild Media Template Name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The template description.
+        /// Rebuild media template description.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rebuild media video control information.
         /// </summary>
         [JsonProperty("RebuildVideoInfo")]
         public RebuildVideoInfo RebuildVideoInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rebuild media audio control information.
         /// </summary>
         [JsonProperty("RebuildAudioInfo")]
         public RebuildAudioInfo RebuildAudioInfo{ get; set; }

@@ -43,8 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public LiveRecordInfo LiveRecordInfo{ get; set; }
 
         /// <summary>
-        /// The TRTC recording information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// TRTC recording information, valid when the file source is TrtcRecord.
         /// </summary>
         [JsonProperty("TrtcRecordInfo")]
         public TrtcRecordInfo TrtcRecordInfo{ get; set; }

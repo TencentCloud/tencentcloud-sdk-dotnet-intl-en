@@ -42,6 +42,38 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OriginInfo")]
         public OriginInfo OriginInfo{ get; set; }
 
+        /// <summary>
+        /// Origin-pull protocol configuration. Values:
+        /// <li>`FOLLOW`: Follow the protocol of origin</li>
+        /// <li>`HTTP`: Send requests to the origin over HTTP</li>
+        /// <li>`HTTPS`: Send requests to the origin over HTTPS</li>
+        /// <li>The original configuration applies if this field is not specified.</li>
+        /// </summary>
+        [JsonProperty("OriginProtocol")]
+        public string OriginProtocol{ get; set; }
+
+        /// <summary>
+        /// Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+        /// </summary>
+        [JsonProperty("HttpOriginPort")]
+        public ulong? HttpOriginPort{ get; set; }
+
+        /// <summary>
+        /// Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+        /// </summary>
+        [JsonProperty("HttpsOriginPort")]
+        public ulong? HttpsOriginPort{ get; set; }
+
+        /// <summary>
+        /// IPv6 status. Values:
+        /// <li>`follow`: Follow the IPv6 configuration of the site</li>
+        /// <li>`on`: Enable</li>
+        /// <li>`off`: Disable</li>
+        /// <li>The original configuration applies if this field is not specified.</li>
+        /// </summary>
+        [JsonProperty("IPv6Status")]
+        public string IPv6Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +83,10 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamObj(map, prefix + "OriginInfo.", this.OriginInfo);
+            this.SetParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+            this.SetParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
+            this.SetParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
+            this.SetParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
         }
     }
 }

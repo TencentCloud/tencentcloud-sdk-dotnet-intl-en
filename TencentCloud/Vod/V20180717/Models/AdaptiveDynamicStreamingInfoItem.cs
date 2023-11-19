@@ -60,7 +60,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 
+        /// Digital watermark type. Optional values:
+        /// <li>Trace means traceability watermark processing; </li>
+        /// <li>CopyRight means copyright watermark processing; </li>
+        /// <li>None means no digital watermark processing. </li>
         /// </summary>
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
@@ -72,7 +75,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaSubStreamInfoItem[] SubStreamSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Copyright Information.
         /// </summary>
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }

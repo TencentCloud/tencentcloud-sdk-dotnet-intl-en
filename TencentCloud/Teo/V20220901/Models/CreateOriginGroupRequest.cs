@@ -25,43 +25,33 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The origin type. Values:
-        /// <li>`self`: Customer origin</li>
-        /// <li>`third_party`: Third-party origin</li>
-        /// <li>`cos`: Tencent Cloud COS origin</li>
+        /// Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
         /// </summary>
-        [JsonProperty("OriginType")]
-        public string OriginType{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// The name of the origin group.
+        /// (Required) Origin group type. Values:
+        /// <li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
+        /// <li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
         /// </summary>
-        [JsonProperty("OriginGroupName")]
-        public string OriginGroupName{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// The origin configuration type when `OriginType=self`. Values:
-        /// <li>`area`: Configure by region.</li>
-        /// <li>`weight`: Configure by weight.</li>
-        /// <li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+        /// (Required) Origins in the origin group.
         /// </summary>
-        [JsonProperty("ConfigurationType")]
-        public string ConfigurationType{ get; set; }
+        [JsonProperty("Records")]
+        public OriginRecord[] Records{ get; set; }
 
         /// <summary>
-        /// Details of the origin record.
-        /// </summary>
-        [JsonProperty("OriginRecords")]
-        public OriginRecord[] OriginRecords{ get; set; }
-
-        /// <summary>
-        /// The origin domain. This field can be specified only when `OriginType=self`.
+        /// Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
         /// </summary>
         [JsonProperty("HostHeader")]
         public string HostHeader{ get; set; }
@@ -73,10 +63,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "OriginType", this.OriginType);
-            this.SetParamSimple(map, prefix + "OriginGroupName", this.OriginGroupName);
-            this.SetParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
-            this.SetParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "Records.", this.Records);
             this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
         }
     }

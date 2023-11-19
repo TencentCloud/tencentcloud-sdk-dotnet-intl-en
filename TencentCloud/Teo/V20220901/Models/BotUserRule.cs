@@ -31,16 +31,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Action. Valid values: 
-        /// <li>`drop`: Block;</li>
-        /// <li>`monitor`: Observe;</li>
-        /// <li>`trans`: Allow;</li>
-        /// <li>`alg`: JavaScript challenge;</li>
-        /// <li>`captcha`: Managed challenge;</li>
-        /// <li>`random`: Random action;</li>
-        /// <li>`silence`: Silence;</li>
-        /// <li>`shortdelay`: Add short latency;</li>
-        /// <li>`longdelay`: Add long latency.</li>
+        /// The action. Values:
+        /// <li>`drop`: Block the request</li>
+        /// <li>`monitor`: Observe</li>
+        /// <li>`trans`: Allow</li>
+        /// <li>`redirect`: Redirect the request</li>
+        /// <li>`page`: Return the specified page</li>
+        /// <li>`alg`: JavaScript challenge</li>
+        /// <li>`captcha`: Managed challenge</li>
+        /// <li>`random`: Handle the request randomly by the weight</li>
+        /// <li>`silence`: Keep the connection but do not response to the client</li>
+        /// <li>`shortdelay`: Add a short latency period</li>
+        /// <li>`longdelay`: Add a long latency period</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -66,8 +68,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as an output parameter.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Rule ID, which is only used as an output parameter.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
@@ -81,26 +82,49 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// The filter. Values:
         /// <li>`sip`: Client IP</li>
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// This parameter is left empty by default.
         /// </summary>
         [JsonProperty("FreqFields")]
         public string[] FreqFields{ get; set; }
 
         /// <summary>
-        /// Updated time
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// The update time, which is only used as an output parameter.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// The statistical dimension. Values:
-        /// <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
-        /// <li>`client_to_eo`: Requests from the client to EdgeOne</li>
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Query scope. Values:
+        /// <li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
+        /// <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
+        /// Default: `source_to_eo`.
         /// </summary>
         [JsonProperty("FreqScope")]
         public string[] FreqScope{ get; set; }
+
+        /// <summary>
+        /// Name of the custom return page. It's required when `Action=page`.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+        /// </summary>
+        [JsonProperty("CustomResponseId")]
+        public string CustomResponseId{ get; set; }
+
+        /// <summary>
+        /// The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+        /// </summary>
+        [JsonProperty("ResponseCode")]
+        public long? ResponseCode{ get; set; }
+
+        /// <summary>
+        /// The redirection URL. It's required when `Action=redirect`.
+        /// </summary>
+        [JsonProperty("RedirectUrl")]
+        public string RedirectUrl{ get; set; }
 
 
         /// <summary>
@@ -118,6 +142,10 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
+            this.SetParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
+            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         }
     }
 }

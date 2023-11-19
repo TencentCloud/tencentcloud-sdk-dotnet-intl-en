@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// The details of the remaster templates.
+        /// Rebuild media template details list.
         /// </summary>
         [JsonProperty("RebuildMediaTemplateSet")]
         public RebuildMediaTemplate[] RebuildMediaTemplateSet{ get; set; }

@@ -46,6 +46,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

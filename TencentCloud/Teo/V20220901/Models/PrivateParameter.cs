@@ -28,6 +28,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// The parameter name. Values
         /// <li>`AccessKeyId`: Access Key ID</li>
         /// <li>`SecretAccessKey`: Secret Access Key</li>
+        /// <li>`SignatureVersion`: Signature version. Values: `v2`, `v4`</li>
+        /// <li>`Region`: Region of the storage bucket</li>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

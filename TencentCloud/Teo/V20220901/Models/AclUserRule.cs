@@ -31,14 +31,14 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// The rule action. Values:
-        /// <li>`trans`: Allow the request.</li>
-        /// <li>`drop`: Block the request.</li>
-        /// <li>`monitor`: Observe the request.</li>
-        /// <li>`ban`: Block the IP.</li>
-        /// <li>`redirect`: Redirect the request.</li>
-        /// <li>`page`: Return the specified page.</li>
-        /// <li>`alg`: Verify the request by Javascript challenge.</li>
+        /// The action. Values:
+        /// <li>`trans`: Allow</li>
+        /// <li>`drop`: Block the request</li>
+        /// <li>`monitor`: Observe</li>
+        /// <li>`ban`: Block the IP</li>
+        /// <li>`redirect`: Redirect the request</li>
+        /// <li>`page`: Return the specified page</li>
+        /// <li>`alg`: JavaScript challenge</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -64,63 +64,61 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as an output parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID, which is only used as an output parameter.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
         /// The update time, which is only used as an output parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// The IP blocking duration. Value range: 0 seconds - 2 days. Default value: 0 seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }
 
         /// <summary>
-        /// The unit of the IP blocking duration. Values:
+        /// The unit of the IP ban duration. Values:
         /// <li>`second`: Second</li>
         /// <li>`minutes`: Minute</li>
-        /// <li>`hour`: Hour</li>Default value: second.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <li>`hour`: Hour</li>Default value: `second`.
         /// </summary>
         [JsonProperty("PunishTimeUnit")]
         public string PunishTimeUnit{ get; set; }
 
         /// <summary>
-        /// The name of the custom page, which defaults to an empty string.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name of the custom return page. It's required when `Action=page`.	
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The ID of the custom page, which defaults to 0.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
         /// </summary>
         [JsonProperty("PageId")]
         public long? PageId{ get; set; }
 
         /// <summary>
-        /// The redirection URL, which must be a subdomain name of the site. It defaults to an empty string.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
         /// </summary>
-        [JsonProperty("RedirectUrl")]
-        public string RedirectUrl{ get; set; }
+        [JsonProperty("CustomResponseId")]
+        public string CustomResponseId{ get; set; }
 
         /// <summary>
-        /// The response code returned after redirection, which defaults to 0.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
         /// </summary>
         [JsonProperty("ResponseCode")]
         public long? ResponseCode{ get; set; }
+
+        /// <summary>
+        /// The redirection URL. It's required when `Action=redirect`.	
+        /// </summary>
+        [JsonProperty("RedirectUrl")]
+        public string RedirectUrl{ get; set; }
 
 
         /// <summary>
@@ -139,8 +137,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "PunishTimeUnit", this.PunishTimeUnit);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "PageId", this.PageId);
-            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+            this.SetParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
             this.SetParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
+            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         }
     }
 }

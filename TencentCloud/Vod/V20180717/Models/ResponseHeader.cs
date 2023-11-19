@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Custom response header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

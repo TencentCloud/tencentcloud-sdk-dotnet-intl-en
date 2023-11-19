@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
         /// </summary>
         [JsonProperty("Http2")]
         public string Http2{ get; set; }

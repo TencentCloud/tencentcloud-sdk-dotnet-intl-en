@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Abnormal segment List file URL expiration time, using [ISO date supported](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Live streaming recording ID
+        /// Live recording stream ID.
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// Recording start time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("RecordStartTime")]
         public string RecordStartTime{ get; set; }
 
         /// <summary>
-        /// Recording end time, using [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("RecordEndTime")]
         public string RecordEndTime{ get; set; }

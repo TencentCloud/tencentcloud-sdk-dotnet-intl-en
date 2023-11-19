@@ -39,7 +39,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public DomainAssetVO[] Data{ get; set; }
 
         /// <summary>
-        /// List of protection status
+        /// List of WAF protection status
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DefenseStatusList")]

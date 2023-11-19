@@ -33,12 +33,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Time{ get; set; }
 
         /// <summary>
-        /// The data size.
-        /// <li>Storage capacity in bytes.</li>
-        /// <li>Transcoding duration in seconds.</li>
-        /// <li>Traffic in bytes.</li>
-        /// <li>Bandwidth in bps.</li>
-        /// <li>Live stream clip duration in seconds.</li>
+        /// Data size. 
+        /// <li>The data of the storage space, the unit is bytes. </li>
+        /// <li>Transcoding duration data, unit is seconds. </li>
+        /// <li>Traffic data, unit is bytes. </li>
+        /// <li>Bandwidth data, unit is bits per second. </li>
+        /// <li>Live broadcast clip data, the unit is seconds. </li>
+        /// <li>Carousel data, unit is seconds. </li>
+        /// <li>The number of sub-applications, the unit is one. </li>
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }

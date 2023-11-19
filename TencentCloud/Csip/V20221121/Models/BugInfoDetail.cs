@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+        /// Vulnerability ID
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Id")]
@@ -130,28 +130,28 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? ProSupport{ get; set; }
 
         /// <summary>
-        /// Published or not, `0`: Not published; `1`: Published.
+        /// Specify whether the vulnerability is published as an emergency vulnerability. `1`: Published as an emergency vulnerability; `0`: Not an emergency vulnerability.
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsPublish")]
         public ulong? IsPublish{ get; set; }
 
         /// <summary>
-        /// Release time
+        /// Disclosure time of the vulnerability. 
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReleaseTime")]
         public string ReleaseTime{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// The time when the vulnerability is added to the vulnerability database.
         /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// The last update time of the vulnerability in the database
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]

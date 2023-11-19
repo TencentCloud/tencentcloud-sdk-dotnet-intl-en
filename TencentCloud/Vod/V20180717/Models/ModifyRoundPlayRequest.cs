@@ -62,13 +62,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback status, optional values: 
+        /// <li>Disabled: End playback, and the carousel task cannot be started again after the end. </li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Play mode, optional values:
+        /// <li>Loop: Play the playlist in a loop;</li>
+        /// <li>Linear: Play once, stop playing after the playlist is played. </li>
         /// </summary>
         [JsonProperty("PlayBackMode")]
         public string PlayBackMode{ get; set; }

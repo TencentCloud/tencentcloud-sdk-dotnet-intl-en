@@ -25,7 +25,10 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Image processing type. Optional types are:
+        /// <li>Scale: image thumbnail processing;</li>
+        /// <li>CenterCut: image cropping processing;</li>
+        /// <li>Blur: image blur processing. </li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

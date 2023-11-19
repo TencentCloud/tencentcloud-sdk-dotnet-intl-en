@@ -25,7 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Query indicators, the values u200bu200bare:
+        /// <li>Traffic: traffic, unit is Byte. </li>
+        /// <li>Bandwidth: Bandwidth, unit is Bps. </li>
+        /// <li>Requests: Number of requests. </li>
+        /// <li>QUICRequests: Number of QUIC requests. </li>
+        /// <li>IpVisit: Number of IP visits. </li>
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }

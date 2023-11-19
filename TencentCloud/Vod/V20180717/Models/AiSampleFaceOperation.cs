@@ -37,7 +37,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] FaceIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Face image [Base64](https://tools.ietf.org/html/rfc4648) Encoded string collection, only supports jpeg and png image formats. 
+        /// <li>When Type is add or reset, this field is required;</li>
+        /// <li>Array length limit: 5 pictures. </li>
+        /// Note: The picture must be a clear frontal photo of a single person, with a pixel size of no less than 200*200.
         /// </summary>
         [JsonProperty("FaceContents")]
         public string[] FaceContents{ get; set; }

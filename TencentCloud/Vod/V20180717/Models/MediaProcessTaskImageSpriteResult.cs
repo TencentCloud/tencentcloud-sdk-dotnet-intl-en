@@ -69,13 +69,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the sprite cut task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the sprite cut task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

@@ -135,7 +135,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// CloneCDNDomain.
+        /// Clone CDN Domain.
         /// </summary>
         /// <param name="req"><see cref="CloneCDNDomainRequest"/></param>
         /// <returns><see cref="CloneCDNDomainResponse"/></returns>
@@ -155,7 +155,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// CloneCDNDomain.
+        /// Clone CDN Domain.
         /// </summary>
         /// <param name="req"><see cref="CloneCDNDomainRequest"/></param>
         /// <returns><see cref="CloneCDNDomainResponse"/></returns>
@@ -481,7 +481,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This interface is used to add domain names to VOD, and a user can add at most 20 domains. 1. After the domain name is successfully added, VOD will deploy the domain name. It takes about 2 minutes for the domain name to change from the deployed state to the online state.
+        /// This API is used for adding domain names to VOD. A user can add up to 20 domain names. 1. After the domain name is added successfully, VOD will carry out the deployment of the domain name. It takes approximately 2 minutes for the domain name to change from the deployment status to the online status.
         /// </summary>
         /// <param name="req"><see cref="CreateCDNDomainRequest"/></param>
         /// <returns><see cref="CreateCDNDomainResponse"/></returns>
@@ -501,7 +501,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This interface is used to add domain names to VOD, and a user can add at most 20 domains. 1. After the domain name is successfully added, VOD will deploy the domain name. It takes about 2 minutes for the domain name to change from the deployed state to the online state.
+        /// This API is used for adding domain names to VOD. A user can add up to 20 domain names. 1. After the domain name is added successfully, VOD will carry out the deployment of the domain name. It takes approximately 2 minutes for the domain name to change from the deployment status to the online status.
         /// </summary>
         /// <param name="req"><see cref="CreateCDNDomainRequest"/></param>
         /// <returns><see cref="CreateCDNDomainResponse"/></returns>
@@ -600,6 +600,126 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "CreateContentReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for generating a subdomain resolution, prompting the customer to add it to the domain name resolution, used for wildcard domain and domain name retrieval verification of ownership.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainVerifyRecordRequest"/></param>
+        /// <returns><see cref="CreateDomainVerifyRecordResponse"/></returns>
+        public async Task<CreateDomainVerifyRecordResponse> CreateDomainVerifyRecord(CreateDomainVerifyRecordRequest req)
+        {
+             JsonResponseModel<CreateDomainVerifyRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDomainVerifyRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainVerifyRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for generating a subdomain resolution, prompting the customer to add it to the domain name resolution, used for wildcard domain and domain name retrieval verification of ownership.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainVerifyRecordRequest"/></param>
+        /// <returns><see cref="CreateDomainVerifyRecordResponse"/></returns>
+        public CreateDomainVerifyRecordResponse CreateDomainVerifyRecordSync(CreateDomainVerifyRecordRequest req)
+        {
+             JsonResponseModel<CreateDomainVerifyRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDomainVerifyRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainVerifyRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Create enhance media template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnhanceMediaTemplateRequest"/></param>
+        /// <returns><see cref="CreateEnhanceMediaTemplateResponse"/></returns>
+        public async Task<CreateEnhanceMediaTemplateResponse> CreateEnhanceMediaTemplate(CreateEnhanceMediaTemplateRequest req)
+        {
+             JsonResponseModel<CreateEnhanceMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEnhanceMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEnhanceMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Create enhance media template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnhanceMediaTemplateRequest"/></param>
+        /// <returns><see cref="CreateEnhanceMediaTemplateResponse"/></returns>
+        public CreateEnhanceMediaTemplateResponse CreateEnhanceMediaTemplateSync(CreateEnhanceMediaTemplateRequest req)
+        {
+             JsonResponseModel<CreateEnhanceMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEnhanceMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEnhanceMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Create HeadTail Template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="CreateHeadTailTemplateResponse"/></returns>
+        public async Task<CreateHeadTailTemplateResponse> CreateHeadTailTemplate(CreateHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<CreateHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHeadTailTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Create HeadTail Template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="CreateHeadTailTemplateResponse"/></returns>
+        public CreateHeadTailTemplateResponse CreateHeadTailTemplateSync(CreateHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<CreateHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHeadTailTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -769,7 +889,47 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to create a remaster template.
+        /// Creates media quality inspection template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="CreateQualityInspectTemplateResponse"/></returns>
+        public async Task<CreateQualityInspectTemplateResponse> CreateQualityInspectTemplate(CreateQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<CreateQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Creates media quality inspection template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="CreateQualityInspectTemplateResponse"/></returns>
+        public CreateQualityInspectTemplateResponse CreateQualityInspectTemplateSync(CreateQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<CreateQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Create rebuild media template.
         /// </summary>
         /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="CreateRebuildMediaTemplateResponse"/></returns>
@@ -789,7 +949,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to create a remaster template.
+        /// Create rebuild media template.
         /// </summary>
         /// <param name="req"><see cref="CreateRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="CreateRebuildMediaTemplateResponse"/></returns>
@@ -1427,7 +1587,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// DeleteCDNDomain.
+        /// Delete CDN Domain
         /// </summary>
         /// <param name="req"><see cref="DeleteCDNDomainRequest"/></param>
         /// <returns><see cref="DeleteCDNDomainResponse"/></returns>
@@ -1447,7 +1607,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// DeleteCDNDomain.
+        /// Delete CDN Domain
         /// </summary>
         /// <param name="req"><see cref="DeleteCDNDomainRequest"/></param>
         /// <returns><see cref="DeleteCDNDomainResponse"/></returns>
@@ -1542,6 +1702,86 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteContentReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Delete Enhance Media template
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnhanceMediaTemplateRequest"/></param>
+        /// <returns><see cref="DeleteEnhanceMediaTemplateResponse"/></returns>
+        public async Task<DeleteEnhanceMediaTemplateResponse> DeleteEnhanceMediaTemplate(DeleteEnhanceMediaTemplateRequest req)
+        {
+             JsonResponseModel<DeleteEnhanceMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEnhanceMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnhanceMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Delete Enhance Media template
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnhanceMediaTemplateRequest"/></param>
+        /// <returns><see cref="DeleteEnhanceMediaTemplateResponse"/></returns>
+        public DeleteEnhanceMediaTemplateResponse DeleteEnhanceMediaTemplateSync(DeleteEnhanceMediaTemplateRequest req)
+        {
+             JsonResponseModel<DeleteEnhanceMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEnhanceMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnhanceMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Delete HeadTail Template
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="DeleteHeadTailTemplateResponse"/></returns>
+        public async Task<DeleteHeadTailTemplateResponse> DeleteHeadTailTemplate(DeleteHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<DeleteHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHeadTailTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Delete HeadTail Template
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="DeleteHeadTailTemplateResponse"/></returns>
+        public DeleteHeadTailTemplateResponse DeleteHeadTailTemplateSync(DeleteHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<DeleteHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHeadTailTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1715,7 +1955,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 
+        /// Delete user-created task flow templates.
         /// </summary>
         /// <param name="req"><see cref="DeleteProcedureTemplateRequest"/></param>
         /// <returns><see cref="DeleteProcedureTemplateResponse"/></returns>
@@ -1735,7 +1975,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 
+        /// Delete user-created task flow templates.
         /// </summary>
         /// <param name="req"><see cref="DeleteProcedureTemplateRequest"/></param>
         /// <returns><see cref="DeleteProcedureTemplateResponse"/></returns>
@@ -1755,7 +1995,47 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to delete a remaster template.
+        /// Deletes media quality inspection template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="DeleteQualityInspectTemplateResponse"/></returns>
+        public async Task<DeleteQualityInspectTemplateResponse> DeleteQualityInspectTemplate(DeleteQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<DeleteQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Deletes media quality inspection template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="DeleteQualityInspectTemplateResponse"/></returns>
+        public DeleteQualityInspectTemplateResponse DeleteQualityInspectTemplateSync(DeleteQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<DeleteQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Delete rebuild media template.
         /// </summary>
         /// <param name="req"><see cref="DeleteRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="DeleteRebuildMediaTemplateResponse"/></returns>
@@ -1775,7 +2055,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to delete a remaster template.
+        /// Delete rebuild media template.
         /// </summary>
         /// <param name="req"><see cref="DeleteRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="DeleteRebuildMediaTemplateResponse"/></returns>
@@ -2363,7 +2643,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// DescribeCDNDomains.
+        /// Describe CDN Domains
         /// </summary>
         /// <param name="req"><see cref="DescribeCDNDomainsRequest"/></param>
         /// <returns><see cref="DescribeCDNDomainsResponse"/></returns>
@@ -2383,7 +2663,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// DescribeCDNDomains.
+        /// Describe CDN Domains
         /// </summary>
         /// <param name="req"><see cref="DescribeCDNDomainsRequest"/></param>
         /// <returns><see cref="DescribeCDNDomainsResponse"/></returns>
@@ -2543,10 +2823,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query the usage of the client upload acceleration service in a specific time period.
-        ///    1. You can query the usage of client upload acceleration in the last 365 days.
-        ///    2. The maximum time period allowed for query is 90 days.
-        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// This interface returns client upload acceleration statistics within the query time range. 
+        ///  1. You can query the client upload acceleration statistics in the last 365 days. 
+        ///  2. The query time span does not exceed 90 days. 
+        ///  3. If the query time span exceeds 1 day, data with day granularity will be returned. Otherwise, data with 5-minute granularity will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeClientUploadAccelerationUsageDataRequest"/></param>
         /// <returns><see cref="DescribeClientUploadAccelerationUsageDataResponse"/></returns>
@@ -2566,10 +2846,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query the usage of the client upload acceleration service in a specific time period.
-        ///    1. You can query the usage of client upload acceleration in the last 365 days.
-        ///    2. The maximum time period allowed for query is 90 days.
-        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// This interface returns client upload acceleration statistics within the query time range. 
+        ///  1. You can query the client upload acceleration statistics in the last 365 days. 
+        ///  2. The query time span does not exceed 90 days. 
+        ///  3. If the query time span exceeds 1 day, data with day granularity will be returned. Otherwise, data with 5-minute granularity will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeClientUploadAccelerationUsageDataRequest"/></param>
         /// <returns><see cref="DescribeClientUploadAccelerationUsageDataResponse"/></returns>
@@ -2725,6 +3005,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Describe Enhance Media Templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnhanceMediaTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeEnhanceMediaTemplatesResponse"/></returns>
+        public async Task<DescribeEnhanceMediaTemplatesResponse> DescribeEnhanceMediaTemplates(DescribeEnhanceMediaTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeEnhanceMediaTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnhanceMediaTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnhanceMediaTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Describe Enhance Media Templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnhanceMediaTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeEnhanceMediaTemplatesResponse"/></returns>
+        public DescribeEnhanceMediaTemplatesResponse DescribeEnhanceMediaTemplatesSync(DescribeEnhanceMediaTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeEnhanceMediaTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnhanceMediaTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnhanceMediaTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get file attributes asynchronously.
         /// - Currently, this API can only get the MD5 hash of a file.
         /// - If the file queried is in HLS or DASH format, the attributes of the index file will be returned.
@@ -2760,6 +3080,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFileAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Describe HeadTail Templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHeadTailTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeHeadTailTemplatesResponse"/></returns>
+        public async Task<DescribeHeadTailTemplatesResponse> DescribeHeadTailTemplates(DescribeHeadTailTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeHeadTailTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHeadTailTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHeadTailTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Describe HeadTail Templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHeadTailTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeHeadTailTemplatesResponse"/></returns>
+        public DescribeHeadTailTemplatesResponse DescribeHeadTailTemplatesSync(DescribeHeadTailTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeHeadTailTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHeadTailTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHeadTailTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2809,10 +3169,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query your daily usage of the image recognition feature in a specified time period.
-        ///    1. You can query statistics from the last 365 days.
-        ///    2. The maximum query period is 90 days.
-        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// This interface returns the image review usage information used every day within the query time range.
+        ///    1. You can query the image review statistics for the last 365 days.
+        ///    2. The query time span does not exceed 90 days.
+        ///    3. If the query time span exceeds 1 day, data with a granularity of days will be returned. Otherwise, data with a granularity of 5 minutes will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeImageReviewUsageDataRequest"/></param>
         /// <returns><see cref="DescribeImageReviewUsageDataResponse"/></returns>
@@ -2832,10 +3192,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query your daily usage of the image recognition feature in a specified time period.
-        ///    1. You can query statistics from the last 365 days.
-        ///    2. The maximum query period is 90 days.
-        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// This interface returns the image review usage information used every day within the query time range.
+        ///    1. You can query the image review statistics for the last 365 days.
+        ///    2. The query time span does not exceed 90 days.
+        ///    3. If the query time span exceeds 1 day, data with a granularity of days will be returned. Otherwise, data with a granularity of 5 minutes will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeImageReviewUsageDataRequest"/></param>
         /// <returns><see cref="DescribeImageReviewUsageDataResponse"/></returns>
@@ -2895,10 +3255,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query daily playback license requests in a specified time period.
-        ///    1. You can query statistics from the last 365 days.
-        ///    2. The maximum query period is 90 days.
-        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// This interface returns information about the number of license requests per day within the query time range.
+        ///    1. You can query the license request statistics in the last 365 days.
+        ///    2. The query time span does not exceed 90 days.
+        ///    3. If the query time span exceeds 1 day, data with a granularity of days will be returned. Otherwise, data with a granularity of 5 minutes will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeLicenseUsageDataRequest"/></param>
         /// <returns><see cref="DescribeLicenseUsageDataResponse"/></returns>
@@ -2918,10 +3278,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query daily playback license requests in a specified time period.
-        ///    1. You can query statistics from the last 365 days.
-        ///    2. The maximum query period is 90 days.
-        ///    3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+        /// This interface returns information about the number of license requests per day within the query time range.
+        ///    1. You can query the license request statistics in the last 365 days.
+        ///    2. The query time span does not exceed 90 days.
+        ///    3. If the query time span exceeds 1 day, data with a granularity of days will be returned. Otherwise, data with a granularity of 5 minutes will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeLicenseUsageDataRequest"/></param>
         /// <returns><see cref="DescribeLicenseUsageDataResponse"/></returns>
@@ -3173,7 +3533,47 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query remaster templates.
+        /// Get media quality inspection Template List.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityInspectTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeQualityInspectTemplatesResponse"/></returns>
+        public async Task<DescribeQualityInspectTemplatesResponse> DescribeQualityInspectTemplates(DescribeQualityInspectTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeQualityInspectTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQualityInspectTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityInspectTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Get media quality inspection Template List.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityInspectTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeQualityInspectTemplatesResponse"/></returns>
+        public DescribeQualityInspectTemplatesResponse DescribeQualityInspectTemplatesSync(DescribeQualityInspectTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeQualityInspectTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQualityInspectTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityInspectTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Describe Rebuild Media Templates
         /// </summary>
         /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
         /// <returns><see cref="DescribeRebuildMediaTemplatesResponse"/></returns>
@@ -3193,7 +3593,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to query remaster templates.
+        /// Describe Rebuild Media Templates
         /// </summary>
         /// <param name="req"><see cref="DescribeRebuildMediaTemplatesRequest"/></param>
         /// <returns><see cref="DescribeRebuildMediaTemplatesResponse"/></returns>
@@ -3883,7 +4283,21 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Edit the video (cut, splice, etc.) to generate a new video. The editing functions include:
         /// 
+        /// 1. Edit a file in the VOD video to generate a new video;
+        /// 2. Splice multiple files to generate a new video;
+        /// 3. Edit multiple files and then splice them to generate a new video;
+        /// 4. Directly generate a new video for a stream;
+        /// 5. Edit a stream to generate a new video. Video;
+        /// 6. Splice multiple streams to generate a new video;
+        /// 7. Clip and then splice multiple streams to generate a new video. 
+        /// 
+        /// For the generated new video, you can also specify whether the generated video needs to execute the task flow. 
+        /// 
+        /// >When editing or splicing live streams, please make sure to do so after the stream is over. Otherwise the resulting video may be incomplete. 
+        /// 
+        /// If event notification is used, the type of event notification is [Video editing completed](https://intl.cloud.tencent.com/document/product/266/33794?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="EditMediaRequest"/></param>
         /// <returns><see cref="EditMediaResponse"/></returns>
@@ -3903,7 +4317,21 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Edit the video (cut, splice, etc.) to generate a new video. The editing functions include:
         /// 
+        /// 1. Edit a file in the VOD video to generate a new video;
+        /// 2. Splice multiple files to generate a new video;
+        /// 3. Edit multiple files and then splice them to generate a new video;
+        /// 4. Directly generate a new video for a stream;
+        /// 5. Edit a stream to generate a new video. Video;
+        /// 6. Splice multiple streams to generate a new video;
+        /// 7. Clip and then splice multiple streams to generate a new video. 
+        /// 
+        /// For the generated new video, you can also specify whether the generated video needs to execute the task flow. 
+        /// 
+        /// >When editing or splicing live streams, please make sure to do so after the stream is over. Otherwise the resulting video may be incomplete. 
+        /// 
+        /// If event notification is used, the type of event notification is [Video editing completed](https://intl.cloud.tencent.com/document/product/266/33794?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="EditMediaRequest"/></param>
         /// <returns><see cref="EditMediaResponse"/></returns>
@@ -3914,6 +4342,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "EditMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Enhance Media By Template.
+        /// </summary>
+        /// <param name="req"><see cref="EnhanceMediaByTemplateRequest"/></param>
+        /// <returns><see cref="EnhanceMediaByTemplateResponse"/></returns>
+        public async Task<EnhanceMediaByTemplateResponse> EnhanceMediaByTemplate(EnhanceMediaByTemplateRequest req)
+        {
+             JsonResponseModel<EnhanceMediaByTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnhanceMediaByTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnhanceMediaByTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Enhance Media By Template.
+        /// </summary>
+        /// <param name="req"><see cref="EnhanceMediaByTemplateRequest"/></param>
+        /// <returns><see cref="EnhanceMediaByTemplateResponse"/></returns>
+        public EnhanceMediaByTemplateResponse EnhanceMediaByTemplateSync(EnhanceMediaByTemplateRequest req)
+        {
+             JsonResponseModel<EnhanceMediaByTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnhanceMediaByTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnhanceMediaByTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3954,6 +4422,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ExecuteFunction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Extract CopyRight Watermark.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractCopyRightWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractCopyRightWatermarkResponse"/></returns>
+        public async Task<ExtractCopyRightWatermarkResponse> ExtractCopyRightWatermark(ExtractCopyRightWatermarkRequest req)
+        {
+             JsonResponseModel<ExtractCopyRightWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExtractCopyRightWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExtractCopyRightWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Extract CopyRight Watermark.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractCopyRightWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractCopyRightWatermarkResponse"/></returns>
+        public ExtractCopyRightWatermarkResponse ExtractCopyRightWatermarkSync(ExtractCopyRightWatermarkRequest req)
+        {
+             JsonResponseModel<ExtractCopyRightWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExtractCopyRightWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExtractCopyRightWatermarkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4045,7 +4553,70 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Initiate media quality inspection task.
+        /// </summary>
+        /// <param name="req"><see cref="InspectMediaQualityRequest"/></param>
+        /// <returns><see cref="InspectMediaQualityResponse"/></returns>
+        public async Task<InspectMediaQualityResponse> InspectMediaQuality(InspectMediaQualityRequest req)
+        {
+             JsonResponseModel<InspectMediaQualityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InspectMediaQuality");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InspectMediaQualityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Initiate media quality inspection task.
+        /// </summary>
+        /// <param name="req"><see cref="InspectMediaQualityRequest"/></param>
+        /// <returns><see cref="InspectMediaQualityResponse"/></returns>
+        public InspectMediaQualityResponse InspectMediaQualitySync(InspectMediaQualityRequest req)
+        {
+             JsonResponseModel<InspectMediaQualityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InspectMediaQuality");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InspectMediaQualityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Live broadcast real-time editing means that during the live broadcast process (that is, before the live broadcast has ended), customers can select a section of past live broadcast content to generate a new video (HLS format) in real time. Developers can share it immediately, or permanently Save it.
         /// 
+        /// Tencent Cloud VOD supports two real-time editing modes:
+        /// - Editing and solidification: Save the edited video as an independent video with an independent FileId; suitable for scenes where the highlight clips are saved for a long time;
+        /// - Editing is not solidified: the edited video is attached to the live broadcast recording file and does not have an independent FileId; it is suitable for scenarios where highlight clips are **temporarily shared**.
+        /// 
+        /// Notice:
+        /// - The prerequisite for using the live broadcast real-time editing function is that the target live stream has the [Time Shift Replay](https://intl.cloud.tencent.com/document/product/267/32742?from_cn_redirect=1) function enabled.
+        /// - Live broadcast real-time editing is based on the m3u8 file generated by live broadcast recording, so its minimum editing accuracy is one ts slice, and it is impossible to achieve second-level or more precise editing accuracy.
+        /// - Since the stream may be interrupted during the live broadcast, the actual video duration generated by editing may be inconsistent with expectations. For example, the time interval for editing a live stream is from 2018-09-20T10:30:00Z to 2018-09-20T10:40:00Z. If the stream is interrupted during this time interval, the duration of the returned media asset file will be Less than 10 minutes, in which case it can be sensed via the output parameter <a href="#p_segmentset">SegmentSet</a>.
+        /// 
+        /// ### Clip solidification
+        /// Clip solidification means saving the clipped video into an independent video (with an independent FileId). Its life cycle is not affected by the original live broadcast recording video (even if the original recording video is deleted, the editing results will not be affected in any way); it can also be subjected to secondary processing such as transcoding.
+        /// 
+        /// For example: for a complete football match, the original video recorded live may be as long as 2 hours. To save costs, the customer can store this video for 2 months, but for the "highlight moment" video that is edited in real time during the live broadcast However, you can specify a longer storage period, and at the same time, you can separately transcode the "highlight moments" video and other on-demand operations. At this time, you can choose the solution of real-time editing and solidification of the live broadcast.
+        /// 
+        /// The advantage of editing and curing is that its life cycle is independent of the original recorded video, and can be managed independently and stored for a long time.
+        /// 
+        /// ### Clips are not solidified
+        /// The editing is not solidified, which means that the result of editing (m3u8 file) and the live recording video share the same ts fragment. The newly generated video is not an independent and complete video (no independent FileId, only playback URL), and its validity period is the same as the live broadcast. The validity period of the complete recorded video is the same. Once the video recorded during the live broadcast is deleted, the clip will also become unplayable.
+        /// 
+        /// The clip is not solidified. Because the clip result is not an independent video, it will not be included in on-demand media asset video management (for example, the total number of videos in the console will not count this clip), and this clip cannot be transcoded separately. Video processing operations.
+        /// 
+        /// The advantage of not solidifying editing is that its editing operation is very "lightweight" and does not generate additional storage overhead. However, its disadvantage is that the life cycle is the same as the original recorded video, and further video processing such as transcoding cannot be performed.
         /// </summary>
         /// <param name="req"><see cref="LiveRealTimeClipRequest"/></param>
         /// <returns><see cref="LiveRealTimeClipResponse"/></returns>
@@ -4065,7 +4636,30 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Live broadcast real-time editing means that during the live broadcast process (that is, before the live broadcast has ended), customers can select a section of past live broadcast content to generate a new video (HLS format) in real time. Developers can share it immediately, or permanently Save it.
         /// 
+        /// Tencent Cloud VOD supports two real-time editing modes:
+        /// - Editing and solidification: Save the edited video as an independent video with an independent FileId; suitable for scenes where the highlight clips are saved for a long time;
+        /// - Editing is not solidified: the edited video is attached to the live broadcast recording file and does not have an independent FileId; it is suitable for scenarios where highlight clips are **temporarily shared**.
+        /// 
+        /// Notice:
+        /// - The prerequisite for using the live broadcast real-time editing function is that the target live stream has the [Time Shift Replay](https://intl.cloud.tencent.com/document/product/267/32742?from_cn_redirect=1) function enabled.
+        /// - Live broadcast real-time editing is based on the m3u8 file generated by live broadcast recording, so its minimum editing accuracy is one ts slice, and it is impossible to achieve second-level or more precise editing accuracy.
+        /// - Since the stream may be interrupted during the live broadcast, the actual video duration generated by editing may be inconsistent with expectations. For example, the time interval for editing a live stream is from 2018-09-20T10:30:00Z to 2018-09-20T10:40:00Z. If the stream is interrupted during this time interval, the duration of the returned media asset file will be Less than 10 minutes, in which case it can be sensed via the output parameter <a href="#p_segmentset">SegmentSet</a>.
+        /// 
+        /// ### Clip solidification
+        /// Clip solidification means saving the clipped video into an independent video (with an independent FileId). Its life cycle is not affected by the original live broadcast recording video (even if the original recording video is deleted, the editing results will not be affected in any way); it can also be subjected to secondary processing such as transcoding.
+        /// 
+        /// For example: for a complete football match, the original video recorded live may be as long as 2 hours. To save costs, the customer can store this video for 2 months, but for the "highlight moment" video that is edited in real time during the live broadcast However, you can specify a longer storage period, and at the same time, you can separately transcode the "highlight moments" video and other on-demand operations. At this time, you can choose the solution of real-time editing and solidification of the live broadcast.
+        /// 
+        /// The advantage of editing and curing is that its life cycle is independent of the original recorded video, and can be managed independently and stored for a long time.
+        /// 
+        /// ### Clips are not solidified
+        /// The editing is not solidified, which means that the result of editing (m3u8 file) and the live recording video share the same ts fragment. The newly generated video is not an independent and complete video (no independent FileId, only playback URL), and its validity period is the same as the live broadcast. The validity period of the complete recorded video is the same. Once the video recorded during the live broadcast is deleted, the clip will also become unplayable.
+        /// 
+        /// The clip is not solidified. Because the clip result is not an independent video, it will not be included in on-demand media asset video management (for example, the total number of videos in the console will not count this clip), and this clip cannot be transcoded separately. Video processing operations.
+        /// 
+        /// The advantage of not solidifying editing is that its editing operation is very "lightweight" and does not generate additional storage overhead. However, its disadvantage is that the life cycle is the same as the original recorded video, and further video processing such as transcoding cannot be performed.
         /// </summary>
         /// <param name="req"><see cref="LiveRealTimeClipRequest"/></param>
         /// <returns><see cref="LiveRealTimeClipResponse"/></returns>
@@ -4289,7 +4883,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// ModifyCDNDomainConfig.
+        /// Modify CDN Domain Config.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDNDomainConfigRequest"/></param>
         /// <returns><see cref="ModifyCDNDomainConfigResponse"/></returns>
@@ -4309,7 +4903,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// ModifyCDNDomainConfig.
+        /// Modify CDN Domain Config.
         /// </summary>
         /// <param name="req"><see cref="ModifyCDNDomainConfigRequest"/></param>
         /// <returns><see cref="ModifyCDNDomainConfigResponse"/></returns>
@@ -4442,6 +5036,136 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDefaultStorageRegion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultStorageRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modify enhance media template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnhanceMediaTemplateRequest"/></param>
+        /// <returns><see cref="ModifyEnhanceMediaTemplateResponse"/></returns>
+        public async Task<ModifyEnhanceMediaTemplateResponse> ModifyEnhanceMediaTemplate(ModifyEnhanceMediaTemplateRequest req)
+        {
+             JsonResponseModel<ModifyEnhanceMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEnhanceMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnhanceMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modify enhance media template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnhanceMediaTemplateRequest"/></param>
+        /// <returns><see cref="ModifyEnhanceMediaTemplateResponse"/></returns>
+        public ModifyEnhanceMediaTemplateResponse ModifyEnhanceMediaTemplateSync(ModifyEnhanceMediaTemplateRequest req)
+        {
+             JsonResponseModel<ModifyEnhanceMediaTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEnhanceMediaTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnhanceMediaTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Tencent Cloud VOD provides customers with media upload, media management, media processing and other services. During or at the end of the execution of these services, Tencent Cloud On-Demand also provides various corresponding event notifications to facilitate developers to perceive the service processing status and Do the next business operation. 
+        /// 
+        /// Developers can achieve this by calling this interface:
+        /// - Set the type of callback notification received. Currently, there is [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) and [reliable notification based on message queue](https://www.tencentcloud.com/document/product/266/33948) two types. 
+        /// - For [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948), you can set the address of the 3.0 format callback. For the description of 3.0 format callback, see [Historical Format Callback](https://intl.cloud.tencent.com/document/product/266/33796?from_cn_redirect=1). 
+        /// - Select settings to receive or ignore notification events for specific event services.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEventConfigRequest"/></param>
+        /// <returns><see cref="ModifyEventConfigResponse"/></returns>
+        public async Task<ModifyEventConfigResponse> ModifyEventConfig(ModifyEventConfigRequest req)
+        {
+             JsonResponseModel<ModifyEventConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEventConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEventConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Tencent Cloud VOD provides customers with media upload, media management, media processing and other services. During or at the end of the execution of these services, Tencent Cloud On-Demand also provides various corresponding event notifications to facilitate developers to perceive the service processing status and Do the next business operation. 
+        /// 
+        /// Developers can achieve this by calling this interface:
+        /// - Set the type of callback notification received. Currently, there is [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) and [reliable notification based on message queue](https://www.tencentcloud.com/document/product/266/33948) two types. 
+        /// - For [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948), you can set the address of the 3.0 format callback. For the description of 3.0 format callback, see [Historical Format Callback](https://intl.cloud.tencent.com/document/product/266/33796?from_cn_redirect=1). 
+        /// - Select settings to receive or ignore notification events for specific event services.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEventConfigRequest"/></param>
+        /// <returns><see cref="ModifyEventConfigResponse"/></returns>
+        public ModifyEventConfigResponse ModifyEventConfigSync(ModifyEventConfigRequest req)
+        {
+             JsonResponseModel<ModifyEventConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEventConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEventConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modify HeadTail Template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="ModifyHeadTailTemplateResponse"/></returns>
+        public async Task<ModifyHeadTailTemplateResponse> ModifyHeadTailTemplate(ModifyHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<ModifyHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHeadTailTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modify HeadTail Template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="ModifyHeadTailTemplateResponse"/></returns>
+        public ModifyHeadTailTemplateResponse ModifyHeadTailTemplateSync(ModifyHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<ModifyHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHeadTailTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4635,7 +5359,47 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to modify a remaster template.
+        /// Modifies media quality inspection template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="ModifyQualityInspectTemplateResponse"/></returns>
+        public async Task<ModifyQualityInspectTemplateResponse> ModifyQualityInspectTemplate(ModifyQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<ModifyQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modifies media quality inspection template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyQualityInspectTemplateRequest"/></param>
+        /// <returns><see cref="ModifyQualityInspectTemplateResponse"/></returns>
+        public ModifyQualityInspectTemplateResponse ModifyQualityInspectTemplateSync(ModifyQualityInspectTemplateRequest req)
+        {
+             JsonResponseModel<ModifyQualityInspectTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyQualityInspectTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyQualityInspectTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modify Rebuild Media Template.
         /// </summary>
         /// <param name="req"><see cref="ModifyRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="ModifyRebuildMediaTemplateResponse"/></returns>
@@ -4655,7 +5419,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to modify a remaster template.
+        /// Modify Rebuild Media Template.
         /// </summary>
         /// <param name="req"><see cref="ModifyRebuildMediaTemplateRequest"/></param>
         /// <returns><see cref="ModifyRebuildMediaTemplateResponse"/></returns>
@@ -5205,19 +5969,19 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to initiate a media processing task on a VOD file. The task may include:
-        /// 1. Video transcoding (with watermark)
-        /// 2. Animated image generating
-        /// 3. Time point screenshot
-        /// 4. Sampled screenshot
-        /// 5. Image sprite generating
-        /// 6. Taking a screenshot to use as the thumbnail
-        /// 7. Adaptive bitrate streaming and encryption
-        /// 8. Moderation (pornographic, terrorist, and politically sensitive content). We <font color=red>do not recommend</font> using this API to initiate a moderation task. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
-        /// 9. Content analysis for labeling, categorization, thumbnail generation, or labeling by frame.
-        /// 10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
+        /// Initiate processing tasks for media file in VOD, including: 
+        /// 1. Video transcoding (with Watermark); 
+        /// 2. Video to animated image; 
+        /// 3. Screencapturing the video at specified Time point;
+        /// 4. Sampled screenshot of the video;
+        /// 5. Generated Image sprite template from the video;
+        /// 6. Generated a cover image from the video;
+        /// 7. Adaptive Bitrate Streaming for the video (with encryption); 
+        /// 8. Content Moderation (offensive Information, unsafe Information, inappropriate Information), it is <font color=red>not recommended</font> to use this API, recommend using [Video moderation(ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/50634) or [Image moderation(ReviewImage)](https://www.tencentcloud.com/document/api/266/47138);
+        /// 9. Content analysis (tag, category, cover, frame-by-frame tag);
+        /// 10. Content recognition (video intro and outro, face, Text, keyword, voice, Key object).
         /// 
-        /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// If using event notification, the event notification type is [task flow status change](https://www.tencentcloud.com/document/product/266/33953).
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -5237,19 +6001,19 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to initiate a media processing task on a VOD file. The task may include:
-        /// 1. Video transcoding (with watermark)
-        /// 2. Animated image generating
-        /// 3. Time point screenshot
-        /// 4. Sampled screenshot
-        /// 5. Image sprite generating
-        /// 6. Taking a screenshot to use as the thumbnail
-        /// 7. Adaptive bitrate streaming and encryption
-        /// 8. Moderation (pornographic, terrorist, and politically sensitive content). We <font color=red>do not recommend</font> using this API to initiate a moderation task. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
-        /// 9. Content analysis for labeling, categorization, thumbnail generation, or labeling by frame.
-        /// 10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
+        /// Initiate processing tasks for media file in VOD, including: 
+        /// 1. Video transcoding (with Watermark); 
+        /// 2. Video to animated image; 
+        /// 3. Screencapturing the video at specified Time point;
+        /// 4. Sampled screenshot of the video;
+        /// 5. Generated Image sprite template from the video;
+        /// 6. Generated a cover image from the video;
+        /// 7. Adaptive Bitrate Streaming for the video (with encryption); 
+        /// 8. Content Moderation (offensive Information, unsafe Information, inappropriate Information), it is <font color=red>not recommended</font> to use this API, recommend using [Video moderation(ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/50634) or [Image moderation(ReviewImage)](https://www.tencentcloud.com/document/api/266/47138);
+        /// 9. Content analysis (tag, category, cover, frame-by-frame tag);
+        /// 10. Content recognition (video intro and outro, face, Text, keyword, voice, Key object).
         /// 
-        /// If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+        /// If using event notification, the event notification type is [task flow status change](https://www.tencentcloud.com/document/product/266/33953).
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -5495,7 +6259,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to remaster audio/video.
+        /// Initiate rebuild media
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaRequest"/></param>
         /// <returns><see cref="RebuildMediaResponse"/></returns>
@@ -5515,7 +6279,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to remaster audio/video.
+        /// Initiate rebuild media
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaRequest"/></param>
         /// <returns><see cref="RebuildMediaResponse"/></returns>
@@ -5535,7 +6299,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to start a remaster task using a template.
+        /// Rebuild media by template.
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaByTemplateRequest"/></param>
         /// <returns><see cref="RebuildMediaByTemplateResponse"/></returns>
@@ -5555,7 +6319,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to start a remaster task using a template.
+        /// Rebuild media by template.
         /// </summary>
         /// <param name="req"><see cref="RebuildMediaByTemplateRequest"/></param>
         /// <returns><see cref="RebuildMediaByTemplateResponse"/></returns>
@@ -5825,43 +6589,47 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to search for media files by specific criteria. You can sort the results and specify the information to return.
-        /// - Specify a list of file IDs (`FileIds`). Any file that matches one of the IDs will be returned.
-        /// - Specify one or multiple keywords for `Names` or `Descriptions` for fuzzy search by filename or description.
-        /// - Specify multiple filename prefixes (`NamePrefixes`).
-        /// - Specify a list of categories (`ClassIds`). Any file that matches one of the categories will be returned. For example, assume that there are categories `Movies`, `TV Series`, and `Variety Shows`, and `Movies` has subcategories including `History`, `Action`, and `Romance`. If `ClassIds` is set to `Movies` and `TV Series`, all media files in `Movies` (including its subcategories) and `TV Series` will be returned. If `ClassIds` is set to `History` and `Action`, only the files in those two subcategories will be returned.
-        /// - Specify a list of labels (`Tags`). Any file that matches one or more of the labels will be returned. For example, assume that there are labels `ACG`, `Drama`, and `YTPMV`. If `Tags` is set to `ACG` and `YTPMV`, any media file with either label will be returned.
-        /// - Specify the types (`Categories`) of media files. Any file that matches one of the types will be returned. There are three file types: `Video`, `Audio`, and `Image`. If `Categories` is set to `Video` and `Audio`, all audio and video files will be returned.
-        /// - Specify the source types (`SourceTypes`). Any file that matches one of the source types specified will be returned. For example, if you set `SourceTypes` to `Record` (live recording) and `Upload` (upload), all recording files and uploaded files will be returned.
-        /// - Specify the file formats (`MediaTypes`), such as MP4, AVI, and MP3. All files in the specified formats will be returned. For example, if you set `MediaTypes` to MP4 and MP3, all files in these two formats will be returned.
-        /// - Specify the file statuses (`Status`). Files in the specified statuses will be returned. Valid values: `Normal`, `SystemForbidden` (blocked by VOD), `Forbidden` (blocked by you). If you set `Status` to `Normal` and `Forbidden`, files in either status will be returned.
-        /// - Specify the types of moderation results (`ReviewResults`). Files that have the specified types of moderation results will be returned. Valid values include `pass`, `block`, and more. If you set `ReviewResults` to `pass` and `block`, files whose moderation result is "pass" or "block" will be returned.
-        /// - Specify the stream IDs (`StreamIds`) of live recording files.
-        /// - Specify a time range for search by file creation time.
-        /// - Specify the TRTC application IDs.
-        /// - Specify the TRTC room IDs.
-        /// - Specify one keyword for `Text` for fuzzy search by filename or description. (This is not recommended. Please use `Names`, `NamePrefixes` or `Descriptions` instead.)
-        /// - Specify one source (`SourceType`). (This is not recommended. Please use `SourceTypes` instead.)
-        /// - Specify one stream ID (`StreamId`). (This is not recommended. Please use `StreamIds` instead.)
-        /// - Specify the start (`StartTime`) of the time range to search by creation time. (This is not recommended. Please use `CreateTime` instead.)
-        /// - Specify the end (`EndTime`) of the time range to search by creation time. (This is not recommended. Please use `CreateTime` instead.)
-        /// - You can search by any combination of the parameters above. For example, you can search for media files with the label "Drama" or "Suspense" in the category of "Movies" and "TV Series" created between 12:00:00, December 1, 2018 and 12:00:00, December 8, 2018. Note that for parameters whose data type is array, the search logic between their elements is "OR". The search logic between parameters is "AND".
+        /// Search for media information, supporting multiple condition filtering, as well as sorting and filtering of returned results. This includes:
+        /// - Specify a collection of file IDs (FileIds) to return media with any ID in the collection.
+        /// - Fuzzy search based on multiple media file names (Names) or description information (Descriptions).
+        /// - Search based on multiple file name prefixes (NamePrefixes).
+        /// - Specify a collection of categories (ClassIds, see input parameters) to return media that meets any category in the collection. For example, media categories include movies, TV shows, variety shows, etc., and there are subcategories such as historical films, action films, and romance films under the movie category. If ClassIds specifies movies and TV shows, all subcategories under movies and TV shows will be returned; if ClassIds specifies historical films and action films, only media under these two subcategories will be returned.
+        /// - Specify a collection of tags (Tags, see input parameters) to return media that meets any tag in the collection. For example, media tags include ACG, palace fighting, and ghost animal. If Tags specifies ACG and ghost animal, media that meets any of these two tags will be retrieved.
+        /// - Specify a collection of file types (Categories, see input parameters) to return media that meets any type in the collection. For example, file types include Video (video), Audio (audio), and Image (image). If Categories specifies Video and Audio, media that meets these types will be retrieved.
+        /// - Specify a collection of sources (SourceTypes, see input parameters) to return media that meets any source in the collection. For example, media sources include Record (live recording) and Upload (upload). If SourceTypes specifies Record and Upload, media that meets these sources will be retrieved.
+        /// - Specify a collection of file container formats (MediaTypes, see input parameters) to return media that meets any container format in the collection. For example, container formats include MP4, AVI, MP3, etc. If MediaTypes specifies MP4 and MP3, media that meets these container formats will be retrieved.
+        /// - Specify a collection of file statuses (Status, see input parameters) to return media that meets any status in the collection. For example, file statuses include Normal (normal), SystemForbidden (platform ban), and Forbidden (active ban). If Status specifies Normal and Forbidden, media that meets these statuses will be retrieved.
+        /// - Specify a collection of file moderation results (ReviewResults, see input parameters) to return media that meets any status in the collection. For example, file moderation results include pass (passed) and block (not compliant). If ReviewResults specifies pass and block, media that meets these moderation results will be retrieved.
+        /// - Filter live recorded media by specifying a collection of live streaming codes (StreamIds, see input parameters).
+        /// - Filter media by specifying the creation time range of the media.
+        /// - Filter media by specifying a collection of TRTC application IDs.
+        /// - Filter media by specifying a collection of TRTC room IDs.
         /// 
-        /// - You can sort the results by creation time and return them in multiple pages by specifying `Offset` and `Limit`.
-        /// - You can use `Filters` to specify the types of file information to return (all types are returned by default). Valid values:
-        ///     1. `basicInfo`: The file name, category, playback URL, thumbnail, etc.
-        ///     2. `metaData`: The file size, duration, video stream information, audio stream information, etc.
-        ///     3. `transcodeInfo`: The URLs, video stream parameters, and audio stream parameters of transcoding outputs.
-        ///     4. `animatedGraphicsInfo`: The information of the animated images (such as GIF images) generated.
-        ///     5. `sampleSnapshotInfo`: The information of the sampled screenshots generated.
-        ///     6. `imageSpriteInfo`: The information of the image sprites generated.
-        ///     7. `snapshotByTimeOffsetInfo`: The information of the time point screenshots generated.
-        ///     8. `keyFrameDescInfo`: The video timestamp information.
-        ///     9. `adaptiveDynamicStreamingInfo`: The specification, encryption type, format, etc.
+        /// - The above parameters can be combined in any way to search. For example, filter media created between 12:00:00 on December 1, 2018, and 12:00:00 on December 8, 2018, categorized as movies or TV shows, and tagged with palace fighting and suspense. Note that the search logic for elements of any parameter that supports array input is 'or'. The logical relationship between all parameters is 'and'
         /// 
-        /// <div id="maxResultsDesc">Limits for returned records:</div>
-        /// - The <b><a href="#p_offset">Offset</a> and <a href="#p_limit">Limit</a> parameters determine the number of records per page. If neither parameter is passed, this API will return up to 10 records.</b>
-        /// - <b>Up to 5,000 records can be returned. If a request returns too many records, we recommend you use more specific search criteria to narrow down the results.</b>
+        /// - Allow to control the type of media information returned through Filters (default to return all information). Optional inputs include:
+        ///     1. Basic information (basicInfo): including media name, category, playback URL, cover image, etc.
+        ///     2. Metadata (metaData): including size, duration, video stream information, audio stream information, etc.
+        ///     3. Transcoding result information (transcodeInfo): including the media addresses, video stream parameters, audio stream parameters, etc., generated by transcoding the media into various specifications.
+        ///     4.  Animated image result information (animatedGraphicsInfo): information on the animated image (such as gif) generated after converting the video.
+        ///     Sampled screenshot information (sampleSnapshotInfo): screenshot information after sampling the video.
+        ///     6. Image sprite information (imageSpriteInfo): image sprite information after generating the sprite from the video.
+        ///     7. Specified time point screenshot information (snapshotByTimeOffsetInfo): screenshot information after capturing the video at specified time points.
+        ///     8. Video timestamp info (keyFrameDescInfo): timestamp information set for the video.
+        ///     9. Adaptive Bitrate Streaming information (adaptiveDynamicStreamingInfo): including specifications, encryption types, muxing formats, and other relevant information.
+        /// 
+        /// - Allow sorting the results by creation time and returning them in pages. Pagination is controlled by Offset and Limit (see input parameters).
+        /// 
+        /// <div id="maxResultsDesc">API result count limitation:</div>
+        /// - <b><a href="#p_offset">Offset</a> and <a href="#p_limit">Limit</a> both affect the number of results returned in a single page query. Please pay special attention: when both of these values are missing, this API will return a maximum of 10 query results.</b>
+        /// - <b>Supports up to 5,000 search results, and queries beyond this limit are not supported. If the search result volume is too large, it is recommended to use more refined filtering conditions to reduce search results.</b>
+        /// 
+        /// <br>Not recommended for conditional filtering:
+        /// - (Not recommended: use Names, NamePrefixes, or Descriptions instead) Fuzzy search for media file names or description information with a single text (Text).
+        /// - (Not recommended: use SourceTypes instead) Search for media files with a single source (SourceType).
+        /// - (Not recommended: use StreamIds instead) Search for media files with a single live streaming code (StreamId).
+        /// - (Not recommended: use CreateTime instead) Search for media files with a single start creation time (StartTime).
+        /// - (Not recommended: use CreateTime instead) Search for media files with a single end creation time (EndTime).
         /// </summary>
         /// <param name="req"><see cref="SearchMediaRequest"/></param>
         /// <returns><see cref="SearchMediaResponse"/></returns>
@@ -5881,43 +6649,47 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to search for media files by specific criteria. You can sort the results and specify the information to return.
-        /// - Specify a list of file IDs (`FileIds`). Any file that matches one of the IDs will be returned.
-        /// - Specify one or multiple keywords for `Names` or `Descriptions` for fuzzy search by filename or description.
-        /// - Specify multiple filename prefixes (`NamePrefixes`).
-        /// - Specify a list of categories (`ClassIds`). Any file that matches one of the categories will be returned. For example, assume that there are categories `Movies`, `TV Series`, and `Variety Shows`, and `Movies` has subcategories including `History`, `Action`, and `Romance`. If `ClassIds` is set to `Movies` and `TV Series`, all media files in `Movies` (including its subcategories) and `TV Series` will be returned. If `ClassIds` is set to `History` and `Action`, only the files in those two subcategories will be returned.
-        /// - Specify a list of labels (`Tags`). Any file that matches one or more of the labels will be returned. For example, assume that there are labels `ACG`, `Drama`, and `YTPMV`. If `Tags` is set to `ACG` and `YTPMV`, any media file with either label will be returned.
-        /// - Specify the types (`Categories`) of media files. Any file that matches one of the types will be returned. There are three file types: `Video`, `Audio`, and `Image`. If `Categories` is set to `Video` and `Audio`, all audio and video files will be returned.
-        /// - Specify the source types (`SourceTypes`). Any file that matches one of the source types specified will be returned. For example, if you set `SourceTypes` to `Record` (live recording) and `Upload` (upload), all recording files and uploaded files will be returned.
-        /// - Specify the file formats (`MediaTypes`), such as MP4, AVI, and MP3. All files in the specified formats will be returned. For example, if you set `MediaTypes` to MP4 and MP3, all files in these two formats will be returned.
-        /// - Specify the file statuses (`Status`). Files in the specified statuses will be returned. Valid values: `Normal`, `SystemForbidden` (blocked by VOD), `Forbidden` (blocked by you). If you set `Status` to `Normal` and `Forbidden`, files in either status will be returned.
-        /// - Specify the types of moderation results (`ReviewResults`). Files that have the specified types of moderation results will be returned. Valid values include `pass`, `block`, and more. If you set `ReviewResults` to `pass` and `block`, files whose moderation result is "pass" or "block" will be returned.
-        /// - Specify the stream IDs (`StreamIds`) of live recording files.
-        /// - Specify a time range for search by file creation time.
-        /// - Specify the TRTC application IDs.
-        /// - Specify the TRTC room IDs.
-        /// - Specify one keyword for `Text` for fuzzy search by filename or description. (This is not recommended. Please use `Names`, `NamePrefixes` or `Descriptions` instead.)
-        /// - Specify one source (`SourceType`). (This is not recommended. Please use `SourceTypes` instead.)
-        /// - Specify one stream ID (`StreamId`). (This is not recommended. Please use `StreamIds` instead.)
-        /// - Specify the start (`StartTime`) of the time range to search by creation time. (This is not recommended. Please use `CreateTime` instead.)
-        /// - Specify the end (`EndTime`) of the time range to search by creation time. (This is not recommended. Please use `CreateTime` instead.)
-        /// - You can search by any combination of the parameters above. For example, you can search for media files with the label "Drama" or "Suspense" in the category of "Movies" and "TV Series" created between 12:00:00, December 1, 2018 and 12:00:00, December 8, 2018. Note that for parameters whose data type is array, the search logic between their elements is "OR". The search logic between parameters is "AND".
+        /// Search for media information, supporting multiple condition filtering, as well as sorting and filtering of returned results. This includes:
+        /// - Specify a collection of file IDs (FileIds) to return media with any ID in the collection.
+        /// - Fuzzy search based on multiple media file names (Names) or description information (Descriptions).
+        /// - Search based on multiple file name prefixes (NamePrefixes).
+        /// - Specify a collection of categories (ClassIds, see input parameters) to return media that meets any category in the collection. For example, media categories include movies, TV shows, variety shows, etc., and there are subcategories such as historical films, action films, and romance films under the movie category. If ClassIds specifies movies and TV shows, all subcategories under movies and TV shows will be returned; if ClassIds specifies historical films and action films, only media under these two subcategories will be returned.
+        /// - Specify a collection of tags (Tags, see input parameters) to return media that meets any tag in the collection. For example, media tags include ACG, palace fighting, and ghost animal. If Tags specifies ACG and ghost animal, media that meets any of these two tags will be retrieved.
+        /// - Specify a collection of file types (Categories, see input parameters) to return media that meets any type in the collection. For example, file types include Video (video), Audio (audio), and Image (image). If Categories specifies Video and Audio, media that meets these types will be retrieved.
+        /// - Specify a collection of sources (SourceTypes, see input parameters) to return media that meets any source in the collection. For example, media sources include Record (live recording) and Upload (upload). If SourceTypes specifies Record and Upload, media that meets these sources will be retrieved.
+        /// - Specify a collection of file container formats (MediaTypes, see input parameters) to return media that meets any container format in the collection. For example, container formats include MP4, AVI, MP3, etc. If MediaTypes specifies MP4 and MP3, media that meets these container formats will be retrieved.
+        /// - Specify a collection of file statuses (Status, see input parameters) to return media that meets any status in the collection. For example, file statuses include Normal (normal), SystemForbidden (platform ban), and Forbidden (active ban). If Status specifies Normal and Forbidden, media that meets these statuses will be retrieved.
+        /// - Specify a collection of file moderation results (ReviewResults, see input parameters) to return media that meets any status in the collection. For example, file moderation results include pass (passed) and block (not compliant). If ReviewResults specifies pass and block, media that meets these moderation results will be retrieved.
+        /// - Filter live recorded media by specifying a collection of live streaming codes (StreamIds, see input parameters).
+        /// - Filter media by specifying the creation time range of the media.
+        /// - Filter media by specifying a collection of TRTC application IDs.
+        /// - Filter media by specifying a collection of TRTC room IDs.
         /// 
-        /// - You can sort the results by creation time and return them in multiple pages by specifying `Offset` and `Limit`.
-        /// - You can use `Filters` to specify the types of file information to return (all types are returned by default). Valid values:
-        ///     1. `basicInfo`: The file name, category, playback URL, thumbnail, etc.
-        ///     2. `metaData`: The file size, duration, video stream information, audio stream information, etc.
-        ///     3. `transcodeInfo`: The URLs, video stream parameters, and audio stream parameters of transcoding outputs.
-        ///     4. `animatedGraphicsInfo`: The information of the animated images (such as GIF images) generated.
-        ///     5. `sampleSnapshotInfo`: The information of the sampled screenshots generated.
-        ///     6. `imageSpriteInfo`: The information of the image sprites generated.
-        ///     7. `snapshotByTimeOffsetInfo`: The information of the time point screenshots generated.
-        ///     8. `keyFrameDescInfo`: The video timestamp information.
-        ///     9. `adaptiveDynamicStreamingInfo`: The specification, encryption type, format, etc.
+        /// - The above parameters can be combined in any way to search. For example, filter media created between 12:00:00 on December 1, 2018, and 12:00:00 on December 8, 2018, categorized as movies or TV shows, and tagged with palace fighting and suspense. Note that the search logic for elements of any parameter that supports array input is 'or'. The logical relationship between all parameters is 'and'
         /// 
-        /// <div id="maxResultsDesc">Limits for returned records:</div>
-        /// - The <b><a href="#p_offset">Offset</a> and <a href="#p_limit">Limit</a> parameters determine the number of records per page. If neither parameter is passed, this API will return up to 10 records.</b>
-        /// - <b>Up to 5,000 records can be returned. If a request returns too many records, we recommend you use more specific search criteria to narrow down the results.</b>
+        /// - Allow to control the type of media information returned through Filters (default to return all information). Optional inputs include:
+        ///     1. Basic information (basicInfo): including media name, category, playback URL, cover image, etc.
+        ///     2. Metadata (metaData): including size, duration, video stream information, audio stream information, etc.
+        ///     3. Transcoding result information (transcodeInfo): including the media addresses, video stream parameters, audio stream parameters, etc., generated by transcoding the media into various specifications.
+        ///     4.  Animated image result information (animatedGraphicsInfo): information on the animated image (such as gif) generated after converting the video.
+        ///     Sampled screenshot information (sampleSnapshotInfo): screenshot information after sampling the video.
+        ///     6. Image sprite information (imageSpriteInfo): image sprite information after generating the sprite from the video.
+        ///     7. Specified time point screenshot information (snapshotByTimeOffsetInfo): screenshot information after capturing the video at specified time points.
+        ///     8. Video timestamp info (keyFrameDescInfo): timestamp information set for the video.
+        ///     9. Adaptive Bitrate Streaming information (adaptiveDynamicStreamingInfo): including specifications, encryption types, muxing formats, and other relevant information.
+        /// 
+        /// - Allow sorting the results by creation time and returning them in pages. Pagination is controlled by Offset and Limit (see input parameters).
+        /// 
+        /// <div id="maxResultsDesc">API result count limitation:</div>
+        /// - <b><a href="#p_offset">Offset</a> and <a href="#p_limit">Limit</a> both affect the number of results returned in a single page query. Please pay special attention: when both of these values are missing, this API will return a maximum of 10 query results.</b>
+        /// - <b>Supports up to 5,000 search results, and queries beyond this limit are not supported. If the search result volume is too large, it is recommended to use more refined filtering conditions to reduce search results.</b>
+        /// 
+        /// <br>Not recommended for conditional filtering:
+        /// - (Not recommended: use Names, NamePrefixes, or Descriptions instead) Fuzzy search for media file names or description information with a single text (Text).
+        /// - (Not recommended: use SourceTypes instead) Search for media files with a single source (SourceType).
+        /// - (Not recommended: use StreamIds instead) Search for media files with a single live streaming code (StreamId).
+        /// - (Not recommended: use CreateTime instead) Search for media files with a single start creation time (StartTime).
+        /// - (Not recommended: use CreateTime instead) Search for media files with a single end creation time (EndTime).
         /// </summary>
         /// <param name="req"><see cref="SearchMediaRequest"/></param>
         /// <returns><see cref="SearchMediaResponse"/></returns>
@@ -6061,7 +6833,47 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This interface is used to enable/disable CDN accelerated domain names.
+        /// Split the video into strips to generate multiple new videos.
+        /// </summary>
+        /// <param name="req"><see cref="SplitMediaRequest"/></param>
+        /// <returns><see cref="SplitMediaResponse"/></returns>
+        public async Task<SplitMediaResponse> SplitMedia(SplitMediaRequest req)
+        {
+             JsonResponseModel<SplitMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SplitMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SplitMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Split the video into strips to generate multiple new videos.
+        /// </summary>
+        /// <param name="req"><see cref="SplitMediaRequest"/></param>
+        /// <returns><see cref="SplitMediaResponse"/></returns>
+        public SplitMediaResponse SplitMediaSync(SplitMediaRequest req)
+        {
+             JsonResponseModel<SplitMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SplitMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SplitMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used for enabling/disabling the CDN acceleration domain.
         /// </summary>
         /// <param name="req"><see cref="StartCDNDomainRequest"/></param>
         /// <returns><see cref="StartCDNDomainResponse"/></returns>
@@ -6081,7 +6893,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This interface is used to enable/disable CDN accelerated domain names.
+        /// This API is used for enabling/disabling the CDN acceleration domain.
         /// </summary>
         /// <param name="req"><see cref="StartCDNDomainRequest"/></param>
         /// <returns><see cref="StartCDNDomainResponse"/></returns>
@@ -6092,6 +6904,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "StartCDNDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartCDNDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify the domain name resolution value.
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDomainRecordRequest"/></param>
+        /// <returns><see cref="VerifyDomainRecordResponse"/></returns>
+        public async Task<VerifyDomainRecordResponse> VerifyDomainRecord(VerifyDomainRecordRequest req)
+        {
+             JsonResponseModel<VerifyDomainRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyDomainRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to verify the domain name resolution value.
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDomainRecordRequest"/></param>
+        /// <returns><see cref="VerifyDomainRecordResponse"/></returns>
+        public VerifyDomainRecordResponse VerifyDomainRecordSync(VerifyDomainRecordRequest req)
+        {
+             JsonResponseModel<VerifyDomainRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyDomainRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
         /// </summary>
         [JsonProperty("Origins")]
         public string[] Origins{ get; set; }
 
         /// <summary>
-        /// 
+        /// Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// 
+        /// When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
         /// </summary>
         [JsonProperty("OriginPullProtocol")]
         public string OriginPullProtocol{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
         /// </summary>
         [JsonProperty("BackupOrigins")]
         public string[] BackupOrigins{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
         /// </summary>
         [JsonProperty("BackupOriginType")]
         public string BackupOriginType{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string BackupServerName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
         /// </summary>
         [JsonProperty("OriginCompany")]
         public string OriginCompany{ get; set; }

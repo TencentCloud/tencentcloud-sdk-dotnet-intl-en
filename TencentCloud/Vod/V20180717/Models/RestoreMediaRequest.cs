@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The IDs of media files.
+        /// Media file unique identifier list, maximum length: 100.
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// The number of days during which the restored files will remain available.
+        /// The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
         /// </summary>
         [JsonProperty("RestoreDay")]
         public ulong? RestoreDay{ get; set; }

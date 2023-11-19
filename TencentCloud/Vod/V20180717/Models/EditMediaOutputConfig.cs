@@ -25,37 +25,38 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Output file name, up to 64 characters. By default, the generated file name is specified by the system.
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output file format, optional values: mp4, hls. The default is mp4.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Classification ID is used to classify media. You can create a classification through the Create Classification interface to obtain the classification ID. 
+        /// <li>Default value: 0, indicating other categories. </li>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// 
+        /// The expiration time of the output file. The file will be deleted after this time. The default is permanent and not expired. The format is expressed in accordance with the ISO 8601 standard. For details, see [ISO Date Format Description](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output video information.
         /// </summary>
         [JsonProperty("VideoStream")]
         public EditMediaVideoStream VideoStream{ get; set; }
 
         /// <summary>
-        /// 
+        /// TSC Transcoding Config.
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public EditMediaTEHDConfig TEHDConfig{ get; set; }

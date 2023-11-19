@@ -129,21 +129,21 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? IsCloud{ get; set; }
 
         /// <summary>
-        /// Network attacks
+        /// Number of network attacks
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Attack")]
         public ulong? Attack{ get; set; }
 
         /// <summary>
-        /// Network access
+        /// Number of network access requests
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Access")]
         public ulong? Access{ get; set; }
 
         /// <summary>
-        /// Network Interception
+        /// Number of blocked attacks
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Intercept")]

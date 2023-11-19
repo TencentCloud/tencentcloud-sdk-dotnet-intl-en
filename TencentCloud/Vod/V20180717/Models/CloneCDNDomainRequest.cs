@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ReferenceDomain{ get; set; }
 
         /// <summary>
-        /// 
+        /// VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

@@ -43,25 +43,33 @@ namespace TencentCloud.Teo.V20220901.Models
         public OriginInfo OriginInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin-pull protocol configuration. Values:
+        /// <li>`FOLLOW`: Follow the protocol of origin</li>
+        /// <li>`HTTP`: Send requests to the origin over HTTP</li>
+        /// <li>`HTTPS`: Send requests to the origin over HTTPS</li>
+        /// <li>Default: `FOLLOW`</li>
         /// </summary>
         [JsonProperty("OriginProtocol")]
         public string OriginProtocol{ get; set; }
 
         /// <summary>
-        /// 
+        /// Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
         /// </summary>
         [JsonProperty("HttpOriginPort")]
         public ulong? HttpOriginPort{ get; set; }
 
         /// <summary>
-        /// 
+        /// Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
         /// </summary>
         [JsonProperty("HttpsOriginPort")]
         public ulong? HttpsOriginPort{ get; set; }
 
         /// <summary>
-        /// 
+        /// IPv6 status. Values:
+        /// <li>`follow`: Follow the IPv6 configuration of the site</li>
+        /// <li>`on`: Enable</li>
+        /// <li>`off`: Disable</li>
+        /// <li>Default: `follow`</li>
         /// </summary>
         [JsonProperty("IPv6Status")]
         public string IPv6Status{ get; set; }

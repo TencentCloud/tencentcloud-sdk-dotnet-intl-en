@@ -116,7 +116,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Access{ get; set; }
 
         /// <summary>
-        /// Network interception
+        /// Number of blocked attacks
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Intercept")]
@@ -291,7 +291,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? VerifyStatus{ get; set; }
 
         /// <summary>
-        /// Bot access data
+        /// u200cNumber of bot attacks
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BotAccessCount")]

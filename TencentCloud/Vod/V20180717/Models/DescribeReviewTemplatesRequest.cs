@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? SubAppId{ get; set; }
 
         /// <summary>
-        /// The IDs of the moderation templates to query. Array length limit: 100.
+        /// The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

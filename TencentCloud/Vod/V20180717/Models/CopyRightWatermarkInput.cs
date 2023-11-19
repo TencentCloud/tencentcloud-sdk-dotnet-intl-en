@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Copyright information, maximum length is 200 characters.
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

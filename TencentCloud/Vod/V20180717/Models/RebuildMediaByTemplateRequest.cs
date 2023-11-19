@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// The remaster template ID.
+        /// Rebuild Media Template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// New file configuration after rebuild.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public RebuildMediaOutputConfig OutputConfig{ get; set; }

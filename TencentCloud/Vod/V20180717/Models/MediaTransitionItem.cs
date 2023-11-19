@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public TransitionOpertion[] Transitions{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transition operation list. Image transition operations and audio transition operations support at most one each.
         /// </summary>
         [JsonProperty("MediaTransitions")]
         public TransitionOperation[] MediaTransitions{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Action. Valid values: <li>`monitor`: Observe;</li>`<li>drop`: Block;</li> <li>`alg`: JavaScript challenge. </li>	
+        /// Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -66,7 +66,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// The rule status. Values:
         /// <li>`on`: Enabled</li>
-        /// <li>`off`: Disabled</li>Default value: on
+        /// <li>`off`: Disabled</li>Default value: `on`
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
@@ -85,7 +85,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Rule ID, which is only used as an output parameter.
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
@@ -93,26 +92,49 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// The filter. Values:
         /// <li>`sip`: Client IP</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// This parameter is left empty by default.
         /// </summary>
         [JsonProperty("FreqFields")]
         public string[] FreqFields{ get; set; }
 
         /// <summary>
-        /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Update time. It is only used as a response parameter, and defaults to the current time. 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Statistical dimension. `source_to_eo` is entered by default when this parameter is not specified. Valid values:
-        /// <li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne. </li>
+        /// Query scope. Values:
+        /// <li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
         /// <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Default: `source_to_eo`.
         /// </summary>
         [JsonProperty("FreqScope")]
         public string[] FreqScope{ get; set; }
+
+        /// <summary>
+        /// Name of the custom return page. It's required when `Action=page`.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+        /// </summary>
+        [JsonProperty("CustomResponseId")]
+        public string CustomResponseId{ get; set; }
+
+        /// <summary>
+        /// The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+        /// </summary>
+        [JsonProperty("ResponseCode")]
+        public long? ResponseCode{ get; set; }
+
+        /// <summary>
+        /// The redirection URL. It's required when `Action=redirect`.
+        /// </summary>
+        [JsonProperty("RedirectUrl")]
+        public string RedirectUrl{ get; set; }
 
 
         /// <summary>
@@ -133,6 +155,10 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
+            this.SetParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
+            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         }
     }
 }

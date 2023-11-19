@@ -59,7 +59,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Unique ID of Multi-cloud asset
+        /// The ID specific for an asset synched from another cloud platform
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Arn")]

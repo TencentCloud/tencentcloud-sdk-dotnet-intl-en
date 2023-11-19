@@ -53,7 +53,22 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// 
+        /// Queryed storage type, valid values:
+        /// <li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
+        /// <li>StandardStorage: Standard storage. </li>
+        /// <li>InfrequentStorage: low-frequency storage. </li>
+        /// <li>ArchiveStorage: archive storage. </li>
+        /// <li>DeepArchiveStorage: deep archive storage. </li>
+        /// <li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
+        /// <li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
+        /// <li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
+        /// <li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
+        /// <li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
+        /// <li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
+        /// <li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
+        /// <li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
+        /// <li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
+        /// The default value is TotalStorage.
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

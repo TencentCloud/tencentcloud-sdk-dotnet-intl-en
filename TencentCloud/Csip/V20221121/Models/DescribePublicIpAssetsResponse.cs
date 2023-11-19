@@ -45,7 +45,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] AssetLocationList{ get; set; }
 
         /// <summary>
-        /// List of IPs
+        /// List of IP types
         /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IpTypeList")]

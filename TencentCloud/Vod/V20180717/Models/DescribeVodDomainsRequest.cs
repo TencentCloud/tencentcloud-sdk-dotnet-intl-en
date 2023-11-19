@@ -25,8 +25,8 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of domain names. If this parameter is left empty, all domain names will be listed.
-        /// <li>Maximum number of domain names listed: 20</li>
+        /// Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
+        /// <li>The maximum number of domain names is 20. </li>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

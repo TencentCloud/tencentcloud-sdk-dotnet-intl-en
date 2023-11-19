@@ -25,67 +25,69 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Input the type of video. The possible values u200bu200bare File and Stream.
         /// </summary>
         [JsonProperty("InputType")]
         public string InputType{ get; set; }
 
         /// <summary>
-        /// 
+        /// </b>VOD Application ID. If you want to access resources in a sub-app, fill in this field with the sub-app ID; otherwise, don't fill in this field.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input video file information, required when InputType is File.
         /// </summary>
         [JsonProperty("FileInfos")]
         public EditMediaFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// nput stream information, required when InputType is Stream.
         /// </summary>
         [JsonProperty("StreamInfos")]
         public EditMediaStreamInfo[] StreamInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
+        /// <li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
+        /// <li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task flow template name, if you want Fill in when executing the task flow on the generated new video.
         /// </summary>
         [JsonProperty("ProcedureName")]
         public string ProcedureName{ get; set; }
 
         /// <summary>
-        /// 
+        /// The file configuration generated after editing.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public EditMediaOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 
+        /// The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+        /// The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Reserved field for special purposes.
+        /// Reserved fields, used for special purposes.
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

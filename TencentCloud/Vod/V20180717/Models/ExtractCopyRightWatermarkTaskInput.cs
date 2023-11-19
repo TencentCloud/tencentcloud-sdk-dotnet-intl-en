@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// The media URL from which the watermark needs to be extracted.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

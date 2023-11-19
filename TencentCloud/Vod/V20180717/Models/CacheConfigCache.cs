@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? CacheTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
         /// </summary>
         [JsonProperty("CompareMaxAge")]
         public string CompareMaxAge{ get; set; }
 
         /// <summary>
-        /// 
+        /// Force caching, values: <li>on: on; </li> <li>off: off. </li>
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]
         public string IgnoreCacheControl{ get; set; }
 
         /// <summary>
-        /// 
+        /// When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
         /// </summary>
         [JsonProperty("IgnoreSetCookie")]
         public string IgnoreSetCookie{ get; set; }

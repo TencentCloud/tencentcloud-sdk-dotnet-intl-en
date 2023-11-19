@@ -69,13 +69,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the sampling screenshot task starts execution is in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the sampling screenshot task is completed uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

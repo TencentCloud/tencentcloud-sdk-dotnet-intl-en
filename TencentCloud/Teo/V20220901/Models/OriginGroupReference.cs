@@ -25,19 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Services referencing the origin group. Values:
+        /// <li>`AccelerationDomain`: Acceleration domain name</li>
+        /// <li>`RuleEngine`: Rules engine</li>
+        /// <li>`Loadbalance`: Load balancer</li>
+        /// <li>`ApplicationProxy`: L4 proxy</li>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the instances referencing the origin group
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Name of the instance referencing the origin group
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

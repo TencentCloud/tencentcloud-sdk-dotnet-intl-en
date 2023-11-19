@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Copyright information
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

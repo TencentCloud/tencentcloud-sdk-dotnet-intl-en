@@ -25,13 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Heuristic cache configuration switch, the values u200bu200bare: 
+        /// <li>on: on; </li>
+        /// <li>off: off. </li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom heuristic cache time configuration.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheConfig")]
         public HeuristicCacheConfig CacheConfig{ get; set; }

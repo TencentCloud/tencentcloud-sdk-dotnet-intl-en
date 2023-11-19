@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
-        /// If 0 is passed, the default block page will be used.
+        /// The ID of the block page. Specify `0` to use the default block page. 
+        /// (Disused) If 0 is passed, the default block page will be used.
         /// </summary>
         [JsonProperty("PageId")]
         public long? PageId{ get; set; }
 
         /// <summary>
-        /// The HTTP status code of the block page. Value range: 100-600.
+        /// The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
@@ -45,11 +45,16 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Type of the block page. Values:
-        /// <li>`file`: Block page file</li>
-        /// <li>`url`: Block page URL</li>
+        /// <li>`page`: Return the specified page.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
+
+        /// <summary>
+        /// ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+        /// </summary>
+        [JsonProperty("CustomResponseId")]
+        public string CustomResponseId{ get; set; }
 
 
         /// <summary>
@@ -61,6 +66,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
         }
     }
 }

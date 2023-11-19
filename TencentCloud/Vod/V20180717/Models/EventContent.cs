@@ -58,143 +58,161 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FileUploadEvent")]
         public FileUploadTask FileUploadEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ProcedureStateChangeEvent")]
         public ProcedureTask ProcedureStateChangeEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FileDeleteEvent")]
         public FileDeleteTask FileDeleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PullCompleteEvent")]
         public PullUploadTask PullCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("EditMediaCompleteEvent")]
         public EditMediaTask EditMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SplitMediaCompleteEvent")]
         public SplitMediaTask SplitMediaCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ComposeMediaCompleteEvent")]
         public ComposeMediaTask ComposeMediaCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ClipCompleteEvent")]
         public ClipTask2017 ClipCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TranscodeCompleteEvent")]
         public TranscodeTask2017 TranscodeCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CreateImageSpriteCompleteEvent")]
         public CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ConcatCompleteEvent")]
         public ConcatTask2017 ConcatCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetCompleteEvent")]
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("WechatPublishCompleteEvent")]
         public WechatPublishTask WechatPublishCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("WechatMiniProgramPublishCompleteEvent")]
         public WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent{ get; set; }
 
         /// <summary>
-        /// The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RemoveWatermarkCompleteEvent")]
         public RemoveWatermarkTask RemoveWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
-        /// The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RestoreMediaCompleteEvent")]
         public RestoreMediaTask RestoreMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RebuildMediaCompleteEvent")]
         public RebuildMediaTask RebuildMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ExtractTraceWatermarkCompleteEvent")]
         public ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ExtractCopyRightWatermarkCompleteEvent")]
         public ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ReviewAudioVideoCompleteEvent")]
         public ReviewAudioVideoTask ReviewAudioVideoCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ReduceMediaBitrateCompleteEvent")]
         public ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DescribeFileAttributesCompleteEvent")]
         public DescribeFileAttributesTask DescribeFileAttributesCompleteEvent{ get; set; }
 
         /// <summary>
         /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("QualityInspectCompleteEvent")]
         public QualityInspectTask QualityInspectCompleteEvent{ get; set; }

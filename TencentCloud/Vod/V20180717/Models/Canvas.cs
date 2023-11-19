@@ -34,13 +34,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Color{ get; set; }
 
         /// <summary>
-        /// 
+        /// Canvas width, that is, the width of the output video, value range: 0~3840, unit: px. 
+        /// Default value: 0, which means the video width is the same as the first video clip of the first video track.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 
+        /// Canvas height, that is, the height (or long side) of the output video, value range: 0~3840, unit: px. 
+        /// Default value: 0, which means the video height is consistent with the first video clip of the first video track.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

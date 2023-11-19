@@ -53,6 +53,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to bind/unbind a domain name to/from a specific policy template. 
+        /// </summary>
+        /// <param name="req"><see cref="BindSecurityTemplateToEntityRequest"/></param>
+        /// <returns><see cref="BindSecurityTemplateToEntityResponse"/></returns>
+        public async Task<BindSecurityTemplateToEntityResponse> BindSecurityTemplateToEntity(BindSecurityTemplateToEntityRequest req)
+        {
+             JsonResponseModel<BindSecurityTemplateToEntityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindSecurityTemplateToEntity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindSecurityTemplateToEntityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to bind/unbind a domain name to/from a specific policy template. 
+        /// </summary>
+        /// <param name="req"><see cref="BindSecurityTemplateToEntityRequest"/></param>
+        /// <returns><see cref="BindSecurityTemplateToEntityResponse"/></returns>
+        public BindSecurityTemplateToEntityResponse BindSecurityTemplateToEntitySync(BindSecurityTemplateToEntityRequest req)
+        {
+             JsonResponseModel<BindSecurityTemplateToEntityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindSecurityTemplateToEntity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindSecurityTemplateToEntityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
         /// </summary>
         /// <param name="req"><see cref="BindSharedCNAMERequest"/></param>
@@ -337,7 +377,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an origin group.
+        /// This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
         /// <returns><see cref="CreateOriginGroupResponse"/></returns>
@@ -357,7 +397,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an origin group.
+        /// This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
         /// <returns><see cref="CreateOriginGroupResponse"/></returns>
@@ -825,7 +865,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an origin group.
+        /// This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
         /// </summary>
         /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
         /// <returns><see cref="DeleteOriginGroupResponse"/></returns>
@@ -845,7 +885,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an origin group.
+        /// This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
         /// </summary>
         /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
         /// <returns><see cref="DeleteOriginGroupResponse"/></returns>
@@ -1745,6 +1785,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query bindings of a policy template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityTemplateBindingsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityTemplateBindingsResponse"/></returns>
+        public async Task<DescribeSecurityTemplateBindingsResponse> DescribeSecurityTemplateBindings(DescribeSecurityTemplateBindingsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityTemplateBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityTemplateBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityTemplateBindingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query bindings of a policy template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityTemplateBindingsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityTemplateBindingsResponse"/></returns>
+        public DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindingsSync(DescribeSecurityTemplateBindingsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityTemplateBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityTemplateBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityTemplateBindingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the list of L4 traffic data recorded over time.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
@@ -2509,7 +2589,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an origin group.
+        /// This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
         /// <returns><see cref="ModifyOriginGroupResponse"/></returns>
@@ -2529,7 +2609,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an origin group.
+        /// This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
         /// <returns><see cref="ModifyOriginGroupResponse"/></returns>

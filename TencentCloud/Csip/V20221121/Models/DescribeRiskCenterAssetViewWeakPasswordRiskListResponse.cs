@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public AssetViewWeakPassRisk[] Data{ get; set; }
 
         /// <summary>
-        /// List of status
+        /// List of risk handling status
         /// </summary>
         [JsonProperty("StatusLists")]
         public FilterDataObject[] StatusLists{ get; set; }

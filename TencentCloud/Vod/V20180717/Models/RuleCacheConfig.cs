@@ -25,19 +25,22 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Cache configuration.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Cache")]
         public CacheConfigCache Cache{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration is not cached.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("NoCache")]
         public CacheConfigNoCache NoCache{ get; set; }
 
         /// <summary>
-        /// 
+        /// Follow the origin configuration.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public CacheConfigFollowOrigin FollowOrigin{ get; set; }

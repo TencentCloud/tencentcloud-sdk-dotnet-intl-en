@@ -44,7 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// 
+        /// Copyright watermark.
         /// </summary>
         [JsonProperty("CopyRightWatermark")]
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }

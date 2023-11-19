@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
         /// </summary>
         [JsonProperty("Revalidate")]
         public string Revalidate{ get; set; }

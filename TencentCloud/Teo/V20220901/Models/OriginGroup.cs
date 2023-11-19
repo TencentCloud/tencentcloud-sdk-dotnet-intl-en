@@ -25,37 +25,39 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// The ID of the origin group.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// The name of the origin group.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// The origin group type. Values:
+        /// <li>`GENERAL`: General origin group</li>
+        /// <li>`HTTP`: HTTP-specific origin group</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Details of the origin record.
         /// </summary>
         [JsonProperty("Records")]
         public OriginRecord[] Records{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of instances referencing this origin group.	
         /// </summary>
         [JsonProperty("References")]
         public OriginGroupReference[] References{ get; set; }
 
         /// <summary>
-        /// 
+        /// Creation time of the origin group.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

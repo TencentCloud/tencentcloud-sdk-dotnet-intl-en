@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Media file unique identifier list, maximum length: 100.
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }

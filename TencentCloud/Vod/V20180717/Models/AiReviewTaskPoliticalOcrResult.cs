@@ -63,7 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewPoliticalOcrTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio and video review OCR text involves the task progress of inappropriate information, the value range is [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

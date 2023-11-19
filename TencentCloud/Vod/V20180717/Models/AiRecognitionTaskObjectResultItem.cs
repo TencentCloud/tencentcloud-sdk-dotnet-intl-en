@@ -38,7 +38,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskObjectSeqmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of fragments in which the object appears.
         /// </summary>
         [JsonProperty("RecognitionSegmentSet")]
         public AiRecognitionTaskObjectSegmentItem[] RecognitionSegmentSet{ get; set; }
