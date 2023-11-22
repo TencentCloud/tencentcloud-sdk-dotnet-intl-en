@@ -25,7 +25,7 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// Task ID, a globally unique identifier.
+        /// HarvestJob ID, a globally unique identifier.
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// Task ID, a globally unique identifier, ID can contain up to 128 characters. Supported characters are numbers, letters, underscores (_), and dashes (-).
+        /// HarvestJob ID, a globally unique identifier.
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
@@ -37,43 +37,37 @@ namespace TencentCloud.Mdp.V20200527.Models
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// The associated endpoint name, StreamPackage only supports harvesting content from HLS and DASH endpoints that have startover turned on.
+        /// The associated endpoint name.
         /// </summary>
         [JsonProperty("EndpointName")]
         public string EndpointName{ get; set; }
 
         /// <summary>
-        /// Time format, supports the following types: 
-        /// 1. Epoch seconds 
-        /// 2. ISO-8601.
+        /// Time format, supports the following types: 1. Epoch seconds 2. ISO-8601
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
         /// <summary>
-        /// Task start time supports two formats for TimeFormat input: 
-        /// 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-        /// 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+        /// Task start time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Task end time supports two formats for TimeFormat input: 
-        /// 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 
-        /// 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
+        /// Task end time supports two formats for TimeFormat input: 1. Epoch seconds: The input box is a numeric input box, and only positive integers can be entered. 2. ISO-8601: The supported format is ISO time, for example: 2023-08-01T10:00:00+08:00.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The COS bucket address where the recording file is stored in COS, format: https://{Bucket_name}-{AppId}.cos.{Region}.myqcloud.com/.
+        /// The path where the recording file is stored in Cos.
         /// </summary>
         [JsonProperty("Destination")]
         public string Destination{ get; set; }
 
         /// <summary>
-        /// The path in the cos bucket and identifier for the parent manifest for the live-to-VOD asset, fotmat: {path 1}/xxx/{path n}/{name}.m3u8.
+        /// The file name of the recording file stored in Cos.
         /// </summary>
         [JsonProperty("Manifest")]
         public string Manifest{ get; set; }

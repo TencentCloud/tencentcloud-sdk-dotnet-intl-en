@@ -25,7 +25,7 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// Job ID, a globally unique identifier.
+        /// HarvestJob ID, a globally unique identifier.
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Mdp.V20200527.Models
         public string TimeFormat{ get; set; }
 
         /// <summary>
-        /// Job start time.
+        /// HarvestJob start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Job end time.
+        /// HarvestJob end time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Mdp.V20200527.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Job error message.
+        /// HarvestJob error message.
         /// </summary>
         [JsonProperty("ErrMessage")]
         public string ErrMessage{ get; set; }
 
         /// <summary>
-        /// Job creation time, timestamp in seconds.
+        /// HarvestJob creation time, timestamp in seconds.
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
