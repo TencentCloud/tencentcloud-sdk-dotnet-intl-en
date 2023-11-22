@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.825</VersionPrefix>
+    <VersionPrefix>3.0.826</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,16 +57,27 @@
     <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageHarvestJobRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageHarvestJobResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsRequest.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelsRequest.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageHarvestJobRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageHarvestJobResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageHarvestJobsRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageHarvestJobsResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageChannelRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageChannelResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageChannelsRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageHarvestJobRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageHarvestJobResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageHarvestJobsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageHarvestJobsResponse.cs" />
     <Compile Include="V20200527\Models\EndpointAuthInfo.cs" />
     <Compile Include="V20200527\Models\EndpointInfo.cs" />
+    <Compile Include="V20200527\Models\HarvestJobResp.cs" />
     <Compile Include="V20200527\Models\InputAuthInfo.cs" />
     <Compile Include="V20200527\Models\InputInfo.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelEndpointRequest.cs" />

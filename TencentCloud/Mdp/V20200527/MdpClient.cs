@@ -173,6 +173,46 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
+        /// Create HarvestJob.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageHarvestJobRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageHarvestJobResponse"/></returns>
+        public async Task<CreateStreamPackageHarvestJobResponse> CreateStreamPackageHarvestJob(CreateStreamPackageHarvestJobRequest req)
+        {
+             JsonResponseModel<CreateStreamPackageHarvestJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStreamPackageHarvestJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageHarvestJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Create HarvestJob.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageHarvestJobRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageHarvestJobResponse"/></returns>
+        public CreateStreamPackageHarvestJobResponse CreateStreamPackageHarvestJobSync(CreateStreamPackageHarvestJobRequest req)
+        {
+             JsonResponseModel<CreateStreamPackageHarvestJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStreamPackageHarvestJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageHarvestJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to delete endpoints from a StreamPackage channel in batches.
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamPackageChannelEndpointsRequest"/></param>
@@ -253,6 +293,86 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
+        /// Delete HarvestJob.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageHarvestJobRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageHarvestJobResponse"/></returns>
+        public async Task<DeleteStreamPackageHarvestJobResponse> DeleteStreamPackageHarvestJob(DeleteStreamPackageHarvestJobRequest req)
+        {
+             JsonResponseModel<DeleteStreamPackageHarvestJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteStreamPackageHarvestJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageHarvestJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Delete HarvestJob.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageHarvestJobRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageHarvestJobResponse"/></returns>
+        public DeleteStreamPackageHarvestJobResponse DeleteStreamPackageHarvestJobSync(DeleteStreamPackageHarvestJobRequest req)
+        {
+             JsonResponseModel<DeleteStreamPackageHarvestJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamPackageHarvestJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageHarvestJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Deleting HarvestJobs in Batch.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageHarvestJobsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageHarvestJobsResponse"/></returns>
+        public async Task<DeleteStreamPackageHarvestJobsResponse> DeleteStreamPackageHarvestJobs(DeleteStreamPackageHarvestJobsRequest req)
+        {
+             JsonResponseModel<DeleteStreamPackageHarvestJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteStreamPackageHarvestJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageHarvestJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Deleting HarvestJobs in Batch.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageHarvestJobsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageHarvestJobsResponse"/></returns>
+        public DeleteStreamPackageHarvestJobsResponse DeleteStreamPackageHarvestJobsSync(DeleteStreamPackageHarvestJobsRequest req)
+        {
+             JsonResponseModel<DeleteStreamPackageHarvestJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteStreamPackageHarvestJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageHarvestJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query the information of a StreamPackage channel.
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamPackageChannelRequest"/></param>
@@ -324,6 +444,86 @@ namespace TencentCloud.Mdp.V20200527
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStreamPackageChannels");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Query HarvestJob.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageHarvestJobRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageHarvestJobResponse"/></returns>
+        public async Task<DescribeStreamPackageHarvestJobResponse> DescribeStreamPackageHarvestJob(DescribeStreamPackageHarvestJobRequest req)
+        {
+             JsonResponseModel<DescribeStreamPackageHarvestJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamPackageHarvestJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageHarvestJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Query HarvestJob.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageHarvestJobRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageHarvestJobResponse"/></returns>
+        public DescribeStreamPackageHarvestJobResponse DescribeStreamPackageHarvestJobSync(DescribeStreamPackageHarvestJobRequest req)
+        {
+             JsonResponseModel<DescribeStreamPackageHarvestJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamPackageHarvestJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageHarvestJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Batch query HarvestJob.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageHarvestJobsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageHarvestJobsResponse"/></returns>
+        public async Task<DescribeStreamPackageHarvestJobsResponse> DescribeStreamPackageHarvestJobs(DescribeStreamPackageHarvestJobsRequest req)
+        {
+             JsonResponseModel<DescribeStreamPackageHarvestJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamPackageHarvestJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageHarvestJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Batch query HarvestJob.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageHarvestJobsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageHarvestJobsResponse"/></returns>
+        public DescribeStreamPackageHarvestJobsResponse DescribeStreamPackageHarvestJobsSync(DescribeStreamPackageHarvestJobsRequest req)
+        {
+             JsonResponseModel<DescribeStreamPackageHarvestJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamPackageHarvestJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageHarvestJobsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
