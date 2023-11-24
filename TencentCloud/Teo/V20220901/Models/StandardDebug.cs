@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Allowed client source. It supports IPv4/IPv6 addresses and CIDR blocks.
+        /// Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
         /// </summary>
         [JsonProperty("AllowClientIPList")]
         public string[] AllowClientIPList{ get; set; }

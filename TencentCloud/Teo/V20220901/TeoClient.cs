@@ -1585,7 +1585,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the L7 traffic summary statistics recorded over time.
+        /// This API is used to query the time sequence traffic data of the monitoring category in L7. This API is to be discarded. Please use the API <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a>.
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
         /// <returns><see cref="DescribeOverviewL7DataResponse"/></returns>
@@ -1605,7 +1605,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the L7 traffic summary statistics recorded over time.
+        /// This API is used to query the time sequence traffic data of the monitoring category in L7. This API is to be discarded. Please use the API <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a>.
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
         /// <returns><see cref="DescribeOverviewL7DataResponse"/></returns>
@@ -1625,7 +1625,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the pre-warming task status.
+        /// DescribePrefetchTasks is used to query the submission history and execution progress of preheating tasks. This interface can be used to query the tasks submitted by the CreatePrefetchTasks interface.
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
         /// <returns><see cref="DescribePrefetchTasksResponse"/></returns>
@@ -1645,7 +1645,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the pre-warming task status.
+        /// DescribePrefetchTasks is used to query the submission history and execution progress of preheating tasks. This interface can be used to query the tasks submitted by the CreatePrefetchTasks interface.
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
         /// <returns><see cref="DescribePrefetchTasksResponse"/></returns>
@@ -1665,7 +1665,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Querying the cache purging history
+        /// DescribePurgeTasks is used to query the submitted URL refreshing and directory refreshing records and execution progress. This interface can be used to query the tasks submitted by the CreatePurgeTasks API.
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeTasksRequest"/></param>
         /// <returns><see cref="DescribePurgeTasksResponse"/></returns>
@@ -1685,7 +1685,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Querying the cache purging history
+        /// DescribePurgeTasks is used to query the submitted URL refreshing and directory refreshing records and execution progress. This interface can be used to query the tasks submitted by the CreatePurgeTasks API.
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeTasksRequest"/></param>
         /// <returns><see cref="DescribePurgeTasksResponse"/></returns>

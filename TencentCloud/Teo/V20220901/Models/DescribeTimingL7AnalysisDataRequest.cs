@@ -37,21 +37,20 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The metric to query. Values:
-        /// <li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
-        /// <li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
-        /// <li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
-        /// <li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
-        /// <li>`l7Flow_request`: Access requests</li>
-        /// <li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-        /// <li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+        /// Indicator list. Values: 
+        /// <li>l7Flow_outFlux: Edgeone response traffic;</li>
+        /// <li>l7Flow_inFlux: Edgeone request traffic;</li>
+        /// <li>l7Flow_outBandwidth: Edgeone response bandwidth;</li>
+        /// <li>l7Flow_inBandwidth: Edgeone request bandwidth;</li>
+        /// <li>l7Flow_request: Number of access requests;</li>
+        /// <li>l7Flow_flux: Uplink + downlink traffic of access requests;< li>
+        /// <li>l7Flow_bandwidth: Uplink + downlink bandwidth of access requests. </li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// List of sites
-        /// Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+        /// ZoneId set. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

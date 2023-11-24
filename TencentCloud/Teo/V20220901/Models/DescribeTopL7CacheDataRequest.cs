@@ -47,7 +47,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// Specifies sites by ID. All sites will be selected if this field is not specified.
+        /// ZoneId set. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

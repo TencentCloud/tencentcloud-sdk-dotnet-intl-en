@@ -63,7 +63,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// (Required) List of sites. No query results are returned if this field is not specified.
+        /// ZoneId set. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

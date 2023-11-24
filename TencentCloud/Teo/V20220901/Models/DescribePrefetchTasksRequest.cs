@@ -25,6 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
+        /// ZoneId. 
+        /// The parameter is required.
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
         /// Start time of the query.
         /// </summary>
         [JsonProperty("StartTime")]
@@ -49,8 +56,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter criteria. Each filter criteria can have up to 20 entries.
-        /// <li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`job-id`:<br>   Filter by <strong>task ID</strong>, such as 1379afjk91u32h (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`target`:<br>   Filter by <strong>target resource</strong>, such as http://www.qq.com/1.txt (up to one entry)<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`domains`:<br>   Filter by <strong>domain name</strong>, such as www.qq.com<br>   Type: String<br>   Required: No<br>   Fuzzy query: Not supported</li><li>`statuses`:<br>   Filter by <strong>task status</strong><br>   Required: No<br>   Fuzzy query: Not supported<br>   Values:<br>   `processing`: The task is in progress.<br>   `success`: The task succeeded.<br>   `failed`: The task failed.<br>   `timeout`: The task timed out.</li>
+        /// Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: <li>job-id<br>    Filter based on [<strong>task ID</strong>]. job-id format: 1379afjk91u32h. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>target<br>    Filter based on [<strong>target resource information</strong>]. target format: http://www.qq.com/1.txt. Multiple values are not supported. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>domains<br>    Filter based on [<strong>domain name</strong>]. domains format: www.qq.com. <br>    Type: String<br>    Required: No. <br>    Fuzz query: Not supported. </li><li>statuses<br>    Filter based on [<strong>task status</strong>]. <br>    Required: No<br>    Fuzz query: Not supported. <br>    Options:<br>    processing: Processing<br>    success: Success<br>    failed: Failure<br>    timeout: Timeout</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
@@ -61,6 +67,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

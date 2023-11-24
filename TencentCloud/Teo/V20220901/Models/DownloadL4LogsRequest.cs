@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// List of sites. This parameter is required. A `null` will be returned if it is left empty.
+        /// ZoneId set. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
