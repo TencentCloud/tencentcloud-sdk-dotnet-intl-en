@@ -137,9 +137,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Category{ get; set; }
 
         /// <summary>
-        /// The file status. Valid values: `Normal`, `Forbidden`.
-        /// 
-        /// *Note: This field is not supported yet.	
+        /// File status: Normal: normal, Forbidden: banned.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

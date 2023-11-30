@@ -809,6 +809,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Create Just In Time Transcode Template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
+        public async Task<CreateJustInTimeTranscodeTemplateResponse> CreateJustInTimeTranscodeTemplate(CreateJustInTimeTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<CreateJustInTimeTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateJustInTimeTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateJustInTimeTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Create Just In Time Transcode Template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
+        public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplateSync(CreateJustInTimeTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<CreateJustInTimeTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateJustInTimeTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateJustInTimeTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create samples for using facial features positioning and other technologies to perform video processing operations such as content recognition and inappropriate information recognition.
         /// </summary>
         /// <param name="req"><see cref="CreatePersonSampleRequest"/></param>
@@ -1862,6 +1902,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteImageSpriteTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageSpriteTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Delete Just In Time Transcode Template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="DeleteJustInTimeTranscodeTemplateResponse"/></returns>
+        public async Task<DeleteJustInTimeTranscodeTemplateResponse> DeleteJustInTimeTranscodeTemplate(DeleteJustInTimeTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<DeleteJustInTimeTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteJustInTimeTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteJustInTimeTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Delete Just In Time Transcode Template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="DeleteJustInTimeTranscodeTemplateResponse"/></returns>
+        public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplateSync(DeleteJustInTimeTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<DeleteJustInTimeTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteJustInTimeTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteJustInTimeTranscodeTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3246,6 +3326,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImageSpriteTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Describe Just In Time Transcode Templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeJustInTimeTranscodeTemplatesResponse"/></returns>
+        public async Task<DescribeJustInTimeTranscodeTemplatesResponse> DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeJustInTimeTranscodeTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeJustInTimeTranscodeTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJustInTimeTranscodeTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Describe Just In Time Transcode Templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeJustInTimeTranscodeTemplatesResponse"/></returns>
+        public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplatesSync(DescribeJustInTimeTranscodeTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeJustInTimeTranscodeTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJustInTimeTranscodeTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJustInTimeTranscodeTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5215,6 +5335,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Modify Just In Time Transcode Template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="ModifyJustInTimeTranscodeTemplateResponse"/></returns>
+        public async Task<ModifyJustInTimeTranscodeTemplateResponse> ModifyJustInTimeTranscodeTemplate(ModifyJustInTimeTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<ModifyJustInTimeTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyJustInTimeTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyJustInTimeTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Modify Just In Time Transcode Template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="ModifyJustInTimeTranscodeTemplateResponse"/></returns>
+        public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplateSync(ModifyJustInTimeTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<ModifyJustInTimeTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyJustInTimeTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyJustInTimeTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.
         /// </summary>
         /// <param name="req"><see cref="ModifyMediaInfoRequest"/></param>
@@ -6740,6 +6900,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "SetDrmKeyProviderInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDrmKeyProviderInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Set Vod Domain Certificate.
+        /// </summary>
+        /// <param name="req"><see cref="SetVodDomainCertificateRequest"/></param>
+        /// <returns><see cref="SetVodDomainCertificateResponse"/></returns>
+        public async Task<SetVodDomainCertificateResponse> SetVodDomainCertificate(SetVodDomainCertificateRequest req)
+        {
+             JsonResponseModel<SetVodDomainCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetVodDomainCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVodDomainCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Set Vod Domain Certificate.
+        /// </summary>
+        /// <param name="req"><see cref="SetVodDomainCertificateRequest"/></param>
+        /// <returns><see cref="SetVodDomainCertificateResponse"/></returns>
+        public SetVodDomainCertificateResponse SetVodDomainCertificateSync(SetVodDomainCertificateRequest req)
+        {
+             JsonResponseModel<SetVodDomainCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetVodDomainCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVodDomainCertificateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

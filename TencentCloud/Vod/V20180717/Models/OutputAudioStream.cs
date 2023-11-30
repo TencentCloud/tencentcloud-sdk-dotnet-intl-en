@@ -53,6 +53,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
+        /// <summary>
+        /// The bit rate of the audio stream, value range: 0 and [26, 256], unit: kbps. 
+        /// When the value is 0, the audio bitrate will be automatically set.
+        /// </summary>
+        [JsonProperty("Bitrate")]
+        public long? Bitrate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
         }
     }
 }

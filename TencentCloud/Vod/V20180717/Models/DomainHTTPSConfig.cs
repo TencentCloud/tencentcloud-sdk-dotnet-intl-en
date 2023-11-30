@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CertExpireTime")]
         public string CertExpireTime{ get; set; }
 
+        /// <summary>
+        /// Certificate ID in Tencent Cloud SSL product.
+        /// </summary>
+        [JsonProperty("CloudCertId")]
+        public string CloudCertId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CertExpireTime", this.CertExpireTime);
+            this.SetParamSimple(map, prefix + "CloudCertId", this.CloudCertId);
         }
     }
 }

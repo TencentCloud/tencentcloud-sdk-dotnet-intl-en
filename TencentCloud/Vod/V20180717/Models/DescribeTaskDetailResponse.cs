@@ -211,6 +211,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public QualityInspectTask QualityInspectTask{ get; set; }
 
         /// <summary>
+        /// Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("QualityEnhanceTask")]
+        public QualityEnhanceTask QualityEnhanceTask{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -247,6 +254,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
             this.SetParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
             this.SetParamObj(map, prefix + "QualityInspectTask.", this.QualityInspectTask);
+            this.SetParamObj(map, prefix + "QualityEnhanceTask.", this.QualityEnhanceTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

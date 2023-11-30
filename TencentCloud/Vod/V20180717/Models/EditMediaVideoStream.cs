@@ -25,6 +25,23 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// The encoding format of the video stream, optional values:
+        /// <li>libx264: H.264 encoding;</li>
+        /// <li>libx265: H.265 encoding;</li>
+        /// <li>av1: AOMedia Video 1 encoding;</li>
+        /// <li>H.266: H.266 encoding. </li>
+        /// </summary>
+        [JsonProperty("Codec")]
+        public string Codec{ get; set; }
+
+        /// <summary>
+        /// The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
+        /// When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+        /// </summary>
+        [JsonProperty("Bitrate")]
+        public ulong? Bitrate{ get; set; }
+
+        /// <summary>
         /// Resolution adaptive, optional values:
         /// <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
         /// <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
@@ -67,6 +84,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Codec", this.Codec);
+            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
