@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Sub-rule status. Valid values: `on` and `off`.
+        /// Whether to enable WAF sub-rules. Values:
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

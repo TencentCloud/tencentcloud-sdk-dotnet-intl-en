@@ -62,7 +62,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Specifies a region for your query:
+        /// Specifies a region to query the prefetch records
         /// `mainland`: Chinese mainland
         /// `overseas`: Outside the Chinese mainland
         /// `global`: Globe

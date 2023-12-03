@@ -25,9 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
-        /// 
-        /// * WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
+        /// Whether to enable WebSocket connection timeout. Values:
+        /// `on`: When it's enabled, the connection timeout can be configured.
+        /// `off`: When it's disabled, the connection timeout is set to 15 seconds by default.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

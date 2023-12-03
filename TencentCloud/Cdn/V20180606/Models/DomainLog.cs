@@ -56,6 +56,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("LogName")]
         public string LogName{ get; set; }
 
+        /// <summary>
+        /// File size, in bytes.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public long? FileSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "LogPath", this.LogPath);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "LogName", this.LogName);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Downstream speed configuration switch
+        /// Whether to enable downstream speed limit. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

@@ -25,8 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether to include `QueryString` as part of `CacheKey`. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -39,8 +41,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Reorder{ get; set; }
 
         /// <summary>
-        /// Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to include URL parameters. Values:
+        /// `includeAll`: Include all parameters.
+        /// `excludeAll`: Exclude all parameters.
+        /// `includeCustom`: Include custom parameters.
+        /// `excludeCustom`: Exclude custom parameters.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

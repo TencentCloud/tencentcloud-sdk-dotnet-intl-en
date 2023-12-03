@@ -25,10 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// HTTPS configuration switch
+        /// Whether to enable HTTPS. Values:
         /// `on`: Enable
         /// `off`: Disable
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

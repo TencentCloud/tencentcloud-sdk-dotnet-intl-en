@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Configuration switch
+        /// Whether to enable the custom origin-pull request to follow the host when a 302 code is returned. Values:
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

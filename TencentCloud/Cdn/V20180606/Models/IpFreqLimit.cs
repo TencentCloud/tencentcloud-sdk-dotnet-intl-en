@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// IP access limit configuration switch
+        /// Whether to enable IP rate limit. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

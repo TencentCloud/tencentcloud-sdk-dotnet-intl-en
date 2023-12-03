@@ -25,10 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Status code redirect configuration switch
+        /// Whether to enable status code-based redirection. Values:
         /// `on`: Enable
         /// `off`: Disable
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

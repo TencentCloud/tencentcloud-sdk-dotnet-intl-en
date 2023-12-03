@@ -49,10 +49,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
-        /// Rule template ID If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+        /// Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
+
+        /// <summary>
+        /// Audit type. Valid values: true: Record all; false: Record by rules (default value).
+        /// </summary>
+        [JsonProperty("AuditAll")]
+        public bool? AuditAll{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
             this.SetParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
             this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+            this.SetParamSimple(map, prefix + "AuditAll", this.AuditAll);
         }
     }
 }

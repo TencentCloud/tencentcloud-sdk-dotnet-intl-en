@@ -26,21 +26,21 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// Policy type. Valid values: `auto`, `manual`.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Manually expanded CPU, which is valid when `Type` is `manual`.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpandCpu")]
         public string ExpandCpu{ get; set; }
 
         /// <summary>
         /// Automatic expansion policy, which is valid when `Type` is `auto`.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AutoStrategy")]
         public string AutoStrategy{ get; set; }

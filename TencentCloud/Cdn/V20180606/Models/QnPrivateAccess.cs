@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Switch. Valid values: `on`, `off`.
+        /// Whether to enable origin-pull authentication for QiNiu Cloud Kodo. Values:
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

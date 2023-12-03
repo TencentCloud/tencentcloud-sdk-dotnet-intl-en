@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.834</VersionPrefix>
+    <VersionPrefix>3.0.835</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,12 +101,17 @@
     <Compile Include="V20191205\Models\DescribeCertificatesResponse.cs" />
     <Compile Include="V20191205\Models\DescribeHostTeoInstanceListRequest.cs" />
     <Compile Include="V20191205\Models\DescribeHostTeoInstanceListResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUpdateRecordDetailRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUpdateRecordDetailResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUpdateRecordRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeHostUpdateRecordResponse.cs" />
     <Compile Include="V20191205\Models\DownloadCertificateRequest.cs" />
     <Compile Include="V20191205\Models\DownloadCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DvAuthDetail.cs" />
     <Compile Include="V20191205\Models\DvAuths.cs" />
     <Compile Include="V20191205\Models\Error.cs" />
     <Compile Include="V20191205\Models\Filter.cs" />
+    <Compile Include="V20191205\Models\GatewayCertificate.cs" />
     <Compile Include="V20191205\Models\LiveInstanceDetail.cs" />
     <Compile Include="V20191205\Models\LiveInstanceList.cs" />
     <Compile Include="V20191205\Models\ModifyCSRRequest.cs" />
@@ -122,10 +127,12 @@
     <Compile Include="V20191205\Models\ProjectInfo.cs" />
     <Compile Include="V20191205\Models\ReplaceCertificateRequest.cs" />
     <Compile Include="V20191205\Models\ReplaceCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\ResourceTypeRegions.cs" />
     <Compile Include="V20191205\Models\RootCertificates.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\SubmittedData.cs" />
+    <Compile Include="V20191205\Models\SupportDownloadType.cs" />
     <Compile Include="V20191205\Models\SyncTaskBindResourceResult.cs" />
     <Compile Include="V20191205\Models\TCBAccessInstance.cs" />
     <Compile Include="V20191205\Models\TCBAccessService.cs" />
@@ -134,6 +141,8 @@
     <Compile Include="V20191205\Models\TCBHostInstance.cs" />
     <Compile Include="V20191205\Models\TCBHostService.cs" />
     <Compile Include="V20191205\Models\TCBInstanceList.cs" />
+    <Compile Include="V20191205\Models\TSEInstanceDetail.cs" />
+    <Compile Include="V20191205\Models\TSEInstanceList.cs" />
     <Compile Include="V20191205\Models\Tags.cs" />
     <Compile Include="V20191205\Models\TeoInstanceDetail.cs" />
     <Compile Include="V20191205\Models\TeoInstanceList.cs" />
@@ -142,6 +151,17 @@
     <Compile Include="V20191205\Models\TkeInstanceList.cs" />
     <Compile Include="V20191205\Models\TkeNameSpaceDetail.cs" />
     <Compile Include="V20191205\Models\TkeSecretDetail.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateInstanceRequest.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateInstanceResponse.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateRecordRetryRequest.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateRecordRetryResponse.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateRecordRollbackRequest.cs" />
+    <Compile Include="V20191205\Models\UpdateCertificateRecordRollbackResponse.cs" />
+    <Compile Include="V20191205\Models\UpdateRecordDetail.cs" />
+    <Compile Include="V20191205\Models\UpdateRecordDetails.cs" />
+    <Compile Include="V20191205\Models\UpdateRecordInfo.cs" />
+    <Compile Include="V20191205\Models\UpdateSyncProgress.cs" />
+    <Compile Include="V20191205\Models\UpdateSyncProgressRegion.cs" />
     <Compile Include="V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="V20191205\Models\UploadCertificateResponse.cs" />
     <Compile Include="V20191205\Models\UploadConfirmLetterRequest.cs" />

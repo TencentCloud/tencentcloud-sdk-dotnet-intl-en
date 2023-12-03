@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
+        /// Whether to enable origin-pull merge. Values:
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

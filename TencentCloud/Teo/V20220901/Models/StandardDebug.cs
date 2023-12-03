@@ -33,13 +33,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Allowed client source. IPv4 and IPv6 addresses and network segments are supported. 0.0.0.0/0 indicates that all IPv4 clients can be debugged, and ::/0 indicates that all IPv6 clients can be debugged.
+        /// The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
         /// </summary>
         [JsonProperty("AllowClientIPList")]
         public string[] AllowClientIPList{ get; set; }
 
         /// <summary>
-        /// The time when the standard debugging setting expires. If it is exceeded, this feature u200dbecomes invalid.
+        /// The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

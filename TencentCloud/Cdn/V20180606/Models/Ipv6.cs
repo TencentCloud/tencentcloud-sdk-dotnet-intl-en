@@ -25,8 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether to enable an IPv6 address for the origin server. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

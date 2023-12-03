@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Referer blacklist/whitelist configuration switch
+        /// Whether to enable referer blocklist/allowlist. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

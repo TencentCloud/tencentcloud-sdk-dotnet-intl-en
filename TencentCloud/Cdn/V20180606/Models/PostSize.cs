@@ -25,9 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Limit the size of POST requests. The default value is 32 MB.
-        /// off: Disable
-        /// on: Enable
+        /// Maximum size of the file uploaded for streaming via a POST request. Values:
+        /// `on`: Enable. When enabled, it is set to 32 MB by default.
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

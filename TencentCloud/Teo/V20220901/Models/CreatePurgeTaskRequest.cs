@@ -42,13 +42,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Configures how cache are purged. It works when `Type` is `purge_prefix`, `purge_host` or `purge_all`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated.</li>Note that when Type` is `purge_prefix`, it defaults to `invalidate`.
+        /// Configures how resources under the directory are purged when `Type = purge_prefix`. Values: <li>`invalidate`: Only resources updated under the directory are purged.</li><li>`delete`: All resources under the directory are purged regardless of whether they are updated. </li>Default value: `invalidate`.
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters u200dare escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
+        /// List of cached resources to purge. The format for input depends on the type of cache purging. See examples below for details. <li>By default, non-ASCII characters are escaped based on RFC3986.</li><li>The maximum number of tasks per purging request is determined by the EdgeOne plan. See [Billing Overview (New)](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). </li>
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }

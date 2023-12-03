@@ -25,14 +25,17 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
+        /// Whether to enable heuristic cache validity. Values:
         /// `on`: Enable
         /// `off`: Disable
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HeuristicCacheTimeSwitch")]
         public string HeuristicCacheTimeSwitch{ get; set; }
 
         /// <summary>
         /// Unit: Second
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HeuristicCacheTime")]
         public long? HeuristicCacheTime{ get; set; }

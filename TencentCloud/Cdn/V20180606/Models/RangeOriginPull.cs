@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Range GETs configuration switch
+        /// Whether to enable Range GETs. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

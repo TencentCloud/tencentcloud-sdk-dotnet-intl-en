@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Specifies whether to enable rule engine
+        /// Whether to enable rule engine. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

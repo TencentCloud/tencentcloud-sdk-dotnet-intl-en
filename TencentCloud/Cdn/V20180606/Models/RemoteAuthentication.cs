@@ -25,10 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Remote authentication switch
-        /// `on`: enable
-        /// `off`: disable
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether to enable remote authentication. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

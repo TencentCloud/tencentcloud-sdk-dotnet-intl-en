@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Access mode of the site. Values:
         /// <li> `full`: Access through a name server.</li>
-        /// <li> `partial`: Access through a CNAME u200drecord. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+        /// <li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -66,6 +66,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("SMCert")]
         public long? SMCert{ get; set; }
 
+        /// <summary>
+        /// Company type
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CompanyType")]
+        public long? CompanyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ReplacedFor", this.ReplacedFor);
             this.SetParamSimple(map, prefix + "RenewOrder", this.RenewOrder);
             this.SetParamSimple(map, prefix + "SMCert", this.SMCert);
+            this.SetParamSimple(map, prefix + "CompanyType", this.CompanyType);
         }
     }
 }

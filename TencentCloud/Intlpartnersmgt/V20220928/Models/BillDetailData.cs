@@ -241,6 +241,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
+        /// <summary>
+        /// ID
+        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -277,6 +284,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "TotalAmountAfterDiscount", this.TotalAmountAfterDiscount);
             this.SetParamSimple(map, prefix + "VoucherDeduction", this.VoucherDeduction);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

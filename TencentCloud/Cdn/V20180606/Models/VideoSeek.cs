@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Video dragging switch
+        /// Whether to enable video dragging. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

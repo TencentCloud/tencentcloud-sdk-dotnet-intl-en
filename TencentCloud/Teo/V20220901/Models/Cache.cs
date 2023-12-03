@@ -44,7 +44,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// Whether to enable force cache. Values:
         /// <li>`on`: Enable</li>
         /// <li>`off`: Disable </li>
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]
         [System.Obsolete]

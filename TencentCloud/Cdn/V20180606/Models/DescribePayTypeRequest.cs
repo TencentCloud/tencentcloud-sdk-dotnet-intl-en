@@ -25,10 +25,11 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Specifies a service region.
-        /// `mainland`: queries billing methods within Mainland China;
-        /// `overseas`: queries billing methods outside Mainland China.
-        /// Default value: `mainland`.
+        /// Specifies the service area.
+        /// `mainland`: Queries billing methods available in the Chinese mainland.
+        /// `overseas`: Queries billing methods available in the regions outside the Chinese mainland.
+        /// `Global`: Queries billing methods available across the globe.
+        /// If it is not specified, it defaults to `mainland`.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -39,6 +40,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// Specifies resources.
+        /// `flux`: Traffic package
+        /// `https`: HTTPS requests
+        /// It defaults to `flux` if not specified. 
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +57,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

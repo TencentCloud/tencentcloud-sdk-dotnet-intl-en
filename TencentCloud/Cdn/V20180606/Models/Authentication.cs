@@ -25,13 +25,23 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Hotlink protection configuration switch
+        /// Whether to enable hot linking protection. Values:
         /// `on`: Enable
         /// `off`: Disable
-        /// When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+        /// Only one advanced configuration can be enabled. Set the rests to `null`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
+
+        /// <summary>
+        /// Authentication algorithm. Values:
+        /// `md5`: Calculate the hash using MD5.
+        /// `sha256`: Calculate the hash using SHA-256.
+        /// Default value: `md5`.
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AuthAlgorithm")]
+        public string AuthAlgorithm{ get; set; }
 
         /// <summary>
         /// Timestamp hotlink protection mode A configuration
@@ -68,6 +78,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "AuthAlgorithm", this.AuthAlgorithm);
             this.SetParamObj(map, prefix + "TypeA.", this.TypeA);
             this.SetParamObj(map, prefix + "TypeB.", this.TypeB);
             this.SetParamObj(map, prefix + "TypeC.", this.TypeC);

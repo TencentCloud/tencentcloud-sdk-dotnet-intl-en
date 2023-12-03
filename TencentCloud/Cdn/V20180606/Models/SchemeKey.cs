@@ -25,8 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether to use the scheme as part of the cache key. Valid values: on, off
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether to enable scheme as part of the cache key. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

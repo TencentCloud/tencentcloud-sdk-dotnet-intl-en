@@ -60,8 +60,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? AlertPercentage{ get; set; }
 
         /// <summary>
-        /// Whether to enable the alarm threshold trigger. Values: `on`, `off`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether to enable alerts for cumulative usage limit. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AlertSwitch")]
         public string AlertSwitch{ get; set; }
@@ -80,8 +82,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? Cycle{ get; set; }
 
         /// <summary>
-        /// Whether to enable usage limit configuration. Values: `on`, `off`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether to enable cumulative usage limit. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

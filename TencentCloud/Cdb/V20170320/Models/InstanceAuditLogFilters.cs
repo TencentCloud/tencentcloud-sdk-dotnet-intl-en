@@ -36,13 +36,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// `DBName` - Database name.
         /// 
         /// `Equal to` and `Not equal to` can be used to search for:
-        /// `sqlType` - SQL u200dtype,
+        /// `sqlType` - SQL type,
         /// `errCode` - Error code,
         /// `threadId` - Thread ID.
         /// 
         /// Range search is supported for:
         /// `execTime`- Execution time (μs),
-        /// `lockWaitTime`u200d - Lock wait time (μs),
+        /// `lockWaitTime` - Lock wait time (μs),
         /// `ioWaitTime` - IO wait time (μs),
         /// `trxLivingTime` - Transaction duration (μs),
         /// `cpuTime` - CPU time (μs),
@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// `EXC` - Exclude,
         /// `EQS` - Equal to,
         /// `NEQ` - Not equal to.
-        /// u200d`RA` - Range
+        /// `RA` - Range
         /// </summary>
         [JsonProperty("Compare")]
         public string Compare{ get; set; }

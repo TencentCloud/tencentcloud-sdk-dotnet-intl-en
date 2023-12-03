@@ -202,8 +202,8 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? IsVulnerability{ get; set; }
 
         /// <summary>
-        /// Whether the certificate can be reissued
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether it can be renewed 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RenewAble")]
         public bool? RenewAble{ get; set; }
@@ -313,6 +313,86 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("HostingRenewCertId")]
         public string HostingRenewCertId{ get; set; }
 
+        /// <summary>
+        /// Existing renewed certificate ID
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("HasRenewOrder")]
+        public string HasRenewOrder{ get; set; }
+
+        /// <summary>
+        /// Whether the original certificate is deleted when a certificate is reissued.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ReplaceOriCertIsDelete")]
+        public bool? ReplaceOriCertIsDelete{ get; set; }
+
+        /// <summary>
+        /// Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("IsExpiring")]
+        public bool? IsExpiring{ get; set; }
+
+        /// <summary>
+        /// Validation expiration time for the addition of the DV certificate
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DVAuthDeadline")]
+        public string DVAuthDeadline{ get; set; }
+
+        /// <summary>
+        /// Domain name validation pass time
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ValidationPassedTime")]
+        public string ValidationPassedTime{ get; set; }
+
+        /// <summary>
+        /// Multiple domain names with which the certificate is associated
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CertSANs")]
+        public string[] CertSANs{ get; set; }
+
+        /// <summary>
+        /// Domain name validation rejection information
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("AwaitingValidationMsg")]
+        public string AwaitingValidationMsg{ get; set; }
+
+        /// <summary>
+        /// Whether downloading is allowed
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("AllowDownload")]
+        public bool? AllowDownload{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsDNSPODResolve")]
+        public bool? IsDNSPODResolve{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsPackage")]
+        public bool? IsPackage{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("KeyPasswordCustomFlag")]
+        public bool? KeyPasswordCustomFlag{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SupportDownloadType")]
+        public SupportDownloadType SupportDownloadType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -360,6 +440,18 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
             this.SetParamSimple(map, prefix + "HostingCompleteTime", this.HostingCompleteTime);
             this.SetParamSimple(map, prefix + "HostingRenewCertId", this.HostingRenewCertId);
+            this.SetParamSimple(map, prefix + "HasRenewOrder", this.HasRenewOrder);
+            this.SetParamSimple(map, prefix + "ReplaceOriCertIsDelete", this.ReplaceOriCertIsDelete);
+            this.SetParamSimple(map, prefix + "IsExpiring", this.IsExpiring);
+            this.SetParamSimple(map, prefix + "DVAuthDeadline", this.DVAuthDeadline);
+            this.SetParamSimple(map, prefix + "ValidationPassedTime", this.ValidationPassedTime);
+            this.SetParamArraySimple(map, prefix + "CertSANs.", this.CertSANs);
+            this.SetParamSimple(map, prefix + "AwaitingValidationMsg", this.AwaitingValidationMsg);
+            this.SetParamSimple(map, prefix + "AllowDownload", this.AllowDownload);
+            this.SetParamSimple(map, prefix + "IsDNSPODResolve", this.IsDNSPODResolve);
+            this.SetParamSimple(map, prefix + "IsPackage", this.IsPackage);
+            this.SetParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
+            this.SetParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
         }
     }
 }

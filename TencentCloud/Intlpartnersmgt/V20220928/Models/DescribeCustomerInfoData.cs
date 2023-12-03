@@ -61,13 +61,23 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string BindTime{ get; set; }
 
         /// <summary>
-        /// Account status Valid values: `0` (Not frozen),  `1` (Frozen).  Note: This field may return null, indicating that no valid values can be obtained.
+        /// Account status
+        /// 0: Normal
+        /// 1: Forcibly mandatory (this function is not supported yet)
+        /// 2. Mandatory arrears
+        /// Note: The return value may be null, indicating that no valid data can be obtained.
         /// </summary>
         [JsonProperty("AccountStatus")]
         public string AccountStatus{ get; set; }
 
         /// <summary>
-        /// Identity verification status Note: This field may return null, indicating that no valid values can be obtained.
+        /// Identity verification status
+        /// -1: Files not uploaded
+        /// 0: Not submitted for review
+        /// 1: Under review
+        /// 2: Review error
+        /// 3: Approved
+        /// Note: The return value may be null, indicating that no valid data can be obtained.
         /// </summary>
         [JsonProperty("AuthStatus")]
         public string AuthStatus{ get; set; }

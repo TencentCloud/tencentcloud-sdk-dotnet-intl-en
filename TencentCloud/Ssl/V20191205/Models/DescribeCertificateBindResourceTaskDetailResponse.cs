@@ -107,6 +107,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CacheTime{ get; set; }
 
         /// <summary>
+        /// Associated TSE resource details
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("TSE")]
+        public TSEInstanceList[] TSE{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -130,6 +137,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArrayObj(map, prefix + "TEO.", this.TEO);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CacheTime", this.CacheTime);
+            this.SetParamArrayObj(map, prefix + "TSE.", this.TSE);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

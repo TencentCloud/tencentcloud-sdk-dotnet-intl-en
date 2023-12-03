@@ -533,6 +533,46 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
+        /// This API is used to query log searching metric values.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogTagValueRequest"/></param>
+        /// <returns><see cref="DescribeLogTagValueResponse"/></returns>
+        public async Task<DescribeLogTagValueResponse> DescribeLogTagValue(DescribeLogTagValueRequest req)
+        {
+             JsonResponseModel<DescribeLogTagValueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogTagValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogTagValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query log searching metric values.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogTagValueRequest"/></param>
+        /// <returns><see cref="DescribeLogTagValueResponse"/></returns>
+        public DescribeLogTagValueResponse DescribeLogTagValueSync(DescribeLogTagValueRequest req)
+        {
+             JsonResponseModel<DescribeLogTagValueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogTagValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogTagValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to get the details of an event bus.
         /// </summary>
         /// <param name="req"><see cref="GetEventBusRequest"/></param>
@@ -804,6 +844,46 @@ namespace TencentCloud.Eb.V20210416
              {
                  var strResp = this.InternalRequestSync(req, "ListTargets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query logs. 
+        /// </summary>
+        /// <param name="req"><see cref="SearchLogRequest"/></param>
+        /// <returns><see cref="SearchLogResponse"/></returns>
+        public async Task<SearchLogResponse> SearchLog(SearchLogRequest req)
+        {
+             JsonResponseModel<SearchLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query logs. 
+        /// </summary>
+        /// <param name="req"><see cref="SearchLogRequest"/></param>
+        /// <returns><see cref="SearchLogResponse"/></returns>
+        public SearchLogResponse SearchLogSync(SearchLogRequest req)
+        {
+             JsonResponseModel<SearchLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

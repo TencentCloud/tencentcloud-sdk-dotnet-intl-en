@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Origin-pull follow-redirect switch
+        /// Whether to enable origin-pull to follow the origin configuration. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

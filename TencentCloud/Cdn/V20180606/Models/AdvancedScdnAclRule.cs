@@ -60,7 +60,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string LogicOperator{ get; set; }
 
         /// <summary>
-        /// Match value
+        /// Matched value.
         /// When `MatchKey` is `protocol`,
         /// Values: `HTTP` and `HTTPS`.
         /// 
@@ -123,11 +123,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// `AI`: Anguilla
         /// `VA`: Vatican
         /// `SK`: Slovakia
-        /// `RU`: Russia
         /// `GB`: United Kingdom
         /// `CZ`: Czech Republic
         /// `UA`: Ukraine
-        /// `TR`: Turkey
+        /// `TR`: Türkiye
         /// `SI`: Slovenia
         /// `SE`: Sweden
         /// `RS`: Republic of Serbia
@@ -264,7 +263,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// `AO`: Angola
         /// 
         /// When MatchKey is `ipArea`, valid values include:
-        /// `OTHER`: other areas
+        /// `OTHER`: Other areas
         /// `AS`: Asia
         /// `EU`: Europe
         /// `AN`: Antarctica

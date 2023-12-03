@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Whether the clone instance and the source instance are in one AZ. Valid values: `true` (yes), `false` (no).
+        /// Whether the clone instance and the source instance are in the same AZ. Valid values: `true` (yes), `false` (no).
         /// </summary>
         [JsonProperty("IsRemoteZone")]
         public string IsRemoteZone{ get; set; }

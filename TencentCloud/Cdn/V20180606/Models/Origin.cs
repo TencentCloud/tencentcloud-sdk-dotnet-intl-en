@@ -25,47 +25,51 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Primary origin server list
-        /// When modifying the origin server, you need to enter the corresponding OriginType.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// List of primary origin servers
+        /// <font color=red>When modifying the origins, you need to specify `OriginType`.</font>
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Origins")]
         public string[] Origins{ get; set; }
 
         /// <summary>
         /// Primary origin server type
-        /// The following types are supported for input parameters:
-        /// `domain`: domain name
+        /// <font color=red>This field is used together with `Origins`.</font>
+        /// Input:
+        /// `domain`: Domain name
         /// `domainv6`: IPv6 domain name
-        /// cos: COS origin
+        /// `cos`: COS bucket address
+        /// `third_party`: Third-party object storage origin
+        /// `igtm`: IGTM origin
         /// `ip`: IP address
-        /// ipv6: origin server list is a single IPv6 address
-        /// `ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+        /// `ipv6`: One IPv6 address
+        /// `ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
         /// `ip_domain`: IP addresses and domain names (only available to beta users)
         /// `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-        /// `ipv6_domain`: multiple IPv6 addresses and one domain name
+        /// `ipv6_domain`: Multiple IPv6 addresses and one domain name
         /// `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
         /// `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-        /// `ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+        /// `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
         /// `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
         /// `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
         /// `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
         /// `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-        /// The following types of output parameters are added:
-        /// image: Cloud Infinite origin
-        /// ftp: legacy FTP origin, which is no longer maintained.
-        /// When modifying `Origins`, you need to enter the corresponding OriginType.
-        /// The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Output:
+        /// `image`: Cloud Infinite origin
+        /// `ftp`: FTP origin (disused)
+        /// When modifying `Origins`, you need to specify `OriginType`.
+        /// The IPv6 feature is now only available to beta users. Submit a ticket if you need it.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// It is required when a COS origin or third-party origin is used for acceleration.
-        /// Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
-        /// If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Origin-pull host header.
+        /// <font color=red>This field is required when `OriginType=cos/third-party`.</font>
+        /// If not specified, this field defaults to the acceleration domain name.
+        /// For a wildcard domain name, the sub-domain name during the access is used by default.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }
@@ -89,24 +93,25 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string OriginPullProtocol{ get; set; }
 
         /// <summary>
-        /// Backup origin server list
-        /// When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// List of secondary origin servers
+        /// <font color=red>This field is used together with `BackupOriginType`.</font>
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupOrigins")]
         public string[] BackupOrigins{ get; set; }
 
         /// <summary>
-        /// Backup origin server type, which supports the following types:
+        /// Secondary origin type
+        /// <font color=red>This field is used together with `BackupOrigins`.</font>
+        /// Values:
         /// `domain`: Domain name
         /// `ip`: IP address
-        /// When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-        /// The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+        /// The following secondary origin types are only available to beta users. Submit a ticket to use it.
         /// `ipv6_domain`: Multiple IPv6 addresses and one domain name
         /// `ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
         /// `ipv6_domain`: Multiple IPv6 addresses and one domain name
         /// `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupOriginType")]
         public string BackupOriginType{ get; set; }
@@ -140,6 +145,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public PathBasedOriginRule[] PathBasedOrigin{ get; set; }
 
         /// <summary>
+        /// HTTPS origin-pull SNI
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Sni")]
+        public OriginSni Sni{ get; set; }
+
+        /// <summary>
         /// HTTPS advanced origin-pull configuration
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
@@ -147,8 +159,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         public AdvanceHttps AdvanceHttps{ get; set; }
 
         /// <summary>
-        /// Object storage vendor
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Third-party object storage service vendor
+        /// <font color=red>This field is required when `OriginType=third-party`.</font>
+        /// Values:
+        /// `aws_s3`: AWS S3
+        /// `ali_oss`: Alibaba Cloud OSS
+        /// `hw_obs`: Huawei Cloud OBS
+        /// `Qiniu_kodo`: Qiniu Kodo
+        /// `Others`: Other object storage service vendors. Only AWS signature-compatible object storage services are supported, such as Tencent Cloud COS for Finance Zone.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginCompany")]
         public string OriginCompany{ get; set; }
@@ -170,6 +189,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "BasePath", this.BasePath);
             this.SetParamArrayObj(map, prefix + "PathRules.", this.PathRules);
             this.SetParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
+            this.SetParamObj(map, prefix + "Sni.", this.Sni);
             this.SetParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
             this.SetParamSimple(map, prefix + "OriginCompany", this.OriginCompany);
         }

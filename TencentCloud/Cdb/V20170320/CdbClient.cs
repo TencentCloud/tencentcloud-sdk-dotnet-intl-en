@@ -2091,6 +2091,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// The API DescribeDBInstanceLogToCLS is used to query the configurations of sending slow and error logs of an instance (InstanceId) filtered by AppId and Region to Cloud Log Service (CLS).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceLogToCLSResponse"/></returns>
+        public async Task<DescribeDBInstanceLogToCLSResponse> DescribeDBInstanceLogToCLS(DescribeDBInstanceLogToCLSRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceLogToCLSResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceLogToCLS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceLogToCLSResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// The API DescribeDBInstanceLogToCLS is used to query the configurations of sending slow and error logs of an instance (InstanceId) filtered by AppId and Region to Cloud Log Service (CLS).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceLogToCLSResponse"/></returns>
+        public DescribeDBInstanceLogToCLSResponse DescribeDBInstanceLogToCLSSync(DescribeDBInstanceLogToCLSRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceLogToCLSResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceLogToCLS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceLogToCLSResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API (DescribeDBInstanceRebootTime) is used to query the estimated time needed for a TencentDB instance to restart.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceRebootTimeRequest"/></param>
@@ -3059,7 +3099,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeSlowLogs) is used to query the slow logs of a TencentDB instance.
+        /// The API DescribeSlowLogs is used to obtain slow query logs of a cloud database (CDB) instance. Note: If the size of logs to be queried is too large, the operation may time out. It is recommended that you select a shorter time range, such as one hour.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
@@ -3079,7 +3119,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeSlowLogs) is used to query the slow logs of a TencentDB instance.
+        /// The API DescribeSlowLogs is used to obtain slow query logs of a cloud database (CDB) instance. Note: If the size of logs to be queried is too large, the operation may time out. It is recommended that you select a shorter time range, such as one hour.
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
         /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
@@ -3904,6 +3944,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCdbProxyParam");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCdbProxyParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the feature of sending CDB slow and error logs to CLS.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceLogToCLSResponse"/></returns>
+        public async Task<ModifyDBInstanceLogToCLSResponse> ModifyDBInstanceLogToCLS(ModifyDBInstanceLogToCLSRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceLogToCLSResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceLogToCLS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceLogToCLSResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the feature of sending CDB slow and error logs to CLS.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceLogToCLSRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceLogToCLSResponse"/></returns>
+        public ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLSSync(ModifyDBInstanceLogToCLSRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceLogToCLSResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceLogToCLS");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceLogToCLSResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

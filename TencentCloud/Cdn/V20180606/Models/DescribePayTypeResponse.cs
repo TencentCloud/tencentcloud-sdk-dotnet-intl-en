@@ -25,38 +25,39 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Billing modes:
+        /// Billing type
         /// `flux`: Bill by traffic
         /// `bandwidth`: Bill by bandwidth
         /// `request`: Bill by the number of requests
-        /// `flux_sep`: Disused field
-        /// `bandwidth_sep`: Disused field
-        /// When you change a daily billing mode to another, and there is network usage on the day of change, this field shows the new billing mode, which takes effect from the next day. If there is no network usage on the day of change, this field shows the new billing mode directly.
+        /// `flux_sep`: Bill by dynamic and static traffic separately 
+        /// `bandwidth_sep`: Bill by dynamic and static bandwidth separately
+        /// If you incur any usage when switching the billing mode, the new mode will take effect the next day. If no usage is incurred, the new mode takes effect immediately.
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
 
         /// <summary>
-        /// Billing cycle:
+        /// Billing cycle
         /// `day`: Daily
-        /// `month`: Monthly 
-        /// `hour`: Hourly 
+        /// `month`: Monthly
+        /// `hour`: Hourly
         /// </summary>
         [JsonProperty("BillingCycle")]
         public string BillingCycle{ get; set; }
 
         /// <summary>
-        /// `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
-        /// `day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
-        /// `month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
-        /// `sum`: Billed by the total traffic/total requests (daily or monthly settlement)
-        /// `max`: Billed by the peak bandwidth (daily settlement)
+        /// Statistic data
+        /// `monthMax`: Billed monthly based on the monthly average daily peak traffic
+        /// `day95`: Billed monthly based on the daily 95th percentile bandwidth
+        /// `month95`: Billed monthly based on the monthly 95th percentile bandwidth
+        /// `sum`: Billed daily/monthly based on the total traffic or requests
+        /// `max`: Billed daily based on the peak bandwidth
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
 
         /// <summary>
-        /// Billing method for regions outside the Chinese mainland:
+        /// Regionl billing
         /// `all`: Unified billing for all regions
         /// `multiple`: Region-specific billing
         /// </summary>
@@ -64,12 +65,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string RegionType{ get; set; }
 
         /// <summary>
-        /// The current billing mode in effect:
-        /// `flux`: Billed by traffic
-        /// `bandwidth`: Billed by bandwidth
-        /// `request`: Billed by the number of requests
-        /// `flux_sep`: Disused field
-        /// `bandwidth_sep`: Disused field
+        /// Current billing mode
+        /// `flux`: Bill by traffic
+        /// `bandwidth`: Bill by bandwidth
+        /// `request`: Bill by the number of requests
+        /// `flux_sep`: Bill by dynamic and static traffic separately 
+        /// `bandwidth_sep`: Bill by dynamic and static bandwidth separately
         /// </summary>
         [JsonProperty("CurrentPayType")]
         public string CurrentPayType{ get; set; }

@@ -73,7 +73,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CsrEncryptAlgo{ get; set; }
 
         /// <summary>
-        /// Key pair parameter. RSA supports only the 2048-bit key and ECC supports only prime256v1.
+        /// Key pair parameters. RSA supports only 2048. ECC supports only prime256v1. When the encryption algorithm is set to ECC, this parameter is mandatory.
         /// </summary>
         [JsonProperty("CsrKeyParameter")]
         public string CsrKeyParameter{ get; set; }

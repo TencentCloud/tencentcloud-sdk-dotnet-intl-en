@@ -773,6 +773,86 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// Query certificate cloud resource update record list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUpdateRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostUpdateRecordResponse"/></returns>
+        public async Task<DescribeHostUpdateRecordResponse> DescribeHostUpdateRecord(DescribeHostUpdateRecordRequest req)
+        {
+             JsonResponseModel<DescribeHostUpdateRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostUpdateRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Query certificate cloud resource update record list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUpdateRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostUpdateRecordResponse"/></returns>
+        public DescribeHostUpdateRecordResponse DescribeHostUpdateRecordSync(DescribeHostUpdateRecordRequest req)
+        {
+             JsonResponseModel<DescribeHostUpdateRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostUpdateRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Query certificate cloud resource update record details list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUpdateRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostUpdateRecordDetailResponse"/></returns>
+        public async Task<DescribeHostUpdateRecordDetailResponse> DescribeHostUpdateRecordDetail(DescribeHostUpdateRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeHostUpdateRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostUpdateRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Query certificate cloud resource update record details list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUpdateRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostUpdateRecordDetailResponse"/></returns>
+        public DescribeHostUpdateRecordDetailResponse DescribeHostUpdateRecordDetailSync(DescribeHostUpdateRecordDetailRequest req)
+        {
+             JsonResponseModel<DescribeHostUpdateRecordDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostUpdateRecordDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to download a certificate.
         /// </summary>
         /// <param name="req"><see cref="DownloadCertificateRequest"/></param>
@@ -1044,6 +1124,126 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "SubmitCertificateInformation");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCertificateInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update old certificate resources with one click and is an asynchronous interface. After this API is called, the returned DeployRecordId being 0 indicates that the task is in progress, and the returned DeployRecordId being greater than 0 indicates that the task is successfully created. If the creation fails, an exception is returned.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateInstanceRequest"/></param>
+        /// <returns><see cref="UpdateCertificateInstanceResponse"/></returns>
+        public async Task<UpdateCertificateInstanceResponse> UpdateCertificateInstance(UpdateCertificateInstanceRequest req)
+        {
+             JsonResponseModel<UpdateCertificateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCertificateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to update old certificate resources with one click and is an asynchronous interface. After this API is called, the returned DeployRecordId being 0 indicates that the task is in progress, and the returned DeployRecordId being greater than 0 indicates that the task is successfully created. If the creation fails, an exception is returned.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateInstanceRequest"/></param>
+        /// <returns><see cref="UpdateCertificateInstanceResponse"/></returns>
+        public UpdateCertificateInstanceResponse UpdateCertificateInstanceSync(UpdateCertificateInstanceRequest req)
+        {
+             JsonResponseModel<UpdateCertificateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCertificateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Cloud resource update deployment retry record
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="UpdateCertificateRecordRetryResponse"/></returns>
+        public async Task<UpdateCertificateRecordRetryResponse> UpdateCertificateRecordRetry(UpdateCertificateRecordRetryRequest req)
+        {
+             JsonResponseModel<UpdateCertificateRecordRetryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCertificateRecordRetry");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRetryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Cloud resource update deployment retry record
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="UpdateCertificateRecordRetryResponse"/></returns>
+        public UpdateCertificateRecordRetryResponse UpdateCertificateRecordRetrySync(UpdateCertificateRecordRetryRequest req)
+        {
+             JsonResponseModel<UpdateCertificateRecordRetryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCertificateRecordRetry");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRetryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Cloud resource update one-click rollback
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="UpdateCertificateRecordRollbackResponse"/></returns>
+        public async Task<UpdateCertificateRecordRollbackResponse> UpdateCertificateRecordRollback(UpdateCertificateRecordRollbackRequest req)
+        {
+             JsonResponseModel<UpdateCertificateRecordRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCertificateRecordRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Cloud resource update one-click rollback
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="UpdateCertificateRecordRollbackResponse"/></returns>
+        public UpdateCertificateRecordRollbackResponse UpdateCertificateRecordRollbackSync(UpdateCertificateRecordRollbackRequest req)
+        {
+             JsonResponseModel<UpdateCertificateRecordRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCertificateRecordRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRollbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

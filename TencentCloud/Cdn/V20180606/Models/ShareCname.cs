@@ -25,9 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
-        /// 
-        /// * ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
+        /// Whether to enable Shared CNAME. Values:
+        /// `on`: Enable. When enabled, it uses a shared CNAME.
+        /// `off`: Disable. When disabled, it uses a default CNAME.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

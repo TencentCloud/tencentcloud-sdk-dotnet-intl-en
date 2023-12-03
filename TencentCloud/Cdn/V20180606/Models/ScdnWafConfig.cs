@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether to enable WAF. Valid values: `on` and `off`.
+        /// Whether to enable SCDN WAF configuration. Values:
+        /// `on`: Enable
+        /// `off`: Disable
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -45,8 +47,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ScdnErrorPage ErrorPage{ get; set; }
 
         /// <summary>
-        /// Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether to enable webshell blocking. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WebShellSwitch")]
         public string WebShellSwitch{ get; set; }
@@ -66,8 +70,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Level{ get; set; }
 
         /// <summary>
-        /// WAF sub-rule switch
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether to enable WAF sub-rules. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubRuleSwitch")]
         public WafSubRuleStatus[] SubRuleSwitch{ get; set; }

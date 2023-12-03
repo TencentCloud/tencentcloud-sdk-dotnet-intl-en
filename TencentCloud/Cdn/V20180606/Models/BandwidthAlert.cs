@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Specifies whether to enable the bandwidth cap
+        /// Whether to enable usage limit. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>
@@ -55,10 +55,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string LastTriggerTime{ get; set; }
 
         /// <summary>
-        /// Indicates whether to trigger alerts when the upper limit is reached
+        /// Whether to enable alerts for usage limit. Values:
         /// `on`: Enable
         /// `off`: Disable
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AlertSwitch")]
         public string AlertSwitch{ get; set; }

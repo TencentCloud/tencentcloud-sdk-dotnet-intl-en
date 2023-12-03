@@ -91,7 +91,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ErrorPage ErrorPage{ get; set; }
 
         /// <summary>
-        /// Request header configuration
+        /// Origin-pull request header configuration.
         /// </summary>
         [JsonProperty("RequestHeader")]
         public RequestHeader RequestHeader{ get; set; }

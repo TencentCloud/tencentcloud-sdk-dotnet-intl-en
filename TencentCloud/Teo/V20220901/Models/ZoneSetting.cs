@@ -180,7 +180,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Standard debugging configuration.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StandardDebug")]
         public StandardDebug StandardDebug{ get; set; }

@@ -51,9 +51,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// The proxy type. Values:
-        /// <li>`hostname`: The proxy is created by subdomain name.</li>
-        /// <li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+        /// L4 proxy mode. Valid values: 
+        /// <li>instance: Instance mode. </li>If it is not specified, instance is used by default.
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }

@@ -25,10 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// No-cache configuration switch
+        /// Whether to enable no-caching at the path. Values:
         /// `on`: Enable
         /// `off`: Disable
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

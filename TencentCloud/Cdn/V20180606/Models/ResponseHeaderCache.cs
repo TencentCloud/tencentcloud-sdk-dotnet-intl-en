@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Origin server header cache switch
+        /// Whether to enable response header caching. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

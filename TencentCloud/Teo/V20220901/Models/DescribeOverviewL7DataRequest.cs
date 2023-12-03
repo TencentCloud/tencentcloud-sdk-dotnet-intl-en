@@ -84,10 +84,10 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Filtering condition. The detailed filtering condition key values are as follows: 
-        /// <li>socket<br>    Filter based on [<strong>HTTP protocol type</strong>]. <br>    Corresponding value options: <br>    HTTP: HTTP protocol；<br>    HTTPS: HTTPS protocol;<br>    QUIC: QUIC protocol. </li>
-        /// <li>domains<br>    Filter based on [<strong>domain name</strong>]. </li>
-        /// <li>tagKey<br>    Filter based on [<strong>Tag Key</strong>]. </li>
-        /// <li>tagValue<br>    Filter based on [<strong>Tag Value</strong>]. </li>
+        /// <li>socket<br>u2003u2003 Filter based on [<strong>HTTP protocol type</strong>]. <br>u2003u2003 Corresponding value options: <br>u2003u2003 HTTP: HTTP protocol；<br>u2003u2003 HTTPS: HTTPS protocol;<br>u2003u2003 QUIC: QUIC protocol. </li>
+        /// <li>domains<br>u2003u2003 Filter based on [<strong>domain name</strong>]. </li>
+        /// <li>tagKey<br>u2003u2003 Filter based on [<strong>Tag Key</strong>]. </li>
+        /// <li>tagValue<br>u2003u2003 Filter based on [<strong>Tag Value</strong>]. </li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }

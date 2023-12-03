@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Custom request header configuration switch
+        /// Whether to enable custom request headers. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

@@ -25,7 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+        /// Whether to enable hot linking protection. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Only one advanced configuration can be enabled. Set the rests to `null`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

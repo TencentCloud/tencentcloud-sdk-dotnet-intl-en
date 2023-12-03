@@ -24,12 +24,41 @@ namespace TencentCloud.Cdb.V20170320.Models
     public class StartCpuExpandRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Instance ID.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Scale-out mode. Valid values: auto and
+        /// manual.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// Number of CPU cores to increase during manual scale-out. This parameter is required when Type is set to manual.
+        /// </summary>
+        [JsonProperty("ExpandCpu")]
+        public long? ExpandCpu{ get; set; }
+
+        /// <summary>
+        /// Automatic scale-out policy. This parameter is required when Type is set to auto.
+        /// </summary>
+        [JsonProperty("AutoStrategy")]
+        public AutoStrategy AutoStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
+            this.SetParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
         }
     }
 }

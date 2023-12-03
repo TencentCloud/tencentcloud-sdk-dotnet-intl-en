@@ -377,6 +377,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
+        /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
+        public async Task<CreateConfigGroupVersionResponse> CreateConfigGroupVersion(CreateConfigGroupVersionRequest req)
+        {
+             JsonResponseModel<CreateConfigGroupVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConfigGroupVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigGroupVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
+        /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
+        public CreateConfigGroupVersionResponse CreateConfigGroupVersionSync(CreateConfigGroupVersionRequest req)
+        {
+             JsonResponseModel<CreateConfigGroupVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConfigGroupVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConfigGroupVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
@@ -497,9 +537,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When the origin server resource is updated but the node cache TTL has not expired, the user will still access the old resource. To solve this problem, you can use this API to purge the node cache. There are two action options: <li>Delete directly: Delete the node cache directly without any verification. Trigger origin-pull when the resource is requested.</li><li>Mark as expired: Set the node resource as expired, and trigger origin-pull verification when the resource, that is, send an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin responds with 200, the node pulls new resources from the origin and update the cache. If the origin responds with 304, the node does not update the cache</li>.
+        /// When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves the latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
         /// 
-        /// For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+        /// </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
         /// <returns><see cref="CreatePurgeTaskResponse"/></returns>
@@ -519,9 +559,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When the origin server resource is updated but the node cache TTL has not expired, the user will still access the old resource. To solve this problem, you can use this API to purge the node cache. There are two action options: <li>Delete directly: Delete the node cache directly without any verification. Trigger origin-pull when the resource is requested.</li><li>Mark as expired: Set the node resource as expired, and trigger origin-pull verification when the resource, that is, send an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin responds with 200, the node pulls new resources from the origin and update the cache. If the origin responds with 304, the node does not update the cache</li>.
+        /// When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves the latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
         /// 
-        /// For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+        /// </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
         /// <returns><see cref="CreatePurgeTaskResponse"/></returns>
@@ -1065,6 +1105,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to release versions in version management mode. Users can deploy the version to either the testing environment or the production environment by specifying the EnvId parameter. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DeployConfigGroupVersionRequest"/></param>
+        /// <returns><see cref="DeployConfigGroupVersionResponse"/></returns>
+        public async Task<DeployConfigGroupVersionResponse> DeployConfigGroupVersion(DeployConfigGroupVersionRequest req)
+        {
+             JsonResponseModel<DeployConfigGroupVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeployConfigGroupVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployConfigGroupVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to release versions in version management mode. Users can deploy the version to either the testing environment or the production environment by specifying the EnvId parameter. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DeployConfigGroupVersionRequest"/></param>
+        /// <returns><see cref="DeployConfigGroupVersionResponse"/></returns>
+        public DeployConfigGroupVersionResponse DeployConfigGroupVersionSync(DeployConfigGroupVersionRequest req)
+        {
+             JsonResponseModel<DeployConfigGroupVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeployConfigGroupVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployConfigGroupVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to query domain name information of a site, including the acceleration domain name, origin, and domain name status. You can query the information of all domain names, or specific domain names by specifying filters information.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccelerationDomainsRequest"/></param>
@@ -1216,6 +1296,86 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAvailablePlans");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailablePlansResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain detailed information about a version in version management mode. The response includes the version ID, description, status, creation time, configuration group information, and the content of the version configuration file. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigGroupVersionDetailRequest"/></param>
+        /// <returns><see cref="DescribeConfigGroupVersionDetailResponse"/></returns>
+        public async Task<DescribeConfigGroupVersionDetailResponse> DescribeConfigGroupVersionDetail(DescribeConfigGroupVersionDetailRequest req)
+        {
+             JsonResponseModel<DescribeConfigGroupVersionDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConfigGroupVersionDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigGroupVersionDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to obtain detailed information about a version in version management mode. The response includes the version ID, description, status, creation time, configuration group information, and the content of the version configuration file. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigGroupVersionDetailRequest"/></param>
+        /// <returns><see cref="DescribeConfigGroupVersionDetailResponse"/></returns>
+        public DescribeConfigGroupVersionDetailResponse DescribeConfigGroupVersionDetailSync(DescribeConfigGroupVersionDetailRequest req)
+        {
+             JsonResponseModel<DescribeConfigGroupVersionDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConfigGroupVersionDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigGroupVersionDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the version list for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigGroupVersionsRequest"/></param>
+        /// <returns><see cref="DescribeConfigGroupVersionsResponse"/></returns>
+        public async Task<DescribeConfigGroupVersionsResponse> DescribeConfigGroupVersions(DescribeConfigGroupVersionsRequest req)
+        {
+             JsonResponseModel<DescribeConfigGroupVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConfigGroupVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigGroupVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the version list for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigGroupVersionsRequest"/></param>
+        /// <returns><see cref="DescribeConfigGroupVersionsResponse"/></returns>
+        public DescribeConfigGroupVersionsResponse DescribeConfigGroupVersionsSync(DescribeConfigGroupVersionsRequest req)
+        {
+             JsonResponseModel<DescribeConfigGroupVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConfigGroupVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigGroupVersionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1416,6 +1576,86 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDefaultCertificates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultCertificatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the release history of versions in the production or test environment in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeployHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeployHistoryResponse"/></returns>
+        public async Task<DescribeDeployHistoryResponse> DescribeDeployHistory(DescribeDeployHistoryRequest req)
+        {
+             JsonResponseModel<DescribeDeployHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeployHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the release history of versions in the production or test environment in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeployHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeployHistoryResponse"/></returns>
+        public DescribeDeployHistoryResponse DescribeDeployHistorySync(DescribeDeployHistoryRequest req)
+        {
+             JsonResponseModel<DescribeDeployHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeployHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query environment information in version management mode. The response includes the environment ID, type, and current effective version. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
+        public async Task<DescribeEnvironmentsResponse> DescribeEnvironments(DescribeEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query environment information in version management mode. The response includes the environment ID, type, and current effective version. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
+        public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

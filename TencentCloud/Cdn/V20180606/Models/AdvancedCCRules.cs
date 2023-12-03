@@ -45,8 +45,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? FrequencyLimit{ get; set; }
 
         /// <summary>
-        /// Whether to enable IP penalty. Valid values: `on` and `off`.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether to enable IP blocking. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PunishmentSwitch")]
         public string PunishmentSwitch{ get; set; }
@@ -80,8 +82,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ScdnSevenLayerRules[] Configure{ get; set; }
 
         /// <summary>
-        /// Whether to enable the rule. Values: `on` (enable), `off` (disable).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable custom CC rules. Values:
+        /// `on`: Enable
+        /// `off`: Disable
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

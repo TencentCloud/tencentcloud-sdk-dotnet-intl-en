@@ -1485,6 +1485,54 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// This API is used to modify the configuration of a CDN acceleration domain name in a finer manner than `UpdateDomainConfig`.
+        /// Notes:
+        /// In `Route`, separate values by dots (.). The last value is called a leaf node. For non-leaf nodes, keep the configuration unchanged.
+        /// The Value field is serialized to a JSON string {key:value}, where **key** is fixed to `update` and **value** is used to specify the value of the configuration parameter. To specify configurations with complex types, see https://intl.cloud.tencent.com/document/product/228/41116.?from_cn_redirect=1
+        /// The input parameters of this API are not reported to CloudAudit as it may contain sensitive data, such as keys and secrets.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainConfigRequest"/></param>
+        /// <returns><see cref="ModifyDomainConfigResponse"/></returns>
+        public async Task<ModifyDomainConfigResponse> ModifyDomainConfig(ModifyDomainConfigRequest req)
+        {
+             JsonResponseModel<ModifyDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration of a CDN acceleration domain name in a finer manner than `UpdateDomainConfig`.
+        /// Notes:
+        /// In `Route`, separate values by dots (.). The last value is called a leaf node. For non-leaf nodes, keep the configuration unchanged.
+        /// The Value field is serialized to a JSON string {key:value}, where **key** is fixed to `update` and **value** is used to specify the value of the configuration parameter. To specify configurations with complex types, see https://intl.cloud.tencent.com/document/product/228/41116.?from_cn_redirect=1
+        /// The input parameters of this API are not reported to CloudAudit as it may contain sensitive data, such as keys and secrets.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainConfigRequest"/></param>
+        /// <returns><see cref="ModifyDomainConfigResponse"/></returns>
+        public ModifyDomainConfigResponse ModifyDomainConfigSync(ModifyDomainConfigRequest req)
+        {
+             JsonResponseModel<ModifyDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to submit multiple directory purge tasks, which are carried out according to the acceleration region of the domain names.
         /// By default, a maximum of 100 directories can be purged per day for acceleration regions either within or outside the Chinese mainland, and up to 500 tasks can be submitted at a time.
         /// </summary>
@@ -1734,7 +1782,8 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// This API is used to modify the configuration of CDN acceleration domain names.
-        /// Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. The default value will be used for attributes that are not passed. We recommend calling the querying API to obtain the configuration attributes first. You can then modify and pass the attributes to the API. The certificate and key fields do not need to be passed for HTTPS configuration.
+        /// Note: To update complex configuration items, all attributes of the object must be specified, or the default values are used. We recommend calling the querying API to get attributes before modifying and passing them to this API.
+        /// The input parameters of this API are not reported to CloudAudit as it may contain sensitive data, such as keys and secrets.
         /// </summary>
         /// <param name="req"><see cref="UpdateDomainConfigRequest"/></param>
         /// <returns><see cref="UpdateDomainConfigResponse"/></returns>
@@ -1755,7 +1804,8 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// This API is used to modify the configuration of CDN acceleration domain names.
-        /// Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. The default value will be used for attributes that are not passed. We recommend calling the querying API to obtain the configuration attributes first. You can then modify and pass the attributes to the API. The certificate and key fields do not need to be passed for HTTPS configuration.
+        /// Note: To update complex configuration items, all attributes of the object must be specified, or the default values are used. We recommend calling the querying API to get attributes before modifying and passing them to this API.
+        /// The input parameters of this API are not reported to CloudAudit as it may contain sensitive data, such as keys and secrets.
         /// </summary>
         /// <param name="req"><see cref="UpdateDomainConfigRequest"/></param>
         /// <returns><see cref="UpdateDomainConfigResponse"/></returns>

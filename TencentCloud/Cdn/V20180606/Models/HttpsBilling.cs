@@ -25,7 +25,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// HTTPS (enabled by default), which will incur charges.
+        /// Whether to enable HTTPS. Values:
+        /// `on`: When it's enabled, HTTPS requests are allowed and incur charges. If not specified, his field uses the default value `on`.
+        /// `off`: When it's disabled, HTTPS requests are blocked.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

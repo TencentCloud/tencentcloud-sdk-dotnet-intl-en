@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Cross-border origin-pull optimization configuration switch
+        /// Whether to enable cross-MLC-border origin-pull optimization. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>

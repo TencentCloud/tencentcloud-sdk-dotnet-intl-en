@@ -32,7 +32,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// The CNAME address.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
@@ -41,7 +41,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// The CNAME status. Values:
         /// <li>`active`: Activated</li>
         /// <li>`moved`: Not activated </li>
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

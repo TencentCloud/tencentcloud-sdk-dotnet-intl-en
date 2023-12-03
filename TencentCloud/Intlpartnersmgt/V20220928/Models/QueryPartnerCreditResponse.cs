@@ -43,6 +43,18 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public float? RemainingCredit{ get; set; }
 
         /// <summary>
+        /// Allocated quota for the client
+        /// </summary>
+        [JsonProperty("CustomerTotalCredit")]
+        public float? CustomerTotalCredit{ get; set; }
+
+        /// <summary>
+        /// Remaining quota for the client
+        /// </summary>
+        [JsonProperty("CustomerRemainingCredit")]
+        public float? CustomerRemainingCredit{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
             this.SetParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
             this.SetParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
+            this.SetParamSimple(map, prefix + "CustomerTotalCredit", this.CustomerTotalCredit);
+            this.SetParamSimple(map, prefix + "CustomerRemainingCredit", this.CustomerRemainingCredit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

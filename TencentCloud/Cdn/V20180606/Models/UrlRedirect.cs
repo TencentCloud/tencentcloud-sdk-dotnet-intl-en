@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether to enable URL rewriting
+        /// Whether to enable URL rewriting. Values:
         /// `on`: Enable
         /// `off`: Disable
         /// </summary>
