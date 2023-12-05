@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Server host ID, i.e., QUuid
+        /// Host ID or unique super node ID
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
@@ -43,8 +43,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter
-        /// <li>Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).</li>
+        /// Filter condition
+        /// <li>
+        /// Status- String - Required: No - Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+        /// </li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

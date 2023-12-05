@@ -109,7 +109,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? EventID{ get; set; }
 
         /// <summary>
-        /// Server name
+        /// General node/Super node name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
@@ -200,8 +200,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ServerArg{ get; set; }
 
         /// <summary>
-        /// Server QUuid
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node QUuid/Super node ID
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QUUID")]
         public string QUUID{ get; set; }
@@ -268,6 +268,72 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RaspDetail")]
         public RaspInfo[] RaspDetail{ get; set; }
 
+        /// <summary>
+        /// Super node subnet name
+        /// </summary>
+        [JsonProperty("NodeSubNetName")]
+        public string NodeSubNetName{ get; set; }
+
+        /// <summary>
+        /// Super node subnet IP range
+        /// </summary>
+        [JsonProperty("NodeSubNetCIDR")]
+        public string NodeSubNetCIDR{ get; set; }
+
+        /// <summary>
+        /// Pod IP
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// ID of a super node
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// UID of a super node
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// Super node subnet ID
+        /// </summary>
+        [JsonProperty("NodeSubNetID")]
+        public string NodeSubNetID{ get; set; }
+
+        /// <summary>
+        /// Cluster ID
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// Cluster name
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("WorkloadType")]
+        public string WorkloadType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -309,6 +375,17 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
             this.SetParamSimple(map, prefix + "JNDIUrl", this.JNDIUrl);
             this.SetParamArrayObj(map, prefix + "RaspDetail.", this.RaspDetail);
+            this.SetParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+            this.SetParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
         }
     }
 }

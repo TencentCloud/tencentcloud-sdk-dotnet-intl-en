@@ -31,16 +31,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? IsEnabled{ get; set; }
 
         /// <summary>
-        /// Scope of servers for which to enable exploit prevention. Valid values: `0` (specified servers); `1` (all servers). This parameter is required when `IsEnabled` is `1`.
+        /// Servers to enable exploit prevention. Values: `0` (custom); `1` (all).
         /// </summary>
         [JsonProperty("Scope")]
         public long? Scope{ get; set; }
 
         /// <summary>
-        /// Specified servers for which to enable exploit prevention. This parameter is required when `Scope` is `0`.
+        /// Specified servers with exploit prevention enabled
         /// </summary>
         [JsonProperty("HostIDs")]
         public string[] HostIDs{ get; set; }
+
+        /// <summary>
+        /// Super nodes to enable exploit prevention. Values: `0` (custom); `1` (all).
+        /// </summary>
+        [JsonProperty("SuperScope")]
+        public long? SuperScope{ get; set; }
+
+        /// <summary>
+        /// List of super node IDs
+        /// </summary>
+        [JsonProperty("NodeIds")]
+        public string[] NodeIds{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
             this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamArraySimple(map, prefix + "HostIDs.", this.HostIDs);
+            this.SetParamSimple(map, prefix + "SuperScope", this.SuperScope);
+            this.SetParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
         }
     }
 }

@@ -38,20 +38,20 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// System disk type.
-        /// Valid values: 
-        /// <li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+        /// Values: 
+        /// <li>`CLOUD_SSD`: SSD cloud disks</li><li>`CLOUD_PREMIUM`: Premium cloud disks</li>
         /// </summary>
         [JsonProperty("SystemDiskType")]
         public string SystemDiskType{ get; set; }
 
         /// <summary>
-        /// System disk size.
+        /// System disk size in GB.
         /// </summary>
         [JsonProperty("SystemDiskSize")]
         public long? SystemDiskSize{ get; set; }
 
         /// <summary>
-        /// Monthly network traffic in Gb.
+        /// Monthly network traffic in GB.
         /// </summary>
         [JsonProperty("MonthlyTraffic")]
         public long? MonthlyTraffic{ get; set; }

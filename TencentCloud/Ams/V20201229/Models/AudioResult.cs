@@ -68,7 +68,7 @@ namespace TencentCloud.Ams.V20201229.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// This field is used to return the length of an audio file in seconds.
+        /// This field is used to return the length of an audio file in milliseconds.
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }

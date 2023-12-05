@@ -49,13 +49,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Server name
+        /// Node name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Server IP
+        /// Private IP of the node
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
@@ -116,6 +116,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
+        /// <summary>
+        /// Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// Public IP of the node
+        /// </summary>
+        [JsonProperty("PublicIP")]
+        public string PublicIP{ get; set; }
+
+        /// <summary>
+        /// Node ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +152,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RiskCnt", this.RiskCnt);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "PublicIP", this.PublicIP);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
         }
     }
 }

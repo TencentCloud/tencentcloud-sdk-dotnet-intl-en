@@ -25,9 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Filter
-        /// <li>Status- String - Required: No - Plugin status. Valid values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
-        /// <li>KeyWords- string - Required: No - Server name/IP</li>
+        /// Filter condition
+        /// <li>`Status`: String - Required: No - Plugin status. Values: `SUCCESS` (normal); `FAIL` (abnormal); `NO_DEFENCE` (not defended).</li>
+        /// <li>`HostName`: String - Required: No - Server/Super node name</li>
+        /// <li>`HostIP`: String - Required: No - Server IP </li>
+        /// <li>`NodeType`: String  - Required: No - Node type</li>
+        /// <li>`HostName` - String - Required: No - Super node name </li>
+        /// <li>`NodeSubNetCIDR`: String - Required: No - Super node CIDR block</li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

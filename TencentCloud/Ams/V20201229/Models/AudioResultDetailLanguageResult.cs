@@ -39,14 +39,14 @@ namespace TencentCloud.Ams.V20201229.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+        /// This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in seconds. 
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
-        /// This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+        /// This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in seconds. 
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]

@@ -145,6 +145,42 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? HostUnInstallCnt{ get; set; }
 
         /// <summary>
+        /// Number of super nodes
+        /// </summary>
+        [JsonProperty("SuperNodeCnt")]
+        public ulong? SuperNodeCnt{ get; set; }
+
+        /// <summary>
+        /// Number of running super nodes
+        /// </summary>
+        [JsonProperty("SuperNodeRunningCnt")]
+        public ulong? SuperNodeRunningCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TodayNewImageCnt")]
+        public ulong? TodayNewImageCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TodayUnsafeImageCnt")]
+        public ulong? TodayUnsafeImageCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RecommendedFixImageCnt")]
+        public ulong? RecommendedFixImageCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScannedImageCnt")]
+        public ulong? ScannedImageCnt{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -176,6 +212,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "LatestImageScanTime", this.LatestImageScanTime);
             this.SetParamSimple(map, prefix + "ImageUnsafeCnt", this.ImageUnsafeCnt);
             this.SetParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
+            this.SetParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
+            this.SetParamSimple(map, prefix + "SuperNodeRunningCnt", this.SuperNodeRunningCnt);
+            this.SetParamSimple(map, prefix + "TodayNewImageCnt", this.TodayNewImageCnt);
+            this.SetParamSimple(map, prefix + "TodayUnsafeImageCnt", this.TodayUnsafeImageCnt);
+            this.SetParamSimple(map, prefix + "RecommendedFixImageCnt", this.RecommendedFixImageCnt);
+            this.SetParamSimple(map, prefix + "ScannedImageCnt", this.ScannedImageCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,10 +25,16 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Number of accessed servers
+        /// Number of connected general nodes
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
+
+        /// <summary>
+        /// Number of connected super nodes
+        /// </summary>
+        [JsonProperty("SuperNodeCount")]
+        public ulong? SuperNodeCount{ get; set; }
 
         /// <summary>
         /// Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
@@ -53,6 +59,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
             this.SetParamSimple(map, prefix + "IsJoined", this.IsJoined);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
         }

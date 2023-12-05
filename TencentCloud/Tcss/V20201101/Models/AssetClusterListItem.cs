@@ -55,9 +55,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// Cluster type:
         /// `CT_TKE`: TKE cluster
         /// `CT_USER_CREATE`: External cluster
+        /// `CT_TKE_SERVERLESS`: TKE Serverless cluster
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// Cluster version
+        /// </summary>
+        [JsonProperty("ClusterVersion")]
+        public string ClusterVersion{ get; set; }
+
+        /// <summary>
+        /// MEM usage
+        /// </summary>
+        [JsonProperty("MemLimit")]
+        public long? MemLimit{ get; set; }
+
+        /// <summary>
+        /// cpu
+        /// </summary>
+        [JsonProperty("CpuLimit")]
+        public long? CpuLimit{ get; set; }
 
 
         /// <summary>
@@ -70,6 +89,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "BindRuleName", this.BindRuleName);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+            this.SetParamSimple(map, prefix + "MemLimit", this.MemLimit);
+            this.SetParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
         }
     }
 }

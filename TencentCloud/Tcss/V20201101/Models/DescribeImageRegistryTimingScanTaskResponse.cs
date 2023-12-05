@@ -54,6 +54,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// Scan of all images
         /// </summary>
         [JsonProperty("All")]
+        [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
@@ -69,6 +70,43 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
+
+        /// <summary>
+        /// Whether to scan the latest image tag
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Latest")]
+        public bool? Latest{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScanEndTime")]
+        public string ScanEndTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RegistryType")]
+        public string[] RegistryType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ContainerRunning")]
+        public bool? ContainerRunning{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScanScope")]
+        public ulong? ScanScope{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string[] Namespace{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -89,6 +127,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamSimple(map, prefix + "Latest", this.Latest);
+            this.SetParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+            this.SetParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+            this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+            this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
+            this.SetParamArraySimple(map, prefix + "Namespace.", this.Namespace);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

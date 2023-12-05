@@ -38,13 +38,13 @@ namespace TencentCloud.Ams.V20201229.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+        /// This field is used to return the start time of the segment of an audio file under the corresponding moan tag in seconds.
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
-        /// This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+        /// This field is used to return the end time of the segment of an audio file under the corresponding moan tag in seconds.
         /// </summary>
         [JsonProperty("EndTime")]
         public float? EndTime{ get; set; }

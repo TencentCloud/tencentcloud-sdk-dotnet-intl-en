@@ -195,6 +195,84 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string IsolateTime{ get; set; }
 
         /// <summary>
+        /// Node ID
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// Node name
+        /// </summary>
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
+        /// <summary>
+        /// Node subnet ID
+        /// </summary>
+        [JsonProperty("NodeSubNetID")]
+        public string NodeSubNetID{ get; set; }
+
+        /// <summary>
+        /// Node subnet name
+        /// </summary>
+        [JsonProperty("NodeSubNetName")]
+        public string NodeSubNetName{ get; set; }
+
+        /// <summary>
+        /// Subnet IP range
+        /// </summary>
+        [JsonProperty("NodeSubNetCIDR")]
+        public string NodeSubNetCIDR{ get; set; }
+
+        /// <summary>
+        /// Pod name
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// Pod IP
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// Pod status
+        /// </summary>
+        [JsonProperty("PodStatus")]
+        public string PodStatus{ get; set; }
+
+        /// <summary>
+        /// Cluster ID
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// Cluster name
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// Node type. Values: `NORMAL` (default), `SUPER`
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// UID of the super node
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// Public IP
+        /// </summary>
+        [JsonProperty("PublicIP")]
+        public string PublicIP{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -233,6 +311,19 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NetSubStatus", this.NetSubStatus);
             this.SetParamSimple(map, prefix + "IsolateSource", this.IsolateSource);
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+            this.SetParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+            this.SetParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "PodStatus", this.PodStatus);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "PublicIP", this.PublicIP);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

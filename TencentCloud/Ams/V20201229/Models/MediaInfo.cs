@@ -31,7 +31,7 @@ namespace TencentCloud.Ams.V20201229.Models
         public string Codecs{ get; set; }
 
         /// <summary>
-        /// This field is used to return the segment length of the input streaming media file in seconds. It is **15 seconds by default** and is customizable.
+        /// This field is used to return the segment length of the input streaming media file in milliseconds.** It is 15 seconds** by default and is customizable.
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }

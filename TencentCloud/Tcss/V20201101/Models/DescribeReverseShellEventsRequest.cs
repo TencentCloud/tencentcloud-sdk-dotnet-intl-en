@@ -37,7 +37,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
+        /// Filter parameters
+        /// `InnerNetAlarmShow` - int - Required: Values: `1` (show private network alert); `0` (do not show)
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

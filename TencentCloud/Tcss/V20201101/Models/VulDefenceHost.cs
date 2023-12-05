@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Server name
+        /// General node/Super node name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// Server QUuid
+        /// Node QUuid/Super node ID
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
@@ -66,6 +66,54 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+        /// </summary>
+        [JsonProperty("NodeType")]
+        public string NodeType{ get; set; }
+
+        /// <summary>
+        /// Super node subnet name
+        /// </summary>
+        [JsonProperty("NodeSubNetName")]
+        public string NodeSubNetName{ get; set; }
+
+        /// <summary>
+        /// Super node subnet IP range
+        /// </summary>
+        [JsonProperty("NodeSubNetCIDR")]
+        public string NodeSubNetCIDR{ get; set; }
+
+        /// <summary>
+        /// Super node subnet ID
+        /// </summary>
+        [JsonProperty("NodeSubNetID")]
+        public string NodeSubNetID{ get; set; }
+
+        /// <summary>
+        /// UID of a super node
+        /// </summary>
+        [JsonProperty("NodeUniqueID")]
+        public string NodeUniqueID{ get; set; }
+
+        /// <summary>
+        /// ID of a super node
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// Pod IP
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
+        /// <summary>
+        /// Pod name
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +127,14 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "PublicIP", this.PublicIP);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+            this.SetParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+            this.SetParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+            this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
         }
     }
 }

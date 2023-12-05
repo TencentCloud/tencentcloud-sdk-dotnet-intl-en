@@ -271,6 +271,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// This API is used to create one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDisksRequest"/></param>
+        /// <returns><see cref="CreateDisksResponse"/></returns>
+        public async Task<CreateDisksResponse> CreateDisks(CreateDisksRequest req)
+        {
+             JsonResponseModel<CreateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to create one or more cloud disks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDisksRequest"/></param>
+        /// <returns><see cref="CreateDisksResponse"/></returns>
+        public CreateDisksResponse CreateDisksSync(CreateDisksRequest req)
+        {
+             JsonResponseModel<CreateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to add a firewall rule on an instance.
         /// 
         /// 
@@ -1825,7 +1865,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to unassociate a CCN instance.
+        /// This API is used to disassociate with a CCN instance.
         /// </summary>
         /// <param name="req"><see cref="DetachCcnRequest"/></param>
         /// <returns><see cref="DetachCcnResponse"/></returns>
@@ -1845,7 +1885,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to unassociate a CCN instance.
+        /// This API is used to disassociate with a CCN instance.
         /// </summary>
         /// <param name="req"><see cref="DetachCcnRequest"/></param>
         /// <returns><see cref="DetachCcnResponse"/></returns>
@@ -2188,6 +2228,56 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "InquirePriceRenewInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to return one or more Lighthouse cloud disks.
+        /// 
+        /// You can only perform this operation on `UNATTACHED` disks.
+        /// After the successful call of the API, the cloud disk goes to the SHUTDOWN state.
+        /// Up to 20 instances are supported at one time. 
+        /// This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDisksRequest"/></param>
+        /// <returns><see cref="IsolateDisksResponse"/></returns>
+        public async Task<IsolateDisksResponse> IsolateDisks(IsolateDisksRequest req)
+        {
+             JsonResponseModel<IsolateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to return one or more Lighthouse cloud disks.
+        /// 
+        /// You can only perform this operation on `UNATTACHED` disks.
+        /// After the successful call of the API, the cloud disk goes to the SHUTDOWN state.
+        /// Up to 20 instances are supported at one time. 
+        /// This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateDisksRequest"/></param>
+        /// <returns><see cref="IsolateDisksResponse"/></returns>
+        public IsolateDisksResponse IsolateDisksSync(IsolateDisksRequest req)
+        {
+             JsonResponseModel<IsolateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDisksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2746,6 +2836,100 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "RebootInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebootInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to renew one or more Lighthouse cloud disks.
+        /// 
+        /// This operation can only be performed on data disks with the status of `ATTACHED`, `UNATTACHED` or `SHUTDOWN`.
+        /// Up to 50 cloud disks are supported at one time.
+        /// This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDisksRequest"/></param>
+        /// <returns><see cref="RenewDisksResponse"/></returns>
+        public async Task<RenewDisksResponse> RenewDisks(RenewDisksRequest req)
+        {
+             JsonResponseModel<RenewDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to renew one or more Lighthouse cloud disks.
+        /// 
+        /// This operation can only be performed on data disks with the status of `ATTACHED`, `UNATTACHED` or `SHUTDOWN`.
+        /// Up to 50 cloud disks are supported at one time.
+        /// This API is async. After the request is sent, a `RequestId` is returned. At this time, the operation is not completed yet. To check the result, you need to call  [DescribeDisks](https://intl.cloud.tencent.com/document/product/1207/66093?from_cn_redirect=1). If the latest operation status (LatestOperationState) of the disk is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDisksRequest"/></param>
+        /// <returns><see cref="RenewDisksResponse"/></returns>
+        public RenewDisksResponse RenewDisksSync(RenewDisksRequest req)
+        {
+             JsonResponseModel<RenewDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to renew one or more Lighthouse instances.
+        /// * You can only perform this operation on instances whose status is `RUNNING`, `STOPPED` and `SHUTDOWN`.
+        /// * Batch operations are supported. Up to 100 instances are supported in each request.
+        /// * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstancesRequest"/></param>
+        /// <returns><see cref="RenewInstancesResponse"/></returns>
+        public async Task<RenewInstancesResponse> RenewInstances(RenewInstancesRequest req)
+        {
+             JsonResponseModel<RenewInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to renew one or more Lighthouse instances.
+        /// * You can only perform this operation on instances whose status is `RUNNING`, `STOPPED` and `SHUTDOWN`.
+        /// * Batch operations are supported. Up to 100 instances are supported in each request.
+        /// * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstancesRequest"/></param>
+        /// <returns><see cref="RenewInstancesResponse"/></returns>
+        public RenewInstancesResponse RenewInstancesSync(RenewInstancesRequest req)
+        {
+             JsonResponseModel<RenewInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

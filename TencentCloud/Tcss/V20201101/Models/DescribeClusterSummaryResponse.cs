@@ -91,6 +91,30 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? NotImportedClusterCount{ get; set; }
 
         /// <summary>
+        /// Number of EKS clusters
+        /// </summary>
+        [JsonProperty("ServerlessClusterCount")]
+        public ulong? ServerlessClusterCount{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TkeClusterCount")]
+        public ulong? TkeClusterCount{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("UserCreateTencentClusterCount")]
+        public ulong? UserCreateTencentClusterCount{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("UserCreateHybridClusterCount")]
+        public ulong? UserCreateHybridClusterCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +137,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ManualCheckClusterCount", this.ManualCheckClusterCount);
             this.SetParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
             this.SetParamSimple(map, prefix + "NotImportedClusterCount", this.NotImportedClusterCount);
+            this.SetParamSimple(map, prefix + "ServerlessClusterCount", this.ServerlessClusterCount);
+            this.SetParamSimple(map, prefix + "TkeClusterCount", this.TkeClusterCount);
+            this.SetParamSimple(map, prefix + "UserCreateTencentClusterCount", this.UserCreateTencentClusterCount);
+            this.SetParamSimple(map, prefix + "UserCreateHybridClusterCount", this.UserCreateHybridClusterCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

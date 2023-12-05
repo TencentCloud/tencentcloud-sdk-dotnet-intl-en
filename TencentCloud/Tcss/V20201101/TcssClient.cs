@@ -10739,6 +10739,46 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// This API is used to query the list of repository images affected by vulnerabilities.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRegistryImageListRequest"/></param>
+        /// <returns><see cref="DescribeVulRegistryImageListResponse"/></returns>
+        public async Task<DescribeVulRegistryImageListResponse> DescribeVulRegistryImageList(DescribeVulRegistryImageListRequest req)
+        {
+             JsonResponseModel<DescribeVulRegistryImageListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVulRegistryImageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulRegistryImageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// This API is used to query the list of repository images affected by vulnerabilities.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRegistryImageListRequest"/></param>
+        /// <returns><see cref="DescribeVulRegistryImageListResponse"/></returns>
+        public DescribeVulRegistryImageListResponse DescribeVulRegistryImageListSync(DescribeVulRegistryImageListRequest req)
+        {
+             JsonResponseModel<DescribeVulRegistryImageListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVulRegistryImageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulRegistryImageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// This API is used to count the number of licensed but not scanned images on the vulnerability scanning page.
         /// </summary>
         /// <param name="req"><see cref="DescribeVulScanAuthorizedImageSummaryRequest"/></param>

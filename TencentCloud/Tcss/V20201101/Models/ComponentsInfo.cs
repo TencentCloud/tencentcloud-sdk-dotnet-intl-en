@@ -29,6 +29,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Component")]
+        [System.Obsolete]
         public string Component{ get; set; }
 
         /// <summary>
@@ -38,6 +39,34 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
+        /// <summary>
+        /// Fixed version
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FixedVersion")]
+        public string FixedVersion{ get; set; }
+
+        /// <summary>
+        /// Path
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
+        /// Type
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// Add-on name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +75,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "Component", this.Component);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "FixedVersion", this.FixedVersion);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

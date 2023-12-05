@@ -31,7 +31,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Whether Auto-Renewal is enabled 
+        /// Auto-Renewal flag. Valid values:
+        /// 
+        /// `NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically
+        /// `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew
+        /// `u200cDISABLE_NOTIFY_AND_AUTO_RENEW`: Neither trigger expiration notification nor renew
+        /// 
+        /// Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }

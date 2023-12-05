@@ -70,6 +70,36 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? SupportDefenseVulCount{ get; set; }
 
         /// <summary>
+        /// Number of normal nodes
+        /// </summary>
+        [JsonProperty("HostNodeCount")]
+        public long? HostNodeCount{ get; set; }
+
+        /// <summary>
+        /// Super node scope
+        /// </summary>
+        [JsonProperty("SuperScope")]
+        public long? SuperScope{ get; set; }
+
+        /// <summary>
+        /// Number of super nodes
+        /// </summary>
+        [JsonProperty("SuperNodeCount")]
+        public long? SuperNodeCount{ get; set; }
+
+        /// <summary>
+        /// List of super node IDs
+        /// </summary>
+        [JsonProperty("SuperNodeIds")]
+        public string[] SuperNodeIds{ get; set; }
+
+        /// <summary>
+        /// Total number of super nodes with TCSS activated
+        /// </summary>
+        [JsonProperty("NodeTotalCount")]
+        public long? NodeTotalCount{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -88,6 +118,11 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "HostIDs.", this.HostIDs);
             this.SetParamSimple(map, prefix + "HostTotalCount", this.HostTotalCount);
             this.SetParamSimple(map, prefix + "SupportDefenseVulCount", this.SupportDefenseVulCount);
+            this.SetParamSimple(map, prefix + "HostNodeCount", this.HostNodeCount);
+            this.SetParamSimple(map, prefix + "SuperScope", this.SuperScope);
+            this.SetParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
+            this.SetParamArraySimple(map, prefix + "SuperNodeIds.", this.SuperNodeIds);
+            this.SetParamSimple(map, prefix + "NodeTotalCount", this.NodeTotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

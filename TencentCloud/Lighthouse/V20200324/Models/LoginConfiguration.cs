@@ -32,15 +32,21 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string AutoGeneratePassword{ get; set; }
 
         /// <summary>
-        /// Instace login password.
-        /// For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
-        /// <li>[a-z]</li>
-        /// <li>[A-Z]</li>
-        /// <li>[0-9]</li>
-        /// <li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+        /// Instance login password. 
+        /// For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username. 
+        /// <li>Lowercase letters: [a–z]</li>
+        /// <li>Uppercase letters: [A–Z]</li>
+        /// <li>Digits: 0-9</li>
+        /// <li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("KeyIds")]
+        public string[] KeyIds{ get; set; }
 
 
         /// <summary>
@@ -50,6 +56,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "AutoGeneratePassword", this.AutoGeneratePassword);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         }
     }
 }

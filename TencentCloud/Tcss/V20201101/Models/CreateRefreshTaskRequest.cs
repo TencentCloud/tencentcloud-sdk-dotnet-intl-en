@@ -24,12 +24,26 @@ namespace TencentCloud.Tcss.V20201101.Models
     public class CreateRefreshTaskRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ClusterIDs")]
+        public string[] ClusterIDs{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsSyncListOnly")]
+        public bool? IsSyncListOnly{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
+            this.SetParamSimple(map, prefix + "IsSyncListOnly", this.IsSyncListOnly);
         }
     }
 }

@@ -37,7 +37,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether Auto-Renewal is enabled 
+        /// Specify whether to renew an instance automatically when it expires. Values: 
+        /// 
+        /// `NOTIFY_AND_AUTO_RENEW`: Trigger expiration notification and renew automatically; `NOTIFY_AND_MANUAL_RENEW`: Trigger expiration notification but do not renew; `DISABLE_NOTIFY_AND_MANUAL_RENEW`: Do not trigger the notification and do not renew.
+        /// 
+        /// Default: `NOTIFY_AND_MANUAL_RENEW`. If `NOTIFY_AND_AUTO_RENEW` is specified, the instance is automatically renewed on a monthly basis when the account balance is sufficient.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }

@@ -97,6 +97,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("NetworkPolicyPluginError")]
         public string NetworkPolicyPluginError{ get; set; }
 
+        /// <summary>
+        /// Cluster network plugin
+        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterNetworkSettings")]
+        public string ClusterNetworkSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +122,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "EnableRuleCount", this.EnableRuleCount);
             this.SetParamSimple(map, prefix + "NetworkPolicyPluginStatus", this.NetworkPolicyPluginStatus);
             this.SetParamSimple(map, prefix + "NetworkPolicyPluginError", this.NetworkPolicyPluginError);
+            this.SetParamSimple(map, prefix + "ClusterNetworkSettings", this.ClusterNetworkSettings);
         }
     }
 }
