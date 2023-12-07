@@ -57,19 +57,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="BatchCreateAclRequest"/></param>
         /// <returns><see cref="BatchCreateAclResponse"/></returns>
-        public async Task<BatchCreateAclResponse> BatchCreateAcl(BatchCreateAclRequest req)
+        public Task<BatchCreateAclResponse> BatchCreateAcl(BatchCreateAclRequest req)
         {
-             JsonResponseModel<BatchCreateAclResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BatchCreateAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateAclResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BatchCreateAclResponse>(req, "BatchCreateAcl");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="BatchCreateAclResponse"/></returns>
         public BatchCreateAclResponse BatchCreateAclSync(BatchCreateAclRequest req)
         {
-             JsonResponseModel<BatchCreateAclResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BatchCreateAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchCreateAclResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BatchCreateAclResponse>(req, "BatchCreateAcl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="BatchModifyGroupOffsetsRequest"/></param>
         /// <returns><see cref="BatchModifyGroupOffsetsResponse"/></returns>
-        public async Task<BatchModifyGroupOffsetsResponse> BatchModifyGroupOffsets(BatchModifyGroupOffsetsRequest req)
+        public Task<BatchModifyGroupOffsetsResponse> BatchModifyGroupOffsets(BatchModifyGroupOffsetsRequest req)
         {
-             JsonResponseModel<BatchModifyGroupOffsetsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BatchModifyGroupOffsets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyGroupOffsetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BatchModifyGroupOffsetsResponse>(req, "BatchModifyGroupOffsets");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="BatchModifyGroupOffsetsResponse"/></returns>
         public BatchModifyGroupOffsetsResponse BatchModifyGroupOffsetsSync(BatchModifyGroupOffsetsRequest req)
         {
-             JsonResponseModel<BatchModifyGroupOffsetsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BatchModifyGroupOffsets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyGroupOffsetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BatchModifyGroupOffsetsResponse>(req, "BatchModifyGroupOffsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="BatchModifyTopicAttributesRequest"/></param>
         /// <returns><see cref="BatchModifyTopicAttributesResponse"/></returns>
-        public async Task<BatchModifyTopicAttributesResponse> BatchModifyTopicAttributes(BatchModifyTopicAttributesRequest req)
+        public Task<BatchModifyTopicAttributesResponse> BatchModifyTopicAttributes(BatchModifyTopicAttributesRequest req)
         {
-             JsonResponseModel<BatchModifyTopicAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BatchModifyTopicAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTopicAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BatchModifyTopicAttributesResponse>(req, "BatchModifyTopicAttributes");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="BatchModifyTopicAttributesResponse"/></returns>
         public BatchModifyTopicAttributesResponse BatchModifyTopicAttributesSync(BatchModifyTopicAttributesRequest req)
         {
-             JsonResponseModel<BatchModifyTopicAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BatchModifyTopicAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTopicAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BatchModifyTopicAttributesResponse>(req, "BatchModifyTopicAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreateAclRequest"/></param>
         /// <returns><see cref="CreateAclResponse"/></returns>
-        public async Task<CreateAclResponse> CreateAcl(CreateAclRequest req)
+        public Task<CreateAclResponse> CreateAcl(CreateAclRequest req)
         {
-             JsonResponseModel<CreateAclResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAclResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAclResponse>(req, "CreateAcl");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreateAclResponse"/></returns>
         public CreateAclResponse CreateAclSync(CreateAclRequest req)
         {
-             JsonResponseModel<CreateAclResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAclResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAclResponse>(req, "CreateAcl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreateAclRuleRequest"/></param>
         /// <returns><see cref="CreateAclRuleResponse"/></returns>
-        public async Task<CreateAclRuleResponse> CreateAclRule(CreateAclRuleRequest req)
+        public Task<CreateAclRuleResponse> CreateAclRule(CreateAclRuleRequest req)
         {
-             JsonResponseModel<CreateAclRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateAclRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAclRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAclRuleResponse>(req, "CreateAclRule");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreateAclRuleResponse"/></returns>
         public CreateAclRuleResponse CreateAclRuleSync(CreateAclRuleRequest req)
         {
-             JsonResponseModel<CreateAclRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateAclRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAclRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateAclRuleResponse>(req, "CreateAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
         /// <returns><see cref="CreateConsumerResponse"/></returns>
-        public async Task<CreateConsumerResponse> CreateConsumer(CreateConsumerRequest req)
+        public Task<CreateConsumerResponse> CreateConsumer(CreateConsumerRequest req)
         {
-             JsonResponseModel<CreateConsumerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateConsumer");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateConsumerResponse>(req, "CreateConsumer");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreateConsumerResponse"/></returns>
         public CreateConsumerResponse CreateConsumerSync(CreateConsumerRequest req)
         {
-             JsonResponseModel<CreateConsumerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateConsumer");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateConsumerResponse>(req, "CreateConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
         /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
-        public async Task<CreateDatahubTopicResponse> CreateDatahubTopic(CreateDatahubTopicRequest req)
+        public Task<CreateDatahubTopicResponse> CreateDatahubTopic(CreateDatahubTopicRequest req)
         {
-             JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDatahubTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatahubTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDatahubTopicResponse>(req, "CreateDatahubTopic");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
         public CreateDatahubTopicResponse CreateDatahubTopicSync(CreateDatahubTopicRequest req)
         {
-             JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDatahubTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatahubTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDatahubTopicResponse>(req, "CreateDatahubTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
         /// <returns><see cref="CreateInstancePostResponse"/></returns>
-        public async Task<CreateInstancePostResponse> CreateInstancePost(CreateInstancePostRequest req)
+        public Task<CreateInstancePostResponse> CreateInstancePost(CreateInstancePostRequest req)
         {
-             JsonResponseModel<CreateInstancePostResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateInstancePost");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancePostResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateInstancePostResponse>(req, "CreateInstancePost");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreateInstancePostResponse"/></returns>
         public CreateInstancePostResponse CreateInstancePostSync(CreateInstancePostRequest req)
         {
-             JsonResponseModel<CreateInstancePostResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateInstancePost");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancePostResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateInstancePostResponse>(req, "CreateInstancePost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreatePartitionRequest"/></param>
         /// <returns><see cref="CreatePartitionResponse"/></returns>
-        public async Task<CreatePartitionResponse> CreatePartition(CreatePartitionRequest req)
+        public Task<CreatePartitionResponse> CreatePartition(CreatePartitionRequest req)
         {
-             JsonResponseModel<CreatePartitionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreatePartition");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePartitionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreatePartitionResponse>(req, "CreatePartition");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreatePartitionResponse"/></returns>
         public CreatePartitionResponse CreatePartitionSync(CreatePartitionRequest req)
         {
-             JsonResponseModel<CreatePartitionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreatePartition");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePartitionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreatePartitionResponse>(req, "CreatePartition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreatePostPaidInstanceRequest"/></param>
         /// <returns><see cref="CreatePostPaidInstanceResponse"/></returns>
-        public async Task<CreatePostPaidInstanceResponse> CreatePostPaidInstance(CreatePostPaidInstanceRequest req)
+        public Task<CreatePostPaidInstanceResponse> CreatePostPaidInstance(CreatePostPaidInstanceRequest req)
         {
-             JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreatePostPaidInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePostPaidInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreatePostPaidInstanceResponse>(req, "CreatePostPaidInstance");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreatePostPaidInstanceResponse"/></returns>
         public CreatePostPaidInstanceResponse CreatePostPaidInstanceSync(CreatePostPaidInstanceRequest req)
         {
-             JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreatePostPaidInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePostPaidInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreatePostPaidInstanceResponse>(req, "CreatePostPaidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
         /// <returns><see cref="CreateTopicResponse"/></returns>
-        public async Task<CreateTopicResponse> CreateTopic(CreateTopicRequest req)
+        public Task<CreateTopicResponse> CreateTopic(CreateTopicRequest req)
         {
-             JsonResponseModel<CreateTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTopicResponse>(req, "CreateTopic");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreateTopicResponse"/></returns>
         public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
         {
-             JsonResponseModel<CreateTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTopicResponse>(req, "CreateTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreateTopicIpWhiteListRequest"/></param>
         /// <returns><see cref="CreateTopicIpWhiteListResponse"/></returns>
-        public async Task<CreateTopicIpWhiteListResponse> CreateTopicIpWhiteList(CreateTopicIpWhiteListRequest req)
+        public Task<CreateTopicIpWhiteListResponse> CreateTopicIpWhiteList(CreateTopicIpWhiteListRequest req)
         {
-             JsonResponseModel<CreateTopicIpWhiteListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateTopicIpWhiteList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicIpWhiteListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTopicIpWhiteListResponse>(req, "CreateTopicIpWhiteList");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreateTopicIpWhiteListResponse"/></returns>
         public CreateTopicIpWhiteListResponse CreateTopicIpWhiteListSync(CreateTopicIpWhiteListRequest req)
         {
-             JsonResponseModel<CreateTopicIpWhiteListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateTopicIpWhiteList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicIpWhiteListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateTopicIpWhiteListResponse>(req, "CreateTopicIpWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="CreateUserRequest"/></param>
         /// <returns><see cref="CreateUserResponse"/></returns>
-        public async Task<CreateUserResponse> CreateUser(CreateUserRequest req)
+        public Task<CreateUserResponse> CreateUser(CreateUserRequest req)
         {
-             JsonResponseModel<CreateUserResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="CreateUserResponse"/></returns>
         public CreateUserResponse CreateUserSync(CreateUserRequest req)
         {
-             JsonResponseModel<CreateUserResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DeleteAclRequest"/></param>
         /// <returns><see cref="DeleteAclResponse"/></returns>
-        public async Task<DeleteAclResponse> DeleteAcl(DeleteAclRequest req)
+        public Task<DeleteAclResponse> DeleteAcl(DeleteAclRequest req)
         {
-             JsonResponseModel<DeleteAclResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAclResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteAclResponse>(req, "DeleteAcl");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DeleteAclResponse"/></returns>
         public DeleteAclResponse DeleteAclSync(DeleteAclRequest req)
         {
-             JsonResponseModel<DeleteAclResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteAcl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAclResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteAclResponse>(req, "DeleteAcl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>
         /// <returns><see cref="DeleteInstancePreResponse"/></returns>
-        public async Task<DeleteInstancePreResponse> DeleteInstancePre(DeleteInstancePreRequest req)
+        public Task<DeleteInstancePreResponse> DeleteInstancePre(DeleteInstancePreRequest req)
         {
-             JsonResponseModel<DeleteInstancePreResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteInstancePre");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstancePreResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteInstancePreResponse>(req, "DeleteInstancePre");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DeleteInstancePreResponse"/></returns>
         public DeleteInstancePreResponse DeleteInstancePreSync(DeleteInstancePreRequest req)
         {
-             JsonResponseModel<DeleteInstancePreResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteInstancePre");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstancePreResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteInstancePreResponse>(req, "DeleteInstancePre")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DeleteRouteRequest"/></param>
         /// <returns><see cref="DeleteRouteResponse"/></returns>
-        public async Task<DeleteRouteResponse> DeleteRoute(DeleteRouteRequest req)
+        public Task<DeleteRouteResponse> DeleteRoute(DeleteRouteRequest req)
         {
-             JsonResponseModel<DeleteRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteRouteResponse>(req, "DeleteRoute");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DeleteRouteResponse"/></returns>
         public DeleteRouteResponse DeleteRouteSync(DeleteRouteRequest req)
         {
-             JsonResponseModel<DeleteRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteRouteResponse>(req, "DeleteRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DeleteRouteTriggerTimeRequest"/></param>
         /// <returns><see cref="DeleteRouteTriggerTimeResponse"/></returns>
-        public async Task<DeleteRouteTriggerTimeResponse> DeleteRouteTriggerTime(DeleteRouteTriggerTimeRequest req)
+        public Task<DeleteRouteTriggerTimeResponse> DeleteRouteTriggerTime(DeleteRouteTriggerTimeRequest req)
         {
-             JsonResponseModel<DeleteRouteTriggerTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteRouteTriggerTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteTriggerTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteRouteTriggerTimeResponse>(req, "DeleteRouteTriggerTime");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DeleteRouteTriggerTimeResponse"/></returns>
         public DeleteRouteTriggerTimeResponse DeleteRouteTriggerTimeSync(DeleteRouteTriggerTimeRequest req)
         {
-             JsonResponseModel<DeleteRouteTriggerTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteRouteTriggerTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteTriggerTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteRouteTriggerTimeResponse>(req, "DeleteRouteTriggerTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
         /// <returns><see cref="DeleteTopicResponse"/></returns>
-        public async Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest req)
+        public Task<DeleteTopicResponse> DeleteTopic(DeleteTopicRequest req)
         {
-             JsonResponseModel<DeleteTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DeleteTopicResponse"/></returns>
         public DeleteTopicResponse DeleteTopicSync(DeleteTopicRequest req)
         {
-             JsonResponseModel<DeleteTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -777,19 +435,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicIpWhiteListRequest"/></param>
         /// <returns><see cref="DeleteTopicIpWhiteListResponse"/></returns>
-        public async Task<DeleteTopicIpWhiteListResponse> DeleteTopicIpWhiteList(DeleteTopicIpWhiteListRequest req)
+        public Task<DeleteTopicIpWhiteListResponse> DeleteTopicIpWhiteList(DeleteTopicIpWhiteListRequest req)
         {
-             JsonResponseModel<DeleteTopicIpWhiteListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteTopicIpWhiteList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicIpWhiteListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteTopicIpWhiteListResponse>(req, "DeleteTopicIpWhiteList");
         }
 
         /// <summary>
@@ -799,17 +447,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DeleteTopicIpWhiteListResponse"/></returns>
         public DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteListSync(DeleteTopicIpWhiteListRequest req)
         {
-             JsonResponseModel<DeleteTopicIpWhiteListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteTopicIpWhiteList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicIpWhiteListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteTopicIpWhiteListResponse>(req, "DeleteTopicIpWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -817,19 +456,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DeleteUserRequest"/></param>
         /// <returns><see cref="DeleteUserResponse"/></returns>
-        public async Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
+        public Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
         {
-             JsonResponseModel<DeleteUserResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser");
         }
 
         /// <summary>
@@ -839,17 +468,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DeleteUserResponse"/></returns>
         public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
         {
-             JsonResponseModel<DeleteUserResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -857,19 +477,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeACLRequest"/></param>
         /// <returns><see cref="DescribeACLResponse"/></returns>
-        public async Task<DescribeACLResponse> DescribeACL(DescribeACLRequest req)
+        public Task<DescribeACLResponse> DescribeACL(DescribeACLRequest req)
         {
-             JsonResponseModel<DescribeACLResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeACL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeACLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeACLResponse>(req, "DescribeACL");
         }
 
         /// <summary>
@@ -879,17 +489,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeACLResponse"/></returns>
         public DescribeACLResponse DescribeACLSync(DescribeACLRequest req)
         {
-             JsonResponseModel<DescribeACLResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeACL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeACLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeACLResponse>(req, "DescribeACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -897,19 +498,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeAclRuleRequest"/></param>
         /// <returns><see cref="DescribeAclRuleResponse"/></returns>
-        public async Task<DescribeAclRuleResponse> DescribeAclRule(DescribeAclRuleRequest req)
+        public Task<DescribeAclRuleResponse> DescribeAclRule(DescribeAclRuleRequest req)
         {
-             JsonResponseModel<DescribeAclRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAclRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAclRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAclRuleResponse>(req, "DescribeAclRule");
         }
 
         /// <summary>
@@ -919,17 +510,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeAclRuleResponse"/></returns>
         public DescribeAclRuleResponse DescribeAclRuleSync(DescribeAclRuleRequest req)
         {
-             JsonResponseModel<DescribeAclRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAclRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAclRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAclRuleResponse>(req, "DescribeAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -937,19 +519,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeAppInfoRequest"/></param>
         /// <returns><see cref="DescribeAppInfoResponse"/></returns>
-        public async Task<DescribeAppInfoResponse> DescribeAppInfo(DescribeAppInfoRequest req)
+        public Task<DescribeAppInfoResponse> DescribeAppInfo(DescribeAppInfoRequest req)
         {
-             JsonResponseModel<DescribeAppInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAppInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAppInfoResponse>(req, "DescribeAppInfo");
         }
 
         /// <summary>
@@ -959,17 +531,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeAppInfoResponse"/></returns>
         public DescribeAppInfoResponse DescribeAppInfoSync(DescribeAppInfoRequest req)
         {
-             JsonResponseModel<DescribeAppInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAppInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeAppInfoResponse>(req, "DescribeAppInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -977,19 +540,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeCkafkaZoneRequest"/></param>
         /// <returns><see cref="DescribeCkafkaZoneResponse"/></returns>
-        public async Task<DescribeCkafkaZoneResponse> DescribeCkafkaZone(DescribeCkafkaZoneRequest req)
+        public Task<DescribeCkafkaZoneResponse> DescribeCkafkaZone(DescribeCkafkaZoneRequest req)
         {
-             JsonResponseModel<DescribeCkafkaZoneResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCkafkaZone");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCkafkaZoneResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCkafkaZoneResponse>(req, "DescribeCkafkaZone");
         }
 
         /// <summary>
@@ -999,17 +552,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeCkafkaZoneResponse"/></returns>
         public DescribeCkafkaZoneResponse DescribeCkafkaZoneSync(DescribeCkafkaZoneRequest req)
         {
-             JsonResponseModel<DescribeCkafkaZoneResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCkafkaZone");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCkafkaZoneResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCkafkaZoneResponse>(req, "DescribeCkafkaZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1017,19 +561,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeConsumerGroupRequest"/></param>
         /// <returns><see cref="DescribeConsumerGroupResponse"/></returns>
-        public async Task<DescribeConsumerGroupResponse> DescribeConsumerGroup(DescribeConsumerGroupRequest req)
+        public Task<DescribeConsumerGroupResponse> DescribeConsumerGroup(DescribeConsumerGroupRequest req)
         {
-             JsonResponseModel<DescribeConsumerGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeConsumerGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeConsumerGroupResponse>(req, "DescribeConsumerGroup");
         }
 
         /// <summary>
@@ -1039,17 +573,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeConsumerGroupResponse"/></returns>
         public DescribeConsumerGroupResponse DescribeConsumerGroupSync(DescribeConsumerGroupRequest req)
         {
-             JsonResponseModel<DescribeConsumerGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeConsumerGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeConsumerGroupResponse>(req, "DescribeConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1057,19 +582,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTopicRequest"/></param>
         /// <returns><see cref="DescribeDatahubTopicResponse"/></returns>
-        public async Task<DescribeDatahubTopicResponse> DescribeDatahubTopic(DescribeDatahubTopicRequest req)
+        public Task<DescribeDatahubTopicResponse> DescribeDatahubTopic(DescribeDatahubTopicRequest req)
         {
-             JsonResponseModel<DescribeDatahubTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDatahubTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatahubTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDatahubTopicResponse>(req, "DescribeDatahubTopic");
         }
 
         /// <summary>
@@ -1079,17 +594,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeDatahubTopicResponse"/></returns>
         public DescribeDatahubTopicResponse DescribeDatahubTopicSync(DescribeDatahubTopicRequest req)
         {
-             JsonResponseModel<DescribeDatahubTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDatahubTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatahubTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDatahubTopicResponse>(req, "DescribeDatahubTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1097,19 +603,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTopicsRequest"/></param>
         /// <returns><see cref="DescribeDatahubTopicsResponse"/></returns>
-        public async Task<DescribeDatahubTopicsResponse> DescribeDatahubTopics(DescribeDatahubTopicsRequest req)
+        public Task<DescribeDatahubTopicsResponse> DescribeDatahubTopics(DescribeDatahubTopicsRequest req)
         {
-             JsonResponseModel<DescribeDatahubTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDatahubTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatahubTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDatahubTopicsResponse>(req, "DescribeDatahubTopics");
         }
 
         /// <summary>
@@ -1119,17 +615,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeDatahubTopicsResponse"/></returns>
         public DescribeDatahubTopicsResponse DescribeDatahubTopicsSync(DescribeDatahubTopicsRequest req)
         {
-             JsonResponseModel<DescribeDatahubTopicsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDatahubTopics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatahubTopicsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDatahubTopicsResponse>(req, "DescribeDatahubTopics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1137,19 +624,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupRequest"/></param>
         /// <returns><see cref="DescribeGroupResponse"/></returns>
-        public async Task<DescribeGroupResponse> DescribeGroup(DescribeGroupRequest req)
+        public Task<DescribeGroupResponse> DescribeGroup(DescribeGroupRequest req)
         {
-             JsonResponseModel<DescribeGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeGroupResponse>(req, "DescribeGroup");
         }
 
         /// <summary>
@@ -1159,17 +636,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeGroupResponse"/></returns>
         public DescribeGroupResponse DescribeGroupSync(DescribeGroupRequest req)
         {
-             JsonResponseModel<DescribeGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeGroupResponse>(req, "DescribeGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1177,19 +645,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupInfoRequest"/></param>
         /// <returns><see cref="DescribeGroupInfoResponse"/></returns>
-        public async Task<DescribeGroupInfoResponse> DescribeGroupInfo(DescribeGroupInfoRequest req)
+        public Task<DescribeGroupInfoResponse> DescribeGroupInfo(DescribeGroupInfoRequest req)
         {
-             JsonResponseModel<DescribeGroupInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeGroupInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeGroupInfoResponse>(req, "DescribeGroupInfo");
         }
 
         /// <summary>
@@ -1199,17 +657,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeGroupInfoResponse"/></returns>
         public DescribeGroupInfoResponse DescribeGroupInfoSync(DescribeGroupInfoRequest req)
         {
-             JsonResponseModel<DescribeGroupInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeGroupInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeGroupInfoResponse>(req, "DescribeGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1217,19 +666,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupOffsetsRequest"/></param>
         /// <returns><see cref="DescribeGroupOffsetsResponse"/></returns>
-        public async Task<DescribeGroupOffsetsResponse> DescribeGroupOffsets(DescribeGroupOffsetsRequest req)
+        public Task<DescribeGroupOffsetsResponse> DescribeGroupOffsets(DescribeGroupOffsetsRequest req)
         {
-             JsonResponseModel<DescribeGroupOffsetsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeGroupOffsets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupOffsetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeGroupOffsetsResponse>(req, "DescribeGroupOffsets");
         }
 
         /// <summary>
@@ -1239,17 +678,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeGroupOffsetsResponse"/></returns>
         public DescribeGroupOffsetsResponse DescribeGroupOffsetsSync(DescribeGroupOffsetsRequest req)
         {
-             JsonResponseModel<DescribeGroupOffsetsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeGroupOffsets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupOffsetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeGroupOffsetsResponse>(req, "DescribeGroupOffsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1257,19 +687,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAttributesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAttributesResponse"/></returns>
-        public async Task<DescribeInstanceAttributesResponse> DescribeInstanceAttributes(DescribeInstanceAttributesRequest req)
+        public Task<DescribeInstanceAttributesResponse> DescribeInstanceAttributes(DescribeInstanceAttributesRequest req)
         {
-             JsonResponseModel<DescribeInstanceAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInstanceAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInstanceAttributesResponse>(req, "DescribeInstanceAttributes");
         }
 
         /// <summary>
@@ -1279,17 +699,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeInstanceAttributesResponse"/></returns>
         public DescribeInstanceAttributesResponse DescribeInstanceAttributesSync(DescribeInstanceAttributesRequest req)
         {
-             JsonResponseModel<DescribeInstanceAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInstanceAttributesResponse>(req, "DescribeInstanceAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1297,19 +708,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
-        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
+        public Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
         {
-             JsonResponseModel<DescribeInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances");
         }
 
         /// <summary>
@@ -1319,17 +720,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
-             JsonResponseModel<DescribeInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1337,19 +729,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesDetailRequest"/></param>
         /// <returns><see cref="DescribeInstancesDetailResponse"/></returns>
-        public async Task<DescribeInstancesDetailResponse> DescribeInstancesDetail(DescribeInstancesDetailRequest req)
+        public Task<DescribeInstancesDetailResponse> DescribeInstancesDetail(DescribeInstancesDetailRequest req)
         {
-             JsonResponseModel<DescribeInstancesDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeInstancesDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInstancesDetailResponse>(req, "DescribeInstancesDetail");
         }
 
         /// <summary>
@@ -1359,17 +741,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeInstancesDetailResponse"/></returns>
         public DescribeInstancesDetailResponse DescribeInstancesDetailSync(DescribeInstancesDetailRequest req)
         {
-             JsonResponseModel<DescribeInstancesDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstancesDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeInstancesDetailResponse>(req, "DescribeInstancesDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1377,19 +750,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionRequest"/></param>
         /// <returns><see cref="DescribeRegionResponse"/></returns>
-        public async Task<DescribeRegionResponse> DescribeRegion(DescribeRegionRequest req)
+        public Task<DescribeRegionResponse> DescribeRegion(DescribeRegionRequest req)
         {
-             JsonResponseModel<DescribeRegionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRegion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRegionResponse>(req, "DescribeRegion");
         }
 
         /// <summary>
@@ -1399,17 +762,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeRegionResponse"/></returns>
         public DescribeRegionResponse DescribeRegionSync(DescribeRegionRequest req)
         {
-             JsonResponseModel<DescribeRegionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRegion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRegionResponse>(req, "DescribeRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1417,19 +771,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeRouteRequest"/></param>
         /// <returns><see cref="DescribeRouteResponse"/></returns>
-        public async Task<DescribeRouteResponse> DescribeRoute(DescribeRouteRequest req)
+        public Task<DescribeRouteResponse> DescribeRoute(DescribeRouteRequest req)
         {
-             JsonResponseModel<DescribeRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRouteResponse>(req, "DescribeRoute");
         }
 
         /// <summary>
@@ -1439,17 +783,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeRouteResponse"/></returns>
         public DescribeRouteResponse DescribeRouteSync(DescribeRouteRequest req)
         {
-             JsonResponseModel<DescribeRouteResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRoute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRouteResponse>(req, "DescribeRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1457,19 +792,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
         /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
-        public async Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
+        public Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
         {
-             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTaskStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTaskStatusResponse>(req, "DescribeTaskStatus");
         }
 
         /// <summary>
@@ -1479,17 +804,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
         public DescribeTaskStatusResponse DescribeTaskStatusSync(DescribeTaskStatusRequest req)
         {
-             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTaskStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTaskStatusResponse>(req, "DescribeTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1498,19 +814,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicRequest"/></param>
         /// <returns><see cref="DescribeTopicResponse"/></returns>
-        public async Task<DescribeTopicResponse> DescribeTopic(DescribeTopicRequest req)
+        public Task<DescribeTopicResponse> DescribeTopic(DescribeTopicRequest req)
         {
-             JsonResponseModel<DescribeTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicResponse>(req, "DescribeTopic");
         }
 
         /// <summary>
@@ -1521,17 +827,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeTopicResponse"/></returns>
         public DescribeTopicResponse DescribeTopicSync(DescribeTopicRequest req)
         {
-             JsonResponseModel<DescribeTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicResponse>(req, "DescribeTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1539,19 +836,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicAttributesRequest"/></param>
         /// <returns><see cref="DescribeTopicAttributesResponse"/></returns>
-        public async Task<DescribeTopicAttributesResponse> DescribeTopicAttributes(DescribeTopicAttributesRequest req)
+        public Task<DescribeTopicAttributesResponse> DescribeTopicAttributes(DescribeTopicAttributesRequest req)
         {
-             JsonResponseModel<DescribeTopicAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTopicAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicAttributesResponse>(req, "DescribeTopicAttributes");
         }
 
         /// <summary>
@@ -1561,17 +848,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeTopicAttributesResponse"/></returns>
         public DescribeTopicAttributesResponse DescribeTopicAttributesSync(DescribeTopicAttributesRequest req)
         {
-             JsonResponseModel<DescribeTopicAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTopicAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicAttributesResponse>(req, "DescribeTopicAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1579,19 +857,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicDetailRequest"/></param>
         /// <returns><see cref="DescribeTopicDetailResponse"/></returns>
-        public async Task<DescribeTopicDetailResponse> DescribeTopicDetail(DescribeTopicDetailRequest req)
+        public Task<DescribeTopicDetailResponse> DescribeTopicDetail(DescribeTopicDetailRequest req)
         {
-             JsonResponseModel<DescribeTopicDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTopicDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicDetailResponse>(req, "DescribeTopicDetail");
         }
 
         /// <summary>
@@ -1601,17 +869,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeTopicDetailResponse"/></returns>
         public DescribeTopicDetailResponse DescribeTopicDetailSync(DescribeTopicDetailRequest req)
         {
-             JsonResponseModel<DescribeTopicDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTopicDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicDetailResponse>(req, "DescribeTopicDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1619,19 +878,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicProduceConnectionRequest"/></param>
         /// <returns><see cref="DescribeTopicProduceConnectionResponse"/></returns>
-        public async Task<DescribeTopicProduceConnectionResponse> DescribeTopicProduceConnection(DescribeTopicProduceConnectionRequest req)
+        public Task<DescribeTopicProduceConnectionResponse> DescribeTopicProduceConnection(DescribeTopicProduceConnectionRequest req)
         {
-             JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTopicProduceConnection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicProduceConnectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicProduceConnectionResponse>(req, "DescribeTopicProduceConnection");
         }
 
         /// <summary>
@@ -1641,17 +890,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeTopicProduceConnectionResponse"/></returns>
         public DescribeTopicProduceConnectionResponse DescribeTopicProduceConnectionSync(DescribeTopicProduceConnectionRequest req)
         {
-             JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTopicProduceConnection");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicProduceConnectionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicProduceConnectionResponse>(req, "DescribeTopicProduceConnection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1659,19 +899,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicSubscribeGroupRequest"/></param>
         /// <returns><see cref="DescribeTopicSubscribeGroupResponse"/></returns>
-        public async Task<DescribeTopicSubscribeGroupResponse> DescribeTopicSubscribeGroup(DescribeTopicSubscribeGroupRequest req)
+        public Task<DescribeTopicSubscribeGroupResponse> DescribeTopicSubscribeGroup(DescribeTopicSubscribeGroupRequest req)
         {
-             JsonResponseModel<DescribeTopicSubscribeGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTopicSubscribeGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicSubscribeGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicSubscribeGroupResponse>(req, "DescribeTopicSubscribeGroup");
         }
 
         /// <summary>
@@ -1681,17 +911,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeTopicSubscribeGroupResponse"/></returns>
         public DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroupSync(DescribeTopicSubscribeGroupRequest req)
         {
-             JsonResponseModel<DescribeTopicSubscribeGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTopicSubscribeGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicSubscribeGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicSubscribeGroupResponse>(req, "DescribeTopicSubscribeGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1699,19 +920,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicSyncReplicaRequest"/></param>
         /// <returns><see cref="DescribeTopicSyncReplicaResponse"/></returns>
-        public async Task<DescribeTopicSyncReplicaResponse> DescribeTopicSyncReplica(DescribeTopicSyncReplicaRequest req)
+        public Task<DescribeTopicSyncReplicaResponse> DescribeTopicSyncReplica(DescribeTopicSyncReplicaRequest req)
         {
-             JsonResponseModel<DescribeTopicSyncReplicaResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTopicSyncReplica");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicSyncReplicaResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicSyncReplicaResponse>(req, "DescribeTopicSyncReplica");
         }
 
         /// <summary>
@@ -1721,17 +932,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeTopicSyncReplicaResponse"/></returns>
         public DescribeTopicSyncReplicaResponse DescribeTopicSyncReplicaSync(DescribeTopicSyncReplicaRequest req)
         {
-             JsonResponseModel<DescribeTopicSyncReplicaResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTopicSyncReplica");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicSyncReplicaResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeTopicSyncReplicaResponse>(req, "DescribeTopicSyncReplica")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1739,19 +941,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="DescribeUserRequest"/></param>
         /// <returns><see cref="DescribeUserResponse"/></returns>
-        public async Task<DescribeUserResponse> DescribeUser(DescribeUserRequest req)
+        public Task<DescribeUserResponse> DescribeUser(DescribeUserRequest req)
         {
-             JsonResponseModel<DescribeUserResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeUserResponse>(req, "DescribeUser");
         }
 
         /// <summary>
@@ -1761,17 +953,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="DescribeUserResponse"/></returns>
         public DescribeUserResponse DescribeUserSync(DescribeUserRequest req)
         {
-             JsonResponseModel<DescribeUserResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeUserResponse>(req, "DescribeUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1779,19 +962,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="FetchMessageByOffsetRequest"/></param>
         /// <returns><see cref="FetchMessageByOffsetResponse"/></returns>
-        public async Task<FetchMessageByOffsetResponse> FetchMessageByOffset(FetchMessageByOffsetRequest req)
+        public Task<FetchMessageByOffsetResponse> FetchMessageByOffset(FetchMessageByOffsetRequest req)
         {
-             JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "FetchMessageByOffset");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageByOffsetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FetchMessageByOffsetResponse>(req, "FetchMessageByOffset");
         }
 
         /// <summary>
@@ -1801,17 +974,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="FetchMessageByOffsetResponse"/></returns>
         public FetchMessageByOffsetResponse FetchMessageByOffsetSync(FetchMessageByOffsetRequest req)
         {
-             JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "FetchMessageByOffset");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageByOffsetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FetchMessageByOffsetResponse>(req, "FetchMessageByOffset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1819,19 +983,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="FetchMessageListByOffsetRequest"/></param>
         /// <returns><see cref="FetchMessageListByOffsetResponse"/></returns>
-        public async Task<FetchMessageListByOffsetResponse> FetchMessageListByOffset(FetchMessageListByOffsetRequest req)
+        public Task<FetchMessageListByOffsetResponse> FetchMessageListByOffset(FetchMessageListByOffsetRequest req)
         {
-             JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "FetchMessageListByOffset");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByOffsetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FetchMessageListByOffsetResponse>(req, "FetchMessageListByOffset");
         }
 
         /// <summary>
@@ -1841,17 +995,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="FetchMessageListByOffsetResponse"/></returns>
         public FetchMessageListByOffsetResponse FetchMessageListByOffsetSync(FetchMessageListByOffsetRequest req)
         {
-             JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "FetchMessageListByOffset");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByOffsetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<FetchMessageListByOffsetResponse>(req, "FetchMessageListByOffset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1859,19 +1004,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="InquireCkafkaPriceRequest"/></param>
         /// <returns><see cref="InquireCkafkaPriceResponse"/></returns>
-        public async Task<InquireCkafkaPriceResponse> InquireCkafkaPrice(InquireCkafkaPriceRequest req)
+        public Task<InquireCkafkaPriceResponse> InquireCkafkaPrice(InquireCkafkaPriceRequest req)
         {
-             JsonResponseModel<InquireCkafkaPriceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "InquireCkafkaPrice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireCkafkaPriceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<InquireCkafkaPriceResponse>(req, "InquireCkafkaPrice");
         }
 
         /// <summary>
@@ -1881,17 +1016,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="InquireCkafkaPriceResponse"/></returns>
         public InquireCkafkaPriceResponse InquireCkafkaPriceSync(InquireCkafkaPriceRequest req)
         {
-             JsonResponseModel<InquireCkafkaPriceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquireCkafkaPrice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireCkafkaPriceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<InquireCkafkaPriceResponse>(req, "InquireCkafkaPrice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1899,19 +1025,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
         /// <returns><see cref="ModifyAclRuleResponse"/></returns>
-        public async Task<ModifyAclRuleResponse> ModifyAclRule(ModifyAclRuleRequest req)
+        public Task<ModifyAclRuleResponse> ModifyAclRule(ModifyAclRuleRequest req)
         {
-             JsonResponseModel<ModifyAclRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyAclRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAclRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyAclRuleResponse>(req, "ModifyAclRule");
         }
 
         /// <summary>
@@ -1921,17 +1037,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="ModifyAclRuleResponse"/></returns>
         public ModifyAclRuleResponse ModifyAclRuleSync(ModifyAclRuleRequest req)
         {
-             JsonResponseModel<ModifyAclRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyAclRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAclRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyAclRuleResponse>(req, "ModifyAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1939,19 +1046,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
         /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
-        public async Task<ModifyDatahubTopicResponse> ModifyDatahubTopic(ModifyDatahubTopicRequest req)
+        public Task<ModifyDatahubTopicResponse> ModifyDatahubTopic(ModifyDatahubTopicRequest req)
         {
-             JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDatahubTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatahubTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDatahubTopicResponse>(req, "ModifyDatahubTopic");
         }
 
         /// <summary>
@@ -1961,17 +1058,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
         public ModifyDatahubTopicResponse ModifyDatahubTopicSync(ModifyDatahubTopicRequest req)
         {
-             JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDatahubTopic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatahubTopicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDatahubTopicResponse>(req, "ModifyDatahubTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1979,19 +1067,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupOffsetsRequest"/></param>
         /// <returns><see cref="ModifyGroupOffsetsResponse"/></returns>
-        public async Task<ModifyGroupOffsetsResponse> ModifyGroupOffsets(ModifyGroupOffsetsRequest req)
+        public Task<ModifyGroupOffsetsResponse> ModifyGroupOffsets(ModifyGroupOffsetsRequest req)
         {
-             JsonResponseModel<ModifyGroupOffsetsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyGroupOffsets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGroupOffsetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyGroupOffsetsResponse>(req, "ModifyGroupOffsets");
         }
 
         /// <summary>
@@ -2001,17 +1079,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="ModifyGroupOffsetsResponse"/></returns>
         public ModifyGroupOffsetsResponse ModifyGroupOffsetsSync(ModifyGroupOffsetsRequest req)
         {
-             JsonResponseModel<ModifyGroupOffsetsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyGroupOffsets");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGroupOffsetsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyGroupOffsetsResponse>(req, "ModifyGroupOffsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2019,19 +1088,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceAttributesRequest"/></param>
         /// <returns><see cref="ModifyInstanceAttributesResponse"/></returns>
-        public async Task<ModifyInstanceAttributesResponse> ModifyInstanceAttributes(ModifyInstanceAttributesRequest req)
+        public Task<ModifyInstanceAttributesResponse> ModifyInstanceAttributes(ModifyInstanceAttributesRequest req)
         {
-             JsonResponseModel<ModifyInstanceAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyInstanceAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyInstanceAttributesResponse>(req, "ModifyInstanceAttributes");
         }
 
         /// <summary>
@@ -2041,17 +1100,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="ModifyInstanceAttributesResponse"/></returns>
         public ModifyInstanceAttributesResponse ModifyInstanceAttributesSync(ModifyInstanceAttributesRequest req)
         {
-             JsonResponseModel<ModifyInstanceAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyInstanceAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyInstanceAttributesResponse>(req, "ModifyInstanceAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2059,19 +1109,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancePreRequest"/></param>
         /// <returns><see cref="ModifyInstancePreResponse"/></returns>
-        public async Task<ModifyInstancePreResponse> ModifyInstancePre(ModifyInstancePreRequest req)
+        public Task<ModifyInstancePreResponse> ModifyInstancePre(ModifyInstancePreRequest req)
         {
-             JsonResponseModel<ModifyInstancePreResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyInstancePre");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancePreResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyInstancePreResponse>(req, "ModifyInstancePre");
         }
 
         /// <summary>
@@ -2081,17 +1121,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="ModifyInstancePreResponse"/></returns>
         public ModifyInstancePreResponse ModifyInstancePreSync(ModifyInstancePreRequest req)
         {
-             JsonResponseModel<ModifyInstancePreResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyInstancePre");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancePreResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyInstancePreResponse>(req, "ModifyInstancePre")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2099,19 +1130,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="ModifyPasswordRequest"/></param>
         /// <returns><see cref="ModifyPasswordResponse"/></returns>
-        public async Task<ModifyPasswordResponse> ModifyPassword(ModifyPasswordRequest req)
+        public Task<ModifyPasswordResponse> ModifyPassword(ModifyPasswordRequest req)
         {
-             JsonResponseModel<ModifyPasswordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyPassword");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPasswordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyPasswordResponse>(req, "ModifyPassword");
         }
 
         /// <summary>
@@ -2121,17 +1142,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="ModifyPasswordResponse"/></returns>
         public ModifyPasswordResponse ModifyPasswordSync(ModifyPasswordRequest req)
         {
-             JsonResponseModel<ModifyPasswordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyPassword");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPasswordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyPasswordResponse>(req, "ModifyPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2139,19 +1151,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicAttributesRequest"/></param>
         /// <returns><see cref="ModifyTopicAttributesResponse"/></returns>
-        public async Task<ModifyTopicAttributesResponse> ModifyTopicAttributes(ModifyTopicAttributesRequest req)
+        public Task<ModifyTopicAttributesResponse> ModifyTopicAttributes(ModifyTopicAttributesRequest req)
         {
-             JsonResponseModel<ModifyTopicAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyTopicAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyTopicAttributesResponse>(req, "ModifyTopicAttributes");
         }
 
         /// <summary>
@@ -2161,17 +1163,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="ModifyTopicAttributesResponse"/></returns>
         public ModifyTopicAttributesResponse ModifyTopicAttributesSync(ModifyTopicAttributesRequest req)
         {
-             JsonResponseModel<ModifyTopicAttributesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyTopicAttributes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicAttributesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyTopicAttributesResponse>(req, "ModifyTopicAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2179,19 +1172,9 @@ namespace TencentCloud.Ckafka.V20190819
         /// </summary>
         /// <param name="req"><see cref="SendMessageRequest"/></param>
         /// <returns><see cref="SendMessageResponse"/></returns>
-        public async Task<SendMessageResponse> SendMessage(SendMessageRequest req)
+        public Task<SendMessageResponse> SendMessage(SendMessageRequest req)
         {
-             JsonResponseModel<SendMessageResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendMessage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMessageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendMessageResponse>(req, "SendMessage");
         }
 
         /// <summary>
@@ -2201,17 +1184,8 @@ namespace TencentCloud.Ckafka.V20190819
         /// <returns><see cref="SendMessageResponse"/></returns>
         public SendMessageResponse SendMessageSync(SendMessageRequest req)
         {
-             JsonResponseModel<SendMessageResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendMessage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMessageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendMessageResponse>(req, "SendMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

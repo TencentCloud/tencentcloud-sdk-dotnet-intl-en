@@ -57,19 +57,9 @@ namespace TencentCloud.Captcha.V20190722
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaResultResponse"/></returns>
-        public async Task<DescribeCaptchaResultResponse> DescribeCaptchaResult(DescribeCaptchaResultRequest req)
+        public Task<DescribeCaptchaResultResponse> DescribeCaptchaResult(DescribeCaptchaResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCaptchaResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaResultResponse>(req, "DescribeCaptchaResult");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Captcha.V20190722
         /// <returns><see cref="DescribeCaptchaResultResponse"/></returns>
         public DescribeCaptchaResultResponse DescribeCaptchaResultSync(DescribeCaptchaResultRequest req)
         {
-             JsonResponseModel<DescribeCaptchaResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCaptchaResultResponse>(req, "DescribeCaptchaResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

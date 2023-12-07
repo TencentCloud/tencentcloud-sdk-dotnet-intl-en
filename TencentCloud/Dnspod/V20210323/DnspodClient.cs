@@ -57,19 +57,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="CreateDomainRequest"/></param>
         /// <returns><see cref="CreateDomainResponse"/></returns>
-        public async Task<CreateDomainResponse> CreateDomain(CreateDomainRequest req)
+        public Task<CreateDomainResponse> CreateDomain(CreateDomainRequest req)
         {
-             JsonResponseModel<CreateDomainResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDomainResponse>(req, "CreateDomain");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="CreateDomainResponse"/></returns>
         public CreateDomainResponse CreateDomainSync(CreateDomainRequest req)
         {
-             JsonResponseModel<CreateDomainResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDomainResponse>(req, "CreateDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="CreateDomainAliasRequest"/></param>
         /// <returns><see cref="CreateDomainAliasResponse"/></returns>
-        public async Task<CreateDomainAliasResponse> CreateDomainAlias(CreateDomainAliasRequest req)
+        public Task<CreateDomainAliasResponse> CreateDomainAlias(CreateDomainAliasRequest req)
         {
-             JsonResponseModel<CreateDomainAliasResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDomainAlias");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainAliasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDomainAliasResponse>(req, "CreateDomainAlias");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="CreateDomainAliasResponse"/></returns>
         public CreateDomainAliasResponse CreateDomainAliasSync(CreateDomainAliasRequest req)
         {
-             JsonResponseModel<CreateDomainAliasResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDomainAlias");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainAliasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDomainAliasResponse>(req, "CreateDomainAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="CreateDomainBatchRequest"/></param>
         /// <returns><see cref="CreateDomainBatchResponse"/></returns>
-        public async Task<CreateDomainBatchResponse> CreateDomainBatch(CreateDomainBatchRequest req)
+        public Task<CreateDomainBatchResponse> CreateDomainBatch(CreateDomainBatchRequest req)
         {
-             JsonResponseModel<CreateDomainBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDomainBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDomainBatchResponse>(req, "CreateDomainBatch");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="CreateDomainBatchResponse"/></returns>
         public CreateDomainBatchResponse CreateDomainBatchSync(CreateDomainBatchRequest req)
         {
-             JsonResponseModel<CreateDomainBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDomainBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDomainBatchResponse>(req, "CreateDomainBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="CreateDomainGroupRequest"/></param>
         /// <returns><see cref="CreateDomainGroupResponse"/></returns>
-        public async Task<CreateDomainGroupResponse> CreateDomainGroup(CreateDomainGroupRequest req)
+        public Task<CreateDomainGroupResponse> CreateDomainGroup(CreateDomainGroupRequest req)
         {
-             JsonResponseModel<CreateDomainGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDomainGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDomainGroupResponse>(req, "CreateDomainGroup");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="CreateDomainGroupResponse"/></returns>
         public CreateDomainGroupResponse CreateDomainGroupSync(CreateDomainGroupRequest req)
         {
-             JsonResponseModel<CreateDomainGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDomainGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateDomainGroupResponse>(req, "CreateDomainGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="CreateRecordRequest"/></param>
         /// <returns><see cref="CreateRecordResponse"/></returns>
-        public async Task<CreateRecordResponse> CreateRecord(CreateRecordRequest req)
+        public Task<CreateRecordResponse> CreateRecord(CreateRecordRequest req)
         {
-             JsonResponseModel<CreateRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateRecordResponse>(req, "CreateRecord");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="CreateRecordResponse"/></returns>
         public CreateRecordResponse CreateRecordSync(CreateRecordRequest req)
         {
-             JsonResponseModel<CreateRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateRecordResponse>(req, "CreateRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="CreateRecordBatchRequest"/></param>
         /// <returns><see cref="CreateRecordBatchResponse"/></returns>
-        public async Task<CreateRecordBatchResponse> CreateRecordBatch(CreateRecordBatchRequest req)
+        public Task<CreateRecordBatchResponse> CreateRecordBatch(CreateRecordBatchRequest req)
         {
-             JsonResponseModel<CreateRecordBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateRecordBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateRecordBatchResponse>(req, "CreateRecordBatch");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="CreateRecordBatchResponse"/></returns>
         public CreateRecordBatchResponse CreateRecordBatchSync(CreateRecordBatchRequest req)
         {
-             JsonResponseModel<CreateRecordBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateRecordBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateRecordBatchResponse>(req, "CreateRecordBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="CreateRecordGroupRequest"/></param>
         /// <returns><see cref="CreateRecordGroupResponse"/></returns>
-        public async Task<CreateRecordGroupResponse> CreateRecordGroup(CreateRecordGroupRequest req)
+        public Task<CreateRecordGroupResponse> CreateRecordGroup(CreateRecordGroupRequest req)
         {
-             JsonResponseModel<CreateRecordGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateRecordGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateRecordGroupResponse>(req, "CreateRecordGroup");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="CreateRecordGroupResponse"/></returns>
         public CreateRecordGroupResponse CreateRecordGroupSync(CreateRecordGroupRequest req)
         {
-             JsonResponseModel<CreateRecordGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateRecordGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateRecordGroupResponse>(req, "CreateRecordGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DeleteDomainRequest"/></param>
         /// <returns><see cref="DeleteDomainResponse"/></returns>
-        public async Task<DeleteDomainResponse> DeleteDomain(DeleteDomainRequest req)
+        public Task<DeleteDomainResponse> DeleteDomain(DeleteDomainRequest req)
         {
-             JsonResponseModel<DeleteDomainResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDomainResponse>(req, "DeleteDomain");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DeleteDomainResponse"/></returns>
         public DeleteDomainResponse DeleteDomainSync(DeleteDomainRequest req)
         {
-             JsonResponseModel<DeleteDomainResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDomainResponse>(req, "DeleteDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DeleteDomainAliasRequest"/></param>
         /// <returns><see cref="DeleteDomainAliasResponse"/></returns>
-        public async Task<DeleteDomainAliasResponse> DeleteDomainAlias(DeleteDomainAliasRequest req)
+        public Task<DeleteDomainAliasResponse> DeleteDomainAlias(DeleteDomainAliasRequest req)
         {
-             JsonResponseModel<DeleteDomainAliasResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteDomainAlias");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainAliasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDomainAliasResponse>(req, "DeleteDomainAlias");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DeleteDomainAliasResponse"/></returns>
         public DeleteDomainAliasResponse DeleteDomainAliasSync(DeleteDomainAliasRequest req)
         {
-             JsonResponseModel<DeleteDomainAliasResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteDomainAlias");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainAliasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDomainAliasResponse>(req, "DeleteDomainAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DeleteDomainBatchRequest"/></param>
         /// <returns><see cref="DeleteDomainBatchResponse"/></returns>
-        public async Task<DeleteDomainBatchResponse> DeleteDomainBatch(DeleteDomainBatchRequest req)
+        public Task<DeleteDomainBatchResponse> DeleteDomainBatch(DeleteDomainBatchRequest req)
         {
-             JsonResponseModel<DeleteDomainBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteDomainBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDomainBatchResponse>(req, "DeleteDomainBatch");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DeleteDomainBatchResponse"/></returns>
         public DeleteDomainBatchResponse DeleteDomainBatchSync(DeleteDomainBatchRequest req)
         {
-             JsonResponseModel<DeleteDomainBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteDomainBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteDomainBatchResponse>(req, "DeleteDomainBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordRequest"/></param>
         /// <returns><see cref="DeleteRecordResponse"/></returns>
-        public async Task<DeleteRecordResponse> DeleteRecord(DeleteRecordRequest req)
+        public Task<DeleteRecordResponse> DeleteRecord(DeleteRecordRequest req)
         {
-             JsonResponseModel<DeleteRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteRecordResponse>(req, "DeleteRecord");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DeleteRecordResponse"/></returns>
         public DeleteRecordResponse DeleteRecordSync(DeleteRecordRequest req)
         {
-             JsonResponseModel<DeleteRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteRecordResponse>(req, "DeleteRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordGroupRequest"/></param>
         /// <returns><see cref="DeleteRecordGroupResponse"/></returns>
-        public async Task<DeleteRecordGroupResponse> DeleteRecordGroup(DeleteRecordGroupRequest req)
+        public Task<DeleteRecordGroupResponse> DeleteRecordGroup(DeleteRecordGroupRequest req)
         {
-             JsonResponseModel<DeleteRecordGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteRecordGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteRecordGroupResponse>(req, "DeleteRecordGroup");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DeleteRecordGroupResponse"/></returns>
         public DeleteRecordGroupResponse DeleteRecordGroupSync(DeleteRecordGroupRequest req)
         {
-             JsonResponseModel<DeleteRecordGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteRecordGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteRecordGroupResponse>(req, "DeleteRecordGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DeleteShareDomainRequest"/></param>
         /// <returns><see cref="DeleteShareDomainResponse"/></returns>
-        public async Task<DeleteShareDomainResponse> DeleteShareDomain(DeleteShareDomainRequest req)
+        public Task<DeleteShareDomainResponse> DeleteShareDomain(DeleteShareDomainRequest req)
         {
-             JsonResponseModel<DeleteShareDomainResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteShareDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteShareDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteShareDomainResponse>(req, "DeleteShareDomain");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DeleteShareDomainResponse"/></returns>
         public DeleteShareDomainResponse DeleteShareDomainSync(DeleteShareDomainRequest req)
         {
-             JsonResponseModel<DeleteShareDomainResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteShareDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteShareDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteShareDomainResponse>(req, "DeleteShareDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainRequest"/></param>
         /// <returns><see cref="DescribeDomainResponse"/></returns>
-        public async Task<DescribeDomainResponse> DescribeDomain(DescribeDomainRequest req)
+        public Task<DescribeDomainResponse> DescribeDomain(DescribeDomainRequest req)
         {
-             JsonResponseModel<DescribeDomainResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainResponse>(req, "DescribeDomain");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeDomainResponse"/></returns>
         public DescribeDomainResponse DescribeDomainSync(DescribeDomainRequest req)
         {
-             JsonResponseModel<DescribeDomainResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDomain");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainResponse>(req, "DescribeDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainAliasListRequest"/></param>
         /// <returns><see cref="DescribeDomainAliasListResponse"/></returns>
-        public async Task<DescribeDomainAliasListResponse> DescribeDomainAliasList(DescribeDomainAliasListRequest req)
+        public Task<DescribeDomainAliasListResponse> DescribeDomainAliasList(DescribeDomainAliasListRequest req)
         {
-             JsonResponseModel<DescribeDomainAliasListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDomainAliasList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAliasListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainAliasListResponse>(req, "DescribeDomainAliasList");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeDomainAliasListResponse"/></returns>
         public DescribeDomainAliasListResponse DescribeDomainAliasListSync(DescribeDomainAliasListRequest req)
         {
-             JsonResponseModel<DescribeDomainAliasListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDomainAliasList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAliasListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainAliasListResponse>(req, "DescribeDomainAliasList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainGroupListRequest"/></param>
         /// <returns><see cref="DescribeDomainGroupListResponse"/></returns>
-        public async Task<DescribeDomainGroupListResponse> DescribeDomainGroupList(DescribeDomainGroupListRequest req)
+        public Task<DescribeDomainGroupListResponse> DescribeDomainGroupList(DescribeDomainGroupListRequest req)
         {
-             JsonResponseModel<DescribeDomainGroupListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDomainGroupList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainGroupListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainGroupListResponse>(req, "DescribeDomainGroupList");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeDomainGroupListResponse"/></returns>
         public DescribeDomainGroupListResponse DescribeDomainGroupListSync(DescribeDomainGroupListRequest req)
         {
-             JsonResponseModel<DescribeDomainGroupListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDomainGroupList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainGroupListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainGroupListResponse>(req, "DescribeDomainGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainListRequest"/></param>
         /// <returns><see cref="DescribeDomainListResponse"/></returns>
-        public async Task<DescribeDomainListResponse> DescribeDomainList(DescribeDomainListRequest req)
+        public Task<DescribeDomainListResponse> DescribeDomainList(DescribeDomainListRequest req)
         {
-             JsonResponseModel<DescribeDomainListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDomainList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainListResponse>(req, "DescribeDomainList");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeDomainListResponse"/></returns>
         public DescribeDomainListResponse DescribeDomainListSync(DescribeDomainListRequest req)
         {
-             JsonResponseModel<DescribeDomainListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDomainList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainListResponse>(req, "DescribeDomainList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainLogListRequest"/></param>
         /// <returns><see cref="DescribeDomainLogListResponse"/></returns>
-        public async Task<DescribeDomainLogListResponse> DescribeDomainLogList(DescribeDomainLogListRequest req)
+        public Task<DescribeDomainLogListResponse> DescribeDomainLogList(DescribeDomainLogListRequest req)
         {
-             JsonResponseModel<DescribeDomainLogListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDomainLogList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainLogListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainLogListResponse>(req, "DescribeDomainLogList");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeDomainLogListResponse"/></returns>
         public DescribeDomainLogListResponse DescribeDomainLogListSync(DescribeDomainLogListRequest req)
         {
-             JsonResponseModel<DescribeDomainLogListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDomainLogList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainLogListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainLogListResponse>(req, "DescribeDomainLogList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -777,19 +435,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainPurviewRequest"/></param>
         /// <returns><see cref="DescribeDomainPurviewResponse"/></returns>
-        public async Task<DescribeDomainPurviewResponse> DescribeDomainPurview(DescribeDomainPurviewRequest req)
+        public Task<DescribeDomainPurviewResponse> DescribeDomainPurview(DescribeDomainPurviewRequest req)
         {
-             JsonResponseModel<DescribeDomainPurviewResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDomainPurview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainPurviewResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainPurviewResponse>(req, "DescribeDomainPurview");
         }
 
         /// <summary>
@@ -799,17 +447,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeDomainPurviewResponse"/></returns>
         public DescribeDomainPurviewResponse DescribeDomainPurviewSync(DescribeDomainPurviewRequest req)
         {
-             JsonResponseModel<DescribeDomainPurviewResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDomainPurview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainPurviewResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainPurviewResponse>(req, "DescribeDomainPurview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -817,19 +456,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainShareInfoRequest"/></param>
         /// <returns><see cref="DescribeDomainShareInfoResponse"/></returns>
-        public async Task<DescribeDomainShareInfoResponse> DescribeDomainShareInfo(DescribeDomainShareInfoRequest req)
+        public Task<DescribeDomainShareInfoResponse> DescribeDomainShareInfo(DescribeDomainShareInfoRequest req)
         {
-             JsonResponseModel<DescribeDomainShareInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDomainShareInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainShareInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainShareInfoResponse>(req, "DescribeDomainShareInfo");
         }
 
         /// <summary>
@@ -839,17 +468,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeDomainShareInfoResponse"/></returns>
         public DescribeDomainShareInfoResponse DescribeDomainShareInfoSync(DescribeDomainShareInfoRequest req)
         {
-             JsonResponseModel<DescribeDomainShareInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDomainShareInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainShareInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeDomainShareInfoResponse>(req, "DescribeDomainShareInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -857,19 +477,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordRequest"/></param>
         /// <returns><see cref="DescribeRecordResponse"/></returns>
-        public async Task<DescribeRecordResponse> DescribeRecord(DescribeRecordRequest req)
+        public Task<DescribeRecordResponse> DescribeRecord(DescribeRecordRequest req)
         {
-             JsonResponseModel<DescribeRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordResponse>(req, "DescribeRecord");
         }
 
         /// <summary>
@@ -879,17 +489,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeRecordResponse"/></returns>
         public DescribeRecordResponse DescribeRecordSync(DescribeRecordRequest req)
         {
-             JsonResponseModel<DescribeRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordResponse>(req, "DescribeRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -897,19 +498,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordGroupListRequest"/></param>
         /// <returns><see cref="DescribeRecordGroupListResponse"/></returns>
-        public async Task<DescribeRecordGroupListResponse> DescribeRecordGroupList(DescribeRecordGroupListRequest req)
+        public Task<DescribeRecordGroupListResponse> DescribeRecordGroupList(DescribeRecordGroupListRequest req)
         {
-             JsonResponseModel<DescribeRecordGroupListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRecordGroupList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordGroupListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordGroupListResponse>(req, "DescribeRecordGroupList");
         }
 
         /// <summary>
@@ -919,17 +510,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeRecordGroupListResponse"/></returns>
         public DescribeRecordGroupListResponse DescribeRecordGroupListSync(DescribeRecordGroupListRequest req)
         {
-             JsonResponseModel<DescribeRecordGroupListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRecordGroupList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordGroupListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordGroupListResponse>(req, "DescribeRecordGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -937,19 +519,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordLineListRequest"/></param>
         /// <returns><see cref="DescribeRecordLineListResponse"/></returns>
-        public async Task<DescribeRecordLineListResponse> DescribeRecordLineList(DescribeRecordLineListRequest req)
+        public Task<DescribeRecordLineListResponse> DescribeRecordLineList(DescribeRecordLineListRequest req)
         {
-             JsonResponseModel<DescribeRecordLineListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRecordLineList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordLineListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordLineListResponse>(req, "DescribeRecordLineList");
         }
 
         /// <summary>
@@ -959,17 +531,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeRecordLineListResponse"/></returns>
         public DescribeRecordLineListResponse DescribeRecordLineListSync(DescribeRecordLineListRequest req)
         {
-             JsonResponseModel<DescribeRecordLineListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRecordLineList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordLineListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordLineListResponse>(req, "DescribeRecordLineList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -977,19 +540,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordListRequest"/></param>
         /// <returns><see cref="DescribeRecordListResponse"/></returns>
-        public async Task<DescribeRecordListResponse> DescribeRecordList(DescribeRecordListRequest req)
+        public Task<DescribeRecordListResponse> DescribeRecordList(DescribeRecordListRequest req)
         {
-             JsonResponseModel<DescribeRecordListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRecordList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordListResponse>(req, "DescribeRecordList");
         }
 
         /// <summary>
@@ -999,17 +552,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeRecordListResponse"/></returns>
         public DescribeRecordListResponse DescribeRecordListSync(DescribeRecordListRequest req)
         {
-             JsonResponseModel<DescribeRecordListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRecordList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordListResponse>(req, "DescribeRecordList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1017,19 +561,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordTypeRequest"/></param>
         /// <returns><see cref="DescribeRecordTypeResponse"/></returns>
-        public async Task<DescribeRecordTypeResponse> DescribeRecordType(DescribeRecordTypeRequest req)
+        public Task<DescribeRecordTypeResponse> DescribeRecordType(DescribeRecordTypeRequest req)
         {
-             JsonResponseModel<DescribeRecordTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRecordType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordTypeResponse>(req, "DescribeRecordType");
         }
 
         /// <summary>
@@ -1039,17 +573,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeRecordTypeResponse"/></returns>
         public DescribeRecordTypeResponse DescribeRecordTypeSync(DescribeRecordTypeRequest req)
         {
-             JsonResponseModel<DescribeRecordTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRecordType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeRecordTypeResponse>(req, "DescribeRecordType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1057,19 +582,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="DescribeSubdomainAnalyticsRequest"/></param>
         /// <returns><see cref="DescribeSubdomainAnalyticsResponse"/></returns>
-        public async Task<DescribeSubdomainAnalyticsResponse> DescribeSubdomainAnalytics(DescribeSubdomainAnalyticsRequest req)
+        public Task<DescribeSubdomainAnalyticsResponse> DescribeSubdomainAnalytics(DescribeSubdomainAnalyticsRequest req)
         {
-             JsonResponseModel<DescribeSubdomainAnalyticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSubdomainAnalytics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubdomainAnalyticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSubdomainAnalyticsResponse>(req, "DescribeSubdomainAnalytics");
         }
 
         /// <summary>
@@ -1079,17 +594,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="DescribeSubdomainAnalyticsResponse"/></returns>
         public DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalyticsSync(DescribeSubdomainAnalyticsRequest req)
         {
-             JsonResponseModel<DescribeSubdomainAnalyticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSubdomainAnalytics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubdomainAnalyticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeSubdomainAnalyticsResponse>(req, "DescribeSubdomainAnalytics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1097,19 +603,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainLockRequest"/></param>
         /// <returns><see cref="ModifyDomainLockResponse"/></returns>
-        public async Task<ModifyDomainLockResponse> ModifyDomainLock(ModifyDomainLockRequest req)
+        public Task<ModifyDomainLockResponse> ModifyDomainLock(ModifyDomainLockRequest req)
         {
-             JsonResponseModel<ModifyDomainLockResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDomainLock");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainLockResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainLockResponse>(req, "ModifyDomainLock");
         }
 
         /// <summary>
@@ -1119,17 +615,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyDomainLockResponse"/></returns>
         public ModifyDomainLockResponse ModifyDomainLockSync(ModifyDomainLockRequest req)
         {
-             JsonResponseModel<ModifyDomainLockResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDomainLock");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainLockResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainLockResponse>(req, "ModifyDomainLock")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1137,19 +624,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainOwnerRequest"/></param>
         /// <returns><see cref="ModifyDomainOwnerResponse"/></returns>
-        public async Task<ModifyDomainOwnerResponse> ModifyDomainOwner(ModifyDomainOwnerRequest req)
+        public Task<ModifyDomainOwnerResponse> ModifyDomainOwner(ModifyDomainOwnerRequest req)
         {
-             JsonResponseModel<ModifyDomainOwnerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDomainOwner");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainOwnerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainOwnerResponse>(req, "ModifyDomainOwner");
         }
 
         /// <summary>
@@ -1159,17 +636,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyDomainOwnerResponse"/></returns>
         public ModifyDomainOwnerResponse ModifyDomainOwnerSync(ModifyDomainOwnerRequest req)
         {
-             JsonResponseModel<ModifyDomainOwnerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDomainOwner");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainOwnerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainOwnerResponse>(req, "ModifyDomainOwner")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1177,19 +645,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainRemarkRequest"/></param>
         /// <returns><see cref="ModifyDomainRemarkResponse"/></returns>
-        public async Task<ModifyDomainRemarkResponse> ModifyDomainRemark(ModifyDomainRemarkRequest req)
+        public Task<ModifyDomainRemarkResponse> ModifyDomainRemark(ModifyDomainRemarkRequest req)
         {
-             JsonResponseModel<ModifyDomainRemarkResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDomainRemark");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainRemarkResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainRemarkResponse>(req, "ModifyDomainRemark");
         }
 
         /// <summary>
@@ -1199,17 +657,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyDomainRemarkResponse"/></returns>
         public ModifyDomainRemarkResponse ModifyDomainRemarkSync(ModifyDomainRemarkRequest req)
         {
-             JsonResponseModel<ModifyDomainRemarkResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDomainRemark");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainRemarkResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainRemarkResponse>(req, "ModifyDomainRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1217,19 +666,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyDomainStatusResponse"/></returns>
-        public async Task<ModifyDomainStatusResponse> ModifyDomainStatus(ModifyDomainStatusRequest req)
+        public Task<ModifyDomainStatusResponse> ModifyDomainStatus(ModifyDomainStatusRequest req)
         {
-             JsonResponseModel<ModifyDomainStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDomainStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainStatusResponse>(req, "ModifyDomainStatus");
         }
 
         /// <summary>
@@ -1239,17 +678,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyDomainStatusResponse"/></returns>
         public ModifyDomainStatusResponse ModifyDomainStatusSync(ModifyDomainStatusRequest req)
         {
-             JsonResponseModel<ModifyDomainStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDomainStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainStatusResponse>(req, "ModifyDomainStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1257,19 +687,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainUnlockRequest"/></param>
         /// <returns><see cref="ModifyDomainUnlockResponse"/></returns>
-        public async Task<ModifyDomainUnlockResponse> ModifyDomainUnlock(ModifyDomainUnlockRequest req)
+        public Task<ModifyDomainUnlockResponse> ModifyDomainUnlock(ModifyDomainUnlockRequest req)
         {
-             JsonResponseModel<ModifyDomainUnlockResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDomainUnlock");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainUnlockResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainUnlockResponse>(req, "ModifyDomainUnlock");
         }
 
         /// <summary>
@@ -1279,17 +699,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyDomainUnlockResponse"/></returns>
         public ModifyDomainUnlockResponse ModifyDomainUnlockSync(ModifyDomainUnlockRequest req)
         {
-             JsonResponseModel<ModifyDomainUnlockResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDomainUnlock");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainUnlockResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyDomainUnlockResponse>(req, "ModifyDomainUnlock")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1297,19 +708,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyRecordRequest"/></param>
         /// <returns><see cref="ModifyRecordResponse"/></returns>
-        public async Task<ModifyRecordResponse> ModifyRecord(ModifyRecordRequest req)
+        public Task<ModifyRecordResponse> ModifyRecord(ModifyRecordRequest req)
         {
-             JsonResponseModel<ModifyRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordResponse>(req, "ModifyRecord");
         }
 
         /// <summary>
@@ -1319,17 +720,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyRecordResponse"/></returns>
         public ModifyRecordResponse ModifyRecordSync(ModifyRecordRequest req)
         {
-             JsonResponseModel<ModifyRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordResponse>(req, "ModifyRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1337,19 +729,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyRecordBatchRequest"/></param>
         /// <returns><see cref="ModifyRecordBatchResponse"/></returns>
-        public async Task<ModifyRecordBatchResponse> ModifyRecordBatch(ModifyRecordBatchRequest req)
+        public Task<ModifyRecordBatchResponse> ModifyRecordBatch(ModifyRecordBatchRequest req)
         {
-             JsonResponseModel<ModifyRecordBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRecordBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordBatchResponse>(req, "ModifyRecordBatch");
         }
 
         /// <summary>
@@ -1359,17 +741,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyRecordBatchResponse"/></returns>
         public ModifyRecordBatchResponse ModifyRecordBatchSync(ModifyRecordBatchRequest req)
         {
-             JsonResponseModel<ModifyRecordBatchResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRecordBatch");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordBatchResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordBatchResponse>(req, "ModifyRecordBatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1377,19 +750,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyRecordGroupRequest"/></param>
         /// <returns><see cref="ModifyRecordGroupResponse"/></returns>
-        public async Task<ModifyRecordGroupResponse> ModifyRecordGroup(ModifyRecordGroupRequest req)
+        public Task<ModifyRecordGroupResponse> ModifyRecordGroup(ModifyRecordGroupRequest req)
         {
-             JsonResponseModel<ModifyRecordGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRecordGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordGroupResponse>(req, "ModifyRecordGroup");
         }
 
         /// <summary>
@@ -1399,17 +762,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyRecordGroupResponse"/></returns>
         public ModifyRecordGroupResponse ModifyRecordGroupSync(ModifyRecordGroupRequest req)
         {
-             JsonResponseModel<ModifyRecordGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRecordGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordGroupResponse>(req, "ModifyRecordGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1417,19 +771,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyRecordRemarkRequest"/></param>
         /// <returns><see cref="ModifyRecordRemarkResponse"/></returns>
-        public async Task<ModifyRecordRemarkResponse> ModifyRecordRemark(ModifyRecordRemarkRequest req)
+        public Task<ModifyRecordRemarkResponse> ModifyRecordRemark(ModifyRecordRemarkRequest req)
         {
-             JsonResponseModel<ModifyRecordRemarkResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRecordRemark");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordRemarkResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordRemarkResponse>(req, "ModifyRecordRemark");
         }
 
         /// <summary>
@@ -1439,17 +783,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyRecordRemarkResponse"/></returns>
         public ModifyRecordRemarkResponse ModifyRecordRemarkSync(ModifyRecordRemarkRequest req)
         {
-             JsonResponseModel<ModifyRecordRemarkResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRecordRemark");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordRemarkResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordRemarkResponse>(req, "ModifyRecordRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1457,19 +792,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyRecordStatusRequest"/></param>
         /// <returns><see cref="ModifyRecordStatusResponse"/></returns>
-        public async Task<ModifyRecordStatusResponse> ModifyRecordStatus(ModifyRecordStatusRequest req)
+        public Task<ModifyRecordStatusResponse> ModifyRecordStatus(ModifyRecordStatusRequest req)
         {
-             JsonResponseModel<ModifyRecordStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRecordStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordStatusResponse>(req, "ModifyRecordStatus");
         }
 
         /// <summary>
@@ -1479,17 +804,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyRecordStatusResponse"/></returns>
         public ModifyRecordStatusResponse ModifyRecordStatusSync(ModifyRecordStatusRequest req)
         {
-             JsonResponseModel<ModifyRecordStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRecordStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordStatusResponse>(req, "ModifyRecordStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1497,19 +813,9 @@ namespace TencentCloud.Dnspod.V20210323
         /// </summary>
         /// <param name="req"><see cref="ModifyRecordToGroupRequest"/></param>
         /// <returns><see cref="ModifyRecordToGroupResponse"/></returns>
-        public async Task<ModifyRecordToGroupResponse> ModifyRecordToGroup(ModifyRecordToGroupRequest req)
+        public Task<ModifyRecordToGroupResponse> ModifyRecordToGroup(ModifyRecordToGroupRequest req)
         {
-             JsonResponseModel<ModifyRecordToGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRecordToGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordToGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordToGroupResponse>(req, "ModifyRecordToGroup");
         }
 
         /// <summary>
@@ -1519,17 +825,8 @@ namespace TencentCloud.Dnspod.V20210323
         /// <returns><see cref="ModifyRecordToGroupResponse"/></returns>
         public ModifyRecordToGroupResponse ModifyRecordToGroupSync(ModifyRecordToGroupRequest req)
         {
-             JsonResponseModel<ModifyRecordToGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRecordToGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRecordToGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyRecordToGroupResponse>(req, "ModifyRecordToGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

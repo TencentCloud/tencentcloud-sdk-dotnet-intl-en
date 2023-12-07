@@ -57,19 +57,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="BindNewLVBDomainWithChannelRequest"/></param>
         /// <returns><see cref="BindNewLVBDomainWithChannelResponse"/></returns>
-        public async Task<BindNewLVBDomainWithChannelResponse> BindNewLVBDomainWithChannel(BindNewLVBDomainWithChannelRequest req)
+        public Task<BindNewLVBDomainWithChannelResponse> BindNewLVBDomainWithChannel(BindNewLVBDomainWithChannelRequest req)
         {
-             JsonResponseModel<BindNewLVBDomainWithChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BindNewLVBDomainWithChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindNewLVBDomainWithChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BindNewLVBDomainWithChannelResponse>(req, "BindNewLVBDomainWithChannel");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="BindNewLVBDomainWithChannelResponse"/></returns>
         public BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannelSync(BindNewLVBDomainWithChannelRequest req)
         {
-             JsonResponseModel<BindNewLVBDomainWithChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BindNewLVBDomainWithChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindNewLVBDomainWithChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BindNewLVBDomainWithChannelResponse>(req, "BindNewLVBDomainWithChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="CreateStreamPackageChannelRequest"/></param>
         /// <returns><see cref="CreateStreamPackageChannelResponse"/></returns>
-        public async Task<CreateStreamPackageChannelResponse> CreateStreamPackageChannel(CreateStreamPackageChannelRequest req)
+        public Task<CreateStreamPackageChannelResponse> CreateStreamPackageChannel(CreateStreamPackageChannelRequest req)
         {
-             JsonResponseModel<CreateStreamPackageChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateStreamPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStreamPackageChannelResponse>(req, "CreateStreamPackageChannel");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="CreateStreamPackageChannelResponse"/></returns>
         public CreateStreamPackageChannelResponse CreateStreamPackageChannelSync(CreateStreamPackageChannelRequest req)
         {
-             JsonResponseModel<CreateStreamPackageChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateStreamPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStreamPackageChannelResponse>(req, "CreateStreamPackageChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="CreateStreamPackageChannelEndpointRequest"/></param>
         /// <returns><see cref="CreateStreamPackageChannelEndpointResponse"/></returns>
-        public async Task<CreateStreamPackageChannelEndpointResponse> CreateStreamPackageChannelEndpoint(CreateStreamPackageChannelEndpointRequest req)
+        public Task<CreateStreamPackageChannelEndpointResponse> CreateStreamPackageChannelEndpoint(CreateStreamPackageChannelEndpointRequest req)
         {
-             JsonResponseModel<CreateStreamPackageChannelEndpointResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateStreamPackageChannelEndpoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageChannelEndpointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStreamPackageChannelEndpointResponse>(req, "CreateStreamPackageChannelEndpoint");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="CreateStreamPackageChannelEndpointResponse"/></returns>
         public CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpointSync(CreateStreamPackageChannelEndpointRequest req)
         {
-             JsonResponseModel<CreateStreamPackageChannelEndpointResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateStreamPackageChannelEndpoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageChannelEndpointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStreamPackageChannelEndpointResponse>(req, "CreateStreamPackageChannelEndpoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="CreateStreamPackageHarvestJobRequest"/></param>
         /// <returns><see cref="CreateStreamPackageHarvestJobResponse"/></returns>
-        public async Task<CreateStreamPackageHarvestJobResponse> CreateStreamPackageHarvestJob(CreateStreamPackageHarvestJobRequest req)
+        public Task<CreateStreamPackageHarvestJobResponse> CreateStreamPackageHarvestJob(CreateStreamPackageHarvestJobRequest req)
         {
-             JsonResponseModel<CreateStreamPackageHarvestJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateStreamPackageHarvestJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageHarvestJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStreamPackageHarvestJobResponse>(req, "CreateStreamPackageHarvestJob");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="CreateStreamPackageHarvestJobResponse"/></returns>
         public CreateStreamPackageHarvestJobResponse CreateStreamPackageHarvestJobSync(CreateStreamPackageHarvestJobRequest req)
         {
-             JsonResponseModel<CreateStreamPackageHarvestJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateStreamPackageHarvestJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStreamPackageHarvestJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateStreamPackageHarvestJobResponse>(req, "CreateStreamPackageHarvestJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamPackageChannelEndpointsRequest"/></param>
         /// <returns><see cref="DeleteStreamPackageChannelEndpointsResponse"/></returns>
-        public async Task<DeleteStreamPackageChannelEndpointsResponse> DeleteStreamPackageChannelEndpoints(DeleteStreamPackageChannelEndpointsRequest req)
+        public Task<DeleteStreamPackageChannelEndpointsResponse> DeleteStreamPackageChannelEndpoints(DeleteStreamPackageChannelEndpointsRequest req)
         {
-             JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteStreamPackageChannelEndpoints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStreamPackageChannelEndpointsResponse>(req, "DeleteStreamPackageChannelEndpoints");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="DeleteStreamPackageChannelEndpointsResponse"/></returns>
         public DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpointsSync(DeleteStreamPackageChannelEndpointsRequest req)
         {
-             JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteStreamPackageChannelEndpoints");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStreamPackageChannelEndpointsResponse>(req, "DeleteStreamPackageChannelEndpoints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamPackageChannelsRequest"/></param>
         /// <returns><see cref="DeleteStreamPackageChannelsResponse"/></returns>
-        public async Task<DeleteStreamPackageChannelsResponse> DeleteStreamPackageChannels(DeleteStreamPackageChannelsRequest req)
+        public Task<DeleteStreamPackageChannelsResponse> DeleteStreamPackageChannels(DeleteStreamPackageChannelsRequest req)
         {
-             JsonResponseModel<DeleteStreamPackageChannelsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteStreamPackageChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageChannelsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStreamPackageChannelsResponse>(req, "DeleteStreamPackageChannels");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="DeleteStreamPackageChannelsResponse"/></returns>
         public DeleteStreamPackageChannelsResponse DeleteStreamPackageChannelsSync(DeleteStreamPackageChannelsRequest req)
         {
-             JsonResponseModel<DeleteStreamPackageChannelsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteStreamPackageChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageChannelsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStreamPackageChannelsResponse>(req, "DeleteStreamPackageChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamPackageHarvestJobRequest"/></param>
         /// <returns><see cref="DeleteStreamPackageHarvestJobResponse"/></returns>
-        public async Task<DeleteStreamPackageHarvestJobResponse> DeleteStreamPackageHarvestJob(DeleteStreamPackageHarvestJobRequest req)
+        public Task<DeleteStreamPackageHarvestJobResponse> DeleteStreamPackageHarvestJob(DeleteStreamPackageHarvestJobRequest req)
         {
-             JsonResponseModel<DeleteStreamPackageHarvestJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteStreamPackageHarvestJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageHarvestJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStreamPackageHarvestJobResponse>(req, "DeleteStreamPackageHarvestJob");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="DeleteStreamPackageHarvestJobResponse"/></returns>
         public DeleteStreamPackageHarvestJobResponse DeleteStreamPackageHarvestJobSync(DeleteStreamPackageHarvestJobRequest req)
         {
-             JsonResponseModel<DeleteStreamPackageHarvestJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteStreamPackageHarvestJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageHarvestJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStreamPackageHarvestJobResponse>(req, "DeleteStreamPackageHarvestJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamPackageHarvestJobsRequest"/></param>
         /// <returns><see cref="DeleteStreamPackageHarvestJobsResponse"/></returns>
-        public async Task<DeleteStreamPackageHarvestJobsResponse> DeleteStreamPackageHarvestJobs(DeleteStreamPackageHarvestJobsRequest req)
+        public Task<DeleteStreamPackageHarvestJobsResponse> DeleteStreamPackageHarvestJobs(DeleteStreamPackageHarvestJobsRequest req)
         {
-             JsonResponseModel<DeleteStreamPackageHarvestJobsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteStreamPackageHarvestJobs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageHarvestJobsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStreamPackageHarvestJobsResponse>(req, "DeleteStreamPackageHarvestJobs");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="DeleteStreamPackageHarvestJobsResponse"/></returns>
         public DeleteStreamPackageHarvestJobsResponse DeleteStreamPackageHarvestJobsSync(DeleteStreamPackageHarvestJobsRequest req)
         {
-             JsonResponseModel<DeleteStreamPackageHarvestJobsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteStreamPackageHarvestJobs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStreamPackageHarvestJobsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteStreamPackageHarvestJobsResponse>(req, "DeleteStreamPackageHarvestJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamPackageChannelRequest"/></param>
         /// <returns><see cref="DescribeStreamPackageChannelResponse"/></returns>
-        public async Task<DescribeStreamPackageChannelResponse> DescribeStreamPackageChannel(DescribeStreamPackageChannelRequest req)
+        public Task<DescribeStreamPackageChannelResponse> DescribeStreamPackageChannel(DescribeStreamPackageChannelRequest req)
         {
-             JsonResponseModel<DescribeStreamPackageChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStreamPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStreamPackageChannelResponse>(req, "DescribeStreamPackageChannel");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="DescribeStreamPackageChannelResponse"/></returns>
         public DescribeStreamPackageChannelResponse DescribeStreamPackageChannelSync(DescribeStreamPackageChannelRequest req)
         {
-             JsonResponseModel<DescribeStreamPackageChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStreamPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStreamPackageChannelResponse>(req, "DescribeStreamPackageChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamPackageChannelsRequest"/></param>
         /// <returns><see cref="DescribeStreamPackageChannelsResponse"/></returns>
-        public async Task<DescribeStreamPackageChannelsResponse> DescribeStreamPackageChannels(DescribeStreamPackageChannelsRequest req)
+        public Task<DescribeStreamPackageChannelsResponse> DescribeStreamPackageChannels(DescribeStreamPackageChannelsRequest req)
         {
-             JsonResponseModel<DescribeStreamPackageChannelsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStreamPackageChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStreamPackageChannelsResponse>(req, "DescribeStreamPackageChannels");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="DescribeStreamPackageChannelsResponse"/></returns>
         public DescribeStreamPackageChannelsResponse DescribeStreamPackageChannelsSync(DescribeStreamPackageChannelsRequest req)
         {
-             JsonResponseModel<DescribeStreamPackageChannelsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStreamPackageChannels");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageChannelsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStreamPackageChannelsResponse>(req, "DescribeStreamPackageChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamPackageHarvestJobRequest"/></param>
         /// <returns><see cref="DescribeStreamPackageHarvestJobResponse"/></returns>
-        public async Task<DescribeStreamPackageHarvestJobResponse> DescribeStreamPackageHarvestJob(DescribeStreamPackageHarvestJobRequest req)
+        public Task<DescribeStreamPackageHarvestJobResponse> DescribeStreamPackageHarvestJob(DescribeStreamPackageHarvestJobRequest req)
         {
-             JsonResponseModel<DescribeStreamPackageHarvestJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStreamPackageHarvestJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageHarvestJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStreamPackageHarvestJobResponse>(req, "DescribeStreamPackageHarvestJob");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="DescribeStreamPackageHarvestJobResponse"/></returns>
         public DescribeStreamPackageHarvestJobResponse DescribeStreamPackageHarvestJobSync(DescribeStreamPackageHarvestJobRequest req)
         {
-             JsonResponseModel<DescribeStreamPackageHarvestJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStreamPackageHarvestJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageHarvestJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStreamPackageHarvestJobResponse>(req, "DescribeStreamPackageHarvestJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamPackageHarvestJobsRequest"/></param>
         /// <returns><see cref="DescribeStreamPackageHarvestJobsResponse"/></returns>
-        public async Task<DescribeStreamPackageHarvestJobsResponse> DescribeStreamPackageHarvestJobs(DescribeStreamPackageHarvestJobsRequest req)
+        public Task<DescribeStreamPackageHarvestJobsResponse> DescribeStreamPackageHarvestJobs(DescribeStreamPackageHarvestJobsRequest req)
         {
-             JsonResponseModel<DescribeStreamPackageHarvestJobsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStreamPackageHarvestJobs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageHarvestJobsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStreamPackageHarvestJobsResponse>(req, "DescribeStreamPackageHarvestJobs");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="DescribeStreamPackageHarvestJobsResponse"/></returns>
         public DescribeStreamPackageHarvestJobsResponse DescribeStreamPackageHarvestJobsSync(DescribeStreamPackageHarvestJobsRequest req)
         {
-             JsonResponseModel<DescribeStreamPackageHarvestJobsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStreamPackageHarvestJobs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPackageHarvestJobsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeStreamPackageHarvestJobsResponse>(req, "DescribeStreamPackageHarvestJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="ModifyStreamPackageChannelRequest"/></param>
         /// <returns><see cref="ModifyStreamPackageChannelResponse"/></returns>
-        public async Task<ModifyStreamPackageChannelResponse> ModifyStreamPackageChannel(ModifyStreamPackageChannelRequest req)
+        public Task<ModifyStreamPackageChannelResponse> ModifyStreamPackageChannel(ModifyStreamPackageChannelRequest req)
         {
-             JsonResponseModel<ModifyStreamPackageChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyStreamPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyStreamPackageChannelResponse>(req, "ModifyStreamPackageChannel");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="ModifyStreamPackageChannelResponse"/></returns>
         public ModifyStreamPackageChannelResponse ModifyStreamPackageChannelSync(ModifyStreamPackageChannelRequest req)
         {
-             JsonResponseModel<ModifyStreamPackageChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyStreamPackageChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyStreamPackageChannelResponse>(req, "ModifyStreamPackageChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="ModifyStreamPackageChannelEndpointRequest"/></param>
         /// <returns><see cref="ModifyStreamPackageChannelEndpointResponse"/></returns>
-        public async Task<ModifyStreamPackageChannelEndpointResponse> ModifyStreamPackageChannelEndpoint(ModifyStreamPackageChannelEndpointRequest req)
+        public Task<ModifyStreamPackageChannelEndpointResponse> ModifyStreamPackageChannelEndpoint(ModifyStreamPackageChannelEndpointRequest req)
         {
-             JsonResponseModel<ModifyStreamPackageChannelEndpointResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyStreamPackageChannelEndpoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelEndpointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyStreamPackageChannelEndpointResponse>(req, "ModifyStreamPackageChannelEndpoint");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="ModifyStreamPackageChannelEndpointResponse"/></returns>
         public ModifyStreamPackageChannelEndpointResponse ModifyStreamPackageChannelEndpointSync(ModifyStreamPackageChannelEndpointRequest req)
         {
-             JsonResponseModel<ModifyStreamPackageChannelEndpointResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyStreamPackageChannelEndpoint");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelEndpointResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyStreamPackageChannelEndpointResponse>(req, "ModifyStreamPackageChannelEndpoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="ModifyStreamPackageChannelInputAuthInfoRequest"/></param>
         /// <returns><see cref="ModifyStreamPackageChannelInputAuthInfoResponse"/></returns>
-        public async Task<ModifyStreamPackageChannelInputAuthInfoResponse> ModifyStreamPackageChannelInputAuthInfo(ModifyStreamPackageChannelInputAuthInfoRequest req)
+        public Task<ModifyStreamPackageChannelInputAuthInfoResponse> ModifyStreamPackageChannelInputAuthInfo(ModifyStreamPackageChannelInputAuthInfoRequest req)
         {
-             JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyStreamPackageChannelInputAuthInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyStreamPackageChannelInputAuthInfoResponse>(req, "ModifyStreamPackageChannelInputAuthInfo");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="ModifyStreamPackageChannelInputAuthInfoResponse"/></returns>
         public ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfoSync(ModifyStreamPackageChannelInputAuthInfoRequest req)
         {
-             JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyStreamPackageChannelInputAuthInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyStreamPackageChannelInputAuthInfoResponse>(req, "ModifyStreamPackageChannelInputAuthInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Mdp.V20200527
         /// </summary>
         /// <param name="req"><see cref="UnbindCdnDomainWithChannelRequest"/></param>
         /// <returns><see cref="UnbindCdnDomainWithChannelResponse"/></returns>
-        public async Task<UnbindCdnDomainWithChannelResponse> UnbindCdnDomainWithChannel(UnbindCdnDomainWithChannelRequest req)
+        public Task<UnbindCdnDomainWithChannelResponse> UnbindCdnDomainWithChannel(UnbindCdnDomainWithChannelRequest req)
         {
-             JsonResponseModel<UnbindCdnDomainWithChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UnbindCdnDomainWithChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCdnDomainWithChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UnbindCdnDomainWithChannelResponse>(req, "UnbindCdnDomainWithChannel");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Mdp.V20200527
         /// <returns><see cref="UnbindCdnDomainWithChannelResponse"/></returns>
         public UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannelSync(UnbindCdnDomainWithChannelRequest req)
         {
-             JsonResponseModel<UnbindCdnDomainWithChannelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UnbindCdnDomainWithChannel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCdnDomainWithChannelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UnbindCdnDomainWithChannelResponse>(req, "UnbindCdnDomainWithChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

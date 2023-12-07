@@ -57,19 +57,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="AddOrganizationNodeRequest"/></param>
         /// <returns><see cref="AddOrganizationNodeResponse"/></returns>
-        public async Task<AddOrganizationNodeResponse> AddOrganizationNode(AddOrganizationNodeRequest req)
+        public Task<AddOrganizationNodeResponse> AddOrganizationNode(AddOrganizationNodeRequest req)
         {
-             JsonResponseModel<AddOrganizationNodeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AddOrganizationNode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddOrganizationNodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AddOrganizationNodeResponse>(req, "AddOrganizationNode");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="AddOrganizationNodeResponse"/></returns>
         public AddOrganizationNodeResponse AddOrganizationNodeSync(AddOrganizationNodeRequest req)
         {
-             JsonResponseModel<AddOrganizationNodeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AddOrganizationNode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddOrganizationNodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<AddOrganizationNodeResponse>(req, "AddOrganizationNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="BindOrganizationMemberAuthAccountRequest"/></param>
         /// <returns><see cref="BindOrganizationMemberAuthAccountResponse"/></returns>
-        public async Task<BindOrganizationMemberAuthAccountResponse> BindOrganizationMemberAuthAccount(BindOrganizationMemberAuthAccountRequest req)
+        public Task<BindOrganizationMemberAuthAccountResponse> BindOrganizationMemberAuthAccount(BindOrganizationMemberAuthAccountRequest req)
         {
-             JsonResponseModel<BindOrganizationMemberAuthAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BindOrganizationMemberAuthAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindOrganizationMemberAuthAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BindOrganizationMemberAuthAccountResponse>(req, "BindOrganizationMemberAuthAccount");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="BindOrganizationMemberAuthAccountResponse"/></returns>
         public BindOrganizationMemberAuthAccountResponse BindOrganizationMemberAuthAccountSync(BindOrganizationMemberAuthAccountRequest req)
         {
-             JsonResponseModel<BindOrganizationMemberAuthAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BindOrganizationMemberAuthAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindOrganizationMemberAuthAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BindOrganizationMemberAuthAccountResponse>(req, "BindOrganizationMemberAuthAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="CancelOrganizationMemberAuthAccountRequest"/></param>
         /// <returns><see cref="CancelOrganizationMemberAuthAccountResponse"/></returns>
-        public async Task<CancelOrganizationMemberAuthAccountResponse> CancelOrganizationMemberAuthAccount(CancelOrganizationMemberAuthAccountRequest req)
+        public Task<CancelOrganizationMemberAuthAccountResponse> CancelOrganizationMemberAuthAccount(CancelOrganizationMemberAuthAccountRequest req)
         {
-             JsonResponseModel<CancelOrganizationMemberAuthAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CancelOrganizationMemberAuthAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelOrganizationMemberAuthAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelOrganizationMemberAuthAccountResponse>(req, "CancelOrganizationMemberAuthAccount");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="CancelOrganizationMemberAuthAccountResponse"/></returns>
         public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccountSync(CancelOrganizationMemberAuthAccountRequest req)
         {
-             JsonResponseModel<CancelOrganizationMemberAuthAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CancelOrganizationMemberAuthAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelOrganizationMemberAuthAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelOrganizationMemberAuthAccountResponse>(req, "CancelOrganizationMemberAuthAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationMemberRequest"/></param>
         /// <returns><see cref="CreateOrganizationMemberResponse"/></returns>
-        public async Task<CreateOrganizationMemberResponse> CreateOrganizationMember(CreateOrganizationMemberRequest req)
+        public Task<CreateOrganizationMemberResponse> CreateOrganizationMember(CreateOrganizationMemberRequest req)
         {
-             JsonResponseModel<CreateOrganizationMemberResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateOrganizationMember");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateOrganizationMemberResponse>(req, "CreateOrganizationMember");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="CreateOrganizationMemberResponse"/></returns>
         public CreateOrganizationMemberResponse CreateOrganizationMemberSync(CreateOrganizationMemberRequest req)
         {
-             JsonResponseModel<CreateOrganizationMemberResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateOrganizationMember");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateOrganizationMemberResponse>(req, "CreateOrganizationMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationMemberPolicyRequest"/></param>
         /// <returns><see cref="CreateOrganizationMemberPolicyResponse"/></returns>
-        public async Task<CreateOrganizationMemberPolicyResponse> CreateOrganizationMemberPolicy(CreateOrganizationMemberPolicyRequest req)
+        public Task<CreateOrganizationMemberPolicyResponse> CreateOrganizationMemberPolicy(CreateOrganizationMemberPolicyRequest req)
         {
-             JsonResponseModel<CreateOrganizationMemberPolicyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateOrganizationMemberPolicy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberPolicyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateOrganizationMemberPolicyResponse>(req, "CreateOrganizationMemberPolicy");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="CreateOrganizationMemberPolicyResponse"/></returns>
         public CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicySync(CreateOrganizationMemberPolicyRequest req)
         {
-             JsonResponseModel<CreateOrganizationMemberPolicyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateOrganizationMemberPolicy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberPolicyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateOrganizationMemberPolicyResponse>(req, "CreateOrganizationMemberPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>
         /// <returns><see cref="DeleteOrganizationMembersResponse"/></returns>
-        public async Task<DeleteOrganizationMembersResponse> DeleteOrganizationMembers(DeleteOrganizationMembersRequest req)
+        public Task<DeleteOrganizationMembersResponse> DeleteOrganizationMembers(DeleteOrganizationMembersRequest req)
         {
-             JsonResponseModel<DeleteOrganizationMembersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteOrganizationMembers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMembersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteOrganizationMembersResponse>(req, "DeleteOrganizationMembers");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="DeleteOrganizationMembersResponse"/></returns>
         public DeleteOrganizationMembersResponse DeleteOrganizationMembersSync(DeleteOrganizationMembersRequest req)
         {
-             JsonResponseModel<DeleteOrganizationMembersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteOrganizationMembers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMembersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteOrganizationMembersResponse>(req, "DeleteOrganizationMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationNodesRequest"/></param>
         /// <returns><see cref="DeleteOrganizationNodesResponse"/></returns>
-        public async Task<DeleteOrganizationNodesResponse> DeleteOrganizationNodes(DeleteOrganizationNodesRequest req)
+        public Task<DeleteOrganizationNodesResponse> DeleteOrganizationNodes(DeleteOrganizationNodesRequest req)
         {
-             JsonResponseModel<DeleteOrganizationNodesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteOrganizationNodes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationNodesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteOrganizationNodesResponse>(req, "DeleteOrganizationNodes");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="DeleteOrganizationNodesResponse"/></returns>
         public DeleteOrganizationNodesResponse DeleteOrganizationNodesSync(DeleteOrganizationNodesRequest req)
         {
-             JsonResponseModel<DeleteOrganizationNodesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteOrganizationNodes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationNodesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteOrganizationNodesResponse>(req, "DeleteOrganizationNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationRequest"/></param>
         /// <returns><see cref="DescribeOrganizationResponse"/></returns>
-        public async Task<DescribeOrganizationResponse> DescribeOrganization(DescribeOrganizationRequest req)
+        public Task<DescribeOrganizationResponse> DescribeOrganization(DescribeOrganizationRequest req)
         {
-             JsonResponseModel<DescribeOrganizationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOrganization");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationResponse>(req, "DescribeOrganization");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="DescribeOrganizationResponse"/></returns>
         public DescribeOrganizationResponse DescribeOrganizationSync(DescribeOrganizationRequest req)
         {
-             JsonResponseModel<DescribeOrganizationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOrganization");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationResponse>(req, "DescribeOrganization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthAccountsRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberAuthAccountsResponse"/></returns>
-        public async Task<DescribeOrganizationMemberAuthAccountsResponse> DescribeOrganizationMemberAuthAccounts(DescribeOrganizationMemberAuthAccountsRequest req)
+        public Task<DescribeOrganizationMemberAuthAccountsResponse> DescribeOrganizationMemberAuthAccounts(DescribeOrganizationMemberAuthAccountsRequest req)
         {
-             JsonResponseModel<DescribeOrganizationMemberAuthAccountsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOrganizationMemberAuthAccounts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMemberAuthAccountsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationMemberAuthAccountsResponse>(req, "DescribeOrganizationMemberAuthAccounts");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="DescribeOrganizationMemberAuthAccountsResponse"/></returns>
         public DescribeOrganizationMemberAuthAccountsResponse DescribeOrganizationMemberAuthAccountsSync(DescribeOrganizationMemberAuthAccountsRequest req)
         {
-             JsonResponseModel<DescribeOrganizationMemberAuthAccountsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationMemberAuthAccounts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMemberAuthAccountsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationMemberAuthAccountsResponse>(req, "DescribeOrganizationMemberAuthAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthIdentitiesRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberAuthIdentitiesResponse"/></returns>
-        public async Task<DescribeOrganizationMemberAuthIdentitiesResponse> DescribeOrganizationMemberAuthIdentities(DescribeOrganizationMemberAuthIdentitiesRequest req)
+        public Task<DescribeOrganizationMemberAuthIdentitiesResponse> DescribeOrganizationMemberAuthIdentities(DescribeOrganizationMemberAuthIdentitiesRequest req)
         {
-             JsonResponseModel<DescribeOrganizationMemberAuthIdentitiesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOrganizationMemberAuthIdentities");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMemberAuthIdentitiesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationMemberAuthIdentitiesResponse>(req, "DescribeOrganizationMemberAuthIdentities");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="DescribeOrganizationMemberAuthIdentitiesResponse"/></returns>
         public DescribeOrganizationMemberAuthIdentitiesResponse DescribeOrganizationMemberAuthIdentitiesSync(DescribeOrganizationMemberAuthIdentitiesRequest req)
         {
-             JsonResponseModel<DescribeOrganizationMemberAuthIdentitiesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationMemberAuthIdentities");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMemberAuthIdentitiesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationMemberAuthIdentitiesResponse>(req, "DescribeOrganizationMemberAuthIdentities")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberPoliciesRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberPoliciesResponse"/></returns>
-        public async Task<DescribeOrganizationMemberPoliciesResponse> DescribeOrganizationMemberPolicies(DescribeOrganizationMemberPoliciesRequest req)
+        public Task<DescribeOrganizationMemberPoliciesResponse> DescribeOrganizationMemberPolicies(DescribeOrganizationMemberPoliciesRequest req)
         {
-             JsonResponseModel<DescribeOrganizationMemberPoliciesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOrganizationMemberPolicies");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMemberPoliciesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationMemberPoliciesResponse>(req, "DescribeOrganizationMemberPolicies");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="DescribeOrganizationMemberPoliciesResponse"/></returns>
         public DescribeOrganizationMemberPoliciesResponse DescribeOrganizationMemberPoliciesSync(DescribeOrganizationMemberPoliciesRequest req)
         {
-             JsonResponseModel<DescribeOrganizationMemberPoliciesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationMemberPolicies");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMemberPoliciesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationMemberPoliciesResponse>(req, "DescribeOrganizationMemberPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMembersRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMembersResponse"/></returns>
-        public async Task<DescribeOrganizationMembersResponse> DescribeOrganizationMembers(DescribeOrganizationMembersRequest req)
+        public Task<DescribeOrganizationMembersResponse> DescribeOrganizationMembers(DescribeOrganizationMembersRequest req)
         {
-             JsonResponseModel<DescribeOrganizationMembersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOrganizationMembers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMembersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationMembersResponse>(req, "DescribeOrganizationMembers");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="DescribeOrganizationMembersResponse"/></returns>
         public DescribeOrganizationMembersResponse DescribeOrganizationMembersSync(DescribeOrganizationMembersRequest req)
         {
-             JsonResponseModel<DescribeOrganizationMembersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationMembers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMembersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationMembersResponse>(req, "DescribeOrganizationMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationNodesRequest"/></param>
         /// <returns><see cref="DescribeOrganizationNodesResponse"/></returns>
-        public async Task<DescribeOrganizationNodesResponse> DescribeOrganizationNodes(DescribeOrganizationNodesRequest req)
+        public Task<DescribeOrganizationNodesResponse> DescribeOrganizationNodes(DescribeOrganizationNodesRequest req)
         {
-             JsonResponseModel<DescribeOrganizationNodesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOrganizationNodes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationNodesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationNodesResponse>(req, "DescribeOrganizationNodes");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="DescribeOrganizationNodesResponse"/></returns>
         public DescribeOrganizationNodesResponse DescribeOrganizationNodesSync(DescribeOrganizationNodesRequest req)
         {
-             JsonResponseModel<DescribeOrganizationNodesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationNodes");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationNodesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeOrganizationNodesResponse>(req, "DescribeOrganizationNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="ListOrganizationIdentityRequest"/></param>
         /// <returns><see cref="ListOrganizationIdentityResponse"/></returns>
-        public async Task<ListOrganizationIdentityResponse> ListOrganizationIdentity(ListOrganizationIdentityRequest req)
+        public Task<ListOrganizationIdentityResponse> ListOrganizationIdentity(ListOrganizationIdentityRequest req)
         {
-             JsonResponseModel<ListOrganizationIdentityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListOrganizationIdentity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListOrganizationIdentityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListOrganizationIdentityResponse>(req, "ListOrganizationIdentity");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="ListOrganizationIdentityResponse"/></returns>
         public ListOrganizationIdentityResponse ListOrganizationIdentitySync(ListOrganizationIdentityRequest req)
         {
-             JsonResponseModel<ListOrganizationIdentityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListOrganizationIdentity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListOrganizationIdentityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListOrganizationIdentityResponse>(req, "ListOrganizationIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="MoveOrganizationNodeMembersRequest"/></param>
         /// <returns><see cref="MoveOrganizationNodeMembersResponse"/></returns>
-        public async Task<MoveOrganizationNodeMembersResponse> MoveOrganizationNodeMembers(MoveOrganizationNodeMembersRequest req)
+        public Task<MoveOrganizationNodeMembersResponse> MoveOrganizationNodeMembers(MoveOrganizationNodeMembersRequest req)
         {
-             JsonResponseModel<MoveOrganizationNodeMembersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "MoveOrganizationNodeMembers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MoveOrganizationNodeMembersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MoveOrganizationNodeMembersResponse>(req, "MoveOrganizationNodeMembers");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="MoveOrganizationNodeMembersResponse"/></returns>
         public MoveOrganizationNodeMembersResponse MoveOrganizationNodeMembersSync(MoveOrganizationNodeMembersRequest req)
         {
-             JsonResponseModel<MoveOrganizationNodeMembersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "MoveOrganizationNodeMembers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MoveOrganizationNodeMembersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MoveOrganizationNodeMembersResponse>(req, "MoveOrganizationNodeMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Organization.V20210331
         /// </summary>
         /// <param name="req"><see cref="UpdateOrganizationNodeRequest"/></param>
         /// <returns><see cref="UpdateOrganizationNodeResponse"/></returns>
-        public async Task<UpdateOrganizationNodeResponse> UpdateOrganizationNode(UpdateOrganizationNodeRequest req)
+        public Task<UpdateOrganizationNodeResponse> UpdateOrganizationNode(UpdateOrganizationNodeRequest req)
         {
-             JsonResponseModel<UpdateOrganizationNodeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateOrganizationNode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationNodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateOrganizationNodeResponse>(req, "UpdateOrganizationNode");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Organization.V20210331
         /// <returns><see cref="UpdateOrganizationNodeResponse"/></returns>
         public UpdateOrganizationNodeResponse UpdateOrganizationNodeSync(UpdateOrganizationNodeRequest req)
         {
-             JsonResponseModel<UpdateOrganizationNodeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateOrganizationNode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationNodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateOrganizationNodeResponse>(req, "UpdateOrganizationNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

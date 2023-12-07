@@ -59,19 +59,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="BankCardOCRRequest"/></param>
         /// <returns><see cref="BankCardOCRResponse"/></returns>
-        public async Task<BankCardOCRResponse> BankCardOCR(BankCardOCRRequest req)
+        public Task<BankCardOCRResponse> BankCardOCR(BankCardOCRRequest req)
         {
-             JsonResponseModel<BankCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BankCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BankCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BankCardOCRResponse>(req, "BankCardOCR");
         }
 
         /// <summary>
@@ -83,17 +73,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="BankCardOCRResponse"/></returns>
         public BankCardOCRResponse BankCardOCRSync(BankCardOCRRequest req)
         {
-             JsonResponseModel<BankCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BankCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BankCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BankCardOCRResponse>(req, "BankCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -107,19 +88,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="GeneralAccurateOCRRequest"/></param>
         /// <returns><see cref="GeneralAccurateOCRResponse"/></returns>
-        public async Task<GeneralAccurateOCRResponse> GeneralAccurateOCR(GeneralAccurateOCRRequest req)
+        public Task<GeneralAccurateOCRResponse> GeneralAccurateOCR(GeneralAccurateOCRRequest req)
         {
-             JsonResponseModel<GeneralAccurateOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GeneralAccurateOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneralAccurateOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GeneralAccurateOCRResponse>(req, "GeneralAccurateOCR");
         }
 
         /// <summary>
@@ -135,17 +106,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="GeneralAccurateOCRResponse"/></returns>
         public GeneralAccurateOCRResponse GeneralAccurateOCRSync(GeneralAccurateOCRRequest req)
         {
-             JsonResponseModel<GeneralAccurateOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GeneralAccurateOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneralAccurateOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GeneralAccurateOCRResponse>(req, "GeneralAccurateOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -159,19 +121,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="GeneralBasicOCRRequest"/></param>
         /// <returns><see cref="GeneralBasicOCRResponse"/></returns>
-        public async Task<GeneralBasicOCRResponse> GeneralBasicOCR(GeneralBasicOCRRequest req)
+        public Task<GeneralBasicOCRResponse> GeneralBasicOCR(GeneralBasicOCRRequest req)
         {
-             JsonResponseModel<GeneralBasicOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GeneralBasicOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneralBasicOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GeneralBasicOCRResponse>(req, "GeneralBasicOCR");
         }
 
         /// <summary>
@@ -187,17 +139,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="GeneralBasicOCRResponse"/></returns>
         public GeneralBasicOCRResponse GeneralBasicOCRSync(GeneralBasicOCRRequest req)
         {
-             JsonResponseModel<GeneralBasicOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GeneralBasicOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneralBasicOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GeneralBasicOCRResponse>(req, "GeneralBasicOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -207,19 +150,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="HKIDCardOCRRequest"/></param>
         /// <returns><see cref="HKIDCardOCRResponse"/></returns>
-        public async Task<HKIDCardOCRResponse> HKIDCardOCR(HKIDCardOCRRequest req)
+        public Task<HKIDCardOCRResponse> HKIDCardOCR(HKIDCardOCRRequest req)
         {
-             JsonResponseModel<HKIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "HKIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HKIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<HKIDCardOCRResponse>(req, "HKIDCardOCR");
         }
 
         /// <summary>
@@ -231,17 +164,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="HKIDCardOCRResponse"/></returns>
         public HKIDCardOCRResponse HKIDCardOCRSync(HKIDCardOCRRequest req)
         {
-             JsonResponseModel<HKIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "HKIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HKIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<HKIDCardOCRResponse>(req, "HKIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -251,19 +175,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="HmtResidentPermitOCRRequest"/></param>
         /// <returns><see cref="HmtResidentPermitOCRResponse"/></returns>
-        public async Task<HmtResidentPermitOCRResponse> HmtResidentPermitOCR(HmtResidentPermitOCRRequest req)
+        public Task<HmtResidentPermitOCRResponse> HmtResidentPermitOCR(HmtResidentPermitOCRRequest req)
         {
-             JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "HmtResidentPermitOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HmtResidentPermitOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<HmtResidentPermitOCRResponse>(req, "HmtResidentPermitOCR");
         }
 
         /// <summary>
@@ -275,17 +189,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="HmtResidentPermitOCRResponse"/></returns>
         public HmtResidentPermitOCRResponse HmtResidentPermitOCRSync(HmtResidentPermitOCRRequest req)
         {
-             JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "HmtResidentPermitOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HmtResidentPermitOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<HmtResidentPermitOCRResponse>(req, "HmtResidentPermitOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -340,19 +245,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="IDCardOCRRequest"/></param>
         /// <returns><see cref="IDCardOCRResponse"/></returns>
-        public async Task<IDCardOCRResponse> IDCardOCR(IDCardOCRRequest req)
+        public Task<IDCardOCRResponse> IDCardOCR(IDCardOCRRequest req)
         {
-             JsonResponseModel<IDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "IDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<IDCardOCRResponse>(req, "IDCardOCR");
         }
 
         /// <summary>
@@ -409,17 +304,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="IDCardOCRResponse"/></returns>
         public IDCardOCRResponse IDCardOCRSync(IDCardOCRRequest req)
         {
-             JsonResponseModel<IDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "IDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<IDCardOCRResponse>(req, "IDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -429,19 +315,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="LicensePlateOCRRequest"/></param>
         /// <returns><see cref="LicensePlateOCRResponse"/></returns>
-        public async Task<LicensePlateOCRResponse> LicensePlateOCR(LicensePlateOCRRequest req)
+        public Task<LicensePlateOCRResponse> LicensePlateOCR(LicensePlateOCRRequest req)
         {
-             JsonResponseModel<LicensePlateOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "LicensePlateOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LicensePlateOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<LicensePlateOCRResponse>(req, "LicensePlateOCR");
         }
 
         /// <summary>
@@ -453,17 +329,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="LicensePlateOCRResponse"/></returns>
         public LicensePlateOCRResponse LicensePlateOCRSync(LicensePlateOCRRequest req)
         {
-             JsonResponseModel<LicensePlateOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "LicensePlateOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LicensePlateOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<LicensePlateOCRResponse>(req, "LicensePlateOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -473,19 +340,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="MLIDCardOCRRequest"/></param>
         /// <returns><see cref="MLIDCardOCRResponse"/></returns>
-        public async Task<MLIDCardOCRResponse> MLIDCardOCR(MLIDCardOCRRequest req)
+        public Task<MLIDCardOCRResponse> MLIDCardOCR(MLIDCardOCRRequest req)
         {
-             JsonResponseModel<MLIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "MLIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MLIDCardOCRResponse>(req, "MLIDCardOCR");
         }
 
         /// <summary>
@@ -497,17 +354,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="MLIDCardOCRResponse"/></returns>
         public MLIDCardOCRResponse MLIDCardOCRSync(MLIDCardOCRRequest req)
         {
-             JsonResponseModel<MLIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "MLIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MLIDCardOCRResponse>(req, "MLIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -517,19 +365,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="MLIDPassportOCRRequest"/></param>
         /// <returns><see cref="MLIDPassportOCRResponse"/></returns>
-        public async Task<MLIDPassportOCRResponse> MLIDPassportOCR(MLIDPassportOCRRequest req)
+        public Task<MLIDPassportOCRResponse> MLIDPassportOCR(MLIDPassportOCRRequest req)
         {
-             JsonResponseModel<MLIDPassportOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "MLIDPassportOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDPassportOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MLIDPassportOCRResponse>(req, "MLIDPassportOCR");
         }
 
         /// <summary>
@@ -541,17 +379,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="MLIDPassportOCRResponse"/></returns>
         public MLIDPassportOCRResponse MLIDPassportOCRSync(MLIDPassportOCRRequest req)
         {
-             JsonResponseModel<MLIDPassportOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "MLIDPassportOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDPassportOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MLIDPassportOCRResponse>(req, "MLIDPassportOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -561,19 +390,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="MainlandPermitOCRRequest"/></param>
         /// <returns><see cref="MainlandPermitOCRResponse"/></returns>
-        public async Task<MainlandPermitOCRResponse> MainlandPermitOCR(MainlandPermitOCRRequest req)
+        public Task<MainlandPermitOCRResponse> MainlandPermitOCR(MainlandPermitOCRRequest req)
         {
-             JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "MainlandPermitOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MainlandPermitOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MainlandPermitOCRResponse>(req, "MainlandPermitOCR");
         }
 
         /// <summary>
@@ -585,17 +404,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="MainlandPermitOCRResponse"/></returns>
         public MainlandPermitOCRResponse MainlandPermitOCRSync(MainlandPermitOCRRequest req)
         {
-             JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "MainlandPermitOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MainlandPermitOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<MainlandPermitOCRResponse>(req, "MainlandPermitOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -605,19 +415,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="PermitOCRRequest"/></param>
         /// <returns><see cref="PermitOCRResponse"/></returns>
-        public async Task<PermitOCRResponse> PermitOCR(PermitOCRRequest req)
+        public Task<PermitOCRResponse> PermitOCR(PermitOCRRequest req)
         {
-             JsonResponseModel<PermitOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PermitOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PermitOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PermitOCRResponse>(req, "PermitOCR");
         }
 
         /// <summary>
@@ -629,17 +429,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="PermitOCRResponse"/></returns>
         public PermitOCRResponse PermitOCRSync(PermitOCRRequest req)
         {
-             JsonResponseModel<PermitOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PermitOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PermitOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<PermitOCRResponse>(req, "PermitOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -773,19 +564,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizeGeneralInvoiceRequest"/></param>
         /// <returns><see cref="RecognizeGeneralInvoiceResponse"/></returns>
-        public async Task<RecognizeGeneralInvoiceResponse> RecognizeGeneralInvoice(RecognizeGeneralInvoiceRequest req)
+        public Task<RecognizeGeneralInvoiceResponse> RecognizeGeneralInvoice(RecognizeGeneralInvoiceRequest req)
         {
-             JsonResponseModel<RecognizeGeneralInvoiceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeGeneralInvoice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeGeneralInvoiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeGeneralInvoiceResponse>(req, "RecognizeGeneralInvoice");
         }
 
         /// <summary>
@@ -921,17 +702,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizeGeneralInvoiceResponse"/></returns>
         public RecognizeGeneralInvoiceResponse RecognizeGeneralInvoiceSync(RecognizeGeneralInvoiceRequest req)
         {
-             JsonResponseModel<RecognizeGeneralInvoiceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeGeneralInvoice");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeGeneralInvoiceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeGeneralInvoiceResponse>(req, "RecognizeGeneralInvoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -941,19 +713,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>
-        public async Task<RecognizeIndonesiaIDCardOCRResponse> RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req)
+        public Task<RecognizeIndonesiaIDCardOCRResponse> RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req)
         {
-             JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeIndonesiaIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeIndonesiaIDCardOCRResponse>(req, "RecognizeIndonesiaIDCardOCR");
         }
 
         /// <summary>
@@ -965,17 +727,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>
         public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCRSync(RecognizeIndonesiaIDCardOCRRequest req)
         {
-             JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeIndonesiaIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeIndonesiaIDCardOCRResponse>(req, "RecognizeIndonesiaIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -983,19 +736,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizeKoreanDrivingLicenseOCRRequest"/></param>
         /// <returns><see cref="RecognizeKoreanDrivingLicenseOCRResponse"/></returns>
-        public async Task<RecognizeKoreanDrivingLicenseOCRResponse> RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req)
+        public Task<RecognizeKoreanDrivingLicenseOCRResponse> RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req)
         {
-             JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeKoreanDrivingLicenseOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeKoreanDrivingLicenseOCRResponse>(req, "RecognizeKoreanDrivingLicenseOCR");
         }
 
         /// <summary>
@@ -1005,17 +748,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizeKoreanDrivingLicenseOCRResponse"/></returns>
         public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCRSync(RecognizeKoreanDrivingLicenseOCRRequest req)
         {
-             JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeKoreanDrivingLicenseOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeKoreanDrivingLicenseOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeKoreanDrivingLicenseOCRResponse>(req, "RecognizeKoreanDrivingLicenseOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1023,19 +757,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizeKoreanIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeKoreanIDCardOCRResponse"/></returns>
-        public async Task<RecognizeKoreanIDCardOCRResponse> RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req)
+        public Task<RecognizeKoreanIDCardOCRResponse> RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req)
         {
-             JsonResponseModel<RecognizeKoreanIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeKoreanIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeKoreanIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeKoreanIDCardOCRResponse>(req, "RecognizeKoreanIDCardOCR");
         }
 
         /// <summary>
@@ -1045,17 +769,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizeKoreanIDCardOCRResponse"/></returns>
         public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCRSync(RecognizeKoreanIDCardOCRRequest req)
         {
-             JsonResponseModel<RecognizeKoreanIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeKoreanIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeKoreanIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeKoreanIDCardOCRResponse>(req, "RecognizeKoreanIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1063,19 +778,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesDrivingLicenseOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesDrivingLicenseOCRResponse"/></returns>
-        public async Task<RecognizePhilippinesDrivingLicenseOCRResponse> RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req)
+        public Task<RecognizePhilippinesDrivingLicenseOCRResponse> RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesDrivingLicenseOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesDrivingLicenseOCRResponse>(req, "RecognizePhilippinesDrivingLicenseOCR");
         }
 
         /// <summary>
@@ -1085,17 +790,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizePhilippinesDrivingLicenseOCRResponse"/></returns>
         public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCRSync(RecognizePhilippinesDrivingLicenseOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesDrivingLicenseOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesDrivingLicenseOCRResponse>(req, "RecognizePhilippinesDrivingLicenseOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1103,19 +799,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesSssIDOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesSssIDOCRResponse"/></returns>
-        public async Task<RecognizePhilippinesSssIDOCRResponse> RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req)
+        public Task<RecognizePhilippinesSssIDOCRResponse> RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesSssIDOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesSssIDOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesSssIDOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesSssIDOCRResponse>(req, "RecognizePhilippinesSssIDOCR");
         }
 
         /// <summary>
@@ -1125,17 +811,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizePhilippinesSssIDOCRResponse"/></returns>
         public RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCRSync(RecognizePhilippinesSssIDOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesSssIDOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesSssIDOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesSssIDOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesSssIDOCRResponse>(req, "RecognizePhilippinesSssIDOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1143,19 +820,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesTinIDOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesTinIDOCRResponse"/></returns>
-        public async Task<RecognizePhilippinesTinIDOCRResponse> RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req)
+        public Task<RecognizePhilippinesTinIDOCRResponse> RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesTinIDOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesTinIDOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesTinIDOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesTinIDOCRResponse>(req, "RecognizePhilippinesTinIDOCR");
         }
 
         /// <summary>
@@ -1165,17 +832,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizePhilippinesTinIDOCRResponse"/></returns>
         public RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCRSync(RecognizePhilippinesTinIDOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesTinIDOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesTinIDOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesTinIDOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesTinIDOCRResponse>(req, "RecognizePhilippinesTinIDOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1183,19 +841,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesUMIDOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesUMIDOCRResponse"/></returns>
-        public async Task<RecognizePhilippinesUMIDOCRResponse> RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req)
+        public Task<RecognizePhilippinesUMIDOCRResponse> RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesUMIDOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesUMIDOCRResponse>(req, "RecognizePhilippinesUMIDOCR");
         }
 
         /// <summary>
@@ -1205,17 +853,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizePhilippinesUMIDOCRResponse"/></returns>
         public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCRSync(RecognizePhilippinesUMIDOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesUMIDOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesUMIDOCRResponse>(req, "RecognizePhilippinesUMIDOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1225,19 +864,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizePhilippinesVoteIDOCRRequest"/></param>
         /// <returns><see cref="RecognizePhilippinesVoteIDOCRResponse"/></returns>
-        public async Task<RecognizePhilippinesVoteIDOCRResponse> RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req)
+        public Task<RecognizePhilippinesVoteIDOCRResponse> RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesVoteIDOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesVoteIDOCRResponse>(req, "RecognizePhilippinesVoteIDOCR");
         }
 
         /// <summary>
@@ -1249,17 +878,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizePhilippinesVoteIDOCRResponse"/></returns>
         public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCRSync(RecognizePhilippinesVoteIDOCRRequest req)
         {
-             JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesVoteIDOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizePhilippinesVoteIDOCRResponse>(req, "RecognizePhilippinesVoteIDOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1269,19 +889,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizeTableAccurateOCRRequest"/></param>
         /// <returns><see cref="RecognizeTableAccurateOCRResponse"/></returns>
-        public async Task<RecognizeTableAccurateOCRResponse> RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req)
+        public Task<RecognizeTableAccurateOCRResponse> RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req)
         {
-             JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeTableAccurateOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTableAccurateOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeTableAccurateOCRResponse>(req, "RecognizeTableAccurateOCR");
         }
 
         /// <summary>
@@ -1293,17 +903,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizeTableAccurateOCRResponse"/></returns>
         public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCRSync(RecognizeTableAccurateOCRRequest req)
         {
-             JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeTableAccurateOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTableAccurateOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeTableAccurateOCRResponse>(req, "RecognizeTableAccurateOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1314,19 +915,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="RecognizeThaiIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeThaiIDCardOCRResponse"/></returns>
-        public async Task<RecognizeThaiIDCardOCRResponse> RecognizeThaiIDCardOCR(RecognizeThaiIDCardOCRRequest req)
+        public Task<RecognizeThaiIDCardOCRResponse> RecognizeThaiIDCardOCR(RecognizeThaiIDCardOCRRequest req)
         {
-             JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeThaiIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeThaiIDCardOCRResponse>(req, "RecognizeThaiIDCardOCR");
         }
 
         /// <summary>
@@ -1339,17 +930,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="RecognizeThaiIDCardOCRResponse"/></returns>
         public RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCRSync(RecognizeThaiIDCardOCRRequest req)
         {
-             JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeThaiIDCardOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<RecognizeThaiIDCardOCRResponse>(req, "RecognizeThaiIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1359,19 +941,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="SealOCRRequest"/></param>
         /// <returns><see cref="SealOCRResponse"/></returns>
-        public async Task<SealOCRResponse> SealOCR(SealOCRRequest req)
+        public Task<SealOCRResponse> SealOCR(SealOCRRequest req)
         {
-             JsonResponseModel<SealOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SealOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SealOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SealOCRResponse>(req, "SealOCR");
         }
 
         /// <summary>
@@ -1383,17 +955,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="SealOCRResponse"/></returns>
         public SealOCRResponse SealOCRSync(SealOCRRequest req)
         {
-             JsonResponseModel<SealOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SealOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SealOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SealOCRResponse>(req, "SealOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1403,19 +966,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="SmartStructuralOCRV2Request"/></param>
         /// <returns><see cref="SmartStructuralOCRV2Response"/></returns>
-        public async Task<SmartStructuralOCRV2Response> SmartStructuralOCRV2(SmartStructuralOCRV2Request req)
+        public Task<SmartStructuralOCRV2Response> SmartStructuralOCRV2(SmartStructuralOCRV2Request req)
         {
-             JsonResponseModel<SmartStructuralOCRV2Response> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SmartStructuralOCRV2");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmartStructuralOCRV2Response>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SmartStructuralOCRV2Response>(req, "SmartStructuralOCRV2");
         }
 
         /// <summary>
@@ -1427,17 +980,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="SmartStructuralOCRV2Response"/></returns>
         public SmartStructuralOCRV2Response SmartStructuralOCRV2Sync(SmartStructuralOCRV2Request req)
         {
-             JsonResponseModel<SmartStructuralOCRV2Response> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SmartStructuralOCRV2");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmartStructuralOCRV2Response>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SmartStructuralOCRV2Response>(req, "SmartStructuralOCRV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1447,19 +991,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="TableOCRRequest"/></param>
         /// <returns><see cref="TableOCRResponse"/></returns>
-        public async Task<TableOCRResponse> TableOCR(TableOCRRequest req)
+        public Task<TableOCRResponse> TableOCR(TableOCRRequest req)
         {
-             JsonResponseModel<TableOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TableOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TableOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TableOCRResponse>(req, "TableOCR");
         }
 
         /// <summary>
@@ -1471,17 +1005,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="TableOCRResponse"/></returns>
         public TableOCRResponse TableOCRSync(TableOCRRequest req)
         {
-             JsonResponseModel<TableOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TableOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TableOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<TableOCRResponse>(req, "TableOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1489,19 +1014,9 @@ namespace TencentCloud.Ocr.V20181119
         /// </summary>
         /// <param name="req"><see cref="VinOCRRequest"/></param>
         /// <returns><see cref="VinOCRResponse"/></returns>
-        public async Task<VinOCRResponse> VinOCR(VinOCRRequest req)
+        public Task<VinOCRResponse> VinOCR(VinOCRRequest req)
         {
-             JsonResponseModel<VinOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VinOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VinOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VinOCRResponse>(req, "VinOCR");
         }
 
         /// <summary>
@@ -1511,17 +1026,8 @@ namespace TencentCloud.Ocr.V20181119
         /// <returns><see cref="VinOCRResponse"/></returns>
         public VinOCRResponse VinOCRSync(VinOCRRequest req)
         {
-             JsonResponseModel<VinOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VinOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VinOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VinOCRResponse>(req, "VinOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

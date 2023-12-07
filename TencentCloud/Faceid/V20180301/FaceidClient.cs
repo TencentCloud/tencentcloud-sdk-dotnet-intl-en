@@ -57,19 +57,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="ApplyLivenessTokenRequest"/></param>
         /// <returns><see cref="ApplyLivenessTokenResponse"/></returns>
-        public async Task<ApplyLivenessTokenResponse> ApplyLivenessToken(ApplyLivenessTokenRequest req)
+        public Task<ApplyLivenessTokenResponse> ApplyLivenessToken(ApplyLivenessTokenRequest req)
         {
-             JsonResponseModel<ApplyLivenessTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyLivenessToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyLivenessTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyLivenessTokenResponse>(req, "ApplyLivenessToken");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="ApplyLivenessTokenResponse"/></returns>
         public ApplyLivenessTokenResponse ApplyLivenessTokenSync(ApplyLivenessTokenRequest req)
         {
-             JsonResponseModel<ApplyLivenessTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyLivenessToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyLivenessTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyLivenessTokenResponse>(req, "ApplyLivenessToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="ApplySdkVerificationTokenRequest"/></param>
         /// <returns><see cref="ApplySdkVerificationTokenResponse"/></returns>
-        public async Task<ApplySdkVerificationTokenResponse> ApplySdkVerificationToken(ApplySdkVerificationTokenRequest req)
+        public Task<ApplySdkVerificationTokenResponse> ApplySdkVerificationToken(ApplySdkVerificationTokenRequest req)
         {
-             JsonResponseModel<ApplySdkVerificationTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplySdkVerificationToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplySdkVerificationTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplySdkVerificationTokenResponse>(req, "ApplySdkVerificationToken");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="ApplySdkVerificationTokenResponse"/></returns>
         public ApplySdkVerificationTokenResponse ApplySdkVerificationTokenSync(ApplySdkVerificationTokenRequest req)
         {
-             JsonResponseModel<ApplySdkVerificationTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplySdkVerificationToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplySdkVerificationTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplySdkVerificationTokenResponse>(req, "ApplySdkVerificationToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="ApplyWebVerificationBizTokenIntlRequest"/></param>
         /// <returns><see cref="ApplyWebVerificationBizTokenIntlResponse"/></returns>
-        public async Task<ApplyWebVerificationBizTokenIntlResponse> ApplyWebVerificationBizTokenIntl(ApplyWebVerificationBizTokenIntlRequest req)
+        public Task<ApplyWebVerificationBizTokenIntlResponse> ApplyWebVerificationBizTokenIntl(ApplyWebVerificationBizTokenIntlRequest req)
         {
-             JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyWebVerificationBizTokenIntl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyWebVerificationBizTokenIntlResponse>(req, "ApplyWebVerificationBizTokenIntl");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="ApplyWebVerificationBizTokenIntlResponse"/></returns>
         public ApplyWebVerificationBizTokenIntlResponse ApplyWebVerificationBizTokenIntlSync(ApplyWebVerificationBizTokenIntlRequest req)
         {
-             JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyWebVerificationBizTokenIntl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyWebVerificationBizTokenIntlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyWebVerificationBizTokenIntlResponse>(req, "ApplyWebVerificationBizTokenIntl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="ApplyWebVerificationTokenRequest"/></param>
         /// <returns><see cref="ApplyWebVerificationTokenResponse"/></returns>
-        public async Task<ApplyWebVerificationTokenResponse> ApplyWebVerificationToken(ApplyWebVerificationTokenRequest req)
+        public Task<ApplyWebVerificationTokenResponse> ApplyWebVerificationToken(ApplyWebVerificationTokenRequest req)
         {
-             JsonResponseModel<ApplyWebVerificationTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyWebVerificationToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyWebVerificationTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyWebVerificationTokenResponse>(req, "ApplyWebVerificationToken");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="ApplyWebVerificationTokenResponse"/></returns>
         public ApplyWebVerificationTokenResponse ApplyWebVerificationTokenSync(ApplyWebVerificationTokenRequest req)
         {
-             JsonResponseModel<ApplyWebVerificationTokenResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyWebVerificationToken");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyWebVerificationTokenResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyWebVerificationTokenResponse>(req, "ApplyWebVerificationToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="CompareFaceLivenessRequest"/></param>
         /// <returns><see cref="CompareFaceLivenessResponse"/></returns>
-        public async Task<CompareFaceLivenessResponse> CompareFaceLiveness(CompareFaceLivenessRequest req)
+        public Task<CompareFaceLivenessResponse> CompareFaceLiveness(CompareFaceLivenessRequest req)
         {
-             JsonResponseModel<CompareFaceLivenessResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CompareFaceLiveness");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompareFaceLivenessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CompareFaceLivenessResponse>(req, "CompareFaceLiveness");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="CompareFaceLivenessResponse"/></returns>
         public CompareFaceLivenessResponse CompareFaceLivenessSync(CompareFaceLivenessRequest req)
         {
-             JsonResponseModel<CompareFaceLivenessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CompareFaceLiveness");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompareFaceLivenessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CompareFaceLivenessResponse>(req, "CompareFaceLiveness")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -258,19 +163,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="CreateUploadUrlRequest"/></param>
         /// <returns><see cref="CreateUploadUrlResponse"/></returns>
-        public async Task<CreateUploadUrlResponse> CreateUploadUrl(CreateUploadUrlRequest req)
+        public Task<CreateUploadUrlResponse> CreateUploadUrl(CreateUploadUrlRequest req)
         {
-             JsonResponseModel<CreateUploadUrlResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateUploadUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUploadUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateUploadUrlResponse>(req, "CreateUploadUrl");
         }
 
         /// <summary>
@@ -281,17 +176,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="CreateUploadUrlResponse"/></returns>
         public CreateUploadUrlResponse CreateUploadUrlSync(CreateUploadUrlRequest req)
         {
-             JsonResponseModel<CreateUploadUrlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateUploadUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUploadUrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateUploadUrlResponse>(req, "CreateUploadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -300,19 +186,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="DetectReflectLivenessAndCompareRequest"/></param>
         /// <returns><see cref="DetectReflectLivenessAndCompareResponse"/></returns>
-        public async Task<DetectReflectLivenessAndCompareResponse> DetectReflectLivenessAndCompare(DetectReflectLivenessAndCompareRequest req)
+        public Task<DetectReflectLivenessAndCompareResponse> DetectReflectLivenessAndCompare(DetectReflectLivenessAndCompareRequest req)
         {
-             JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DetectReflectLivenessAndCompare");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DetectReflectLivenessAndCompareResponse>(req, "DetectReflectLivenessAndCompare");
         }
 
         /// <summary>
@@ -323,17 +199,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="DetectReflectLivenessAndCompareResponse"/></returns>
         public DetectReflectLivenessAndCompareResponse DetectReflectLivenessAndCompareSync(DetectReflectLivenessAndCompareRequest req)
         {
-             JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DetectReflectLivenessAndCompare");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DetectReflectLivenessAndCompareResponse>(req, "DetectReflectLivenessAndCompare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -342,19 +209,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="GenerateReflectSequenceRequest"/></param>
         /// <returns><see cref="GenerateReflectSequenceResponse"/></returns>
-        public async Task<GenerateReflectSequenceResponse> GenerateReflectSequence(GenerateReflectSequenceRequest req)
+        public Task<GenerateReflectSequenceResponse> GenerateReflectSequence(GenerateReflectSequenceRequest req)
         {
-             JsonResponseModel<GenerateReflectSequenceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GenerateReflectSequence");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateReflectSequenceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateReflectSequenceResponse>(req, "GenerateReflectSequence");
         }
 
         /// <summary>
@@ -365,17 +222,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="GenerateReflectSequenceResponse"/></returns>
         public GenerateReflectSequenceResponse GenerateReflectSequenceSync(GenerateReflectSequenceRequest req)
         {
-             JsonResponseModel<GenerateReflectSequenceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GenerateReflectSequence");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateReflectSequenceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GenerateReflectSequenceResponse>(req, "GenerateReflectSequence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -383,19 +231,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdResultIntlRequest"/></param>
         /// <returns><see cref="GetFaceIdResultIntlResponse"/></returns>
-        public async Task<GetFaceIdResultIntlResponse> GetFaceIdResultIntl(GetFaceIdResultIntlRequest req)
+        public Task<GetFaceIdResultIntlResponse> GetFaceIdResultIntl(GetFaceIdResultIntlRequest req)
         {
-             JsonResponseModel<GetFaceIdResultIntlResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetFaceIdResultIntl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFaceIdResultIntlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetFaceIdResultIntlResponse>(req, "GetFaceIdResultIntl");
         }
 
         /// <summary>
@@ -405,17 +243,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="GetFaceIdResultIntlResponse"/></returns>
         public GetFaceIdResultIntlResponse GetFaceIdResultIntlSync(GetFaceIdResultIntlRequest req)
         {
-             JsonResponseModel<GetFaceIdResultIntlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetFaceIdResultIntl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFaceIdResultIntlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetFaceIdResultIntlResponse>(req, "GetFaceIdResultIntl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -423,19 +252,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdTokenIntlRequest"/></param>
         /// <returns><see cref="GetFaceIdTokenIntlResponse"/></returns>
-        public async Task<GetFaceIdTokenIntlResponse> GetFaceIdTokenIntl(GetFaceIdTokenIntlRequest req)
+        public Task<GetFaceIdTokenIntlResponse> GetFaceIdTokenIntl(GetFaceIdTokenIntlRequest req)
         {
-             JsonResponseModel<GetFaceIdTokenIntlResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetFaceIdTokenIntl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFaceIdTokenIntlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetFaceIdTokenIntlResponse>(req, "GetFaceIdTokenIntl");
         }
 
         /// <summary>
@@ -445,17 +264,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="GetFaceIdTokenIntlResponse"/></returns>
         public GetFaceIdTokenIntlResponse GetFaceIdTokenIntlSync(GetFaceIdTokenIntlRequest req)
         {
-             JsonResponseModel<GetFaceIdTokenIntlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetFaceIdTokenIntl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFaceIdTokenIntlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetFaceIdTokenIntlResponse>(req, "GetFaceIdTokenIntl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -463,19 +273,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="GetLivenessResultRequest"/></param>
         /// <returns><see cref="GetLivenessResultResponse"/></returns>
-        public async Task<GetLivenessResultResponse> GetLivenessResult(GetLivenessResultRequest req)
+        public Task<GetLivenessResultResponse> GetLivenessResult(GetLivenessResultRequest req)
         {
-             JsonResponseModel<GetLivenessResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetLivenessResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLivenessResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetLivenessResultResponse>(req, "GetLivenessResult");
         }
 
         /// <summary>
@@ -485,17 +285,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="GetLivenessResultResponse"/></returns>
         public GetLivenessResultResponse GetLivenessResultSync(GetLivenessResultRequest req)
         {
-             JsonResponseModel<GetLivenessResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetLivenessResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLivenessResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetLivenessResultResponse>(req, "GetLivenessResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -503,19 +294,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="GetSdkVerificationResultRequest"/></param>
         /// <returns><see cref="GetSdkVerificationResultResponse"/></returns>
-        public async Task<GetSdkVerificationResultResponse> GetSdkVerificationResult(GetSdkVerificationResultRequest req)
+        public Task<GetSdkVerificationResultResponse> GetSdkVerificationResult(GetSdkVerificationResultRequest req)
         {
-             JsonResponseModel<GetSdkVerificationResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetSdkVerificationResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSdkVerificationResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetSdkVerificationResultResponse>(req, "GetSdkVerificationResult");
         }
 
         /// <summary>
@@ -525,17 +306,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="GetSdkVerificationResultResponse"/></returns>
         public GetSdkVerificationResultResponse GetSdkVerificationResultSync(GetSdkVerificationResultRequest req)
         {
-             JsonResponseModel<GetSdkVerificationResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetSdkVerificationResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSdkVerificationResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetSdkVerificationResultResponse>(req, "GetSdkVerificationResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -543,19 +315,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="GetWebVerificationResultRequest"/></param>
         /// <returns><see cref="GetWebVerificationResultResponse"/></returns>
-        public async Task<GetWebVerificationResultResponse> GetWebVerificationResult(GetWebVerificationResultRequest req)
+        public Task<GetWebVerificationResultResponse> GetWebVerificationResult(GetWebVerificationResultRequest req)
         {
-             JsonResponseModel<GetWebVerificationResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetWebVerificationResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetWebVerificationResultResponse>(req, "GetWebVerificationResult");
         }
 
         /// <summary>
@@ -565,17 +327,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="GetWebVerificationResultResponse"/></returns>
         public GetWebVerificationResultResponse GetWebVerificationResultSync(GetWebVerificationResultRequest req)
         {
-             JsonResponseModel<GetWebVerificationResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetWebVerificationResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetWebVerificationResultResponse>(req, "GetWebVerificationResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -583,19 +336,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="GetWebVerificationResultIntlRequest"/></param>
         /// <returns><see cref="GetWebVerificationResultIntlResponse"/></returns>
-        public async Task<GetWebVerificationResultIntlResponse> GetWebVerificationResultIntl(GetWebVerificationResultIntlRequest req)
+        public Task<GetWebVerificationResultIntlResponse> GetWebVerificationResultIntl(GetWebVerificationResultIntlRequest req)
         {
-             JsonResponseModel<GetWebVerificationResultIntlResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetWebVerificationResultIntl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultIntlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetWebVerificationResultIntlResponse>(req, "GetWebVerificationResultIntl");
         }
 
         /// <summary>
@@ -605,17 +348,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="GetWebVerificationResultIntlResponse"/></returns>
         public GetWebVerificationResultIntlResponse GetWebVerificationResultIntlSync(GetWebVerificationResultIntlRequest req)
         {
-             JsonResponseModel<GetWebVerificationResultIntlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetWebVerificationResultIntl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWebVerificationResultIntlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<GetWebVerificationResultIntlResponse>(req, "GetWebVerificationResultIntl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -624,19 +358,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="LivenessCompareRequest"/></param>
         /// <returns><see cref="LivenessCompareResponse"/></returns>
-        public async Task<LivenessCompareResponse> LivenessCompare(LivenessCompareRequest req)
+        public Task<LivenessCompareResponse> LivenessCompare(LivenessCompareRequest req)
         {
-             JsonResponseModel<LivenessCompareResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "LivenessCompare");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LivenessCompareResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<LivenessCompareResponse>(req, "LivenessCompare");
         }
 
         /// <summary>
@@ -647,17 +371,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="LivenessCompareResponse"/></returns>
         public LivenessCompareResponse LivenessCompareSync(LivenessCompareRequest req)
         {
-             JsonResponseModel<LivenessCompareResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "LivenessCompare");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LivenessCompareResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<LivenessCompareResponse>(req, "LivenessCompare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -665,19 +380,9 @@ namespace TencentCloud.Faceid.V20180301
         /// </summary>
         /// <param name="req"><see cref="VideoLivenessCompareRequest"/></param>
         /// <returns><see cref="VideoLivenessCompareResponse"/></returns>
-        public async Task<VideoLivenessCompareResponse> VideoLivenessCompare(VideoLivenessCompareRequest req)
+        public Task<VideoLivenessCompareResponse> VideoLivenessCompare(VideoLivenessCompareRequest req)
         {
-             JsonResponseModel<VideoLivenessCompareResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VideoLivenessCompare");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoLivenessCompareResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VideoLivenessCompareResponse>(req, "VideoLivenessCompare");
         }
 
         /// <summary>
@@ -687,17 +392,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <returns><see cref="VideoLivenessCompareResponse"/></returns>
         public VideoLivenessCompareResponse VideoLivenessCompareSync(VideoLivenessCompareRequest req)
         {
-             JsonResponseModel<VideoLivenessCompareResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VideoLivenessCompare");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoLivenessCompareResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<VideoLivenessCompareResponse>(req, "VideoLivenessCompare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

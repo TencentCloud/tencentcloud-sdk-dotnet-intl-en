@@ -57,19 +57,9 @@ namespace TencentCloud.Dms.V20200819
         /// </summary>
         /// <param name="req"><see cref="SendEmailRequest"/></param>
         /// <returns><see cref="SendEmailResponse"/></returns>
-        public async Task<SendEmailResponse> SendEmail(SendEmailRequest req)
+        public Task<SendEmailResponse> SendEmail(SendEmailRequest req)
         {
-             JsonResponseModel<SendEmailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendEmail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendEmailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendEmailResponse>(req, "SendEmail");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Dms.V20200819
         /// <returns><see cref="SendEmailResponse"/></returns>
         public SendEmailResponse SendEmailSync(SendEmailRequest req)
         {
-             JsonResponseModel<SendEmailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendEmail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendEmailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendEmailResponse>(req, "SendEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Dms.V20200819
         /// </summary>
         /// <param name="req"><see cref="SendTemplatedEmailRequest"/></param>
         /// <returns><see cref="SendTemplatedEmailResponse"/></returns>
-        public async Task<SendTemplatedEmailResponse> SendTemplatedEmail(SendTemplatedEmailRequest req)
+        public Task<SendTemplatedEmailResponse> SendTemplatedEmail(SendTemplatedEmailRequest req)
         {
-             JsonResponseModel<SendTemplatedEmailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendTemplatedEmail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTemplatedEmailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendTemplatedEmailResponse>(req, "SendTemplatedEmail");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Dms.V20200819
         /// <returns><see cref="SendTemplatedEmailResponse"/></returns>
         public SendTemplatedEmailResponse SendTemplatedEmailSync(SendTemplatedEmailRequest req)
         {
-             JsonResponseModel<SendTemplatedEmailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendTemplatedEmail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTemplatedEmailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SendTemplatedEmailResponse>(req, "SendTemplatedEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

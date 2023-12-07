@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9F9DFE1A-9228-3902-AA87-2367ECF8DBFC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.837</VersionPrefix>
+    <VersionPrefix>3.0.838</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,8 +56,6 @@
     <Compile Include="V20190919\Models\Concat.cs" />
     <Compile Include="V20190919\Models\CreateApplicationRequest.cs" />
     <Compile Include="V20190919\Models\CreateApplicationResponse.cs" />
-    <Compile Include="V20190919\Models\CreateOfflineRecordRequest.cs" />
-    <Compile Include="V20190919\Models\CreateOfflineRecordResponse.cs" />
     <Compile Include="V20190919\Models\CreateSnapshotTaskRequest.cs" />
     <Compile Include="V20190919\Models\CreateSnapshotTaskResponse.cs" />
     <Compile Include="V20190919\Models\CreateTranscodeRequest.cs" />
@@ -76,10 +74,6 @@
     <Compile Include="V20190919\Models\DescribeBoardSDKLogResponse.cs" />
     <Compile Include="V20190919\Models\DescribeIMApplicationsRequest.cs" />
     <Compile Include="V20190919\Models\DescribeIMApplicationsResponse.cs" />
-    <Compile Include="V20190919\Models\DescribeOfflineRecordCallbackRequest.cs" />
-    <Compile Include="V20190919\Models\DescribeOfflineRecordCallbackResponse.cs" />
-    <Compile Include="V20190919\Models\DescribeOfflineRecordRequest.cs" />
-    <Compile Include="V20190919\Models\DescribeOfflineRecordResponse.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordCallbackRequest.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordCallbackResponse.cs" />
     <Compile Include="V20190919\Models\DescribeOnlineRecordRequest.cs" />
@@ -148,8 +142,6 @@
     <Compile Include="V20190919\Models\ResumeOnlineRecordResponse.cs" />
     <Compile Include="V20190919\Models\RoomListItem.cs" />
     <Compile Include="V20190919\Models\RoomUsageDataItem.cs" />
-    <Compile Include="V20190919\Models\SetOfflineRecordCallbackRequest.cs" />
-    <Compile Include="V20190919\Models\SetOfflineRecordCallbackResponse.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackKeyRequest.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackKeyResponse.cs" />
     <Compile Include="V20190919\Models\SetOnlineRecordCallbackRequest.cs" />

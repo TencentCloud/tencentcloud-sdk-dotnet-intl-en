@@ -57,19 +57,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="ApplyCertificateRequest"/></param>
         /// <returns><see cref="ApplyCertificateResponse"/></returns>
-        public async Task<ApplyCertificateResponse> ApplyCertificate(ApplyCertificateRequest req)
+        public Task<ApplyCertificateResponse> ApplyCertificate(ApplyCertificateRequest req)
         {
-             JsonResponseModel<ApplyCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ApplyCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyCertificateResponse>(req, "ApplyCertificate");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="ApplyCertificateResponse"/></returns>
         public ApplyCertificateResponse ApplyCertificateSync(ApplyCertificateRequest req)
         {
-             JsonResponseModel<ApplyCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ApplyCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ApplyCertificateResponse>(req, "ApplyCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -97,19 +78,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="BatchDeleteCSRRequest"/></param>
         /// <returns><see cref="BatchDeleteCSRResponse"/></returns>
-        public async Task<BatchDeleteCSRResponse> BatchDeleteCSR(BatchDeleteCSRRequest req)
+        public Task<BatchDeleteCSRResponse> BatchDeleteCSR(BatchDeleteCSRRequest req)
         {
-             JsonResponseModel<BatchDeleteCSRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BatchDeleteCSR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteCSRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BatchDeleteCSRResponse>(req, "BatchDeleteCSR");
         }
 
         /// <summary>
@@ -119,17 +90,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="BatchDeleteCSRResponse"/></returns>
         public BatchDeleteCSRResponse BatchDeleteCSRSync(BatchDeleteCSRRequest req)
         {
-             JsonResponseModel<BatchDeleteCSRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BatchDeleteCSR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteCSRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<BatchDeleteCSRResponse>(req, "BatchDeleteCSR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -137,19 +99,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="CancelAuditCertificateRequest"/></param>
         /// <returns><see cref="CancelAuditCertificateResponse"/></returns>
-        public async Task<CancelAuditCertificateResponse> CancelAuditCertificate(CancelAuditCertificateRequest req)
+        public Task<CancelAuditCertificateResponse> CancelAuditCertificate(CancelAuditCertificateRequest req)
         {
-             JsonResponseModel<CancelAuditCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CancelAuditCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelAuditCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelAuditCertificateResponse>(req, "CancelAuditCertificate");
         }
 
         /// <summary>
@@ -159,17 +111,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="CancelAuditCertificateResponse"/></returns>
         public CancelAuditCertificateResponse CancelAuditCertificateSync(CancelAuditCertificateRequest req)
         {
-             JsonResponseModel<CancelAuditCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CancelAuditCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelAuditCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelAuditCertificateResponse>(req, "CancelAuditCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -177,19 +120,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="CancelCertificateOrderRequest"/></param>
         /// <returns><see cref="CancelCertificateOrderResponse"/></returns>
-        public async Task<CancelCertificateOrderResponse> CancelCertificateOrder(CancelCertificateOrderRequest req)
+        public Task<CancelCertificateOrderResponse> CancelCertificateOrder(CancelCertificateOrderRequest req)
         {
-             JsonResponseModel<CancelCertificateOrderResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CancelCertificateOrder");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelCertificateOrderResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelCertificateOrderResponse>(req, "CancelCertificateOrder");
         }
 
         /// <summary>
@@ -199,17 +132,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="CancelCertificateOrderResponse"/></returns>
         public CancelCertificateOrderResponse CancelCertificateOrderSync(CancelCertificateOrderRequest req)
         {
-             JsonResponseModel<CancelCertificateOrderResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CancelCertificateOrder");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelCertificateOrderResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CancelCertificateOrderResponse>(req, "CancelCertificateOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -217,19 +141,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="CommitCertificateInformationRequest"/></param>
         /// <returns><see cref="CommitCertificateInformationResponse"/></returns>
-        public async Task<CommitCertificateInformationResponse> CommitCertificateInformation(CommitCertificateInformationRequest req)
+        public Task<CommitCertificateInformationResponse> CommitCertificateInformation(CommitCertificateInformationRequest req)
         {
-             JsonResponseModel<CommitCertificateInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CommitCertificateInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CommitCertificateInformationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CommitCertificateInformationResponse>(req, "CommitCertificateInformation");
         }
 
         /// <summary>
@@ -239,17 +153,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="CommitCertificateInformationResponse"/></returns>
         public CommitCertificateInformationResponse CommitCertificateInformationSync(CommitCertificateInformationRequest req)
         {
-             JsonResponseModel<CommitCertificateInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CommitCertificateInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CommitCertificateInformationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CommitCertificateInformationResponse>(req, "CommitCertificateInformation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -257,19 +162,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="CreateCSRRequest"/></param>
         /// <returns><see cref="CreateCSRResponse"/></returns>
-        public async Task<CreateCSRResponse> CreateCSR(CreateCSRRequest req)
+        public Task<CreateCSRResponse> CreateCSR(CreateCSRRequest req)
         {
-             JsonResponseModel<CreateCSRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCSR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCSRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCSRResponse>(req, "CreateCSR");
         }
 
         /// <summary>
@@ -279,17 +174,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="CreateCSRResponse"/></returns>
         public CreateCSRResponse CreateCSRSync(CreateCSRRequest req)
         {
-             JsonResponseModel<CreateCSRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCSR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCSRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCSRResponse>(req, "CreateCSR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -297,19 +183,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="CreateCertificateRequest"/></param>
         /// <returns><see cref="CreateCertificateResponse"/></returns>
-        public async Task<CreateCertificateResponse> CreateCertificate(CreateCertificateRequest req)
+        public Task<CreateCertificateResponse> CreateCertificate(CreateCertificateRequest req)
         {
-             JsonResponseModel<CreateCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCertificateResponse>(req, "CreateCertificate");
         }
 
         /// <summary>
@@ -319,17 +195,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="CreateCertificateResponse"/></returns>
         public CreateCertificateResponse CreateCertificateSync(CreateCertificateRequest req)
         {
-             JsonResponseModel<CreateCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCertificateResponse>(req, "CreateCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -337,19 +204,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="CreateCertificateBindResourceSyncTaskRequest"/></param>
         /// <returns><see cref="CreateCertificateBindResourceSyncTaskResponse"/></returns>
-        public async Task<CreateCertificateBindResourceSyncTaskResponse> CreateCertificateBindResourceSyncTask(CreateCertificateBindResourceSyncTaskRequest req)
+        public Task<CreateCertificateBindResourceSyncTaskResponse> CreateCertificateBindResourceSyncTask(CreateCertificateBindResourceSyncTaskRequest req)
         {
-             JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCertificateBindResourceSyncTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCertificateBindResourceSyncTaskResponse>(req, "CreateCertificateBindResourceSyncTask");
         }
 
         /// <summary>
@@ -359,17 +216,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="CreateCertificateBindResourceSyncTaskResponse"/></returns>
         public CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTaskSync(CreateCertificateBindResourceSyncTaskRequest req)
         {
-             JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCertificateBindResourceSyncTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<CreateCertificateBindResourceSyncTaskResponse>(req, "CreateCertificateBindResourceSyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -377,19 +225,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DeleteCertificateRequest"/></param>
         /// <returns><see cref="DeleteCertificateResponse"/></returns>
-        public async Task<DeleteCertificateResponse> DeleteCertificate(DeleteCertificateRequest req)
+        public Task<DeleteCertificateResponse> DeleteCertificate(DeleteCertificateRequest req)
         {
-             JsonResponseModel<DeleteCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCertificateResponse>(req, "DeleteCertificate");
         }
 
         /// <summary>
@@ -399,17 +237,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DeleteCertificateResponse"/></returns>
         public DeleteCertificateResponse DeleteCertificateSync(DeleteCertificateRequest req)
         {
-             JsonResponseModel<DeleteCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DeleteCertificateResponse>(req, "DeleteCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -417,19 +246,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeCSRRequest"/></param>
         /// <returns><see cref="DescribeCSRResponse"/></returns>
-        public async Task<DescribeCSRResponse> DescribeCSR(DescribeCSRRequest req)
+        public Task<DescribeCSRResponse> DescribeCSR(DescribeCSRRequest req)
         {
-             JsonResponseModel<DescribeCSRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCSR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCSRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCSRResponse>(req, "DescribeCSR");
         }
 
         /// <summary>
@@ -439,17 +258,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeCSRResponse"/></returns>
         public DescribeCSRResponse DescribeCSRSync(DescribeCSRRequest req)
         {
-             JsonResponseModel<DescribeCSRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCSR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCSRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCSRResponse>(req, "DescribeCSR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -457,19 +267,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeCSRSetRequest"/></param>
         /// <returns><see cref="DescribeCSRSetResponse"/></returns>
-        public async Task<DescribeCSRSetResponse> DescribeCSRSet(DescribeCSRSetRequest req)
+        public Task<DescribeCSRSetResponse> DescribeCSRSet(DescribeCSRSetRequest req)
         {
-             JsonResponseModel<DescribeCSRSetResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCSRSet");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCSRSetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCSRSetResponse>(req, "DescribeCSRSet");
         }
 
         /// <summary>
@@ -479,17 +279,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeCSRSetResponse"/></returns>
         public DescribeCSRSetResponse DescribeCSRSetSync(DescribeCSRSetRequest req)
         {
-             JsonResponseModel<DescribeCSRSetResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCSRSet");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCSRSetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCSRSetResponse>(req, "DescribeCSRSet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -497,19 +288,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateRequest"/></param>
         /// <returns><see cref="DescribeCertificateResponse"/></returns>
-        public async Task<DescribeCertificateResponse> DescribeCertificate(DescribeCertificateRequest req)
+        public Task<DescribeCertificateResponse> DescribeCertificate(DescribeCertificateRequest req)
         {
-             JsonResponseModel<DescribeCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateResponse>(req, "DescribeCertificate");
         }
 
         /// <summary>
@@ -519,17 +300,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeCertificateResponse"/></returns>
         public DescribeCertificateResponse DescribeCertificateSync(DescribeCertificateRequest req)
         {
-             JsonResponseModel<DescribeCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateResponse>(req, "DescribeCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -537,19 +309,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateBindResourceTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeCertificateBindResourceTaskDetailResponse"/></returns>
-        public async Task<DescribeCertificateBindResourceTaskDetailResponse> DescribeCertificateBindResourceTaskDetail(DescribeCertificateBindResourceTaskDetailRequest req)
+        public Task<DescribeCertificateBindResourceTaskDetailResponse> DescribeCertificateBindResourceTaskDetail(DescribeCertificateBindResourceTaskDetailRequest req)
         {
-             JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCertificateBindResourceTaskDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateBindResourceTaskDetailResponse>(req, "DescribeCertificateBindResourceTaskDetail");
         }
 
         /// <summary>
@@ -559,17 +321,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeCertificateBindResourceTaskDetailResponse"/></returns>
         public DescribeCertificateBindResourceTaskDetailResponse DescribeCertificateBindResourceTaskDetailSync(DescribeCertificateBindResourceTaskDetailRequest req)
         {
-             JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCertificateBindResourceTaskDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateBindResourceTaskDetailResponse>(req, "DescribeCertificateBindResourceTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -577,19 +330,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateBindResourceTaskResultRequest"/></param>
         /// <returns><see cref="DescribeCertificateBindResourceTaskResultResponse"/></returns>
-        public async Task<DescribeCertificateBindResourceTaskResultResponse> DescribeCertificateBindResourceTaskResult(DescribeCertificateBindResourceTaskResultRequest req)
+        public Task<DescribeCertificateBindResourceTaskResultResponse> DescribeCertificateBindResourceTaskResult(DescribeCertificateBindResourceTaskResultRequest req)
         {
-             JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCertificateBindResourceTaskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateBindResourceTaskResultResponse>(req, "DescribeCertificateBindResourceTaskResult");
         }
 
         /// <summary>
@@ -599,17 +342,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeCertificateBindResourceTaskResultResponse"/></returns>
         public DescribeCertificateBindResourceTaskResultResponse DescribeCertificateBindResourceTaskResultSync(DescribeCertificateBindResourceTaskResultRequest req)
         {
-             JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCertificateBindResourceTaskResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateBindResourceTaskResultResponse>(req, "DescribeCertificateBindResourceTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -617,19 +351,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateDetailRequest"/></param>
         /// <returns><see cref="DescribeCertificateDetailResponse"/></returns>
-        public async Task<DescribeCertificateDetailResponse> DescribeCertificateDetail(DescribeCertificateDetailRequest req)
+        public Task<DescribeCertificateDetailResponse> DescribeCertificateDetail(DescribeCertificateDetailRequest req)
         {
-             JsonResponseModel<DescribeCertificateDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCertificateDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateDetailResponse>(req, "DescribeCertificateDetail");
         }
 
         /// <summary>
@@ -639,17 +363,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeCertificateDetailResponse"/></returns>
         public DescribeCertificateDetailResponse DescribeCertificateDetailSync(DescribeCertificateDetailRequest req)
         {
-             JsonResponseModel<DescribeCertificateDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCertificateDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateDetailResponse>(req, "DescribeCertificateDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -657,19 +372,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateOperateLogsRequest"/></param>
         /// <returns><see cref="DescribeCertificateOperateLogsResponse"/></returns>
-        public async Task<DescribeCertificateOperateLogsResponse> DescribeCertificateOperateLogs(DescribeCertificateOperateLogsRequest req)
+        public Task<DescribeCertificateOperateLogsResponse> DescribeCertificateOperateLogs(DescribeCertificateOperateLogsRequest req)
         {
-             JsonResponseModel<DescribeCertificateOperateLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCertificateOperateLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateOperateLogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateOperateLogsResponse>(req, "DescribeCertificateOperateLogs");
         }
 
         /// <summary>
@@ -679,17 +384,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeCertificateOperateLogsResponse"/></returns>
         public DescribeCertificateOperateLogsResponse DescribeCertificateOperateLogsSync(DescribeCertificateOperateLogsRequest req)
         {
-             JsonResponseModel<DescribeCertificateOperateLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCertificateOperateLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificateOperateLogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificateOperateLogsResponse>(req, "DescribeCertificateOperateLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -697,19 +393,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificatesRequest"/></param>
         /// <returns><see cref="DescribeCertificatesResponse"/></returns>
-        public async Task<DescribeCertificatesResponse> DescribeCertificates(DescribeCertificatesRequest req)
+        public Task<DescribeCertificatesResponse> DescribeCertificates(DescribeCertificatesRequest req)
         {
-             JsonResponseModel<DescribeCertificatesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCertificates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificatesResponse>(req, "DescribeCertificates");
         }
 
         /// <summary>
@@ -719,17 +405,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeCertificatesResponse"/></returns>
         public DescribeCertificatesResponse DescribeCertificatesSync(DescribeCertificatesRequest req)
         {
-             JsonResponseModel<DescribeCertificatesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCertificates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeCertificatesResponse>(req, "DescribeCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -737,19 +414,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeHostTeoInstanceListRequest"/></param>
         /// <returns><see cref="DescribeHostTeoInstanceListResponse"/></returns>
-        public async Task<DescribeHostTeoInstanceListResponse> DescribeHostTeoInstanceList(DescribeHostTeoInstanceListRequest req)
+        public Task<DescribeHostTeoInstanceListResponse> DescribeHostTeoInstanceList(DescribeHostTeoInstanceListRequest req)
         {
-             JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeHostTeoInstanceList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostTeoInstanceListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeHostTeoInstanceListResponse>(req, "DescribeHostTeoInstanceList");
         }
 
         /// <summary>
@@ -759,17 +426,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeHostTeoInstanceListResponse"/></returns>
         public DescribeHostTeoInstanceListResponse DescribeHostTeoInstanceListSync(DescribeHostTeoInstanceListRequest req)
         {
-             JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeHostTeoInstanceList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostTeoInstanceListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeHostTeoInstanceListResponse>(req, "DescribeHostTeoInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -777,19 +435,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeHostUpdateRecordRequest"/></param>
         /// <returns><see cref="DescribeHostUpdateRecordResponse"/></returns>
-        public async Task<DescribeHostUpdateRecordResponse> DescribeHostUpdateRecord(DescribeHostUpdateRecordRequest req)
+        public Task<DescribeHostUpdateRecordResponse> DescribeHostUpdateRecord(DescribeHostUpdateRecordRequest req)
         {
-             JsonResponseModel<DescribeHostUpdateRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeHostUpdateRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeHostUpdateRecordResponse>(req, "DescribeHostUpdateRecord");
         }
 
         /// <summary>
@@ -799,17 +447,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeHostUpdateRecordResponse"/></returns>
         public DescribeHostUpdateRecordResponse DescribeHostUpdateRecordSync(DescribeHostUpdateRecordRequest req)
         {
-             JsonResponseModel<DescribeHostUpdateRecordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeHostUpdateRecord");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeHostUpdateRecordResponse>(req, "DescribeHostUpdateRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -817,19 +456,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DescribeHostUpdateRecordDetailRequest"/></param>
         /// <returns><see cref="DescribeHostUpdateRecordDetailResponse"/></returns>
-        public async Task<DescribeHostUpdateRecordDetailResponse> DescribeHostUpdateRecordDetail(DescribeHostUpdateRecordDetailRequest req)
+        public Task<DescribeHostUpdateRecordDetailResponse> DescribeHostUpdateRecordDetail(DescribeHostUpdateRecordDetailRequest req)
         {
-             JsonResponseModel<DescribeHostUpdateRecordDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeHostUpdateRecordDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeHostUpdateRecordDetailResponse>(req, "DescribeHostUpdateRecordDetail");
         }
 
         /// <summary>
@@ -839,17 +468,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DescribeHostUpdateRecordDetailResponse"/></returns>
         public DescribeHostUpdateRecordDetailResponse DescribeHostUpdateRecordDetailSync(DescribeHostUpdateRecordDetailRequest req)
         {
-             JsonResponseModel<DescribeHostUpdateRecordDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeHostUpdateRecordDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostUpdateRecordDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DescribeHostUpdateRecordDetailResponse>(req, "DescribeHostUpdateRecordDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -857,19 +477,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="DownloadCertificateRequest"/></param>
         /// <returns><see cref="DownloadCertificateResponse"/></returns>
-        public async Task<DownloadCertificateResponse> DownloadCertificate(DownloadCertificateRequest req)
+        public Task<DownloadCertificateResponse> DownloadCertificate(DownloadCertificateRequest req)
         {
-             JsonResponseModel<DownloadCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DownloadCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DownloadCertificateResponse>(req, "DownloadCertificate");
         }
 
         /// <summary>
@@ -879,17 +489,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="DownloadCertificateResponse"/></returns>
         public DownloadCertificateResponse DownloadCertificateSync(DownloadCertificateRequest req)
         {
-             JsonResponseModel<DownloadCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DownloadCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<DownloadCertificateResponse>(req, "DownloadCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -897,19 +498,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="ModifyCSRRequest"/></param>
         /// <returns><see cref="ModifyCSRResponse"/></returns>
-        public async Task<ModifyCSRResponse> ModifyCSR(ModifyCSRRequest req)
+        public Task<ModifyCSRResponse> ModifyCSR(ModifyCSRRequest req)
         {
-             JsonResponseModel<ModifyCSRResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCSR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCSRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCSRResponse>(req, "ModifyCSR");
         }
 
         /// <summary>
@@ -919,17 +510,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="ModifyCSRResponse"/></returns>
         public ModifyCSRResponse ModifyCSRSync(ModifyCSRRequest req)
         {
-             JsonResponseModel<ModifyCSRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCSR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCSRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCSRResponse>(req, "ModifyCSR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -937,19 +519,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateAliasRequest"/></param>
         /// <returns><see cref="ModifyCertificateAliasResponse"/></returns>
-        public async Task<ModifyCertificateAliasResponse> ModifyCertificateAlias(ModifyCertificateAliasRequest req)
+        public Task<ModifyCertificateAliasResponse> ModifyCertificateAlias(ModifyCertificateAliasRequest req)
         {
-             JsonResponseModel<ModifyCertificateAliasResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCertificateAlias");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateAliasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCertificateAliasResponse>(req, "ModifyCertificateAlias");
         }
 
         /// <summary>
@@ -959,17 +531,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="ModifyCertificateAliasResponse"/></returns>
         public ModifyCertificateAliasResponse ModifyCertificateAliasSync(ModifyCertificateAliasRequest req)
         {
-             JsonResponseModel<ModifyCertificateAliasResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCertificateAlias");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateAliasResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCertificateAliasResponse>(req, "ModifyCertificateAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -977,19 +540,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateProjectRequest"/></param>
         /// <returns><see cref="ModifyCertificateProjectResponse"/></returns>
-        public async Task<ModifyCertificateProjectResponse> ModifyCertificateProject(ModifyCertificateProjectRequest req)
+        public Task<ModifyCertificateProjectResponse> ModifyCertificateProject(ModifyCertificateProjectRequest req)
         {
-             JsonResponseModel<ModifyCertificateProjectResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCertificateProject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateProjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCertificateProjectResponse>(req, "ModifyCertificateProject");
         }
 
         /// <summary>
@@ -999,17 +552,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="ModifyCertificateProjectResponse"/></returns>
         public ModifyCertificateProjectResponse ModifyCertificateProjectSync(ModifyCertificateProjectRequest req)
         {
-             JsonResponseModel<ModifyCertificateProjectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCertificateProject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateProjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCertificateProjectResponse>(req, "ModifyCertificateProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1017,19 +561,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateResubmitRequest"/></param>
         /// <returns><see cref="ModifyCertificateResubmitResponse"/></returns>
-        public async Task<ModifyCertificateResubmitResponse> ModifyCertificateResubmit(ModifyCertificateResubmitRequest req)
+        public Task<ModifyCertificateResubmitResponse> ModifyCertificateResubmit(ModifyCertificateResubmitRequest req)
         {
-             JsonResponseModel<ModifyCertificateResubmitResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCertificateResubmit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateResubmitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCertificateResubmitResponse>(req, "ModifyCertificateResubmit");
         }
 
         /// <summary>
@@ -1039,17 +573,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="ModifyCertificateResubmitResponse"/></returns>
         public ModifyCertificateResubmitResponse ModifyCertificateResubmitSync(ModifyCertificateResubmitRequest req)
         {
-             JsonResponseModel<ModifyCertificateResubmitResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCertificateResubmit");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCertificateResubmitResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ModifyCertificateResubmitResponse>(req, "ModifyCertificateResubmit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1057,19 +582,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="ReplaceCertificateRequest"/></param>
         /// <returns><see cref="ReplaceCertificateResponse"/></returns>
-        public async Task<ReplaceCertificateResponse> ReplaceCertificate(ReplaceCertificateRequest req)
+        public Task<ReplaceCertificateResponse> ReplaceCertificate(ReplaceCertificateRequest req)
         {
-             JsonResponseModel<ReplaceCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ReplaceCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReplaceCertificateResponse>(req, "ReplaceCertificate");
         }
 
         /// <summary>
@@ -1079,17 +594,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="ReplaceCertificateResponse"/></returns>
         public ReplaceCertificateResponse ReplaceCertificateSync(ReplaceCertificateRequest req)
         {
-             JsonResponseModel<ReplaceCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ReplaceCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ReplaceCertificateResponse>(req, "ReplaceCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1097,19 +603,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
         /// <returns><see cref="SubmitCertificateInformationResponse"/></returns>
-        public async Task<SubmitCertificateInformationResponse> SubmitCertificateInformation(SubmitCertificateInformationRequest req)
+        public Task<SubmitCertificateInformationResponse> SubmitCertificateInformation(SubmitCertificateInformationRequest req)
         {
-             JsonResponseModel<SubmitCertificateInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SubmitCertificateInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCertificateInformationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitCertificateInformationResponse>(req, "SubmitCertificateInformation");
         }
 
         /// <summary>
@@ -1119,17 +615,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="SubmitCertificateInformationResponse"/></returns>
         public SubmitCertificateInformationResponse SubmitCertificateInformationSync(SubmitCertificateInformationRequest req)
         {
-             JsonResponseModel<SubmitCertificateInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SubmitCertificateInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCertificateInformationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<SubmitCertificateInformationResponse>(req, "SubmitCertificateInformation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1137,19 +624,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="UpdateCertificateInstanceRequest"/></param>
         /// <returns><see cref="UpdateCertificateInstanceResponse"/></returns>
-        public async Task<UpdateCertificateInstanceResponse> UpdateCertificateInstance(UpdateCertificateInstanceRequest req)
+        public Task<UpdateCertificateInstanceResponse> UpdateCertificateInstance(UpdateCertificateInstanceRequest req)
         {
-             JsonResponseModel<UpdateCertificateInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateCertificateInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCertificateInstanceResponse>(req, "UpdateCertificateInstance");
         }
 
         /// <summary>
@@ -1159,17 +636,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="UpdateCertificateInstanceResponse"/></returns>
         public UpdateCertificateInstanceResponse UpdateCertificateInstanceSync(UpdateCertificateInstanceRequest req)
         {
-             JsonResponseModel<UpdateCertificateInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateCertificateInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCertificateInstanceResponse>(req, "UpdateCertificateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1177,19 +645,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="UpdateCertificateRecordRetryRequest"/></param>
         /// <returns><see cref="UpdateCertificateRecordRetryResponse"/></returns>
-        public async Task<UpdateCertificateRecordRetryResponse> UpdateCertificateRecordRetry(UpdateCertificateRecordRetryRequest req)
+        public Task<UpdateCertificateRecordRetryResponse> UpdateCertificateRecordRetry(UpdateCertificateRecordRetryRequest req)
         {
-             JsonResponseModel<UpdateCertificateRecordRetryResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateCertificateRecordRetry");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRetryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCertificateRecordRetryResponse>(req, "UpdateCertificateRecordRetry");
         }
 
         /// <summary>
@@ -1199,17 +657,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="UpdateCertificateRecordRetryResponse"/></returns>
         public UpdateCertificateRecordRetryResponse UpdateCertificateRecordRetrySync(UpdateCertificateRecordRetryRequest req)
         {
-             JsonResponseModel<UpdateCertificateRecordRetryResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateCertificateRecordRetry");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRetryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCertificateRecordRetryResponse>(req, "UpdateCertificateRecordRetry")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1217,19 +666,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="UpdateCertificateRecordRollbackRequest"/></param>
         /// <returns><see cref="UpdateCertificateRecordRollbackResponse"/></returns>
-        public async Task<UpdateCertificateRecordRollbackResponse> UpdateCertificateRecordRollback(UpdateCertificateRecordRollbackRequest req)
+        public Task<UpdateCertificateRecordRollbackResponse> UpdateCertificateRecordRollback(UpdateCertificateRecordRollbackRequest req)
         {
-             JsonResponseModel<UpdateCertificateRecordRollbackResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UpdateCertificateRecordRollback");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRollbackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCertificateRecordRollbackResponse>(req, "UpdateCertificateRecordRollback");
         }
 
         /// <summary>
@@ -1239,17 +678,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="UpdateCertificateRecordRollbackResponse"/></returns>
         public UpdateCertificateRecordRollbackResponse UpdateCertificateRecordRollbackSync(UpdateCertificateRecordRollbackRequest req)
         {
-             JsonResponseModel<UpdateCertificateRecordRollbackResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateCertificateRecordRollback");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCertificateRecordRollbackResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UpdateCertificateRecordRollbackResponse>(req, "UpdateCertificateRecordRollback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1257,19 +687,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="UploadCertificateRequest"/></param>
         /// <returns><see cref="UploadCertificateResponse"/></returns>
-        public async Task<UploadCertificateResponse> UploadCertificate(UploadCertificateRequest req)
+        public Task<UploadCertificateResponse> UploadCertificate(UploadCertificateRequest req)
         {
-             JsonResponseModel<UploadCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UploadCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UploadCertificateResponse>(req, "UploadCertificate");
         }
 
         /// <summary>
@@ -1279,17 +699,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="UploadCertificateResponse"/></returns>
         public UploadCertificateResponse UploadCertificateSync(UploadCertificateRequest req)
         {
-             JsonResponseModel<UploadCertificateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UploadCertificate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadCertificateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UploadCertificateResponse>(req, "UploadCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -1297,19 +708,9 @@ namespace TencentCloud.Ssl.V20191205
         /// </summary>
         /// <param name="req"><see cref="UploadConfirmLetterRequest"/></param>
         /// <returns><see cref="UploadConfirmLetterResponse"/></returns>
-        public async Task<UploadConfirmLetterResponse> UploadConfirmLetter(UploadConfirmLetterRequest req)
+        public Task<UploadConfirmLetterResponse> UploadConfirmLetter(UploadConfirmLetterRequest req)
         {
-             JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "UploadConfirmLetter");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadConfirmLetterResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UploadConfirmLetterResponse>(req, "UploadConfirmLetter");
         }
 
         /// <summary>
@@ -1319,17 +720,8 @@ namespace TencentCloud.Ssl.V20191205
         /// <returns><see cref="UploadConfirmLetterResponse"/></returns>
         public UploadConfirmLetterResponse UploadConfirmLetterSync(UploadConfirmLetterRequest req)
         {
-             JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UploadConfirmLetter");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadConfirmLetterResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<UploadConfirmLetterResponse>(req, "UploadConfirmLetter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }

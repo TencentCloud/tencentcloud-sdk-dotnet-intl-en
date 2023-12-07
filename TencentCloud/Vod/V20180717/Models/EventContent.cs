@@ -31,27 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EventHandle{ get; set; }
 
         /// <summary>
-        /// <b>Supported event types:</b>
-        /// <li>`NewFileUpload`: Video uploaded.</li>
-        /// <li>`ProcedureStateChanged`: Task flow status changed.</li>
-        /// <li>`FileDeleted`: Video deleted.</li>
-        /// <li>`RestoreMediaComplete`: Video retrieved.</li>
-        /// <li>`PullComplete`: Finished video pulling.</li>
-        /// <li>`EditMediaComplete`: Finished video editing.</li>
-        /// <li>`SplitMediaComplete`: Finished video splitting.</li>
-        /// <li>`ComposeMediaComplete`: Finished producing the media file.</li>
-        /// <li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li>
-        /// <li>`RemoveWatermark`: Watermark removed.</li>
-        /// <li>`RebuildMediaComplete`: Finished audio/video remastering.</li>
-        /// <li>`ReviewAudioVideoComplete`: Finished moderation.</li>
-        /// <li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
-        /// <li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
-        /// <b>v2017 task types:</b>
-        /// <li>`TranscodeComplete`: Finished video transcoding.</li>
-        /// <li>`ConcatComplete`: Finished video splicing.</li>
-        /// <li>`ClipComplete`: Finished video clipping.</li>
-        /// <li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
-        /// <li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
+        /// <b>Supported event types:</b><li>`NewFileUpload`: Video uploaded.</li><li>`ProcedureStateChanged`: Task flow status changed.</li><li>`FileDeleted`: Video deleted.</li><li>`RestoreMediaComplete`: Video retrieved.</li><li>`PullComplete`: Finished video pulling.</li><li>`EditMediaComplete`: Finished video editing.</li><li>`SplitMediaComplete`: Finished video splitting.</li><li>`ComposeMediaComplete`: Finished producing the media file.</li><li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li><li>`RemoveWatermark`: Watermark removed.</li><li>`RebuildMediaComplete`: Finished audio/video remastering.</li><li>`ReviewAudioVideoComplete`: Finished moderation.</li><li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li><li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li><li>`QualityEnhanceComplete`: FinishedQualityEnhance.</li><b>v2017 task types:</b><li>`TranscodeComplete`: Finished video transcoding.</li><li>`ConcatComplete`: Finished video splicing.</li><li>`ClipComplete`: Finished video clipping.</li><li>`CreateImageSpriteComplete`: Finished image sprite generation.</li><li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -217,6 +197,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("QualityInspectCompleteEvent")]
         public QualityInspectTask QualityInspectCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// Remaster completion event, valid when the event type is QualityEnhanceComplete.
+        /// Pay attention to: this field may return null, indicating that no valid value can be obtained
+        /// </summary>
+        [JsonProperty("QualityEnhanceCompleteEvent")]
+        public QualityEnhanceTask QualityEnhanceCompleteEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +235,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);
             this.SetParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);
             this.SetParamObj(map, prefix + "QualityInspectCompleteEvent.", this.QualityInspectCompleteEvent);
+            this.SetParamObj(map, prefix + "QualityEnhanceCompleteEvent.", this.QualityEnhanceCompleteEvent);
         }
     }
 }

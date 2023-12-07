@@ -57,19 +57,9 @@ namespace TencentCloud.Ciam.V20210420
         /// </summary>
         /// <param name="req"><see cref="ListUserGroupsRequest"/></param>
         /// <returns><see cref="ListUserGroupsResponse"/></returns>
-        public async Task<ListUserGroupsResponse> ListUserGroups(ListUserGroupsRequest req)
+        public Task<ListUserGroupsResponse> ListUserGroups(ListUserGroupsRequest req)
         {
-             JsonResponseModel<ListUserGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ListUserGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListUserGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListUserGroupsResponse>(req, "ListUserGroups");
         }
 
         /// <summary>
@@ -79,17 +69,8 @@ namespace TencentCloud.Ciam.V20210420
         /// <returns><see cref="ListUserGroupsResponse"/></returns>
         public ListUserGroupsResponse ListUserGroupsSync(ListUserGroupsRequest req)
         {
-             JsonResponseModel<ListUserGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ListUserGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListUserGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return InternalRequestAsync<ListUserGroupsResponse>(req, "ListUserGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
     }
