@@ -28,6 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
+       private const string sdkVersion = "0.0.0";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tke.V20180525
         public TkeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

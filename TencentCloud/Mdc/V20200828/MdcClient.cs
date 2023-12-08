@@ -28,6 +28,7 @@ namespace TencentCloud.Mdc.V20200828
 
        private const string endpoint = "mdc.tencentcloudapi.com";
        private const string version = "2020-08-28";
+       private const string sdkVersion = "0.0.0";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Mdc.V20200828
         public MdcClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>

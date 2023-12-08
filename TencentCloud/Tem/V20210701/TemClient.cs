@@ -28,6 +28,7 @@ namespace TencentCloud.Tem.V20210701
 
        private const string endpoint = "tem.tencentcloudapi.com";
        private const string version = "2021-07-01";
+       private const string sdkVersion = "0.0.0";
 
         /// <summary>
         /// Client constructor.
@@ -49,7 +50,7 @@ namespace TencentCloud.Tem.V20210701
         public TemClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
