@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <AssemblyName>TencentCloudSDKIntlEN.Common</AssemblyName>
     <RootNamespace>TencentCloud</RootNamespace>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0C5CE89-418D-399D-AED0-9B87D308C5C7}</ProjectGuid>

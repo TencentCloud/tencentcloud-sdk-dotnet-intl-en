@@ -28,7 +28,7 @@ namespace TencentCloud.Eiam.V20210420
 
        private const string endpoint = "eiam.tencentcloudapi.com";
        private const string version = "2021-04-20";
-       private const string sdkVersion = "3.0.840";
+       private const string sdkVersion = "3.0.841";
 
         /// <summary>
         /// Client constructor.
