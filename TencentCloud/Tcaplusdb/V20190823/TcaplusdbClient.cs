@@ -28,7 +28,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
 
        private const string endpoint = "tcaplusdb.tencentcloudapi.com";
        private const string version = "2019-08-23";
-       private const string sdkVersion = "3.0.841";
+       private const string sdkVersion = "3.0.842";
 
         /// <summary>
         /// Client constructor.

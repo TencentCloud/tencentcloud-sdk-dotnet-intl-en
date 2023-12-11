@@ -28,7 +28,7 @@ namespace TencentCloud.Cmq.V20190304
 
        private const string endpoint = "cmq.tencentcloudapi.com";
        private const string version = "2019-03-04";
-       private const string sdkVersion = "3.0.841";
+       private const string sdkVersion = "3.0.842";
 
         /// <summary>
         /// Client constructor.

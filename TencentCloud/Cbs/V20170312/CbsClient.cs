@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "3.0.841";
+       private const string sdkVersion = "3.0.842";
 
         /// <summary>
         /// Client constructor.

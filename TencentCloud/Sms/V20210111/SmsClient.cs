@@ -28,7 +28,7 @@ namespace TencentCloud.Sms.V20210111
 
        private const string endpoint = "sms.tencentcloudapi.com";
        private const string version = "2021-01-11";
-       private const string sdkVersion = "3.0.841";
+       private const string sdkVersion = "3.0.842";
 
         /// <summary>
         /// Client constructor.
