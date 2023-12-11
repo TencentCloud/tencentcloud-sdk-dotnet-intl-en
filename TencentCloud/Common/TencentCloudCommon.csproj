@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="TencentCloudSDK.Common" Version="3.0.913" />
   </ItemGroup>
 
 </Project>

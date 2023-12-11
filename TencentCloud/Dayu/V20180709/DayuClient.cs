@@ -28,7 +28,7 @@ namespace TencentCloud.Dayu.V20180709
 
        private const string endpoint = "dayu.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "0.0.0";
+       private const string sdkVersion = "3.0.840";
 
         /// <summary>
         /// Client constructor.
