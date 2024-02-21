@@ -69,7 +69,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// Queries the top n rows of data. Maximum value: 1000. Top 10 rows of data will be queried if this field is not specified.
+        /// Queries the top N data entries. Maximum value: 1000. Top 10 data entries will be queried if this field is not specified.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

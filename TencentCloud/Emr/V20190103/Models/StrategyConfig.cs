@@ -33,7 +33,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? RollingRestartSwitch{ get; set; }
 
         /// <summary>
-        /// The number of nodes to be restarted per batch in rolling restart, with a maximum value of 99,999.
+        /// The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BatchSize")]

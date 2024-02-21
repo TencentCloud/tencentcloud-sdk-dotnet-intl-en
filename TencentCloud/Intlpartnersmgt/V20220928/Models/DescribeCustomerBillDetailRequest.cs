@@ -37,13 +37,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string Month{ get; set; }
 
         /// <summary>
-        /// Page parameter: Indicates the number of entries per page. The maximum value is 200.
+        /// Page parameter: Indicates the number of entries per page. Value range: [1, 200]
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// A pagination parameter that specifies the current page number
+        /// Page parameter: Indicates the current page number. The minimum value is 1.
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of sites to be queried. All sites will be selected if this field is not specified.
+        /// Set of site IDs to be queried. This is a required parameter.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

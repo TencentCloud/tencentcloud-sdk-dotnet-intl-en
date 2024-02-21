@@ -28,7 +28,6 @@ namespace TencentCloud.Car.V20220110
 
        private const string endpoint = "car.tencentcloudapi.com";
        private const string version = "2022-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.843";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Car.V20220110
         public CarClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -96,7 +95,28 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to terminate a session.
+        /// Obtain the concurrency count.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentCountRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentCountResponse"/></returns>
+        public Task<DescribeConcurrentCountResponse> DescribeConcurrentCount(DescribeConcurrentCountRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrentCountResponse>(req, "DescribeConcurrentCount");
+        }
+
+        /// <summary>
+        /// Obtain the concurrency count.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentCountRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentCountResponse"/></returns>
+        public DescribeConcurrentCountResponse DescribeConcurrentCountSync(DescribeConcurrentCountRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrentCountResponse>(req, "DescribeConcurrentCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Terminate the session. If stream push has been initiated in this session, then the stream push will end upon session termination.
         /// </summary>
         /// <param name="req"><see cref="DestroySessionRequest"/></param>
         /// <returns><see cref="DestroySessionResponse"/></returns>
@@ -106,7 +126,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to terminate a session.
+        /// Terminate the session. If stream push has been initiated in this session, then the stream push will end upon session termination.
         /// </summary>
         /// <param name="req"><see cref="DestroySessionRequest"/></param>
         /// <returns><see cref="DestroySessionResponse"/></returns>
@@ -117,7 +137,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to start stream push.
+        /// Initiate stream push. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9.
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamRequest"/></param>
         /// <returns><see cref="StartPublishStreamResponse"/></returns>
@@ -127,7 +147,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to start stream push.
+        /// Initiate stream push. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9.
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamRequest"/></param>
         /// <returns><see cref="StartPublishStreamResponse"/></returns>
@@ -138,7 +158,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to start stream push to the specified URL. It is billed separately. For billing details, see the [Push to third-party address](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6) section.
+        /// Initiate stream push to the specified URL. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9. This stream push method will be charged separately. For details about the charging method, see [Charging for Stream Push to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
         /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
@@ -148,7 +168,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to start stream push to the specified URL. It is billed separately. For billing details, see the [Push to third-party address](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6) section.
+        /// Initiate stream push to the specified URL. The codec for the stream push is automatically adjusted based on the client's (SDK) capabilities, with a default order of H265, H264, VP8, and VP9. This stream push method will be charged separately. For details about the charging method, see [Charging for Stream Push to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
         /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>

@@ -43,7 +43,7 @@ namespace TencentCloud.Car.V20220110.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// The application version ID.
+        /// Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
         /// </summary>
         [JsonProperty("ApplicationVersionId")]
         public string ApplicationVersionId{ get; set; }

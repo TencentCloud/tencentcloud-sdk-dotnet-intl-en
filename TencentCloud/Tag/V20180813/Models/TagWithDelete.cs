@@ -42,6 +42,12 @@ namespace TencentCloud.Tag.V20180813.Models
         [JsonProperty("CanDelete")]
         public ulong? CanDelete{ get; set; }
 
+        /// <summary>
+        /// Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.Note: This field may return null, indicating that no value is obtained.
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tag.V20180813.Models
             this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
             this.SetParamSimple(map, prefix + "CanDelete", this.CanDelete);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

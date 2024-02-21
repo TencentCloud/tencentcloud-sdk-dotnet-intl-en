@@ -32,13 +32,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Start time of the query.
+        /// Start time of the query. Either time or job-id is required.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the query.
+        /// End time of the query. Either time or job-id is required.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

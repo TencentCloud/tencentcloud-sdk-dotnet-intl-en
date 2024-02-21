@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Start time of the query period.
+        /// Start time. Time range: 30 days.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the query period.
+        /// End time. Time range: 30 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// (Required) List of sites. No query results are returned if this field is not specified.
+        /// ZoneId set. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Whether to display the details.
+        /// Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
         /// </summary>
         [JsonProperty("ShowDetail")]
         public bool? ShowDetail{ get; set; }

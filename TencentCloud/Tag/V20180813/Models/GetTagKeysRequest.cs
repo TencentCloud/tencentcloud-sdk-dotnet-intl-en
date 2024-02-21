@@ -38,6 +38,12 @@ namespace TencentCloud.Tag.V20180813.Models
         [JsonProperty("MaxResults")]
         public ulong? MaxResults{ get; set; }
 
+        /// <summary>
+        /// Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Tag.V20180813.Models
         {
             this.SetParamSimple(map, prefix + "PaginationToken", this.PaginationToken);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

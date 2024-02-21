@@ -41,7 +41,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Time{ get; set; }
 
         /// <summary>
-        /// The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+        /// The event ID. Events are classified into SDK events and WebRTC events. For more information, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
         /// </summary>
         [JsonProperty("EventId")]
         public ulong? EventId{ get; set; }

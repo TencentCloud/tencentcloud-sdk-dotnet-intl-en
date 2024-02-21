@@ -25,10 +25,38 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Whether to automatically redirect to RedirectUrl after successful verification. Default value: false.
+        /// When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
+        /// Example value: false
         /// </summary>
         [JsonProperty("AutoSkip")]
         public bool? AutoSkip{ get; set; }
+
+        /// <summary>
+        /// Detection mode, parameter values are as follows:
+        /// 1: OCR+living detection & face comparison;
+        /// 2: Living detection & face comparison;
+        /// 3: Living detection;
+        /// The default value is 2.
+        /// Example value: 3
+        /// </summary>
+        [JsonProperty("CheckMode")]
+        public long? CheckMode{ get; set; }
+
+        /// <summary>
+        /// The type of lisence used for verification. The following types are supported.
+        /// 1.HKIDCard: Hong Kong (China) ID card
+        /// 2.MLIDCard: Malaysia ID card
+        /// 3.IndonesiaIDCard: Indonesia ID card
+        /// 4.PhilippinesVoteID: Philippines VoteID card
+        /// 5.PhilippinesDrivingLicense: Philippines driving license
+        /// 6.PhilippinesTinID: Philippines TinID card
+        /// 7.PhilippinesSSSID: Philippines SSSID card
+        /// 8.PhilippinesUMID: Philippines UMID card
+        /// 9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+        /// Example: HKIDCard
+        /// </summary>
+        [JsonProperty("IDCardType")]
+        public string IDCardType{ get; set; }
 
 
         /// <summary>
@@ -37,6 +65,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AutoSkip", this.AutoSkip);
+            this.SetParamSimple(map, prefix + "CheckMode", this.CheckMode);
+            this.SetParamSimple(map, prefix + "IDCardType", this.IDCardType);
         }
     }
 }

@@ -28,7 +28,6 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.843";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Trtc.V20190722
         public TrtcClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -326,6 +325,130 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeStreamIngestResponse DescribeStreamIngestSync(DescribeStreamIngestRequest req)
         {
             return InternalRequestAsync<DescribeStreamIngestResponse>(req, "DescribeStreamIngest")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query TRTC Monitoring Dashboard - Data Dashboard Quality Metrics (including the following metrics)
+        /// joinSuccessRate: Join channel success rate.
+        /// joinSuccessIn5sRate: Join channel success rate within 5s.
+        /// audioFreezeRate: Audio stutter rate.
+        /// videoFreezeRate: Video stutter rate.
+        /// networkDelay: Lag rate.
+        /// Note:
+        /// 1. To call the API, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. Monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+        /// 2. The query time range depends on the monitoring dashboard function version, premium edition can query the last 30 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCMarketQualityDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCMarketQualityDataResponse"/></returns>
+        public Task<DescribeTRTCMarketQualityDataResponse> DescribeTRTCMarketQualityData(DescribeTRTCMarketQualityDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCMarketQualityDataResponse>(req, "DescribeTRTCMarketQualityData");
+        }
+
+        /// <summary>
+        /// Query TRTC Monitoring Dashboard - Data Dashboard Quality Metrics (including the following metrics)
+        /// joinSuccessRate: Join channel success rate.
+        /// joinSuccessIn5sRate: Join channel success rate within 5s.
+        /// audioFreezeRate: Audio stutter rate.
+        /// videoFreezeRate: Video stutter rate.
+        /// networkDelay: Lag rate.
+        /// Note:
+        /// 1. To call the API, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. Monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+        /// 2. The query time range depends on the monitoring dashboard function version, premium edition can query the last 30 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCMarketQualityDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCMarketQualityDataResponse"/></returns>
+        public DescribeTRTCMarketQualityDataResponse DescribeTRTCMarketQualityDataSync(DescribeTRTCMarketQualityDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCMarketQualityDataResponse>(req, "DescribeTRTCMarketQualityData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query TRTC Monitoring Dashboard - Data Dashboard Scale Metrics (will return userCount, roomCount, peakCurrentUsers, peakCurrentChannels)
+        /// - userCount: number of users in the call,
+        /// - roomCount: number of rooms in the call, counted as one call channel from the time a user joins the channel to the time all users leave the channel.
+        /// - peakCurrentChannels: peak number of channels online at the same time.
+        /// - peakCurrentUsers: peak number of users online at the same time.
+        /// Note:
+        /// 1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling, for monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+        /// 2. The query time range depends on the monitoring dashboard function version, premium edition can query up to 60 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCMarketScaleDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCMarketScaleDataResponse"/></returns>
+        public Task<DescribeTRTCMarketScaleDataResponse> DescribeTRTCMarketScaleData(DescribeTRTCMarketScaleDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCMarketScaleDataResponse>(req, "DescribeTRTCMarketScaleData");
+        }
+
+        /// <summary>
+        /// Query TRTC Monitoring Dashboard - Data Dashboard Scale Metrics (will return userCount, roomCount, peakCurrentUsers, peakCurrentChannels)
+        /// - userCount: number of users in the call,
+        /// - roomCount: number of rooms in the call, counted as one call channel from the time a user joins the channel to the time all users leave the channel.
+        /// - peakCurrentChannels: peak number of channels online at the same time.
+        /// - peakCurrentUsers: peak number of users online at the same time.
+        /// Note:
+        /// 1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling, for monitoring dashboard version features and billing overview: https://trtc.io/document/54481.
+        /// 2. The query time range depends on the monitoring dashboard function version, premium edition can query up to 60 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCMarketScaleDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCMarketScaleDataResponse"/></returns>
+        public DescribeTRTCMarketScaleDataResponse DescribeTRTCMarketScaleDataSync(DescribeTRTCMarketScaleDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCMarketScaleDataResponse>(req, "DescribeTRTCMarketScaleData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query TRTC Monitoring Dashboard - Real-Time Monitoring Quality Metrics (return the following metrics)
+        ///  -Video stutter rate
+        ///  -Audio stutter rate
+        ///  Note:
+        ///  1. To call the API, you need to activate the Monitoring Dashboard Standard Edition and Premium Edition. The Monitoring Dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481.
+        ///  2. The query time range depends on the monitoring dashboard function version. The premium edition can query up to 1 hours
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCRealTimeQualityDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCRealTimeQualityDataResponse"/></returns>
+        public Task<DescribeTRTCRealTimeQualityDataResponse> DescribeTRTCRealTimeQualityData(DescribeTRTCRealTimeQualityDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCRealTimeQualityDataResponse>(req, "DescribeTRTCRealTimeQualityData");
+        }
+
+        /// <summary>
+        /// Query TRTC Monitoring Dashboard - Real-Time Monitoring Quality Metrics (return the following metrics)
+        ///  -Video stutter rate
+        ///  -Audio stutter rate
+        ///  Note:
+        ///  1. To call the API, you need to activate the Monitoring Dashboard Standard Edition and Premium Edition. The Monitoring Dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481.
+        ///  2. The query time range depends on the monitoring dashboard function version. The premium edition can query up to 1 hours
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCRealTimeQualityDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCRealTimeQualityDataResponse"/></returns>
+        public DescribeTRTCRealTimeQualityDataResponse DescribeTRTCRealTimeQualityDataSync(DescribeTRTCRealTimeQualityDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCRealTimeQualityDataResponse>(req, "DescribeTRTCRealTimeQualityData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query TRTC Monitoring Dashboard - Real-Time Monitoring Scale Metrics (the following metrics will be returned) -userCount (Online users) -roomCount (Online rooms) Note: 1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481. 2. The query time range depends on the function version of the monitoring dashboard. The premium edition can query the last 1 hours
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCRealTimeScaleDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCRealTimeScaleDataResponse"/></returns>
+        public Task<DescribeTRTCRealTimeScaleDataResponse> DescribeTRTCRealTimeScaleData(DescribeTRTCRealTimeScaleDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCRealTimeScaleDataResponse>(req, "DescribeTRTCRealTimeScaleData");
+        }
+
+        /// <summary>
+        /// Query TRTC Monitoring Dashboard - Real-Time Monitoring Scale Metrics (the following metrics will be returned) -userCount (Online users) -roomCount (Online rooms) Note: 1. To call the interface, you need to activate the monitoring dashboard Standard Edition and Premium Edition, the monitoring dashboard Free Edition does not support calling. For monitoring dashboard version features and billing overview, please visit: https://trtc.io/document/54481. 2. The query time range depends on the function version of the monitoring dashboard. The premium edition can query the last 1 hours
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTRTCRealTimeScaleDataRequest"/></param>
+        /// <returns><see cref="DescribeTRTCRealTimeScaleDataResponse"/></returns>
+        public DescribeTRTCRealTimeScaleDataResponse DescribeTRTCRealTimeScaleDataSync(DescribeTRTCRealTimeScaleDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTRTCRealTimeScaleDataResponse>(req, "DescribeTRTCRealTimeScaleData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

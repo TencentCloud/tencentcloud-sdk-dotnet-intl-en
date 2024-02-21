@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// List of customer UINs
+        /// List of customer UIN. Array length value: 1-20.
         /// </summary>
         [JsonProperty("CustomerUin")]
         public long?[] CustomerUin{ get; set; }

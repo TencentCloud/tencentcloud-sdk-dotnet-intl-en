@@ -51,7 +51,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public DestinationInfo[] Destinations{ get; set; }
 
         /// <summary>
-        /// HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+        /// HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
         /// Note: this field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("HlsRemuxSettings")]

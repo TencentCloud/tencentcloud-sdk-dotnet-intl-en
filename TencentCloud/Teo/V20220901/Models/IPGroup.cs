@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// IP group information, including IP and IP mask.
+        /// IP group content. Only supports IP and IP mask.
         /// </summary>
         [JsonProperty("Content")]
         public string[] Content{ get; set; }

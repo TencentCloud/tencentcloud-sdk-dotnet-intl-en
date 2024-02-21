@@ -28,7 +28,6 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.843";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Vod.V20180717
         public VodClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -3514,7 +3513,7 @@ namespace TencentCloud.Vod.V20180717
         /// <summary>
         /// * This API is used to get event notifications from the business server through [reliable callback](https://intl.cloud.tencent.com/document/product/266/33948).
         /// * The API gets event data through long polling. That is, if there is any unconsumed event on the server, the event notification will be returned to the requester immediately. If there is no unconsumed event on the server, the request will be suspended in the backend until a new event is generated.
-        /// * The request can be suspended for up to 5 seconds. It’s recommended to set the request timeout period to 10 seconds.
+        /// * The request can be suspended for up to 5 seconds. It's recommended to set the request timeout period to 10 seconds.
         /// * Event notifications not pulled will be retained for up to 4 days and may be cleared after this period.
         /// * After the API returns an event, the caller must call the [ConfirmEvents](https://intl.cloud.tencent.com/document/product/266/34184) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed. Otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
         /// * This API can get up to 16 event notifications at a time.
@@ -3529,7 +3528,7 @@ namespace TencentCloud.Vod.V20180717
         /// <summary>
         /// * This API is used to get event notifications from the business server through [reliable callback](https://intl.cloud.tencent.com/document/product/266/33948).
         /// * The API gets event data through long polling. That is, if there is any unconsumed event on the server, the event notification will be returned to the requester immediately. If there is no unconsumed event on the server, the request will be suspended in the backend until a new event is generated.
-        /// * The request can be suspended for up to 5 seconds. It’s recommended to set the request timeout period to 10 seconds.
+        /// * The request can be suspended for up to 5 seconds. It's recommended to set the request timeout period to 10 seconds.
         /// * Event notifications not pulled will be retained for up to 4 days and may be cleared after this period.
         /// * After the API returns an event, the caller must call the [ConfirmEvents](https://intl.cloud.tencent.com/document/product/266/34184) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed. Otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
         /// * This API can get up to 16 event notifications at a time.
@@ -3932,7 +3931,7 @@ namespace TencentCloud.Vod.V20180717
         /// ### Clipping for temporary sharing
         /// The video clip (an M3U8 file) shares the same TS segments with the input video instead of being an independent video. It only has a playback URL but has no `FileId`, and its validity period is the same as that of the input video. Once the input video is deleted, the video clip cannot be played back.
         /// 
-        /// Because the video clip is not an independent video, it’s not displayed as a media asset in the VOD console, and cannot be transcoded or published to WeChat.
+        /// Because the video clip is not an independent video, it's not displayed as a media asset in the VOD console, and cannot be transcoded or published to WeChat.
         /// 
         /// Clipping for temporary sharing is lightweight and incurs no additional storage fees. However, the video clip has the same lifecycle as the source recording video and cannot be transcoded or processed in other ways.
         /// </summary>
@@ -3964,7 +3963,7 @@ namespace TencentCloud.Vod.V20180717
         /// ### Clipping for temporary sharing
         /// The video clip (an M3U8 file) shares the same TS segments with the input video instead of being an independent video. It only has a playback URL but has no `FileId`, and its validity period is the same as that of the input video. Once the input video is deleted, the video clip cannot be played back.
         /// 
-        /// Because the video clip is not an independent video, it’s not displayed as a media asset in the VOD console, and cannot be transcoded or published to WeChat.
+        /// Because the video clip is not an independent video, it's not displayed as a media asset in the VOD console, and cannot be transcoded or published to WeChat.
         /// 
         /// Clipping for temporary sharing is lightweight and incurs no additional storage fees. However, the video clip has the same lifecycle as the source recording video and cannot be transcoded or processed in other ways.
         /// </summary>

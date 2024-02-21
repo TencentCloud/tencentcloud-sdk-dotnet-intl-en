@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+        /// Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }

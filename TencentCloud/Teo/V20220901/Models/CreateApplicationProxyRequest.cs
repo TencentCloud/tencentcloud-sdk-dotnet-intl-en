@@ -62,9 +62,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? AccelerateType{ get; set; }
 
         /// <summary>
-        /// The proxy type. Values:
-        /// <li>`hostname`: The proxy is created by subdomain name.</li>
-        /// <li>`instance`: The proxy is created by instance.</li>If not specified, this field uses the default value `instance`.
+        /// Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }

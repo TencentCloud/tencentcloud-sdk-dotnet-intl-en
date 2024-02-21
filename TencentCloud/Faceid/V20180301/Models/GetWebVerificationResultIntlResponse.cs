@@ -61,6 +61,19 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string BestFrameBase64{ get; set; }
 
         /// <summary>
+        /// Card recognize result.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OCRResult")]
+        public OCRResult[] OCRResult{ get; set; }
+
+        /// <summary>
+        /// The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
+        /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
         /// </summary>
         [JsonProperty("RequestId")]
@@ -77,6 +90,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamArrayObj(map, prefix + "VerificationDetailList.", this.VerificationDetailList);
             this.SetParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
             this.SetParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);
+            this.SetParamArrayObj(map, prefix + "OCRResult.", this.OCRResult);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

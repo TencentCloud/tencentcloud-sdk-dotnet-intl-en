@@ -43,13 +43,13 @@ namespace TencentCloud.Tag.V20180813.Models
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// Unique resource ID
+        /// List of unique resource IDs, which can contain no more than 20 IDs.
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// Resource tag key
+        /// List of resource tag keys, which can contain no more than 20 keys.
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }

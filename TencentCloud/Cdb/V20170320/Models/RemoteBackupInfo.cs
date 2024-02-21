@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// ID of the remote backup subtask
         /// </summary>
         [JsonProperty("SubBackupId")]
-        public long?[] SubBackupId{ get; set; }
+        public long? SubBackupId{ get; set; }
 
         /// <summary>
         /// The region where the remote backup resides
@@ -66,7 +66,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "SubBackupId.", this.SubBackupId);
+            this.SetParamSimple(map, prefix + "SubBackupId", this.SubBackupId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);

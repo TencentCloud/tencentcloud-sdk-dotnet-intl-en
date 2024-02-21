@@ -61,6 +61,12 @@ namespace TencentCloud.Tag.V20180813.Models
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
+        /// <summary>
+        /// Tag type. Valid values: Custom: custom tag; System: system tag.Note: This field may return null, indicating that no value is obtained.
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Tag.V20180813.Models
             this.SetParamSimple(map, prefix + "TagKeyMd5", this.TagKeyMd5);
             this.SetParamSimple(map, prefix + "TagValueMd5", this.TagValueMd5);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

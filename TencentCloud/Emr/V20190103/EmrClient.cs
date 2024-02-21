@@ -28,7 +28,6 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.843";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Emr.V20190103
         public EmrClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -119,6 +118,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// This API is used to inquiry detailed records of cluster autoscaling.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleRecordsRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleRecordsResponse"/></returns>
+        public Task<DescribeAutoScaleRecordsResponse> DescribeAutoScaleRecords(DescribeAutoScaleRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScaleRecordsResponse>(req, "DescribeAutoScaleRecords");
+        }
+
+        /// <summary>
+        /// This API is used to inquiry detailed records of cluster autoscaling.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScaleRecordsRequest"/></param>
+        /// <returns><see cref="DescribeAutoScaleRecordsResponse"/></returns>
+        public DescribeAutoScaleRecordsResponse DescribeAutoScaleRecordsSync(DescribeAutoScaleRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoScaleRecordsResponse>(req, "DescribeAutoScaleRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the information of nodes in a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
@@ -157,6 +177,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStaticsSync(DescribeEmrApplicationStaticsRequest req)
         {
             return InternalRequestAsync<DescribeEmrApplicationStaticsResponse>(req, "DescribeEmrApplicationStatics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to inquiry Hive query data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHiveQueriesRequest"/></param>
+        /// <returns><see cref="DescribeHiveQueriesResponse"/></returns>
+        public Task<DescribeHiveQueriesResponse> DescribeHiveQueries(DescribeHiveQueriesRequest req)
+        {
+            return InternalRequestAsync<DescribeHiveQueriesResponse>(req, "DescribeHiveQueries");
+        }
+
+        /// <summary>
+        /// This API is used to inquiry Hive query data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHiveQueriesRequest"/></param>
+        /// <returns><see cref="DescribeHiveQueriesResponse"/></returns>
+        public DescribeHiveQueriesResponse DescribeHiveQueriesSync(DescribeHiveQueriesRequest req)
+        {
+            return InternalRequestAsync<DescribeHiveQueriesResponse>(req, "DescribeHiveQueries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -373,6 +414,48 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// This API is used to forcibly modify tags.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcesTagsRequest"/></param>
+        /// <returns><see cref="ModifyResourcesTagsResponse"/></returns>
+        public Task<ModifyResourcesTagsResponse> ModifyResourcesTags(ModifyResourcesTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyResourcesTagsResponse>(req, "ModifyResourcesTags");
+        }
+
+        /// <summary>
+        /// This API is used to forcibly modify tags.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcesTagsRequest"/></param>
+        /// <returns><see cref="ModifyResourcesTagsResponse"/></returns>
+        public ModifyResourcesTagsResponse ModifyResourcesTagsSync(ModifyResourcesTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyResourcesTagsResponse>(req, "ModifyResourcesTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to change user password (user management).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
+        /// <returns><see cref="ModifyUserManagerPwdResponse"/></returns>
+        public Task<ModifyUserManagerPwdResponse> ModifyUserManagerPwd(ModifyUserManagerPwdRequest req)
+        {
+            return InternalRequestAsync<ModifyUserManagerPwdResponse>(req, "ModifyUserManagerPwd");
+        }
+
+        /// <summary>
+        /// This API is used to change user password (user management).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
+        /// <returns><see cref="ModifyUserManagerPwdResponse"/></returns>
+        public ModifyUserManagerPwdResponse ModifyUserManagerPwdSync(ModifyUserManagerPwdRequest req)
+        {
+            return InternalRequestAsync<ModifyUserManagerPwdResponse>(req, "ModifyUserManagerPwd")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to scale out a cluster.
         /// </summary>
         /// <param name="req"><see cref="ScaleOutClusterRequest"/></param>
@@ -415,7 +498,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to start or stop the monitor or services.
+        /// This API is used to start, stop, or restart services.
         /// </summary>
         /// <param name="req"><see cref="StartStopServiceOrMonitorRequest"/></param>
         /// <returns><see cref="StartStopServiceOrMonitorResponse"/></returns>
@@ -425,7 +508,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to start or stop the monitor or services.
+        /// This API is used to start, stop, or restart services.
         /// </summary>
         /// <param name="req"><see cref="StartStopServiceOrMonitorRequest"/></param>
         /// <returns><see cref="StartStopServiceOrMonitorResponse"/></returns>

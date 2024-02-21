@@ -25,9 +25,8 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
-        /// For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
-        /// Value range of N: 0–9
+        /// Cloud resource to be bound, represented in the standard six-segment resource format. For the correct format, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1).
+        /// Value range of N: 0-9.
         /// </summary>
         [JsonProperty("ResourceList")]
         public string[] ResourceList{ get; set; }
@@ -37,7 +36,7 @@ namespace TencentCloud.Tag.V20180813.Models
         /// If multiple tags are specified, all such tags will be created and bound to the specified resources.
         /// For each resource, each tag key can have only one value. If you try to add an existing tag key, the corresponding tag value will be updated to the new value.
         /// Non-existent tags will be automatically created.
-        /// Value range of N: 0–9
+        /// Value range of N: 0-9
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

@@ -28,7 +28,6 @@ namespace TencentCloud.Tag.V20180813
 
        private const string endpoint = "tag.tencentcloudapi.com";
        private const string version = "2018-08-13";
-       private const string sdkVersion = "SDK_NET_3.0.843";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Tag.V20180813
         public TagClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -348,7 +347,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// This API is used to query tag keys in an existing tag list.
+        /// This API is used to query tag keys in the list of created tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeTagKeysRequest"/></param>
         /// <returns><see cref="DescribeTagKeysResponse"/></returns>
@@ -358,7 +357,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// This API is used to query tag keys in an existing tag list.
+        /// This API is used to query tag keys in the list of created tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeTagKeysRequest"/></param>
         /// <returns><see cref="DescribeTagKeysResponse"/></returns>
@@ -411,7 +410,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// This API is used to query existing tag lists.
+        /// This API is used to query the list of created tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeTagsRequest"/></param>
         /// <returns><see cref="DescribeTagsResponse"/></returns>
@@ -421,7 +420,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// This API is used to query existing tag lists.
+        /// This API is used to query the list of created tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeTagsRequest"/></param>
         /// <returns><see cref="DescribeTagsResponse"/></returns>

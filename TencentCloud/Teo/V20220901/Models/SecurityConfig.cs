@@ -25,57 +25,54 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The settings of the managed rule. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Managed rule. If the parameter is null or not filled, the configuration last set will be used by default.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("WafConfig")]
         public WafConfig WafConfig{ get; set; }
 
         /// <summary>
-        /// The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rate limiting. If the parameter is null or not filled, the configuration last set will be used by default.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RateLimitConfig")]
         public RateLimitConfig RateLimitConfig{ get; set; }
 
         /// <summary>
-        /// The settings of the custom rule. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Custom rule. If the parameter is null or not filled, the configuration last set will be used by default.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AclConfig")]
         public AclConfig AclConfig{ get; set; }
 
         /// <summary>
-        /// The settings of the bot configuration. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bot configuration. If the parameter is null or not filled, the configuration last set will be used by default.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("BotConfig")]
         public BotConfig BotConfig{ get; set; }
 
         /// <summary>
-        /// The switch setting of the layer-7 protection. If it is null, the setting that was last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Switch setting of the 7-layer protection. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SwitchConfig")]
         public SwitchConfig SwitchConfig{ get; set; }
 
         /// <summary>
-        /// The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Basic access control. If the parameter is null or not filled, the configuration last set will be used by default.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IpTableConfig")]
         public IpTableConfig IpTableConfig{ get; set; }
 
         /// <summary>
-        /// The settings of the exception rule. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Exception rule configuration. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ExceptConfig")]
         public ExceptConfig ExceptConfig{ get; set; }
 
         /// <summary>
-        /// The settings of the custom block page. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Custom block page settings. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DropPageConfig")]
         public DropPageConfig DropPageConfig{ get; set; }
@@ -88,8 +85,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public TemplateConfig TemplateConfig{ get; set; }
 
         /// <summary>
-        /// Slow attack defense configuration. If it is `null`, the previous setting is used.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Settings for slow attack defense. If the parameter is null or not filled, the configuration last set will be used by default.Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SlowPostConfig")]
         public SlowPostConfig SlowPostConfig{ get; set; }

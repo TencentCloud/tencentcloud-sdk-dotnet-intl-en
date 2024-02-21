@@ -37,7 +37,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Page size. The default value is 0.
+        /// Number of entries per page. Default: 15; maximum: 1,000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Tag.V20180813.Models
         /// </summary>
         [JsonProperty("ShowProject")]
         public ulong? ShowProject{ get; set; }
+
+        /// <summary>
+        /// Tag type. Valid values: Custom: custom tag; System: system tag; All: all tags. Default value: All.
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Tag.V20180813.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ShowProject", this.ShowProject);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

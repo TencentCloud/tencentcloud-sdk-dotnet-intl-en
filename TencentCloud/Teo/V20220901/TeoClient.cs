@@ -28,7 +28,6 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.843";
 
         /// <summary>
         /// Client constructor.
@@ -50,7 +49,7 @@ namespace TencentCloud.Teo.V20220901
         public TeoClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-            SdkVersion = sdkVersion;
+
         }
 
         /// <summary>
@@ -184,7 +183,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an application proxy.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version [CreateL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103417?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyResponse"/></returns>
@@ -194,7 +193,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an application proxy.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version [CreateL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103417?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyResponse"/></returns>
@@ -205,7 +204,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an application proxy rule.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [CreateL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103416?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyRuleResponse"/></returns>
@@ -215,7 +214,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an application proxy rule.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [CreateL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103416?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyRuleResponse"/></returns>
@@ -243,6 +242,48 @@ namespace TencentCloud.Teo.V20220901
         public CreateConfigGroupVersionResponse CreateConfigGroupVersionSync(CreateConfigGroupVersionRequest req)
         {
             return InternalRequestAsync<CreateConfigGroupVersionResponse>(req, "CreateConfigGroupVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create Layer 4 proxy instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateL4ProxyRequest"/></param>
+        /// <returns><see cref="CreateL4ProxyResponse"/></returns>
+        public Task<CreateL4ProxyResponse> CreateL4Proxy(CreateL4ProxyRequest req)
+        {
+            return InternalRequestAsync<CreateL4ProxyResponse>(req, "CreateL4Proxy");
+        }
+
+        /// <summary>
+        /// This API is used to create Layer 4 proxy instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateL4ProxyRequest"/></param>
+        /// <returns><see cref="CreateL4ProxyResponse"/></returns>
+        public CreateL4ProxyResponse CreateL4ProxySync(CreateL4ProxyRequest req)
+        {
+            return InternalRequestAsync<CreateL4ProxyResponse>(req, "CreateL4Proxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create Layer 4 proxy instance rules, supporting both individual and batch creation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="CreateL4ProxyRulesResponse"/></returns>
+        public Task<CreateL4ProxyRulesResponse> CreateL4ProxyRules(CreateL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<CreateL4ProxyRulesResponse>(req, "CreateL4ProxyRules");
+        }
+
+        /// <summary>
+        /// This API is used to create Layer 4 proxy instance rules, supporting both individual and batch creation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="CreateL4ProxyRulesResponse"/></returns>
+        public CreateL4ProxyRulesResponse CreateL4ProxyRulesSync(CreateL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<CreateL4ProxyRulesResponse>(req, "CreateL4ProxyRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -465,7 +506,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an application proxy.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103415?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyResponse"/></returns>
@@ -475,7 +516,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an application proxy.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103415?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyResponse"/></returns>
@@ -486,7 +527,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an application proxy rule.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103414?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyRuleResponse"/></returns>
@@ -496,13 +537,55 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an application proxy rule.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103414?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyRuleResponse"/></returns>
         public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRuleSync(DeleteApplicationProxyRuleRequest req)
         {
             return InternalRequestAsync<DeleteApplicationProxyRuleResponse>(req, "DeleteApplicationProxyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a Layer 4 proxy instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL4ProxyRequest"/></param>
+        /// <returns><see cref="DeleteL4ProxyResponse"/></returns>
+        public Task<DeleteL4ProxyResponse> DeleteL4Proxy(DeleteL4ProxyRequest req)
+        {
+            return InternalRequestAsync<DeleteL4ProxyResponse>(req, "DeleteL4Proxy");
+        }
+
+        /// <summary>
+        /// This API is used to delete a Layer 4 proxy instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL4ProxyRequest"/></param>
+        /// <returns><see cref="DeleteL4ProxyResponse"/></returns>
+        public DeleteL4ProxyResponse DeleteL4ProxySync(DeleteL4ProxyRequest req)
+        {
+            return InternalRequestAsync<DeleteL4ProxyResponse>(req, "DeleteL4Proxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="DeleteL4ProxyRulesResponse"/></returns>
+        public Task<DeleteL4ProxyRulesResponse> DeleteL4ProxyRules(DeleteL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteL4ProxyRulesResponse>(req, "DeleteL4ProxyRules");
+        }
+
+        /// <summary>
+        /// This API is used to delete Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="DeleteL4ProxyRulesResponse"/></returns>
+        public DeleteL4ProxyRulesResponse DeleteL4ProxyRulesSync(DeleteL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteL4ProxyRulesResponse>(req, "DeleteL4ProxyRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -675,7 +758,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of application proxies.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. In the latest version, this API has been split into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [DescribeL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103413?from_cn_redirect=1) and [DescribeL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103412?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationProxiesRequest"/></param>
         /// <returns><see cref="DescribeApplicationProxiesResponse"/></returns>
@@ -685,7 +768,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of application proxies.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. In the latest version, this API has been split into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [DescribeL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103413?from_cn_redirect=1) and [DescribeL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103412?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationProxiesRequest"/></param>
         /// <returns><see cref="DescribeApplicationProxiesResponse"/></returns>
@@ -713,6 +796,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeAvailablePlansResponse DescribeAvailablePlansSync(DescribeAvailablePlansRequest req)
         {
             return InternalRequestAsync<DescribeAvailablePlansResponse>(req, "DescribeAvailablePlans")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query billing data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
+        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
+        public Task<DescribeBillingDataResponse> DescribeBillingData(DescribeBillingDataRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingDataResponse>(req, "DescribeBillingData");
+        }
+
+        /// <summary>
+        /// This API is used to query billing data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
+        /// <returns><see cref="DescribeBillingDataResponse"/></returns>
+        public DescribeBillingDataResponse DescribeBillingDataSync(DescribeBillingDataRequest req)
+        {
+            return InternalRequestAsync<DescribeBillingDataResponse>(req, "DescribeBillingData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -927,6 +1031,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to check if the IP is an EdgeOne IP.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPRegionRequest"/></param>
+        /// <returns><see cref="DescribeIPRegionResponse"/></returns>
+        public Task<DescribeIPRegionResponse> DescribeIPRegion(DescribeIPRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeIPRegionResponse>(req, "DescribeIPRegion");
+        }
+
+        /// <summary>
+        /// This API is used to check if the IP is an EdgeOne IP.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPRegionRequest"/></param>
+        /// <returns><see cref="DescribeIPRegionResponse"/></returns>
+        public DescribeIPRegionResponse DescribeIPRegionSync(DescribeIPRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeIPRegionResponse>(req, "DescribeIPRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the verification information of a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeIdentificationsRequest"/></param>
@@ -944,6 +1069,48 @@ namespace TencentCloud.Teo.V20220901
         public DescribeIdentificationsResponse DescribeIdentificationsSync(DescribeIdentificationsRequest req)
         {
             return InternalRequestAsync<DescribeIdentificationsResponse>(req, "DescribeIdentifications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query a Layer 4 proxy instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL4ProxyRequest"/></param>
+        /// <returns><see cref="DescribeL4ProxyResponse"/></returns>
+        public Task<DescribeL4ProxyResponse> DescribeL4Proxy(DescribeL4ProxyRequest req)
+        {
+            return InternalRequestAsync<DescribeL4ProxyResponse>(req, "DescribeL4Proxy");
+        }
+
+        /// <summary>
+        /// This API is used to query a Layer 4 proxy instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL4ProxyRequest"/></param>
+        /// <returns><see cref="DescribeL4ProxyResponse"/></returns>
+        public DescribeL4ProxyResponse DescribeL4ProxySync(DescribeL4ProxyRequest req)
+        {
+            return InternalRequestAsync<DescribeL4ProxyResponse>(req, "DescribeL4Proxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the forwarding rule list under a Layer 4 proxy instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="DescribeL4ProxyRulesResponse"/></returns>
+        public Task<DescribeL4ProxyRulesResponse> DescribeL4ProxyRules(DescribeL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeL4ProxyRulesResponse>(req, "DescribeL4ProxyRules");
+        }
+
+        /// <summary>
+        /// This API is used to query the forwarding rule list under a Layer 4 proxy instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="DescribeL4ProxyRulesResponse"/></returns>
+        public DescribeL4ProxyRulesResponse DescribeL4ProxyRulesSync(DescribeL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeL4ProxyRulesResponse>(req, "DescribeL4ProxyRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1410,7 +1577,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an application proxy.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4Proxy
+        /// ] (https://intl.cloud.tencent.com/document/product/1552/103411?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyResponse"/></returns>
@@ -1420,7 +1588,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an application proxy.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4Proxy
+        /// ] (https://intl.cloud.tencent.com/document/product/1552/103411?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyResponse"/></returns>
@@ -1431,7 +1600,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an application proxy rule.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103410?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleResponse"/></returns>
@@ -1441,7 +1610,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an application proxy rule.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103410?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleResponse"/></returns>
@@ -1452,7 +1621,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the status of an application proxy rule.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRulesStatus
+        /// ] (https://intl.cloud.tencent.com/document/product/1552/103409?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleStatusResponse"/></returns>
@@ -1462,7 +1632,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the status of an application proxy rule.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRulesStatus
+        /// ] (https://intl.cloud.tencent.com/document/product/1552/103409?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleStatusResponse"/></returns>
@@ -1473,7 +1644,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the status of an application proxy.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyStatus] (https://intl.cloud.tencent.com/document/product/1552/103408?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyStatusResponse"/></returns>
@@ -1483,7 +1654,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the status of an application proxy.
+        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyStatus] (https://intl.cloud.tencent.com/document/product/1552/103408?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyStatusResponse"/></returns>
@@ -1515,6 +1686,90 @@ namespace TencentCloud.Teo.V20220901
         public ModifyHostsCertificateResponse ModifyHostsCertificateSync(ModifyHostsCertificateRequest req)
         {
             return InternalRequestAsync<ModifyHostsCertificateResponse>(req, "ModifyHostsCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration of a Layer 4 proxy instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyResponse"/></returns>
+        public Task<ModifyL4ProxyResponse> ModifyL4Proxy(ModifyL4ProxyRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyResponse>(req, "ModifyL4Proxy");
+        }
+
+        /// <summary>
+        /// This API is used to modify the configuration of a Layer 4 proxy instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyResponse"/></returns>
+        public ModifyL4ProxyResponse ModifyL4ProxySync(ModifyL4ProxyRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyResponse>(req, "ModifyL4Proxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify Layer 4 proxy forwarding rules, supporting both individual and batch modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyRulesResponse"/></returns>
+        public Task<ModifyL4ProxyRulesResponse> ModifyL4ProxyRules(ModifyL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyRulesResponse>(req, "ModifyL4ProxyRules");
+        }
+
+        /// <summary>
+        /// This API is used to modify Layer 4 proxy forwarding rules, supporting both individual and batch modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRulesRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyRulesResponse"/></returns>
+        public ModifyL4ProxyRulesResponse ModifyL4ProxyRulesSync(ModifyL4ProxyRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyRulesResponse>(req, "ModifyL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to start or stop Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRulesStatusRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyRulesStatusResponse"/></returns>
+        public Task<ModifyL4ProxyRulesStatusResponse> ModifyL4ProxyRulesStatus(ModifyL4ProxyRulesStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyRulesStatusResponse>(req, "ModifyL4ProxyRulesStatus");
+        }
+
+        /// <summary>
+        /// This API is used to start or stop Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyRulesStatusRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyRulesStatusResponse"/></returns>
+        public ModifyL4ProxyRulesStatusResponse ModifyL4ProxyRulesStatusSync(ModifyL4ProxyRulesStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyRulesStatusResponse>(req, "ModifyL4ProxyRulesStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable a Layer 4 proxy instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyStatusRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyStatusResponse"/></returns>
+        public Task<ModifyL4ProxyStatusResponse> ModifyL4ProxyStatus(ModifyL4ProxyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyStatusResponse>(req, "ModifyL4ProxyStatus");
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable a Layer 4 proxy instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL4ProxyStatusRequest"/></param>
+        /// <returns><see cref="ModifyL4ProxyStatusResponse"/></returns>
+        public ModifyL4ProxyStatusResponse ModifyL4ProxyStatusSync(ModifyL4ProxyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyL4ProxyStatusResponse>(req, "ModifyL4ProxyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

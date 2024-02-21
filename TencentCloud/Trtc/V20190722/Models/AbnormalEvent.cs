@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+        /// The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
         /// </summary>
         [JsonProperty("AbnormalEventId")]
         public ulong? AbnormalEventId{ get; set; }

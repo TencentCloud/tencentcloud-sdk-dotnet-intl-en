@@ -25,54 +25,80 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The origin type. Values:
-        /// <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-        /// <li>`COS`: COS bucket address</li>
-        /// <li>`ORIGIN_GROUP`: Origin group</li>
-        /// <li>`AWS_S3`: AWS S3 bucket address</li>
+        /// Origin server type. Valid values:
+        /// <li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
+        /// <li>COS: Tencent Cloud Object Storage origin server;</li>
+        /// <li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
+        /// <li>ORIGIN_GROUP: Origin group type origin server;</li>
+        /// <li>VODEO: Video on Demand (hybrid cloud edition);</li>
+        /// <li>SPACE: Origin shield, currently only available to the whitelist;</li>
+        /// <li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
+        /// Origin server address, varying depending on the value of OriginType:
+        /// <li>When OriginType is IP_DOMAIN, this parameter is IPv4 address, IPv6 address, or domain name;</li>
+        /// <li>When OriginType is COS, this parameter is the COS bucket's access domain;</li>
+        /// <li>When OriginType is AWS_S3, this parameter is the S3 bucket's access domain;</li>
+        /// <li>When OriginType is ORIGIN_GROUP, this parameter is the origin group ID;</li>
+        /// <li>When OriginType is VODEO, if VodeoDistributionRange is ALL, this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange is Bucket, this parameter is the corresponding bucket domain.</li>
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
-        /// ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
+        /// Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
         /// </summary>
         [JsonProperty("BackupOrigin")]
         public string BackupOrigin{ get; set; }
 
         /// <summary>
-        /// Name of the primary origin group (valid when `OriginType=ORIGIN_GROUP`).
+        /// Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
         /// </summary>
         [JsonProperty("OriginGroupName")]
         public string OriginGroupName{ get; set; }
 
         /// <summary>
-        /// Name of the secondary origin group (valid when `OriginType=ORIGIN_GROUP` and `BackupOrigin` is specified).
+        /// Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
         /// </summary>
         [JsonProperty("BackOriginGroupName")]
         public string BackOriginGroupName{ get; set; }
 
         /// <summary>
-        /// Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
-        /// <li>`on`: Enable private authentication.</li>
-        /// <li>`off`: Disable private authentication.</li>
-        /// If this field is not specified, the default value `off` is used.
+        /// Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
+        /// <li>on: Enable private authentication;</li>
+        /// <li>off: Disable private authentication.</li>
+        /// If it is not specified, off is the default value.
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }
 
         /// <summary>
-        /// The private authentication parameters. This field is valid when `PrivateAccess=on`.
+        /// Private authentication parameter. This parameter is valid only when PrivateAccess is on.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrivateParameters")]
         public PrivateParameter[] PrivateParameters{ get; set; }
+
+        /// <summary>
+        /// MO sub-application ID
+        /// </summary>
+        [JsonProperty("VodeoSubAppId")]
+        public long? VodeoSubAppId{ get; set; }
+
+        /// <summary>
+        /// MO distribution range. Valid values: <li>All: All</li> <li>Bucket: Bucket</li>
+        /// </summary>
+        [JsonProperty("VodeoDistributionRange")]
+        public string VodeoDistributionRange{ get; set; }
+
+        /// <summary>
+        /// MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+        /// </summary>
+        [JsonProperty("VodeoBucketId")]
+        public string VodeoBucketId{ get; set; }
 
 
         /// <summary>
@@ -87,6 +113,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "BackOriginGroupName", this.BackOriginGroupName);
             this.SetParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
             this.SetParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+            this.SetParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
+            this.SetParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
+            this.SetParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
         }
     }
 }
