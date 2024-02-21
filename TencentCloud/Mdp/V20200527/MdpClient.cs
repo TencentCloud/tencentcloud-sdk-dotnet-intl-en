@@ -28,6 +28,7 @@ namespace TencentCloud.Mdp.V20200527
 
        private const string endpoint = "mdp.tencentcloudapi.com";
        private const string version = "2020-05-27";
+       private const string sdkVersion = "SDK_NET_3.0.845";
 
         /// <summary>
         /// Client constructor.
@@ -35,7 +36,7 @@ namespace TencentCloud.Mdp.V20200527
         /// <param name="credential">Credentials.</param>
         /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public MdpClient(Credential credential, string region)
-            : this(credential, region, new ClientProfile())
+            : this(credential, region, new ClientProfile { Language = Language.EN_US })
         {
 
         }
@@ -49,7 +50,7 @@ namespace TencentCloud.Mdp.V20200527
         public MdpClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
-
+            SdkVersion = sdkVersion;
         }
 
         /// <summary>
