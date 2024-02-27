@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.845";
+       private const string sdkVersion = "SDK_NET_3.0.846";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Faceid.V20180301
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// The types of national cards supported by the API and whether instructions on the back of the card are required are as follows:  <table> <thead> <tr> <td style="width:200px"Nationality</td> <td style="width:200px">CardType</td> <td style="width:200px">Back side required</td> </tr> </thead> <tbody> <tr> <td>Indonesia</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Indonesia</td> <td>Drving license</td> <td>No</td> </tr> <tr> <td>Hongkong</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Thailand</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Thailand</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>Drving license</td> <td>No</td> </tr> <tr> <td>Japan</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Japan</td> <td>Drving license</td> <td>No</td> </tr> </tbody> </table>
+        /// </summary>
+        /// <param name="req"><see cref="ApplyCardVerificationRequest"/></param>
+        /// <returns><see cref="ApplyCardVerificationResponse"/></returns>
+        public Task<ApplyCardVerificationResponse> ApplyCardVerification(ApplyCardVerificationRequest req)
+        {
+            return InternalRequestAsync<ApplyCardVerificationResponse>(req, "ApplyCardVerification");
+        }
+
+        /// <summary>
+        /// The types of national cards supported by the API and whether instructions on the back of the card are required are as follows:  <table> <thead> <tr> <td style="width:200px"Nationality</td> <td style="width:200px">CardType</td> <td style="width:200px">Back side required</td> </tr> </thead> <tbody> <tr> <td>Indonesia</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Indonesia</td> <td>Drving license</td> <td>No</td> </tr> <tr> <td>Hongkong</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Thailand</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Thailand</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>Drving license</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>Drving license</td> <td>No</td> </tr> <tr> <td>Japan</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Japan</td> <td>Drving license</td> <td>No</td> </tr> </tbody> </table>
+        /// </summary>
+        /// <param name="req"><see cref="ApplyCardVerificationRequest"/></param>
+        /// <returns><see cref="ApplyCardVerificationResponse"/></returns>
+        public ApplyCardVerificationResponse ApplyCardVerificationSync(ApplyCardVerificationRequest req)
+        {
+            return InternalRequestAsync<ApplyCardVerificationResponse>(req, "ApplyCardVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -224,6 +245,27 @@ namespace TencentCloud.Faceid.V20180301
         public GenerateReflectSequenceResponse GenerateReflectSequenceSync(GenerateReflectSequenceRequest req)
         {
             return InternalRequestAsync<GenerateReflectSequenceResponse>(req, "GenerateReflectSequence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// The interface supports obtaining the certificate authentication result based on the token.
+        /// </summary>
+        /// <param name="req"><see cref="GetCardVerificationResultRequest"/></param>
+        /// <returns><see cref="GetCardVerificationResultResponse"/></returns>
+        public Task<GetCardVerificationResultResponse> GetCardVerificationResult(GetCardVerificationResultRequest req)
+        {
+            return InternalRequestAsync<GetCardVerificationResultResponse>(req, "GetCardVerificationResult");
+        }
+
+        /// <summary>
+        /// The interface supports obtaining the certificate authentication result based on the token.
+        /// </summary>
+        /// <param name="req"><see cref="GetCardVerificationResultRequest"/></param>
+        /// <returns><see cref="GetCardVerificationResultResponse"/></returns>
+        public GetCardVerificationResultResponse GetCardVerificationResultSync(GetCardVerificationResultRequest req)
+        {
+            return InternalRequestAsync<GetCardVerificationResultResponse>(req, "GetCardVerificationResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

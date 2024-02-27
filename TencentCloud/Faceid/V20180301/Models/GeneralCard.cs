@@ -111,9 +111,9 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// Gender on the license
-        /// - M：male
-        /// - F：female
-        /// - X：other gender
+        /// - M: male
+        /// - F: female
+        /// - X: other gender
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// Example: M
         /// </summary>
@@ -156,6 +156,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("RegistrationNumber")]
         public string RegistrationNumber{ get; set; }
 
+        /// <summary>
+        /// Address
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Address")]
+        public Address Address{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +187,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
             this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
             this.SetParamSimple(map, prefix + "RegistrationNumber", this.RegistrationNumber);
+            this.SetParamObj(map, prefix + "Address.", this.Address);
         }
     }
 }

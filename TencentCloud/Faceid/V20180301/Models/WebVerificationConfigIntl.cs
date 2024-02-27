@@ -25,6 +25,12 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
+        /// When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+        /// </summary>
+        [JsonProperty("AutoSkipStartPage")]
+        public bool? AutoSkipStartPage{ get; set; }
+
+        /// <summary>
         /// When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
         /// Example value: false
         /// </summary>
@@ -58,15 +64,23 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("IDCardType")]
         public string IDCardType{ get; set; }
 
+        /// <summary>
+        /// Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+        /// </summary>
+        [JsonProperty("DisableCheckOcrWarnings")]
+        public bool? DisableCheckOcrWarnings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AutoSkipStartPage", this.AutoSkipStartPage);
             this.SetParamSimple(map, prefix + "AutoSkip", this.AutoSkip);
             this.SetParamSimple(map, prefix + "CheckMode", this.CheckMode);
             this.SetParamSimple(map, prefix + "IDCardType", this.IDCardType);
+            this.SetParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
         }
     }
 }

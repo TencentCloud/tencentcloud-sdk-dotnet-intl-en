@@ -152,6 +152,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
+        /// <summary>
+        /// The recognition results of ID card
+        /// </summary>
+        [JsonProperty("CardInfo")]
+        public CardInfo CardInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "CardImage.", this.CardImage);
             this.SetParamObj(map, prefix + "CardInfoOcrJson.", this.CardInfoOcrJson);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "CardInfo.", this.CardInfo);
         }
     }
 }
