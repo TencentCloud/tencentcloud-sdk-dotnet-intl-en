@@ -175,6 +175,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
 
+        /// <summary>
+        /// Instance login settings, which include passwords, keys, or the original login settings inherited from the image. <br>Please note that specifying new login settings will overwrite the existing ones. For instance, if you previously used a password for login and then use this parameter to switch the login settings to a key, the original password will be removed.
+        /// </summary>
+        [JsonProperty("LoginSettings")]
+        public LoginSettings LoginSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -202,6 +208,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+            this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         }
     }
 }

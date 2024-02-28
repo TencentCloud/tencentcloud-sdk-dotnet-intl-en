@@ -92,7 +92,7 @@ namespace TencentCloud.As.V20180419.Models
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+        /// This parameter is now invalid and should not be used. Upgrading the launch configuration API does not allow modification or overwriting of the LoginSettings parameter. LoginSettings will not change after upgrade.
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }

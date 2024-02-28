@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.846";
+       private const string sdkVersion = "SDK_NET_3.0.847";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,33 @@ namespace TencentCloud.As.V20180419
         public AttachLoadBalancersResponse AttachLoadBalancersSync(AttachLoadBalancersRequest req)
         {
             return InternalRequestAsync<AttachLoadBalancersResponse>(req, "AttachLoadBalancers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to cancel the instance refresh activity of the scaling group.
+        /// * Batches that have already been refreshed or are currently being refreshed remain unaffected; batches pending refresh will be canceled.
+        /// * If a refresh fails, the affected instances will remain in the standby status and require manual intervention by the user to either attempt to exit the standby status or destroy the instances.
+        /// * Rollback operations are not allowed after cancellation, and resuming is also unsupported.
+        /// </summary>
+        /// <param name="req"><see cref="CancelInstanceRefreshRequest"/></param>
+        /// <returns><see cref="CancelInstanceRefreshResponse"/></returns>
+        public Task<CancelInstanceRefreshResponse> CancelInstanceRefresh(CancelInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<CancelInstanceRefreshResponse>(req, "CancelInstanceRefresh");
+        }
+
+        /// <summary>
+        /// This API is used to cancel the instance refresh activity of the scaling group.
+        /// * Batches that have already been refreshed or are currently being refreshed remain unaffected; batches pending refresh will be canceled.
+        /// * If a refresh fails, the affected instances will remain in the standby status and require manual intervention by the user to either attempt to exit the standby status or destroy the instances.
+        /// * Rollback operations are not allowed after cancellation, and resuming is also unsupported.
+        /// </summary>
+        /// <param name="req"><see cref="CancelInstanceRefreshRequest"/></param>
+        /// <returns><see cref="CancelInstanceRefreshResponse"/></returns>
+        public CancelInstanceRefreshResponse CancelInstanceRefreshSync(CancelInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<CancelInstanceRefreshResponse>(req, "CancelInstanceRefresh")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -748,6 +775,27 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API (DescribeRefreshActivities) is used to query the instance refresh activity records of a scaling group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRefreshActivitiesRequest"/></param>
+        /// <returns><see cref="DescribeRefreshActivitiesResponse"/></returns>
+        public Task<DescribeRefreshActivitiesResponse> DescribeRefreshActivities(DescribeRefreshActivitiesRequest req)
+        {
+            return InternalRequestAsync<DescribeRefreshActivitiesResponse>(req, "DescribeRefreshActivities");
+        }
+
+        /// <summary>
+        /// This API (DescribeRefreshActivities) is used to query the instance refresh activity records of a scaling group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRefreshActivitiesRequest"/></param>
+        /// <returns><see cref="DescribeRefreshActivitiesResponse"/></returns>
+        public DescribeRefreshActivitiesResponse DescribeRefreshActivitiesSync(DescribeRefreshActivitiesRequest req)
+        {
+            return InternalRequestAsync<DescribeRefreshActivitiesResponse>(req, "DescribeRefreshActivities")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API (DescribeScalingPolicies) is used to query alarm trigger policies.
         /// </summary>
         /// <param name="req"><see cref="DescribeScalingPoliciesRequest"/></param>
@@ -937,6 +985,31 @@ namespace TencentCloud.As.V20180419
         public ExecuteScalingPolicyResponse ExecuteScalingPolicySync(ExecuteScalingPolicyRequest req)
         {
             return InternalRequestAsync<ExecuteScalingPolicyResponse>(req, "ExecuteScalingPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to exit instances from the standby status in the scaling group.
+        /// * When an instance is in standby status, its load balancer weight is set to 0. Upon exiting the standby status, the weight value automatically gets restored.
+        /// * Initiating power-on/power-off actions on instances that are in standby status also results in them exiting from the standby status.
+        /// </summary>
+        /// <param name="req"><see cref="ExitStandbyRequest"/></param>
+        /// <returns><see cref="ExitStandbyResponse"/></returns>
+        public Task<ExitStandbyResponse> ExitStandby(ExitStandbyRequest req)
+        {
+            return InternalRequestAsync<ExitStandbyResponse>(req, "ExitStandby");
+        }
+
+        /// <summary>
+        /// This API is used to exit instances from the standby status in the scaling group.
+        /// * When an instance is in standby status, its load balancer weight is set to 0. Upon exiting the standby status, the weight value automatically gets restored.
+        /// * Initiating power-on/power-off actions on instances that are in standby status also results in them exiting from the standby status.
+        /// </summary>
+        /// <param name="req"><see cref="ExitStandbyRequest"/></param>
+        /// <returns><see cref="ExitStandbyResponse"/></returns>
+        public ExitStandbyResponse ExitStandbySync(ExitStandbyRequest req)
+        {
+            return InternalRequestAsync<ExitStandbyResponse>(req, "ExitStandby")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1173,6 +1246,56 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API is used to resume the paused instance refresh activity, allowing it to retry failed instances in the current batch or proceed with refreshing subsequent batches. Note that calling this interface is ineffective when the activity is not in a paused status.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeInstanceRefreshRequest"/></param>
+        /// <returns><see cref="ResumeInstanceRefreshResponse"/></returns>
+        public Task<ResumeInstanceRefreshResponse> ResumeInstanceRefresh(ResumeInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<ResumeInstanceRefreshResponse>(req, "ResumeInstanceRefresh");
+        }
+
+        /// <summary>
+        /// This API is used to resume the paused instance refresh activity, allowing it to retry failed instances in the current batch or proceed with refreshing subsequent batches. Note that calling this interface is ineffective when the activity is not in a paused status.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeInstanceRefreshRequest"/></param>
+        /// <returns><see cref="ResumeInstanceRefreshResponse"/></returns>
+        public ResumeInstanceRefreshResponse ResumeInstanceRefreshSync(ResumeInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<ResumeInstanceRefreshResponse>(req, "ResumeInstanceRefresh")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to generate a new instance refresh activity, which also supports batched refreshing and operations such as pausing, resuming, and canceling. The interface returns the RefreshActivityId for the rollback activity.
+        /// * Instances pending refresh in the original activity are updated to a canceled status. Nonexistent instances are disregarded, while instances in all other statuses proceed to enter the rollback process.
+        /// * Instances that were being refreshed in the original activity will not be immediately terminated; instead, the rollback activity will be executed after their refresh has been completed.
+        /// * Rollback is supported for activities that are in a paused status or those with the most recent successful refresh; it is not supported for activities in other statuses.
+        /// * When the original refresh activity involves reinstalling instances, for the ImageId parameter, it will automatically restore to the image ID before the rollback; for parameters such as UserData, EnhancedService, LoginSettings, and HostName, they will still be retrieved from the launch configuration, requiring users to manually modify the launch configuration before initiating the rollback.
+        /// </summary>
+        /// <param name="req"><see cref="RollbackInstanceRefreshRequest"/></param>
+        /// <returns><see cref="RollbackInstanceRefreshResponse"/></returns>
+        public Task<RollbackInstanceRefreshResponse> RollbackInstanceRefresh(RollbackInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<RollbackInstanceRefreshResponse>(req, "RollbackInstanceRefresh");
+        }
+
+        /// <summary>
+        /// This API is used to generate a new instance refresh activity, which also supports batched refreshing and operations such as pausing, resuming, and canceling. The interface returns the RefreshActivityId for the rollback activity.
+        /// * Instances pending refresh in the original activity are updated to a canceled status. Nonexistent instances are disregarded, while instances in all other statuses proceed to enter the rollback process.
+        /// * Instances that were being refreshed in the original activity will not be immediately terminated; instead, the rollback activity will be executed after their refresh has been completed.
+        /// * Rollback is supported for activities that are in a paused status or those with the most recent successful refresh; it is not supported for activities in other statuses.
+        /// * When the original refresh activity involves reinstalling instances, for the ImageId parameter, it will automatically restore to the image ID before the rollback; for parameters such as UserData, EnhancedService, LoginSettings, and HostName, they will still be retrieved from the launch configuration, requiring users to manually modify the launch configuration before initiating the rollback.
+        /// </summary>
+        /// <param name="req"><see cref="RollbackInstanceRefreshRequest"/></param>
+        /// <returns><see cref="RollbackInstanceRefreshResponse"/></returns>
+        public RollbackInstanceRefreshResponse RollbackInstanceRefreshSync(RollbackInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<RollbackInstanceRefreshResponse>(req, "RollbackInstanceRefresh")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to reduce the specified number of instances from the scaling group.
         /// * There is no on going scaling task.
         /// * This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
@@ -1285,6 +1408,37 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API is used to refresh running CVM instances in the scaling group and return the RefreshActivityId for the instance refresh activity based on parameters in the launch configuration.
+        /// * For refresh methods involving reinstallation (currently only reinstallation is supported), during reinstallation, only the ImageId, UserData, EnhancedService, HostName, and LoginSettings parameters will be fetched from the launch configuration for refreshing; other parameters of the instance will not be refreshed.
+        /// * During the instance refresh process (including paused status), the scaling group will be disabled. It is not recommended to modify the associated launch configuration during a refresh, as this may impact the refresh parameters, leading to inconsistent instance configurations.
+        /// * In rolling update mode, instance refreshes are performed in multiple batches. If there are failed refreshes within a batch, the activity will enter a failed paused status.
+        /// * Instances pending refresh that are removed or destroyed will be marked as NOT_FOUND status, but they will not block the instance refresh activity.
+        /// * Even if a running instance has parameters consistent with the latest launch configuration, it can still undergo another refresh.
+        /// </summary>
+        /// <param name="req"><see cref="StartInstanceRefreshRequest"/></param>
+        /// <returns><see cref="StartInstanceRefreshResponse"/></returns>
+        public Task<StartInstanceRefreshResponse> StartInstanceRefresh(StartInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<StartInstanceRefreshResponse>(req, "StartInstanceRefresh");
+        }
+
+        /// <summary>
+        /// This API is used to refresh running CVM instances in the scaling group and return the RefreshActivityId for the instance refresh activity based on parameters in the launch configuration.
+        /// * For refresh methods involving reinstallation (currently only reinstallation is supported), during reinstallation, only the ImageId, UserData, EnhancedService, HostName, and LoginSettings parameters will be fetched from the launch configuration for refreshing; other parameters of the instance will not be refreshed.
+        /// * During the instance refresh process (including paused status), the scaling group will be disabled. It is not recommended to modify the associated launch configuration during a refresh, as this may impact the refresh parameters, leading to inconsistent instance configurations.
+        /// * In rolling update mode, instance refreshes are performed in multiple batches. If there are failed refreshes within a batch, the activity will enter a failed paused status.
+        /// * Instances pending refresh that are removed or destroyed will be marked as NOT_FOUND status, but they will not block the instance refresh activity.
+        /// * Even if a running instance has parameters consistent with the latest launch configuration, it can still undergo another refresh.
+        /// </summary>
+        /// <param name="req"><see cref="StartInstanceRefreshRequest"/></param>
+        /// <returns><see cref="StartInstanceRefreshResponse"/></returns>
+        public StartInstanceRefreshResponse StartInstanceRefreshSync(StartInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<StartInstanceRefreshResponse>(req, "StartInstanceRefresh")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to shut down CVM instances in a scaling group.
         /// * Use the `SOFT_FIRST` shutdown, which means the CVM will be forcibly shut down if the soft shutdown fails.
         /// * Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
@@ -1314,10 +1468,37 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to upgrade a launch configuration.
+        /// This API is used to pause the ongoing instance refresh activity.
+        /// * In the paused status, the scaling group will also be disabled.
+        /// * Instances that are currently being updated will not be paused, instances pending updates will have their updates paused.
+        /// </summary>
+        /// <param name="req"><see cref="StopInstanceRefreshRequest"/></param>
+        /// <returns><see cref="StopInstanceRefreshResponse"/></returns>
+        public Task<StopInstanceRefreshResponse> StopInstanceRefresh(StopInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<StopInstanceRefreshResponse>(req, "StopInstanceRefresh");
+        }
+
+        /// <summary>
+        /// This API is used to pause the ongoing instance refresh activity.
+        /// * In the paused status, the scaling group will also be disabled.
+        /// * Instances that are currently being updated will not be paused, instances pending updates will have their updates paused.
+        /// </summary>
+        /// <param name="req"><see cref="StopInstanceRefreshRequest"/></param>
+        /// <returns><see cref="StopInstanceRefreshResponse"/></returns>
+        public StopInstanceRefreshResponse StopInstanceRefreshSync(StopInstanceRefreshRequest req)
+        {
+            return InternalRequestAsync<StopInstanceRefreshResponse>(req, "StopInstanceRefresh")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
         /// 
-        /// * This API is used to upgrade a launch configuration in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
-        /// * After the launch configuration is upgraded, the existing instances that have been created by it will not be changed, but new instances will be created according to the new configuration.
+        /// There is a replacement API: ModifyLaunchConfiguration. This API carries the risk of parameter overwriting, and it has currently been hidden on the official website.
+        /// This API (UpgradeLaunchConfiguration) is used to upgrade the launch configuration.
+        /// * This API is used to upgrade the launch configuration, adopting an "entirely overwrite" approach. Regardless of previous parameter settings, they will be uniformly replaced with new configurations as specified in the interface parameters. For non-mandatory fields, if not filled in, default values will be assigned.
+        /// * After upgrading and modifying the launch configuration, existing instances that have been scaled out using this configuration will not undergo any changes. Subsequently, newly added instances using this upgraded launch configuration will be scaled out according to the new configuration.
         /// </summary>
         /// <param name="req"><see cref="UpgradeLaunchConfigurationRequest"/></param>
         /// <returns><see cref="UpgradeLaunchConfigurationResponse"/></returns>
@@ -1327,10 +1508,12 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to upgrade a launch configuration.
+        /// 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
         /// 
-        /// * This API is used to upgrade a launch configuration in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
-        /// * After the launch configuration is upgraded, the existing instances that have been created by it will not be changed, but new instances will be created according to the new configuration.
+        /// There is a replacement API: ModifyLaunchConfiguration. This API carries the risk of parameter overwriting, and it has currently been hidden on the official website.
+        /// This API (UpgradeLaunchConfiguration) is used to upgrade the launch configuration.
+        /// * This API is used to upgrade the launch configuration, adopting an "entirely overwrite" approach. Regardless of previous parameter settings, they will be uniformly replaced with new configurations as specified in the interface parameters. For non-mandatory fields, if not filled in, default values will be assigned.
+        /// * After upgrading and modifying the launch configuration, existing instances that have been scaled out using this configuration will not undergo any changes. Subsequently, newly added instances using this upgraded launch configuration will be scaled out according to the new configuration.
         /// </summary>
         /// <param name="req"><see cref="UpgradeLaunchConfigurationRequest"/></param>
         /// <returns><see cref="UpgradeLaunchConfigurationResponse"/></returns>

@@ -25,10 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// CVM instance name
-        /// 
-        /// The `InstanceName` cannot start or end with a dot (.) or hyphen (-), and cannot contain consecutive dots and hyphens.
-        /// The name contains 2 to 40 characters, and supports multiple dots (.). The string between two dots can consist of letters (case-insensitive), numbers, and hyphens (-), and cannot be all numbers.
+        /// CVM instance name. Value range: 2-108.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

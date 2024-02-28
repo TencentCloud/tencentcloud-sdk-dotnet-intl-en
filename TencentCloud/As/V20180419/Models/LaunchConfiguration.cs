@@ -110,15 +110,13 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
+        /// Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
         /// </summary>
         [JsonProperty("LaunchConfigurationStatus")]
         public string LaunchConfigurationStatus{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
-        /// <br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
-        /// <br><li>SPOTPAID: spot instance
+        /// Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -192,9 +190,7 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-        /// <br><li>ORIGINAL: uses the configured cloud disk type
-        /// <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+        /// Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
         /// </summary>
         [JsonProperty("DiskTypePolicy")]
         public string DiskTypePolicy{ get; set; }
@@ -211,6 +207,12 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         [JsonProperty("IPv6InternetAccessible")]
         public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
+
+        /// <summary>
+        /// Placement group ID, supporting specification of only one.
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupIds")]
+        public string[] DisasterRecoverGroupIds{ get; set; }
 
 
         /// <summary>
@@ -248,6 +250,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
+            this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         }
     }
 }

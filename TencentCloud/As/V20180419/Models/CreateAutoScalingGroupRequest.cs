@@ -192,6 +192,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("CapacityRebalance")]
         public bool? CapacityRebalance{ get; set; }
 
+        /// <summary>
+        /// Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+        /// </summary>
+        [JsonProperty("InstanceNameIndexSettings")]
+        public InstanceNameIndexSettings InstanceNameIndexSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +228,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
             this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
             this.SetParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
+            this.SetParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
         }
     }
 }
