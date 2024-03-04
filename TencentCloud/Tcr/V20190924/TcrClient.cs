@@ -28,7 +28,7 @@ namespace TencentCloud.Tcr.V20190924
 
        private const string endpoint = "tcr.tencentcloudapi.com";
        private const string version = "2019-09-24";
-       private const string sdkVersion = "SDK_NET_3.0.849";
+       private const string sdkVersion = "SDK_NET_3.0.850";
 
         /// <summary>
         /// Client constructor.
@@ -92,27 +92,6 @@ namespace TencentCloud.Tcr.V20190924
         public CheckInstanceNameResponse CheckInstanceNameSync(CheckInstanceNameRequest req)
         {
             return InternalRequestAsync<CheckInstanceNameResponse>(req, "CheckInstanceName")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to create a custom account.
-        /// </summary>
-        /// <param name="req"><see cref="CreateCustomAccountRequest"/></param>
-        /// <returns><see cref="CreateCustomAccountResponse"/></returns>
-        public Task<CreateCustomAccountResponse> CreateCustomAccount(CreateCustomAccountRequest req)
-        {
-            return InternalRequestAsync<CreateCustomAccountResponse>(req, "CreateCustomAccount");
-        }
-
-        /// <summary>
-        /// This API is used to create a custom account.
-        /// </summary>
-        /// <param name="req"><see cref="CreateCustomAccountRequest"/></param>
-        /// <returns><see cref="CreateCustomAccountResponse"/></returns>
-        public CreateCustomAccountResponse CreateCustomAccountSync(CreateCustomAccountRequest req)
-        {
-            return InternalRequestAsync<CreateCustomAccountResponse>(req, "CreateCustomAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -327,7 +306,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// This API is used to create a service account.
+        /// This API is used to create a service level account.
         /// </summary>
         /// <param name="req"><see cref="CreateServiceAccountRequest"/></param>
         /// <returns><see cref="CreateServiceAccountResponse"/></returns>
@@ -337,7 +316,7 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
-        /// This API is used to create a service account.
+        /// This API is used to create a service level account.
         /// </summary>
         /// <param name="req"><see cref="CreateServiceAccountRequest"/></param>
         /// <returns><see cref="CreateServiceAccountResponse"/></returns>
@@ -449,27 +428,6 @@ namespace TencentCloud.Tcr.V20190924
         public CreateWebhookTriggerResponse CreateWebhookTriggerSync(CreateWebhookTriggerRequest req)
         {
             return InternalRequestAsync<CreateWebhookTriggerResponse>(req, "CreateWebhookTrigger")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to delete a custom account.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteCustomAccountRequest"/></param>
-        /// <returns><see cref="DeleteCustomAccountResponse"/></returns>
-        public Task<DeleteCustomAccountResponse> DeleteCustomAccount(DeleteCustomAccountRequest req)
-        {
-            return InternalRequestAsync<DeleteCustomAccountResponse>(req, "DeleteCustomAccount");
-        }
-
-        /// <summary>
-        /// This API is used to delete a custom account.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteCustomAccountRequest"/></param>
-        /// <returns><see cref="DeleteCustomAccountResponse"/></returns>
-        public DeleteCustomAccountResponse DeleteCustomAccountSync(DeleteCustomAccountRequest req)
-        {
-            return InternalRequestAsync<DeleteCustomAccountResponse>(req, "DeleteCustomAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -831,27 +789,6 @@ namespace TencentCloud.Tcr.V20190924
         public DescribeChartDownloadInfoResponse DescribeChartDownloadInfoSync(DescribeChartDownloadInfoRequest req)
         {
             return InternalRequestAsync<DescribeChartDownloadInfoResponse>(req, "DescribeChartDownloadInfo")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to query custom accounts.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
-        /// <returns><see cref="DescribeCustomAccountsResponse"/></returns>
-        public Task<DescribeCustomAccountsResponse> DescribeCustomAccounts(DescribeCustomAccountsRequest req)
-        {
-            return InternalRequestAsync<DescribeCustomAccountsResponse>(req, "DescribeCustomAccounts");
-        }
-
-        /// <summary>
-        /// This API is used to query custom accounts.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCustomAccountsRequest"/></param>
-        /// <returns><see cref="DescribeCustomAccountsResponse"/></returns>
-        public DescribeCustomAccountsResponse DescribeCustomAccountsSync(DescribeCustomAccountsRequest req)
-        {
-            return InternalRequestAsync<DescribeCustomAccountsResponse>(req, "DescribeCustomAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1402,6 +1339,27 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// This API is used to duplicate the Enterprise Edition repository image version.
+        /// </summary>
+        /// <param name="req"><see cref="DuplicateImageRequest"/></param>
+        /// <returns><see cref="DuplicateImageResponse"/></returns>
+        public Task<DuplicateImageResponse> DuplicateImage(DuplicateImageRequest req)
+        {
+            return InternalRequestAsync<DuplicateImageResponse>(req, "DuplicateImage");
+        }
+
+        /// <summary>
+        /// This API is used to duplicate the Enterprise Edition repository image version.
+        /// </summary>
+        /// <param name="req"><see cref="DuplicateImageRequest"/></param>
+        /// <returns><see cref="DuplicateImageResponse"/></returns>
+        public DuplicateImageResponse DuplicateImageSync(DuplicateImageRequest req)
+        {
+            return InternalRequestAsync<DuplicateImageResponse>(req, "DuplicateImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to manage the public network access of an instance.
         /// </summary>
         /// <param name="req"><see cref="ManageExternalEndpointRequest"/></param>
@@ -1461,27 +1419,6 @@ namespace TencentCloud.Tcr.V20190924
         public ManageReplicationResponse ManageReplicationSync(ManageReplicationRequest req)
         {
             return InternalRequestAsync<ManageReplicationResponse>(req, "ManageReplication")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to update a custom account.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCustomAccountRequest"/></param>
-        /// <returns><see cref="ModifyCustomAccountResponse"/></returns>
-        public Task<ModifyCustomAccountResponse> ModifyCustomAccount(ModifyCustomAccountRequest req)
-        {
-            return InternalRequestAsync<ModifyCustomAccountResponse>(req, "ModifyCustomAccount");
-        }
-
-        /// <summary>
-        /// This API is used to update a custom account.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCustomAccountRequest"/></param>
-        /// <returns><see cref="ModifyCustomAccountResponse"/></returns>
-        public ModifyCustomAccountResponse ModifyCustomAccountSync(ModifyCustomAccountRequest req)
-        {
-            return InternalRequestAsync<ModifyCustomAccountResponse>(req, "ModifyCustomAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1629,6 +1566,27 @@ namespace TencentCloud.Tcr.V20190924
         public ModifyServiceAccountResponse ModifyServiceAccountSync(ModifyServiceAccountRequest req)
         {
             return InternalRequestAsync<ModifyServiceAccountResponse>(req, "ModifyServiceAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the password for a service level account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceAccountPasswordRequest"/></param>
+        /// <returns><see cref="ModifyServiceAccountPasswordResponse"/></returns>
+        public Task<ModifyServiceAccountPasswordResponse> ModifyServiceAccountPassword(ModifyServiceAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceAccountPasswordResponse>(req, "ModifyServiceAccountPassword");
+        }
+
+        /// <summary>
+        /// This API is used to update the password for a service level account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceAccountPasswordRequest"/></param>
+        /// <returns><see cref="ModifyServiceAccountPasswordResponse"/></returns>
+        public ModifyServiceAccountPasswordResponse ModifyServiceAccountPasswordSync(ModifyServiceAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceAccountPasswordResponse>(req, "ModifyServiceAccountPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

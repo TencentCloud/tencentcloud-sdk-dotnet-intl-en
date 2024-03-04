@@ -21,32 +21,14 @@ namespace TencentCloud.Tcr.V20190924.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCustomAccountResponse : AbstractModel
+    public class ModifyServiceAccountPasswordResponse : AbstractModel
     {
         
         /// <summary>
-        /// Custom username (the prefix `tcr$` is automatically added)
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Custom password, which is displayed only once
+        /// Custom user password, displayed only once. Please make sure to retain it securely.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
-
-        /// <summary>
-        /// Custom expiry time (timestamp)
-        /// </summary>
-        [JsonProperty("ExpiresAt")]
-        public long? ExpiresAt{ get; set; }
-
-        /// <summary>
-        /// Custom account creation time
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
 
         /// <summary>
         /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -60,10 +42,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamSimple(map, prefix + "ExpiresAt", this.ExpiresAt);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

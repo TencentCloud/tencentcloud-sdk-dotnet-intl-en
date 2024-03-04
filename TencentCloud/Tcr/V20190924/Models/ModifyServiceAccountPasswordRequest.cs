@@ -21,50 +21,32 @@ namespace TencentCloud.Tcr.V20190924.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateCustomAccountRequest : AbstractModel
+    public class ModifyServiceAccountPasswordRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// Custom account name
+        /// Service level account name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Policy list
+        /// Whether to randomly generate a password.
         /// </summary>
-        [JsonProperty("Permissions")]
-        public Permission[] Permissions{ get; set; }
+        [JsonProperty("Random")]
+        public bool? Random{ get; set; }
 
         /// <summary>
-        /// Custom account description
+        /// Service level account password, 8 to 20 characters, contains at least one uppercase letter, one lowercase letter, and one number.
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// Validity in days starting from the current day. It takes a higher priority than `ExpiresAt`.
-        /// </summary>
-        [JsonProperty("Duration")]
-        public long? Duration{ get; set; }
-
-        /// <summary>
-        /// Expiry time of the custom account (timestamp, in milliseconds)
-        /// </summary>
-        [JsonProperty("ExpiresAt")]
-        public long? ExpiresAt{ get; set; }
-
-        /// <summary>
-        /// Whether to disable the custom account
-        /// </summary>
-        [JsonProperty("Disable")]
-        public bool? Disable{ get; set; }
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
 
 
         /// <summary>
@@ -74,11 +56,8 @@ namespace TencentCloud.Tcr.V20190924.Models
         {
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArrayObj(map, prefix + "Permissions.", this.Permissions);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "Duration", this.Duration);
-            this.SetParamSimple(map, prefix + "ExpiresAt", this.ExpiresAt);
-            this.SetParamSimple(map, prefix + "Disable", this.Disable);
+            this.SetParamSimple(map, prefix + "Random", this.Random);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

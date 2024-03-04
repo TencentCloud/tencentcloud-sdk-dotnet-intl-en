@@ -37,7 +37,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public bool? All{ get; set; }
 
         /// <summary>
-        /// Whether to fill in permission information
+        /// Whether to fill in permission information.
         /// </summary>
         [JsonProperty("EmbedPermission")]
         public bool? EmbedPermission{ get; set; }

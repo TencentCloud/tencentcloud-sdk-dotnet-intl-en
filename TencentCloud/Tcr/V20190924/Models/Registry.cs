@@ -118,6 +118,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
+        /// <summary>
+        /// Whether to enable instance deletion protection. false indicates it is not enabled.
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +145,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
             this.SetParamSimple(map, prefix + "PayMod", this.PayMod);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

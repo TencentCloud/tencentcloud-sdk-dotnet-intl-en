@@ -32,8 +32,8 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string Resource{ get; set; }
 
         /// <summary>
-        /// Action. Valid values: `tcr:PushRepository`, `tcr:PullRepository`
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Actions. Currently only support: tcr:PushRepository, tcr:PullRepository, tcr:CreateRepository, tcr:CreateHelmChart, tcr:DescribeHelmCharts.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Actions")]
         public string[] Actions{ get; set; }

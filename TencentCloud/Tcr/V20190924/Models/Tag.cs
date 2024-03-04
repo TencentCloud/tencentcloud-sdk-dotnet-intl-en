@@ -25,13 +25,13 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// Cloud tag key
+        /// Cloud tag key.Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Cloud tag value
+        /// Cloud tag value.Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

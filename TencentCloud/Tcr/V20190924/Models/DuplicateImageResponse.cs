@@ -21,7 +21,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyCustomAccountResponse : AbstractModel
+    public class DuplicateImageResponse : AbstractModel
     {
         
         /// <summary>
