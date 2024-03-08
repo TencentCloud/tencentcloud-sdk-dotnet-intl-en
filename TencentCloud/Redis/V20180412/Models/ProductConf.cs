@@ -111,12 +111,21 @@ namespace TencentCloud.Redis.V20180412.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Whether to support read-only replicas
-        /// - `true`: Supported.
-        /// -`false`: Not supported.
+        /// Due to spelling inconsistency in this parameter name, it is recommended to use the **EnableReplicaReadOnly** parameter instead. Its meaning refers to whether the Read-Only Replica is supported.
+        /// - true: Supported.
+        /// - false: Not supported.
         /// </summary>
         [JsonProperty("EnableRepicaReadOnly")]
         public bool? EnableRepicaReadOnly{ get; set; }
+
+        /// <summary>
+        /// Whether the Read-Only Replica is supported.
+        /// - true: Supported.
+        /// - false: Not supported.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("EnableReplicaReadOnly")]
+        public bool? EnableReplicaReadOnly{ get; set; }
 
 
         /// <summary>
@@ -137,6 +146,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "ShardNum.", this.ShardNum);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "EnableRepicaReadOnly", this.EnableRepicaReadOnly);
+            this.SetParamSimple(map, prefix + "EnableReplicaReadOnly", this.EnableReplicaReadOnly);
         }
     }
 }

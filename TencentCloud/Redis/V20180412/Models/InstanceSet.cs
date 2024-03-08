@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+        /// Region IDs. <ul><li>1: Guangzhou. </li><li>4: Shanghai. </li><li>5: Hong Kong, China. </li><li>6: Toronto. </li><li>8: Beijing. </li><li>9: Singapore. </li><li>15: West US (Silicon Valley). </li><li>16: Chengdu. </li><li>17: Frankfurt. </li><li>18: Seoul. </li><li>19: Chongqing. </li><li>21: Mumbai. </li><li>22: East US (Virginia). </li><li>23: Bangkok. </li><li>25: Tokyo. </li></ul>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
@@ -282,11 +282,18 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? PasswordFree{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
+
+        /// <summary>
+        /// Internal parameters, which can be ignored by users.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IPv6")]
+        public string IPv6{ get; set; }
 
         /// <summary>
         /// Read-only instance flag (internal parameter, which can be ignored)
@@ -433,6 +440,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "NetLimit", this.NetLimit);
             this.SetParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
             this.SetParamSimple(map, prefix + "Vip6", this.Vip6);
+            this.SetParamSimple(map, prefix + "IPv6", this.IPv6);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);

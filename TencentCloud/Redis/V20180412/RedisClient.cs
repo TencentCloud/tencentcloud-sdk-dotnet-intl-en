@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.852";
+       private const string sdkVersion = "SDK_NET_3.0.853";
 
         /// <summary>
         /// Client constructor.
@@ -264,7 +264,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to create an instance sub-account.
+        /// This API is used to customize the account for accessing the instance.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
         /// <returns><see cref="CreateInstanceAccountResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to create an instance sub-account.
+        /// This API is used to customize the account for accessing the instance.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
         /// <returns><see cref="CreateInstanceAccountResponse"/></returns>
@@ -848,6 +848,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeInstanceShardsResponse DescribeInstanceShardsSync(DescribeInstanceShardsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceShardsResponse>(req, "DescribeInstanceShards")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API (DescribeInstanceSupportFeature) is used to query the supported features of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSupportFeatureRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSupportFeatureResponse"/></returns>
+        public Task<DescribeInstanceSupportFeatureResponse> DescribeInstanceSupportFeature(DescribeInstanceSupportFeatureRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSupportFeatureResponse>(req, "DescribeInstanceSupportFeature");
+        }
+
+        /// <summary>
+        /// This API (DescribeInstanceSupportFeature) is used to query the supported features of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSupportFeatureRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSupportFeatureResponse"/></returns>
+        public DescribeInstanceSupportFeatureResponse DescribeInstanceSupportFeatureSync(DescribeInstanceSupportFeatureRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSupportFeatureResponse>(req, "DescribeInstanceSupportFeature")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1482,6 +1503,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to change the availability zone of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAvailabilityZonesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAvailabilityZonesResponse"/></returns>
+        public Task<ModifyInstanceAvailabilityZonesResponse> ModifyInstanceAvailabilityZones(ModifyInstanceAvailabilityZonesRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAvailabilityZonesResponse>(req, "ModifyInstanceAvailabilityZones");
+        }
+
+        /// <summary>
+        /// This API is used to change the availability zone of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAvailabilityZonesRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAvailabilityZonesResponse"/></returns>
+        public ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZonesSync(ModifyInstanceAvailabilityZonesRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAvailabilityZonesResponse>(req, "ModifyInstanceAvailabilityZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the parameters of TencentDB for Redis instances
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
@@ -1730,6 +1772,27 @@ namespace TencentCloud.Redis.V20180412
         public StartupInstanceResponse StartupInstanceSync(StartupInstanceRequest req)
         {
             return InternalRequestAsync<StartupInstanceResponse>(req, "StartupInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to immediately switch instances that are in the time window pending switch operation. Users can manually initiate this operation.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchAccessNewInstanceRequest"/></param>
+        /// <returns><see cref="SwitchAccessNewInstanceResponse"/></returns>
+        public Task<SwitchAccessNewInstanceResponse> SwitchAccessNewInstance(SwitchAccessNewInstanceRequest req)
+        {
+            return InternalRequestAsync<SwitchAccessNewInstanceResponse>(req, "SwitchAccessNewInstance");
+        }
+
+        /// <summary>
+        /// This API is used to immediately switch instances that are in the time window pending switch operation. Users can manually initiate this operation.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchAccessNewInstanceRequest"/></param>
+        /// <returns><see cref="SwitchAccessNewInstanceResponse"/></returns>
+        public SwitchAccessNewInstanceResponse SwitchAccessNewInstanceSync(SwitchAccessNewInstanceRequest req)
+        {
+            return InternalRequestAsync<SwitchAccessNewInstanceResponse>(req, "SwitchAccessNewInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

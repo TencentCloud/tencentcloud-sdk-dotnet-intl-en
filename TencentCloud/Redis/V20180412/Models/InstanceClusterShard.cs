@@ -69,10 +69,17 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? StorageSlope{ get; set; }
 
         /// <summary>
-        /// Instance runtime node ID
+        /// This field is recommended to use the RunId instead due to spelling inconsistency.
+        ///  Meaning: The node ID during instance runtime.
         /// </summary>
         [JsonProperty("Runid")]
         public string Runid{ get; set; }
+
+        /// <summary>
+        /// The node ID during instance runtime.
+        /// </summary>
+        [JsonProperty("RunId")]
+        public string RunId{ get; set; }
 
         /// <summary>
         /// Service status
@@ -96,6 +103,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "StorageSlope", this.StorageSlope);
             this.SetParamSimple(map, prefix + "Runid", this.Runid);
+            this.SetParamSimple(map, prefix + "RunId", this.RunId);
             this.SetParamSimple(map, prefix + "Connected", this.Connected);
         }
     }

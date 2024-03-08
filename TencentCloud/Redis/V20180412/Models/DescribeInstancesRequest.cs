@@ -44,13 +44,16 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance list sorting criteria. The enumerated values are as listed below:  <ul><li>`projectId`:  Project ID.  </li><li>`createtime`:  Instance creation time.  </li><li>`instancename`:  Instance name.  </li><li>`type`:  Instance type. </li><li>`curDeadline`:  Instance expiration time. </li></ul>
+        /// The instance list is sorted according to the following enumeration valid values:
+        /// - projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Instance sorting order. <ul><li>`1`: Descending. </li><li>`0`: Ascending. Default value: `1`.</li></ul>
+        /// For instance sorting order, the default is descending order.
+        /// - 1: Descending order.
+        /// - 0: Ascending order.
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
@@ -68,7 +71,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// Keywords for fuzzy query. which can be used to fuzzy query an instance by its ID or name.
+        /// Setting keywords field for fuzzy query, only instance names support fuzzy query.
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
@@ -104,13 +107,20 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] RegionIds{ get; set; }
 
         /// <summary>
-        /// Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+        /// Instance status.
+        /// - 0: To be initialized.
+        /// - 1: In process.
+        /// - 2: Running.
+        /// - -2: Isolated.
+        /// - -3: Pending Delete.
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Instance architecture. <ul><li>`1`: Standalone edition. </li><li>`2`: Master-replica edition. </li><li>`3`: Cluster edition. </li></ul>
+        /// Instance architecture version.
+        /// - 1: Single-node edition.
+        /// - 2: Master-replica edition.- 3: Cluster edition.
         /// </summary>
         [JsonProperty("TypeVersion")]
         public long? TypeVersion{ get; set; }
@@ -122,7 +132,10 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EngineName{ get; set; }
 
         /// <summary>
-        /// Renewal mode. Valid values:  <ul><li>`0`:  Manual renewal </li><li>`1`:  Auto-renewal </li><li>`2`:  No renewal upon expiration </ul>
+        /// Renewal pattern.
+        /// - 0: Manual renewal.
+        /// - 1: Automatic renewal.
+        /// - 2: No renewal after expiry.
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long?[] AutoRenew{ get; set; }
@@ -140,7 +153,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Array of the search keywords, which can query the instance by its ID, name, IP address.
+        /// This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
+        /// - Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
         /// </summary>
         [JsonProperty("SearchKeys")]
         public string[] SearchKeys{ get; set; }
@@ -170,7 +184,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// Instance product version.  If this parameter is not passed in or the array is empty, the instances will not be filtered based this parameter by default.  <ul><li>`local`:  Local disk edition.  </li><li>`cdc`:  Dedicated cluster edition.  </li></ul>
+        /// The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
+        /// - local: local Disk Edition.- cdc: Cluster dedicated edition.
         /// </summary>
         [JsonProperty("ProductVersions")]
         public string[] ProductVersions{ get; set; }
@@ -182,7 +197,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// AZ deployment mode. <ul><li>`singleaz`: Single-AZ. </li><li>`1`: Multi-AZ. </li></ul>
+        /// Availability zone mode.
+        /// - singleaz: Single availability zone.- multiaz: Multiple availability zones.
         /// </summary>
         [JsonProperty("AzMode")]
         public string AzMode{ get; set; }

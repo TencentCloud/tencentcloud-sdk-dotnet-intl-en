@@ -25,43 +25,44 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Sub-account name
+        /// Custom the name of the database to access.
+        /// - Contains only letters, digits, underscores, and hyphens.
+        /// - The length cannot exceed 32 characters.
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
-        /// 2. It cannot start with a slash (/).
-        /// 3. It must contain characters in at least two of the following types:
-        ///     a. Lowercase letters (a–z)
-        ///     b. Uppercase letters (A–Z)
-        ///     c. Digits (0–9)
-        ///     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+        /// Set a password for the customized account. The password complexity requirements are as follows:
+        /// - Value range: [8, 32].
+        /// - Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// Routing policy. Valid values: master (master node); replication (replica node)
+        /// The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
+        /// - master: Master node.- replication: Replica node.
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Read/Write policy. Valid values: r (read-only); rw (read/write).
+        /// The read/write permission of the account supports the selection of read-only and read/write permissions.
+        /// - r: read-only
+        /// - rw: Read/Write permission.
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Sub-account description information
+        /// Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Hot key
+        /// The name of the hot key.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Type
+        /// Key type.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Count
+        /// Number of accesses for the hot key in a specified time period.
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

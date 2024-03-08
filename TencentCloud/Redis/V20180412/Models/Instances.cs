@@ -98,11 +98,18 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored.
+        /// Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
+
+        /// <summary>
+        /// Internal parameters, which can be ignored by users.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IPv6")]
+        public string IPv6{ get; set; }
 
         /// <summary>
         /// VPC ID, such as `75101`.
@@ -175,6 +182,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vip6", this.Vip6);
+            this.SetParamSimple(map, prefix + "IPv6", this.IPv6);
             this.SetParamSimple(map, prefix + "VpcID", this.VpcID);
             this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamSimple(map, prefix + "Status", this.Status);

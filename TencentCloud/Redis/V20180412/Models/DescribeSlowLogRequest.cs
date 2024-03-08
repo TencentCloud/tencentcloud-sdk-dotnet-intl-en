@@ -61,7 +61,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+        /// Node role.
+        /// - master: Master node.- slave: Replica node.
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
