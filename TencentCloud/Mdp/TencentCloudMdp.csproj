@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.857</VersionPrefix>
+    <VersionPrefix>3.0.858</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,11 +48,13 @@
 
   <ItemGroup>
     <Compile Include="V20200527\MdpClient.cs" />
+    <Compile Include="V20200527\Models\AliasValueConf.cs" />
     <Compile Include="V20200527\Models\BindNewLVBDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\BindNewLVBDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\CacheInfo.cs" />
     <Compile Include="V20200527\Models\CacheInfoInfo.cs" />
     <Compile Include="V20200527\Models\ChannelInfo.cs" />
+    <Compile Include="V20200527\Models\ConfigAliasesInfo.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelRequest.cs" />
@@ -87,6 +89,7 @@
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelRequest.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelResponse.cs" />
     <Compile Include="V20200527\Models\PointInfo.cs" />
+    <Compile Include="V20200527\Models\SSAIConf.cs" />
     <Compile Include="V20200527\Models\UnbindCdnDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\UnbindCdnDomainWithChannelResponse.cs" />
   </ItemGroup>
