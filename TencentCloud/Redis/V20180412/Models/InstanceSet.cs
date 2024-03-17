@@ -103,7 +103,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? Size{ get; set; }
 
         /// <summary>
-        /// This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+        /// This field has been disused. You can use the TCOP [GetMonitorData](https://www.tencentcloud.com/zh/document/product/248/33881) API to query the capacity used by the instance.
         /// </summary>
         [JsonProperty("SizeUsed")]
         public float? SizeUsed{ get; set; }
