@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.861";
+       private const string sdkVersion = "SDK_NET_3.0.862";
 
         /// <summary>
         /// Client constructor.
