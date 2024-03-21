@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.862";
+       private const string sdkVersion = "SDK_NET_3.0.863";
 
         /// <summary>
         /// Client constructor.
@@ -226,6 +226,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to create key-value indexes for relevant delivered log fields in the corresponding Tencent Cloud CLS log topic for a specified real-time log delivery task (task-id). If such indexes have been created in CLS, this API will append indexes through merging.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSIndexRequest"/></param>
+        /// <returns><see cref="CreateCLSIndexResponse"/></returns>
+        public Task<CreateCLSIndexResponse> CreateCLSIndex(CreateCLSIndexRequest req)
+        {
+            return InternalRequestAsync<CreateCLSIndexResponse>(req, "CreateCLSIndex");
+        }
+
+        /// <summary>
+        /// This API is used to create key-value indexes for relevant delivered log fields in the corresponding Tencent Cloud CLS log topic for a specified real-time log delivery task (task-id). If such indexes have been created in CLS, this API will append indexes through merging.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSIndexRequest"/></param>
+        /// <returns><see cref="CreateCLSIndexResponse"/></returns>
+        public CreateCLSIndexResponse CreateCLSIndexSync(CreateCLSIndexRequest req)
+        {
+            return InternalRequestAsync<CreateCLSIndexResponse>(req, "CreateCLSIndex")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
@@ -373,6 +394,29 @@ namespace TencentCloud.Teo.V20220901
         public CreatePurgeTaskResponse CreatePurgeTaskSync(CreatePurgeTaskRequest req)
         {
             return InternalRequestAsync<CreatePurgeTaskResponse>(req, "CreatePurgeTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create real-time log delivery tasks. This API has the following restrictions:
+        /// Under the same combination of data delivery type (LogType) and data delivery area (Area), an entity (Layer 7 domain or Layer 4 proxy instance) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1) API to check whether an entity has been added to a real-time log delivery task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
+        /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
+        public Task<CreateRealtimeLogDeliveryTaskResponse> CreateRealtimeLogDeliveryTask(CreateRealtimeLogDeliveryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRealtimeLogDeliveryTaskResponse>(req, "CreateRealtimeLogDeliveryTask");
+        }
+
+        /// <summary>
+        /// This API is used to create real-time log delivery tasks. This API has the following restrictions:
+        /// Under the same combination of data delivery type (LogType) and data delivery area (Area), an entity (Layer 7 domain or Layer 4 proxy instance) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1) API to check whether an entity has been added to a real-time log delivery task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
+        /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
+        public CreateRealtimeLogDeliveryTaskResponse CreateRealtimeLogDeliveryTaskSync(CreateRealtimeLogDeliveryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRealtimeLogDeliveryTaskResponse>(req, "CreateRealtimeLogDeliveryTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -608,6 +652,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteOriginGroupResponse DeleteOriginGroupSync(DeleteOriginGroupRequest req)
         {
             return InternalRequestAsync<DeleteOriginGroupResponse>(req, "DeleteOriginGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a real-time log delivery task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRealtimeLogDeliveryTaskRequest"/></param>
+        /// <returns><see cref="DeleteRealtimeLogDeliveryTaskResponse"/></returns>
+        public Task<DeleteRealtimeLogDeliveryTaskResponse> DeleteRealtimeLogDeliveryTask(DeleteRealtimeLogDeliveryTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRealtimeLogDeliveryTaskResponse>(req, "DeleteRealtimeLogDeliveryTask");
+        }
+
+        /// <summary>
+        /// This API is used to delete a real-time log delivery task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRealtimeLogDeliveryTaskRequest"/></param>
+        /// <returns><see cref="DeleteRealtimeLogDeliveryTaskResponse"/></returns>
+        public DeleteRealtimeLogDeliveryTaskResponse DeleteRealtimeLogDeliveryTaskSync(DeleteRealtimeLogDeliveryTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRealtimeLogDeliveryTaskResponse>(req, "DeleteRealtimeLogDeliveryTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1221,6 +1286,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the real-time log delivery task list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeLogDeliveryTasksRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeLogDeliveryTasksResponse"/></returns>
+        public Task<DescribeRealtimeLogDeliveryTasksResponse> DescribeRealtimeLogDeliveryTasks(DescribeRealtimeLogDeliveryTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRealtimeLogDeliveryTasksResponse>(req, "DescribeRealtimeLogDeliveryTasks");
+        }
+
+        /// <summary>
+        /// This API is used to query the real-time log delivery task list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeLogDeliveryTasksRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeLogDeliveryTasksResponse"/></returns>
+        public DescribeRealtimeLogDeliveryTasksResponse DescribeRealtimeLogDeliveryTasksSync(DescribeRealtimeLogDeliveryTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRealtimeLogDeliveryTasksResponse>(req, "DescribeRealtimeLogDeliveryTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the rules in the rule engine.
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
@@ -1792,6 +1878,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyOriginGroupResponse ModifyOriginGroupSync(ModifyOriginGroupRequest req)
         {
             return InternalRequestAsync<ModifyOriginGroupResponse>(req, "ModifyOriginGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRealtimeLogDeliveryTaskRequest"/></param>
+        /// <returns><see cref="ModifyRealtimeLogDeliveryTaskResponse"/></returns>
+        public Task<ModifyRealtimeLogDeliveryTaskResponse> ModifyRealtimeLogDeliveryTask(ModifyRealtimeLogDeliveryTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRealtimeLogDeliveryTaskResponse>(req, "ModifyRealtimeLogDeliveryTask");
+        }
+
+        /// <summary>
+        /// This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRealtimeLogDeliveryTaskRequest"/></param>
+        /// <returns><see cref="ModifyRealtimeLogDeliveryTaskResponse"/></returns>
+        public ModifyRealtimeLogDeliveryTaskResponse ModifyRealtimeLogDeliveryTaskSync(ModifyRealtimeLogDeliveryTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRealtimeLogDeliveryTaskResponse>(req, "ModifyRealtimeLogDeliveryTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
