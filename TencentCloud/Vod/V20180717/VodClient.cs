@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.864";
+       private const string sdkVersion = "SDK_NET_3.0.865";
 
         /// <summary>
         /// Client constructor.
@@ -2578,6 +2578,27 @@ namespace TencentCloud.Vod.V20180717
         public ExtractTraceWatermarkResponse ExtractTraceWatermarkSync(ExtractTraceWatermarkRequest req)
         {
             return InternalRequestAsync<ExtractTraceWatermarkResponse>(req, "ExtractTraceWatermark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Implement fast splicing and editing of HLS videos to generate new HLS format media.
+        /// </summary>
+        /// <param name="req"><see cref="FastEditMediaRequest"/></param>
+        /// <returns><see cref="FastEditMediaResponse"/></returns>
+        public Task<FastEditMediaResponse> FastEditMedia(FastEditMediaRequest req)
+        {
+            return InternalRequestAsync<FastEditMediaResponse>(req, "FastEditMedia");
+        }
+
+        /// <summary>
+        /// Implement fast splicing and editing of HLS videos to generate new HLS format media.
+        /// </summary>
+        /// <param name="req"><see cref="FastEditMediaRequest"/></param>
+        /// <returns><see cref="FastEditMediaResponse"/></returns>
+        public FastEditMediaResponse FastEditMediaSync(FastEditMediaRequest req)
+        {
+            return InternalRequestAsync<FastEditMediaResponse>(req, "FastEditMedia")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
