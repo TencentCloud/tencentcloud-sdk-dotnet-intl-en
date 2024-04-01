@@ -31,7 +31,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string DocumentId{ get; set; }
 
         /// <summary>
-        /// The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+        /// The document's original URL. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DocumentUrl")]
         public string DocumentUrl{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Lcic.V20220817.Models
         public string DocumentName{ get; set; }
 
         /// <summary>
-        /// The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+        /// The user ID of the document's owner. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
@@ -136,6 +136,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Cover")]
         public string Cover{ get; set; }
 
+        /// <summary>
+        /// Document preview address
+        /// </summary>
+        [JsonProperty("Preview")]
+        public string Preview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +166,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Cover", this.Cover);
+            this.SetParamSimple(map, prefix + "Preview", this.Preview);
         }
     }
 }

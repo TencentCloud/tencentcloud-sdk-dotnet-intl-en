@@ -72,6 +72,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("DocumentSize")]
         public ulong? DocumentSize{ get; set; }
 
+        /// <summary>
+        /// Whether or not to enable automatic processing for unsupported elements. Default: off. The automatically processed elements are as follows: 1. Ink: Remove unsupported ink (e.g. WPS Ink) 2. Auto Page Turn: Remove all auto page turn settings on the PPT and set it to mouse click to turn the page 3. Corrupted Audio/Video: Remove references to corrupted audio/video on the PPT
+        /// </summary>
+        [JsonProperty("AutoHandleUnsupportedElement")]
+        public bool? AutoHandleUnsupportedElement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
             this.SetParamSimple(map, prefix + "DocumentType", this.DocumentType);
             this.SetParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
+            this.SetParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
         }
     }
 }

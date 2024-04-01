@@ -117,6 +117,72 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("EnableDirectControl")]
         public ulong? EnableDirectControl{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InteractionMode")]
+        public long? InteractionMode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VideoOrientation")]
+        public long? VideoOrientation{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsGradingRequiredPostClass")]
+        public long? IsGradingRequiredPostClass{ get; set; }
+
+        /// <summary>
+        /// Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+        /// </summary>
+        [JsonProperty("RoomType")]
+        public long? RoomType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EndDelayTime")]
+        public long? EndDelayTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LiveType")]
+        public ulong? LiveType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RecordLiveUrl")]
+        public string RecordLiveUrl{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EnableAutoStart")]
+        public ulong? EnableAutoStart{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RecordBackground")]
+        public string RecordBackground{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RecordScene")]
+        public string RecordScene{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RecordLang")]
+        public string RecordLang{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +202,17 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
             this.SetParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
             this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+            this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+            this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
+            this.SetParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+            this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
+            this.SetParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
+            this.SetParamSimple(map, prefix + "LiveType", this.LiveType);
+            this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
+            this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+            this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+            this.SetParamSimple(map, prefix + "RecordScene", this.RecordScene);
+            this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
         }
     }
 }

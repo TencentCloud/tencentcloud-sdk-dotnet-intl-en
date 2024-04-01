@@ -91,19 +91,19 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Rewords{ get; set; }
 
         /// <summary>
-        /// The user’s IP address.
+        /// The user's IP address.
         /// </summary>
         [JsonProperty("IPAddress")]
         public string IPAddress{ get; set; }
 
         /// <summary>
-        /// The user’s location.
+        /// The user's location.
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
-        /// The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+        /// The user's device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
         /// </summary>
         [JsonProperty("Device")]
         public long? Device{ get; set; }
@@ -146,6 +146,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Stage")]
         public long? Stage{ get; set; }
 
+        /// <summary>
+        /// User status. 0 is not present, 1 is online, 2 is offline, 3 is kicked, 4 is permanently kicked, 5 is temporarily offline
+        /// </summary>
+        [JsonProperty("CurrentState")]
+        public ulong? CurrentState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +178,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArraySimple(map, prefix + "SubGroupId.", this.SubGroupId);
             this.SetParamSimple(map, prefix + "Stage", this.Stage);
+            this.SetParamSimple(map, prefix + "CurrentState", this.CurrentState);
         }
     }
 }

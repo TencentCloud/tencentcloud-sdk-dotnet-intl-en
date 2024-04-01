@@ -54,6 +54,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// Classroom status. Default display all classes, 0 is not started, 1 is in class, 2 is finished, 3 is expired
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong?[] Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
         }
     }
 }

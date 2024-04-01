@@ -134,6 +134,73 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("EnableDirectControl")]
         public ulong? EnableDirectControl{ get; set; }
 
+        /// <summary>
+        /// Turn on focus mode. 0 Watch all character audio and video (default) 1 Watch only teachers and assistants
+        /// </summary>
+        [JsonProperty("InteractionMode")]
+        public long? InteractionMode{ get; set; }
+
+        /// <summary>
+        /// Horizontal and vertical screen. 0: Horizontal screen  (default); 1: Vertical screen , currently only support mobile video type
+        /// </summary>
+        [JsonProperty("VideoOrientation")]
+        public ulong? VideoOrientation{ get; set; }
+
+        /// <summary>
+        /// Enable after-class grading. 0: not on (default) 1: on
+        /// </summary>
+        [JsonProperty("IsGradingRequiredPostClass")]
+        public long? IsGradingRequiredPostClass{ get; set; }
+
+        /// <summary>
+        /// Room Type: 0 Small Classroom(default); 1 Lecture Hall(public class)
+        /// </summary>
+        [JsonProperty("RoomType")]
+        public long? RoomType{ get; set; }
+
+        /// <summary>
+        /// Drag class time: unit: minutes. 0: no limit (default), -1: can't drag class, greater than 0: the time of dragging class. maximum value: 120 minutes.
+        /// </summary>
+        [JsonProperty("EndDelayTime")]
+        public long? EndDelayTime{ get; set; }
+
+        /// <summary>
+        /// Live type: 0 regular (default) 1 Simulated Live
+        /// </summary>
+        [JsonProperty("LiveType")]
+        public ulong? LiveType{ get; set; }
+
+        /// <summary>
+        /// Simulated Live link
+        /// </summary>
+        [JsonProperty("RecordLiveUrl")]
+        public string RecordLiveUrl{ get; set; }
+
+        /// <summary>
+        /// Whether to start the lesson automatically: 0 not automatic lesson (default) 1 automatic lesson live_type=1 is valid when
+        /// </summary>
+        [JsonProperty("EnableAutoStart")]
+        public ulong? EnableAutoStart{ get; set; }
+
+        /// <summary>
+        /// Recorded file background image, support png, jpg, jpeg, bmp format, does not support transparent channel for the time being
+        /// </summary>
+        [JsonProperty("RecordBackground")]
+        public string RecordBackground{ get; set; }
+
+        /// <summary>
+        /// Record customized scene, only recordlayout=9 this parameter is valid, the data content for the user-defined scene parameters, data format for the json key-value pairs, where the key-value pairs of the value for the string type.
+        /// </summary>
+        [JsonProperty("RecordScene")]
+        public string RecordScene{ get; set; }
+
+        /// <summary>
+        /// Record customized language, only when recordlayout=9, this parameter is valid.
+        /// </summary>
+        [JsonProperty("RecordLang")]
+        [System.Obsolete]
+        public string RecordLang{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +225,17 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+            this.SetParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+            this.SetParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
+            this.SetParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+            this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
+            this.SetParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
+            this.SetParamSimple(map, prefix + "LiveType", this.LiveType);
+            this.SetParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
+            this.SetParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+            this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+            this.SetParamSimple(map, prefix + "RecordScene", this.RecordScene);
+            this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
         }
     }
 }

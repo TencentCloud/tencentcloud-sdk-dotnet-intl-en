@@ -45,6 +45,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("ImageMessage")]
         public string ImageMessage{ get; set; }
 
+        /// <summary>
+        /// Customize the message content. Vaild when message type=2.
+        /// </summary>
+        [JsonProperty("CustomMessage")]
+        public CustomMsgContent CustomMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "MessageType", this.MessageType);
             this.SetParamSimple(map, prefix + "TextMessage", this.TextMessage);
             this.SetParamSimple(map, prefix + "ImageMessage", this.ImageMessage);
+            this.SetParamObj(map, prefix + "CustomMessage.", this.CustomMessage);
         }
     }
 }

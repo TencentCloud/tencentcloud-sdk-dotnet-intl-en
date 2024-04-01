@@ -52,6 +52,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
+        /// <summary>
+        /// User's Id in the client system
+        /// </summary>
+        [JsonProperty("OriginId")]
+        public string OriginId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Avatar", this.Avatar);
+            this.SetParamSimple(map, prefix + "OriginId", this.OriginId);
         }
     }
 }
