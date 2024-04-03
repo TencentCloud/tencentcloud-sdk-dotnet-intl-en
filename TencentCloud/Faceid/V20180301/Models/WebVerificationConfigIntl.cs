@@ -70,6 +70,36 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("DisableCheckOcrWarnings")]
         public bool? DisableCheckOcrWarnings{ get; set; }
 
+        /// <summary>
+        /// Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+        /// </summary>
+        [JsonProperty("SecurityLevel")]
+        public long? SecurityLevel{ get; set; }
+
+        /// <summary>
+        /// Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+        /// </summary>
+        [JsonProperty("SkipPrivacyPolicy")]
+        public bool? SkipPrivacyPolicy{ get; set; }
+
+        /// <summary>
+        /// The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+        /// </summary>
+        [JsonProperty("IdCardCutReturn")]
+        public bool? IdCardCutReturn{ get; set; }
+
+        /// <summary>
+        /// Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72+1". If the format is incorrect, the default value color will be used.
+        /// </summary>
+        [JsonProperty("ThemeColor")]
+        public string ThemeColor{ get; set; }
+
+        /// <summary>
+        /// International language, the default value is en (English). Currently supported: th: Thai; en: English;
+        /// </summary>
+        [JsonProperty("Language")]
+        public string Language{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +111,11 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "CheckMode", this.CheckMode);
             this.SetParamSimple(map, prefix + "IDCardType", this.IDCardType);
             this.SetParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
+            this.SetParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
+            this.SetParamSimple(map, prefix + "SkipPrivacyPolicy", this.SkipPrivacyPolicy);
+            this.SetParamSimple(map, prefix + "IdCardCutReturn", this.IdCardCutReturn);
+            this.SetParamSimple(map, prefix + "ThemeColor", this.ThemeColor);
+            this.SetParamSimple(map, prefix + "Language", this.Language);
         }
     }
 }
