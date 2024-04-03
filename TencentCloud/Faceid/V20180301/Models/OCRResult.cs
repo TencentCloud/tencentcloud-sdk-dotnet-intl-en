@@ -49,6 +49,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
+        /// <summary>
+        /// Base64 of cropped image of ID card
+        /// </summary>
+        [JsonProperty("CardCutImageBase64")]
+        public string CardCutImageBase64{ get; set; }
+
+        /// <summary>
+        /// Base64 of the cropped image on the reverse side of the ID card
+        /// </summary>
+        [JsonProperty("CardBackCutImageBase64")]
+        public string CardBackCutImageBase64{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +71,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "CardImageBase64", this.CardImageBase64);
             this.SetParamObj(map, prefix + "CardInfo.", this.CardInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "CardCutImageBase64", this.CardCutImageBase64);
+            this.SetParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
         }
     }
 }
