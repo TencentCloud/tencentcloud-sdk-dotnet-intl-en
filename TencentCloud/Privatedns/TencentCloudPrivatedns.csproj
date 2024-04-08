@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F711E1FC-542C-3536-9601-50E098B1102E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.872</VersionPrefix>
+    <VersionPrefix>3.0.873</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20201028\Models\CreatePrivateZoneRequest.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneResponse.cs" />
     <Compile Include="V20201028\Models\DatePoint.cs" />
+    <Compile Include="V20201028\Models\DeletePrivateZoneRecordRequest.cs" />
+    <Compile Include="V20201028\Models\DeletePrivateZoneRecordResponse.cs" />
     <Compile Include="V20201028\Models\DescribeAccountVpcListRequest.cs" />
     <Compile Include="V20201028\Models\DescribeAccountVpcListResponse.cs" />
     <Compile Include="V20201028\Models\DescribeAuditLogRequest.cs" />
@@ -68,6 +70,10 @@
     <Compile Include="V20201028\Models\DescribeDashboardResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateDNSAccountListRequest.cs" />
     <Compile Include="V20201028\Models\DescribePrivateDNSAccountListResponse.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneListResponse.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneRecordListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneRecordListResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneServiceRequest.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneServiceResponse.cs" />
     <Compile Include="V20201028\Models\DescribeQuotaUsageRequest.cs" />
@@ -86,6 +92,8 @@
     <Compile Include="V20201028\Models\ModifyRecordsStatusRequest.cs" />
     <Compile Include="V20201028\Models\ModifyRecordsStatusResponse.cs" />
     <Compile Include="V20201028\Models\PrivateDNSAccount.cs" />
+    <Compile Include="V20201028\Models\PrivateZone.cs" />
+    <Compile Include="V20201028\Models\PrivateZoneRecord.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />
     <Compile Include="V20201028\Models\TagInfo.cs" />

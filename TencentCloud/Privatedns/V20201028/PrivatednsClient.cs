@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.872";
+       private const string sdkVersion = "SDK_NET_3.0.873";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// This API is used to delete a DNS record for a private domain.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateZoneRecordRequest"/></param>
+        /// <returns><see cref="DeletePrivateZoneRecordResponse"/></returns>
+        public Task<DeletePrivateZoneRecordResponse> DeletePrivateZoneRecord(DeletePrivateZoneRecordRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateZoneRecordResponse>(req, "DeletePrivateZoneRecord");
+        }
+
+        /// <summary>
+        /// This API is used to delete a DNS record for a private domain.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateZoneRecordRequest"/></param>
+        /// <returns><see cref="DeletePrivateZoneRecordResponse"/></returns>
+        public DeletePrivateZoneRecordResponse DeletePrivateZoneRecordSync(DeletePrivateZoneRecordRequest req)
+        {
+            return InternalRequestAsync<DeletePrivateZoneRecordResponse>(req, "DeletePrivateZoneRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the VPC list of a Private DNS account.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountVpcListRequest"/></param>
@@ -197,6 +218,48 @@ namespace TencentCloud.Privatedns.V20201028
         public DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountListSync(DescribePrivateDNSAccountListRequest req)
         {
             return InternalRequestAsync<DescribePrivateDNSAccountListResponse>(req, "DescribePrivateDNSAccountList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the list of private domains.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateZoneListRequest"/></param>
+        /// <returns><see cref="DescribePrivateZoneListResponse"/></returns>
+        public Task<DescribePrivateZoneListResponse> DescribePrivateZoneList(DescribePrivateZoneListRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateZoneListResponse>(req, "DescribePrivateZoneList");
+        }
+
+        /// <summary>
+        /// This API is used to get the list of private domains.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateZoneListRequest"/></param>
+        /// <returns><see cref="DescribePrivateZoneListResponse"/></returns>
+        public DescribePrivateZoneListResponse DescribePrivateZoneListSync(DescribePrivateZoneListRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateZoneListResponse>(req, "DescribePrivateZoneList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the list of records for a private domain.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateZoneRecordListRequest"/></param>
+        /// <returns><see cref="DescribePrivateZoneRecordListResponse"/></returns>
+        public Task<DescribePrivateZoneRecordListResponse> DescribePrivateZoneRecordList(DescribePrivateZoneRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateZoneRecordListResponse>(req, "DescribePrivateZoneRecordList");
+        }
+
+        /// <summary>
+        /// This API is used to get the list of records for a private domain.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivateZoneRecordListRequest"/></param>
+        /// <returns><see cref="DescribePrivateZoneRecordListResponse"/></returns>
+        public DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordListSync(DescribePrivateZoneRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribePrivateZoneRecordListResponse>(req, "DescribePrivateZoneRecordList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
