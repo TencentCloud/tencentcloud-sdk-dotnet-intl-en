@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.873";
+       private const string sdkVersion = "SDK_NET_3.0.874";
 
         /// <summary>
         /// Client constructor.
@@ -398,8 +398,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create real-time log delivery tasks. This API has the following restrictions:
-        /// Under the same combination of data delivery type (LogType) and data delivery area (Area), an entity (Layer 7 domain or Layer 4 proxy instance) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1) API to check whether an entity has been added to a real-time log delivery task.
+        /// This API is used to create a real-time log delivery task. The following limits apply:
+        /// An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combination of the same data delivery type (LogType) and data delivery area (Area) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) API to check whether the entity has been added to another real-time log delivery task.
         /// </summary>
         /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
@@ -409,8 +409,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create real-time log delivery tasks. This API has the following restrictions:
-        /// Under the same combination of data delivery type (LogType) and data delivery area (Area), an entity (Layer 7 domain or Layer 4 proxy instance) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1) API to check whether an entity has been added to a real-time log delivery task.
+        /// This API is used to create a real-time log delivery task. The following limits apply:
+        /// An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combination of the same data delivery type (LogType) and data delivery area (Area) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) API to check whether the entity has been added to another real-time log delivery task.
         /// </summary>
         /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
@@ -1345,6 +1345,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeRulesSettingResponse DescribeRulesSettingSync(DescribeRulesSettingRequest req)
         {
             return InternalRequestAsync<DescribeRulesSettingResponse>(req, "DescribeRulesSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupInfoRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupInfoResponse"/></returns>
+        public Task<DescribeSecurityIPGroupInfoResponse> DescribeSecurityIPGroupInfo(DescribeSecurityIPGroupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupInfoResponse>(req, "DescribeSecurityIPGroupInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupInfoRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupInfoResponse"/></returns>
+        public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfoSync(DescribeSecurityIPGroupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupInfoResponse>(req, "DescribeSecurityIPGroupInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

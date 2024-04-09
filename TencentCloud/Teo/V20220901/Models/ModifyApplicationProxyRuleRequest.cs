@@ -43,9 +43,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// The origin type. Values:
-        /// <li>`custom`: Specified origins</li>
-        /// <li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
+        /// Origin server type. Valid values:
+        /// <li>custom: Manually added;</li>
+        /// <li>origins: Origin server group.</li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }

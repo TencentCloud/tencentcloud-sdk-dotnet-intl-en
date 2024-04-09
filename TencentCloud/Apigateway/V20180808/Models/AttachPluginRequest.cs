@@ -25,25 +25,25 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// ID of the plugin to be bound
+        /// ID of the plugin to be bound.
         /// </summary>
         [JsonProperty("PluginId")]
         public string PluginId{ get; set; }
 
         /// <summary>
-        /// Service ID
+        /// Service ID.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// API environment
+        /// API environment.
         /// </summary>
         [JsonProperty("EnvironmentName")]
         public string EnvironmentName{ get; set; }
 
         /// <summary>
-        /// List of APIs bound with the plugin
+        /// List of APIs bound with the plugin.
         /// </summary>
         [JsonProperty("ApiIds")]
         public string[] ApiIds{ get; set; }

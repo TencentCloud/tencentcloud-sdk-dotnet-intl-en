@@ -37,13 +37,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public SecurityConfig SecurityConfig{ get; set; }
 
         /// <summary>
-        /// The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+        /// Subdomain/application name.
+        /// 
+        /// Note: When both this parameter and the TemplateId parameter are specified, this parameter will not take effect. Do not specify this parameter and the TemplateId parameter at the same time.
         /// </summary>
         [JsonProperty("Entity")]
         public string Entity{ get; set; }
 
         /// <summary>
-        /// The template ID. You must specify either this field or "Entity".
+        /// Specifies the policy template ID, or the site's global policy.
+        /// - To configure a policy template, specify the policy template ID.
+        /// - To configure the site's global policy, use the @ZoneLevel@Domain parameter value.
+        /// 
+        /// Note: When this parameter is used, the Entity parameter will not take effect. Do not use this parameter and the Entity parameter at the same time.
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

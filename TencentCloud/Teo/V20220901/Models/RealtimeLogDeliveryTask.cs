@@ -91,21 +91,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Sample{ get; set; }
 
         /// <summary>
-        /// The configuration information of CLS.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CLS")]
         public CLSTopic CLS{ get; set; }
 
         /// <summary>
-        /// The configuration information of the custom HTTP service.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CustomEndpoint")]
         public CustomEndpoint CustomEndpoint{ get; set; }
 
         /// <summary>
-        /// The configuration information of the AWS S3-compatible bucket.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("S3")]

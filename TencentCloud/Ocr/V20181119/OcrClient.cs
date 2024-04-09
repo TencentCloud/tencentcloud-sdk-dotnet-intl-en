@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.873";
+       private const string sdkVersion = "SDK_NET_3.0.874";
 
         /// <summary>
         /// Client constructor.
@@ -361,8 +361,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
-        /// 
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="MLIDPassportOCRRequest"/></param>
         /// <returns><see cref="MLIDPassportOCRResponse"/></returns>
@@ -373,8 +371,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to recognize a passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions. Recognizable fields include passport ID, name, date of birth, gender, expiration date, issuing country/region, and nationality. It has the features of cropping identity photos and alarming for photographed or photocopied documents.
-        /// 
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
         /// </summary>
         /// <param name="req"><see cref="MLIDPassportOCRRequest"/></param>
         /// <returns><see cref="MLIDPassportOCRResponse"/></returns>
