@@ -31,13 +31,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// CKafka instance ID, which is required when `KafkaType` is set to `0`
+        /// Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// Service address
+        /// Service AddressWhen KafkaType is 1, ServerAddr is required
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+        /// Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }

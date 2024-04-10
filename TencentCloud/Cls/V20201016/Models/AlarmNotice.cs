@@ -31,10 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Alarm template type. Valid values:
-        /// <br><li> `Trigger`: alarm triggered
-        /// <br><li> `Recovery`: alarm cleared
-        /// <br><li> `All`: alarm triggered and alarm cleared
+        /// Alarm template type. Optional values:<br><li> Trigger - Alarm Trigger </li><br><li> Recovery - Alarm Recovery </li><br><li> All - Alarm Trigger and Alarm Recovery </li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -74,6 +71,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// Notification rules.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NoticeRules")]
+        public NoticeRule[] NoticeRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +90,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AlarmNoticeId", this.AlarmNoticeId);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
         }
     }
 }

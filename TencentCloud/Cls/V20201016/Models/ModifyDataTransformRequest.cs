@@ -54,6 +54,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("DstResources")]
         public DataTransformResouceInfo[] DstResources{ get; set; }
 
+        /// <summary>
+        /// Whether to enable delivery service log. 1 for disabled, 2 for enabled
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "EtlContent", this.EtlContent);
             this.SetParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
             this.SetParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
         }
     }
 }

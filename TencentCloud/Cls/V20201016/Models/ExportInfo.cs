@@ -91,7 +91,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? To{ get; set; }
 
         /// <summary>
-        /// Log export path
+        /// Log export path, valid for one hour. Please download using this path as soon as possible.
         /// </summary>
         [JsonProperty("CosPath")]
         public string CosPath{ get; set; }
@@ -101,6 +101,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "CosPath", this.CosPath);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         }
     }
 }

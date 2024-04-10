@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// CLS topic identifier
+        /// Log Topic ID
         /// </summary>
         [JsonProperty("FromTopicId")]
         public string FromTopicId{ get; set; }

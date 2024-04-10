@@ -67,7 +67,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+        /// lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
@@ -79,14 +79,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Describes{ get; set; }
 
         /// <summary>
-        /// `0`: Disable log transitioning.
-        /// A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+        /// 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
         /// </summary>
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
-        /// Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+        /// Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }

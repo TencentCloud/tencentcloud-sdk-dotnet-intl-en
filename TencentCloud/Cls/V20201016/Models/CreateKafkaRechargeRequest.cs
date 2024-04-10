@@ -55,6 +55,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Offset{ get; set; }
 
         /// <summary>
+        /// Log Import Rules.
+        /// </summary>
+        [JsonProperty("LogRechargeRule")]
+        public LogRechargeRuleInfo LogRechargeRule{ get; set; }
+
+        /// <summary>
         /// CKafka instance ID, which is required when `KafkaType` is set to `0`
         /// </summary>
         [JsonProperty("KafkaInstance")]
@@ -73,7 +79,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+        /// Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
@@ -83,12 +89,6 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
-
-        /// <summary>
-        /// Log import rule
-        /// </summary>
-        [JsonProperty("LogRechargeRule")]
-        public LogRechargeRuleInfo LogRechargeRule{ get; set; }
 
 
         /// <summary>
@@ -101,12 +101,12 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "KafkaType", this.KafkaType);
             this.SetParamSimple(map, prefix + "UserKafkaTopics", this.UserKafkaTopics);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
             this.SetParamSimple(map, prefix + "KafkaInstance", this.KafkaInstance);
             this.SetParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
             this.SetParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
             this.SetParamObj(map, prefix + "Protocol.", this.Protocol);
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
-            this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
         }
     }
 }

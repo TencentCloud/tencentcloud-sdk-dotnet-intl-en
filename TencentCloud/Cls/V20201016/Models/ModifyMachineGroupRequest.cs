@@ -73,6 +73,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? ServiceLogging{ get; set; }
 
         /// <summary>
+        /// Regular offline cleaning time for machines in machine group
+        /// </summary>
+        [JsonProperty("DelayCleanupTime")]
+        public long? DelayCleanupTime{ get; set; }
+
+        /// <summary>
         /// Metadata information list of a machine group
         /// </summary>
         [JsonProperty("MetaTags")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
             this.SetParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
             this.SetParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+            this.SetParamSimple(map, prefix + "DelayCleanupTime", this.DelayCleanupTime);
             this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
         }
     }

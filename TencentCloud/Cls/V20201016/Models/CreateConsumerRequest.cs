@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Whether to ship log metadata. Default value: `true`
+        /// Whether to deliver log Metadata information, default is true.When NeedContent is true: Content field is valid.When NeedContent is false: Content field is invalid.
         /// </summary>
         [JsonProperty("NeedContent")]
         public bool? NeedContent{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public Ckafka Ckafka{ get; set; }
 
         /// <summary>
-        /// Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+        /// Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }

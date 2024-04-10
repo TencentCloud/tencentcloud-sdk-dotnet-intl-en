@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Format. Valid values: 0 (full-text) and 1 (JSON).
+        /// Consumption data format. Valid values: 0 (original content) and 1 (JSON).
         /// </summary>
         [JsonProperty("Format")]
         public long? Format{ get; set; }
@@ -46,18 +46,29 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] MetaFields{ get; set; }
 
         /// <summary>
-        /// Tag data processing mode. Valid values:
-        /// 1 (default): Do not tile data.
-        /// 2: Tile data.
+        /// Tag data processing mode: 1: Do not tile (default); 2: Tile.
+        /// 
+        /// Untiled example:
+        /// TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// 
+        /// Tiled example:
+        /// TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TagTransaction")]
         public long? TagTransaction{ get; set; }
 
         /// <summary>
-        /// JSON data format. Valid values:
-        /// 1 (default): Not escaped.
-        /// 2: Escaped.
+        /// JSON data format:
+        /// 1: Not escaped (default format)
+        /// 2: Escaped
+        /// 
+        /// Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
+        /// Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+        /// Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+        /// Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
         /// </summary>
         [JsonProperty("JsonType")]
         public long? JsonType{ get; set; }

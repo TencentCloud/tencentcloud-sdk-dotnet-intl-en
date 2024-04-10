@@ -43,13 +43,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// COS bucket.
+        /// COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// Region where the COS bucket is located.
+        /// The region where the COS bucket is located, see the supported [region list](https://intl.cloud.tencent.com/document/product/436/6224?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
@@ -68,7 +68,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Valid values: "" (default), "gzip", "lzop", "snappy"
+        /// Valid values: supported: "", "gzip", "lzop", "snappy"; Default value: "".
         /// </summary>
         [JsonProperty("Compress")]
         public string Compress{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Time field key name. `time_key` and `time_format` must appear in pairs
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Key name for the time field. TikeKey and TimeFormat must appear in pairsNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TimeKey")]
         public string TimeKey{ get; set; }
@@ -39,36 +38,31 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TimeFormat{ get; set; }
 
         /// <summary>
-        /// Delimiter for delimited log, which is valid only if `log_type` is `delimiter_log`
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Delimiter for log type. Valid only when LogType is delimiter_logNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Delimiter")]
         public string Delimiter{ get; set; }
 
         /// <summary>
-        /// Full log matching rule, which is valid only if `log_type` is `fullregex_log`
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Full log matching rule. Valid only if LogType is fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LogRegex")]
         public string LogRegex{ get; set; }
 
         /// <summary>
-        /// First-Line matching rule, which is valid only if `log_type` is `multiline_log` or `fullregex_log`
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Line beginning matching rule, valid only if LogType is multiline_log or fullregex_logNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BeginRegex")]
         public string BeginRegex{ get; set; }
 
         /// <summary>
-        /// Key name of each extracted field. An empty key indicates to discard the field. This parameter is valid only if `log_type` is `delimiter_log`. `json_log` logs use the key of JSON itself. A maximum of 100 keys are supported.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Key name of each extracted field. An empty key indicates discarding the field. Valid only if LogType is delimiter_log. json_log logs use the key of JSON itself. Limited to 100.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }
 
         /// <summary>
-        /// Log keys to be filtered and the corresponding regex
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Log filter rule list (previous version), keys to be filtered in the log and their corresponding regex.Note: For LogListener version 2.9.3 and later, it is recommended to use the AdvanceFilterRules configuration for log filtering.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FilterKeyRegex")]
         public KeyRegexInfo[] FilterKeyRegex{ get; set; }
@@ -88,8 +82,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string UnMatchLogKey{ get; set; }
 
         /// <summary>
-        /// Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Backtracking data volume under incremental collection pattern, default -1 indicates full collection; other non-negative numbers indicate incremental collection (collect logs backward from the latest position by ${Backtracking} bytes) with a maximum support of 1073741824 (1G).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Backtracking")]
         public long? Backtracking{ get; set; }
@@ -157,6 +150,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetaTags")]
         public MetaTagInfo[] MetaTags{ get; set; }
 
+        /// <summary>
+        /// Windows event log collection
+        /// </summary>
+        [JsonProperty("EventLogRules")]
+        public EventLog[] EventLogRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -181,6 +180,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MetadataType", this.MetadataType);
             this.SetParamSimple(map, prefix + "PathRegex", this.PathRegex);
             this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+            this.SetParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
         }
     }
 }

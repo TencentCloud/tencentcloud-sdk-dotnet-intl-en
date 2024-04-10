@@ -25,8 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Primary key ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -94,15 +93,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// Status. Valid values: 1 (running) and 2 (suspended).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Position for data import. Valid values: -2 (earliest, default) and -1 (latest).  
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

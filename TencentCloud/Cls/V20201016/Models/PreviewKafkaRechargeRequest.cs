@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// List of Kafka topics to import data from. Separate multiple topics with commas (,).
+        /// List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
         /// </summary>
         [JsonProperty("UserKafkaTopics")]
         public string UserKafkaTopics{ get; set; }
@@ -49,25 +49,27 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// CKafka instance ID, which is required when `KafkaType` is set to `0`
+        /// Tencent Cloud CKafka instance ID.
+        /// KafkaInstance is required when KafkaType is 0
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// Service address
+        /// Service AddressServerAddr is required when KafkaType is 1
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// Whether the service address uses an encrypted connection
+        /// Whether ServerAddr is a secure connection.
+        /// Valid when KafkaType is 1.
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// Encryption access protocol, which is required when `IsEncryptionAddr` is set to `true`
+        /// Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }

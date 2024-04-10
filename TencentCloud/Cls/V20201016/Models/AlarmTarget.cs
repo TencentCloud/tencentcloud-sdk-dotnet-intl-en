@@ -25,45 +25,44 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic ID
+        /// Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Query statement
+        /// Query statementNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// Monitoring object number, which is incremental from 1.
+        /// Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Number")]
         public long? Number{ get; set; }
 
         /// <summary>
-        /// Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+        /// Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public long? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+        /// Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public long? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Logset ID
+        /// Logset IDNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// Search syntax. Valid values:
-        /// `0` (default): Lucene; `1`: CQL
-        /// For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Syntax</a>.
+        /// Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }

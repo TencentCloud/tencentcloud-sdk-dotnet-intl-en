@@ -31,13 +31,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// Log topic ID
+        ///  Topic ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log topic name
+        /// Topic Name
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -49,14 +49,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? PartitionCount{ get; set; }
 
         /// <summary>
-        /// Whether index is enabled
+        /// Whether the topic has indexing enabled (the topic type must be log topic)
         /// </summary>
         [JsonProperty("Index")]
         public bool? Index{ get; set; }
 
         /// <summary>
-        /// Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssumerName")]
         public string AssumerName{ get; set; }
@@ -68,14 +67,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Whether collection is enabled in the log topic
+        /// Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// Information of tags bound to log topic
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -95,8 +93,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// Log topic storage class
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
@@ -116,19 +113,33 @@ namespace TencentCloud.Cls.V20201016.Models
         public string SubAssumerName{ get; set; }
 
         /// <summary>
-        /// Log topic description
+        /// Topic description
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
 
         /// <summary>
-        /// The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
-        /// The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+        /// Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
+
+        /// <summary>
+        /// Topic type.
+        /// - 0:  log  Topic  
+        /// - 1: Metric Topic
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BizType")]
+        public ulong? BizType{ get; set; }
+
+        /// <summary>
+        /// Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsWebTracking")]
+        public bool? IsWebTracking{ get; set; }
 
 
         /// <summary>
@@ -152,6 +163,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
+            this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         }
     }
 }

@@ -25,31 +25,29 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+        /// Full-text index configuration. If empty, full-text indexing is not enabled.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FullText")]
         public FullTextInfo FullText{ get; set; }
 
         /// <summary>
-        /// Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+        /// Key-value index configuration. If empty, key-value indexing is not enabled.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeyValue")]
         public RuleKeyValueInfo KeyValue{ get; set; }
 
         /// <summary>
-        /// Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+        /// Metadata field index configuration. If empty, metadata field indexing is not enabled.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tag")]
         public RuleTagInfo Tag{ get; set; }
 
         /// <summary>
-        /// Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
-        /// 
-        /// Note: This feature is currently in a beta test. To use it, please contact technical support.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Key-value index automatic configuration. If empty, the feature is not enabled.Once enabled, fields within logs are automatically added to the key-value index, including fields added to logs subsequently.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DynamicIndex")]
         public DynamicIndex DynamicIndex{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MonitorTime MonitorTime{ get; set; }
 
         /// <summary>
-        /// Trigger condition
+        /// Single trigger condition. Mutually exclusive with the MultiConditions parameter.
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
@@ -111,6 +111,37 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Analysis")]
         public AnalysisDimensional[] Analysis{ get; set; }
 
+        /// <summary>
+        /// Group trigger status. 1: Enabled, 0: Disabled (default)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("GroupTriggerStatus")]
+        public bool? GroupTriggerStatus{ get; set; }
+
+        /// <summary>
+        /// Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("GroupTriggerCondition")]
+        public string[] GroupTriggerCondition{ get; set; }
+
+        /// <summary>
+        /// Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MonitorObjectType")]
+        public ulong? MonitorObjectType{ get; set; }
+
+        /// <summary>
+        /// Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AlarmLevel")]
+        public ulong? AlarmLevel{ get; set; }
+
+        /// <summary>
+        /// Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MultiConditions")]
+        public MultiCondition[] MultiConditions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +162,11 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
             this.SetParamObj(map, prefix + "CallBack.", this.CallBack);
             this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+            this.SetParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
+            this.SetParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+            this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+            this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         }
     }
 }

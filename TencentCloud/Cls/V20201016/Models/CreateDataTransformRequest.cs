@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Task type. Valid values: 1 (specified topic) and 2 (dynamically created).
+        /// Task type. 1: Specify topic; 2: Dynamic creation. For details, please refer to Creating Processing Task Document (https://intl.cloud.tencent.com/document/product/614/63940?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("FuncType")]
         public long? FuncType{ get; set; }
@@ -49,22 +49,23 @@ namespace TencentCloud.Cls.V20201016.Models
         public string EtlContent{ get; set; }
 
         /// <summary>
-        /// Data processing type. Valid values: `1`: Use random data from the source log topic for processing preview. `2`: Use user-defined test data for processing preview. `3`: Create a real processing task.
+        /// Processing type.
+        /// 1: Process preview using random data from the source log topic; 2: Process preview using user-defined test data; 3: Create real processing tasks.
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
+
+        /// <summary>
+        /// Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+        /// </summary>
+        [JsonProperty("DstResources")]
+        public DataTransformResouceInfo[] DstResources{ get; set; }
 
         /// <summary>
         /// Task status. Valid values: 1 (enabled) and 2 (disabled).
         /// </summary>
         [JsonProperty("EnableFlag")]
         public long? EnableFlag{ get; set; }
-
-        /// <summary>
-        /// Target topic ID and alias of the data processing task
-        /// </summary>
-        [JsonProperty("DstResources")]
-        public DataTransformResouceInfo[] DstResources{ get; set; }
 
         /// <summary>
         /// Test data used for previewing the processing result
@@ -83,8 +84,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "EtlContent", this.EtlContent);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
-            this.SetParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
             this.SetParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+            this.SetParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
             this.SetParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
         }
     }

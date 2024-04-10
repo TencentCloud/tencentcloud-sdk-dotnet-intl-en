@@ -84,10 +84,23 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? ServiceLogging{ get; set; }
 
         /// <summary>
+        /// Regular cleanup time for offline machines in the machine group
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DelayCleanupTime")]
+        public long? DelayCleanupTime{ get; set; }
+
+        /// <summary>
         /// Metadata information list of a machine group
         /// </summary>
         [JsonProperty("MetaTags")]
         public MetaTagInfo[] MetaTags{ get; set; }
+
+        /// <summary>
+        /// Operating system type, 0: Linux, 1: Windows
+        /// </summary>
+        [JsonProperty("OSType")]
+        public ulong? OSType{ get; set; }
 
 
         /// <summary>
@@ -104,7 +117,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
             this.SetParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
             this.SetParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+            this.SetParamSimple(map, prefix + "DelayCleanupTime", this.DelayCleanupTime);
             this.SetParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+            this.SetParamSimple(map, prefix + "OSType", this.OSType);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Collection rule configuration ID
+        /// Collection rule configuration ID, accessed through [Access collection rule configuration](https://intl.cloud.tencent.com/document/product/614/58616?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
@@ -43,7 +43,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Path{ get; set; }
 
         /// <summary>
-        /// Type of the log to be collected. Valid values: `json_log`: log in JSON format; `delimiter_log`: log in delimited format; `minimalist_log`: minimalist log; `multiline_log`: log in multi-line format; `fullregex_log`: log in full regex format. Default value: `minimalist_log`
+        /// The types of logs collected. Supported types are:
+        /// - json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log: Windows event log (For more information, see [Collect Windows Event Log](https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1)).
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
@@ -67,10 +68,20 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Output{ get; set; }
 
         /// <summary>
-        /// Custom parsing string, which is a serialized JSON string
+        /// Custom parsing string, serialized as a JSON string.
         /// </summary>
         [JsonProperty("UserDefineRule")]
         public string UserDefineRule{ get; set; }
+
+        /// <summary>
+        /// Advanced collection configuration. A JSON string, Key/Value definition as follows:
+        /// - ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0
+        /// - ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or false
+        /// Sample:
+        /// `{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+        /// </summary>
+        [JsonProperty("AdvancedConfig")]
+        public string AdvancedConfig{ get; set; }
 
 
         /// <summary>
@@ -86,6 +97,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
             this.SetParamSimple(map, prefix + "Output", this.Output);
             this.SetParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
+            this.SetParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.875";
+       private const string sdkVersion = "SDK_NET_3.0.876";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Cls.V20201016
         public ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroupSync(ApplyConfigToMachineGroupRequest req)
         {
             return InternalRequestAsync<ApplyConfigToMachineGroupResponse>(req, "ApplyConfigToMachineGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to verify the syntax of data processing DSL functions.
+        /// </summary>
+        /// <param name="req"><see cref="CheckFunctionRequest"/></param>
+        /// <returns><see cref="CheckFunctionResponse"/></returns>
+        public Task<CheckFunctionResponse> CheckFunction(CheckFunctionRequest req)
+        {
+            return InternalRequestAsync<CheckFunctionResponse>(req, "CheckFunction");
+        }
+
+        /// <summary>
+        /// This API is used to verify the syntax of data processing DSL functions.
+        /// </summary>
+        /// <param name="req"><see cref="CheckFunctionRequest"/></param>
+        /// <returns><see cref="CheckFunctionResponse"/></returns>
+        public CheckFunctionResponse CheckFunctionSync(CheckFunctionRequest req)
+        {
+            return InternalRequestAsync<CheckFunctionResponse>(req, "CheckFunction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +201,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to create an alarm blocking rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmShieldRequest"/></param>
+        /// <returns><see cref="CreateAlarmShieldResponse"/></returns>
+        public Task<CreateAlarmShieldResponse> CreateAlarmShield(CreateAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<CreateAlarmShieldResponse>(req, "CreateAlarmShield");
+        }
+
+        /// <summary>
+        /// This API is used to create an alarm blocking rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAlarmShieldRequest"/></param>
+        /// <returns><see cref="CreateAlarmShieldResponse"/></returns>
+        public CreateAlarmShieldResponse CreateAlarmShieldSync(CreateAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<CreateAlarmShieldResponse>(req, "CreateAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigRequest"/></param>
@@ -201,7 +243,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a shipping task.
+        /// This API is used to create a CKafka delivery task.
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
         /// <returns><see cref="CreateConsumerResponse"/></returns>
@@ -211,7 +253,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a shipping task.
+        /// This API is used to create a CKafka delivery task.
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
         /// <returns><see cref="CreateConsumerResponse"/></returns>
@@ -260,6 +302,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateDataTransformResponse CreateDataTransformSync(CreateDataTransformRequest req)
         {
             return InternalRequestAsync<CreateDataTransformResponse>(req, "CreateDataTransform")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a delivery SCF task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeliverCloudFunctionRequest"/></param>
+        /// <returns><see cref="CreateDeliverCloudFunctionResponse"/></returns>
+        public Task<CreateDeliverCloudFunctionResponse> CreateDeliverCloudFunction(CreateDeliverCloudFunctionRequest req)
+        {
+            return InternalRequestAsync<CreateDeliverCloudFunctionResponse>(req, "CreateDeliverCloudFunction");
+        }
+
+        /// <summary>
+        /// This API is used to create a delivery SCF task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeliverCloudFunctionRequest"/></param>
+        /// <returns><see cref="CreateDeliverCloudFunctionResponse"/></returns>
+        public CreateDeliverCloudFunctionResponse CreateDeliverCloudFunctionSync(CreateDeliverCloudFunctionRequest req)
+        {
+            return InternalRequestAsync<CreateDeliverCloudFunctionResponse>(req, "CreateDeliverCloudFunction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +432,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to create a scheduled SQL analysis task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
+        /// <returns><see cref="CreateScheduledSqlResponse"/></returns>
+        public Task<CreateScheduledSqlResponse> CreateScheduledSql(CreateScheduledSqlRequest req)
+        {
+            return InternalRequestAsync<CreateScheduledSqlResponse>(req, "CreateScheduledSql");
+        }
+
+        /// <summary>
+        /// This API is used to create a scheduled SQL analysis task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
+        /// <returns><see cref="CreateScheduledSqlResponse"/></returns>
+        public CreateScheduledSqlResponse CreateScheduledSqlSync(CreateScheduledSqlRequest req)
+        {
+            return InternalRequestAsync<CreateScheduledSqlResponse>(req, "CreateScheduledSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a task to ship to COS. Note: To use this API, you need to check whether you have configured the role and permission for shipping to COS. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
         /// </summary>
         /// <param name="req"><see cref="CreateShipperRequest"/></param>
@@ -449,6 +533,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteAlarmNoticeResponse DeleteAlarmNoticeSync(DeleteAlarmNoticeRequest req)
         {
             return InternalRequestAsync<DeleteAlarmNoticeResponse>(req, "DeleteAlarmNotice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an alarm blocking rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmShieldRequest"/></param>
+        /// <returns><see cref="DeleteAlarmShieldResponse"/></returns>
+        public Task<DeleteAlarmShieldResponse> DeleteAlarmShield(DeleteAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmShieldResponse>(req, "DeleteAlarmShield");
+        }
+
+        /// <summary>
+        /// This API is used to delete an alarm blocking rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmShieldRequest"/></param>
+        /// <returns><see cref="DeleteAlarmShieldResponse"/></returns>
+        public DeleteAlarmShieldResponse DeleteAlarmShieldSync(DeleteAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmShieldResponse>(req, "DeleteAlarmShield")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +768,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to delete scheduled SQL analysis tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
+        /// <returns><see cref="DeleteScheduledSqlResponse"/></returns>
+        public Task<DeleteScheduledSqlResponse> DeleteScheduledSql(DeleteScheduledSqlRequest req)
+        {
+            return InternalRequestAsync<DeleteScheduledSqlResponse>(req, "DeleteScheduledSql");
+        }
+
+        /// <summary>
+        /// This API is used to delete scheduled SQL analysis tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
+        /// <returns><see cref="DeleteScheduledSqlResponse"/></returns>
+        public DeleteScheduledSqlResponse DeleteScheduledSqlSync(DeleteScheduledSqlRequest req)
+        {
+            return InternalRequestAsync<DeleteScheduledSqlResponse>(req, "DeleteScheduledSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a COS shipping task.
         /// </summary>
         /// <param name="req"><see cref="DeleteShipperRequest"/></param>
@@ -722,6 +848,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeAlarmNoticesResponse DescribeAlarmNoticesSync(DescribeAlarmNoticesRequest req)
         {
             return InternalRequestAsync<DescribeAlarmNoticesResponse>(req, "DescribeAlarmNotices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Accesses alarm blocking configuration rules
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmShieldsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmShieldsResponse"/></returns>
+        public Task<DescribeAlarmShieldsResponse> DescribeAlarmShields(DescribeAlarmShieldsRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmShieldsResponse>(req, "DescribeAlarmShields");
+        }
+
+        /// <summary>
+        /// Accesses alarm blocking configuration rules
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmShieldsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmShieldsResponse"/></returns>
+        public DescribeAlarmShieldsResponse DescribeAlarmShieldsSync(DescribeAlarmShieldsRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmShieldsResponse>(req, "DescribeAlarmShields")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -915,6 +1062,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// Accesses Kafka protocol consumption information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerResponse"/></returns>
+        public Task<DescribeKafkaConsumerResponse> DescribeKafkaConsumer(DescribeKafkaConsumerRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerResponse>(req, "DescribeKafkaConsumer");
+        }
+
+        /// <summary>
+        /// Accesses Kafka protocol consumption information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerResponse"/></returns>
+        public DescribeKafkaConsumerResponse DescribeKafkaConsumerSync(DescribeKafkaConsumerRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerResponse>(req, "DescribeKafkaConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of Kafka data subscription tasks.
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaRechargesRequest"/></param>
@@ -936,7 +1104,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to search for content in the log context.
+        /// This API is used to search for content near the log context. For more details, see [Context Search](https://intl.cloud.tencent.com/document/product/614/53248?from_cn_redirect=1).The maximum value of API's return data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
         /// </summary>
         /// <param name="req"><see cref="DescribeLogContextRequest"/></param>
         /// <returns><see cref="DescribeLogContextResponse"/></returns>
@@ -946,7 +1114,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to search for content in the log context.
+        /// This API is used to search for content near the log context. For more details, see [Context Search](https://intl.cloud.tencent.com/document/product/614/53248?from_cn_redirect=1).The maximum value of API's return data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
         /// </summary>
         /// <param name="req"><see cref="DescribeLogContextRequest"/></param>
         /// <returns><see cref="DescribeLogContextResponse"/></returns>
@@ -1041,7 +1209,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the machine status in the specified machine group.
+        /// Gets the status of a machine under the specified machine group
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>
         /// <returns><see cref="DescribeMachinesResponse"/></returns>
@@ -1051,7 +1219,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the machine status in the specified machine group.
+        /// Gets the status of a machine under the specified machine group
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>
         /// <returns><see cref="DescribeMachinesResponse"/></returns>
@@ -1079,6 +1247,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribePartitionsResponse DescribePartitionsSync(DescribePartitionsRequest req)
         {
             return InternalRequestAsync<DescribePartitionsResponse>(req, "DescribePartitions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to access the scheduled SQL analysis task list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
+        /// <returns><see cref="DescribeScheduledSqlInfoResponse"/></returns>
+        public Task<DescribeScheduledSqlInfoResponse> DescribeScheduledSqlInfo(DescribeScheduledSqlInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledSqlInfoResponse>(req, "DescribeScheduledSqlInfo");
+        }
+
+        /// <summary>
+        /// This API is used to access the scheduled SQL analysis task list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
+        /// <returns><see cref="DescribeScheduledSqlInfoResponse"/></returns>
+        public DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfoSync(DescribeScheduledSqlInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeScheduledSqlInfoResponse>(req, "DescribeScheduledSqlInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1146,7 +1335,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the records of alarm tasks.
+        /// This API is used to access alarm policy execution details.
         /// </summary>
         /// <param name="req"><see cref="GetAlarmLogRequest"/></param>
         /// <returns><see cref="GetAlarmLogResponse"/></returns>
@@ -1156,7 +1345,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the records of alarm tasks.
+        /// This API is used to access alarm policy execution details.
         /// </summary>
         /// <param name="req"><see cref="GetAlarmLogRequest"/></param>
         /// <returns><see cref="GetAlarmLogResponse"/></returns>
@@ -1230,6 +1419,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to modify alarm blocking rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmShieldRequest"/></param>
+        /// <returns><see cref="ModifyAlarmShieldResponse"/></returns>
+        public Task<ModifyAlarmShieldResponse> ModifyAlarmShield(ModifyAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmShieldResponse>(req, "ModifyAlarmShield");
+        }
+
+        /// <summary>
+        /// This API is used to modify alarm blocking rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmShieldRequest"/></param>
+        /// <returns><see cref="ModifyAlarmShieldResponse"/></returns>
+        public ModifyAlarmShieldResponse ModifyAlarmShieldSync(ModifyAlarmShieldRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmShieldResponse>(req, "ModifyAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyConfigRequest"/></param>
@@ -1251,7 +1461,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a shipping task.
+        /// This API is used to modify a CKafka delivery task
         /// </summary>
         /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
         /// <returns><see cref="ModifyConsumerResponse"/></returns>
@@ -1261,7 +1471,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a shipping task.
+        /// This API is used to modify a CKafka delivery task
         /// </summary>
         /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
         /// <returns><see cref="ModifyConsumerResponse"/></returns>
@@ -1335,6 +1545,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// Modifies Kafka Protocol consumption information
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaConsumerRequest"/></param>
+        /// <returns><see cref="ModifyKafkaConsumerResponse"/></returns>
+        public Task<ModifyKafkaConsumerResponse> ModifyKafkaConsumer(ModifyKafkaConsumerRequest req)
+        {
+            return InternalRequestAsync<ModifyKafkaConsumerResponse>(req, "ModifyKafkaConsumer");
+        }
+
+        /// <summary>
+        /// Modifies Kafka Protocol consumption information
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaConsumerRequest"/></param>
+        /// <returns><see cref="ModifyKafkaConsumerResponse"/></returns>
+        public ModifyKafkaConsumerResponse ModifyKafkaConsumerSync(ModifyKafkaConsumerRequest req)
+        {
+            return InternalRequestAsync<ModifyKafkaConsumerResponse>(req, "ModifyKafkaConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a Kafka data subscription task.
         /// </summary>
         /// <param name="req"><see cref="ModifyKafkaRechargeRequest"/></param>
@@ -1394,6 +1625,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyMachineGroupResponse ModifyMachineGroupSync(ModifyMachineGroupRequest req)
         {
             return InternalRequestAsync<ModifyMachineGroupResponse>(req, "ModifyMachineGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify scheduled SQL analysis tasks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
+        /// <returns><see cref="ModifyScheduledSqlResponse"/></returns>
+        public Task<ModifyScheduledSqlResponse> ModifyScheduledSql(ModifyScheduledSqlRequest req)
+        {
+            return InternalRequestAsync<ModifyScheduledSqlResponse>(req, "ModifyScheduledSql");
+        }
+
+        /// <summary>
+        /// This API is used to modify scheduled SQL analysis tasks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
+        /// <returns><see cref="ModifyScheduledSqlResponse"/></returns>
+        public ModifyScheduledSqlResponse ModifyScheduledSqlSync(ModifyScheduledSqlRequest req)
+        {
+            return InternalRequestAsync<ModifyScheduledSqlResponse>(req, "ModifyScheduledSql")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1482,6 +1734,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// Queries the latest metric value at a specified time
+        /// </summary>
+        /// <param name="req"><see cref="QueryMetricRequest"/></param>
+        /// <returns><see cref="QueryMetricResponse"/></returns>
+        public Task<QueryMetricResponse> QueryMetric(QueryMetricRequest req)
+        {
+            return InternalRequestAsync<QueryMetricResponse>(req, "QueryMetric");
+        }
+
+        /// <summary>
+        /// Queries the latest metric value at a specified time
+        /// </summary>
+        /// <param name="req"><see cref="QueryMetricRequest"/></param>
+        /// <returns><see cref="QueryMetricResponse"/></returns>
+        public QueryMetricResponse QueryMetricSync(QueryMetricRequest req)
+        {
+            return InternalRequestAsync<QueryMetricResponse>(req, "QueryMetric")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the trend of metrics within a specified time range.
+        /// </summary>
+        /// <param name="req"><see cref="QueryRangeMetricRequest"/></param>
+        /// <returns><see cref="QueryRangeMetricResponse"/></returns>
+        public Task<QueryRangeMetricResponse> QueryRangeMetric(QueryRangeMetricRequest req)
+        {
+            return InternalRequestAsync<QueryRangeMetricResponse>(req, "QueryRangeMetric");
+        }
+
+        /// <summary>
+        /// This API is used to query the trend of metrics within a specified time range.
+        /// </summary>
+        /// <param name="req"><see cref="QueryRangeMetricRequest"/></param>
+        /// <returns><see cref="QueryRangeMetricResponse"/></returns>
+        public QueryRangeMetricResponse QueryRangeMetricSync(QueryRangeMetricRequest req)
+        {
+            return InternalRequestAsync<QueryRangeMetricResponse>(req, "QueryRangeMetric")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to retry a failed shipping task.
         /// </summary>
         /// <param name="req"><see cref="RetryShipperTaskRequest"/></param>
@@ -1503,7 +1797,29 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent queries to the same log topic cannot exceed 15.
+        /// This API is used to preview COS import information.
+        /// </summary>
+        /// <param name="req"><see cref="SearchCosRechargeInfoRequest"/></param>
+        /// <returns><see cref="SearchCosRechargeInfoResponse"/></returns>
+        public Task<SearchCosRechargeInfoResponse> SearchCosRechargeInfo(SearchCosRechargeInfoRequest req)
+        {
+            return InternalRequestAsync<SearchCosRechargeInfoResponse>(req, "SearchCosRechargeInfo");
+        }
+
+        /// <summary>
+        /// This API is used to preview COS import information.
+        /// </summary>
+        /// <param name="req"><see cref="SearchCosRechargeInfoRequest"/></param>
+        /// <returns><see cref="SearchCosRechargeInfoResponse"/></returns>
+        public SearchCosRechargeInfoResponse SearchCosRechargeInfoSync(SearchCosRechargeInfoRequest req)
+        {
+            return InternalRequestAsync<SearchCosRechargeInfoResponse>(req, "SearchCosRechargeInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to search and analyze logs. When using this API, please note the following:1. Besides being subject to the default API request frequency limit by this API, for a single log topic, the concurrency number cannot exceed 15. 2. For search syntax, it's recommended to use the CQL syntax rule. Please use the SyntaxRule parameter and set its value to 1.
+        /// 3. The maximum value of API's response data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -1513,7 +1829,8 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent queries to the same log topic cannot exceed 15.
+        /// This API is used to search and analyze logs. When using this API, please note the following:1. Besides being subject to the default API request frequency limit by this API, for a single log topic, the concurrency number cannot exceed 15. 2. For search syntax, it's recommended to use the CQL syntax rule. Please use the SyntaxRule parameter and set its value to 1.
+        /// 3. The maximum value of API's response data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>

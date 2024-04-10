@@ -45,6 +45,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
+        /// Retrieval syntax rule, default is 0, recommended to use 1 (CQL syntax).0: Lucene syntax, 1: CQL syntax.
+        /// For detailed explanation, refer to <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
+
+        /// <summary>
         /// - The ID of the log topic to be searched for. Only one log topic can be specified.
         /// - To search for multiple log topics at a time, use the `Topics` parameter.
         /// </summary>
@@ -52,23 +59,18 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
-        /// Notes:
-        /// * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-        /// * To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+        /// - The IDs of the log topics (up to 20) to be searched for.
+        /// - To search for a single log topic, use the `TopicId` parameter.
+        /// - You cannot use both `TopicId` and `Topics`.
+        /// </summary>
+        [JsonProperty("Topics")]
+        public MultiTopicSearchInformation[] Topics{ get; set; }
+
+        /// <summary>
+        /// Specifies the number of raw logs returned in a single query, default is 100, maximum is 1000. To obtain subsequent logs, use the Context parameter.Note:* This is only valid when the search and analysis statement (Query) does not contain SQL* Method for specifying SQL result count refers to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
-
-        /// <summary>
-        /// You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
-        /// Notes:
-        /// * Do not modify any other parameters while passing through the `Context` parameter.
-        /// * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-        /// * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-        /// </summary>
-        [JsonProperty("Context")]
-        public string Context{ get; set; }
 
         /// <summary>
         /// Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
@@ -80,12 +82,10 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
-        /// If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
-        /// The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+        /// Pass the Context value returned by the last API call to retrieve more subsequent logs. A total of up to 10,000 raw logs can be obtained, with an expiration time of 1 hour.Note:* When passing this parameter, do not modify any other parameters except for this one* Only applicable for single log topic retrieval. When retrieving multiple log topics, use the Context in Topics.* This is only valid when the retrieval analysis statement (Query) does not contain SQL. For obtaining subsequent SQL results, refer to <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>
         /// </summary>
-        [JsonProperty("UseNewAnalysis")]
-        public bool? UseNewAnalysis{ get; set; }
+        [JsonProperty("Context")]
+        public string Context{ get; set; }
 
         /// <summary>
         /// Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
@@ -98,20 +98,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public float? SamplingRate{ get; set; }
 
         /// <summary>
-        /// Search syntax
-        /// `0` (default): Lucene; `1`: CQL.
-        /// For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+        /// If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+        /// If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+        /// The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
         /// </summary>
-        [JsonProperty("SyntaxRule")]
-        public ulong? SyntaxRule{ get; set; }
-
-        /// <summary>
-        /// - The IDs of the log topics (up to 20) to be searched for.
-        /// - To search for a single log topic, use the `TopicId` parameter.
-        /// - You cannot use both `TopicId` and `Topics`.
-        /// </summary>
-        [JsonProperty("Topics")]
-        public MultiTopicSearchInformation[] Topics{ get; set; }
+        [JsonProperty("UseNewAnalysis")]
+        public bool? UseNewAnalysis{ get; set; }
 
 
         /// <summary>
@@ -122,14 +114,14 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Query", this.Query);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Context", this.Context);
-            this.SetParamSimple(map, prefix + "Sort", this.Sort);
-            this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
-            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Context", this.Context);
+            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+            this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
         }
     }
 }

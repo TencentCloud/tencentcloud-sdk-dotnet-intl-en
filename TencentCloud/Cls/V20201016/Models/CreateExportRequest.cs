@@ -66,6 +66,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
+        /// <summary>
+        /// Syntax rules; the default value is 0.0: Lucene syntax; 1: CQL syntax.
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         }
     }
 }

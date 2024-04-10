@@ -25,29 +25,26 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Protocol type. Valid values: `plaintext`, `sasl_plaintext`, and `sasl_ssl`. `sasl_ssl` is recommended. Using this protocol will encrypt the connection and implement user authentication.
+        /// Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Encryption type. Valid values: `PLAIN`, `SCRAM-SHA-256`, and SCRAM-SHA-512`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Mechanism")]
         public string Mechanism{ get; set; }
 
         /// <summary>
-        /// Username
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// User password
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

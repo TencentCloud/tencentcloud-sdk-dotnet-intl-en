@@ -37,10 +37,10 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Notification type. Valid values:
-        /// <li> `Trigger`: alarm triggered
-        /// <li> `Recovery`: alarm cleared
-        /// <li> `All`: alarm triggered and alarm cleared
+        /// Notification type. Optional Values:
+        /// <li> Trigger - Alarm trigger</li>
+        /// <li> Recovery - Alarm recovery</li>
+        /// <li> All - Alarm triggered and alarm recovery</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -57,6 +57,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }
 
+        /// <summary>
+        /// Notification rulesNote: - Type, NoticeReceivers, and WebCallbacks are one set of configurations, while NoticeRules is another set of configurations. The two sets are mutually exclusive.- Submitting one set of data will nullify the other set.
+        /// </summary>
+        [JsonProperty("NoticeRules")]
+        public NoticeRule[] NoticeRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
             this.SetParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
+            this.SetParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
         }
     }
 }

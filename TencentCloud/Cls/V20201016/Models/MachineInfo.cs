@@ -31,6 +31,12 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Ip{ get; set; }
 
         /// <summary>
+        /// Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
         /// Machine status. Valid values: `0`: exceptional; `1`: normal
         /// </summary>
         [JsonProperty("Status")]
@@ -55,19 +61,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Version{ get; set; }
 
         /// <summary>
-        /// Machine update feature status
+        /// Machine upgrade status. 0: Upgrade successful; 1: Upgrading; -1: Upgrade failed.
         /// </summary>
         [JsonProperty("UpdateStatus")]
         public long? UpdateStatus{ get; set; }
 
         /// <summary>
-        /// Machine update result flag
+        /// Machine upgrade result identifier.0: Success; 1200: Upgrade successful; Other values indicate exceptions.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Machine update result information
+        /// Machine upgrade result information."ok": Success; "update success": Upgrade successful; Other values indicate the reason for failure.
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
@@ -79,6 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
             this.SetParamSimple(map, prefix + "AutoUpdate", this.AutoUpdate);

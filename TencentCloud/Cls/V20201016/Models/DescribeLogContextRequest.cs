@@ -37,25 +37,26 @@ namespace TencentCloud.Cls.V20201016.Models
         public string BTime{ get; set; }
 
         /// <summary>
-        /// Log package number
+        /// Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
 
         /// <summary>
-        /// Log number in log package
+        /// Sequence number of a log within the log package.
+        /// The PkgLogId in the Results structure of the SearchLog API returned information.
         /// </summary>
         [JsonProperty("PkgLogId")]
         public long? PkgLogId{ get; set; }
 
         /// <summary>
-        /// Number of previous logs. Default value: 10
+        /// The previous ${PrevLogs} logs. Default value: 10.
         /// </summary>
         [JsonProperty("PrevLogs")]
         public long? PrevLogs{ get; set; }
 
         /// <summary>
-        /// Number of next logs. Default value: 10
+        /// The next ${NextLogs} logs. Default value: 10.
         /// </summary>
         [JsonProperty("NextLogs")]
         public long? NextLogs{ get; set; }

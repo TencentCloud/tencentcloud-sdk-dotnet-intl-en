@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Whether to start collection for this log topic
+        /// Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
-        /// Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+        /// Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }
