@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.877";
+       private const string sdkVersion = "SDK_NET_3.0.878";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Redis.V20180412
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to add replication group members.
+        /// </summary>
+        /// <param name="req"><see cref="AddReplicationInstanceRequest"/></param>
+        /// <returns><see cref="AddReplicationInstanceResponse"/></returns>
+        public Task<AddReplicationInstanceResponse> AddReplicationInstance(AddReplicationInstanceRequest req)
+        {
+            return InternalRequestAsync<AddReplicationInstanceResponse>(req, "AddReplicationInstance");
+        }
+
+        /// <summary>
+        /// This API is used to add replication group members.
+        /// </summary>
+        /// <param name="req"><see cref="AddReplicationInstanceRequest"/></param>
+        /// <returns><see cref="AddReplicationInstanceResponse"/></returns>
+        public AddReplicationInstanceResponse AddReplicationInstanceSync(AddReplicationInstanceRequest req)
+        {
+            return InternalRequestAsync<AddReplicationInstanceResponse>(req, "AddReplicationInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -327,6 +348,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to create a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReplicationGroupRequest"/></param>
+        /// <returns><see cref="CreateReplicationGroupResponse"/></returns>
+        public Task<CreateReplicationGroupResponse> CreateReplicationGroup(CreateReplicationGroupRequest req)
+        {
+            return InternalRequestAsync<CreateReplicationGroupResponse>(req, "CreateReplicationGroup");
+        }
+
+        /// <summary>
+        /// This API is used to create a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReplicationGroupRequest"/></param>
+        /// <returns><see cref="CreateReplicationGroupResponse"/></returns>
+        public CreateReplicationGroupResponse CreateReplicationGroupSync(CreateReplicationGroupRequest req)
+        {
+            return InternalRequestAsync<CreateReplicationGroupResponse>(req, "CreateReplicationGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete an instance sub-account.
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceAccountRequest"/></param>
@@ -365,6 +407,27 @@ namespace TencentCloud.Redis.V20180412
         public DeleteParamTemplateResponse DeleteParamTemplateSync(DeleteParamTemplateRequest req)
         {
             return InternalRequestAsync<DeleteParamTemplateResponse>(req, "DeleteParamTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to remove replication group members. Note: The API is being deprecated. Please use RemoveReplicationInstance instead.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReplicationInstanceRequest"/></param>
+        /// <returns><see cref="DeleteReplicationInstanceResponse"/></returns>
+        public Task<DeleteReplicationInstanceResponse> DeleteReplicationInstance(DeleteReplicationInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteReplicationInstanceResponse>(req, "DeleteReplicationInstance");
+        }
+
+        /// <summary>
+        /// This API is used to remove replication group members. Note: The API is being deprecated. Please use RemoveReplicationInstance instead.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReplicationInstanceRequest"/></param>
+        /// <returns><see cref="DeleteReplicationInstanceResponse"/></returns>
+        public DeleteReplicationInstanceResponse DeleteReplicationInstanceSync(DeleteReplicationInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteReplicationInstanceResponse>(req, "DeleteReplicationInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -575,6 +638,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeInstanceDealDetailResponse DescribeInstanceDealDetailSync(DescribeInstanceDealDetailRequest req)
         {
             return InternalRequestAsync<DescribeInstanceDealDetailResponse>(req, "DescribeInstanceDealDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the event information on a TecentDB for Redis instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceEventsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceEventsResponse"/></returns>
+        public Task<DescribeInstanceEventsResponse> DescribeInstanceEvents(DescribeInstanceEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceEventsResponse>(req, "DescribeInstanceEvents");
+        }
+
+        /// <summary>
+        /// This API is used to query the event information on a TecentDB for Redis instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceEventsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceEventsResponse"/></returns>
+        public DescribeInstanceEventsResponse DescribeInstanceEventsSync(DescribeInstanceEventsRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceEventsResponse>(req, "DescribeInstanceEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1440,6 +1524,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to modify the connection configuration of an instance, including the bandwidth and maximum number of connections.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
+        /// <returns><see cref="ModifyConnectionConfigResponse"/></returns>
+        public Task<ModifyConnectionConfigResponse> ModifyConnectionConfig(ModifyConnectionConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyConnectionConfigResponse>(req, "ModifyConnectionConfig");
+        }
+
+        /// <summary>
+        /// This API is used to modify the connection configuration of an instance, including the bandwidth and maximum number of connections.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
+        /// <returns><see cref="ModifyConnectionConfigResponse"/></returns>
+        public ModifyConnectionConfigResponse ModifyConnectionConfigSync(ModifyConnectionConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyConnectionConfigResponse>(req, "ModifyConnectionConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
@@ -1520,6 +1625,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZonesSync(ModifyInstanceAvailabilityZonesRequest req)
         {
             return InternalRequestAsync<ModifyInstanceAvailabilityZonesResponse>(req, "ModifyInstanceAvailabilityZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the operations event execution schedule of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEventRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEventResponse"/></returns>
+        public Task<ModifyInstanceEventResponse> ModifyInstanceEvent(ModifyInstanceEventRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceEventResponse>(req, "ModifyInstanceEvent");
+        }
+
+        /// <summary>
+        /// This API is used to modify the operations event execution schedule of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceEventRequest"/></param>
+        /// <returns><see cref="ModifyInstanceEventResponse"/></returns>
+        public ModifyInstanceEventResponse ModifyInstanceEventSync(ModifyInstanceEventRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceEventResponse>(req, "ModifyInstanceEvent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

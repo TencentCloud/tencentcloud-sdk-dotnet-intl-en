@@ -233,161 +233,138 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? SlaveReadWeight{ get; set; }
 
         /// <summary>
-        /// Instance tag information
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceTags")]
         public InstanceTagInfo[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// Project name
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// Number of client connections
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }
 
         /// <summary>
-        /// DTS status (internal parameter, which can be ignored)
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DtsStatus")]
         public long? DtsStatus{ get; set; }
 
         /// <summary>
-        /// Upper shard bandwidth limit in MB
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetLimit")]
         public long? NetLimit{ get; set; }
 
         /// <summary>
-        /// Password-free instance flag (internal parameter, which can be ignored)
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PasswordFree")]
         public long? PasswordFree{ get; set; }
 
         /// <summary>
-        /// Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// Internal parameters, which can be ignored by users.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IPv6")]
         public string IPv6{ get; set; }
 
         /// <summary>
-        /// Read-only instance flag (internal parameter, which can be ignored)
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RemainBandwidthDuration")]
         public string RemainBandwidthDuration{ get; set; }
 
         /// <summary>
-        /// This parameter can be ignored for Redis instance.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
         /// <summary>
-        /// The minimum number of max client connections
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientLimitMin")]
         public long? ClientLimitMin{ get; set; }
 
         /// <summary>
-        /// The maximum number of max client connections
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClientLimitMax")]
         public long? ClientLimitMax{ get; set; }
 
         /// <summary>
-        /// Instance node details
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// Information of the region where the instance is deployed, such as `ap-guangzhou`.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Public IP
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("WanAddress")]
         public string WanAddress{ get; set; }
 
         /// <summary>
-        /// Polaris service address, which is for internal use.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PolarisServer")]
         public string PolarisServer{ get; set; }
 
         /// <summary>
-        /// The current proxy version of an instance
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
-        /// The current cache minor version of an instance
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CurrentRedisVersion")]
         public string CurrentRedisVersion{ get; set; }
 
         /// <summary>
-        /// Proxy version, which can be upgraded for the instance
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UpgradeProxyVersion")]
         public string UpgradeProxyVersion{ get; set; }
 
         /// <summary>
-        /// Cache minor version, which can be upgraded for the instance
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UpgradeRedisVersion")]

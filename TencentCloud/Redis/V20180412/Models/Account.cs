@@ -25,46 +25,46 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Account name 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Account description information 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Read/write permission policy. Valid values: `r` (read-only),  `w` (write-only),  `rw`  (read/write). 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Read-only routing policy. Valid values: `master` (master node),  `replication`  (replica node). 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Sub-account status. Valid values:  `1` (being changed),  `2` (valid). `4` (deleted). 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
 
         /// <summary>
@@ -78,6 +78,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }
