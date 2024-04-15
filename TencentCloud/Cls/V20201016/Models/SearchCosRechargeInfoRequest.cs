@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// Compression mode: "", "gzip", "lzop", and "snappy”. The default mode is "".
+        /// Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
         /// </summary>
         [JsonProperty("Compress")]
         public string Compress{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Source Log Topic
+        /// Source log topic
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+        /// Interval in milliseconds. Condition: (To-From) / Interval <= 200
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }

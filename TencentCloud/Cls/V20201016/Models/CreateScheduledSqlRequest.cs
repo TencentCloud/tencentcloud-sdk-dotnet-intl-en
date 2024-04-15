@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Source Log Topic
+        /// Source log topic
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
 
         /// <summary>
-        /// Task Name
+        /// Task name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,25 +49,25 @@ namespace TencentCloud.Cls.V20201016.Models
         public ScheduledSqlResouceInfo DstResource{ get; set; }
 
         /// <summary>
-        /// Query Statement
+        /// Query statement
         /// </summary>
         [JsonProperty("ScheduledSqlContent")]
         public string ScheduledSqlContent{ get; set; }
 
         /// <summary>
-        /// Schedule Start Time, Unix timestamp, in milliseconds
+        /// Schedule start time, Unix timestamp, in milliseconds
         /// </summary>
         [JsonProperty("ProcessStartTime")]
         public ulong? ProcessStartTime{ get; set; }
 
         /// <summary>
-        /// Schedule Type: 1 Continuous Running 2 Specified Time Range
+        /// Schedule type: 1: Continuous running; 2: Specified time range
         /// </summary>
         [JsonProperty("ProcessType")]
         public long? ProcessType{ get; set; }
 
         /// <summary>
-        /// Scheduling Interval (Minutes)
+        /// Scheduling interval (minutes)
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
@@ -79,19 +79,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// Execution Delay (Seconds)
+        /// Execution delay (Seconds)
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// Source Topic ID Region Information
+        /// Source topic ID region information
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }
 
         /// <summary>
-        /// Schedule End Time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+        /// Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
         /// </summary>
         [JsonProperty("ProcessEndTime")]
         public ulong? ProcessEndTime{ get; set; }

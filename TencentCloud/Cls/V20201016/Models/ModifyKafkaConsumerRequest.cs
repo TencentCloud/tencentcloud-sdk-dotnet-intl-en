@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string FromTopicId{ get; set; }
 
         /// <summary>
-        /// Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+        /// Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }

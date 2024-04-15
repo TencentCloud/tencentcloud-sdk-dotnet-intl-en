@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public Ckafka Ckafka{ get; set; }
 
         /// <summary>
-        /// Compression method during delivery. Valid values: 0, 2, and 3. [0：NONE；2：SNAPPY；3：LZ4]
+        /// Compression method during delivery. Valid values: 0, 2, and 3. [0: NONE; 2: SNAPPY; 3: LZ4]
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }

@@ -55,13 +55,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ShipperName{ get; set; }
 
         /// <summary>
-        /// Shipping time interval in seconds. Default value: 300. Value range: 300–900
+        /// Shipping time interval in seconds. Default value: 300. Value range: 300 to 900
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }
 
         /// <summary>
-        /// Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5-256
+        /// Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 5 to 256
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? FilenameMode{ get; set; }
 
         /// <summary>
-        /// COS Bucket Type
+        /// COS bucket type
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

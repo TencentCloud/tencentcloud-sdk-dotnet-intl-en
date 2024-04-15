@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// The processing statement entered by the user
+        /// Processing statement entered by the user
         /// </summary>
         [JsonProperty("EtlContent")]
         public string EtlContent{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public DataTransformResouceInfo[] DstResources{ get; set; }
 
         /// <summary>
-        /// The type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
+        /// Type of the target topic for data processing. Valid values: 1 (fixed Topic) and 2 (dynamic creation)
         /// </summary>
         [JsonProperty("FuncType")]
         public long? FuncType{ get; set; }

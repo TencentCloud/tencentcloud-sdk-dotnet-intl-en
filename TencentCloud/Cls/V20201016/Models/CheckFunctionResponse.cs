@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Failure Error Code
+        /// Failure error code
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// Failure Error Message
+        /// Failure error message
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }

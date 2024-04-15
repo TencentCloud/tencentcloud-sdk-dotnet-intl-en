@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.878";
+       private const string sdkVersion = "SDK_NET_3.0.879";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to apply the collection configuration to the specified machine group.
+        /// This API is used to apply the collection configuration to a specified machine group.
         /// </summary>
         /// <param name="req"><see cref="ApplyConfigToMachineGroupRequest"/></param>
         /// <returns><see cref="ApplyConfigToMachineGroupResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to apply the collection configuration to the specified machine group.
+        /// This API is used to apply the collection configuration to a specified machine group.
         /// </summary>
         /// <param name="req"><see cref="ApplyConfigToMachineGroupRequest"/></param>
         /// <returns><see cref="ApplyConfigToMachineGroupResponse"/></returns>
@@ -222,7 +222,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a collection rule configuration.
+        /// This API is used to create collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigRequest"/></param>
         /// <returns><see cref="CreateConfigResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a collection rule configuration.
+        /// This API is used to create collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigRequest"/></param>
         /// <returns><see cref="CreateConfigResponse"/></returns>
@@ -327,7 +327,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
+        /// This API is used to create a download task. To get the returned download address, call DescribeExports to view the task list. The CosPath parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
@@ -337,7 +337,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
+        /// This API is used to create a download task. To get the returned download address, call DescribeExports to view the task list. The CosPath parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
@@ -558,7 +558,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete a collection rule configuration.
+        /// This API is used to delete collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="DeleteConfigRequest"/></param>
         /// <returns><see cref="DeleteConfigResponse"/></returns>
@@ -568,7 +568,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete a collection rule configuration.
+        /// This API is used to delete collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="DeleteConfigRequest"/></param>
         /// <returns><see cref="DeleteConfigResponse"/></returns>
@@ -768,7 +768,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete scheduled SQL analysis tasks.
+        /// This API is used to delete a scheduled SQL analysis task.
         /// </summary>
         /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
         /// <returns><see cref="DeleteScheduledSqlResponse"/></returns>
@@ -778,7 +778,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete scheduled SQL analysis tasks.
+        /// This API is used to delete a scheduled SQL analysis task.
         /// </summary>
         /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
         /// <returns><see cref="DeleteScheduledSqlResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Accesses alarm blocking configuration rules
+        /// This API is used to access alarm blocking configuration rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmShieldsRequest"/></param>
         /// <returns><see cref="DescribeAlarmShieldsResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Accesses alarm blocking configuration rules
+        /// This API is used to access alarm blocking configuration rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmShieldsRequest"/></param>
         /// <returns><see cref="DescribeAlarmShieldsResponse"/></returns>
@@ -915,7 +915,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the machine group bound to a collection rule configuration.
+        /// This API is used to get the machine group bound to collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigMachineGroupsRequest"/></param>
         /// <returns><see cref="DescribeConfigMachineGroupsResponse"/></returns>
@@ -925,7 +925,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the machine group bound to a collection rule configuration.
+        /// This API is used to get the machine group bound to collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigMachineGroupsRequest"/></param>
         /// <returns><see cref="DescribeConfigMachineGroupsResponse"/></returns>
@@ -936,7 +936,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get a collection rule configuration.
+        /// This API is used to get collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigsRequest"/></param>
         /// <returns><see cref="DescribeConfigsResponse"/></returns>
@@ -946,7 +946,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get a collection rule configuration.
+        /// This API is used to get collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigsRequest"/></param>
         /// <returns><see cref="DescribeConfigsResponse"/></returns>
@@ -1062,7 +1062,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Accesses Kafka protocol consumption information
+        /// This API is used to access Kafka protocol consumption information.
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaConsumerRequest"/></param>
         /// <returns><see cref="DescribeKafkaConsumerResponse"/></returns>
@@ -1072,7 +1072,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Accesses Kafka protocol consumption information
+        /// This API is used to access Kafka protocol consumption information.
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaConsumerRequest"/></param>
         /// <returns><see cref="DescribeKafkaConsumerResponse"/></returns>
@@ -1125,7 +1125,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get a log count histogram. 
+        /// This API is used to get a log count histogram.
         /// </summary>
         /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
         /// <returns><see cref="DescribeLogHistogramResponse"/></returns>
@@ -1135,7 +1135,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get a log count histogram. 
+        /// This API is used to get a log count histogram.
         /// </summary>
         /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
         /// <returns><see cref="DescribeLogHistogramResponse"/></returns>
@@ -1209,7 +1209,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Gets the status of a machine under the specified machine group
+        /// This API is used to get the status of a machine under the specified machine group.
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>
         /// <returns><see cref="DescribeMachinesResponse"/></returns>
@@ -1219,7 +1219,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Gets the status of a machine under the specified machine group
+        /// This API is used to get the status of a machine under the specified machine group.
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>
         /// <returns><see cref="DescribeMachinesResponse"/></returns>
@@ -1293,7 +1293,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the configuration of the task of shipping to COS.
+        /// This API is used to get the configuration of the task shipped to COS.
         /// </summary>
         /// <param name="req"><see cref="DescribeShippersRequest"/></param>
         /// <returns><see cref="DescribeShippersResponse"/></returns>
@@ -1303,7 +1303,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the configuration of the task of shipping to COS.
+        /// This API is used to get the configuration of the task shipped to COS.
         /// </summary>
         /// <param name="req"><see cref="DescribeShippersRequest"/></param>
         /// <returns><see cref="DescribeShippersResponse"/></returns>
@@ -1440,7 +1440,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a collection rule configuration.
+        /// This API is used to modify collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyConfigRequest"/></param>
         /// <returns><see cref="ModifyConfigResponse"/></returns>
@@ -1450,7 +1450,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a collection rule configuration.
+        /// This API is used to modify collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyConfigRequest"/></param>
         /// <returns><see cref="ModifyConfigResponse"/></returns>
@@ -1461,7 +1461,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a CKafka delivery task
+        /// This API is used to modify a CKafka delivery task.
         /// </summary>
         /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
         /// <returns><see cref="ModifyConsumerResponse"/></returns>
@@ -1471,7 +1471,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a CKafka delivery task
+        /// This API is used to modify a CKafka delivery task.
         /// </summary>
         /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
         /// <returns><see cref="ModifyConsumerResponse"/></returns>
@@ -1545,7 +1545,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Modifies Kafka Protocol consumption information
+        /// This API is used to modify Kafka protocol consumption information.
         /// </summary>
         /// <param name="req"><see cref="ModifyKafkaConsumerRequest"/></param>
         /// <returns><see cref="ModifyKafkaConsumerResponse"/></returns>
@@ -1555,7 +1555,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Modifies Kafka Protocol consumption information
+        /// This API is used to modify Kafka protocol consumption information.
         /// </summary>
         /// <param name="req"><see cref="ModifyKafkaConsumerRequest"/></param>
         /// <returns><see cref="ModifyKafkaConsumerResponse"/></returns>
@@ -1629,7 +1629,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify scheduled SQL analysis tasks.
+        /// This API is used to modify a scheduled SQL analysis task.
         /// </summary>
         /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
         /// <returns><see cref="ModifyScheduledSqlResponse"/></returns>
@@ -1639,7 +1639,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify scheduled SQL analysis tasks.
+        /// This API is used to modify a scheduled SQL analysis task.
         /// </summary>
         /// <param name="req"><see cref="ModifyScheduledSqlRequest"/></param>
         /// <returns><see cref="ModifyScheduledSqlResponse"/></returns>
@@ -1734,7 +1734,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Queries the latest metric value at a specified time
+        /// This API is used to query the latest metric value at a specified time.
         /// </summary>
         /// <param name="req"><see cref="QueryMetricRequest"/></param>
         /// <returns><see cref="QueryMetricResponse"/></returns>
@@ -1744,7 +1744,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// Queries the latest metric value at a specified time
+        /// This API is used to query the latest metric value at a specified time.
         /// </summary>
         /// <param name="req"><see cref="QueryMetricRequest"/></param>
         /// <returns><see cref="QueryMetricResponse"/></returns>
@@ -1928,7 +1928,7 @@ namespace TencentCloud.Cls.V20201016
         /// 
         /// > ?Currently, protoc supports compilation in multiple programming languages such as Java, C++, and Python. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
         /// 
-        /// #### 1. Install Protocol Buffers
+        /// #### 1. Install protocol buffers
         /// 
         /// Download [Protocol Buffers](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), decompress the package, and install the tool. The version used in the example is protobuf 2.6.1 running on CentOS 7.3. Run the following command to decompress the `protobuf-2.6.1.tar.gz` package to the `/usr/local` directory and go to the directory:
         /// 
@@ -2092,7 +2092,7 @@ namespace TencentCloud.Cls.V20201016
         /// 
         /// > ?Currently, protoc supports compilation in multiple programming languages such as Java, C++, and Python. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
         /// 
-        /// #### 1. Install Protocol Buffers
+        /// #### 1. Install protocol buffers
         /// 
         /// Download [Protocol Buffers](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), decompress the package, and install the tool. The version used in the example is protobuf 2.6.1 running on CentOS 7.3. Run the following command to decompress the `protobuf-2.6.1.tar.gz` package to the `/usr/local` directory and go to the directory:
         /// 

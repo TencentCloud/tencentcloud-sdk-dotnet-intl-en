@@ -67,7 +67,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// lifetime. Unit: days. Standard storage value range: 1~3600. Infrequent storage value range: 7~3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+        /// lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MonitorTime MonitorTime{ get; set; }
 
         /// <summary>
-        /// Trigger condition.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+        /// Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
@@ -51,25 +51,25 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
         /// 
-        /// Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+        /// Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// Multiple ttrigger conditions.Note:- Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+        /// Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
         /// </summary>
         [JsonProperty("MultiConditions")]
         public MultiCondition[] MultiConditions{ get; set; }
 
         /// <summary>
-        /// Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1–10.
+        /// Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
         /// </summary>
         [JsonProperty("TriggerCount")]
         public long? TriggerCount{ get; set; }
 
         /// <summary>
-        /// Repeated alarm interval in minutes. Value range: 0–1440.
+        /// Repeated alarm interval in minutes. Value range: 0 to 1440
         /// </summary>
         [JsonProperty("AlarmPeriod")]
         public long? AlarmPeriod{ get; set; }
@@ -117,7 +117,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public AnalysisDimensional[] Analysis{ get; set; }
 
         /// <summary>
-        /// Group trigger status. true: enabled, false: disabled (default)
+        /// Group trigger status. true: enabled; false: disabled (default)
         /// </summary>
         [JsonProperty("GroupTriggerStatus")]
         public bool? GroupTriggerStatus{ get; set; }
