@@ -26,7 +26,7 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// Machine group information list
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return "null", indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineGroups")]
         public MachineGroupInfo[] MachineGroups{ get; set; }

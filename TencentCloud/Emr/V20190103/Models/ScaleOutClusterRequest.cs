@@ -63,13 +63,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public ScriptBootstrapActionConfig[] ScriptBootstrapActionConfig{ get; set; }
 
         /// <summary>
-        /// The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. Refer to the [component name mapping table](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
+        /// The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
         /// </summary>
         [JsonProperty("SoftDeployInfo")]
         public long?[] SoftDeployInfo{ get; set; }
 
         /// <summary>
-        /// The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. Refer to the [process name mapping table](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
+        /// The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
         /// </summary>
         [JsonProperty("ServiceNodeInfo")]
         public long?[] ServiceNodeInfo{ get; set; }
@@ -143,6 +143,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScaleOutServiceConfGroupsInfo")]
+        public ScaleOutServiceConfGroupsInfo[] ScaleOutServiceConfGroupsInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +174,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
         }
     }
 }
