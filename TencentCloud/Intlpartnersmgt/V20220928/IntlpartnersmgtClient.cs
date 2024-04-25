@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.885";
+       private const string sdkVersion = "SDK_NET_3.0.886";
 
         /// <summary>
         /// Client constructor.
@@ -121,6 +121,48 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeBillDetailResponse DescribeBillDetailSync(DescribeBillDetailRequest req)
         {
             return InternalRequestAsync<DescribeBillDetailResponse>(req, "DescribeBillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to download billing files and return billing file URLs by customers.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBillDownloadUrlResponse"/></returns>
+        public Task<DescribeBillDownloadUrlResponse> DescribeBillDownloadUrl(DescribeBillDownloadUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeBillDownloadUrlResponse>(req, "DescribeBillDownloadUrl");
+        }
+
+        /// <summary>
+        /// This API is used to download billing files and return billing file URLs by customers.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBillDownloadUrlResponse"/></returns>
+        public DescribeBillDownloadUrlResponse DescribeBillDownloadUrlSync(DescribeBillDownloadUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeBillDownloadUrlResponse>(req, "DescribeBillDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// External API for the L1 billing of the customer billing center
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryResponse"/></returns>
+        public Task<DescribeBillSummaryResponse> DescribeBillSummary(DescribeBillSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeBillSummaryResponse>(req, "DescribeBillSummary");
+        }
+
+        /// <summary>
+        /// External API for the L1 billing of the customer billing center
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryResponse"/></returns>
+        public DescribeBillSummaryResponse DescribeBillSummarySync(DescribeBillSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeBillSummaryResponse>(req, "DescribeBillSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

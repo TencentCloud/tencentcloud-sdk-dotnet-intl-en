@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9E1BD561-ED16-31A5-98EE-F902EDDA0693}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.885</VersionPrefix>
+    <VersionPrefix>3.0.886</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20220928\Models\AllocateCustomerCreditRequest.cs" />
     <Compile Include="V20220928\Models\AllocateCustomerCreditResponse.cs" />
     <Compile Include="V20220928\Models\BillDetailData.cs" />
+    <Compile Include="V20220928\Models\BusinessInfo.cs" />
     <Compile Include="V20220928\Models\BusinessSummaryOverviewItem.cs" />
     <Compile Include="V20220928\Models\CountryCodeItem.cs" />
     <Compile Include="V20220928\Models\CreateAccountRequest.cs" />
@@ -59,12 +60,16 @@
     <Compile Include="V20220928\Models\CustomerBillDetailData.cs" />
     <Compile Include="V20220928\Models\DescribeBillDetailRequest.cs" />
     <Compile Include="V20220928\Models\DescribeBillDetailResponse.cs" />
+    <Compile Include="V20220928\Models\DescribeBillDownloadUrlRequest.cs" />
+    <Compile Include="V20220928\Models\DescribeBillDownloadUrlResponse.cs" />
     <Compile Include="V20220928\Models\DescribeBillSummaryByPayModeRequest.cs" />
     <Compile Include="V20220928\Models\DescribeBillSummaryByPayModeResponse.cs" />
     <Compile Include="V20220928\Models\DescribeBillSummaryByProductRequest.cs" />
     <Compile Include="V20220928\Models\DescribeBillSummaryByProductResponse.cs" />
     <Compile Include="V20220928\Models\DescribeBillSummaryByRegionRequest.cs" />
     <Compile Include="V20220928\Models\DescribeBillSummaryByRegionResponse.cs" />
+    <Compile Include="V20220928\Models\DescribeBillSummaryRequest.cs" />
+    <Compile Include="V20220928\Models\DescribeBillSummaryResponse.cs" />
     <Compile Include="V20220928\Models\DescribeCustomerBillDetailRequest.cs" />
     <Compile Include="V20220928\Models\DescribeCustomerBillDetailResponse.cs" />
     <Compile Include="V20220928\Models\DescribeCustomerBillSummaryRequest.cs" />
@@ -105,6 +110,7 @@
     <Compile Include="V20220928\Models\QueryVoucherPoolRequest.cs" />
     <Compile Include="V20220928\Models\QueryVoucherPoolResponse.cs" />
     <Compile Include="V20220928\Models\RegionSummaryOverviewItem.cs" />
+    <Compile Include="V20220928\Models\SummaryDetails.cs" />
     <Compile Include="V20220928\Models\TagInfo.cs" />
   </ItemGroup>
 </Project>
