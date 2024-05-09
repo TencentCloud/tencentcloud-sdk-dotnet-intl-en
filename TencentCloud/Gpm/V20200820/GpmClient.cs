@@ -28,7 +28,7 @@ namespace TencentCloud.Gpm.V20200820
 
        private const string endpoint = "gpm.tencentcloudapi.com";
        private const string version = "2020-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.892";
+       private const string sdkVersion = "SDK_NET_3.0.893";
 
         /// <summary>
         /// Client constructor.
