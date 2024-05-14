@@ -28,7 +28,7 @@ namespace TencentCloud.Cloudaudit.V20190319
 
        private const string endpoint = "cloudaudit.tencentcloudapi.com";
        private const string version = "2019-03-19";
-       private const string sdkVersion = "SDK_NET_3.0.895";
+       private const string sdkVersion = "SDK_NET_3.0.896";
 
         /// <summary>
         /// Client constructor.
