@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.896";
+       private const string sdkVersion = "SDK_NET_3.0.897";
 
         /// <summary>
         /// Client constructor.
@@ -331,6 +331,27 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public GetCountryCodesResponse GetCountryCodesSync(GetCountryCodesRequest req)
         {
             return InternalRequestAsync<GetCountryCodesResponse>(req, "GetCountryCodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify customer remarks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClientRemarkRequest"/></param>
+        /// <returns><see cref="ModifyClientRemarkResponse"/></returns>
+        public Task<ModifyClientRemarkResponse> ModifyClientRemark(ModifyClientRemarkRequest req)
+        {
+            return InternalRequestAsync<ModifyClientRemarkResponse>(req, "ModifyClientRemark");
+        }
+
+        /// <summary>
+        /// This API is used to modify customer remarks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClientRemarkRequest"/></param>
+        /// <returns><see cref="ModifyClientRemarkResponse"/></returns>
+        public ModifyClientRemarkResponse ModifyClientRemarkSync(ModifyClientRemarkRequest req)
+        {
+            return InternalRequestAsync<ModifyClientRemarkResponse>(req, "ModifyClientRemark")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

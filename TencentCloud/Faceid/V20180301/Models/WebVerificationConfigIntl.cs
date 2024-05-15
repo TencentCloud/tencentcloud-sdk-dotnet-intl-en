@@ -100,6 +100,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
+        /// <summary>
+        /// Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+        /// </summary>
+        [JsonProperty("AutoDowngrade")]
+        public long? AutoDowngrade{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +122,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IdCardCutReturn", this.IdCardCutReturn);
             this.SetParamSimple(map, prefix + "ThemeColor", this.ThemeColor);
             this.SetParamSimple(map, prefix + "Language", this.Language);
+            this.SetParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
         }
     }
 }
