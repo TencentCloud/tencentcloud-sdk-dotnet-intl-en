@@ -25,12 +25,6 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
-        /// </summary>
-        [JsonProperty("NeedVerifyIdCard")]
-        public bool? NeedVerifyIdCard{ get; set; }
-
-        /// <summary>
         /// The verification mode. Valid values:
         /// 1: OCR + liveness detection + face comparison
         /// 2: Liveness detection + face comparison
@@ -62,6 +56,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 7. `PhilippinesSSSID`: Philippine SSS ID card
         /// 8. `PhilippinesUMID`: Philippine UMID card
         /// 9. `MLIDPassport`: Passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions
+        /// 10..MacaoIDCard: Macao ID Card
+        /// 11.ThailandIDCard: Thailand ID Card
+        /// 12.MainlandIDCard: Mainland ID Card
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
@@ -71,6 +68,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         [JsonProperty("CompareImage")]
         public string CompareImage{ get; set; }
+
+        /// <summary>
+        /// Whether ID card authentication is required. If not, only document OCR will be performed. Currently, authentication is available only when the value of `IdCardType` is `HK`.
+        /// </summary>
+        [JsonProperty("NeedVerifyIdCard")]
+        [System.Obsolete]
+        public bool? NeedVerifyIdCard{ get; set; }
 
         /// <summary>
         /// Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
@@ -97,11 +101,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NeedVerifyIdCard", this.NeedVerifyIdCard);
             this.SetParamSimple(map, prefix + "CheckMode", this.CheckMode);
             this.SetParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
             this.SetParamSimple(map, prefix + "CompareImage", this.CompareImage);
+            this.SetParamSimple(map, prefix + "NeedVerifyIdCard", this.NeedVerifyIdCard);
             this.SetParamSimple(map, prefix + "DisableChangeOcrResult", this.DisableChangeOcrResult);
             this.SetParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);

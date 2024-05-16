@@ -196,6 +196,42 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("FormulaUrl")]
         public string FormulaUrl{ get; set; }
 
+        /// <summary>
+        /// Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BillDay")]
+        public string BillDay{ get; set; }
+
+        /// <summary>
+        /// Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BillMonth")]
+        public string BillMonth{ get; set; }
+
+        /// <summary>
+        /// Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RegionType")]
+        public string RegionType{ get; set; }
+
+        /// <summary>
+        /// Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RegionTypeName")]
+        public string RegionTypeName{ get; set; }
+
+        /// <summary>
+        /// Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReserveDetail")]
+        public string ReserveDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +266,12 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamObj(map, prefix + "AssociatedOrder.", this.AssociatedOrder);
             this.SetParamSimple(map, prefix + "Formula", this.Formula);
             this.SetParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
+            this.SetParamSimple(map, prefix + "BillDay", this.BillDay);
+            this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "RegionType", this.RegionType);
+            this.SetParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
+            this.SetParamSimple(map, prefix + "ReserveDetail", this.ReserveDetail);
         }
     }
 }

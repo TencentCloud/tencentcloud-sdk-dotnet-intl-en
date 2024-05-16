@@ -195,6 +195,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("FormulaUrl")]
         public string FormulaUrl{ get; set; }
 
+        /// <summary>
+        /// Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BillMonth")]
+        public string BillMonth{ get; set; }
+
+        /// <summary>
+        /// Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BillDay")]
+        public string BillDay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +240,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamObj(map, prefix + "AssociatedOrder.", this.AssociatedOrder);
             this.SetParamSimple(map, prefix + "Formula", this.Formula);
             this.SetParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
+            this.SetParamSimple(map, prefix + "BillMonth", this.BillMonth);
+            this.SetParamSimple(map, prefix + "BillDay", this.BillDay);
         }
     }
 }

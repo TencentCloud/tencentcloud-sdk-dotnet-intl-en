@@ -15,20 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetFaceIdResultIntlRequest : AbstractModel
+    public class AnalyseProjectDetail : AbstractModel
     {
         
         /// <summary>
-        /// The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+        /// Project ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SdkToken")]
-        public string SdkToken{ get; set; }
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// Default projectNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkToken", this.SdkToken);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
         }
     }
 }

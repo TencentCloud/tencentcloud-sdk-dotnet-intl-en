@@ -15,20 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetCardVerificationResultRequest : AbstractModel
+    public class AnalyseOwnerUinDetail : AbstractModel
     {
         
         /// <summary>
-        /// The token used to identify an verification process. It can be used to get the verification result after the process is completed.
+        /// User UIN
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("CardVerificationToken")]
-        public string CardVerificationToken{ get; set; }
+        [JsonProperty("OwnerUin")]
+        public string OwnerUin{ get; set; }
 
 
         /// <summary>
@@ -36,7 +37,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CardVerificationToken", this.CardVerificationToken);
+            this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         }
     }
 }

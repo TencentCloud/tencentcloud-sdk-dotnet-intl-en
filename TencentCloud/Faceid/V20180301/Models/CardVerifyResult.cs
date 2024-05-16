@@ -31,6 +31,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? IsPass{ get; set; }
 
         /// <summary>
+        /// Whether the user modified the card recognition result
+        /// </summary>
+        [JsonProperty("IsEdit")]
+        public bool? IsEdit{ get; set; }
+
+        /// <summary>
         /// The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
@@ -156,7 +162,26 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// The recognition results of ID card
         /// </summary>
         [JsonProperty("CardInfo")]
+        [System.Obsolete]
         public CardInfo CardInfo{ get; set; }
+
+        /// <summary>
+        /// License OCR result
+        /// </summary>
+        [JsonProperty("NormalCardInfo")]
+        public NormalCardInfo NormalCardInfo{ get; set; }
+
+        /// <summary>
+        /// Card warning information
+        /// -9101 Alarm for covered certificate,
+        /// -9102 Alarm for photocopied certificate,
+        /// -9103 Alarm for photographed certificate,
+        /// -9107 Alarm for reflective certificate,
+        /// -9108 Alarm for blurry image,
+        /// -9109 This capability is not enabled.
+        /// </summary>
+        [JsonProperty("WarnCardInfos")]
+        public long?[] WarnCardInfos{ get; set; }
 
 
         /// <summary>
@@ -165,11 +190,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IsPass", this.IsPass);
+            this.SetParamSimple(map, prefix + "IsEdit", this.IsEdit);
             this.SetParamObj(map, prefix + "CardVideo.", this.CardVideo);
             this.SetParamObj(map, prefix + "CardImage.", this.CardImage);
             this.SetParamObj(map, prefix + "CardInfoOcrJson.", this.CardInfoOcrJson);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
             this.SetParamObj(map, prefix + "CardInfo.", this.CardInfo);
+            this.SetParamObj(map, prefix + "NormalCardInfo.", this.NormalCardInfo);
+            this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         }
     }
 }

@@ -15,25 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ApplyLivenessTokenRequest : AbstractModel
+    public class AnalysePayModeDetail : AbstractModel
     {
         
         /// <summary>
-        /// Enumerated value. Valid values: `1`, `2`, `3`, and `4`.
-        /// Their meanings are as follows:
-        /// 1 - silent
-        /// 2 - blinking
-        /// 3 - light
-        /// 4 - blinking + light (default)
+        /// Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SecureLevel")]
-        public string SecureLevel{ get; set; }
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PayModeName")]
+        public string PayModeName{ get; set; }
 
 
         /// <summary>
@@ -41,7 +42,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecureLevel", this.SecureLevel);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "PayModeName", this.PayModeName);
         }
     }
 }

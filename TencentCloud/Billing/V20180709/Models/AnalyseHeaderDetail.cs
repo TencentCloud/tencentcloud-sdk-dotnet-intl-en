@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetWebVerificationResultIntlRequest : AbstractModel
+    public class AnalyseHeaderDetail : AbstractModel
     {
         
         /// <summary>
-        /// The token for the web-based verification, which is generated using the `ApplyWebVerificationBizTokenIntl` API.
+        /// Header dateNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("BizToken")]
-        public string BizToken{ get; set; }
+        [JsonProperty("HeadDetail")]
+        public AnalyseHeaderTimeDetail[] HeadDetail{ get; set; }
+
+        /// <summary>
+        /// TimeNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// TotalNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Total")]
+        public string Total{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BizToken", this.BizToken);
+            this.SetParamArrayObj(map, prefix + "HeadDetail.", this.HeadDetail);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
         }
     }
 }

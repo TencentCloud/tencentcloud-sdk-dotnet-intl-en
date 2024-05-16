@@ -40,6 +40,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// The period type. byUsedTime: By usage period; byPayTime: By payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
         /// </summary>
         [JsonProperty("PeriodType")]
+        [System.Obsolete]
         public string PeriodType{ get; set; }
 
         /// <summary>

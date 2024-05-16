@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.897";
+       private const string sdkVersion = "SDK_NET_3.0.898";
 
         /// <summary>
         /// Client constructor.
@@ -373,6 +373,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganizationSync(DescribeBillSummaryForOrganizationRequest req)
         {
             return InternalRequestAsync<DescribeBillSummaryForOrganizationResponse>(req, "DescribeBillSummaryForOrganization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to view cost analysis details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostExplorerSummaryRequest"/></param>
+        /// <returns><see cref="DescribeCostExplorerSummaryResponse"/></returns>
+        public Task<DescribeCostExplorerSummaryResponse> DescribeCostExplorerSummary(DescribeCostExplorerSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeCostExplorerSummaryResponse>(req, "DescribeCostExplorerSummary");
+        }
+
+        /// <summary>
+        /// This API is used to view cost analysis details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostExplorerSummaryRequest"/></param>
+        /// <returns><see cref="DescribeCostExplorerSummaryResponse"/></returns>
+        public DescribeCostExplorerSummaryResponse DescribeCostExplorerSummarySync(DescribeCostExplorerSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeCostExplorerSummaryResponse>(req, "DescribeCostExplorerSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

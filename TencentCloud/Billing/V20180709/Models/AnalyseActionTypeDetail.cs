@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateUploadUrlRequest : AbstractModel
+    public class AnalyseActionTypeDetail : AbstractModel
     {
         
         /// <summary>
-        /// Target API
+        /// Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TargetAction")]
-        public string TargetAction{ get; set; }
+        [JsonProperty("ActionType")]
+        public string ActionType{ get; set; }
+
+        /// <summary>
+        /// Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ActionTypeName")]
+        public string ActionTypeName{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TargetAction", this.TargetAction);
+            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamSimple(map, prefix + "ActionTypeName", this.ActionTypeName);
         }
     }
 }

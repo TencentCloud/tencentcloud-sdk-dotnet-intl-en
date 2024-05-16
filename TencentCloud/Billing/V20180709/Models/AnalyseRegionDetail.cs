@@ -15,20 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetWebVerificationResultRequest : AbstractModel
+    public class AnalyseRegionDetail : AbstractModel
     {
         
         /// <summary>
-        /// The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+        /// Region ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("BizToken")]
-        public string BizToken{ get; set; }
+        [JsonProperty("RegionId")]
+        public string RegionId{ get; set; }
+
+        /// <summary>
+        /// Region nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RegionName")]
+        public string RegionName{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BizToken", this.BizToken);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
         }
     }
 }

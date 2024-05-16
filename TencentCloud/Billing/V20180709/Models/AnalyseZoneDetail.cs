@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetLivenessResultRequest : AbstractModel
+    public class AnalyseZoneDetail : AbstractModel
     {
         
         /// <summary>
-        /// The token used to identify an SDK-based verification process.
+        /// Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("SdkToken")]
-        public string SdkToken{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SdkToken", this.SdkToken);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

@@ -114,6 +114,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
+        /// <summary>
+        /// The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+        /// </summary>
+        [JsonProperty("VoucherMainType")]
+        public string VoucherMainType{ get; set; }
+
+        /// <summary>
+        /// Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+        /// </summary>
+        [JsonProperty("VoucherSubType")]
+        public string VoucherSubType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "PayScene", this.PayScene);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "VoucherMainType", this.VoucherMainType);
+            this.SetParamSimple(map, prefix + "VoucherSubType", this.VoucherSubType);
         }
     }
 }
