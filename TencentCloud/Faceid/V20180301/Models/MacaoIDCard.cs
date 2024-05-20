@@ -25,61 +25,71 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 
+        /// First name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FirstName")]
         public string FirstName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Last name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Birthday
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiration date
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// 
+        /// License number
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sex
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 
+        /// Age
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Age")]
         public string Age{ get; set; }
 
         /// <summary>
-        /// 
+        /// Issued country
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IssuedCountry")]
         public string IssuedCountry{ get; set; }
 
         /// <summary>
-        /// 
+        /// MRZ1 on card
+        /// Note: This field may return null, indicating that no valid values can be obtained. 
         /// </summary>
         [JsonProperty("Field1")]
         public string Field1{ get; set; }
 
         /// <summary>
-        /// 
+        /// MRZ2 on card
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Field2")]
         public string Field2{ get; set; }
