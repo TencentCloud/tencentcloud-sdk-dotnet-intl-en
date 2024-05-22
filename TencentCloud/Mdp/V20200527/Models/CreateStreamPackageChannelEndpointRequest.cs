@@ -42,6 +42,30 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("AuthInfo")]
         public EndpointAuthInfo AuthInfo{ get; set; }
 
+        /// <summary>
+        /// Endpoint protocol type, supports HLS, DASH, CMAF (only HLS type input can create CMAF Endpoint).
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// Mainifest name, default is main.
+        /// </summary>
+        [JsonProperty("Manifest")]
+        public string Manifest{ get; set; }
+
+        /// <summary>
+        /// Whether to turn on the TimeShift function, true: on, false: off, the default is off.
+        /// </summary>
+        [JsonProperty("TimeShiftEnable")]
+        public bool? TimeShiftEnable{ get; set; }
+
+        /// <summary>
+        /// The number of days to look back in TimeShift, up to 30 days is supported.
+        /// </summary>
+        [JsonProperty("TimeShiftDuration")]
+        public ulong? TimeShiftDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +75,10 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "AuthInfo.", this.AuthInfo);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Manifest", this.Manifest);
+            this.SetParamSimple(map, prefix + "TimeShiftEnable", this.TimeShiftEnable);
+            this.SetParamSimple(map, prefix + "TimeShiftDuration", this.TimeShiftDuration);
         }
     }
 }
