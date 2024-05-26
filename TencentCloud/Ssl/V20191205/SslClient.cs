@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.904";
+       private const string sdkVersion = "SDK_NET_3.0.905";
 
         /// <summary>
         /// Client constructor.
