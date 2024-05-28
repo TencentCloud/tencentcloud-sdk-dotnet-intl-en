@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.906</VersionPrefix>
+    <VersionPrefix>3.0.907</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,7 +74,21 @@
     <Compile Include="V20180709\Models\BusinessSummaryInfo.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\BusinessSummaryTotal.cs" />
+    <Compile Include="V20180709\Models\ConditionBusiness.cs" />
+    <Compile Include="V20180709\Models\ConditionPayMode.cs" />
+    <Compile Include="V20180709\Models\ConditionProject.cs" />
+    <Compile Include="V20180709\Models\ConditionRegion.cs" />
+    <Compile Include="V20180709\Models\Conditions.cs" />
+    <Compile Include="V20180709\Models\ConsumptionBusinessSummaryDataItem.cs" />
+    <Compile Include="V20180709\Models\ConsumptionProjectSummaryDataItem.cs" />
+    <Compile Include="V20180709\Models\ConsumptionRegionSummaryDataItem.cs" />
+    <Compile Include="V20180709\Models\ConsumptionResourceSummaryConditionValue.cs" />
+    <Compile Include="V20180709\Models\ConsumptionResourceSummaryDataItem.cs" />
+    <Compile Include="V20180709\Models\ConsumptionSummaryTotal.cs" />
+    <Compile Include="V20180709\Models\ConsumptionSummaryTrend.cs" />
     <Compile Include="V20180709\Models\CosDetailSets.cs" />
+    <Compile Include="V20180709\Models\CostComponentSet.cs" />
+    <Compile Include="V20180709\Models\CostDetail.cs" />
     <Compile Include="V20180709\Models\CreateAllocationTagRequest.cs" />
     <Compile Include="V20180709\Models\CreateAllocationTagResponse.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationTagRequest.cs" />
@@ -105,8 +119,18 @@
     <Compile Include="V20180709\Models\DescribeBillSummaryForOrganizationResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillSummaryRequest.cs" />
     <Compile Include="V20180709\Models\DescribeBillSummaryResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostDetailRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostDetailResponse.cs" />
     <Compile Include="V20180709\Models\DescribeCostExplorerSummaryRequest.cs" />
     <Compile Include="V20180709\Models\DescribeCostExplorerSummaryResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByProductRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByProductResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByProjectRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByProjectResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByRegionRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByRegionResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByResourceRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByResourceResponse.cs" />
     <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateRequest.cs" />
     <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateResponse.cs" />
     <Compile Include="V20180709\Models\DescribeTagListRequest.cs" />

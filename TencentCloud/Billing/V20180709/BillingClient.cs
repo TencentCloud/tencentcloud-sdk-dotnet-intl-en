@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.906";
+       private const string sdkVersion = "SDK_NET_3.0.907";
 
         /// <summary>
         /// Client constructor.
@@ -377,6 +377,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to query consumption details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostDetailRequest"/></param>
+        /// <returns><see cref="DescribeCostDetailResponse"/></returns>
+        public Task<DescribeCostDetailResponse> DescribeCostDetail(DescribeCostDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCostDetailResponse>(req, "DescribeCostDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query consumption details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostDetailRequest"/></param>
+        /// <returns><see cref="DescribeCostDetailResponse"/></returns>
+        public DescribeCostDetailResponse DescribeCostDetailSync(DescribeCostDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeCostDetailResponse>(req, "DescribeCostDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to view cost analysis details.
         /// </summary>
         /// <param name="req"><see cref="DescribeCostExplorerSummaryRequest"/></param>
@@ -394,6 +415,90 @@ namespace TencentCloud.Billing.V20180709
         public DescribeCostExplorerSummaryResponse DescribeCostExplorerSummarySync(DescribeCostExplorerSummaryRequest req)
         {
             return InternalRequestAsync<DescribeCostExplorerSummaryResponse>(req, "DescribeCostExplorerSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain consumption details summarized by product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByProductRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByProductResponse"/></returns>
+        public Task<DescribeCostSummaryByProductResponse> DescribeCostSummaryByProduct(DescribeCostSummaryByProductRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByProductResponse>(req, "DescribeCostSummaryByProduct");
+        }
+
+        /// <summary>
+        /// This API is used to obtain consumption details summarized by product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByProductRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByProductResponse"/></returns>
+        public DescribeCostSummaryByProductResponse DescribeCostSummaryByProductSync(DescribeCostSummaryByProductRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByProductResponse>(req, "DescribeCostSummaryByProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain consumption details summarized by project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByProjectRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByProjectResponse"/></returns>
+        public Task<DescribeCostSummaryByProjectResponse> DescribeCostSummaryByProject(DescribeCostSummaryByProjectRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByProjectResponse>(req, "DescribeCostSummaryByProject");
+        }
+
+        /// <summary>
+        /// This API is used to obtain consumption details summarized by project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByProjectRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByProjectResponse"/></returns>
+        public DescribeCostSummaryByProjectResponse DescribeCostSummaryByProjectSync(DescribeCostSummaryByProjectRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByProjectResponse>(req, "DescribeCostSummaryByProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain consumption details summarized by region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByRegionRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByRegionResponse"/></returns>
+        public Task<DescribeCostSummaryByRegionResponse> DescribeCostSummaryByRegion(DescribeCostSummaryByRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByRegionResponse>(req, "DescribeCostSummaryByRegion");
+        }
+
+        /// <summary>
+        /// This API is used to obtain consumption details summarized by region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByRegionRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByRegionResponse"/></returns>
+        public DescribeCostSummaryByRegionResponse DescribeCostSummaryByRegionSync(DescribeCostSummaryByRegionRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByRegionResponse>(req, "DescribeCostSummaryByRegion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain consumption details summarized by resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByResourceRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByResourceResponse"/></returns>
+        public Task<DescribeCostSummaryByResourceResponse> DescribeCostSummaryByResource(DescribeCostSummaryByResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByResourceResponse>(req, "DescribeCostSummaryByResource");
+        }
+
+        /// <summary>
+        /// This API is used to obtain consumption details summarized by resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByResourceRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByResourceResponse"/></returns>
+        public DescribeCostSummaryByResourceResponse DescribeCostSummaryByResourceSync(DescribeCostSummaryByResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeCostSummaryByResourceResponse>(req, "DescribeCostSummaryByResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

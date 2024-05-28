@@ -38,7 +38,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// Context information returned by this request. The value can be passed in as the value of parameters in the next request to accelerate queries. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

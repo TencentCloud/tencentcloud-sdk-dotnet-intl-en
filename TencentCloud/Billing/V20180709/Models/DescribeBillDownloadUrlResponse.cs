@@ -31,8 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? Ready{ get; set; }
 
         /// <summary>
-        /// Bill download URL, valid for one hour.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }
