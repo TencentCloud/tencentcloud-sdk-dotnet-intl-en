@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.907";
+       private const string sdkVersion = "SDK_NET_3.0.908";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,29 @@ namespace TencentCloud.Teo.V20220901
         public CreateOriginGroupResponse CreateOriginGroupSync(CreateOriginGroupRequest req)
         {
             return InternalRequestAsync<CreateOriginGroupResponse>(req, "CreateOriginGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// If you need to use the EdgeOne product, you must create a billing plan through this interface.
+        /// > After creating a plan, you need to complete the process of creating a site and binding the plan through [CreateZone](https://intl.cloud.tencent.com/document/product/1552/80719?from_cn_redirect=1), so that the EdgeOne can provide services properly.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePlanRequest"/></param>
+        /// <returns><see cref="CreatePlanResponse"/></returns>
+        public Task<CreatePlanResponse> CreatePlan(CreatePlanRequest req)
+        {
+            return InternalRequestAsync<CreatePlanResponse>(req, "CreatePlan");
+        }
+
+        /// <summary>
+        /// If you need to use the EdgeOne product, you must create a billing plan through this interface.
+        /// > After creating a plan, you need to complete the process of creating a site and binding the plan through [CreateZone](https://intl.cloud.tencent.com/document/product/1552/80719?from_cn_redirect=1), so that the EdgeOne can provide services properly.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePlanRequest"/></param>
+        /// <returns><see cref="CreatePlanResponse"/></returns>
+        public CreatePlanResponse CreatePlanSync(CreatePlanRequest req)
+        {
+            return InternalRequestAsync<CreatePlanResponse>(req, "CreatePlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1538,6 +1561,41 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// To stop billing for your EdgeOne plan, you can use this interface to terminate the billing plan.
+        /// > Terminating a billing plan requires the following conditions:
+        ///     1. The plan has expired (except for the Enterprise Edition Plan);
+        ///     2. All sites under the plan have been either shut down or deleted.
+        /// 
+        /// > The site status can be queried through the [Query Site List](https://intl.cloud.tencent.com/document/product/1552/80713?from_cn_redirect=1) interface.
+        /// A site can be deactivated by switching the site to a closed status through the [Switch Site Status](https://intl.cloud.tencent.com/document/product/1552/80707?from_cn_redirect=1) interface.
+        /// A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/document/product/1552/80717?from_cn_redirect=1) interface.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPlanRequest"/></param>
+        /// <returns><see cref="DestroyPlanResponse"/></returns>
+        public Task<DestroyPlanResponse> DestroyPlan(DestroyPlanRequest req)
+        {
+            return InternalRequestAsync<DestroyPlanResponse>(req, "DestroyPlan");
+        }
+
+        /// <summary>
+        /// To stop billing for your EdgeOne plan, you can use this interface to terminate the billing plan.
+        /// > Terminating a billing plan requires the following conditions:
+        ///     1. The plan has expired (except for the Enterprise Edition Plan);
+        ///     2. All sites under the plan have been either shut down or deleted.
+        /// 
+        /// > The site status can be queried through the [Query Site List](https://intl.cloud.tencent.com/document/product/1552/80713?from_cn_redirect=1) interface.
+        /// A site can be deactivated by switching the site to a closed status through the [Switch Site Status](https://intl.cloud.tencent.com/document/product/1552/80707?from_cn_redirect=1) interface.
+        /// A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/document/product/1552/80717?from_cn_redirect=1) interface.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyPlanRequest"/></param>
+        /// <returns><see cref="DestroyPlanResponse"/></returns>
+        public DestroyPlanResponse DestroyPlanSync(DestroyPlanRequest req)
+        {
+            return InternalRequestAsync<DestroyPlanResponse>(req, "DestroyPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to download L4 logs.
         /// </summary>
         /// <param name="req"><see cref="DownloadL4LogsRequest"/></param>
@@ -1597,6 +1655,29 @@ namespace TencentCloud.Teo.V20220901
         public IdentifyZoneResponse IdentifyZoneSync(IdentifyZoneRequest req)
         {
             return InternalRequestAsync<IdentifyZoneResponse>(req, "IdentifyZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// When the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the number of rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reaches the plan's quota, you can use this interface to purchase additional quotas.
+        /// > This interface only supports the Enterprise Edition Plan.
+        /// </summary>
+        /// <param name="req"><see cref="IncreasePlanQuotaRequest"/></param>
+        /// <returns><see cref="IncreasePlanQuotaResponse"/></returns>
+        public Task<IncreasePlanQuotaResponse> IncreasePlanQuota(IncreasePlanQuotaRequest req)
+        {
+            return InternalRequestAsync<IncreasePlanQuotaResponse>(req, "IncreasePlanQuota");
+        }
+
+        /// <summary>
+        /// When the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the number of rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reaches the plan's quota, you can use this interface to purchase additional quotas.
+        /// > This interface only supports the Enterprise Edition Plan.
+        /// </summary>
+        /// <param name="req"><see cref="IncreasePlanQuotaRequest"/></param>
+        /// <returns><see cref="IncreasePlanQuotaResponse"/></returns>
+        public IncreasePlanQuotaResponse IncreasePlanQuotaSync(IncreasePlanQuotaRequest req)
+        {
+            return InternalRequestAsync<IncreasePlanQuotaResponse>(req, "IncreasePlanQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1903,6 +1984,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// Modify the plan settings. Currently, only the auto-renewal switch of prepaid plans can be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPlanRequest"/></param>
+        /// <returns><see cref="ModifyPlanResponse"/></returns>
+        public Task<ModifyPlanResponse> ModifyPlan(ModifyPlanRequest req)
+        {
+            return InternalRequestAsync<ModifyPlanResponse>(req, "ModifyPlan");
+        }
+
+        /// <summary>
+        /// Modify the plan settings. Currently, only the auto-renewal switch of prepaid plans can be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPlanRequest"/></param>
+        /// <returns><see cref="ModifyPlanResponse"/></returns>
+        public ModifyPlanResponse ModifyPlanSync(ModifyPlanRequest req)
+        {
+            return InternalRequestAsync<ModifyPlanResponse>(req, "ModifyPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
         /// </summary>
         /// <param name="req"><see cref="ModifyRealtimeLogDeliveryTaskRequest"/></param>
@@ -2046,6 +2148,56 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneStatusResponse ModifyZoneStatusSync(ModifyZoneStatusRequest req)
         {
             return InternalRequestAsync<ModifyZoneStatusResponse>(req, "ModifyZoneStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// When your plan needs to be extended, you can use this interface to renew it. Plan renewal is only supported for the Personal, Basic, and Standard Editions.
+        /// > For cost details, refer to [Plan Fees](https://intl.cloud.tencent.com/document/product/1552/94158?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="RenewPlanRequest"/></param>
+        /// <returns><see cref="RenewPlanResponse"/></returns>
+        public Task<RenewPlanResponse> RenewPlan(RenewPlanRequest req)
+        {
+            return InternalRequestAsync<RenewPlanResponse>(req, "RenewPlan");
+        }
+
+        /// <summary>
+        /// When your plan needs to be extended, you can use this interface to renew it. Plan renewal is only supported for the Personal, Basic, and Standard Editions.
+        /// > For cost details, refer to [Plan Fees](https://intl.cloud.tencent.com/document/product/1552/94158?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="RenewPlanRequest"/></param>
+        /// <returns><see cref="RenewPlanResponse"/></returns>
+        public RenewPlanResponse RenewPlanSync(RenewPlanRequest req)
+        {
+            return InternalRequestAsync<RenewPlanResponse>(req, "RenewPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// When you need features available only in higher-tier plans, you can upgrade your plan through this interface. Upgrades are only supported for Personal and Basic Edition Plans.
+        /// > For differences between EdgeOne billing plans, refer to [Comparison of EdgeOne Plans](https://intl.cloud.tencent.com/document/product/1552/94165?from_cn_redirect=1).
+        /// For EdgeOne plan upgrade rules and pricing details, refer to [EdgeOne Plan Upgrade Guide](https://intl.cloud.tencent.com/document/product/1552/95291?from_cn_redirect=1).
+        /// If your plan needs to upgrade to the Enterprise Edition, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="UpgradePlanRequest"/></param>
+        /// <returns><see cref="UpgradePlanResponse"/></returns>
+        public Task<UpgradePlanResponse> UpgradePlan(UpgradePlanRequest req)
+        {
+            return InternalRequestAsync<UpgradePlanResponse>(req, "UpgradePlan");
+        }
+
+        /// <summary>
+        /// When you need features available only in higher-tier plans, you can upgrade your plan through this interface. Upgrades are only supported for Personal and Basic Edition Plans.
+        /// > For differences between EdgeOne billing plans, refer to [Comparison of EdgeOne Plans](https://intl.cloud.tencent.com/document/product/1552/94165?from_cn_redirect=1).
+        /// For EdgeOne plan upgrade rules and pricing details, refer to [EdgeOne Plan Upgrade Guide](https://intl.cloud.tencent.com/document/product/1552/95291?from_cn_redirect=1).
+        /// If your plan needs to upgrade to the Enterprise Edition, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="UpgradePlanRequest"/></param>
+        /// <returns><see cref="UpgradePlanResponse"/></returns>
+        public UpgradePlanResponse UpgradePlanSync(UpgradePlanRequest req)
+        {
+            return InternalRequestAsync<UpgradePlanResponse>(req, "UpgradePlan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

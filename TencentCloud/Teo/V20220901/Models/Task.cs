@@ -31,12 +31,6 @@ namespace TencentCloud.Teo.V20220901.Models
         public string JobId{ get; set; }
 
         /// <summary>
-        /// Status of the task.
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
         /// Resource.
         /// </summary>
         [JsonProperty("Target")]
@@ -47,6 +41,22 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
+        /// <summary>
+        /// Status. Valid values:
+        /// <li>processing: Processing;</li>
+        /// <li>success: Succeeded;</li>
+        /// <li>failed: Failed;</li>
+        /// <li>timeout: Timed out. </li>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
         /// Creation time of the task.
@@ -67,9 +77,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Target", this.Target);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

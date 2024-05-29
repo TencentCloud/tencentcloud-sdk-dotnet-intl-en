@@ -83,6 +83,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Sample{ get; set; }
 
         /// <summary>
+        /// Output format for log delivery. If this field is not specified, the original configuration will be retained.
+        /// </summary>
+        [JsonProperty("LogFormat")]
+        public LogFormat LogFormat{ get; set; }
+
+        /// <summary>
         /// The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
         /// </summary>
         [JsonProperty("CustomEndpoint")]
@@ -109,6 +115,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
             this.SetParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
             this.SetParamSimple(map, prefix + "Sample", this.Sample);
+            this.SetParamObj(map, prefix + "LogFormat.", this.LogFormat);
             this.SetParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
             this.SetParamObj(map, prefix + "S3.", this.S3);
         }

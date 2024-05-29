@@ -91,6 +91,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Sample{ get; set; }
 
         /// <summary>
+        /// Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:
+        /// <li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+        /// <li>When TaskType is 's3', the default format is JSON Lines. </li>
+        /// Note: This field may return 'null', which indicates a failure to obtain a valid value.
+        /// </summary>
+        [JsonProperty("LogFormat")]
+        public LogFormat LogFormat{ get; set; }
+
+        /// <summary>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CLS")]
@@ -137,6 +146,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
             this.SetParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
             this.SetParamSimple(map, prefix + "Sample", this.Sample);
+            this.SetParamObj(map, prefix + "LogFormat.", this.LogFormat);
             this.SetParamObj(map, prefix + "CLS.", this.CLS);
             this.SetParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
             this.SetParamObj(map, prefix + "S3.", this.S3);

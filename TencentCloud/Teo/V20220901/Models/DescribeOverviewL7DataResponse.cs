@@ -31,8 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The list of L7 traffic summary statistics recorded over time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return 'null', which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Data")]
         public TimingDataRecord[] Data{ get; set; }
