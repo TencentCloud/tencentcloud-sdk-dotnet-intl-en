@@ -83,7 +83,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Sample{ get; set; }
 
         /// <summary>
-        /// Output format for log delivery. If this field is not specified, the original configuration will be retained.
+        /// Output format for log delivery. If this field is not specified, the original configuration will be retained.Specifically, when TaskType is set to cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
         /// </summary>
         [JsonProperty("LogFormat")]
         public LogFormat LogFormat{ get; set; }

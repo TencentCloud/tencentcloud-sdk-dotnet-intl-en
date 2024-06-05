@@ -21,29 +21,14 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Rule : AbstractModel
+    public class CacheTag : AbstractModel
     {
         
         /// <summary>
-        /// Feature execution conditions.
-        /// Note: If any condition in the array is met, the feature will run.
+        /// List of domain names to purge cache for.
         /// </summary>
-        [JsonProperty("Conditions")]
-        public RuleAndConditions[] Conditions{ get; set; }
-
-        /// <summary>
-        /// Feature to be executed.
-        /// Note: Actions and SubRules cannot both be empty.
-        /// </summary>
-        [JsonProperty("Actions")]
-        public Action[] Actions{ get; set; }
-
-        /// <summary>
-        /// The nested rule.
-        /// Note: Actions and SubRules cannot both be empty.
-        /// </summary>
-        [JsonProperty("SubRules")]
-        public SubRuleItem[] SubRules{ get; set; }
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
 
 
         /// <summary>
@@ -51,9 +36,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
-            this.SetParamArrayObj(map, prefix + "Actions.", this.Actions);
-            this.SetParamArrayObj(map, prefix + "SubRules.", this.SubRules);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
         }
     }
 }

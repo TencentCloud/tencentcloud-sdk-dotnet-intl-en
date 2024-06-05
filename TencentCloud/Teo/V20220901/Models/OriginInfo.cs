@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Origin server type. Valid values:
-        /// <li>IP_DOMAIN: IPV4, IPV6, or domain type origin server;</li>
-        /// <li>COS: Tencent Cloud Object Storage origin server;</li>
-        /// <li>AWS_S3: AWS S3 Cloud Object Storage origin server;</li>
-        /// <li>ORIGIN_GROUP: Origin group type origin server;</li>
-        /// <li>VODEO: Video on Demand (hybrid cloud edition);</li>
-        /// <li>SPACE: Origin shield, currently only available to the whitelist;</li>
-        /// <li>LB: Cloud Load Balancer, currently only available to the whitelist.</li>
+        /// The origin server type, with values:
+        /// <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+        /// <li>COS: Tencent Cloud COS origin server;</li>
+        /// <li>AWS_S3: AWS S3 origin server;</li>
+        /// <li>ORIGIN_GROUP: origin server group type origin server;</li>
+        /// <li>VODEO: VOD on EO;</li>
+        /// <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+        /// <li>LB: load balancing. Currently only available to the allowlist. </li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }

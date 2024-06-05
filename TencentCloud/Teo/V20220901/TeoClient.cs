@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.912";
+       private const string sdkVersion = "SDK_NET_3.0.913";
 
         /// <summary>
         /// Client constructor.
@@ -1372,6 +1372,30 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the configuration information of a security IP group, including the ID, name, and content of the security IP group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
+        public Task<DescribeSecurityIPGroupResponse> DescribeSecurityIPGroup(DescribeSecurityIPGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupResponse>(req, "DescribeSecurityIPGroup");
+        }
+
+        /// <summary>
+        /// This API is used to query the configuration information of a security IP group, including the ID, name, and content of the security IP group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
+        public DescribeSecurityIPGroupResponse DescribeSecurityIPGroupSync(DescribeSecurityIPGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupResponse>(req, "DescribeSecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// The API is deprecated and will be discontinued on June 30, 2024. Please use the API [DescribeSecurityIPGroup
+        /// ](https://intl.cloud.tencent.com/document/product/1552/105866?from_cn_redirect=1).
+        /// 
         /// This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupInfoRequest"/></param>
@@ -1382,6 +1406,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// The API is deprecated and will be discontinued on June 30, 2024. Please use the API [DescribeSecurityIPGroup
+        /// ](https://intl.cloud.tencent.com/document/product/1552/105866?from_cn_redirect=1).
+        /// 
         /// This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupInfoRequest"/></param>

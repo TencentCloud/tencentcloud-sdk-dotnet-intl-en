@@ -21,29 +21,22 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Rule : AbstractModel
+    public class DescribeSecurityIPGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// Feature execution conditions.
-        /// Note: If any condition in the array is met, the feature will run.
+        /// Site ID, used to specify the scope of the queried site.
         /// </summary>
-        [JsonProperty("Conditions")]
-        public RuleAndConditions[] Conditions{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Feature to be executed.
-        /// Note: Actions and SubRules cannot both be empty.
+        /// Specifies the ID of a security IP group.
+        /// <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried.</li>
+        /// <li>When this parameter is not provided, information of all security IP groups under the site is returned.</li>
         /// </summary>
-        [JsonProperty("Actions")]
-        public Action[] Actions{ get; set; }
-
-        /// <summary>
-        /// The nested rule.
-        /// Note: Actions and SubRules cannot both be empty.
-        /// </summary>
-        [JsonProperty("SubRules")]
-        public SubRuleItem[] SubRules{ get; set; }
+        [JsonProperty("GroupIds")]
+        public long?[] GroupIds{ get; set; }
 
 
         /// <summary>
@@ -51,9 +44,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
-            this.SetParamArrayObj(map, prefix + "Actions.", this.Actions);
-            this.SetParamArrayObj(map, prefix + "SubRules.", this.SubRules);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         }
     }
 }

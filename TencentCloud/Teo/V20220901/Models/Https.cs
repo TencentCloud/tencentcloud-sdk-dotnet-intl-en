@@ -77,11 +77,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ApplyType{ get; set; }
 
         /// <summary>
-        /// Cipher suite. Values:
-        /// <li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
-        /// <li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
-        /// <li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// The cipher suite, with values:
+        /// <li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
+        /// <li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
+        /// <li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("CipherSuite")]
         public string CipherSuite{ get; set; }
