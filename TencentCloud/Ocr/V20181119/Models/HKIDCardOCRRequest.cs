@@ -25,16 +25,17 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Whether to check for authenticity.
-        /// </summary>
-        [JsonProperty("DetectFake")]
-        public bool? DetectFake{ get; set; }
-
-        /// <summary>
         /// Whether to return identity photo.
         /// </summary>
         [JsonProperty("ReturnHeadImage")]
         public bool? ReturnHeadImage{ get; set; }
+
+        /// <summary>
+        /// Whether to check for authenticity.
+        /// </summary>
+        [JsonProperty("DetectFake")]
+        [System.Obsolete]
+        public bool? DetectFake{ get; set; }
 
         /// <summary>
         /// Base64 string of the image
@@ -60,8 +61,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DetectFake", this.DetectFake);
             this.SetParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
+            this.SetParamSimple(map, prefix + "DetectFake", this.DetectFake);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         }

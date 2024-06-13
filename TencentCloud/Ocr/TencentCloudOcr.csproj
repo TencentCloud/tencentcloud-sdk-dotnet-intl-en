@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.917</VersionPrefix>
+    <VersionPrefix>3.0.918</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,6 +115,8 @@
     <Compile Include="V20181119\Models\RecognizePhilippinesUMIDOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizePhilippinesVoteIDOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizePhilippinesVoteIDOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeSingaporeIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeSingaporeIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeTableAccurateOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeTableAccurateOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRRequest.cs" />

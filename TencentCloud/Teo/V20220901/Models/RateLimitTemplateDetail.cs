@@ -25,14 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The mode. Values:
-        /// <li>`sup_loose`: Super loose</li>
-        /// <li>`loose`: Loose</li>
-        /// <li>`emergency`: Emergency</li>
-        /// <li>`normal`: Moderate</li>
-        /// <li>`strict`: Strict</li>
-        /// <li>`close`: Off</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
@@ -44,17 +37,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// The action. Values:
-        /// <li>`alg`: JavaScript challenge</li>
-        /// <li>`monitor`: Observe</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The blocking duration, in seconds. Value range: 0-172800.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }

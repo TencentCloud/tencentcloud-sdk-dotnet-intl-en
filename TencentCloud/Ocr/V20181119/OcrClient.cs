@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.917";
+       private const string sdkVersion = "SDK_NET_3.0.918";
 
         /// <summary>
         /// Client constructor.
@@ -899,6 +899,29 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCRSync(RecognizePhilippinesVoteIDOCRRequest req)
         {
             return InternalRequestAsync<RecognizePhilippinesVoteIDOCRResponse>(req, "RecognizePhilippinesVoteIDOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface supports the identification of all fields on the front side of ID card for Singapore residents.The identification accuracy reaches more than 99%.In addition, this interface also supports a variety of value-added capabilities to meet the needs of different scenarios. Such as the cropping function of ID card photos and portrait photos, and also has 5 alarm functions.
+        /// As shown in the table below. <table style="width:650px"> <thead> <tr> <th width="150">Value-added ability</th> <th width="500">Ability items</th> </tr> </thead> <tbody> <tr> <td rowspan="9">Alarm function</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>Alarm for occlusion in the ID card frame</td> </tr> <tr> <td>ID card reflective warning</td> </tr> <tr> <td>Blurry picture warning</td> </tr> </tbody> </table> Default interface request frequency limit: 20 times/second
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeSingaporeIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeSingaporeIDCardOCRResponse"/></returns>
+        public Task<RecognizeSingaporeIDCardOCRResponse> RecognizeSingaporeIDCardOCR(RecognizeSingaporeIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeSingaporeIDCardOCRResponse>(req, "RecognizeSingaporeIDCardOCR");
+        }
+
+        /// <summary>
+        /// This interface supports the identification of all fields on the front side of ID card for Singapore residents.The identification accuracy reaches more than 99%.In addition, this interface also supports a variety of value-added capabilities to meet the needs of different scenarios. Such as the cropping function of ID card photos and portrait photos, and also has 5 alarm functions.
+        /// As shown in the table below. <table style="width:650px"> <thead> <tr> <th width="150">Value-added ability</th> <th width="500">Ability items</th> </tr> </thead> <tbody> <tr> <td rowspan="9">Alarm function</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>ID card copy warning</td> </tr> <tr> <td>Alarm for occlusion in the ID card frame</td> </tr> <tr> <td>ID card reflective warning</td> </tr> <tr> <td>Blurry picture warning</td> </tr> </tbody> </table> Default interface request frequency limit: 20 times/second
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeSingaporeIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeSingaporeIDCardOCRResponse"/></returns>
+        public RecognizeSingaporeIDCardOCRResponse RecognizeSingaporeIDCardOCRSync(RecognizeSingaporeIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeSingaporeIDCardOCRResponse>(req, "RecognizeSingaporeIDCardOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

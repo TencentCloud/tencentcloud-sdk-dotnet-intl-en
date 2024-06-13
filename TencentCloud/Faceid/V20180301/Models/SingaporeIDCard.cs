@@ -29,21 +29,45 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ChName")]
+        [System.Obsolete]
         public string ChName{ get; set; }
+
+        /// <summary>
+        /// Chinese name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ChineseName")]
+        public string ChineseName{ get; set; }
 
         /// <summary>
         /// English name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnName")]
+        [System.Obsolete]
         public string EnName{ get; set; }
+
+        /// <summary>
+        /// English name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FullName")]
+        public string FullName{ get; set; }
 
         /// <summary>
         /// License number
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ID")]
+        [System.Obsolete]
         public string ID{ get; set; }
+
+        /// <summary>
+        /// License number
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LicenseNumber")]
+        public string LicenseNumber{ get; set; }
 
         /// <summary>
         /// Gender
@@ -57,7 +81,15 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CountryOfBirth")]
+        [System.Obsolete]
         public string CountryOfBirth{ get; set; }
+
+        /// <summary>
+        /// Nationality
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Nationality")]
+        public string Nationality{ get; set; }
 
         /// <summary>
         /// Birthday
@@ -74,7 +106,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Address{ get; set; }
 
         /// <summary>
-        /// Nationality (on the back)
+        /// Race (on the back)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Race")]
@@ -115,10 +147,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ChName", this.ChName);
+            this.SetParamSimple(map, prefix + "ChineseName", this.ChineseName);
             this.SetParamSimple(map, prefix + "EnName", this.EnName);
+            this.SetParamSimple(map, prefix + "FullName", this.FullName);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "LicenseNumber", this.LicenseNumber);
             this.SetParamSimple(map, prefix + "Sex", this.Sex);
             this.SetParamSimple(map, prefix + "CountryOfBirth", this.CountryOfBirth);
+            this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
             this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "Race", this.Race);
