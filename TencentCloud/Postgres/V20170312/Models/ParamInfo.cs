@@ -147,21 +147,21 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string LastModifyTime{ get; set; }
 
         /// <summary>
-        /// Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+        /// Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StandbyRelated")]
         public long? StandbyRelated{ get; set; }
 
         /// <summary>
-        /// Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+        /// Parameter version association information, containing detailed parameter information for the respective kernel version
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VersionRelationSet")]
         public ParamVersionRelation[] VersionRelationSet{ get; set; }
 
         /// <summary>
-        /// Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+        /// Parameter specification association information, containing detailed parameter information for the respective specification
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SpecRelationSet")]

@@ -61,7 +61,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+        /// PostgreSQL community major version + minor version number.
+        /// It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -133,13 +134,15 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+        /// The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+        /// When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
 
         /// <summary>
-        /// PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+        /// PostgreSQL kernel version number.
+        /// It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
         /// </summary>
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }

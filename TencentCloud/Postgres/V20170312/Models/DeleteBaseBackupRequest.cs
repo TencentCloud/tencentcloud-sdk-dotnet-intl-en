@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Base backup ID
+        /// Data Backup ID.
         /// </summary>
         [JsonProperty("BaseBackupId")]
         public string BaseBackupId{ get; set; }

@@ -66,7 +66,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// List of versions to which this database version (`DBKernelVersion`) can be upgraded.
+        /// List of versions to which this database version (`DBKernelVersion`) can be upgraded, including minor and major version numbers available for upgrade (complete kernel version format example: v15.1_v1.6).
         /// </summary>
         [JsonProperty("AvailableUpgradeTarget")]
         public string[] AvailableUpgradeTarget{ get; set; }

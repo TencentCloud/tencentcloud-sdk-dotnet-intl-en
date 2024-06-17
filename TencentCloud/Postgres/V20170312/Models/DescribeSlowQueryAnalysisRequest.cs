@@ -31,43 +31,43 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
+        /// Query start time, in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
+        /// Query end time, in the format of 2018-01-01 00:00:00.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Filter by database name. This parameter is optional.
+        /// Database name
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
+        /// Sorting field, with valid values `[CallNum, CostTime, AvgCostTime]`. The default value is `CallNum`.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+        /// Sorting method, including ascending: `asc` and descending: `desc`. The default value is `desc`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Value range: [1,100]. Default value: `50`.
+        /// Number of results returned per page, with a value range of 1-100. The default value is `50`.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Value range: [0,INF). Default value: `0`.
+        /// Data offset, which starts from 0. The default value is `0`.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

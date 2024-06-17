@@ -25,12 +25,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Filter instances using one or more criteria. Valid filter names:
+        /// Query using one or more filter criteria. Filter criteria currently supported include:
         /// db-instance-id: filter by instance ID (in string format)
         /// db-instance-name: filter by instance name (in string format)
-        /// db-project-id: filter by project ID (in integer format)
-        /// db-pay-mode: filter by billing mode (in string format)
+        /// db-project-id: filter by project ID (in string format)
+        /// db-pay-mode: filter by instance billing mode (in string format)
         /// db-tag-key: filter by tag key (in string format)
+        /// db-private-ip: filter by instance VPC IP (in string format)
+        /// db-public-address: filter by instance public network address (in string format)
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

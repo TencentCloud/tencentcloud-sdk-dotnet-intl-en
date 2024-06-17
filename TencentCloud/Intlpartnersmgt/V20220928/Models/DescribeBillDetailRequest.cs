@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// The queried month in the format of “YYYY-MM”, such as 2023-01.
+        /// The queried month in the format of "YYYY-MM", such as 2023-01.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }

@@ -54,6 +54,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("BackupPeriod")]
         public string[] BackupPeriod{ get; set; }
 
+        /// <summary>
+        /// Instance log backup retention duration, with a value range of 7-1830 and a unit of day
+        /// </summary>
+        [JsonProperty("LogBackupRetentionPeriod")]
+        public ulong? LogBackupRetentionPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "MaxBackupStartTime", this.MaxBackupStartTime);
             this.SetParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
             this.SetParamArraySimple(map, prefix + "BackupPeriod.", this.BackupPeriod);
+            this.SetParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
         }
     }
 }

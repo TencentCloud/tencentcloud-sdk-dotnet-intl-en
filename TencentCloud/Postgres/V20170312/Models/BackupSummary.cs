@@ -43,25 +43,25 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? LogBackupSize{ get; set; }
 
         /// <summary>
-        /// Number of manually created full backups of an instance
+        /// Number of manually created instance data backups.
         /// </summary>
         [JsonProperty("ManualBaseBackupCount")]
         public ulong? ManualBaseBackupCount{ get; set; }
 
         /// <summary>
-        /// Size of manually created full backups of an instance
+        /// Size of manually created instance data backups.
         /// </summary>
         [JsonProperty("ManualBaseBackupSize")]
         public ulong? ManualBaseBackupSize{ get; set; }
 
         /// <summary>
-        /// Number of automatically created full backups of an instance
+        /// Number of automatically created instance data backups.
         /// </summary>
         [JsonProperty("AutoBaseBackupCount")]
         public ulong? AutoBaseBackupCount{ get; set; }
 
         /// <summary>
-        /// Size of automatically created full backups of an instance
+        /// Size of automatically created instance data backups.
         /// </summary>
         [JsonProperty("AutoBaseBackupSize")]
         public ulong? AutoBaseBackupSize{ get; set; }

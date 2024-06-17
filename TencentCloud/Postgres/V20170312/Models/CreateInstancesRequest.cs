@@ -50,82 +50,80 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Validity period in months.
-        /// <li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-        /// <li>Pay-as-you-go: `1`.
+        /// Purchase duration, in months.
+        /// <li>Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>
+        /// <li>Pay-as-you-go: Only supports `1`.</li>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Instance character set. Valid values: 
-        /// <li> `UTF8`
-        /// <li> `LATIN1`
+        /// Instance character set, which currently supports only:
+        /// <li>UTF8</li>
+        /// <li>LATIN1</li>
         /// </summary>
         [JsonProperty("Charset")]
         public string Charset{ get; set; }
 
         /// <summary>
-        /// Username of the instance root account, which has the following rules:
-        /// <li>It must contain 1–16 letters , digits, or underscores
-        /// <li>It can't be `postgres`.
-        /// <li>It can't start with a digit or `pg_`.
-        /// <li>All rules are case-insensitive.
+        /// Username of the instance root account, with the following specifications:
+        /// <li>The username must consist of 1-16 characters, which can be letters, digits, or underscores.</li>
+        /// <li>It cannot be postgres.</li>
+        /// <li>It cannot start with digits or 'pg_'.</li>
+        /// <li>All rules are case-insensitive.</li>
         /// </summary>
         [JsonProperty("AdminName")]
         public string AdminName{ get; set; }
 
         /// <summary>
-        /// Password of the instance root account, which must contain 8-32 characters (above 12 characters preferably). It cannot begin with "/",
-        /// and must contain the following 4 types of characters.
-        /// <li>Lowercase letters: [a–z]
-        /// <li>Uppercase letters: [A–Z]
-        /// <li>Digits: 0-9
-        /// <li>Symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
+        /// Password for the instance root account username, with a length of 8-32 characters. It is recommended to use a password of more than 12 characters and it cannot start with "/".
+        /// It must include the following four types of characters:
+        /// <li>Lowercase letters: [a ~ z]</li>
+        /// <li>Uppercase letters: [A ~ Z]</li>
+        /// <li>Digits: 0-9</li>
+        /// <li>Special symbols: ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/</li>
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
 
         /// <summary>
-        /// The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-        /// When only this parameter is specified, an instance running the latest kernel version of the latest minor version will be created based on this major version.
-        /// You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`. If you don't need a minor version, just pass in `DBMajorVersion`.
+        /// The major version number of PostgreSQL (this parameter is currently required), and the version information can be obtained from [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1). Currently major versions `10`, `11`, `12`, `13`, `14`, and `15` are supported. For details, see [Kernel Version Overview](https://intl.cloud.tencent.com/document/product/409/67018).
+        /// When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
 
         /// <summary>
-        /// Number of the major PostgreSQL community version and minor version, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-        /// If it is specified, an instance running the latest kernel version will be created based on the community minor version.
-        /// You must pass in at least one of the following parameters: `DBMajorVersion`, `DBVersion`, DBKernelVersion`.
+        /// PostgreSQL community major version + minor version number.
+        /// It's generally not recommended to pass in this parameter. If needed, only the latest minor version number under the current major version can be passed.
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// PostgreSQL kernel version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-        /// PostgreSQL kernel version number. If it is specified, an instance running the specified kernel version will be created. Passing in this parameter in other scenarios is not supported.This parameter is only used to specify a kernel version, which serves no other purposes.
+        /// PostgreSQL kernel version number.
+        /// It's generally not recommended to pass in this parameter. If needed, only the latest kernel version number under the current major version can be passed.
         /// </summary>
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid values:
-        /// <li>`PREPAID`: Monthly subscription
-        /// <li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-        /// Default value: `PREPAID`.
+        /// Instance billing type, which currently supports:
+        /// <li>PREPAID: Prepaid, i.e., monthly subscription</li>
+        /// <li>POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption</li>
+        /// Default value: PREPAID
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// VPC ID in the format of `vpc-xxxxxxx`. To obtain valid VPC IDs, you can log in to the console or call [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) and look for the `unVpcId` fields in the response.
+        /// VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID in the format of `subnet-xxxxxxxx`, u200cwhich can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+        /// VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -138,19 +136,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. Valid values:
-        /// <li>`0`: Manual renewal.
-        /// <li> `1`: Automatic renewal.
-        /// Default value: `0`.
+        /// Renewal Flag:
+        /// <li>`0`: manual renewal</li>
+        /// <li>`1`: auto-renewal</li>
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Whether to use vouchers automatically. Valid values:
-        /// <li>`0`: No.
-        /// <li>`1`: Yes.
-        /// Default value: `0`.
+        /// Whether to automatically use coupons:
+        /// <li>`0`: no</li>
+        /// <li>`1`: yes</li>
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public ulong? AutoVoucher{ get; set; }
@@ -192,11 +190,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Whether to support TDE. Valid values:
-        /// <li>`0`: No.
-        /// <li>`1`: Yes.
-        /// Default value: `0`.
-        /// For more information, see [TDE]u200d(https://www.tencentcloud.com/document/product/409/47765).
+        /// Whether data transparent encryption is required:
+        /// <li>`0`: no</li>
+        /// <li>`1`: yes</li>
+        /// Default value: 0See [Overview of Data Transparent Encryption](https://intl.cloud.tencent.com/document/product/409/71748?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("NeedSupportTDE")]
         public ulong? NeedSupportTDE{ get; set; }
@@ -216,42 +213,42 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string KMSRegion{ get; set; }
 
         /// <summary>
-        /// Database engines. Valid values:
-        /// <li>`postgresql`: TencentDB for PostgreSQL
-        /// <li>`mssql_compatible`: MSSQL compatible-TencentDB for PostgreSQL
-        /// Default value: `postgresql`.
+        /// Database engine, which supports:
+        /// <li>`postgresql`: TencentDB for PostgreSQL</li>
+        /// <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
+        /// Default value: `postgresql`
         /// </summary>
         [JsonProperty("DBEngine")]
         public string DBEngine{ get; set; }
 
         /// <summary>
-        /// Configuration information of database engine in the following format:
+        /// Configuration information for the database engine, and the configuration format is as follows:
         /// {"$key1":"$value1", "$key2":"$value2"}
-        /// Valid values:
+        /// Supported engines include:
         /// mssql_compatible engine:
-        /// <li>`migrationMode`: Database mode. Valid values: `single-db` (single-database mode), `multi-db` (multi-database mode). Default value: `single-db`.
-        /// <li>`defaultLocale`: Default locale, which can’t be modified after the initialization. Default value: `en_US`. Valid values:
-        /// "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN".
-        /// <li>`serverCollationName`: Default collation name, which can’t be modified after the initialization. Default value: "bbf_unicode_general_ci_as". Valid values: "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。
+        /// <li>migrationMode: Database mode, an optional parameter, and its valid values are: single-db (single database schema) and multi-db (multiple database schema). The default value is single-db.</li>
+        /// <li>defaultLocale: Sorting area rule, an optional parameter, which cannot be modified after initialization, its default value is en_US, and its valid values include:
+        /// "af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", and "vi_VN".</li>
+        /// <li>serverCollationName: Sorting rule name, an optional parameter, which cannot be modified after initialization, its default value is sql_latin1_general_cp1_ci_as, and its valid values include: "bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as", "sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", and "vietnamese_ci_as".</li>
         /// </summary>
         [JsonProperty("DBEngineConfig")]
         public string DBEngineConfig{ get; set; }
 
         /// <summary>
-        /// Primary-standby sync mode. Valid values:  
-        /// <li>`Semi-sync`
-        /// <li>`Async`
-        /// Default value for the primary instance: `Semi-sync`.
-        /// Default value for the standby instance: `Async`.
+        /// Primary-standby sync mode, which supports:
+        /// <li>Semi-sync: Semi-sync</li>
+        /// <li>Async: Asynchronous</li>
+        /// Default value for the primary instance: Semi-sync
+        /// Default value for the read-only instance: Async
         /// </summary>
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }
 
         /// <summary>
-        /// Whether IPv6 is supported.
-        /// <li>`0`: No.
-        /// <li>`1`: Yes.
-        /// Default value: `0`.
+        /// Whether support to IPv6 is required:
+        /// <li>`0`: no</li>
+        /// <li>`1`: yes</li>
+        /// Default value: 0
         /// </summary>
         [JsonProperty("NeedSupportIpv6")]
         public ulong? NeedSupportIpv6{ get; set; }

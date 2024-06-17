@@ -43,18 +43,21 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Validity period in months. Valid values:
-        /// <li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-        /// <li>Pay-as-you-go: `1`.
+        /// Purchase duration, in months.
+        /// 
+        /// - Prepaid: Supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.
+        /// - Pay-as-you-go: Only supports `1`.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. Valid values:
-        /// <li>`0`: Manual renewal.
-        /// <li>`1`: Automatic renewal.
-        /// Default value: `0`.
+        /// Renewal Flag:
+        /// 
+        /// - `0`: manual renewal
+        /// `1`: auto-renewal
+        /// 
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -78,10 +81,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid values:
-        /// <li>`PREPAID`: Monthly subscription.
-        /// <li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-        /// Default value: `PREPAID`.
+        /// Instance billing type, which currently supports:
+        /// 
+        /// - PREPAID: Prepaid, i.e., monthly subscription
+        /// - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
+        /// 
+        /// Default value: PREPAID
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -112,10 +117,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// Whether to use vouchers automatically. Valid values:
-        /// <li>`0`: No.
-        /// <li>`1`: Yes.
-        /// Default value: `0`.
+        /// Whether to automatically use coupons:
+        /// 
+        /// - 0: No
+        /// - 1: Yes
+        /// 
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
@@ -145,11 +152,11 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string RecoveryTargetTime{ get; set; }
 
         /// <summary>
-        /// Primary-standby sync mode. Valid values:  
-        /// <li>`Semi-sync`
-        /// <li>`Async`
-        /// Default value for the primary instance: `Semi-sync`.
-        /// Default value for the standby instance: `Async`.
+        /// Primary-standby sync mode, which supports:
+        /// <li>Semi-sync: Semi-sync</li>
+        /// <li>Async: Asynchronous</li>
+        /// Default value for the primary instance: Semi-sync
+        /// Default value for the read-only instance: Async
         /// </summary>
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }

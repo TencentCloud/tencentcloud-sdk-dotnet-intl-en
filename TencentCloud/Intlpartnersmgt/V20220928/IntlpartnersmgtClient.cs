@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.919";
+       private const string sdkVersion = "SDK_NET_3.0.920";
 
         /// <summary>
         /// Client constructor.
@@ -104,7 +104,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the customer bill details.
+        /// This API is used to query bill details by customers.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
         /// <returns><see cref="DescribeBillDetailResponse"/></returns>
@@ -114,7 +114,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the customer bill details.
+        /// This API is used to query bill details by customers.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
         /// <returns><see cref="DescribeBillDetailResponse"/></returns>
@@ -230,7 +230,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the customer bill details.
+        /// This API is used to query the customer bill details by resellers.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillDetailResponse"/></returns>
@@ -240,7 +240,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the customer bill details.
+        /// This API is used to query the customer bill details by resellers.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillDetailResponse"/></returns>

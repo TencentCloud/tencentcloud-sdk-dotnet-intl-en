@@ -38,11 +38,11 @@ namespace TencentCloud.Postgres.V20170312.Models
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// Switch time for the specified instance after configuration modification.
-        /// <li>`0`: Switch now. 
-        /// <li>`1`: Switch at the specified time.
-        /// <li>`2`: Switch in the maintenance time.
-        /// Default value: `0`. 
+        /// Switch time after instance configurations are modified.
+        /// <li>0: Switch immediately</li>
+        /// <li>1: Switch at specified time</li>
+        /// <li>2: Switch during maintenance time window</li>
+        /// Default value: 0
         /// </summary>
         [JsonProperty("SwitchTag")]
         public long? SwitchTag{ get; set; }

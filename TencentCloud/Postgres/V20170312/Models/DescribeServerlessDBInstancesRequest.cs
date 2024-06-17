@@ -25,7 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Query conditions
+        /// Query criteria. Query using one or more filter criteria. Filter criteria type (specified by the name field) currently supported include: 
+        /// 
+        /// - db-instance-id: filter by instance ID (in string format)
+        /// - db-instance-name: filter by instance name (in string format)
+        /// - db-tag-key: filter by instance tag (in string format)
+        /// 
+        /// The value field specifies the specific instance ID/instance name/instance tag-key to filter under this type of filter criteria.
         /// </summary>
         [JsonProperty("Filter")]
         public Filter[] Filter{ get; set; }

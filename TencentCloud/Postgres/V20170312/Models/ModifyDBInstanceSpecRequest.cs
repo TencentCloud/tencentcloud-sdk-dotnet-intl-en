@@ -43,10 +43,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// Whether to use vouchers automatically. Valid values:
-        /// <li>`0`: No.
-        /// <li>`1`: Yes.
-        /// Default value: `0`.
+        /// Whether to automatically use coupons:
+        /// <li>`0`: no</li>
+        /// <li>`1`: yes</li>
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public ulong? AutoVoucher{ get; set; }
@@ -64,11 +64,11 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ActivityId{ get; set; }
 
         /// <summary>
-        /// Switch time for the specified instance after configuration modification.
-        /// <li>`0`: Switch now. 
-        /// <li>`1`: Switch at the specified time.
-        /// <li>`2`: Switch in the maintenance time.
-        /// Default value: `0`. 
+        /// Switch time after instance configurations are modified.
+        /// <li>0: Switch immediately</li>
+        /// <li>1: Switch at specified time</li>
+        /// <li>2: Switch during maintenance time window</li>
+        /// Default value: 0
         /// </summary>
         [JsonProperty("SwitchTag")]
         public ulong? SwitchTag{ get; set; }
@@ -85,6 +85,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("SwitchEndTime")]
         public string SwitchEndTime{ get; set; }
 
+        /// <summary>
+        /// Instance CPU size in Cores after modification.
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
             this.SetParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
             this.SetParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

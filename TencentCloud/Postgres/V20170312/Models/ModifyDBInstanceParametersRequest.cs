@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Parameters to be modified and their new values
+        /// Parameters to be modified and expected values.
         /// </summary>
         [JsonProperty("ParamList")]
         public ParamEntry[] ParamList{ get; set; }

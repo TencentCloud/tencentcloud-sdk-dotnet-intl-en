@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.919";
+       private const string sdkVersion = "SDK_NET_3.0.920";
 
         /// <summary>
         /// Client constructor.
@@ -138,7 +138,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a full backup of an instance.
+        /// This API is used to create a data backup of an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateBaseBackupRequest"/></param>
         /// <returns><see cref="CreateBaseBackupResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a full backup of an instance.
+        /// This API is used to create a data backup of an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateBaseBackupRequest"/></param>
         /// <returns><see cref="CreateBaseBackupResponse"/></returns>
@@ -201,9 +201,9 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to create and initialize one or more TencentDB for PostgreSQL instances.
-        /// <li>After an instance is created successfully, it will start up automatically and enter the "Running" status.
-        /// <li>If you create a monthly subscribed instance, you will be billed for the instance before the creation; if you create a pay-as-you-go instance billed on an hourly basis, the amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
+        /// This API is used to create one or more PostgreSQL instances. Instances created through this interface do not need to be initialized and can be used directly.
+        /// <li>After an instance is successfully created, it will automatically start up, and its status changes to "Running".</li>
+        /// <li>For prepaid instances, the required amount for the instance purchase will be deducted in advance. For post-paid hourly instances, the amount required for the purchase within the first hour will be temporarily frozen. Please ensure that your account balance is sufficient before calling this interface.</li>
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -213,9 +213,9 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to create and initialize one or more TencentDB for PostgreSQL instances.
-        /// <li>After an instance is created successfully, it will start up automatically and enter the "Running" status.
-        /// <li>If you create a monthly subscribed instance, you will be billed for the instance before the creation; if you create a pay-as-you-go instance billed on an hourly basis, the amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
+        /// This API is used to create one or more PostgreSQL instances. Instances created through this interface do not need to be initialized and can be used directly.
+        /// <li>After an instance is successfully created, it will automatically start up, and its status changes to "Running".</li>
+        /// <li>For prepaid instances, the required amount for the instance purchase will be deducted in advance. For post-paid hourly instances, the amount required for the purchase within the first hour will be temporarily frozen. Please ensure that your account balance is sufficient before calling this interface.</li>
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -331,7 +331,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete the specified full backup of an instance.
+        /// This API is used to delete a specified data backup for an instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteBaseBackupRequest"/></param>
         /// <returns><see cref="DeleteBaseBackupResponse"/></returns>
@@ -341,7 +341,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete the specified full backup of an instance.
+        /// This API is used to delete a specified data backup for an instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteBaseBackupRequest"/></param>
         /// <returns><see cref="DeleteBaseBackupResponse"/></returns>
@@ -625,7 +625,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the list of full backups.
+        /// This API is used to query the list of data backups.
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseBackupsRequest"/></param>
         /// <returns><see cref="DescribeBaseBackupsResponse"/></returns>
@@ -635,7 +635,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the list of full backups.
+        /// This API is used to query the list of data backups.
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseBackupsRequest"/></param>
         /// <returns><see cref="DescribeBaseBackupsResponse"/></returns>
@@ -881,7 +881,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
+        /// This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://www.tencentcloud.com/zh/document/product/409/54343) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
         /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
@@ -891,7 +891,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
+        /// This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://www.tencentcloud.com/zh/document/product/409/54343) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
         /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
@@ -1427,7 +1427,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the specified expiration time of a full backup for an instance.
+        /// This API is used to modify the expiration time of a specified data backup for an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
         /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
@@ -1437,7 +1437,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the specified expiration time of a full backup for an instance.
+        /// This API is used to modify the expiration time of a specified data backup for an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyBaseBackupExpireTimeRequest"/></param>
         /// <returns><see cref="ModifyBaseBackupExpireTimeResponse"/></returns>
@@ -1851,6 +1851,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to recover database-related objects such as databases and tables on the original instance based on the backup set or recovery target time.
+        /// </summary>
+        /// <param name="req"><see cref="RestoreDBInstanceObjectsRequest"/></param>
+        /// <returns><see cref="RestoreDBInstanceObjectsResponse"/></returns>
+        public Task<RestoreDBInstanceObjectsResponse> RestoreDBInstanceObjects(RestoreDBInstanceObjectsRequest req)
+        {
+            return InternalRequestAsync<RestoreDBInstanceObjectsResponse>(req, "RestoreDBInstanceObjects");
+        }
+
+        /// <summary>
+        /// This API is used to recover database-related objects such as databases and tables on the original instance based on the backup set or recovery target time.
+        /// </summary>
+        /// <param name="req"><see cref="RestoreDBInstanceObjectsRequest"/></param>
+        /// <returns><see cref="RestoreDBInstanceObjectsResponse"/></returns>
+        public RestoreDBInstanceObjectsResponse RestoreDBInstanceObjectsSync(RestoreDBInstanceObjectsRequest req)
+        {
+            return InternalRequestAsync<RestoreDBInstanceObjectsResponse>(req, "RestoreDBInstanceObjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to set auto-renewal.
         /// </summary>
         /// <param name="req"><see cref="SetAutoRenewFlagRequest"/></param>
@@ -1937,6 +1958,27 @@ namespace TencentCloud.Postgres.V20170312
         public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersionSync(UpgradeDBInstanceKernelVersionRequest req)
         {
             return InternalRequestAsync<UpgradeDBInstanceKernelVersionResponse>(req, "UpgradeDBInstanceKernelVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the major kernel version of an instance, for example, from PostgreSQL 12 to PostgreSQL 15.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceMajorVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceMajorVersionResponse"/></returns>
+        public Task<UpgradeDBInstanceMajorVersionResponse> UpgradeDBInstanceMajorVersion(UpgradeDBInstanceMajorVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDBInstanceMajorVersionResponse>(req, "UpgradeDBInstanceMajorVersion");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the major kernel version of an instance, for example, from PostgreSQL 12 to PostgreSQL 15.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceMajorVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceMajorVersionResponse"/></returns>
+        public UpgradeDBInstanceMajorVersionResponse UpgradeDBInstanceMajorVersionSync(UpgradeDBInstanceMajorVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDBInstanceMajorVersionResponse>(req, "UpgradeDBInstanceMajorVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
