@@ -71,7 +71,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? DisableCheckOcrWarnings{ get; set; }
 
         /// <summary>
-        /// Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;default value is 3
+        /// Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
         /// </summary>
         [JsonProperty("SecurityLevel")]
         public long? SecurityLevel{ get; set; }

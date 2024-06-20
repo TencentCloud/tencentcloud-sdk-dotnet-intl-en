@@ -127,6 +127,90 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("SubtitleConfiguration")]
         public string SubtitleConfiguration{ get; set; }
 
+        /// <summary>
+        /// Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+        /// </summary>
+        [JsonProperty("FaceBlurringEnabled")]
+        public ulong? FaceBlurringEnabled{ get; set; }
+
+        /// <summary>
+        /// Only AttachedInputs.AudioSelectors.Name can be selected. The following types need to be filled in: 'RTP_PUSH', 'SRT_PUSH', 'UDP_PUSH', 'RTP-FEC_PUSH'.
+        /// </summary>
+        [JsonProperty("AudioSelectorName")]
+        public string AudioSelectorName{ get; set; }
+
+        /// <summary>
+        /// Audio transcoding special configuration information.
+        /// </summary>
+        [JsonProperty("AudioNormalization")]
+        public AudioNormalizationSettings AudioNormalization{ get; set; }
+
+        /// <summary>
+        /// Audio sampling rate, unit HZ.
+        /// </summary>
+        [JsonProperty("AudioSampleRate")]
+        public ulong? AudioSampleRate{ get; set; }
+
+        /// <summary>
+        /// This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+        /// </summary>
+        [JsonProperty("FrameRateType")]
+        public string FrameRateType{ get; set; }
+
+        /// <summary>
+        /// Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+        /// </summary>
+        [JsonProperty("FrameRateNumerator")]
+        public ulong? FrameRateNumerator{ get; set; }
+
+        /// <summary>
+        /// Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+        /// </summary>
+        [JsonProperty("FrameRateDenominator")]
+        public ulong? FrameRateDenominator{ get; set; }
+
+        /// <summary>
+        /// The number of B frames can be selected from 1 to 3.
+        /// </summary>
+        [JsonProperty("BFramesNum")]
+        public ulong? BFramesNum{ get; set; }
+
+        /// <summary>
+        /// The number of reference frames can be selected from 1 to 16.
+        /// </summary>
+        [JsonProperty("RefFramesNum")]
+        public ulong? RefFramesNum{ get; set; }
+
+        /// <summary>
+        /// Additional video bitrate configuration.
+        /// </summary>
+        [JsonProperty("AdditionalRateSettings")]
+        public AdditionalRateSetting AdditionalRateSettings{ get; set; }
+
+        /// <summary>
+        /// Video encoding configuration.
+        /// </summary>
+        [JsonProperty("VideoCodecDetails")]
+        public VideoCodecDetail VideoCodecDetails{ get; set; }
+
+        /// <summary>
+        /// Audio encoding configuration.
+        /// </summary>
+        [JsonProperty("AudioCodecDetails")]
+        public AudioCodecDetail AudioCodecDetails{ get; set; }
+
+        /// <summary>
+        /// Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+        /// </summary>
+        [JsonProperty("MultiAudioTrackEnabled")]
+        public ulong? MultiAudioTrackEnabled{ get; set; }
+
+        /// <summary>
+        /// Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+        /// </summary>
+        [JsonProperty("AudioTracks")]
+        public AudioTrackInfo[] AudioTracks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +233,20 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
             this.SetParamSimple(map, prefix + "SmartSubtitles", this.SmartSubtitles);
             this.SetParamSimple(map, prefix + "SubtitleConfiguration", this.SubtitleConfiguration);
+            this.SetParamSimple(map, prefix + "FaceBlurringEnabled", this.FaceBlurringEnabled);
+            this.SetParamSimple(map, prefix + "AudioSelectorName", this.AudioSelectorName);
+            this.SetParamObj(map, prefix + "AudioNormalization.", this.AudioNormalization);
+            this.SetParamSimple(map, prefix + "AudioSampleRate", this.AudioSampleRate);
+            this.SetParamSimple(map, prefix + "FrameRateType", this.FrameRateType);
+            this.SetParamSimple(map, prefix + "FrameRateNumerator", this.FrameRateNumerator);
+            this.SetParamSimple(map, prefix + "FrameRateDenominator", this.FrameRateDenominator);
+            this.SetParamSimple(map, prefix + "BFramesNum", this.BFramesNum);
+            this.SetParamSimple(map, prefix + "RefFramesNum", this.RefFramesNum);
+            this.SetParamObj(map, prefix + "AdditionalRateSettings.", this.AdditionalRateSettings);
+            this.SetParamObj(map, prefix + "VideoCodecDetails.", this.VideoCodecDetails);
+            this.SetParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
+            this.SetParamSimple(map, prefix + "MultiAudioTrackEnabled", this.MultiAudioTrackEnabled);
+            this.SetParamArrayObj(map, prefix + "AudioTracks.", this.AudioTracks);
         }
     }
 }

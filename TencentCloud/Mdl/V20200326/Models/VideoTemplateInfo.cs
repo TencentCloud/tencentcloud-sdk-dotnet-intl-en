@@ -85,6 +85,54 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("WatermarkId")]
         public string WatermarkId{ get; set; }
 
+        /// <summary>
+        /// Whether to enable the face blur function, 1 is on, 0 is off, and the default is 0.
+        /// </summary>
+        [JsonProperty("FaceBlurringEnabled")]
+        public ulong? FaceBlurringEnabled{ get; set; }
+
+        /// <summary>
+        /// This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+        /// </summary>
+        [JsonProperty("FrameRateType")]
+        public string FrameRateType{ get; set; }
+
+        /// <summary>
+        /// Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+        /// </summary>
+        [JsonProperty("FrameRateNumerator")]
+        public ulong? FrameRateNumerator{ get; set; }
+
+        /// <summary>
+        /// Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+        /// </summary>
+        [JsonProperty("FrameRateDenominator")]
+        public ulong? FrameRateDenominator{ get; set; }
+
+        /// <summary>
+        /// The number of B frames can be selected from 1 to 3.
+        /// </summary>
+        [JsonProperty("BFramesNum")]
+        public ulong? BFramesNum{ get; set; }
+
+        /// <summary>
+        /// The number of reference frames can be selected from 1 to 16.
+        /// </summary>
+        [JsonProperty("RefFramesNum")]
+        public ulong? RefFramesNum{ get; set; }
+
+        /// <summary>
+        /// Additional video bitrate configuration.
+        /// </summary>
+        [JsonProperty("AdditionalRateSettings")]
+        public AdditionalRateSetting AdditionalRateSettings{ get; set; }
+
+        /// <summary>
+        /// Video encoding configuration.
+        /// </summary>
+        [JsonProperty("VideoCodecDetails")]
+        public VideoCodecDetail VideoCodecDetails{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +149,14 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "BitrateCompressionRatio", this.BitrateCompressionRatio);
             this.SetParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
             this.SetParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
+            this.SetParamSimple(map, prefix + "FaceBlurringEnabled", this.FaceBlurringEnabled);
+            this.SetParamSimple(map, prefix + "FrameRateType", this.FrameRateType);
+            this.SetParamSimple(map, prefix + "FrameRateNumerator", this.FrameRateNumerator);
+            this.SetParamSimple(map, prefix + "FrameRateDenominator", this.FrameRateDenominator);
+            this.SetParamSimple(map, prefix + "BFramesNum", this.BFramesNum);
+            this.SetParamSimple(map, prefix + "RefFramesNum", this.RefFramesNum);
+            this.SetParamObj(map, prefix + "AdditionalRateSettings.", this.AdditionalRateSettings);
+            this.SetParamObj(map, prefix + "VideoCodecDetails.", this.VideoCodecDetails);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The token used to identify an SDK-based verification process.
+        /// The token used to identify an SDK-based verification process. 
         /// </summary>
         [JsonProperty("SdkToken")]
         public string SdkToken{ get; set; }

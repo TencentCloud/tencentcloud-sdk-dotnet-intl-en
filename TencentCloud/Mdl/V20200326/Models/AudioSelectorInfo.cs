@@ -36,6 +36,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("AudioPidSelection")]
         public AudioPidSelectionInfo AudioPidSelection{ get; set; }
 
+        /// <summary>
+        /// Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+        /// </summary>
+        [JsonProperty("AudioSelectorType")]
+        public string AudioSelectorType{ get; set; }
+
+        /// <summary>
+        /// AudioTrack configuration.
+        /// </summary>
+        [JsonProperty("AudioTrackSelection")]
+        public InputTracks AudioTrackSelection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "AudioPidSelection.", this.AudioPidSelection);
+            this.SetParamSimple(map, prefix + "AudioSelectorType", this.AudioSelectorType);
+            this.SetParamObj(map, prefix + "AudioTrackSelection.", this.AudioTrackSelection);
         }
     }
 }

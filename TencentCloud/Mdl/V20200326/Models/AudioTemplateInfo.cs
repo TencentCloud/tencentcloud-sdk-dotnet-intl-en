@@ -55,6 +55,24 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("LanguageCode")]
         public string LanguageCode{ get; set; }
 
+        /// <summary>
+        /// Audio transcoding special configuration information.
+        /// </summary>
+        [JsonProperty("AudioNormalization")]
+        public AudioNormalizationSettings AudioNormalization{ get; set; }
+
+        /// <summary>
+        /// Audio sampling rate, unit HZ.
+        /// </summary>
+        [JsonProperty("AudioSampleRate")]
+        public ulong? AudioSampleRate{ get; set; }
+
+        /// <summary>
+        /// Audio encoding parameters.
+        /// </summary>
+        [JsonProperty("AudioCodecDetails")]
+        public AudioCodecDetail AudioCodecDetails{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +84,9 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "Acodec", this.Acodec);
             this.SetParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
             this.SetParamSimple(map, prefix + "LanguageCode", this.LanguageCode);
+            this.SetParamObj(map, prefix + "AudioNormalization.", this.AudioNormalization);
+            this.SetParamSimple(map, prefix + "AudioSampleRate", this.AudioSampleRate);
+            this.SetParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
         }
     }
 }
