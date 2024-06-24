@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.924";
+       private const string sdkVersion = "SDK_NET_3.0.925";
 
         /// <summary>
         /// Client constructor.
@@ -806,6 +806,27 @@ namespace TencentCloud.Wedata.V20210820
         public CreateTaskAlarmRegularResponse CreateTaskAlarmRegularSync(CreateTaskAlarmRegularRequest req)
         {
             return InternalRequestAsync<CreateTaskAlarmRegularResponse>(req, "CreateTaskAlarmRegular")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Orchestration Space - Workflow - Create Task Folder
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
+        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
+        public Task<CreateTaskFolderResponse> CreateTaskFolder(CreateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder");
+        }
+
+        /// <summary>
+        /// Orchestration Space - Workflow - Create Task Folder
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
+        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
+        public CreateTaskFolderResponse CreateTaskFolderSync(CreateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3525,7 +3546,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Instance Diagnosis
+        /// Instance diagnosis for diagnosing instances in INITIAL, DEPENDENCE, ALLOCATED, LAUNCHED, EVENT_LISTENING, BEFORE_ASPECT, EXPIRED, FAILED states
         /// </summary>
         /// <param name="req"><see cref="DiagnoseProRequest"/></param>
         /// <returns><see cref="DiagnoseProResponse"/></returns>
@@ -3535,7 +3556,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Instance Diagnosis
+        /// Instance diagnosis for diagnosing instances in INITIAL, DEPENDENCE, ALLOCATED, LAUNCHED, EVENT_LISTENING, BEFORE_ASPECT, EXPIRED, FAILED states
         /// </summary>
         /// <param name="req"><see cref="DiagnoseProRequest"/></param>
         /// <returns><see cref="DiagnoseProResponse"/></returns>
@@ -4178,6 +4199,27 @@ namespace TencentCloud.Wedata.V20210820
         public ModifyWorkflowScheduleResponse ModifyWorkflowScheduleSync(ModifyWorkflowScheduleRequest req)
         {
             return InternalRequestAsync<ModifyWorkflowScheduleResponse>(req, "ModifyWorkflowSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Orchestration Space - Workflow - Move Task to Workflow Folder
+        /// </summary>
+        /// <param name="req"><see cref="MoveTasksToFolderRequest"/></param>
+        /// <returns><see cref="MoveTasksToFolderResponse"/></returns>
+        public Task<MoveTasksToFolderResponse> MoveTasksToFolder(MoveTasksToFolderRequest req)
+        {
+            return InternalRequestAsync<MoveTasksToFolderResponse>(req, "MoveTasksToFolder");
+        }
+
+        /// <summary>
+        /// Orchestration Space - Workflow - Move Task to Workflow Folder
+        /// </summary>
+        /// <param name="req"><see cref="MoveTasksToFolderRequest"/></param>
+        /// <returns><see cref="MoveTasksToFolderResponse"/></returns>
+        public MoveTasksToFolderResponse MoveTasksToFolderSync(MoveTasksToFolderRequest req)
+        {
+            return InternalRequestAsync<MoveTasksToFolderResponse>(req, "MoveTasksToFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

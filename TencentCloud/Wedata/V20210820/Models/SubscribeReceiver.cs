@@ -39,7 +39,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ReceiverName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recipient UIN
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ReceiverUserIdStr")]
         public string ReceiverUserIdStr{ get; set; }

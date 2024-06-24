@@ -389,6 +389,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("PartitionExpireDays")]
         public long? PartitionExpireDays{ get; set; }
 
+        /// <summary>
+        /// Table Ancillary Information
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("TableProperties")]
+        public TableMetaProperty[] TableProperties{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -448,6 +455,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "IsPartitionTable", this.IsPartitionTable);
             this.SetParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
             this.SetParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
+            this.SetParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
         }
     }
 }

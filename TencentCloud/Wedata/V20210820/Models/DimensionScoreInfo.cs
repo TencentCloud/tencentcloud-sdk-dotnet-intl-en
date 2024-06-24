@@ -70,7 +70,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public float? Score{ get; set; }
 
         /// <summary>
-        /// 
+        /// Set by User ID Str
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("UserIdStr")]
         public string UserIdStr{ get; set; }

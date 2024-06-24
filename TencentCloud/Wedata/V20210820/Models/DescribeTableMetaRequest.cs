@@ -30,6 +30,18 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TableId")]
         public string TableId{ get; set; }
 
+        /// <summary>
+        /// Query conditions by Name
+        /// </summary>
+        [JsonProperty("TableNameFilter")]
+        public TableNameFilter TableNameFilter{ get; set; }
+
+        /// <summary>
+        /// Query condition type: 0 by ID, 1 by Name, default is 0
+        /// </summary>
+        [JsonProperty("TableFilterType")]
+        public ulong? TableFilterType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TableId", this.TableId);
+            this.SetParamObj(map, prefix + "TableNameFilter.", this.TableNameFilter);
+            this.SetParamSimple(map, prefix + "TableFilterType", this.TableFilterType);
         }
     }
 }

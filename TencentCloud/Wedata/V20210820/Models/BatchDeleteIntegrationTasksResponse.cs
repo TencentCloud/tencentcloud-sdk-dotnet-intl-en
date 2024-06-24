@@ -25,21 +25,18 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// Number of Successful Operations
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SuccessCount")]
         public long? SuccessCount{ get; set; }
 
         /// <summary>
-        /// Number of Failed Operations
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FailedCount")]
         public long? FailedCount{ get; set; }
 
         /// <summary>
-        /// Total number of tasks
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]

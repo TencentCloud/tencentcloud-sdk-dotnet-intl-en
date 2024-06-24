@@ -195,13 +195,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Tag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Operator ID List
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OperatorUserIdsStr")]
         public string[] OperatorUserIdsStr{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public Cloud Owner ID List
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OwnerUserIdsStr")]
         public string[] OwnerUserIdsStr{ get; set; }

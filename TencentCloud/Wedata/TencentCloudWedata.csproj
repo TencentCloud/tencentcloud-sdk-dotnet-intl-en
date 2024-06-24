@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.924</VersionPrefix>
+    <VersionPrefix>3.0.925</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -157,6 +157,8 @@
     <Compile Include="V20210820\Models\CreateRuleTemplateResponse.cs" />
     <Compile Include="V20210820\Models\CreateTaskAlarmRegularRequest.cs" />
     <Compile Include="V20210820\Models\CreateTaskAlarmRegularResponse.cs" />
+    <Compile Include="V20210820\Models\CreateTaskFolderRequest.cs" />
+    <Compile Include="V20210820\Models\CreateTaskFolderResponse.cs" />
     <Compile Include="V20210820\Models\CreateTaskRequest.cs" />
     <Compile Include="V20210820\Models\CreateTaskResponse.cs" />
     <Compile Include="V20210820\Models\CreateTaskVersionDsRequest.cs" />
@@ -552,6 +554,8 @@
     <Compile Include="V20210820\Models\ModifyWorkflowInfoResponse.cs" />
     <Compile Include="V20210820\Models\ModifyWorkflowScheduleRequest.cs" />
     <Compile Include="V20210820\Models\ModifyWorkflowScheduleResponse.cs" />
+    <Compile Include="V20210820\Models\MoveTasksToFolderRequest.cs" />
+    <Compile Include="V20210820\Models\MoveTasksToFolderResponse.cs" />
     <Compile Include="V20210820\Models\OfflineInstance.cs" />
     <Compile Include="V20210820\Models\OfflineTaskAddParam.cs" />
     <Compile Include="V20210820\Models\OperationOpsDto.cs" />
@@ -672,6 +676,8 @@
     <Compile Include="V20210820\Models\TableLineageBaseInfo.cs" />
     <Compile Include="V20210820\Models\TableLineageInfo.cs" />
     <Compile Include="V20210820\Models\TableMeta.cs" />
+    <Compile Include="V20210820\Models\TableMetaProperty.cs" />
+    <Compile Include="V20210820\Models\TableNameFilter.cs" />
     <Compile Include="V20210820\Models\TablePropertyScore.cs" />
     <Compile Include="V20210820\Models\TableQualityDetail.cs" />
     <Compile Include="V20210820\Models\TableQualityDetailPage.cs" />
