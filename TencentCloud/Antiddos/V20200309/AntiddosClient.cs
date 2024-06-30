@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.928";
+       private const string sdkVersion = "SDK_NET_3.0.929";
 
         /// <summary>
         /// Client constructor.
@@ -768,6 +768,8 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 接口变更
+        /// 
         /// This API is used to get an Anti-DDoS IP blocklist/allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
@@ -778,6 +780,8 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 接口变更
+        /// 
         /// This API is used to get an Anti-DDoS IP blocklist/allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
@@ -1188,6 +1192,8 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 接口变更
+        /// 
         /// This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
         /// </summary>
         /// <param name="req"><see cref="DescribeListProtectThresholdConfigRequest"/></param>
@@ -1198,6 +1204,8 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 接口变更
+        /// 
         /// This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
         /// </summary>
         /// <param name="req"><see cref="DescribeListProtectThresholdConfigRequest"/></param>
