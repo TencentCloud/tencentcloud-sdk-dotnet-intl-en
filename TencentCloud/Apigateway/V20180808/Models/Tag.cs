@@ -25,13 +25,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Tag key.
+        /// Tag key
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// Tag value
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

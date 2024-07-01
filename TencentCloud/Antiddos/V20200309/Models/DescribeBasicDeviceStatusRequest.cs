@@ -30,6 +30,24 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IdList")]
+        public string[] IdList{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FilterRegion")]
+        public ulong? FilterRegion{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CnameWafIdList")]
+        public string[] CnameWafIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
+            this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
+            this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
+            this.SetParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
         }
     }
 }
