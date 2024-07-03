@@ -95,7 +95,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ThemeColor{ get; set; }
 
         /// <summary>
-        /// International language, the default value is en (English). Currently supported: th: Thai; en: English;
+        /// International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
