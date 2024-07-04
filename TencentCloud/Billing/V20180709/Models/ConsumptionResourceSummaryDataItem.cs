@@ -260,6 +260,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ComponentConfig")]
         public string ComponentConfig{ get; set; }
 
+        /// <summary>
+        /// Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -305,6 +311,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayTime", this.PayTime);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
+            this.SetParamSimple(map, prefix + "Tags", this.Tags);
         }
     }
 }
