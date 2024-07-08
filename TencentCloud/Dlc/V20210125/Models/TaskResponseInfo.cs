@@ -274,24 +274,42 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// Common task metrics
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CommonMetrics")]
         public CommonMetrics CommonMetrics{ get; set; }
 
         /// <summary>
         /// The Spark task metrics.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparkMonitorMetrics")]
         public SparkMonitorMetrics SparkMonitorMetrics{ get; set; }
 
         /// <summary>
         /// The Presto task metrics.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrestoMonitorMetrics")]
         public PrestoMonitorMetrics PrestoMonitorMetrics{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResultFormat")]
+        public string ResultFormat{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EngineTypeDetail")]
+        public string EngineTypeDetail{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResourceGroupName")]
+        public string ResourceGroupName{ get; set; }
 
 
         /// <summary>
@@ -339,6 +357,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "CommonMetrics.", this.CommonMetrics);
             this.SetParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
             this.SetParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
+            this.SetParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
+            this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+            this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         }
     }
 }

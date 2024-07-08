@@ -73,7 +73,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster u200deditionu200d), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition u200dfor CVM), `cvmRO` (read-only edition u200dfor CVM).
+        /// The type of instance to be purchased. Valid values: `HA` (high-availability edition, including dual-server high-availability and AlwaysOn cluster edition), `RO` (read-only replica edition), `SI` (single-node edition), `cvmHA` (dual-server high-availability edition for CVM), `cvmRO` (read-only edition for CVM).
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

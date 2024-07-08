@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.934</VersionPrefix>
+    <VersionPrefix>3.0.935</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -166,6 +166,7 @@
     <Compile Include="V20180328\Models\DescribeXEventsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20180328\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20180328\Models\DrReadableInfo.cs" />
     <Compile Include="V20180328\Models\EventConfig.cs" />
     <Compile Include="V20180328\Models\Events.cs" />
     <Compile Include="V20180328\Models\FileAction.cs" />
@@ -219,6 +220,7 @@
     <Compile Include="V20180328\Models\ModifyInstanceParamResponse.cs" />
     <Compile Include="V20180328\Models\ModifyMigrationRequest.cs" />
     <Compile Include="V20180328\Models\ModifyMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\OldVip.cs" />
     <Compile Include="V20180328\Models\OpenInterCommunicationRequest.cs" />
     <Compile Include="V20180328\Models\OpenInterCommunicationResponse.cs" />
     <Compile Include="V20180328\Models\ParamRecord.cs" />
@@ -239,6 +241,7 @@
     <Compile Include="V20180328\Models\RollbackInstanceResponse.cs" />
     <Compile Include="V20180328\Models\RunMigrationRequest.cs" />
     <Compile Include="V20180328\Models\RunMigrationResponse.cs" />
+    <Compile Include="V20180328\Models\SSLConfig.cs" />
     <Compile Include="V20180328\Models\SlaveZones.cs" />
     <Compile Include="V20180328\Models\SlowlogInfo.cs" />
     <Compile Include="V20180328\Models\SpecInfo.cs" />

@@ -96,17 +96,23 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// Matching operator
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Operators")]
         public Operator[] Operators{ get; set; }
 
         /// <summary>
         /// Metric monitoring granularity
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Periods")]
         public long?[] Periods{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsLatenessMetric")]
+        public long? IsLatenessMetric{ get; set; }
 
 
         /// <summary>
@@ -127,6 +133,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamArrayObj(map, prefix + "Operators.", this.Operators);
             this.SetParamArraySimple(map, prefix + "Periods.", this.Periods);
+            this.SetParamSimple(map, prefix + "IsLatenessMetric", this.IsLatenessMetric);
         }
     }
 }

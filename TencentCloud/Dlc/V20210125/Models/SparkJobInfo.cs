@@ -232,7 +232,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? TaskNum{ get; set; }
 
         /// <summary>
-        /// Engine status. -100 (default value): unknown; -2–11: normal.
+        /// Engine status. -100 (default value): unknown; -2-11: normal.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngineStatus")]
@@ -282,10 +282,16 @@ namespace TencentCloud.Dlc.V20210125.Models
 
         /// <summary>
         /// Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsSessionStarted")]
         public bool? IsSessionStarted{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EngineTypeDetail")]
+        public string EngineTypeDetail{ get; set; }
 
 
         /// <summary>
@@ -334,6 +340,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
             this.SetParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
+            this.SetParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
         }
     }
 }

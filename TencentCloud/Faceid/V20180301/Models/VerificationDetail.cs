@@ -26,21 +26,21 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// The final result of this verification. `0` indicates that the person is the same as that in the photo.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
 
         /// <summary>
         /// The description of the final verification result.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
         /// The result of this liveness detection process. `0` indicates success.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LivenessErrorCode")]
         public long? LivenessErrorCode{ get; set; }
@@ -54,14 +54,14 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CompareErrorCode")]
         public long? CompareErrorCode{ get; set; }
 
         /// <summary>
         /// The result description of this comparison process.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CompareErrorMsg")]
         public string CompareErrorMsg{ get; set; }
@@ -75,7 +75,7 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Similarity")]
         public float? Similarity{ get; set; }

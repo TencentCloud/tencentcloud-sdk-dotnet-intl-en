@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.934";
+       private const string sdkVersion = "SDK_NET_3.0.935";
 
         /// <summary>
         /// Client constructor.
@@ -1988,7 +1988,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// u200dThis API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+        /// This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
         /// <returns><see cref="UpdateServiceResponse"/></returns>
@@ -1998,7 +1998,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// u200dThis API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+        /// This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
         /// <returns><see cref="UpdateServiceResponse"/></returns>

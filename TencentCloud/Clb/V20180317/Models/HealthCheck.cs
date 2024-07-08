@@ -75,8 +75,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string HttpCheckPath{ get; set; }
 
         /// <summary>
-        /// Health check domain name. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for HTTP health check of TCP listeners.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Health check domain name. It's applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It's required for HTTP health check of TCP listeners.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HttpCheckDomain")]
         public string HttpCheckDomain{ get; set; }
@@ -117,22 +117,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public string RecvContext{ get; set; }
 
         /// <summary>
-        /// u200dHealth check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Health check protocol. Values: `TCP`, `HTTP`, `HTTPS`, `GRPC`, `PING`, and `CUSTOM`. UDP listeners support `PING`/`CUSTOM`. TCP listener support `TCP`/`HTTP`/`CUSTOM`. TCP_SSL and QUIC listeners support `TCP`/`HTTP`. HTTP rules support `HTTP`/`GRPC. HTTPS rules support `HTTP`/`HTTPS`/`GRPC`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CheckType")]
         public string CheckType{ get; set; }
 
         /// <summary>
         /// HTTP version. HTTP version of the backend service. Values: `HTTP/1.0`, HTTP/1.1`. It is only applicable to TCP listeners, and is required when `CheckType`=`HTTP`. 
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HttpVersion")]
         public string HttpVersion{ get; set; }
 
         /// <summary>
         /// Specifies the type of health check source IP. `0` (default): CLB VIP. `1`: 100.64 IP range.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceIpType")]
         public long? SourceIpType{ get; set; }

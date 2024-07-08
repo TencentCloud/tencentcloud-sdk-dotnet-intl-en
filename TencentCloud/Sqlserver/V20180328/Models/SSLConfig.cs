@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PrestoMonitorMetrics : AbstractModel
+    public class SSLConfig : AbstractModel
     {
         
         /// <summary>
-        /// 	The Alluxio cache hit rate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
-        [JsonProperty("LocalCacheHitRate")]
-        public float? LocalCacheHitRate{ get; set; }
+        [JsonProperty("Encryption")]
+        public string Encryption{ get; set; }
 
         /// <summary>
-        /// The Fragment cache hit rate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
-        [JsonProperty("FragmentCacheHitRate")]
-        public float? FragmentCacheHitRate{ get; set; }
+        [JsonProperty("SSLValidityPeriod")]
+        public string SSLValidityPeriod{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SSLValidity")]
+        public ulong? SSLValidity{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LocalCacheHitRate", this.LocalCacheHitRate);
-            this.SetParamSimple(map, prefix + "FragmentCacheHitRate", this.FragmentCacheHitRate);
+            this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
+            this.SetParamSimple(map, prefix + "SSLValidityPeriod", this.SSLValidityPeriod);
+            this.SetParamSimple(map, prefix + "SSLValidity", this.SSLValidity);
         }
     }
 }

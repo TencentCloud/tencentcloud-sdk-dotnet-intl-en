@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.934";
+       private const string sdkVersion = "SDK_NET_3.0.935";
 
         /// <summary>
         /// Client constructor.
@@ -377,7 +377,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to get the verification result with the corresponding BizToken after the u200dweb-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+        /// This API is used to get the verification result with the corresponding BizToken after the web-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetWebVerificationResultIntlRequest"/></param>
         /// <returns><see cref="GetWebVerificationResultIntlResponse"/></returns>
@@ -387,7 +387,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to get the verification result with the corresponding BizToken after the u200dweb-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+        /// This API is used to get the verification result with the corresponding BizToken after the web-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetWebVerificationResultIntlRequest"/></param>
         /// <returns><see cref="GetWebVerificationResultIntlResponse"/></returns>

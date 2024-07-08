@@ -32,14 +32,14 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ReceiverType{ get; set; }
 
         /// <summary>
-        /// Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+        /// Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
+        /// Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0-86399
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
@@ -74,21 +74,21 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] PhoneOrder{ get; set; }
 
         /// <summary>
-        /// Number of phone pollings. Value range: 1–5
+        /// Number of phone pollings. Value range: 1-5
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PhoneCircleTimes")]
         public long? PhoneCircleTimes{ get; set; }
 
         /// <summary>
-        /// Call interval in seconds within one polling. Value range: 60–900
+        /// Call interval in seconds within one polling. Value range: 60-900
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PhoneInnerInterval")]
         public long? PhoneInnerInterval{ get; set; }
 
         /// <summary>
-        /// Polling interval in seconds. Value range: 60–900
+        /// Polling interval in seconds. Value range: 60-900
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PhoneCircleInterval")]
@@ -117,7 +117,7 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// List of schedule IDs
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OnCallFormIDs")]
         public string[] OnCallFormIDs{ get; set; }

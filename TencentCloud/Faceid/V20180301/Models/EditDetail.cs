@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Faceid.V20180301.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PrestoMonitorMetrics : AbstractModel
+    public class EditDetail : AbstractModel
     {
         
         /// <summary>
-        /// 	The Alluxio cache hit rate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Modified Field Name
         /// </summary>
-        [JsonProperty("LocalCacheHitRate")]
-        public float? LocalCacheHitRate{ get; set; }
+        [JsonProperty("FieldName")]
+        public string FieldName{ get; set; }
 
         /// <summary>
-        /// The Fragment cache hit rate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Value of the field before modification, the original OCR result
         /// </summary>
-        [JsonProperty("FragmentCacheHitRate")]
-        public float? FragmentCacheHitRate{ get; set; }
+        [JsonProperty("OriginalFieldValue")]
+        public string OriginalFieldValue{ get; set; }
+
+        /// <summary>
+        /// Value of the field after modification,the user's manually entered result
+        /// </summary>
+        [JsonProperty("RevisedFieldValue")]
+        public string RevisedFieldValue{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LocalCacheHitRate", this.LocalCacheHitRate);
-            this.SetParamSimple(map, prefix + "FragmentCacheHitRate", this.FragmentCacheHitRate);
+            this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
+            this.SetParamSimple(map, prefix + "OriginalFieldValue", this.OriginalFieldValue);
+            this.SetParamSimple(map, prefix + "RevisedFieldValue", this.RevisedFieldValue);
         }
     }
 }

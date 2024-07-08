@@ -26,14 +26,14 @@ namespace TencentCloud.Dlc.V20210125.Models
         
         /// <summary>
         /// The COS path.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CosPath")]
         public string CosPath{ get; set; }
 
         /// <summary>
         /// The permissions. Valid values: `read` and `write`.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Permissions")]
         public string[] Permissions{ get; set; }

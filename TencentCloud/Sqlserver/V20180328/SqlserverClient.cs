@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.934";
+       private const string sdkVersion = "SDK_NET_3.0.935";
 
         /// <summary>
         /// Client constructor.
@@ -1169,7 +1169,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to u200denable or disable TDE of a database.
+        /// This API is used to enable or disable TDE of a database.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
         /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>
@@ -1179,7 +1179,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to u200denable or disable TDE of a database.
+        /// This API is used to enable or disable TDE of a database.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBEncryptAttributesRequest"/></param>
         /// <returns><see cref="ModifyDBEncryptAttributesResponse"/></returns>

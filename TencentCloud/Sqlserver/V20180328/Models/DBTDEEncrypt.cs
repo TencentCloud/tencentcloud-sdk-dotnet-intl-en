@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string DBName{ get; set; }
 
         /// <summary>
-        /// TDE u200dstatus. Valid values: `enable` (enabled), `disable` (disabled).
+        /// TDE status. Valid values: `enable` (enabled), `disable` (disabled).
         /// </summary>
         [JsonProperty("Encryption")]
         public string Encryption{ get; set; }

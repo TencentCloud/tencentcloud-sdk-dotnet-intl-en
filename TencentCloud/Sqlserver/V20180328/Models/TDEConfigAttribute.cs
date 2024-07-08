@@ -31,14 +31,14 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string Encryption{ get; set; }
 
         /// <summary>
-        /// Certificate u200downership. Valid values: `self` (u200dcertificate of the this account), `others` (u200dcertificate of the other account), `none` (no certificate).
+        /// Certificate ownership. Valid values: `self` (certificate of the this account), `others` (certificate of the other account), `none` (no certificate).
         /// </summary>
         [JsonProperty("CertificateAttribution")]
         public string CertificateAttribution{ get; set; }
 
         /// <summary>
-        /// ID of the u200dother referenced root account when enabling TDE
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// ID of the other referenced root account when enabling TDE
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QuoteUin")]
         public string QuoteUin{ get; set; }

@@ -183,6 +183,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }
 
+        /// <summary>
+        /// Details of the OCR modifications for this EKYC card, when the user manually modifies the card recognition results (IsEdit=true), EditDetails will return the modified fields. When IsEdit=false, EditDetails is empty.
+        /// </summary>
+        [JsonProperty("EditDetails")]
+        public EditDetail[] EditDetails{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "CardInfo.", this.CardInfo);
             this.SetParamObj(map, prefix + "NormalCardInfo.", this.NormalCardInfo);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
+            this.SetParamArrayObj(map, prefix + "EditDetails.", this.EditDetails);
         }
     }
 }

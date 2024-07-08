@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.934";
+       private const string sdkVersion = "SDK_NET_3.0.935";
 
         /// <summary>
         /// Client constructor.
@@ -1221,7 +1221,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to u200dobtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
+        /// This API is used to obtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterAgentCreatingProgressRequest"/></param>
         /// <returns><see cref="DescribeClusterAgentCreatingProgressResponse"/></returns>
@@ -1231,7 +1231,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to u200dobtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
+        /// This API is used to obtain the binding status between the TencentCloud Managed Service for Prometheus instance and the TKE cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterAgentCreatingProgressRequest"/></param>
         /// <returns><see cref="DescribeClusterAgentCreatingProgressResponse"/></returns>
