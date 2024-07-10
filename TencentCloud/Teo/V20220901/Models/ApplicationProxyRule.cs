@@ -92,7 +92,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
@@ -107,7 +107,7 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Rule tag.
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleTag")]
         public string RuleTag{ get; set; }

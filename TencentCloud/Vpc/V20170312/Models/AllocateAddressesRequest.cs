@@ -118,7 +118,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Egress{ get; set; }
 
         /// <summary>
-        /// Anti-DDoS service package ID. This is required when you want to request an u200dAnti-DDoS IP.
+        /// Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
         /// </summary>
         [JsonProperty("AntiDDoSPackageId")]
         public string AntiDDoSPackageId{ get; set; }

@@ -166,10 +166,28 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// ID of the Anti-DDoS service package. It is returned if the EIP is an u200dAnti-DDoS EIP. 
+        /// 
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
+        /// <summary>
+        /// ID of the Anti-DDoS service package. It is returned if the EIP is an Anti-DDoS EIP. 
         /// </summary>
         [JsonProperty("AntiDDoSPackageId")]
         public string AntiDDoSPackageId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BandwidthPackageId")]
+        public string BandwidthPackageId{ get; set; }
 
 
         /// <summary>
@@ -198,7 +216,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "DeadlineDate", this.DeadlineDate);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         }
     }
 }

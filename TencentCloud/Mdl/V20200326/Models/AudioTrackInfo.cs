@@ -60,6 +60,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("AudioNormalization")]
         public AudioNormalizationSettings AudioNormalization{ get; set; }
 
+        /// <summary>
+        /// Audio encoding configuration.
+        /// </summary>
+        [JsonProperty("AudioCodecDetails")]
+        public AudioCodecDetail AudioCodecDetails{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "AudioSampleRate", this.AudioSampleRate);
             this.SetParamSimple(map, prefix + "AudioSelectorName", this.AudioSelectorName);
             this.SetParamObj(map, prefix + "AudioNormalization.", this.AudioNormalization);
+            this.SetParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
         }
     }
 }
