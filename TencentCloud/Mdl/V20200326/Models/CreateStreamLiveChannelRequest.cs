@@ -37,7 +37,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public AttachedInput[] AttachedInputs{ get; set; }
 
         /// <summary>
-        /// Configuration information of the channel’s output groups. Quantity: [1, 10]
+        /// Configuration information of the channel's output groups. Quantity: [1, 10]
         /// </summary>
         [JsonProperty("OutputGroups")]
         public StreamLiveOutputGroupsInfo[] OutputGroups{ get; set; }
@@ -59,6 +59,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         [JsonProperty("AVTemplates")]
         public AVTemplate[] AVTemplates{ get; set; }
+
+        /// <summary>
+        /// Subtitle template configuration, only AVTemplates are valid.
+        /// </summary>
+        [JsonProperty("CaptionTemplates")]
+        public SubtitleConf[] CaptionTemplates{ get; set; }
 
         /// <summary>
         /// Event settings
@@ -84,6 +90,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("PipelineInputSettings")]
         public PipelineInputSettingsInfo PipelineInputSettings{ get; set; }
 
+        /// <summary>
+        /// Recognition configuration for input content.
+        /// </summary>
+        [JsonProperty("InputAnalysisSettings")]
+        public InputAnalysisInfo InputAnalysisSettings{ get; set; }
+
+        /// <summary>
+        /// Console tag list.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,10 +114,13 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArrayObj(map, prefix + "AudioTemplates.", this.AudioTemplates);
             this.SetParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
             this.SetParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
+            this.SetParamArrayObj(map, prefix + "CaptionTemplates.", this.CaptionTemplates);
             this.SetParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
             this.SetParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
             this.SetParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
             this.SetParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
+            this.SetParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mdl.V20200326
 
        private const string endpoint = "mdl.tencentcloudapi.com";
        private const string version = "2020-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.942";
+       private const string sdkVersion = "SDK_NET_3.0.943";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Mdl.V20200326
         public DeleteStreamLiveWatermarkResponse DeleteStreamLiveWatermarkSync(DeleteStreamLiveWatermarkRequest req)
         {
             return InternalRequestAsync<DeleteStreamLiveWatermarkResponse>(req, "DeleteStreamLiveWatermark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the highlight result information corresponding to the media live broadcast channel.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveHighlightResultRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveHighlightResultResponse"/></returns>
+        public Task<DescribeMediaLiveHighlightResultResponse> DescribeMediaLiveHighlightResult(DescribeMediaLiveHighlightResultRequest req)
+        {
+            return InternalRequestAsync<DescribeMediaLiveHighlightResultResponse>(req, "DescribeMediaLiveHighlightResult");
+        }
+
+        /// <summary>
+        /// Query the highlight result information corresponding to the media live broadcast channel.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaLiveHighlightResultRequest"/></param>
+        /// <returns><see cref="DescribeMediaLiveHighlightResultResponse"/></returns>
+        public DescribeMediaLiveHighlightResultResponse DescribeMediaLiveHighlightResultSync(DescribeMediaLiveHighlightResultRequest req)
+        {
+            return InternalRequestAsync<DescribeMediaLiveHighlightResultResponse>(req, "DescribeMediaLiveHighlightResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

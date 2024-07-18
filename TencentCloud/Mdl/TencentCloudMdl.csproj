@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{87BF3C79-D8D0-3C22-AE2A-DEE7C02ABAD4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.942</VersionPrefix>
+    <VersionPrefix>3.0.943</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,6 +87,8 @@
     <Compile Include="V20200326\Models\DeleteStreamLiveWatermarkResponse.cs" />
     <Compile Include="V20200326\Models\DeliveryRestrictionsInfo.cs" />
     <Compile Include="V20200326\Models\DescribeImageSettings.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveHighlightResultRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeMediaLiveHighlightResultResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelAlertsRequest.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelAlertsResponse.cs" />
     <Compile Include="V20200326\Models\DescribeStreamLiveChannelInputStatisticsRequest.cs" />
@@ -129,7 +131,10 @@
     <Compile Include="V20200326\Models\EventSettingsReq.cs" />
     <Compile Include="V20200326\Models\EventSettingsResp.cs" />
     <Compile Include="V20200326\Models\FailOverSettings.cs" />
+    <Compile Include="V20200326\Models\HighlightInfo.cs" />
+    <Compile Include="V20200326\Models\HighlightResInfoResp.cs" />
     <Compile Include="V20200326\Models\HlsRemuxSettingsInfo.cs" />
+    <Compile Include="V20200326\Models\InputAnalysisInfo.cs" />
     <Compile Include="V20200326\Models\InputInfo.cs" />
     <Compile Include="V20200326\Models\InputLossBehaviorInfo.cs" />
     <Compile Include="V20200326\Models\InputSecurityGroupInfo.cs" />
@@ -178,6 +183,9 @@
     <Compile Include="V20200326\Models\StreamPackageSettingsInfo.cs" />
     <Compile Include="V20200326\Models\StreamScte35Info.cs" />
     <Compile Include="V20200326\Models\StreamVideoInfo.cs" />
+    <Compile Include="V20200326\Models\SubtitleConf.cs" />
+    <Compile Include="V20200326\Models\SubtitleFontConf.cs" />
+    <Compile Include="V20200326\Models\Tag.cs" />
     <Compile Include="V20200326\Models\TimeShiftSettingsInfo.cs" />
     <Compile Include="V20200326\Models\TimedMetadataInfo.cs" />
     <Compile Include="V20200326\Models\TimedMetadataSettingInfo.cs" />

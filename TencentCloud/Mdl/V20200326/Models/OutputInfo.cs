@@ -59,6 +59,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string[] AVTemplateNames{ get; set; }
 
         /// <summary>
+        /// For the subtitle template used, only the AVTemplateNames is valid.
+        /// </summary>
+        [JsonProperty("CaptionTemplateNames")]
+        public string[] CaptionTemplateNames{ get; set; }
+
+        /// <summary>
         /// Meta information controls configuration.
         /// </summary>
         [JsonProperty("TimedMetadataSettings")]
@@ -75,6 +81,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArraySimple(map, prefix + "VideoTemplateNames.", this.VideoTemplateNames);
             this.SetParamObj(map, prefix + "Scte35Settings.", this.Scte35Settings);
             this.SetParamArraySimple(map, prefix + "AVTemplateNames.", this.AVTemplateNames);
+            this.SetParamArraySimple(map, prefix + "CaptionTemplateNames.", this.CaptionTemplateNames);
             this.SetParamObj(map, prefix + "TimedMetadataSettings.", this.TimedMetadataSettings);
         }
     }

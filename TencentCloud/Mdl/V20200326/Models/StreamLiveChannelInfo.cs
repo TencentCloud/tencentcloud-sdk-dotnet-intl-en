@@ -76,6 +76,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         public AVTemplate[] AVTemplates{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CaptionTemplates")]
+        public SubtitleConf[] CaptionTemplates{ get; set; }
+
+        /// <summary>
         /// Event settings
         /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
@@ -101,6 +107,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("PipelineInputSettings")]
         public PipelineInputSettingsInfo PipelineInputSettings{ get; set; }
 
+        /// <summary>
+        /// Recognition configuration for input content.
+        /// </summary>
+        [JsonProperty("InputAnalysisSettings")]
+        public InputAnalysisInfo InputAnalysisSettings{ get; set; }
+
+        /// <summary>
+        /// Console tag list.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,10 +133,13 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArrayObj(map, prefix + "AudioTemplates.", this.AudioTemplates);
             this.SetParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
             this.SetParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
+            this.SetParamArrayObj(map, prefix + "CaptionTemplates.", this.CaptionTemplates);
             this.SetParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
             this.SetParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
             this.SetParamObj(map, prefix + "InputLossBehavior.", this.InputLossBehavior);
             this.SetParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
+            this.SetParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
