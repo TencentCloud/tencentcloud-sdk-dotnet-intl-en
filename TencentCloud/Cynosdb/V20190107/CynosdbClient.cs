@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.943";
+       private const string sdkVersion = "SDK_NET_3.0.944";
 
         /// <summary>
         /// Client constructor.
@@ -180,7 +180,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable u200dthe database proxy.
+        /// This API is used to disable the database proxy.
         /// </summary>
         /// <param name="req"><see cref="CloseProxyRequest"/></param>
         /// <returns><see cref="CloseProxyResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable u200dthe database proxy.
+        /// This API is used to disable the database proxy.
         /// </summary>
         /// <param name="req"><see cref="CloseProxyRequest"/></param>
         /// <returns><see cref="CloseProxyResponse"/></returns>

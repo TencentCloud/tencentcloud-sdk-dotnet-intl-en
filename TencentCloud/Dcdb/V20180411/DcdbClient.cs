@@ -28,7 +28,7 @@ namespace TencentCloud.Dcdb.V20180411
 
        private const string endpoint = "dcdb.tencentcloudapi.com";
        private const string version = "2018-04-11";
-       private const string sdkVersion = "SDK_NET_3.0.943";
+       private const string sdkVersion = "SDK_NET_3.0.944";
 
         /// <summary>
         /// Client constructor.
@@ -478,7 +478,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// This API is used to obtain u200da temp rollback instance.
+        /// This API is used to obtain a temp rollback instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
@@ -488,7 +488,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// This API is used to obtain u200da temp rollback instance.
+        /// This API is used to obtain a temp rollback instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
@@ -1305,7 +1305,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// This API is used to u200dupgrade a dedicated TDSQL cluster instance.
+        /// This API is used to upgrade a dedicated TDSQL cluster instance.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDedicatedDCDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDedicatedDCDBInstanceResponse"/></returns>
@@ -1315,7 +1315,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// This API is used to u200dupgrade a dedicated TDSQL cluster instance.
+        /// This API is used to upgrade a dedicated TDSQL cluster instance.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDedicatedDCDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDedicatedDCDBInstanceResponse"/></returns>

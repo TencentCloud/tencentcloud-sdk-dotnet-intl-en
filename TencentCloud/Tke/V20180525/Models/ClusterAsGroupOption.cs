@@ -68,14 +68,14 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// Do not scale in a node if it contains local storage Pods. Default: `true`.
-        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SkipNodesWithLocalStorage")]
         public bool? SkipNodesWithLocalStorage{ get; set; }
 
         /// <summary>
         /// Do not scale in a node if it contains Pods in the kube-system namespace that are not managed by DaemonSet. Default: `true`.
-        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SkipNodesWithSystemPods")]
         public bool? SkipNodesWithSystemPods{ get; set; }

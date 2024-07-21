@@ -55,13 +55,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public SplitShardConfig SplitShardConfig{ get; set; }
 
         /// <summary>
-        /// Whether to automatically retry u200donce when missing the switch time window. Valid values: `0` (No), `1` (Yes).
+        /// Whether to automatically retry once when missing the switch time window. Valid values: `0` (No), `1` (Yes).
         /// </summary>
         [JsonProperty("SwitchAutoRetry")]
         public long? SwitchAutoRetry{ get; set; }
 
         /// <summary>
-        /// Switch u200dstart u200dtime
+        /// Switch start time
         /// </summary>
         [JsonProperty("SwitchStartTime")]
         public string SwitchStartTime{ get; set; }

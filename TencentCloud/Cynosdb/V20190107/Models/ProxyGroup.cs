@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database proxy u200dgroup ID
+        /// Database proxy group ID
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProxyNodeCount{ get; set; }
 
         /// <summary>
-        /// Database proxy u200dgroup status
+        /// Database proxy group status
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -62,21 +62,21 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Cluster ID
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// User `AppId`
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// Enabling read/write separation for database proxy
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }

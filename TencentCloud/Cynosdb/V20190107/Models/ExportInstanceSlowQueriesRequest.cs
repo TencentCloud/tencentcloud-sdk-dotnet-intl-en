@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string FileType{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values: u200d`QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+        /// Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

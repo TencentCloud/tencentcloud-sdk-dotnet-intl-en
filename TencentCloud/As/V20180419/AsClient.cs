@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.943";
+       private const string sdkVersion = "SDK_NET_3.0.944";
 
         /// <summary>
         /// Client constructor.
@@ -1330,11 +1330,11 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// This API is used to add the specified number of instances to a scaling group. It returns the scaling activity ID `ActivityId`.
-        /// * u200dMake sure that there are no ongoing scaling tasks.
+        /// * Make sure that there are no ongoing scaling tasks.
         /// * This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
         /// * The total number of instances after this action cannot exceed the maximum capacity.
         /// * If a scale-out action failed or partially succeeded, only the number of successfully created instances is added to the number of desired capacity.
-        /// * If the allocation policy is `SPOT_MIXED`, there may be multiple scaling activities triggered for one scaling task. u200dIn this case, the first activity ID (`ActivityId`) is returned.
+        /// * If the allocation policy is `SPOT_MIXED`, there may be multiple scaling activities triggered for one scaling task. In this case, the first activity ID (`ActivityId`) is returned.
         /// </summary>
         /// <param name="req"><see cref="ScaleOutInstancesRequest"/></param>
         /// <returns><see cref="ScaleOutInstancesResponse"/></returns>
@@ -1345,11 +1345,11 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// This API is used to add the specified number of instances to a scaling group. It returns the scaling activity ID `ActivityId`.
-        /// * u200dMake sure that there are no ongoing scaling tasks.
+        /// * Make sure that there are no ongoing scaling tasks.
         /// * This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
         /// * The total number of instances after this action cannot exceed the maximum capacity.
         /// * If a scale-out action failed or partially succeeded, only the number of successfully created instances is added to the number of desired capacity.
-        /// * If the allocation policy is `SPOT_MIXED`, there may be multiple scaling activities triggered for one scaling task. u200dIn this case, the first activity ID (`ActivityId`) is returned.
+        /// * If the allocation policy is `SPOT_MIXED`, there may be multiple scaling activities triggered for one scaling task. In this case, the first activity ID (`ActivityId`) is returned.
         /// </summary>
         /// <param name="req"><see cref="ScaleOutInstancesRequest"/></param>
         /// <returns><see cref="ScaleOutInstancesResponse"/></returns>

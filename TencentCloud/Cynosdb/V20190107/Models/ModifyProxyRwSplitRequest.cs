@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Database proxy u200dgroup ID
+        /// Database proxy group ID
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
@@ -113,7 +113,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// Connection u200dpersistence timeout
+        /// Connection persistence timeout
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }

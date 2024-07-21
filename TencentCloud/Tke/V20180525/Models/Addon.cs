@@ -38,21 +38,21 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// Add-on parameters, which are base64-encoded strings in JSON/
-        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RawValues")]
         public string RawValues{ get; set; }
 
         /// <summary>
         /// Add-on status
-        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }
 
         /// <summary>
         /// Reason for add-on failure
-        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

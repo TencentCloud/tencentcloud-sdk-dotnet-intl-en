@@ -193,7 +193,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// VIP u200dand vport of the read-only instance in a cluster
+        /// VIP and vport of the read-only instance in a cluster
         /// </summary>
         [JsonProperty("RoAddr")]
         public Addr[] RoAddr{ get; set; }
@@ -338,6 +338,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SlaveZoneAttr")]
+        public SlaveZoneAttrItem[] SlaveZoneAttr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -392,6 +404,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
         }
     }
 }

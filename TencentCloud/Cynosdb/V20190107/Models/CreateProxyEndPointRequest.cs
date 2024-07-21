@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// VPC ID, which is the same as that of the cluster by defaultu200d.
+        /// VPC ID, which is the same as that of the cluster by default.
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// Whether to enable connection pool. Valid value: `yes` (enable), `no` u200d(disable).
+        /// Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }

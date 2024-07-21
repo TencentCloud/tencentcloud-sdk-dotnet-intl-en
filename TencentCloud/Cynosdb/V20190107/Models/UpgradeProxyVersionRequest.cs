@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DstProxyVersion{ get; set; }
 
         /// <summary>
-        /// Database proxy u200dgroup ID
+        /// Database proxy group ID
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }

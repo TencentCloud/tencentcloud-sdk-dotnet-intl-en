@@ -62,7 +62,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Whether to enable read-write node. Valid values: `yes`, `no`.
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }

@@ -26,7 +26,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// ID of the bound cluster
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -45,7 +45,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// ID of the instance in the bound cluster
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExtendIds")]
         public string[] ExtendIds{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// Shard u200dcount
+        /// Shard count
         /// </summary>
         [JsonProperty("ShardNum")]
         public long? ShardNum{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// (Disused) u200dNumber of CPU u200dcores
+        /// (Disused) Number of CPU cores
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
@@ -163,13 +163,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? Ipv6Flag{ get; set; }
 
         /// <summary>
-        /// (Disused) Pid, which can be queried by the u200d`DescribeSpecInfo` API.
+        /// (Disused) Pid, which can be queried by the `DescribeSpecInfo` API.
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
         /// <summary>
-        /// List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: u200d`2`).
+        /// List of parameters. Valid values: `character_set_server` (character set; required), `lower_case_table_names` (table name case sensitivity; required; `0`: case-sensitive; `1`: case-insensitive), `innodb_page_size` (InnoDB data page; default size: 16 KB), `sync_mode` (sync mode; `0`: async; `1`: strong sync; `2`: downgradable strong sync. Default value: `2`).
         /// </summary>
         [JsonProperty("InitParams")]
         public DBParamValue[] InitParams{ get; set; }
@@ -181,13 +181,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string MasterHostId{ get; set; }
 
         /// <summary>
-        /// Specified UUID for the u200dreplica node. If left empty, it will be assigned by the system randomly.
+        /// Specified UUID for the replica node. If left empty, it will be assigned by the system randomly.
         /// </summary>
         [JsonProperty("SlaveHostIds")]
         public string[] SlaveHostIds{ get; set; }
 
         /// <summary>
-        /// ID of the u200dsource instance to be rolled back
+        /// ID of the source instance to be rolled back
         /// </summary>
         [JsonProperty("RollbackInstanceId")]
         public string RollbackInstanceId{ get; set; }
@@ -197,6 +197,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         [JsonProperty("RollbackTime")]
         public string RollbackTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DcnSyncMode")]
+        public long? DcnSyncMode{ get; set; }
 
 
         /// <summary>
@@ -233,6 +239,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamArraySimple(map, prefix + "SlaveHostIds.", this.SlaveHostIds);
             this.SetParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
             this.SetParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
+            this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
         }
     }
 }

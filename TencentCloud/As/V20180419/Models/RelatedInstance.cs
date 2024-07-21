@@ -33,7 +33,7 @@ namespace TencentCloud.As.V20180419.Models
         /// <summary>
         /// Status of the instance in the scaling activity. Valid values:
         /// `INIT`: Initializing
-        /// `RUNNING`: u200dProcessing u200dthe instance
+        /// `RUNNING`: Processing the instance
         /// `SUCCESSFUL`: Task succeeded on the instance
         /// `FAILED`: Task failed on the instance
         /// </summary>

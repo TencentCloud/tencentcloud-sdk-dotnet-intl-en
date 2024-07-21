@@ -26,21 +26,21 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Connection persistence timeout in seconds
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
         /// Whether the connection pool is enabled
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
         /// Connection pool type. Valid value: `SessionConnectionPool` (session-level).
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }

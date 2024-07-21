@@ -43,7 +43,7 @@ namespace TencentCloud.As.V20180419.Models
         public string Solution{ get; set; }
 
         /// <summary>
-        /// u200dRisk level of the scaling group configuration. Valid values: <br>
+        /// Risk level of the scaling group configuration. Valid values: <br>
         /// <li>WARNING<br>
         /// <li>CRITICAL<br>
         /// </summary>

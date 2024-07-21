@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// AZ u200dof the proxy node
+        /// AZ of the proxy node
         /// </summary>
         [JsonProperty("ProxyNodeZone")]
         public string ProxyNodeZone{ get; set; }

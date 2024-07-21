@@ -109,7 +109,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string RegistryPrefix{ get; set; }
 
         /// <summary>
-        /// u200dTags bound with the cluster
+        /// Tags bound with the cluster
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification TagSpecification{ get; set; }

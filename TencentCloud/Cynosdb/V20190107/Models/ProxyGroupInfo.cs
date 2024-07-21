@@ -26,42 +26,42 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Database proxy group
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProxyGroup")]
         public ProxyGroup ProxyGroup{ get; set; }
 
         /// <summary>
-        /// Read/write separation information of the database proxy u200dgroup
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Read/write separation information of the database proxy group
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProxyGroupRwInfo")]
         public ProxyGroupRwInfo ProxyGroupRwInfo{ get; set; }
 
         /// <summary>
-        /// Node information of the u200ddatabase proxy
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Node information of the database proxy
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProxyNodes")]
         public ProxyNodeInfo[] ProxyNodes{ get; set; }
 
         /// <summary>
         /// Connection pool information for the database proxy
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public ProxyConnectionPoolInfo ConnectionPool{ get; set; }
 
         /// <summary>
         /// Network information for database proxy
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetAddrInfos")]
         public NetAddr[] NetAddrInfos{ get; set; }
 
         /// <summary>
         /// Task set of the database proxy
-        /// Note: u200dThis field may returnu200d·nullu200d·, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
