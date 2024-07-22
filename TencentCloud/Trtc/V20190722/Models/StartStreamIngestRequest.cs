@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// Type of TRTC RoomId. 【*Note】Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
+        /// Type of TRTC RoomId. [*Note] Must be the same as the RoomId type corresponding to the Record room: 0: String type RoomId 1: 32-bit Integer type RoomId (default)
         /// </summary>
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://intl.cloud.tencent.com/document/product/647/45910?from_cn_redirect=1#UserSig) Scheme.
+        /// UserSig corresponding to the Pull stream Relay Robot UserId, i.e., UserId and UserSig are equivalent to the Robot's Login password for entering the room. For the specific Calculation method, please refer to the TRTC [UserSig](https://www.tencentcloud.com/zh/document/product/647/39074) Scheme.
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }
@@ -79,6 +79,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("AudioEncodeParams")]
         public AudioEncodeParams AudioEncodeParams{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StreamUrl")]
+        public string StreamUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
             this.SetParamObj(map, prefix + "VideoEncodeParams.", this.VideoEncodeParams);
             this.SetParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
+            this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
         }
     }
 }

@@ -26,168 +26,168 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// Task name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
         /// Start time of the task
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// Task end time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// CRON format
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanPlanContent")]
         public string ScanPlanContent{ get; set; }
 
         /// <summary>
         /// Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskType")]
         public long? TaskType{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
         /// Task ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// Custom list of assets to scan
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SelfDefiningAssets")]
         public string[] SelfDefiningAssets{ get; set; }
 
         /// <summary>
         /// Estimated period to complete the task
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PredictTime")]
         public long? PredictTime{ get; set; }
 
         /// <summary>
         /// Estimated completion time of the task
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PredictEndTime")]
         public string PredictEndTime{ get; set; }
 
         /// <summary>
         /// Number of reports
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReportNumber")]
         public long? ReportNumber{ get; set; }
 
         /// <summary>
         /// Number of assets
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetNumber")]
         public long? AssetNumber{ get; set; }
 
         /// <summary>
         /// Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanStatus")]
         public long? ScanStatus{ get; set; }
 
         /// <summary>
         /// Task progress
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Percent")]
         public float? Percent{ get; set; }
 
         /// <summary>
         /// port/poc/weakpass/webcontent/configrisk
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanItem")]
         public string ScanItem{ get; set; }
 
         /// <summary>
         /// Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanAssetType")]
         public long? ScanAssetType{ get; set; }
 
         /// <summary>
         /// VSS subtask ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VSSTaskId")]
         public string VSSTaskId{ get; set; }
 
         /// <summary>
         /// CSPM subtask ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CSPMTaskId")]
         public string CSPMTaskId{ get; set; }
 
         /// <summary>
         /// CWPP vulnerability scan task IDHost missed scan subtask id
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CWPPOCId")]
         public string CWPPOCId{ get; set; }
 
         /// <summary>
         /// CWPP baseline check task ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CWPBlId")]
         public string CWPBlId{ get; set; }
 
         /// <summary>
         /// VSS task progess
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VSSTaskProcess")]
         public long? VSSTaskProcess{ get; set; }
 
         /// <summary>
         /// CSPM task progress
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CSPMTaskProcess")]
         public ulong? CSPMTaskProcess{ get; set; }
 
         /// <summary>
         /// CWPP vulnerability scan task progress
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CWPPOCProcess")]
         public long? CWPPOCProcess{ get; set; }
 
         /// <summary>
         /// CWPP baseline check task progress
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CWPBlProcess")]
         public ulong? CWPBlProcess{ get; set; }
@@ -200,105 +200,105 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// Exception information
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorInfo")]
         public string ErrorInfo{ get; set; }
 
         /// <summary>
         /// Day of the month to start the scheduled task
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartDay")]
         public long? StartDay{ get; set; }
 
         /// <summary>
         /// Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Frequency")]
         public long? Frequency{ get; set; }
 
         /// <summary>
         /// Number of completed tasks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CompleteNumber")]
         public long? CompleteNumber{ get; set; }
 
         /// <summary>
         /// Number of scanned assets
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CompleteAssetNumber")]
         public long? CompleteAssetNumber{ get; set; }
 
         /// <summary>
         /// Number of risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RiskCount")]
         public long? RiskCount{ get; set; }
 
         /// <summary>
         /// Assets
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Assets")]
         public TaskAssetObject[] Assets{ get; set; }
 
         /// <summary>
         /// User `Appid`
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
         /// User UIN
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UIN")]
         public string UIN{ get; set; }
 
         /// <summary>
         /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskMode")]
         public long? TaskMode{ get; set; }
 
         /// <summary>
         /// Source of scanning request
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanFrom")]
         public string ScanFrom{ get; set; }
 
         /// <summary>
         /// Whether it's a limited-time free health check. `0`: No; `1`: Yes
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsFree")]
         public long? IsFree{ get; set; }
 
         /// <summary>
         /// Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDelete")]
         public long? IsDelete{ get; set; }
 
         /// <summary>
         /// Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceType")]
         public long? SourceType{ get; set; }
