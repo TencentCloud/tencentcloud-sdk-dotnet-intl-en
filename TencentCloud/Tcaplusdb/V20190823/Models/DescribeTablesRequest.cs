@@ -37,7 +37,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string[] TableGroupIds{ get; set; }
 
         /// <summary>
-        /// Information list of tables to be queriedu200d. If you need to filter the tables, use the`Filter` parameter.
+        /// Information list of tables to be queried. If you need to filter the tables, use the`Filter` parameter.
         /// </summary>
         [JsonProperty("SelectedTables")]
         public SelectedTableInfoNew[] SelectedTables{ get; set; }
