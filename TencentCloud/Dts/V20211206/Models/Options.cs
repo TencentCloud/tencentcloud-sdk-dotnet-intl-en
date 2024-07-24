@@ -81,18 +81,30 @@ namespace TencentCloud.Dts.V20211206.Models
         public KafkaOption KafkaOption{ get; set; }
 
         /// <summary>
-        /// Task speed limit information. This parameter can only be used as an output parameter.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Task speed limit information
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RateLimitOption")]
         public RateLimitOption RateLimitOption{ get; set; }
 
         /// <summary>
         /// Settings of the automatic retry time range
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AutoRetryTimeRangeMinutes")]
         public long? AutoRetryTimeRangeMinutes{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FilterBeginCommit")]
+        public bool? FilterBeginCommit{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FilterCheckpoint")]
+        public bool? FilterCheckpoint{ get; set; }
 
 
         /// <summary>
@@ -110,6 +122,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
             this.SetParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+            this.SetParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
+            this.SetParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
         }
     }
 }

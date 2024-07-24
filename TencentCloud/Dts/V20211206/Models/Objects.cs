@@ -38,7 +38,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public Database[] Databases{ get; set; }
 
         /// <summary>
-        /// Advanced object type, such as functions and procedures. If you need to sync advanced objects, the initialization type must include structure initialization, that is, `Options.InitType` must be `Structure` or `Full`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdvancedObjects")]
         public string[] AdvancedObjects{ get; set; }

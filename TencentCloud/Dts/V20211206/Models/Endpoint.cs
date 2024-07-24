@@ -172,22 +172,19 @@ namespace TencentCloud.Dts.V20211206.Models
         public string RoleExternalId{ get; set; }
 
         /// <summary>
-        /// ID of the temporary key, which is required if the operation is performed across accounts.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
-        /// Key of the temporary key, which is required if the operation is performed across accounts.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }
 
         /// <summary>
-        /// Temporary token, which is required if the operation is performed across accounts.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TmpToken")]
         public string TmpToken{ get; set; }
@@ -208,10 +205,28 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CcnOwnerUin")]
         public string CcnOwnerUin{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ChildInstanceId")]
+        public string ChildInstanceId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ChildInstanceType")]
+        public string ChildInstanceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SetId")]
+        public string SetId{ get; set; }
 
 
         /// <summary>
@@ -246,6 +261,9 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
             this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
             this.SetParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
+            this.SetParamSimple(map, prefix + "ChildInstanceId", this.ChildInstanceId);
+            this.SetParamSimple(map, prefix + "ChildInstanceType", this.ChildInstanceType);
+            this.SetParamSimple(map, prefix + "SetId", this.SetId);
         }
     }
 }

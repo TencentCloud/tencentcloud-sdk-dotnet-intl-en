@@ -144,22 +144,19 @@ namespace TencentCloud.Dts.V20211206.Models
         public string AccountMode{ get; set; }
 
         /// <summary>
-        /// ID of the temporary key
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
-        /// Key of the temporary key
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }
 
         /// <summary>
-        /// Temporary token
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TmpToken")]
         public string TmpToken{ get; set; }

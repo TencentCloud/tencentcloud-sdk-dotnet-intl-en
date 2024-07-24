@@ -39,8 +39,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public DBItem[] Databases{ get; set; }
 
         /// <summary>
-        /// Advanced object type, such as trigger, function, procedure, and event.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Advanced object types, such as trigger, function, procedure, event. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdvancedObjects")]
         public string[] AdvancedObjects{ get; set; }

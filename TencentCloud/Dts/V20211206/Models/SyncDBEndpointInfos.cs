@@ -46,8 +46,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DatabaseType{ get; set; }
 
         /// <summary>
-        /// Database information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Info")]
         public Endpoint[] Info{ get; set; }

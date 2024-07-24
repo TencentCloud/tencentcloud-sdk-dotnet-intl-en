@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+        /// Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
         /// </summary>
         [JsonProperty("DataType")]
         public string DataType{ get; set; }

@@ -131,14 +131,14 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// Valid values: `cluster`, `single`. `single`: For single-node source databases; `cluster`: For multi-node source databases.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SrcNodeType")]
         public string SrcNodeType{ get; set; }
 
         /// <summary>
         /// Source database information. This parameter is used for multi-node databases.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SrcInfos")]
         public SyncDBEndpointInfos SrcInfos{ get; set; }
@@ -173,14 +173,14 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// Valid values: `cluster`, `single`. `single`: For single-node target databases; `cluster`: For multi-node target databases.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DstNodeType")]
         public string DstNodeType{ get; set; }
 
         /// <summary>
         /// Target database information. This parameter is used for multi-node databases.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DstInfos")]
         public SyncDBEndpointInfos DstInfos{ get; set; }
@@ -264,7 +264,7 @@ namespace TencentCloud.Dts.V20211206.Models
 
         /// <summary>
         /// Whether the task can be reentered in the full export stage. Valid values: `yes`, `no`. `yes`: The current task can be reentered. `no`: The current task is in the full export stage which cannot be reentered. If the value of this parameter is `no`, the checkpoint restart is not supported when the task is restarted in the export stage.
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DumperResumeCtrl")]
         public string DumperResumeCtrl{ get; set; }

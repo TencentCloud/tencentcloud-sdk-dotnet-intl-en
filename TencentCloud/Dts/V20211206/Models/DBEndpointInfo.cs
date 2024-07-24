@@ -46,8 +46,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DatabaseType{ get; set; }
 
         /// <summary>
-        /// Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node type, empty or simple indicates a general node, cluster indicates a cluster node; for mongo services, valid values: replicaset (mongodb replica set), standalone (mongodb single node), cluster (mongodb cluster); for redis instances, valid values: empty or simple (single node), cluster (cluster), cluster-cache (cache cluster), cluster-proxy (proxy cluster).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
@@ -81,6 +80,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("DatabaseNetEnv")]
         public string DatabaseNetEnv{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ConnectType")]
+        public string ConnectType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +100,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Supplier", this.Supplier);
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
             this.SetParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
+            this.SetParamSimple(map, prefix + "ConnectType", this.ConnectType);
         }
     }
 }
