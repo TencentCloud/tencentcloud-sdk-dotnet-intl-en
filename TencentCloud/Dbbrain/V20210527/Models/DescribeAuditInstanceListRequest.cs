@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// Use the value of `u200cProduct` for this parameter, such as `dcdb` and `mariadb`.
+        /// Use the value of `Product` for this parameter, such as `dcdb` and `mariadb`.
         /// </summary>
         [JsonProperty("NodeRequestType")]
         public string NodeRequestType{ get; set; }

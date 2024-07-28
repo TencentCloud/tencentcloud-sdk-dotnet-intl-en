@@ -62,7 +62,6 @@ namespace TencentCloud.Dbbrain.V20210527.Models
 
         /// <summary>
         /// Resource tags
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public string[] ResourceTags{ get; set; }
