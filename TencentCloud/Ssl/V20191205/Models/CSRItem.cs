@@ -103,7 +103,7 @@ namespace TencentCloud.Ssl.V20191205.Models
 
         /// <summary>
         /// The creation time.
-        /// Note: u200dThis field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

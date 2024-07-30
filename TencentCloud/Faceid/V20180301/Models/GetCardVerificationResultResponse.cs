@@ -26,9 +26,10 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// Pass status. When Warning and Rejected are returned, please check the specific reasons in the WarnInfo structure return. Example values are as follows:
-        /// Passed
-        /// Warning
-        /// Rejected
+        /// PASSED
+        /// WARNING
+        /// REJECTED
+        /// PROCESSING
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

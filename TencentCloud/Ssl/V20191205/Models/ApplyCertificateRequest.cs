@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+        /// Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation.
         /// </summary>
         [JsonProperty("DvAuthMethod")]
         public string DvAuthMethod{ get; set; }
@@ -108,6 +108,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("DeleteDnsAutoRecord")]
         public bool? DeleteDnsAutoRecord{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DnsNames")]
+        public string[] DnsNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "DeleteDnsAutoRecord", this.DeleteDnsAutoRecord);
+            this.SetParamArraySimple(map, prefix + "DnsNames.", this.DnsNames);
         }
     }
 }

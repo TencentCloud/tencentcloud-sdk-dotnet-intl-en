@@ -37,13 +37,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The domain for CSR filtering.
+        /// The domain for CSR filtering
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The encryption algorithm for CSR filtering.
+        /// The encryption algorithm for CSR filtering
         /// </summary>
         [JsonProperty("EncryptAlgo")]
         public string EncryptAlgo{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.950";
+       private const string sdkVersion = "SDK_NET_3.0.951";
 
         /// <summary>
         /// Client constructor.
@@ -751,7 +751,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the HA configuration of an instance, u200cwhich includes:
+        /// This API is used to query the HA configuration of an instance, which includes:
         /// <li>Allow a standby node to promote to a primary node.
         /// <li>Allow a semi-sync instance to adopt sync or async replication.
         /// </summary>
@@ -763,7 +763,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the HA configuration of an instance, u200cwhich includes:
+        /// This API is used to query the HA configuration of an instance, which includes:
         /// <li>Allow a standby node to promote to a primary node.
         /// <li>Allow a semi-sync instance to adopt sync or async replication.
         /// </summary>
@@ -1490,7 +1490,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the HA configuration of an instance. u200cwhich includes:
+        /// This API is used to modify the HA configuration of an instance. which includes:
         /// <li>Allow the standby node to promote to the primary node.
         /// <li>Allow a semi-sync instance to adopt sync or async replication.
         /// </summary>
@@ -1502,7 +1502,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the HA configuration of an instance. u200cwhich includes:
+        /// This API is used to modify the HA configuration of an instance. which includes:
         /// <li>Allow the standby node to promote to the primary node.
         /// <li>Allow a semi-sync instance to adopt sync or async replication.
         /// </summary>
