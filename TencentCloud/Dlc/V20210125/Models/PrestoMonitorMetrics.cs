@@ -25,14 +25,12 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 	The Alluxio cache hit rate.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LocalCacheHitRate")]
         public float? LocalCacheHitRate{ get; set; }
 
         /// <summary>
-        /// The Fragment cache hit rate.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FragmentCacheHitRate")]

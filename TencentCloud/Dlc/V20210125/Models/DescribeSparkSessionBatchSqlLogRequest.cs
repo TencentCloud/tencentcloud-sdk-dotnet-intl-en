@@ -30,6 +30,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("BatchId")]
         public string BatchId{ get; set; }
 
+        /// <summary>
+        /// User-defined primary key. If it is specified, the query should be based on the value.
+        /// </summary>
+        [JsonProperty("CustomKey")]
+        public string CustomKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
+            this.SetParamSimple(map, prefix + "CustomKey", this.CustomKey);
         }
     }
 }

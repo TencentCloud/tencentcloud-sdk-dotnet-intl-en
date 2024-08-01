@@ -61,28 +61,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// The role name.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// The creator UIN.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// The COS permission list.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CosPermissionList")]
         public CosPermission[] CosPermissionList{ get; set; }
 
         /// <summary>
-        /// The CAM policy in JSON.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PermissionJson")]

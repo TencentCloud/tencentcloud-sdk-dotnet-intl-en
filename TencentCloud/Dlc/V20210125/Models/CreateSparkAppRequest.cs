@@ -49,7 +49,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string AppFile{ get; set; }
 
         /// <summary>
-        /// The data access policy (CAM role arn).
+        /// Data visiting policy achieved through CAM Role arn; the console can obtain it through Data Job -> Job Configuration; SDK can obtain corresponding values through the DescribeUserRoles API.
         /// </summary>
         [JsonProperty("RoleArn")]
         public long? RoleArn{ get; set; }

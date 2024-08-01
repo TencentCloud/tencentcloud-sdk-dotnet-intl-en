@@ -169,126 +169,109 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? JobStatus{ get; set; }
 
         /// <summary>
-        /// Spark streaming job statistics
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StreamingStat")]
         public StreamingStatistics StreamingStat{ get; set; }
 
         /// <summary>
-        /// Data source name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }
 
         /// <summary>
-        /// PySpark: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsLocalPythonFiles")]
         public string IsLocalPythonFiles{ get; set; }
 
         /// <summary>
-        /// Note: This returned value has been disused.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppPythonFiles")]
         public string AppPythonFiles{ get; set; }
 
         /// <summary>
-        /// Archives: Dependency upload method. 1: cos; 2: lakefs (this method needs to be used in the console but cannot be called through APIs).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsLocalArchives")]
         public string IsLocalArchives{ get; set; }
 
         /// <summary>
-        /// Archives: Dependency resources
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("JobArchives")]
         public string JobArchives{ get; set; }
 
         /// <summary>
-        /// The Spark image version.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparkImage")]
         public string SparkImage{ get; set; }
 
         /// <summary>
-        /// PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("JobPythonFiles")]
         public string JobPythonFiles{ get; set; }
 
         /// <summary>
-        /// Number of tasks running or ready to run under the current job
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskNum")]
         public long? TaskNum{ get; set; }
 
         /// <summary>
-        /// Engine status. -100 (default value): unknown; -2-11: normal.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngineStatus")]
         public long? DataEngineStatus{ get; set; }
 
         /// <summary>
-        /// The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("JobExecutorMaxNumbers")]
         public long? JobExecutorMaxNumbers{ get; set; }
 
         /// <summary>
-        /// The image version.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparkImageVersion")]
         public string SparkImageVersion{ get; set; }
 
         /// <summary>
-        /// The ID of the associated Data Lake Compute query script.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// `spark_emr_livy` indicates to create an EMR cluster.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngineClusterType")]
         public string DataEngineClusterType{ get; set; }
 
         /// <summary>
-        /// `Spark 3.2-EMR` indicates to use the Spark 3.2 image.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngineImageVersion")]
         public string DataEngineImageVersion{ get; set; }
 
         /// <summary>
-        /// Whether the task resource configuration is inherited from the cluster template. Valid values: `0` (default): No; `1`: Yes.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsInherit")]
         public ulong? IsInherit{ get; set; }
 
         /// <summary>
-        /// Whether the task runs with the session SQLs. Valid values: `false` for no and `true` for yes.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsSessionStarted")]
         public bool? IsSessionStarted{ get; set; }
 
         /// <summary>
-        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EngineTypeDetail")]
         public string EngineTypeDetail{ get; set; }

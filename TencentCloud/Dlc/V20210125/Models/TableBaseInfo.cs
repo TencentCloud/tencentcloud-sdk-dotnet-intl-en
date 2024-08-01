@@ -83,6 +83,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GovernPolicy")]
+        [System.Obsolete]
         public DataGovernPolicy GovernPolicy{ get; set; }
 
         /// <summary>
@@ -90,7 +91,15 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DbGovernPolicyIsDisable")]
+        [System.Obsolete]
         public string DbGovernPolicyIsDisable{ get; set; }
+
+        /// <summary>
+        /// Smart data governance configuration items
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SmartPolicy")]
+        public SmartPolicy SmartPolicy{ get; set; }
 
 
         /// <summary>
@@ -108,6 +117,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
             this.SetParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
             this.SetParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
+            this.SetParamObj(map, prefix + "SmartPolicy.", this.SmartPolicy);
         }
     }
 }

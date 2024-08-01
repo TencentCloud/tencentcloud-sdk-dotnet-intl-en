@@ -98,7 +98,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// The resource period. For the postpaid mode, the value is 3600 (default); for the prepaid mode, the value must be in the range of 1–120, representing purchasing the resource for 1–120 months.
+        /// The usage duration of the resource. Postpaid: Fill in 3,600 as a fixed figure; prepaid: fill in a figure equal to or bigger than 1 which means purchasing resources for one month. The maximum figure is not bigger than 120. The default value is 1.
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
@@ -205,6 +205,24 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SessionResourceTemplate")]
         public SessionResourceTemplate SessionResourceTemplate{ get; set; }
 
+        /// <summary>
+        /// Automatically grant permissions
+        /// </summary>
+        [JsonProperty("AutoAuthorization")]
+        public bool? AutoAuthorization{ get; set; }
+
+        /// <summary>
+        /// Engine network ID
+        /// </summary>
+        [JsonProperty("EngineNetworkId")]
+        public string EngineNetworkId{ get; set; }
+
+        /// <summary>
+        /// Generation of the engine. SuperSQL means the supersql engine while Native means the standard engine. It is SuperSQL by default.
+        /// </summary>
+        [JsonProperty("EngineGeneration")]
+        public string EngineGeneration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +259,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
             this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
             this.SetParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
+            this.SetParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
+            this.SetParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
+            this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         }
     }
 }

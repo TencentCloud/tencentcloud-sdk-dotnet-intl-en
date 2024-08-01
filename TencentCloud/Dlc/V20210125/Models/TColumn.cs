@@ -54,6 +54,19 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("NotNull")]
         public bool? NotNull{ get; set; }
 
+        /// <summary>
+        /// Indicate the length of the entire numeric with a value of 1-38
+        /// </summary>
+        [JsonProperty("Precision")]
+        public long? Precision{ get; set; }
+
+        /// <summary>
+        /// Indicate the length of the decimal part.
+        /// Scale is smaller than Precision.
+        /// </summary>
+        [JsonProperty("Scale")]
+        public long? Scale{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +78,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "Default", this.Default);
             this.SetParamSimple(map, prefix + "NotNull", this.NotNull);
+            this.SetParamSimple(map, prefix + "Precision", this.Precision);
+            this.SetParamSimple(map, prefix + "Scale", this.Scale);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// The status. Valid values: `0` (initializing), `1` (successful), `2` (failed), `3` (canceled), and `4` (exception).
+        /// Status: 0: running; 1: successful; 2: failed; 3: cancellation; 4: timeout
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }

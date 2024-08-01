@@ -25,14 +25,14 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// The scheduled start time, such as 8:00 AM every Monday.
+        /// Scheduled starting time, such as 8: 00 a.m. on Monday and Wednesday
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResumeTime")]
         public string ResumeTime{ get; set; }
 
         /// <summary>
-        /// The scheduled suspension time, such as 8:00 PM every Monday.
+        /// Scheduled suspension time, such as 8: 00 p.m. on Monday and Wednesday
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SuspendTime")]

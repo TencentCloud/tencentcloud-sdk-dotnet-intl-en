@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string DataEngineName{ get; set; }
 
         /// <summary>
-        /// The SQL statement to execute.
+        /// Run SQL. The base64 encoding is needed.
         /// </summary>
         [JsonProperty("ExecuteSQL")]
         public string ExecuteSQL{ get; set; }
@@ -87,10 +87,16 @@ namespace TencentCloud.Dlc.V20210125.Models
         public KVPair[] Arguments{ get; set; }
 
         /// <summary>
-        /// Whether to inherit the resource configurations from the cluster. Valid values: `0` for no (default) and `1` for yes.
+        /// Whether to inherit the resource configuration of clusters; 0: not inherit (by default); 1: inherit clusters.
         /// </summary>
         [JsonProperty("IsInherit")]
         public long? IsInherit{ get; set; }
+
+        /// <summary>
+        /// User-defined primary key, and it should be unique.
+        /// </summary>
+        [JsonProperty("CustomKey")]
+        public string CustomKey{ get; set; }
 
 
         /// <summary>
@@ -109,6 +115,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SessionName", this.SessionName);
             this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
             this.SetParamSimple(map, prefix + "IsInherit", this.IsInherit);
+            this.SetParamSimple(map, prefix + "CustomKey", this.CustomKey);
         }
     }
 }

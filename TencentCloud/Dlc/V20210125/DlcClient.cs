@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.951";
+       private const string sdkVersion = "SDK_NET_3.0.952";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,90 @@ namespace TencentCloud.Dlc.V20210125
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to add users to working groups.
+        /// </summary>
+        /// <param name="req"><see cref="AddUsersToWorkGroupRequest"/></param>
+        /// <returns><see cref="AddUsersToWorkGroupResponse"/></returns>
+        public Task<AddUsersToWorkGroupResponse> AddUsersToWorkGroup(AddUsersToWorkGroupRequest req)
+        {
+            return InternalRequestAsync<AddUsersToWorkGroupResponse>(req, "AddUsersToWorkGroup");
+        }
+
+        /// <summary>
+        /// This API is used to add users to working groups.
+        /// </summary>
+        /// <param name="req"><see cref="AddUsersToWorkGroupRequest"/></param>
+        /// <returns><see cref="AddUsersToWorkGroupResponse"/></returns>
+        public AddUsersToWorkGroupResponse AddUsersToWorkGroupSync(AddUsersToWorkGroupRequest req)
+        {
+            return InternalRequestAsync<AddUsersToWorkGroupResponse>(req, "AddUsersToWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to bind the authentication policy to the user.
+        /// </summary>
+        /// <param name="req"><see cref="AttachUserPolicyRequest"/></param>
+        /// <returns><see cref="AttachUserPolicyResponse"/></returns>
+        public Task<AttachUserPolicyResponse> AttachUserPolicy(AttachUserPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachUserPolicyResponse>(req, "AttachUserPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to bind the authentication policy to the user.
+        /// </summary>
+        /// <param name="req"><see cref="AttachUserPolicyRequest"/></param>
+        /// <returns><see cref="AttachUserPolicyResponse"/></returns>
+        public AttachUserPolicyResponse AttachUserPolicySync(AttachUserPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachUserPolicyResponse>(req, "AttachUserPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to bind an authentication policy to a working group.
+        /// </summary>
+        /// <param name="req"><see cref="AttachWorkGroupPolicyRequest"/></param>
+        /// <returns><see cref="AttachWorkGroupPolicyResponse"/></returns>
+        public Task<AttachWorkGroupPolicyResponse> AttachWorkGroupPolicy(AttachWorkGroupPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachWorkGroupPolicyResponse>(req, "AttachWorkGroupPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to bind an authentication policy to a working group.
+        /// </summary>
+        /// <param name="req"><see cref="AttachWorkGroupPolicyRequest"/></param>
+        /// <returns><see cref="AttachWorkGroupPolicyResponse"/></returns>
+        public AttachWorkGroupPolicyResponse AttachWorkGroupPolicySync(AttachWorkGroupPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachWorkGroupPolicyResponse>(req, "AttachWorkGroupPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to bind working groups to users.
+        /// </summary>
+        /// <param name="req"><see cref="BindWorkGroupsToUserRequest"/></param>
+        /// <returns><see cref="BindWorkGroupsToUserResponse"/></returns>
+        public Task<BindWorkGroupsToUserResponse> BindWorkGroupsToUser(BindWorkGroupsToUserRequest req)
+        {
+            return InternalRequestAsync<BindWorkGroupsToUserResponse>(req, "BindWorkGroupsToUser");
+        }
+
+        /// <summary>
+        /// This API is used to bind working groups to users.
+        /// </summary>
+        /// <param name="req"><see cref="BindWorkGroupsToUserRequest"/></param>
+        /// <returns><see cref="BindWorkGroupsToUserResponse"/></returns>
+        public BindWorkGroupsToUserResponse BindWorkGroupsToUserSync(BindWorkGroupsToUserRequest req)
+        {
+            return InternalRequestAsync<BindWorkGroupsToUserResponse>(req, "BindWorkGroupsToUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +176,90 @@ namespace TencentCloud.Dlc.V20210125
         public CancelTaskResponse CancelTaskSync(CancelTaskRequest req)
         {
             return InternalRequestAsync<CancelTaskResponse>(req, "CancelTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check the validity of the engine's user-defined parameters.
+        /// </summary>
+        /// <param name="req"><see cref="CheckDataEngineConfigPairsValidityRequest"/></param>
+        /// <returns><see cref="CheckDataEngineConfigPairsValidityResponse"/></returns>
+        public Task<CheckDataEngineConfigPairsValidityResponse> CheckDataEngineConfigPairsValidity(CheckDataEngineConfigPairsValidityRequest req)
+        {
+            return InternalRequestAsync<CheckDataEngineConfigPairsValidityResponse>(req, "CheckDataEngineConfigPairsValidity");
+        }
+
+        /// <summary>
+        /// This API is used to check the validity of the engine's user-defined parameters.
+        /// </summary>
+        /// <param name="req"><see cref="CheckDataEngineConfigPairsValidityRequest"/></param>
+        /// <returns><see cref="CheckDataEngineConfigPairsValidityResponse"/></returns>
+        public CheckDataEngineConfigPairsValidityResponse CheckDataEngineConfigPairsValiditySync(CheckDataEngineConfigPairsValidityRequest req)
+        {
+            return InternalRequestAsync<CheckDataEngineConfigPairsValidityResponse>(req, "CheckDataEngineConfigPairsValidity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check whether the cluster can be rolled back.
+        /// </summary>
+        /// <param name="req"><see cref="CheckDataEngineImageCanBeRollbackRequest"/></param>
+        /// <returns><see cref="CheckDataEngineImageCanBeRollbackResponse"/></returns>
+        public Task<CheckDataEngineImageCanBeRollbackResponse> CheckDataEngineImageCanBeRollback(CheckDataEngineImageCanBeRollbackRequest req)
+        {
+            return InternalRequestAsync<CheckDataEngineImageCanBeRollbackResponse>(req, "CheckDataEngineImageCanBeRollback");
+        }
+
+        /// <summary>
+        /// This API is used to check whether the cluster can be rolled back.
+        /// </summary>
+        /// <param name="req"><see cref="CheckDataEngineImageCanBeRollbackRequest"/></param>
+        /// <returns><see cref="CheckDataEngineImageCanBeRollbackResponse"/></returns>
+        public CheckDataEngineImageCanBeRollbackResponse CheckDataEngineImageCanBeRollbackSync(CheckDataEngineImageCanBeRollbackRequest req)
+        {
+            return InternalRequestAsync<CheckDataEngineImageCanBeRollbackResponse>(req, "CheckDataEngineImageCanBeRollback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check whether the cluster image can be upgraded.
+        /// </summary>
+        /// <param name="req"><see cref="CheckDataEngineImageCanBeUpgradeRequest"/></param>
+        /// <returns><see cref="CheckDataEngineImageCanBeUpgradeResponse"/></returns>
+        public Task<CheckDataEngineImageCanBeUpgradeResponse> CheckDataEngineImageCanBeUpgrade(CheckDataEngineImageCanBeUpgradeRequest req)
+        {
+            return InternalRequestAsync<CheckDataEngineImageCanBeUpgradeResponse>(req, "CheckDataEngineImageCanBeUpgrade");
+        }
+
+        /// <summary>
+        /// This API is used to check whether the cluster image can be upgraded.
+        /// </summary>
+        /// <param name="req"><see cref="CheckDataEngineImageCanBeUpgradeRequest"/></param>
+        /// <returns><see cref="CheckDataEngineImageCanBeUpgradeResponse"/></returns>
+        public CheckDataEngineImageCanBeUpgradeResponse CheckDataEngineImageCanBeUpgradeSync(CheckDataEngineImageCanBeUpgradeRequest req)
+        {
+            return InternalRequestAsync<CheckDataEngineImageCanBeUpgradeResponse>(req, "CheckDataEngineImageCanBeUpgrade")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create metadata acceleration buckets and the binding relationship between products.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCHDFSBindingProductRequest"/></param>
+        /// <returns><see cref="CreateCHDFSBindingProductResponse"/></returns>
+        public Task<CreateCHDFSBindingProductResponse> CreateCHDFSBindingProduct(CreateCHDFSBindingProductRequest req)
+        {
+            return InternalRequestAsync<CreateCHDFSBindingProductResponse>(req, "CreateCHDFSBindingProduct");
+        }
+
+        /// <summary>
+        /// This API is used to create metadata acceleration buckets and the binding relationship between products.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCHDFSBindingProductRequest"/></param>
+        /// <returns><see cref="CreateCHDFSBindingProductResponse"/></returns>
+        public CreateCHDFSBindingProductResponse CreateCHDFSBindingProductSync(CreateCHDFSBindingProductRequest req)
+        {
+            return InternalRequestAsync<CreateCHDFSBindingProductResponse>(req, "CreateCHDFSBindingProduct")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -222,6 +390,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to add or overwrite the storage location of results.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStoreLocationRequest"/></param>
+        /// <returns><see cref="CreateStoreLocationResponse"/></returns>
+        public Task<CreateStoreLocationResponse> CreateStoreLocation(CreateStoreLocationRequest req)
+        {
+            return InternalRequestAsync<CreateStoreLocationResponse>(req, "CreateStoreLocation");
+        }
+
+        /// <summary>
+        /// This API is used to add or overwrite the storage location of results.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStoreLocationRequest"/></param>
+        /// <returns><see cref="CreateStoreLocationResponse"/></returns>
+        public CreateStoreLocationResponse CreateStoreLocationSync(CreateStoreLocationRequest req)
+        {
+            return InternalRequestAsync<CreateStoreLocationResponse>(req, "CreateStoreLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create and execute a SQL task. (`CreateTasks` is recommended.)
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
@@ -264,6 +453,90 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to create users.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public Task<CreateUserResponse> CreateUser(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser");
+        }
+
+        /// <summary>
+        /// This API is used to create users.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public CreateUserResponse CreateUserSync(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create working groups.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkGroupRequest"/></param>
+        /// <returns><see cref="CreateWorkGroupResponse"/></returns>
+        public Task<CreateWorkGroupResponse> CreateWorkGroup(CreateWorkGroupRequest req)
+        {
+            return InternalRequestAsync<CreateWorkGroupResponse>(req, "CreateWorkGroup");
+        }
+
+        /// <summary>
+        /// This API is used to create working groups.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkGroupRequest"/></param>
+        /// <returns><see cref="CreateWorkGroupResponse"/></returns>
+        public CreateWorkGroupResponse CreateWorkGroupSync(CreateWorkGroupRequest req)
+        {
+            return InternalRequestAsync<CreateWorkGroupResponse>(req, "CreateWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete the binding relationship between metadata acceleration buckets and products.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCHDFSBindingProductRequest"/></param>
+        /// <returns><see cref="DeleteCHDFSBindingProductResponse"/></returns>
+        public Task<DeleteCHDFSBindingProductResponse> DeleteCHDFSBindingProduct(DeleteCHDFSBindingProductRequest req)
+        {
+            return InternalRequestAsync<DeleteCHDFSBindingProductResponse>(req, "DeleteCHDFSBindingProduct");
+        }
+
+        /// <summary>
+        /// This API is used to delete the binding relationship between metadata acceleration buckets and products.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCHDFSBindingProductRequest"/></param>
+        /// <returns><see cref="DeleteCHDFSBindingProductResponse"/></returns>
+        public DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProductSync(DeleteCHDFSBindingProductRequest req)
+        {
+            return InternalRequestAsync<DeleteCHDFSBindingProductResponse>(req, "DeleteCHDFSBindingProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete the data engine.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataEngineRequest"/></param>
+        /// <returns><see cref="DeleteDataEngineResponse"/></returns>
+        public Task<DeleteDataEngineResponse> DeleteDataEngine(DeleteDataEngineRequest req)
+        {
+            return InternalRequestAsync<DeleteDataEngineResponse>(req, "DeleteDataEngine");
+        }
+
+        /// <summary>
+        /// This API is used to delete the data engine.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataEngineRequest"/></param>
+        /// <returns><see cref="DeleteDataEngineResponse"/></returns>
+        public DeleteDataEngineResponse DeleteDataEngineSync(DeleteDataEngineRequest req)
+        {
+            return InternalRequestAsync<DeleteDataEngineResponse>(req, "DeleteDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a Spark job.
         /// </summary>
         /// <param name="req"><see cref="DeleteSparkAppRequest"/></param>
@@ -281,6 +554,216 @@ namespace TencentCloud.Dlc.V20210125
         public DeleteSparkAppResponse DeleteSparkAppSync(DeleteSparkAppRequest req)
         {
             return InternalRequestAsync<DeleteSparkAppResponse>(req, "DeleteSparkApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to remove visits through the third-party platform.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="DeleteThirdPartyAccessUserResponse"/></returns>
+        public Task<DeleteThirdPartyAccessUserResponse> DeleteThirdPartyAccessUser(DeleteThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<DeleteThirdPartyAccessUserResponse>(req, "DeleteThirdPartyAccessUser");
+        }
+
+        /// <summary>
+        /// This API is used to remove visits through the third-party platform.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="DeleteThirdPartyAccessUserResponse"/></returns>
+        public DeleteThirdPartyAccessUserResponse DeleteThirdPartyAccessUserSync(DeleteThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<DeleteThirdPartyAccessUserResponse>(req, "DeleteThirdPartyAccessUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete users.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser");
+        }
+
+        /// <summary>
+        /// This API is used to delete users.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete users from working groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersFromWorkGroupRequest"/></param>
+        /// <returns><see cref="DeleteUsersFromWorkGroupResponse"/></returns>
+        public Task<DeleteUsersFromWorkGroupResponse> DeleteUsersFromWorkGroup(DeleteUsersFromWorkGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteUsersFromWorkGroupResponse>(req, "DeleteUsersFromWorkGroup");
+        }
+
+        /// <summary>
+        /// This API is used to delete users from working groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersFromWorkGroupRequest"/></param>
+        /// <returns><see cref="DeleteUsersFromWorkGroupResponse"/></returns>
+        public DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroupSync(DeleteUsersFromWorkGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteUsersFromWorkGroupResponse>(req, "DeleteUsersFromWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete working groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkGroupRequest"/></param>
+        /// <returns><see cref="DeleteWorkGroupResponse"/></returns>
+        public Task<DeleteWorkGroupResponse> DeleteWorkGroup(DeleteWorkGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkGroupResponse>(req, "DeleteWorkGroup");
+        }
+
+        /// <summary>
+        /// This API is used to delete working groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkGroupRequest"/></param>
+        /// <returns><see cref="DeleteWorkGroupResponse"/></returns>
+        public DeleteWorkGroupResponse DeleteWorkGroupSync(DeleteWorkGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkGroupResponse>(req, "DeleteWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the advanced settings of the SQL query interface.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdvancedStoreLocationRequest"/></param>
+        /// <returns><see cref="DescribeAdvancedStoreLocationResponse"/></returns>
+        public Task<DescribeAdvancedStoreLocationResponse> DescribeAdvancedStoreLocation(DescribeAdvancedStoreLocationRequest req)
+        {
+            return InternalRequestAsync<DescribeAdvancedStoreLocationResponse>(req, "DescribeAdvancedStoreLocation");
+        }
+
+        /// <summary>
+        /// This API is used to query the advanced settings of the SQL query interface.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdvancedStoreLocationRequest"/></param>
+        /// <returns><see cref="DescribeAdvancedStoreLocationResponse"/></returns>
+        public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocationSync(DescribeAdvancedStoreLocationRequest req)
+        {
+            return InternalRequestAsync<DescribeAdvancedStoreLocationResponse>(req, "DescribeAdvancedStoreLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the DLC Catalog authorization list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="DescribeDLCCatalogAccessResponse"/></returns>
+        public Task<DescribeDLCCatalogAccessResponse> DescribeDLCCatalogAccess(DescribeDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<DescribeDLCCatalogAccessResponse>(req, "DescribeDLCCatalogAccess");
+        }
+
+        /// <summary>
+        /// This API is used to query the DLC Catalog authorization list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="DescribeDLCCatalogAccessResponse"/></returns>
+        public DescribeDLCCatalogAccessResponse DescribeDLCCatalogAccessSync(DescribeDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<DescribeDLCCatalogAccessResponse>(req, "DescribeDLCCatalogAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain detailed data engine information based on names.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEngineRequest"/></param>
+        /// <returns><see cref="DescribeDataEngineResponse"/></returns>
+        public Task<DescribeDataEngineResponse> DescribeDataEngine(DescribeDataEngineRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEngineResponse>(req, "DescribeDataEngine");
+        }
+
+        /// <summary>
+        /// This API is used to obtain detailed data engine information based on names.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEngineRequest"/></param>
+        /// <returns><see cref="DescribeDataEngineResponse"/></returns>
+        public DescribeDataEngineResponse DescribeDataEngineSync(DescribeDataEngineRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEngineResponse>(req, "DescribeDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the major version image list of exclusive clusters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEngineImageVersionsRequest"/></param>
+        /// <returns><see cref="DescribeDataEngineImageVersionsResponse"/></returns>
+        public Task<DescribeDataEngineImageVersionsResponse> DescribeDataEngineImageVersions(DescribeDataEngineImageVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEngineImageVersionsResponse>(req, "DescribeDataEngineImageVersions");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the major version image list of exclusive clusters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEngineImageVersionsRequest"/></param>
+        /// <returns><see cref="DescribeDataEngineImageVersionsResponse"/></returns>
+        public DescribeDataEngineImageVersionsResponse DescribeDataEngineImageVersionsSync(DescribeDataEngineImageVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEngineImageVersionsResponse>(req, "DescribeDataEngineImageVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the PYSPARK image list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEnginePythonSparkImagesRequest"/></param>
+        /// <returns><see cref="DescribeDataEnginePythonSparkImagesResponse"/></returns>
+        public Task<DescribeDataEnginePythonSparkImagesResponse> DescribeDataEnginePythonSparkImages(DescribeDataEnginePythonSparkImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEnginePythonSparkImagesResponse>(req, "DescribeDataEnginePythonSparkImages");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the PYSPARK image list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEnginePythonSparkImagesRequest"/></param>
+        /// <returns><see cref="DescribeDataEnginePythonSparkImagesResponse"/></returns>
+        public DescribeDataEnginePythonSparkImagesResponse DescribeDataEnginePythonSparkImagesSync(DescribeDataEnginePythonSparkImagesRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEnginePythonSparkImagesResponse>(req, "DescribeDataEnginePythonSparkImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query engine specification details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEnginesScaleDetailRequest"/></param>
+        /// <returns><see cref="DescribeDataEnginesScaleDetailResponse"/></returns>
+        public Task<DescribeDataEnginesScaleDetailResponse> DescribeDataEnginesScaleDetail(DescribeDataEnginesScaleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEnginesScaleDetailResponse>(req, "DescribeDataEnginesScaleDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query engine specification details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEnginesScaleDetailRequest"/></param>
+        /// <returns><see cref="DescribeDataEnginesScaleDetailResponse"/></returns>
+        public DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetailSync(DescribeDataEnginesScaleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDataEnginesScaleDetailResponse>(req, "DescribeDataEnginesScaleDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +852,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to query the list of metadata acceleration buckets bound to other products.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOtherCHDFSBindingListRequest"/></param>
+        /// <returns><see cref="DescribeOtherCHDFSBindingListResponse"/></returns>
+        public Task<DescribeOtherCHDFSBindingListResponse> DescribeOtherCHDFSBindingList(DescribeOtherCHDFSBindingListRequest req)
+        {
+            return InternalRequestAsync<DescribeOtherCHDFSBindingListResponse>(req, "DescribeOtherCHDFSBindingList");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of metadata acceleration buckets bound to other products.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOtherCHDFSBindingListRequest"/></param>
+        /// <returns><see cref="DescribeOtherCHDFSBindingListResponse"/></returns>
+        public DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingListSync(DescribeOtherCHDFSBindingListRequest req)
+        {
+            return InternalRequestAsync<DescribeOtherCHDFSBindingListResponse>(req, "DescribeOtherCHDFSBindingList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get a query result download task.
         /// </summary>
         /// <param name="req"><see cref="DescribeResultDownloadRequest"/></param>
@@ -453,7 +957,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to obtain the logs of a Spark SQL batch task.
+        /// This API is used to query Spark SQL batch task logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>
         /// <returns><see cref="DescribeSparkSessionBatchSqlLogResponse"/></returns>
@@ -463,13 +967,76 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// This API is used to obtain the logs of a Spark SQL batch task.
+        /// This API is used to query Spark SQL batch task logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkSessionBatchSqlLogRequest"/></param>
         /// <returns><see cref="DescribeSparkSessionBatchSqlLogResponse"/></returns>
         public DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLogSync(DescribeSparkSessionBatchSqlLogRequest req)
         {
             return InternalRequestAsync<DescribeSparkSessionBatchSqlLogResponse>(req, "DescribeSparkSessionBatchSqlLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the storage location of calculation results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStoreLocationRequest"/></param>
+        /// <returns><see cref="DescribeStoreLocationResponse"/></returns>
+        public Task<DescribeStoreLocationResponse> DescribeStoreLocation(DescribeStoreLocationRequest req)
+        {
+            return InternalRequestAsync<DescribeStoreLocationResponse>(req, "DescribeStoreLocation");
+        }
+
+        /// <summary>
+        /// This API is used to query the storage location of calculation results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStoreLocationRequest"/></param>
+        /// <returns><see cref="DescribeStoreLocationResponse"/></returns>
+        public DescribeStoreLocationResponse DescribeStoreLocationSync(DescribeStoreLocationRequest req)
+        {
+            return InternalRequestAsync<DescribeStoreLocationResponse>(req, "DescribeStoreLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the sub-user's visiting policy for users accessing through the third-party platform.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubUserAccessPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSubUserAccessPolicyResponse"/></returns>
+        public Task<DescribeSubUserAccessPolicyResponse> DescribeSubUserAccessPolicy(DescribeSubUserAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSubUserAccessPolicyResponse>(req, "DescribeSubUserAccessPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to query the sub-user's visiting policy for users accessing through the third-party platform.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubUserAccessPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSubUserAccessPolicyResponse"/></returns>
+        public DescribeSubUserAccessPolicyResponse DescribeSubUserAccessPolicySync(DescribeSubUserAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSubUserAccessPolicyResponse>(req, "DescribeSubUserAccessPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the data table name list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesNameRequest"/></param>
+        /// <returns><see cref="DescribeTablesNameResponse"/></returns>
+        public Task<DescribeTablesNameResponse> DescribeTablesName(DescribeTablesNameRequest req)
+        {
+            return InternalRequestAsync<DescribeTablesNameResponse>(req, "DescribeTablesName");
+        }
+
+        /// <summary>
+        /// This API is used to query the data table name list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTablesNameRequest"/></param>
+        /// <returns><see cref="DescribeTablesNameResponse"/></returns>
+        public DescribeTablesNameResponse DescribeTablesNameSync(DescribeTablesNameRequest req)
+        {
+            return InternalRequestAsync<DescribeTablesNameResponse>(req, "DescribeTablesName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -516,6 +1083,90 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to query the information of users visiting through the third-party platform.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="DescribeThirdPartyAccessUserResponse"/></returns>
+        public Task<DescribeThirdPartyAccessUserResponse> DescribeThirdPartyAccessUser(DescribeThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<DescribeThirdPartyAccessUserResponse>(req, "DescribeThirdPartyAccessUser");
+        }
+
+        /// <summary>
+        /// This API is used to query the information of users visiting through the third-party platform.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="DescribeThirdPartyAccessUserResponse"/></returns>
+        public DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUserSync(DescribeThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<DescribeThirdPartyAccessUserResponse>(req, "DescribeThirdPartyAccessUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of engines that are able to upgrade their configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpdatableDataEnginesRequest"/></param>
+        /// <returns><see cref="DescribeUpdatableDataEnginesResponse"/></returns>
+        public Task<DescribeUpdatableDataEnginesResponse> DescribeUpdatableDataEngines(DescribeUpdatableDataEnginesRequest req)
+        {
+            return InternalRequestAsync<DescribeUpdatableDataEnginesResponse>(req, "DescribeUpdatableDataEngines");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of engines that are able to upgrade their configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpdatableDataEnginesRequest"/></param>
+        /// <returns><see cref="DescribeUpdatableDataEnginesResponse"/></returns>
+        public DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEnginesSync(DescribeUpdatableDataEnginesRequest req)
+        {
+            return InternalRequestAsync<DescribeUpdatableDataEnginesResponse>(req, "DescribeUpdatableDataEngines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query user-defined engine parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDataEngineConfigRequest"/></param>
+        /// <returns><see cref="DescribeUserDataEngineConfigResponse"/></returns>
+        public Task<DescribeUserDataEngineConfigResponse> DescribeUserDataEngineConfig(DescribeUserDataEngineConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDataEngineConfigResponse>(req, "DescribeUserDataEngineConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query user-defined engine parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserDataEngineConfigRequest"/></param>
+        /// <returns><see cref="DescribeUserDataEngineConfigResponse"/></returns>
+        public DescribeUserDataEngineConfigResponse DescribeUserDataEngineConfigSync(DescribeUserDataEngineConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeUserDataEngineConfigResponse>(req, "DescribeUserDataEngineConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get detailed user information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserInfoResponse"/></returns>
+        public Task<DescribeUserInfoResponse> DescribeUserInfo(DescribeUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeUserInfoResponse>(req, "DescribeUserInfo");
+        }
+
+        /// <summary>
+        /// This API is used to get detailed user information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserInfoResponse"/></returns>
+        public DescribeUserInfoResponse DescribeUserInfoSync(DescribeUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeUserInfoResponse>(req, "DescribeUserInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to enumerate user roles.
         /// </summary>
         /// <param name="req"><see cref="DescribeUserRolesRequest"/></param>
@@ -537,6 +1188,132 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to get the types of users.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserTypeRequest"/></param>
+        /// <returns><see cref="DescribeUserTypeResponse"/></returns>
+        public Task<DescribeUserTypeResponse> DescribeUserType(DescribeUserTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeUserTypeResponse>(req, "DescribeUserType");
+        }
+
+        /// <summary>
+        /// This API is used to get the types of users.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserTypeRequest"/></param>
+        /// <returns><see cref="DescribeUserTypeResponse"/></returns>
+        public DescribeUserTypeResponse DescribeUserTypeSync(DescribeUserTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeUserTypeResponse>(req, "DescribeUserType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the user list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersRequest"/></param>
+        /// <returns><see cref="DescribeUsersResponse"/></returns>
+        public Task<DescribeUsersResponse> DescribeUsers(DescribeUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeUsersResponse>(req, "DescribeUsers");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the user list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersRequest"/></param>
+        /// <returns><see cref="DescribeUsersResponse"/></returns>
+        public DescribeUsersResponse DescribeUsersSync(DescribeUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeUsersResponse>(req, "DescribeUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get detailed information about working groups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkGroupInfoRequest"/></param>
+        /// <returns><see cref="DescribeWorkGroupInfoResponse"/></returns>
+        public Task<DescribeWorkGroupInfoResponse> DescribeWorkGroupInfo(DescribeWorkGroupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkGroupInfoResponse>(req, "DescribeWorkGroupInfo");
+        }
+
+        /// <summary>
+        /// This API is used to get detailed information about working groups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkGroupInfoRequest"/></param>
+        /// <returns><see cref="DescribeWorkGroupInfoResponse"/></returns>
+        public DescribeWorkGroupInfoResponse DescribeWorkGroupInfoSync(DescribeWorkGroupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkGroupInfoResponse>(req, "DescribeWorkGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get a list of working groups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkGroupsRequest"/></param>
+        /// <returns><see cref="DescribeWorkGroupsResponse"/></returns>
+        public Task<DescribeWorkGroupsResponse> DescribeWorkGroups(DescribeWorkGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkGroupsResponse>(req, "DescribeWorkGroups");
+        }
+
+        /// <summary>
+        /// This API is used to get a list of working groups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkGroupsRequest"/></param>
+        /// <returns><see cref="DescribeWorkGroupsResponse"/></returns>
+        public DescribeWorkGroupsResponse DescribeWorkGroupsSync(DescribeWorkGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkGroupsResponse>(req, "DescribeWorkGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind the authentication policy from the user.
+        /// </summary>
+        /// <param name="req"><see cref="DetachUserPolicyRequest"/></param>
+        /// <returns><see cref="DetachUserPolicyResponse"/></returns>
+        public Task<DetachUserPolicyResponse> DetachUserPolicy(DetachUserPolicyRequest req)
+        {
+            return InternalRequestAsync<DetachUserPolicyResponse>(req, "DetachUserPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to unbind the authentication policy from the user.
+        /// </summary>
+        /// <param name="req"><see cref="DetachUserPolicyRequest"/></param>
+        /// <returns><see cref="DetachUserPolicyResponse"/></returns>
+        public DetachUserPolicyResponse DetachUserPolicySync(DetachUserPolicyRequest req)
+        {
+            return InternalRequestAsync<DetachUserPolicyResponse>(req, "DetachUserPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind the authentication policy from the working group.
+        /// </summary>
+        /// <param name="req"><see cref="DetachWorkGroupPolicyRequest"/></param>
+        /// <returns><see cref="DetachWorkGroupPolicyResponse"/></returns>
+        public Task<DetachWorkGroupPolicyResponse> DetachWorkGroupPolicy(DetachWorkGroupPolicyRequest req)
+        {
+            return InternalRequestAsync<DetachWorkGroupPolicyResponse>(req, "DetachWorkGroupPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to unbind the authentication policy from the working group.
+        /// </summary>
+        /// <param name="req"><see cref="DetachWorkGroupPolicyRequest"/></param>
+        /// <returns><see cref="DetachWorkGroupPolicyResponse"/></returns>
+        public DetachWorkGroupPolicyResponse DetachWorkGroupPolicySync(DetachWorkGroupPolicyRequest req)
+        {
+            return InternalRequestAsync<DetachWorkGroupPolicyResponse>(req, "DetachWorkGroupPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to generate SQL statements for creating a managed table.
         /// </summary>
         /// <param name="req"><see cref="GenerateCreateMangedTableSqlRequest"/></param>
@@ -554,6 +1331,90 @@ namespace TencentCloud.Dlc.V20210125
         public GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSqlSync(GenerateCreateMangedTableSqlRequest req)
         {
             return InternalRequestAsync<GenerateCreateMangedTableSqlResponse>(req, "GenerateCreateMangedTableSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// GetOptimizerPolicy
+        /// </summary>
+        /// <param name="req"><see cref="GetOptimizerPolicyRequest"/></param>
+        /// <returns><see cref="GetOptimizerPolicyResponse"/></returns>
+        public Task<GetOptimizerPolicyResponse> GetOptimizerPolicy(GetOptimizerPolicyRequest req)
+        {
+            return InternalRequestAsync<GetOptimizerPolicyResponse>(req, "GetOptimizerPolicy");
+        }
+
+        /// <summary>
+        /// GetOptimizerPolicy
+        /// </summary>
+        /// <param name="req"><see cref="GetOptimizerPolicyRequest"/></param>
+        /// <returns><see cref="GetOptimizerPolicyResponse"/></returns>
+        public GetOptimizerPolicyResponse GetOptimizerPolicySync(GetOptimizerPolicyRequest req)
+        {
+            return InternalRequestAsync<GetOptimizerPolicyResponse>(req, "GetOptimizerPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to grant permissions for visiting DLC Catalog.
+        /// </summary>
+        /// <param name="req"><see cref="GrantDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="GrantDLCCatalogAccessResponse"/></returns>
+        public Task<GrantDLCCatalogAccessResponse> GrantDLCCatalogAccess(GrantDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<GrantDLCCatalogAccessResponse>(req, "GrantDLCCatalogAccess");
+        }
+
+        /// <summary>
+        /// This API is used to grant permissions for visiting DLC Catalog.
+        /// </summary>
+        /// <param name="req"><see cref="GrantDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="GrantDLCCatalogAccessResponse"/></returns>
+        public GrantDLCCatalogAccessResponse GrantDLCCatalogAccessSync(GrantDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<GrantDLCCatalogAccessResponse>(req, "GrantDLCCatalogAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the advanced settings of the SQL query interface.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdvancedStoreLocationRequest"/></param>
+        /// <returns><see cref="ModifyAdvancedStoreLocationResponse"/></returns>
+        public Task<ModifyAdvancedStoreLocationResponse> ModifyAdvancedStoreLocation(ModifyAdvancedStoreLocationRequest req)
+        {
+            return InternalRequestAsync<ModifyAdvancedStoreLocationResponse>(req, "ModifyAdvancedStoreLocation");
+        }
+
+        /// <summary>
+        /// This API is used to modify the advanced settings of the SQL query interface.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdvancedStoreLocationRequest"/></param>
+        /// <returns><see cref="ModifyAdvancedStoreLocationResponse"/></returns>
+        public ModifyAdvancedStoreLocationResponse ModifyAdvancedStoreLocationSync(ModifyAdvancedStoreLocationRequest req)
+        {
+            return InternalRequestAsync<ModifyAdvancedStoreLocationResponse>(req, "ModifyAdvancedStoreLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the engine's description.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataEngineDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyDataEngineDescriptionResponse"/></returns>
+        public Task<ModifyDataEngineDescriptionResponse> ModifyDataEngineDescription(ModifyDataEngineDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyDataEngineDescriptionResponse>(req, "ModifyDataEngineDescription");
+        }
+
+        /// <summary>
+        /// This API is used to modify the engine's description.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataEngineDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyDataEngineDescriptionResponse"/></returns>
+        public ModifyDataEngineDescriptionResponse ModifyDataEngineDescriptionSync(ModifyDataEngineDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyDataEngineDescriptionResponse>(req, "ModifyDataEngineDescription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -621,6 +1482,216 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to modify user information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public Task<ModifyUserResponse> ModifyUser(ModifyUserRequest req)
+        {
+            return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser");
+        }
+
+        /// <summary>
+        /// This API is used to modify user information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
+        {
+            return InternalRequestAsync<ModifyUserResponse>(req, "ModifyUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the types of users. Only users who are also administrators can call this API to conduct the operation.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserTypeRequest"/></param>
+        /// <returns><see cref="ModifyUserTypeResponse"/></returns>
+        public Task<ModifyUserTypeResponse> ModifyUserType(ModifyUserTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyUserTypeResponse>(req, "ModifyUserType");
+        }
+
+        /// <summary>
+        /// This API is used to modify the types of users. Only users who are also administrators can call this API to conduct the operation.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserTypeRequest"/></param>
+        /// <returns><see cref="ModifyUserTypeResponse"/></returns>
+        public ModifyUserTypeResponse ModifyUserTypeSync(ModifyUserTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyUserTypeResponse>(req, "ModifyUserType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify working group information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkGroupRequest"/></param>
+        /// <returns><see cref="ModifyWorkGroupResponse"/></returns>
+        public Task<ModifyWorkGroupResponse> ModifyWorkGroup(ModifyWorkGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkGroupResponse>(req, "ModifyWorkGroup");
+        }
+
+        /// <summary>
+        /// This API is used to modify working group information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkGroupRequest"/></param>
+        /// <returns><see cref="ModifyWorkGroupResponse"/></returns>
+        public ModifyWorkGroupResponse ModifyWorkGroupSync(ModifyWorkGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyWorkGroupResponse>(req, "ModifyWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the result of obtaining tasks.
+        /// </summary>
+        /// <param name="req"><see cref="QueryResultRequest"/></param>
+        /// <returns><see cref="QueryResultResponse"/></returns>
+        public Task<QueryResultResponse> QueryResult(QueryResultRequest req)
+        {
+            return InternalRequestAsync<QueryResultResponse>(req, "QueryResult");
+        }
+
+        /// <summary>
+        /// This API is used to query the result of obtaining tasks.
+        /// </summary>
+        /// <param name="req"><see cref="QueryResultRequest"/></param>
+        /// <returns><see cref="QueryResultResponse"/></returns>
+        public QueryResultResponse QueryResultSync(QueryResultRequest req)
+        {
+            return InternalRequestAsync<QueryResultResponse>(req, "QueryResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query task consumption details.
+        /// </summary>
+        /// <param name="req"><see cref="QueryTaskCostDetailRequest"/></param>
+        /// <returns><see cref="QueryTaskCostDetailResponse"/></returns>
+        public Task<QueryTaskCostDetailResponse> QueryTaskCostDetail(QueryTaskCostDetailRequest req)
+        {
+            return InternalRequestAsync<QueryTaskCostDetailResponse>(req, "QueryTaskCostDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query task consumption details.
+        /// </summary>
+        /// <param name="req"><see cref="QueryTaskCostDetailRequest"/></param>
+        /// <returns><see cref="QueryTaskCostDetailResponse"/></returns>
+        public QueryTaskCostDetailResponse QueryTaskCostDetailSync(QueryTaskCostDetailRequest req)
+        {
+            return InternalRequestAsync<QueryTaskCostDetailResponse>(req, "QueryTaskCostDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable visits to the third-party platform.
+        /// </summary>
+        /// <param name="req"><see cref="RegisterThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="RegisterThirdPartyAccessUserResponse"/></returns>
+        public Task<RegisterThirdPartyAccessUserResponse> RegisterThirdPartyAccessUser(RegisterThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<RegisterThirdPartyAccessUserResponse>(req, "RegisterThirdPartyAccessUser");
+        }
+
+        /// <summary>
+        /// This API is used to enable visits to the third-party platform.
+        /// </summary>
+        /// <param name="req"><see cref="RegisterThirdPartyAccessUserRequest"/></param>
+        /// <returns><see cref="RegisterThirdPartyAccessUserResponse"/></returns>
+        public RegisterThirdPartyAccessUserResponse RegisterThirdPartyAccessUserSync(RegisterThirdPartyAccessUserRequest req)
+        {
+            return InternalRequestAsync<RegisterThirdPartyAccessUserResponse>(req, "RegisterThirdPartyAccessUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to renew the data engine.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDataEngineRequest"/></param>
+        /// <returns><see cref="RenewDataEngineResponse"/></returns>
+        public Task<RenewDataEngineResponse> RenewDataEngine(RenewDataEngineRequest req)
+        {
+            return InternalRequestAsync<RenewDataEngineResponse>(req, "RenewDataEngine");
+        }
+
+        /// <summary>
+        /// This API is used to renew the data engine.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDataEngineRequest"/></param>
+        /// <returns><see cref="RenewDataEngineResponse"/></returns>
+        public RenewDataEngineResponse RenewDataEngineSync(RenewDataEngineRequest req)
+        {
+            return InternalRequestAsync<RenewDataEngineResponse>(req, "RenewDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to restart engines.
+        /// </summary>
+        /// <param name="req"><see cref="RestartDataEngineRequest"/></param>
+        /// <returns><see cref="RestartDataEngineResponse"/></returns>
+        public Task<RestartDataEngineResponse> RestartDataEngine(RestartDataEngineRequest req)
+        {
+            return InternalRequestAsync<RestartDataEngineResponse>(req, "RestartDataEngine");
+        }
+
+        /// <summary>
+        /// This API is used to restart engines.
+        /// </summary>
+        /// <param name="req"><see cref="RestartDataEngineRequest"/></param>
+        /// <returns><see cref="RestartDataEngineResponse"/></returns>
+        public RestartDataEngineResponse RestartDataEngineSync(RestartDataEngineRequest req)
+        {
+            return InternalRequestAsync<RestartDataEngineResponse>(req, "RestartDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to revoke permissions for visiting DLC Catalog.
+        /// </summary>
+        /// <param name="req"><see cref="RevokeDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="RevokeDLCCatalogAccessResponse"/></returns>
+        public Task<RevokeDLCCatalogAccessResponse> RevokeDLCCatalogAccess(RevokeDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<RevokeDLCCatalogAccessResponse>(req, "RevokeDLCCatalogAccess");
+        }
+
+        /// <summary>
+        /// This API is used to revoke permissions for visiting DLC Catalog.
+        /// </summary>
+        /// <param name="req"><see cref="RevokeDLCCatalogAccessRequest"/></param>
+        /// <returns><see cref="RevokeDLCCatalogAccessResponse"/></returns>
+        public RevokeDLCCatalogAccessResponse RevokeDLCCatalogAccessSync(RevokeDLCCatalogAccessRequest req)
+        {
+            return InternalRequestAsync<RevokeDLCCatalogAccessResponse>(req, "RevokeDLCCatalogAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to roll back the versions of the engine image.
+        /// </summary>
+        /// <param name="req"><see cref="RollbackDataEngineImageRequest"/></param>
+        /// <returns><see cref="RollbackDataEngineImageResponse"/></returns>
+        public Task<RollbackDataEngineImageResponse> RollbackDataEngineImage(RollbackDataEngineImageRequest req)
+        {
+            return InternalRequestAsync<RollbackDataEngineImageResponse>(req, "RollbackDataEngineImage");
+        }
+
+        /// <summary>
+        /// This API is used to roll back the versions of the engine image.
+        /// </summary>
+        /// <param name="req"><see cref="RollbackDataEngineImageRequest"/></param>
+        /// <returns><see cref="RollbackDataEngineImageResponse"/></returns>
+        public RollbackDataEngineImageResponse RollbackDataEngineImageSync(RollbackDataEngineImageRequest req)
+        {
+            return InternalRequestAsync<RollbackDataEngineImageResponse>(req, "RollbackDataEngineImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to suspend or start a data engine.
         /// </summary>
         /// <param name="req"><see cref="SuspendResumeDataEngineRequest"/></param>
@@ -663,6 +1734,90 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to switch the versions of the engine image.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDataEngineImageRequest"/></param>
+        /// <returns><see cref="SwitchDataEngineImageResponse"/></returns>
+        public Task<SwitchDataEngineImageResponse> SwitchDataEngineImage(SwitchDataEngineImageRequest req)
+        {
+            return InternalRequestAsync<SwitchDataEngineImageResponse>(req, "SwitchDataEngineImage");
+        }
+
+        /// <summary>
+        /// This API is used to switch the versions of the engine image.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDataEngineImageRequest"/></param>
+        /// <returns><see cref="SwitchDataEngineImageResponse"/></returns>
+        public SwitchDataEngineImageResponse SwitchDataEngineImageSync(SwitchDataEngineImageRequest req)
+        {
+            return InternalRequestAsync<SwitchDataEngineImageResponse>(req, "SwitchDataEngineImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind a user group from a user.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindWorkGroupsFromUserRequest"/></param>
+        /// <returns><see cref="UnbindWorkGroupsFromUserResponse"/></returns>
+        public Task<UnbindWorkGroupsFromUserResponse> UnbindWorkGroupsFromUser(UnbindWorkGroupsFromUserRequest req)
+        {
+            return InternalRequestAsync<UnbindWorkGroupsFromUserResponse>(req, "UnbindWorkGroupsFromUser");
+        }
+
+        /// <summary>
+        /// This API is used to unbind a user group from a user.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindWorkGroupsFromUserRequest"/></param>
+        /// <returns><see cref="UnbindWorkGroupsFromUserResponse"/></returns>
+        public UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUserSync(UnbindWorkGroupsFromUserRequest req)
+        {
+            return InternalRequestAsync<UnbindWorkGroupsFromUserResponse>(req, "UnbindWorkGroupsFromUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade data engine configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataEngineRequest"/></param>
+        /// <returns><see cref="UpdateDataEngineResponse"/></returns>
+        public Task<UpdateDataEngineResponse> UpdateDataEngine(UpdateDataEngineRequest req)
+        {
+            return InternalRequestAsync<UpdateDataEngineResponse>(req, "UpdateDataEngine");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade data engine configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataEngineRequest"/></param>
+        /// <returns><see cref="UpdateDataEngineResponse"/></returns>
+        public UpdateDataEngineResponse UpdateDataEngineSync(UpdateDataEngineRequest req)
+        {
+            return InternalRequestAsync<UpdateDataEngineResponse>(req, "UpdateDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to trigger the modification of the engine configuration by the user through a certain operation.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataEngineConfigRequest"/></param>
+        /// <returns><see cref="UpdateDataEngineConfigResponse"/></returns>
+        public Task<UpdateDataEngineConfigResponse> UpdateDataEngineConfig(UpdateDataEngineConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateDataEngineConfigResponse>(req, "UpdateDataEngineConfig");
+        }
+
+        /// <summary>
+        /// This API is used to trigger the modification of the engine configuration by the user through a certain operation.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataEngineConfigRequest"/></param>
+        /// <returns><see cref="UpdateDataEngineConfigResponse"/></returns>
+        public UpdateDataEngineConfigResponse UpdateDataEngineConfigSync(UpdateDataEngineConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateDataEngineConfigResponse>(req, "UpdateDataEngineConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to update row filters. Please note that it updates filters only but not catalogs, databases, or tables.
         /// </summary>
         /// <param name="req"><see cref="UpdateRowFilterRequest"/></param>
@@ -680,6 +1835,48 @@ namespace TencentCloud.Dlc.V20210125
         public UpdateRowFilterResponse UpdateRowFilterSync(UpdateRowFilterRequest req)
         {
             return InternalRequestAsync<UpdateRowFilterResponse>(req, "UpdateRowFilter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the custom configuration of the user's engine.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserDataEngineConfigRequest"/></param>
+        /// <returns><see cref="UpdateUserDataEngineConfigResponse"/></returns>
+        public Task<UpdateUserDataEngineConfigResponse> UpdateUserDataEngineConfig(UpdateUserDataEngineConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateUserDataEngineConfigResponse>(req, "UpdateUserDataEngineConfig");
+        }
+
+        /// <summary>
+        /// This API is used to modify the custom configuration of the user's engine.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserDataEngineConfigRequest"/></param>
+        /// <returns><see cref="UpdateUserDataEngineConfigResponse"/></returns>
+        public UpdateUserDataEngineConfigResponse UpdateUserDataEngineConfigSync(UpdateUserDataEngineConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateUserDataEngineConfigResponse>(req, "UpdateUserDataEngineConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the engine image.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDataEngineImageRequest"/></param>
+        /// <returns><see cref="UpgradeDataEngineImageResponse"/></returns>
+        public Task<UpgradeDataEngineImageResponse> UpgradeDataEngineImage(UpgradeDataEngineImageRequest req)
+        {
+            return InternalRequestAsync<UpgradeDataEngineImageResponse>(req, "UpgradeDataEngineImage");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the engine image.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDataEngineImageRequest"/></param>
+        /// <returns><see cref="UpgradeDataEngineImageResponse"/></returns>
+        public UpgradeDataEngineImageResponse UpgradeDataEngineImageSync(UpgradeDataEngineImageRequest req)
+        {
+            return InternalRequestAsync<UpgradeDataEngineImageResponse>(req, "UpgradeDataEngineImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

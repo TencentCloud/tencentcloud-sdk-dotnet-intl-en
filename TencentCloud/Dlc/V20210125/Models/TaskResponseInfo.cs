@@ -91,7 +91,6 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string RowAffectInfo{ get; set; }
 
         /// <summary>
-        /// Dataset of task results
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataSet")]
@@ -122,191 +121,163 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Task progress details
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProgressDetail")]
         public string ProgressDetail{ get; set; }
 
         /// <summary>
-        /// Task end time
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Compute resource ID
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngineId")]
         public string DataEngineId{ get; set; }
 
         /// <summary>
-        /// Sub-UIN that executes the SQL statement
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// Compute resource name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngineName")]
         public string DataEngineName{ get; set; }
 
         /// <summary>
-        /// Whether the import type is local import or COS
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InputType")]
         public string InputType{ get; set; }
 
         /// <summary>
-        /// Import configuration
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InputConf")]
         public string InputConf{ get; set; }
 
         /// <summary>
-        /// Number of data entries
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataNumber")]
         public long? DataNumber{ get; set; }
 
         /// <summary>
-        /// Whether the data can be downloaded
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CanDownload")]
         public bool? CanDownload{ get; set; }
 
         /// <summary>
-        /// User alias
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
 
         /// <summary>
-        /// Spark application job name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparkJobName")]
         public string SparkJobName{ get; set; }
 
         /// <summary>
-        /// Spark application job ID
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparkJobId")]
         public string SparkJobId{ get; set; }
 
         /// <summary>
-        /// JAR file of the Spark application entry
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparkJobFile")]
         public string SparkJobFile{ get; set; }
 
         /// <summary>
-        /// Spark UI URL
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UiUrl")]
         public string UiUrl{ get; set; }
 
         /// <summary>
-        /// The task time in ms.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalTime")]
         public long? TotalTime{ get; set; }
 
         /// <summary>
-        /// The program entry parameter for running a task under a Spark job.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CmdArgs")]
         public string CmdArgs{ get; set; }
 
         /// <summary>
-        /// The image version of the cluster.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageVersion")]
         public string ImageVersion{ get; set; }
 
         /// <summary>
-        /// The driver size.
-        /// Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-        /// Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DriverSize")]
         public string DriverSize{ get; set; }
 
         /// <summary>
-        /// The executor size.
-        /// Valid values for the standard resource type: `small`, `medium`, `large`, and `xlarge`.
-        /// Valid values for the memory resource type: `m.small`, `m.medium`, `m.large`, and `m.xlarge`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExecutorSize")]
         public string ExecutorSize{ get; set; }
 
         /// <summary>
-        /// The executor count. The minimum value is 1 and the maximum value is less than the cluster specification.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExecutorNums")]
         public ulong? ExecutorNums{ get; set; }
 
         /// <summary>
-        /// The maximum executor count (in dynamic mode). The minimum value is 1 and the maximum value is less than the cluster specification. If you set `ExecutorMaxNumbers` to a value smaller than that of `ExecutorNums`, the value of `ExecutorMaxNumbers` is automatically changed to that of `ExecutorNums`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExecutorMaxNumbers")]
         public ulong? ExecutorMaxNumbers{ get; set; }
 
         /// <summary>
-        /// Common task metrics
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CommonMetrics")]
         public CommonMetrics CommonMetrics{ get; set; }
 
         /// <summary>
-        /// The Spark task metrics.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparkMonitorMetrics")]
         public SparkMonitorMetrics SparkMonitorMetrics{ get; set; }
 
         /// <summary>
-        /// The Presto task metrics.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrestoMonitorMetrics")]
         public PrestoMonitorMetrics PrestoMonitorMetrics{ get; set; }
 
         /// <summary>
-        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResultFormat")]
         public string ResultFormat{ get; set; }
 
         /// <summary>
-        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EngineTypeDetail")]
         public string EngineTypeDetail{ get; set; }
 
         /// <summary>
-        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
