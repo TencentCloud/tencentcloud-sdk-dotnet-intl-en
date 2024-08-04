@@ -102,6 +102,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Frame capture templates.
+        /// </summary>
+        [JsonProperty("FrameCaptureTemplates")]
+        public FrameCaptureTemplate[] FrameCaptureTemplates{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "PipelineInputSettings.", this.PipelineInputSettings);
             this.SetParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "FrameCaptureTemplates.", this.FrameCaptureTemplates);
         }
     }
 }

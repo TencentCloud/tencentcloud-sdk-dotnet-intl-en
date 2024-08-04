@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{87BF3C79-D8D0-3C22-AE2A-DEE7C02ABAD4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.952</VersionPrefix>
+    <VersionPrefix>3.0.953</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20200326\MdlClient.cs" />
     <Compile Include="V20200326\Models\AVTemplate.cs" />
     <Compile Include="V20200326\Models\AdditionalRateSetting.cs" />
+    <Compile Include="V20200326\Models\AmazonS3Settings.cs" />
     <Compile Include="V20200326\Models\AttachedInput.cs" />
     <Compile Include="V20200326\Models\AudioCodecDetail.cs" />
     <Compile Include="V20200326\Models\AudioNormalizationSettings.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="V20200326\Models\ChannelInputStatistics.cs" />
     <Compile Include="V20200326\Models\ChannelOutputsStatistics.cs" />
     <Compile Include="V20200326\Models\ChannelPipelineAlerts.cs" />
+    <Compile Include="V20200326\Models\CosSettings.cs" />
     <Compile Include="V20200326\Models\CreateImageSettings.cs" />
     <Compile Include="V20200326\Models\CreateStreamLiveChannelRequest.cs" />
     <Compile Include="V20200326\Models\CreateStreamLiveChannelResponse.cs" />
@@ -131,6 +133,7 @@
     <Compile Include="V20200326\Models\EventSettingsReq.cs" />
     <Compile Include="V20200326\Models\EventSettingsResp.cs" />
     <Compile Include="V20200326\Models\FailOverSettings.cs" />
+    <Compile Include="V20200326\Models\FrameCaptureTemplate.cs" />
     <Compile Include="V20200326\Models\HighlightInfo.cs" />
     <Compile Include="V20200326\Models\HighlightResInfoResp.cs" />
     <Compile Include="V20200326\Models\HlsRemuxSettingsInfo.cs" />

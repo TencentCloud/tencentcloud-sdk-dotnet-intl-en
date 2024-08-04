@@ -52,10 +52,22 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard.
+        /// The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
         /// </summary>
         [JsonProperty("DestinationType")]
         public string DestinationType{ get; set; }
+
+        /// <summary>
+        /// Aws S3 destination setting.
+        /// </summary>
+        [JsonProperty("AmazonS3Settings")]
+        public AmazonS3Settings AmazonS3Settings{ get; set; }
+
+        /// <summary>
+        /// Cos destination setting.
+        /// </summary>
+        [JsonProperty("CosSettings")]
+        public CosSettings CosSettings{ get; set; }
 
 
         /// <summary>
@@ -68,6 +80,8 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "DestinationType", this.DestinationType);
+            this.SetParamObj(map, prefix + "AmazonS3Settings.", this.AmazonS3Settings);
+            this.SetParamObj(map, prefix + "CosSettings.", this.CosSettings);
         }
     }
 }

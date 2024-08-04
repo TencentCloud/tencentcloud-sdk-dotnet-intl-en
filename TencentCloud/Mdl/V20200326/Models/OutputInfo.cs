@@ -70,6 +70,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("TimedMetadataSettings")]
         public TimedMetadataSettingInfo TimedMetadataSettings{ get; set; }
 
+        /// <summary>
+        /// Frame capture template name array. Quantity limit: [0,1].
+        /// </summary>
+        [JsonProperty("FrameCaptureTemplateNames")]
+        public string[] FrameCaptureTemplateNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArraySimple(map, prefix + "AVTemplateNames.", this.AVTemplateNames);
             this.SetParamArraySimple(map, prefix + "CaptionTemplateNames.", this.CaptionTemplateNames);
             this.SetParamObj(map, prefix + "TimedMetadataSettings.", this.TimedMetadataSettings);
+            this.SetParamArraySimple(map, prefix + "FrameCaptureTemplateNames.", this.FrameCaptureTemplateNames);
         }
     }
 }

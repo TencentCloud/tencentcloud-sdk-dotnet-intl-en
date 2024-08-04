@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.952";
+       private const string sdkVersion = "SDK_NET_3.0.953";
 
         /// <summary>
         /// Client constructor.
@@ -767,6 +767,31 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCRSync(RecognizeKoreanIDCardOCRRequest req)
         {
             return InternalRequestAsync<RecognizeKoreanIDCardOCRResponse>(req, "RecognizeKoreanIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. 
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeMacaoIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeMacaoIDCardOCRResponse"/></returns>
+        public Task<RecognizeMacaoIDCardOCRResponse> RecognizeMacaoIDCardOCR(RecognizeMacaoIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeMacaoIDCardOCRResponse>(req, "RecognizeMacaoIDCardOCR");
+        }
+
+        /// <summary>
+        /// This API is used to recognize key fields on the photo side of a Hong Kong (China) identity card, including name in Chinese, name in English, telecode for name, date of birth, gender, document symbol, date of the first issue, date of the last receipt, identity card number, and permanent residency attribute. 
+        /// 
+        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeMacaoIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeMacaoIDCardOCRResponse"/></returns>
+        public RecognizeMacaoIDCardOCRResponse RecognizeMacaoIDCardOCRSync(RecognizeMacaoIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeMacaoIDCardOCRResponse>(req, "RecognizeMacaoIDCardOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
