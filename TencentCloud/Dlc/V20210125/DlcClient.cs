@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.954";
+       private const string sdkVersion = "SDK_NET_3.0.955";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Dlc.V20210125
         public AddUsersToWorkGroupResponse AddUsersToWorkGroupSync(AddUsersToWorkGroupRequest req)
         {
             return InternalRequestAsync<AddUsersToWorkGroupResponse>(req, "AddUsersToWorkGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update databases in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="AlterDMSDatabaseRequest"/></param>
+        /// <returns><see cref="AlterDMSDatabaseResponse"/></returns>
+        public Task<AlterDMSDatabaseResponse> AlterDMSDatabase(AlterDMSDatabaseRequest req)
+        {
+            return InternalRequestAsync<AlterDMSDatabaseResponse>(req, "AlterDMSDatabase");
+        }
+
+        /// <summary>
+        /// This API is used to update databases in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="AlterDMSDatabaseRequest"/></param>
+        /// <returns><see cref="AlterDMSDatabaseResponse"/></returns>
+        public AlterDMSDatabaseResponse AlterDMSDatabaseSync(AlterDMSDatabaseRequest req)
+        {
+            return InternalRequestAsync<AlterDMSDatabaseResponse>(req, "AlterDMSDatabase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -260,6 +281,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateCHDFSBindingProductResponse CreateCHDFSBindingProductSync(CreateCHDFSBindingProductRequest req)
         {
             return InternalRequestAsync<CreateCHDFSBindingProductResponse>(req, "CreateCHDFSBindingProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create databases in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDMSDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDMSDatabaseResponse"/></returns>
+        public Task<CreateDMSDatabaseResponse> CreateDMSDatabase(CreateDMSDatabaseRequest req)
+        {
+            return InternalRequestAsync<CreateDMSDatabaseResponse>(req, "CreateDMSDatabase");
+        }
+
+        /// <summary>
+        /// This API is used to create databases in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDMSDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDMSDatabaseResponse"/></returns>
+        public CreateDMSDatabaseResponse CreateDMSDatabaseSync(CreateDMSDatabaseRequest req)
+        {
+            return InternalRequestAsync<CreateDMSDatabaseResponse>(req, "CreateDMSDatabase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -680,6 +722,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeDLCCatalogAccessResponse DescribeDLCCatalogAccessSync(DescribeDLCCatalogAccessRequest req)
         {
             return InternalRequestAsync<DescribeDLCCatalogAccessResponse>(req, "DescribeDLCCatalogAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain databases in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSDatabaseRequest"/></param>
+        /// <returns><see cref="DescribeDMSDatabaseResponse"/></returns>
+        public Task<DescribeDMSDatabaseResponse> DescribeDMSDatabase(DescribeDMSDatabaseRequest req)
+        {
+            return InternalRequestAsync<DescribeDMSDatabaseResponse>(req, "DescribeDMSDatabase");
+        }
+
+        /// <summary>
+        /// This API is used to obtain databases in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSDatabaseRequest"/></param>
+        /// <returns><see cref="DescribeDMSDatabaseResponse"/></returns>
+        public DescribeDMSDatabaseResponse DescribeDMSDatabaseSync(DescribeDMSDatabaseRequest req)
+        {
+            return InternalRequestAsync<DescribeDMSDatabaseResponse>(req, "DescribeDMSDatabase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1310,6 +1373,27 @@ namespace TencentCloud.Dlc.V20210125
         public DetachWorkGroupPolicyResponse DetachWorkGroupPolicySync(DetachWorkGroupPolicyRequest req)
         {
             return InternalRequestAsync<DetachWorkGroupPolicyResponse>(req, "DetachWorkGroupPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete databases in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSDatabaseRequest"/></param>
+        /// <returns><see cref="DropDMSDatabaseResponse"/></returns>
+        public Task<DropDMSDatabaseResponse> DropDMSDatabase(DropDMSDatabaseRequest req)
+        {
+            return InternalRequestAsync<DropDMSDatabaseResponse>(req, "DropDMSDatabase");
+        }
+
+        /// <summary>
+        /// This API is used to delete databases in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSDatabaseRequest"/></param>
+        /// <returns><see cref="DropDMSDatabaseResponse"/></returns>
+        public DropDMSDatabaseResponse DropDMSDatabaseSync(DropDMSDatabaseRequest req)
+        {
+            return InternalRequestAsync<DropDMSDatabaseResponse>(req, "DropDMSDatabase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
