@@ -34,8 +34,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// Base64 value of photos used for face comparison. 
-        /// The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
+        /// Base64 value of videos used for face comparison. 
+        /// The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
         /// Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
         /// Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
         /// </summary>
@@ -51,7 +51,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string LivenessType{ get; set; }
 
         /// <summary>
-        /// When the “LivenessType” parameter is “ACTION”, it must be specified.
+        /// When the "LivenessType" parameter is "ACTION", it must be specified.
         /// It is used to control the action sequence. Action types: 
         /// 1 (open mouth)
         /// 2 (blink)
@@ -60,7 +60,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// Select one or two from the four actions.
         /// Example of passing single action parameter: "1".
         /// Example of passing multiple action parameters: "4,2".
-        /// When the “LivenessType” parameter value is “SILENT”, it shall be unspecified.
+        /// When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
         /// Example value: ""
         /// </summary>
         [JsonProperty("ValidateData")]

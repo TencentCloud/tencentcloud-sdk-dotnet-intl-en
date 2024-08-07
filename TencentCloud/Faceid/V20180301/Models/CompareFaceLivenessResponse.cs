@@ -39,8 +39,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// This value is valid when the “Result” parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-        /// This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 1,000. 
+        /// This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
+        /// This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
         /// Example value: 80.00
         /// </summary>
         [JsonProperty("Sim")]
@@ -48,7 +48,7 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
-        /// Note: This field may return “null”, indicating that no valid value can be obtained. 
+        /// Note: This field may return "null", indicating that no valid value can be obtained. 
         /// Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
         /// </summary>
         [JsonProperty("BestFrameBase64")]
