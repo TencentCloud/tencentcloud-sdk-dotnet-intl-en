@@ -36,6 +36,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DataEngineConfigCommand")]
         public string DataEngineConfigCommand{ get; set; }
 
+        /// <summary>
+        /// Whether to use lakeFS as result storage
+        /// </summary>
+        [JsonProperty("UseLakeFs")]
+        public bool? UseLakeFs{ get; set; }
+
+        /// <summary>
+        /// User-defined result path
+        /// </summary>
+        [JsonProperty("CustomResultPath")]
+        public string CustomResultPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamArraySimple(map, prefix + "DataEngineIds.", this.DataEngineIds);
             this.SetParamSimple(map, prefix + "DataEngineConfigCommand", this.DataEngineConfigCommand);
+            this.SetParamSimple(map, prefix + "UseLakeFs", this.UseLakeFs);
+            this.SetParamSimple(map, prefix + "CustomResultPath", this.CustomResultPath);
         }
     }
 }

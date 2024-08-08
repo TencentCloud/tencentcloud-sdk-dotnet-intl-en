@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.956";
+       private const string sdkVersion = "SDK_NET_3.0.957";
 
         /// <summary>
         /// Client constructor.
@@ -1394,6 +1394,27 @@ namespace TencentCloud.Dlc.V20210125
         public DropDMSDatabaseResponse DropDMSDatabaseSync(DropDMSDatabaseRequest req)
         {
             return InternalRequestAsync<DropDMSDatabaseResponse>(req, "DropDMSDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete tables in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSTableRequest"/></param>
+        /// <returns><see cref="DropDMSTableResponse"/></returns>
+        public Task<DropDMSTableResponse> DropDMSTable(DropDMSTableRequest req)
+        {
+            return InternalRequestAsync<DropDMSTableResponse>(req, "DropDMSTable");
+        }
+
+        /// <summary>
+        /// This API is used to delete tables in the DMS metadata module.
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSTableRequest"/></param>
+        /// <returns><see cref="DropDMSTableResponse"/></returns>
+        public DropDMSTableResponse DropDMSTableSync(DropDMSTableRequest req)
+        {
+            return InternalRequestAsync<DropDMSTableResponse>(req, "DropDMSTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
