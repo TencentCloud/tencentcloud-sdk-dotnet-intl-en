@@ -55,11 +55,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserSig{ get; set; }
 
         /// <summary>
-        /// 	
-        /// Source URL. Example value: https://a.b/test.mp4
+        /// The Url of the media resource.
         /// </summary>
-        [JsonProperty("SourceUrl")]
-        public string[] SourceUrl{ get; set; }
+        [JsonProperty("StreamUrl")]
+        public string StreamUrl{ get; set; }
 
         /// <summary>
         /// TRTC room permission Encryption ticket, only needed when advanced permission control is enabled in the Console. After enabling advanced permission control in the TRTC Console, TRTC's backend service system will verify a so-called [PrivateMapKey] 'Permission ticket', which contains an encrypted RoomId and an encrypted 'Permission bit list'. Since PrivateMapKey contains RoomId, providing only UserSig without PrivateMapKey does not allow entry into the specified room.
@@ -71,19 +70,47 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// Video Codec Parameters. Optional, if not filled, Keep original stream Parameters.
         /// </summary>
         [JsonProperty("VideoEncodeParams")]
+        [System.Obsolete]
         public VideoEncodeParams VideoEncodeParams{ get; set; }
 
         /// <summary>
         /// Audio Codec Parameters. Optional, if not filled, Keep original stream Parameters.
         /// </summary>
         [JsonProperty("AudioEncodeParams")]
+        [System.Obsolete]
         public AudioEncodeParams AudioEncodeParams{ get; set; }
+
+        /// <summary>
+        /// 	
+        /// Source URL. Example value: https://a.b/test.mp4
+        /// </summary>
+        [JsonProperty("SourceUrl")]
+        [System.Obsolete]
+        public string[] SourceUrl{ get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty("StreamUrl")]
-        public string StreamUrl{ get; set; }
+        [JsonProperty("SeekSecond")]
+        public long? SeekSecond{ get; set; }
+
+        /// <summary>
+        /// Enable auto relay to cdn, please make sure that this feature has been enabled in the console.
+        /// </summary>
+        [JsonProperty("AutoPush")]
+        public bool? AutoPush{ get; set; }
+
+        /// <summary>
+        /// Loop playback count, value range: [-1, 1000], default is 1 time. - 0 is an invalid value - -1 is for loop playback, task termination requires actively calling the stop interface or setting MaxDuration.
+        /// </summary>
+        [JsonProperty("RepeatNum")]
+        public long? RepeatNum{ get; set; }
+
+        /// <summary>
+        /// Loop playback maximum duration, only effective when RepeatNum is set to -1, valid value range: [1, 10080], unit: minutes
+        /// </summary>
+        [JsonProperty("MaxDuration")]
+        public long? MaxDuration{ get; set; }
 
 
         /// <summary>
@@ -96,11 +123,15 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "UserSig", this.UserSig);
-            this.SetParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
+            this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
             this.SetParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
             this.SetParamObj(map, prefix + "VideoEncodeParams.", this.VideoEncodeParams);
             this.SetParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
-            this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
+            this.SetParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
+            this.SetParamSimple(map, prefix + "SeekSecond", this.SeekSecond);
+            this.SetParamSimple(map, prefix + "AutoPush", this.AutoPush);
+            this.SetParamSimple(map, prefix + "RepeatNum", this.RepeatNum);
+            this.SetParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
         }
     }
 }
