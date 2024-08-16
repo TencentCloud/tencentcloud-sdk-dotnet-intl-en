@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.960";
+       private const string sdkVersion = "SDK_NET_3.0.961";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to allocate credit pools to second-level resellers by distributors.
+        /// </summary>
+        /// <param name="req"><see cref="AllocateCreditPoolRequest"/></param>
+        /// <returns><see cref="AllocateCreditPoolResponse"/></returns>
+        public Task<AllocateCreditPoolResponse> AllocateCreditPool(AllocateCreditPoolRequest req)
+        {
+            return InternalRequestAsync<AllocateCreditPoolResponse>(req, "AllocateCreditPool");
+        }
+
+        /// <summary>
+        /// This API is used to allocate credit pools to second-level resellers by distributors.
+        /// </summary>
+        /// <param name="req"><see cref="AllocateCreditPoolRequest"/></param>
+        /// <returns><see cref="AllocateCreditPoolResponse"/></returns>
+        public AllocateCreditPoolResponse AllocateCreditPoolSync(AllocateCreditPoolRequest req)
+        {
+            return InternalRequestAsync<AllocateCreditPoolResponse>(req, "AllocateCreditPool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.960";
+       private const string sdkVersion = "SDK_NET_3.0.961";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to add a delegated admin of the organization service.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrgServiceAssignRequest"/></param>
+        /// <returns><see cref="CreateOrgServiceAssignResponse"/></returns>
+        public Task<CreateOrgServiceAssignResponse> CreateOrgServiceAssign(CreateOrgServiceAssignRequest req)
+        {
+            return InternalRequestAsync<CreateOrgServiceAssignResponse>(req, "CreateOrgServiceAssign");
+        }
+
+        /// <summary>
+        /// This API is used to add a delegated admin of the organization service.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrgServiceAssignRequest"/></param>
+        /// <returns><see cref="CreateOrgServiceAssignResponse"/></returns>
+        public CreateOrgServiceAssignResponse CreateOrgServiceAssignSync(CreateOrgServiceAssignRequest req)
+        {
+            return InternalRequestAsync<CreateOrgServiceAssignResponse>(req, "CreateOrgServiceAssign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create an organization member.
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationMemberRequest"/></param>
@@ -155,6 +176,27 @@ namespace TencentCloud.Organization.V20210331
         public CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicySync(CreateOrganizationMemberPolicyRequest req)
         {
             return InternalRequestAsync<CreateOrganizationMemberPolicyResponse>(req, "CreateOrganizationMemberPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a delegated admin of the organization service.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrgServiceAssignRequest"/></param>
+        /// <returns><see cref="DeleteOrgServiceAssignResponse"/></returns>
+        public Task<DeleteOrgServiceAssignResponse> DeleteOrgServiceAssign(DeleteOrgServiceAssignRequest req)
+        {
+            return InternalRequestAsync<DeleteOrgServiceAssignResponse>(req, "DeleteOrgServiceAssign");
+        }
+
+        /// <summary>
+        /// This API is used to delete a delegated admin of the organization service.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrgServiceAssignRequest"/></param>
+        /// <returns><see cref="DeleteOrgServiceAssignResponse"/></returns>
+        public DeleteOrgServiceAssignResponse DeleteOrgServiceAssignSync(DeleteOrgServiceAssignRequest req)
+        {
+            return InternalRequestAsync<DeleteOrgServiceAssignResponse>(req, "DeleteOrgServiceAssign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -327,6 +369,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to obtain the list of delegated admins of the organization service.
+        /// </summary>
+        /// <param name="req"><see cref="ListOrgServiceAssignMemberRequest"/></param>
+        /// <returns><see cref="ListOrgServiceAssignMemberResponse"/></returns>
+        public Task<ListOrgServiceAssignMemberResponse> ListOrgServiceAssignMember(ListOrgServiceAssignMemberRequest req)
+        {
+            return InternalRequestAsync<ListOrgServiceAssignMemberResponse>(req, "ListOrgServiceAssignMember");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of delegated admins of the organization service.
+        /// </summary>
+        /// <param name="req"><see cref="ListOrgServiceAssignMemberRequest"/></param>
+        /// <returns><see cref="ListOrgServiceAssignMemberResponse"/></returns>
+        public ListOrgServiceAssignMemberResponse ListOrgServiceAssignMemberSync(ListOrgServiceAssignMemberRequest req)
+        {
+            return InternalRequestAsync<ListOrgServiceAssignMemberResponse>(req, "ListOrgServiceAssignMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of access identities of an organization member.
         /// </summary>
         /// <param name="req"><see cref="ListOrganizationIdentityRequest"/></param>
@@ -344,6 +407,27 @@ namespace TencentCloud.Organization.V20210331
         public ListOrganizationIdentityResponse ListOrganizationIdentitySync(ListOrganizationIdentityRequest req)
         {
             return InternalRequestAsync<ListOrganizationIdentityResponse>(req, "ListOrganizationIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of organization service settings.
+        /// </summary>
+        /// <param name="req"><see cref="ListOrganizationServiceRequest"/></param>
+        /// <returns><see cref="ListOrganizationServiceResponse"/></returns>
+        public Task<ListOrganizationServiceResponse> ListOrganizationService(ListOrganizationServiceRequest req)
+        {
+            return InternalRequestAsync<ListOrganizationServiceResponse>(req, "ListOrganizationService");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of organization service settings.
+        /// </summary>
+        /// <param name="req"><see cref="ListOrganizationServiceRequest"/></param>
+        /// <returns><see cref="ListOrganizationServiceResponse"/></returns>
+        public ListOrganizationServiceResponse ListOrganizationServiceSync(ListOrganizationServiceRequest req)
+        {
+            return InternalRequestAsync<ListOrganizationServiceResponse>(req, "ListOrganizationService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
