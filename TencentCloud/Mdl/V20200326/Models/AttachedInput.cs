@@ -51,6 +51,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("FailOverSettings")]
         public FailOverSettings FailOverSettings{ get; set; }
 
+        /// <summary>
+        /// Caption selector for the input. There can be 0 to 1 audio selectors.
+        /// </summary>
+        [JsonProperty("CaptionSelectors")]
+        public CaptionSelector[] CaptionSelectors{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +67,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArrayObj(map, prefix + "AudioSelectors.", this.AudioSelectors);
             this.SetParamSimple(map, prefix + "PullBehavior", this.PullBehavior);
             this.SetParamObj(map, prefix + "FailOverSettings.", this.FailOverSettings);
+            this.SetParamArrayObj(map, prefix + "CaptionSelectors.", this.CaptionSelectors);
         }
     }
 }
