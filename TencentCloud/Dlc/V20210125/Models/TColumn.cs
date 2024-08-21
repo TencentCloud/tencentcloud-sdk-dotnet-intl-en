@@ -25,47 +25,68 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// The field name.
+        /// Field name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The field type.
+        /// Field type
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The field description.
+        /// Field description
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// The default field value.
+        /// Field default values
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
         /// <summary>
-        /// Whether the field is not null.
+        /// Is the field non-empty?
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NotNull")]
         public bool? NotNull{ get; set; }
 
         /// <summary>
         /// Indicate the length of the entire numeric with a value of 1-38
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Precision")]
         public long? Precision{ get; set; }
 
         /// <summary>
-        /// Indicate the length of the decimal part.
+        /// Indicates the length of the decimal part.
         /// Scale is smaller than Precision.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Scale")]
         public long? Scale{ get; set; }
+
+        /// <summary>
+        /// Field position: Fields with smaller values need to be placed first.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Position")]
+        public long? Position{ get; set; }
+
+        /// <summary>
+        /// Whether it is a partition field
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsPartition")]
+        public bool? IsPartition{ get; set; }
 
 
         /// <summary>
@@ -80,6 +101,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "NotNull", this.NotNull);
             this.SetParamSimple(map, prefix + "Precision", this.Precision);
             this.SetParamSimple(map, prefix + "Scale", this.Scale);
+            this.SetParamSimple(map, prefix + "Position", this.Position);
+            this.SetParamSimple(map, prefix + "IsPartition", this.IsPartition);
         }
     }
 }

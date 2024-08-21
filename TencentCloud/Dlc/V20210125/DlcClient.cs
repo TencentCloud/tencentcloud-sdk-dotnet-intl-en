@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.965";
+       private const string sdkVersion = "SDK_NET_3.0.966";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to check the permission status.
+        /// </summary>
+        /// <param name="req"><see cref="CheckGrantedPermissionRequest"/></param>
+        /// <returns><see cref="CheckGrantedPermissionResponse"/></returns>
+        public Task<CheckGrantedPermissionResponse> CheckGrantedPermission(CheckGrantedPermissionRequest req)
+        {
+            return InternalRequestAsync<CheckGrantedPermissionResponse>(req, "CheckGrantedPermission");
+        }
+
+        /// <summary>
+        /// This API is used to check the permission status.
+        /// </summary>
+        /// <param name="req"><see cref="CheckGrantedPermissionRequest"/></param>
+        /// <returns><see cref="CheckGrantedPermissionResponse"/></returns>
+        public CheckGrantedPermissionResponse CheckGrantedPermissionSync(CheckGrantedPermissionRequest req)
+        {
+            return InternalRequestAsync<CheckGrantedPermissionResponse>(req, "CheckGrantedPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to copy a table.
+        /// </summary>
+        /// <param name="req"><see cref="CopyDLCTableRequest"/></param>
+        /// <returns><see cref="CopyDLCTableResponse"/></returns>
+        public Task<CopyDLCTableResponse> CopyDLCTable(CopyDLCTableRequest req)
+        {
+            return InternalRequestAsync<CopyDLCTableResponse>(req, "CopyDLCTable");
+        }
+
+        /// <summary>
+        /// This API is used to copy a table.
+        /// </summary>
+        /// <param name="req"><see cref="CopyDLCTableRequest"/></param>
+        /// <returns><see cref="CopyDLCTableResponse"/></returns>
+        public CopyDLCTableResponse CopyDLCTableSync(CopyDLCTableRequest req)
+        {
+            return InternalRequestAsync<CopyDLCTableResponse>(req, "CopyDLCTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create metadata acceleration buckets and the binding relationship between products.
         /// </summary>
         /// <param name="req"><see cref="CreateCHDFSBindingProductRequest"/></param>
@@ -281,6 +323,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateCHDFSBindingProductResponse CreateCHDFSBindingProductSync(CreateCHDFSBindingProductRequest req)
         {
             return InternalRequestAsync<CreateCHDFSBindingProductResponse>(req, "CreateCHDFSBindingProduct")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a table.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDLCTableRequest"/></param>
+        /// <returns><see cref="CreateDLCTableResponse"/></returns>
+        public Task<CreateDLCTableResponse> CreateDLCTable(CreateDLCTableRequest req)
+        {
+            return InternalRequestAsync<CreateDLCTableResponse>(req, "CreateDLCTable");
+        }
+
+        /// <summary>
+        /// This API is used to create a table.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDLCTableRequest"/></param>
+        /// <returns><see cref="CreateDLCTableResponse"/></returns>
+        public CreateDLCTableResponse CreateDLCTableSync(CreateDLCTableRequest req)
+        {
+            return InternalRequestAsync<CreateDLCTableResponse>(req, "CreateDLCTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -726,6 +789,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to obtain the table.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLCTableRequest"/></param>
+        /// <returns><see cref="DescribeDLCTableResponse"/></returns>
+        public Task<DescribeDLCTableResponse> DescribeDLCTable(DescribeDLCTableRequest req)
+        {
+            return InternalRequestAsync<DescribeDLCTableResponse>(req, "DescribeDLCTable");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the table.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLCTableRequest"/></param>
+        /// <returns><see cref="DescribeDLCTableResponse"/></returns>
+        public DescribeDLCTableResponse DescribeDLCTableSync(DescribeDLCTableRequest req)
+        {
+            return InternalRequestAsync<DescribeDLCTableResponse>(req, "DescribeDLCTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of tables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLCTableListRequest"/></param>
+        /// <returns><see cref="DescribeDLCTableListResponse"/></returns>
+        public Task<DescribeDLCTableListResponse> DescribeDLCTableList(DescribeDLCTableListRequest req)
+        {
+            return InternalRequestAsync<DescribeDLCTableListResponse>(req, "DescribeDLCTableList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of tables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDLCTableListRequest"/></param>
+        /// <returns><see cref="DescribeDLCTableListResponse"/></returns>
+        public DescribeDLCTableListResponse DescribeDLCTableListSync(DescribeDLCTableListRequest req)
+        {
+            return InternalRequestAsync<DescribeDLCTableListResponse>(req, "DescribeDLCTableList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain databases in the DMS metadata module.
         /// </summary>
         /// <param name="req"><see cref="DescribeDMSDatabaseRequest"/></param>
@@ -743,6 +848,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeDMSDatabaseResponse DescribeDMSDatabaseSync(DescribeDMSDatabaseRequest req)
         {
             return InternalRequestAsync<DescribeDMSDatabaseResponse>(req, "DescribeDMSDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of databases.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSDatabaseListRequest"/></param>
+        /// <returns><see cref="DescribeDMSDatabaseListResponse"/></returns>
+        public Task<DescribeDMSDatabaseListResponse> DescribeDMSDatabaseList(DescribeDMSDatabaseListRequest req)
+        {
+            return InternalRequestAsync<DescribeDMSDatabaseListResponse>(req, "DescribeDMSDatabaseList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of databases.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSDatabaseListRequest"/></param>
+        /// <returns><see cref="DescribeDMSDatabaseListResponse"/></returns>
+        public DescribeDMSDatabaseListResponse DescribeDMSDatabaseListSync(DescribeDMSDatabaseListRequest req)
+        {
+            return InternalRequestAsync<DescribeDMSDatabaseListResponse>(req, "DescribeDMSDatabaseList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -873,6 +999,48 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to obtain the job information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobRequest"/></param>
+        /// <returns><see cref="DescribeJobResponse"/></returns>
+        public Task<DescribeJobResponse> DescribeJob(DescribeJobRequest req)
+        {
+            return InternalRequestAsync<DescribeJobResponse>(req, "DescribeJob");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the job information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobRequest"/></param>
+        /// <returns><see cref="DescribeJobResponse"/></returns>
+        public DescribeJobResponse DescribeJobSync(DescribeJobRequest req)
+        {
+            return InternalRequestAsync<DescribeJobResponse>(req, "DescribeJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of job information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeJobsResponse"/></returns>
+        public Task<DescribeJobsResponse> DescribeJobs(DescribeJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeJobsResponse>(req, "DescribeJobs");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of job information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeJobsResponse"/></returns>
+        public DescribeJobsResponse DescribeJobsSync(DescribeJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeJobsResponse>(req, "DescribeJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the summary of a specified directory in a managed storage.
         /// </summary>
         /// <param name="req"><see cref="DescribeLakeFsDirSummaryRequest"/></param>
@@ -932,6 +1100,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingListSync(DescribeOtherCHDFSBindingListRequest req)
         {
             return InternalRequestAsync<DescribeOtherCHDFSBindingListResponse>(req, "DescribeOtherCHDFSBindingList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the query results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQueryRequest"/></param>
+        /// <returns><see cref="DescribeQueryResponse"/></returns>
+        public Task<DescribeQueryResponse> DescribeQuery(DescribeQueryRequest req)
+        {
+            return InternalRequestAsync<DescribeQueryResponse>(req, "DescribeQuery");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the query results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQueryRequest"/></param>
+        /// <returns><see cref="DescribeQueryResponse"/></returns>
+        public DescribeQueryResponse DescribeQuerySync(DescribeQueryRequest req)
+        {
+            return InternalRequestAsync<DescribeQueryResponse>(req, "DescribeQuery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1121,6 +1310,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeTaskResultResponse DescribeTaskResultSync(DescribeTaskResultRequest req)
         {
             return InternalRequestAsync<DescribeTaskResultResponse>(req, "DescribeTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to describe the information on task statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatisticsResponse"/></returns>
+        public Task<DescribeTaskStatisticsResponse> DescribeTaskStatistics(DescribeTaskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskStatisticsResponse>(req, "DescribeTaskStatistics");
+        }
+
+        /// <summary>
+        /// This API is used to describe the information on task statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatisticsResponse"/></returns>
+        public DescribeTaskStatisticsResponse DescribeTaskStatisticsSync(DescribeTaskStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeTaskStatisticsResponse>(req, "DescribeTaskStatistics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1373,6 +1583,27 @@ namespace TencentCloud.Dlc.V20210125
         public DetachWorkGroupPolicyResponse DetachWorkGroupPolicySync(DetachWorkGroupPolicyRequest req)
         {
             return InternalRequestAsync<DetachWorkGroupPolicyResponse>(req, "DetachWorkGroupPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete the table.
+        /// </summary>
+        /// <param name="req"><see cref="DropDLCTableRequest"/></param>
+        /// <returns><see cref="DropDLCTableResponse"/></returns>
+        public Task<DropDLCTableResponse> DropDLCTable(DropDLCTableRequest req)
+        {
+            return InternalRequestAsync<DropDLCTableResponse>(req, "DropDLCTable");
+        }
+
+        /// <summary>
+        /// This API is used to delete the table.
+        /// </summary>
+        /// <param name="req"><see cref="DropDLCTableRequest"/></param>
+        /// <returns><see cref="DropDLCTableResponse"/></returns>
+        public DropDLCTableResponse DropDLCTableSync(DropDLCTableRequest req)
+        {
+            return InternalRequestAsync<DropDLCTableResponse>(req, "DropDLCTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.965</VersionPrefix>
+    <VersionPrefix>3.0.966</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,11 +71,18 @@
     <Compile Include="V20210125\Models\CheckDataEngineImageCanBeRollbackResponse.cs" />
     <Compile Include="V20210125\Models\CheckDataEngineImageCanBeUpgradeRequest.cs" />
     <Compile Include="V20210125\Models\CheckDataEngineImageCanBeUpgradeResponse.cs" />
+    <Compile Include="V20210125\Models\CheckGrantedPermissionRequest.cs" />
+    <Compile Include="V20210125\Models\CheckGrantedPermissionResponse.cs" />
+    <Compile Include="V20210125\Models\CheckPermission.cs" />
     <Compile Include="V20210125\Models\Column.cs" />
     <Compile Include="V20210125\Models\CommonMetrics.cs" />
+    <Compile Include="V20210125\Models\CopyDLCTableRequest.cs" />
+    <Compile Include="V20210125\Models\CopyDLCTableResponse.cs" />
     <Compile Include="V20210125\Models\CosPermission.cs" />
     <Compile Include="V20210125\Models\CreateCHDFSBindingProductRequest.cs" />
     <Compile Include="V20210125\Models\CreateCHDFSBindingProductResponse.cs" />
+    <Compile Include="V20210125\Models\CreateDLCTableRequest.cs" />
+    <Compile Include="V20210125\Models\CreateDLCTableResponse.cs" />
     <Compile Include="V20210125\Models\CreateDMSDatabaseRequest.cs" />
     <Compile Include="V20210125\Models\CreateDMSDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\CreateDataEngineRequest.cs" />
@@ -102,6 +109,13 @@
     <Compile Include="V20210125\Models\CreateWorkGroupResponse.cs" />
     <Compile Include="V20210125\Models\CrontabResumeSuspendStrategy.cs" />
     <Compile Include="V20210125\Models\DLCCatalogAccess.cs" />
+    <Compile Include="V20210125\Models\DLCTable.cs" />
+    <Compile Include="V20210125\Models\DMSColumn.cs" />
+    <Compile Include="V20210125\Models\DMSColumnOrder.cs" />
+    <Compile Include="V20210125\Models\DMSDatabaseInfo.cs" />
+    <Compile Include="V20210125\Models\DMSPartition.cs" />
+    <Compile Include="V20210125\Models\DMSSds.cs" />
+    <Compile Include="V20210125\Models\DMSSourceDatabaseInfo.cs" />
     <Compile Include="V20210125\Models\DataEngineBasicInfo.cs" />
     <Compile Include="V20210125\Models\DataEngineConfigInstanceInfo.cs" />
     <Compile Include="V20210125\Models\DataEngineConfigPair.cs" />
@@ -128,6 +142,12 @@
     <Compile Include="V20210125\Models\DescribeAdvancedStoreLocationResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDLCCatalogAccessRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDLCCatalogAccessResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDLCTableListRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDLCTableListResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDLCTableRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDLCTableResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDMSDatabaseListRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDMSDatabaseListResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDMSDatabaseRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDMSDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDataEngineImageVersionsRequest.cs" />
@@ -142,12 +162,18 @@
     <Compile Include="V20210125\Models\DescribeEngineUsageInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeForbiddenTableProRequest.cs" />
     <Compile Include="V20210125\Models\DescribeForbiddenTableProResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeJobRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeJobResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeJobsRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeJobsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeLakeFsDirSummaryRequest.cs" />
     <Compile Include="V20210125\Models\DescribeLakeFsDirSummaryResponse.cs" />
     <Compile Include="V20210125\Models\DescribeLakeFsInfoRequest.cs" />
     <Compile Include="V20210125\Models\DescribeLakeFsInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeOtherCHDFSBindingListRequest.cs" />
     <Compile Include="V20210125\Models\DescribeOtherCHDFSBindingListResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeQueryRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeQueryResponse.cs" />
     <Compile Include="V20210125\Models\DescribeResultDownloadRequest.cs" />
     <Compile Include="V20210125\Models\DescribeResultDownloadResponse.cs" />
     <Compile Include="V20210125\Models\DescribeSparkAppJobRequest.cs" />
@@ -166,6 +192,8 @@
     <Compile Include="V20210125\Models\DescribeTablesNameResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTaskResultResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeTaskStatisticsRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeTaskStatisticsResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTasksRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTasksResponse.cs" />
     <Compile Include="V20210125\Models\DescribeThirdPartyAccessUserRequest.cs" />
@@ -190,11 +218,14 @@
     <Compile Include="V20210125\Models\DetachUserPolicyResponse.cs" />
     <Compile Include="V20210125\Models\DetachWorkGroupPolicyRequest.cs" />
     <Compile Include="V20210125\Models\DetachWorkGroupPolicyResponse.cs" />
+    <Compile Include="V20210125\Models\DropDLCTableRequest.cs" />
+    <Compile Include="V20210125\Models\DropDLCTableResponse.cs" />
     <Compile Include="V20210125\Models\DropDMSDatabaseRequest.cs" />
     <Compile Include="V20210125\Models\DropDMSDatabaseResponse.cs" />
     <Compile Include="V20210125\Models\DropDMSTableRequest.cs" />
     <Compile Include="V20210125\Models\DropDMSTableResponse.cs" />
     <Compile Include="V20210125\Models\Execution.cs" />
+    <Compile Include="V20210125\Models\ExternalDataConfiguration.cs" />
     <Compile Include="V20210125\Models\FavorInfo.cs" />
     <Compile Include="V20210125\Models\Filter.cs" />
     <Compile Include="V20210125\Models\GenerateCreateMangedTableSqlRequest.cs" />
@@ -203,6 +234,7 @@
     <Compile Include="V20210125\Models\GetOptimizerPolicyResponse.cs" />
     <Compile Include="V20210125\Models\GrantDLCCatalogAccessRequest.cs" />
     <Compile Include="V20210125\Models\GrantDLCCatalogAccessResponse.cs" />
+    <Compile Include="V20210125\Models\JobResponseInfo.cs" />
     <Compile Include="V20210125\Models\KVPair.cs" />
     <Compile Include="V20210125\Models\LakeFsInfo.cs" />
     <Compile Include="V20210125\Models\ModifyAdvancedStoreLocationRequest.cs" />
@@ -225,6 +257,7 @@
     <Compile Include="V20210125\Models\NetworkConnection.cs" />
     <Compile Include="V20210125\Models\OpendThirdAccessUserInfo.cs" />
     <Compile Include="V20210125\Models\OtherCHDFSBinding.cs" />
+    <Compile Include="V20210125\Models\PermissionResponseInfo.cs" />
     <Compile Include="V20210125\Models\Policy.cs" />
     <Compile Include="V20210125\Models\Policys.cs" />
     <Compile Include="V20210125\Models\PrestoMonitorMetrics.cs" />
@@ -238,6 +271,7 @@
     <Compile Include="V20210125\Models\RegisterThirdPartyAccessUserResponse.cs" />
     <Compile Include="V20210125\Models\RenewDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\RenewDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\ResourceBaseInfo.cs" />
     <Compile Include="V20210125\Models\ResourceInfo.cs" />
     <Compile Include="V20210125\Models\RestartDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\RestartDataEngineResponse.cs" />
@@ -258,6 +292,7 @@
     <Compile Include="V20210125\Models\SparkSessionBatchLog.cs" />
     <Compile Include="V20210125\Models\SparkSessionBatchLogOperate.cs" />
     <Compile Include="V20210125\Models\StatementInformation.cs" />
+    <Compile Include="V20210125\Models\StatisticInfo.cs" />
     <Compile Include="V20210125\Models\StreamingStatistics.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\SuspendResumeDataEngineResponse.cs" />

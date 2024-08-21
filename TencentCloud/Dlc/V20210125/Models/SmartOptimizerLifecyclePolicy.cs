@@ -45,6 +45,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DropTable")]
         public bool? DropTable{ get; set; }
 
+        /// <summary>
+        /// Expired fields
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExpiredField")]
+        public string ExpiredField{ get; set; }
+
+        /// <summary>
+        /// Expired field format
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExpiredFieldFormat")]
+        public string ExpiredFieldFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +68,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "LifecycleEnable", this.LifecycleEnable);
             this.SetParamSimple(map, prefix + "Expiration", this.Expiration);
             this.SetParamSimple(map, prefix + "DropTable", this.DropTable);
+            this.SetParamSimple(map, prefix + "ExpiredField", this.ExpiredField);
+            this.SetParamSimple(map, prefix + "ExpiredFieldFormat", this.ExpiredFieldFormat);
         }
     }
 }

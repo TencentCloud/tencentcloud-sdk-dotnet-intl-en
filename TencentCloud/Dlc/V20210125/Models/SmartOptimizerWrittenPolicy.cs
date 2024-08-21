@@ -24,12 +24,20 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class SmartOptimizerWrittenPolicy : AbstractModel
     {
         
+        /// <summary>
+        /// none/enable/disable/default
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WrittenEnable")]
+        public string WrittenEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
         }
     }
 }

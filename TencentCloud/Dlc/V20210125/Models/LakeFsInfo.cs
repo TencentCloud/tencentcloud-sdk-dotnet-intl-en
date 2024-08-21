@@ -48,6 +48,34 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CreateTimeStamp")]
         public long? CreateTimeStamp{ get; set; }
 
+        /// <summary>
+        /// Whether it is the user's default bucket: 0: default bucket, 1: non-default bucket
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DefaultBucket")]
+        public long? DefaultBucket{ get; set; }
+
+        /// <summary>
+        /// Managed storage short name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ShortName")]
+        public string ShortName{ get; set; }
+
+        /// <summary>
+        /// Description information of the bucket
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// The status of the managed bucket. Current values: creating, bind, readOnly, and isolate
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +86,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "SpaceUsedSize", this.SpaceUsedSize);
             this.SetParamSimple(map, prefix + "CreateTimeStamp", this.CreateTimeStamp);
+            this.SetParamSimple(map, prefix + "DefaultBucket", this.DefaultBucket);
+            this.SetParamSimple(map, prefix + "ShortName", this.ShortName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }
