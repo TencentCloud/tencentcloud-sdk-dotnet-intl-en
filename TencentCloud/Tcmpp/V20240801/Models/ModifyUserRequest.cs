@@ -48,6 +48,13 @@ namespace TencentCloud.Tcmpp.V20240801.Models
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
+        /// <summary>
+        /// Account
+        /// </summary>
+        [JsonProperty("UserAccount")]
+        [System.Obsolete]
+        public string UserAccount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Tcmpp.V20240801.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
+            this.SetParamSimple(map, prefix + "UserAccount", this.UserAccount);
         }
     }
 }

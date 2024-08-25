@@ -85,6 +85,12 @@ namespace TencentCloud.Tcmpp.V20240801.Models
         [JsonProperty("RegisterLink")]
         public string RegisterLink{ get; set; }
 
+        /// <summary>
+        /// Application name. It’s required when querying details of a mini program team.
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string ApplicationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tcmpp.V20240801.Models
             this.SetParamSimple(map, prefix + "BindMiniTeamCount", this.BindMiniTeamCount);
             this.SetParamSimple(map, prefix + "BindTeamName", this.BindTeamName);
             this.SetParamSimple(map, prefix + "RegisterLink", this.RegisterLink);
+            this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         }
     }
 }

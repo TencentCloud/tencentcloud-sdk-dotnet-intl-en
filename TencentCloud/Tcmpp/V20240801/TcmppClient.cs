@@ -28,7 +28,7 @@ namespace TencentCloud.Tcmpp.V20240801
 
        private const string endpoint = "tcmpp.tencentcloudapi.com";
        private const string version = "2024-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.967";
+       private const string sdkVersion = "SDK_NET_3.0.968";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to add users to a team
+        /// This API is used to add a team member.
         /// </summary>
         /// <param name="req"><see cref="AddTeamMemberRequest"/></param>
         /// <returns><see cref="AddTeamMemberResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to add users to a team
+        /// This API is used to add a team member.
         /// </summary>
         /// <param name="req"><see cref="AddTeamMemberRequest"/></param>
         /// <returns><see cref="AddTeamMemberResponse"/></returns>
@@ -96,7 +96,28 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to add an application
+        /// This API is used to configure the preview version of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureMNPPreviewRequest"/></param>
+        /// <returns><see cref="ConfigureMNPPreviewResponse"/></returns>
+        public Task<ConfigureMNPPreviewResponse> ConfigureMNPPreview(ConfigureMNPPreviewRequest req)
+        {
+            return InternalRequestAsync<ConfigureMNPPreviewResponse>(req, "ConfigureMNPPreview");
+        }
+
+        /// <summary>
+        /// This API is used to configure the preview version of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureMNPPreviewRequest"/></param>
+        /// <returns><see cref="ConfigureMNPPreviewResponse"/></returns>
+        public ConfigureMNPPreviewResponse ConfigureMNPPreviewSync(ConfigureMNPPreviewRequest req)
+        {
+            return InternalRequestAsync<ConfigureMNPPreviewResponse>(req, "ConfigureMNPPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an application.
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
         /// <returns><see cref="CreateApplicationResponse"/></returns>
@@ -106,7 +127,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to add an application
+        /// This API is used to create an application.
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
         /// <returns><see cref="CreateApplicationResponse"/></returns>
@@ -117,7 +138,28 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to add new mini program version to the console
+        /// This API is used to create a sensitive API of an application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationSensitiveAPIRequest"/></param>
+        /// <returns><see cref="CreateApplicationSensitiveAPIResponse"/></returns>
+        public Task<CreateApplicationSensitiveAPIResponse> CreateApplicationSensitiveAPI(CreateApplicationSensitiveAPIRequest req)
+        {
+            return InternalRequestAsync<CreateApplicationSensitiveAPIResponse>(req, "CreateApplicationSensitiveAPI");
+        }
+
+        /// <summary>
+        /// This API is used to create a sensitive API of an application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationSensitiveAPIRequest"/></param>
+        /// <returns><see cref="CreateApplicationSensitiveAPIResponse"/></returns>
+        public CreateApplicationSensitiveAPIResponse CreateApplicationSensitiveAPISync(CreateApplicationSensitiveAPIRequest req)
+        {
+            return InternalRequestAsync<CreateApplicationSensitiveAPIResponse>(req, "CreateApplicationSensitiveAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add a new mini program version
         /// </summary>
         /// <param name="req"><see cref="CreateConsoleMNPVersionCompileTaskRequest"/></param>
         /// <returns><see cref="CreateConsoleMNPVersionCompileTaskResponse"/></returns>
@@ -127,7 +169,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to add new mini program version to the console
+        /// This API is used to add a new mini program version
         /// </summary>
         /// <param name="req"><see cref="CreateConsoleMNPVersionCompileTaskRequest"/></param>
         /// <returns><see cref="CreateConsoleMNPVersionCompileTaskResponse"/></returns>
@@ -180,6 +222,27 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
+        /// This API is used to create a global domain allowlist or blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalDomainACLRequest"/></param>
+        /// <returns><see cref="CreateGlobalDomainACLResponse"/></returns>
+        public Task<CreateGlobalDomainACLResponse> CreateGlobalDomainACL(CreateGlobalDomainACLRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalDomainACLResponse>(req, "CreateGlobalDomainACL");
+        }
+
+        /// <summary>
+        /// This API is used to create a global domain allowlist or blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalDomainACLRequest"/></param>
+        /// <returns><see cref="CreateGlobalDomainACLResponse"/></returns>
+        public CreateGlobalDomainACLResponse CreateGlobalDomainACLSync(CreateGlobalDomainACLRequest req)
+        {
+            return InternalRequestAsync<CreateGlobalDomainACLResponse>(req, "CreateGlobalDomainACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a mini program
         /// </summary>
         /// <param name="req"><see cref="CreateMNPRequest"/></param>
@@ -197,6 +260,90 @@ namespace TencentCloud.Tcmpp.V20240801
         public CreateMNPResponse CreateMNPSync(CreateMNPRequest req)
         {
             return InternalRequestAsync<CreateMNPResponse>(req, "CreateMNP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a mini program approval request.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPApprovalRequest"/></param>
+        /// <returns><see cref="CreateMNPApprovalResponse"/></returns>
+        public Task<CreateMNPApprovalResponse> CreateMNPApproval(CreateMNPApprovalRequest req)
+        {
+            return InternalRequestAsync<CreateMNPApprovalResponse>(req, "CreateMNPApproval");
+        }
+
+        /// <summary>
+        /// This API is used to create a mini program approval request.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPApprovalRequest"/></param>
+        /// <returns><see cref="CreateMNPApprovalResponse"/></returns>
+        public CreateMNPApprovalResponse CreateMNPApprovalSync(CreateMNPApprovalRequest req)
+        {
+            return InternalRequestAsync<CreateMNPApprovalResponse>(req, "CreateMNPApproval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add a domain name to the allowlist/blocklist of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPDomainACLRequest"/></param>
+        /// <returns><see cref="CreateMNPDomainACLResponse"/></returns>
+        public Task<CreateMNPDomainACLResponse> CreateMNPDomainACL(CreateMNPDomainACLRequest req)
+        {
+            return InternalRequestAsync<CreateMNPDomainACLResponse>(req, "CreateMNPDomainACL");
+        }
+
+        /// <summary>
+        /// This API is used to add a domain name to the allowlist/blocklist of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPDomainACLRequest"/></param>
+        /// <returns><see cref="CreateMNPDomainACLResponse"/></returns>
+        public CreateMNPDomainACLResponse CreateMNPDomainACLSync(CreateMNPDomainACLRequest req)
+        {
+            return InternalRequestAsync<CreateMNPDomainACLResponse>(req, "CreateMNPDomainACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a permission request to allow a mini program calling sensitive APIs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPSensitiveAPIPermissionApprovalRequest"/></param>
+        /// <returns><see cref="CreateMNPSensitiveAPIPermissionApprovalResponse"/></returns>
+        public Task<CreateMNPSensitiveAPIPermissionApprovalResponse> CreateMNPSensitiveAPIPermissionApproval(CreateMNPSensitiveAPIPermissionApprovalRequest req)
+        {
+            return InternalRequestAsync<CreateMNPSensitiveAPIPermissionApprovalResponse>(req, "CreateMNPSensitiveAPIPermissionApproval");
+        }
+
+        /// <summary>
+        /// This API is used to create a permission request to allow a mini program calling sensitive APIs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPSensitiveAPIPermissionApprovalRequest"/></param>
+        /// <returns><see cref="CreateMNPSensitiveAPIPermissionApprovalResponse"/></returns>
+        public CreateMNPSensitiveAPIPermissionApprovalResponse CreateMNPSensitiveAPIPermissionApprovalSync(CreateMNPSensitiveAPIPermissionApprovalRequest req)
+        {
+            return InternalRequestAsync<CreateMNPSensitiveAPIPermissionApprovalResponse>(req, "CreateMNPSensitiveAPIPermissionApproval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPVersionRequest"/></param>
+        /// <returns><see cref="CreateMNPVersionResponse"/></returns>
+        public Task<CreateMNPVersionResponse> CreateMNPVersion(CreateMNPVersionRequest req)
+        {
+            return InternalRequestAsync<CreateMNPVersionResponse>(req, "CreateMNPVersion");
+        }
+
+        /// <summary>
+        /// This API is used to create a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPVersionRequest"/></param>
+        /// <returns><see cref="CreateMNPVersionResponse"/></returns>
+        public CreateMNPVersionResponse CreateMNPVersionSync(CreateMNPVersionRequest req)
+        {
+            return InternalRequestAsync<CreateMNPVersionResponse>(req, "CreateMNPVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -285,7 +432,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to apply for sensitive API call permissions
+        /// This API is used to apply for sensitive API permissions
         /// </summary>
         /// <param name="req"><see cref="CreateSensitiveApiApplyRequest"/></param>
         /// <returns><see cref="CreateSensitiveApiApplyResponse"/></returns>
@@ -295,7 +442,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to apply for sensitive API call permissions
+        /// This API is used to apply for sensitive API permissions
         /// </summary>
         /// <param name="req"><see cref="CreateSensitiveApiApplyRequest"/></param>
         /// <returns><see cref="CreateSensitiveApiApplyResponse"/></returns>
@@ -306,7 +453,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to create a team
+        /// This API is used to create a team.
         /// </summary>
         /// <param name="req"><see cref="CreateTeamRequest"/></param>
         /// <returns><see cref="CreateTeamResponse"/></returns>
@@ -316,7 +463,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to create a team
+        /// This API is used to create a team.
         /// </summary>
         /// <param name="req"><see cref="CreateTeamRequest"/></param>
         /// <returns><see cref="CreateTeamResponse"/></returns>
@@ -390,6 +537,27 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
+        /// This API is used to delete a sensitive API.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationSensitiveAPIRequest"/></param>
+        /// <returns><see cref="DeleteApplicationSensitiveAPIResponse"/></returns>
+        public Task<DeleteApplicationSensitiveAPIResponse> DeleteApplicationSensitiveAPI(DeleteApplicationSensitiveAPIRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationSensitiveAPIResponse>(req, "DeleteApplicationSensitiveAPI");
+        }
+
+        /// <summary>
+        /// This API is used to delete a sensitive API.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationSensitiveAPIRequest"/></param>
+        /// <returns><see cref="DeleteApplicationSensitiveAPIResponse"/></returns>
+        public DeleteApplicationSensitiveAPIResponse DeleteApplicationSensitiveAPISync(DeleteApplicationSensitiveAPIRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationSensitiveAPIResponse>(req, "DeleteApplicationSensitiveAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete domains from allowlist or blocklist
         /// </summary>
         /// <param name="req"><see cref="DeleteGlobalDomainRequest"/></param>
@@ -432,7 +600,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to delete a sensitive API
+        /// This API is used to delete sensitive API
         /// </summary>
         /// <param name="req"><see cref="DeleteSensitiveAPIRequest"/></param>
         /// <returns><see cref="DeleteSensitiveAPIResponse"/></returns>
@@ -442,7 +610,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to delete a sensitive API
+        /// This API is used to delete sensitive API
         /// </summary>
         /// <param name="req"><see cref="DeleteSensitiveAPIRequest"/></param>
         /// <returns><see cref="DeleteSensitiveAPIResponse"/></returns>
@@ -516,7 +684,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query application details
+        /// This API is used to query details of an application. 
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationRequest"/></param>
         /// <returns><see cref="DescribeApplicationResponse"/></returns>
@@ -526,7 +694,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query application details
+        /// This API is used to query details of an application. 
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationRequest"/></param>
         /// <returns><see cref="DescribeApplicationResponse"/></returns>
@@ -558,7 +726,28 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query application list data
+        /// This API is used to query the configuration files of an application.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationConfigFileRequest"/></param>
+        /// <returns><see cref="DescribeApplicationConfigFileResponse"/></returns>
+        public Task<DescribeApplicationConfigFileResponse> DescribeApplicationConfigFile(DescribeApplicationConfigFileRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationConfigFileResponse>(req, "DescribeApplicationConfigFile");
+        }
+
+        /// <summary>
+        /// This API is used to query the configuration files of an application.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationConfigFileRequest"/></param>
+        /// <returns><see cref="DescribeApplicationConfigFileResponse"/></returns>
+        public DescribeApplicationConfigFileResponse DescribeApplicationConfigFileSync(DescribeApplicationConfigFileRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationConfigFileResponse>(req, "DescribeApplicationConfigFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of application. 
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationListRequest"/></param>
         /// <returns><see cref="DescribeApplicationListResponse"/></returns>
@@ -568,7 +757,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query application list data
+        /// This API is used to query the list of application. 
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationListRequest"/></param>
         /// <returns><see cref="DescribeApplicationListResponse"/></returns>
@@ -600,7 +789,28 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query if the mini program version is uploaded successfully
+        /// This API is used to list sensitive APIs of an application. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationSensitiveAPIListRequest"/></param>
+        /// <returns><see cref="DescribeApplicationSensitiveAPIListResponse"/></returns>
+        public Task<DescribeApplicationSensitiveAPIListResponse> DescribeApplicationSensitiveAPIList(DescribeApplicationSensitiveAPIListRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationSensitiveAPIListResponse>(req, "DescribeApplicationSensitiveAPIList");
+        }
+
+        /// <summary>
+        /// This API is used to list sensitive APIs of an application. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationSensitiveAPIListRequest"/></param>
+        /// <returns><see cref="DescribeApplicationSensitiveAPIListResponse"/></returns>
+        public DescribeApplicationSensitiveAPIListResponse DescribeApplicationSensitiveAPIListSync(DescribeApplicationSensitiveAPIListRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationSensitiveAPIListResponse>(req, "DescribeApplicationSensitiveAPIList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query if the mini program version is created successfully
         /// </summary>
         /// <param name="req"><see cref="DescribeConsoleMNPVersionCompileTaskRequest"/></param>
         /// <returns><see cref="DescribeConsoleMNPVersionCompileTaskResponse"/></returns>
@@ -610,7 +820,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query if the mini program version is uploaded successfully
+        /// This API is used to query if the mini program version is created successfully
         /// </summary>
         /// <param name="req"><see cref="DescribeConsoleMNPVersionCompileTaskRequest"/></param>
         /// <returns><see cref="DescribeConsoleMNPVersionCompileTaskResponse"/></returns>
@@ -663,6 +873,27 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
+        /// This API is used to query the global domain allowlist and blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalDomainACLRequest"/></param>
+        /// <returns><see cref="DescribeGlobalDomainACLResponse"/></returns>
+        public Task<DescribeGlobalDomainACLResponse> DescribeGlobalDomainACL(DescribeGlobalDomainACLRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalDomainACLResponse>(req, "DescribeGlobalDomainACL");
+        }
+
+        /// <summary>
+        /// This API is used to query the global domain allowlist and blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalDomainACLRequest"/></param>
+        /// <returns><see cref="DescribeGlobalDomainACLResponse"/></returns>
+        public DescribeGlobalDomainACLResponse DescribeGlobalDomainACLSync(DescribeGlobalDomainACLRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalDomainACLResponse>(req, "DescribeGlobalDomainACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query domain allowlist and blocklist
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalDomainListRequest"/></param>
@@ -680,6 +911,69 @@ namespace TencentCloud.Tcmpp.V20240801
         public DescribeGlobalDomainListResponse DescribeGlobalDomainListSync(DescribeGlobalDomainListRequest req)
         {
             return InternalRequestAsync<DescribeGlobalDomainListResponse>(req, "DescribeGlobalDomainList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query details of a mini program. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPRequest"/></param>
+        /// <returns><see cref="DescribeMNPResponse"/></returns>
+        public Task<DescribeMNPResponse> DescribeMNP(DescribeMNPRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPResponse>(req, "DescribeMNP");
+        }
+
+        /// <summary>
+        /// This API is used to query details of a mini program. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPRequest"/></param>
+        /// <returns><see cref="DescribeMNPResponse"/></returns>
+        public DescribeMNPResponse DescribeMNPSync(DescribeMNPRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPResponse>(req, "DescribeMNP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the mini program version management information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPAllStageVersionsRequest"/></param>
+        /// <returns><see cref="DescribeMNPAllStageVersionsResponse"/></returns>
+        public Task<DescribeMNPAllStageVersionsResponse> DescribeMNPAllStageVersions(DescribeMNPAllStageVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPAllStageVersionsResponse>(req, "DescribeMNPAllStageVersions");
+        }
+
+        /// <summary>
+        /// This API is used to query the mini program version management information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPAllStageVersionsRequest"/></param>
+        /// <returns><see cref="DescribeMNPAllStageVersionsResponse"/></returns>
+        public DescribeMNPAllStageVersionsResponse DescribeMNPAllStageVersionsSync(DescribeMNPAllStageVersionsRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPAllStageVersionsResponse>(req, "DescribeMNPAllStageVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to list the approval requests related with a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPApprovalListRequest"/></param>
+        /// <returns><see cref="DescribeMNPApprovalListResponse"/></returns>
+        public Task<DescribeMNPApprovalListResponse> DescribeMNPApprovalList(DescribeMNPApprovalListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPApprovalListResponse>(req, "DescribeMNPApprovalList");
+        }
+
+        /// <summary>
+        /// This API is used to list the approval requests related with a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPApprovalListRequest"/></param>
+        /// <returns><see cref="DescribeMNPApprovalListResponse"/></returns>
+        public DescribeMNPApprovalListResponse DescribeMNPApprovalListSync(DescribeMNPApprovalListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPApprovalListResponse>(req, "DescribeMNPApprovalList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +999,27 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
+        /// This API is used to query the list of mini program types.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPCategoryRequest"/></param>
+        /// <returns><see cref="DescribeMNPCategoryResponse"/></returns>
+        public Task<DescribeMNPCategoryResponse> DescribeMNPCategory(DescribeMNPCategoryRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPCategoryResponse>(req, "DescribeMNPCategory");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of mini program types.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPCategoryRequest"/></param>
+        /// <returns><see cref="DescribeMNPCategoryResponse"/></returns>
+        public DescribeMNPCategoryResponse DescribeMNPCategorySync(DescribeMNPCategoryRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPCategoryResponse>(req, "DescribeMNPCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query mini program details
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPDetailRequest"/></param>
@@ -722,6 +1037,48 @@ namespace TencentCloud.Tcmpp.V20240801
         public DescribeMNPDetailResponse DescribeMNPDetailSync(DescribeMNPDetailRequest req)
         {
             return InternalRequestAsync<DescribeMNPDetailResponse>(req, "DescribeMNPDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the domain name allowlist / blocklist of a mini program. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPDomainACLRequest"/></param>
+        /// <returns><see cref="DescribeMNPDomainACLResponse"/></returns>
+        public Task<DescribeMNPDomainACLResponse> DescribeMNPDomainACL(DescribeMNPDomainACLRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPDomainACLResponse>(req, "DescribeMNPDomainACL");
+        }
+
+        /// <summary>
+        /// This API is used to query the domain name allowlist / blocklist of a mini program. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPDomainACLRequest"/></param>
+        /// <returns><see cref="DescribeMNPDomainACLResponse"/></returns>
+        public DescribeMNPDomainACLResponse DescribeMNPDomainACLSync(DescribeMNPDomainACLRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPDomainACLResponse>(req, "DescribeMNPDomainACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of mini programs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPListRequest"/></param>
+        /// <returns><see cref="DescribeMNPListResponse"/></returns>
+        public Task<DescribeMNPListResponse> DescribeMNPList(DescribeMNPListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPListResponse>(req, "DescribeMNPList");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of mini programs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPListRequest"/></param>
+        /// <returns><see cref="DescribeMNPListResponse"/></returns>
+        public DescribeMNPListResponse DescribeMNPListSync(DescribeMNPListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPListResponse>(req, "DescribeMNPList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -768,6 +1125,48 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
+        /// DescribeMNPOfflinePackageURL
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPOfflinePackageURLRequest"/></param>
+        /// <returns><see cref="DescribeMNPOfflinePackageURLResponse"/></returns>
+        public Task<DescribeMNPOfflinePackageURLResponse> DescribeMNPOfflinePackageURL(DescribeMNPOfflinePackageURLRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPOfflinePackageURLResponse>(req, "DescribeMNPOfflinePackageURL");
+        }
+
+        /// <summary>
+        /// DescribeMNPOfflinePackageURL
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPOfflinePackageURLRequest"/></param>
+        /// <returns><see cref="DescribeMNPOfflinePackageURLResponse"/></returns>
+        public DescribeMNPOfflinePackageURLResponse DescribeMNPOfflinePackageURLSync(DescribeMNPOfflinePackageURLRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPOfflinePackageURLResponse>(req, "DescribeMNPOfflinePackageURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a mini program preview version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPPreviewRequest"/></param>
+        /// <returns><see cref="DescribeMNPPreviewResponse"/></returns>
+        public Task<DescribeMNPPreviewResponse> DescribeMNPPreview(DescribeMNPPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPPreviewResponse>(req, "DescribeMNPPreview");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a mini program preview version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPPreviewRequest"/></param>
+        /// <returns><see cref="DescribeMNPPreviewResponse"/></returns>
+        public DescribeMNPPreviewResponse DescribeMNPPreviewSync(DescribeMNPPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPPreviewResponse>(req, "DescribeMNPPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the details filled in the service description
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPPrivacyRequest"/></param>
@@ -785,6 +1184,90 @@ namespace TencentCloud.Tcmpp.V20240801
         public DescribeMNPPrivacyResponse DescribeMNPPrivacySync(DescribeMNPPrivacyRequest req)
         {
             return InternalRequestAsync<DescribeMNPPrivacyResponse>(req, "DescribeMNPPrivacy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to list all released versions of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPReleasedVersionHistoryRequest"/></param>
+        /// <returns><see cref="DescribeMNPReleasedVersionHistoryResponse"/></returns>
+        public Task<DescribeMNPReleasedVersionHistoryResponse> DescribeMNPReleasedVersionHistory(DescribeMNPReleasedVersionHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPReleasedVersionHistoryResponse>(req, "DescribeMNPReleasedVersionHistory");
+        }
+
+        /// <summary>
+        /// This API is used to list all released versions of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPReleasedVersionHistoryRequest"/></param>
+        /// <returns><see cref="DescribeMNPReleasedVersionHistoryResponse"/></returns>
+        public DescribeMNPReleasedVersionHistoryResponse DescribeMNPReleasedVersionHistorySync(DescribeMNPReleasedVersionHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPReleasedVersionHistoryResponse>(req, "DescribeMNPReleasedVersionHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query details of a specific permission request to call sensitive APIs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionApprovalRequest"/></param>
+        /// <returns><see cref="DescribeMNPSensitiveAPIPermissionApprovalResponse"/></returns>
+        public Task<DescribeMNPSensitiveAPIPermissionApprovalResponse> DescribeMNPSensitiveAPIPermissionApproval(DescribeMNPSensitiveAPIPermissionApprovalRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSensitiveAPIPermissionApprovalResponse>(req, "DescribeMNPSensitiveAPIPermissionApproval");
+        }
+
+        /// <summary>
+        /// This API is used to query details of a specific permission request to call sensitive APIs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionApprovalRequest"/></param>
+        /// <returns><see cref="DescribeMNPSensitiveAPIPermissionApprovalResponse"/></returns>
+        public DescribeMNPSensitiveAPIPermissionApprovalResponse DescribeMNPSensitiveAPIPermissionApprovalSync(DescribeMNPSensitiveAPIPermissionApprovalRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSensitiveAPIPermissionApprovalResponse>(req, "DescribeMNPSensitiveAPIPermissionApproval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query permission requests to allow a mini program calling sensitive APIs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionApprovalListRequest"/></param>
+        /// <returns><see cref="DescribeMNPSensitiveAPIPermissionApprovalListResponse"/></returns>
+        public Task<DescribeMNPSensitiveAPIPermissionApprovalListResponse> DescribeMNPSensitiveAPIPermissionApprovalList(DescribeMNPSensitiveAPIPermissionApprovalListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSensitiveAPIPermissionApprovalListResponse>(req, "DescribeMNPSensitiveAPIPermissionApprovalList");
+        }
+
+        /// <summary>
+        /// This API is used to query permission requests to allow a mini program calling sensitive APIs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionApprovalListRequest"/></param>
+        /// <returns><see cref="DescribeMNPSensitiveAPIPermissionApprovalListResponse"/></returns>
+        public DescribeMNPSensitiveAPIPermissionApprovalListResponse DescribeMNPSensitiveAPIPermissionApprovalListSync(DescribeMNPSensitiveAPIPermissionApprovalListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSensitiveAPIPermissionApprovalListResponse>(req, "DescribeMNPSensitiveAPIPermissionApprovalList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of sensitive APIs that available to a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionListRequest"/></param>
+        /// <returns><see cref="DescribeMNPSensitiveAPIPermissionListResponse"/></returns>
+        public Task<DescribeMNPSensitiveAPIPermissionListResponse> DescribeMNPSensitiveAPIPermissionList(DescribeMNPSensitiveAPIPermissionListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSensitiveAPIPermissionListResponse>(req, "DescribeMNPSensitiveAPIPermissionList");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of sensitive APIs that available to a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionListRequest"/></param>
+        /// <returns><see cref="DescribeMNPSensitiveAPIPermissionListResponse"/></returns>
+        public DescribeMNPSensitiveAPIPermissionListResponse DescribeMNPSensitiveAPIPermissionListSync(DescribeMNPSensitiveAPIPermissionListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSensitiveAPIPermissionListResponse>(req, "DescribeMNPSensitiveAPIPermissionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -810,7 +1293,28 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query the details of the mini program trial version
+        /// This API is used to query the result of the task to create a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPVersionRequest"/></param>
+        /// <returns><see cref="DescribeMNPVersionResponse"/></returns>
+        public Task<DescribeMNPVersionResponse> DescribeMNPVersion(DescribeMNPVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPVersionResponse>(req, "DescribeMNPVersion");
+        }
+
+        /// <summary>
+        /// This API is used to query the result of the task to create a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPVersionRequest"/></param>
+        /// <returns><see cref="DescribeMNPVersionResponse"/></returns>
+        public DescribeMNPVersionResponse DescribeMNPVersionSync(DescribeMNPVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPVersionResponse>(req, "DescribeMNPVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of the mini program preview version
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPVersionPreviewRequest"/></param>
         /// <returns><see cref="DescribeMNPVersionPreviewResponse"/></returns>
@@ -820,7 +1324,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query the details of the mini program trial version
+        /// This API is used to query the details of the mini program preview version
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPVersionPreviewRequest"/></param>
         /// <returns><see cref="DescribeMNPVersionPreviewResponse"/></returns>
@@ -852,7 +1356,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query the current release version of the mini program
+        /// This API is used to query the release version history
         /// </summary>
         /// <param name="req"><see cref="DescribeOnlineVersionRequest"/></param>
         /// <returns><see cref="DescribeOnlineVersionResponse"/></returns>
@@ -862,7 +1366,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query the current release version of the mini program
+        /// This API is used to query the release version history
         /// </summary>
         /// <param name="req"><see cref="DescribeOnlineVersionRequest"/></param>
         /// <returns><see cref="DescribeOnlineVersionResponse"/></returns>
@@ -894,7 +1398,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query role list data
+        /// This API is used to query the list of roles. 
         /// </summary>
         /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
         /// <returns><see cref="DescribeRoleListResponse"/></returns>
@@ -904,7 +1408,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query role list data
+        /// This API is used to query the list of roles. 
         /// </summary>
         /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
         /// <returns><see cref="DescribeRoleListResponse"/></returns>
@@ -957,7 +1461,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query sensitive API call details
+        /// This API is used to query sensitive API permission approval details
         /// </summary>
         /// <param name="req"><see cref="DescribeSensitiveApiApplyDetailRequest"/></param>
         /// <returns><see cref="DescribeSensitiveApiApplyDetailResponse"/></returns>
@@ -967,7 +1471,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query sensitive API call details
+        /// This API is used to query sensitive API permission approval details
         /// </summary>
         /// <param name="req"><see cref="DescribeSensitiveApiApplyDetailRequest"/></param>
         /// <returns><see cref="DescribeSensitiveApiApplyDetailResponse"/></returns>
@@ -978,7 +1482,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query the sensitive APIs that require permission
+        /// This API is used to query the sensitive API permission list
         /// </summary>
         /// <param name="req"><see cref="DescribeSensitiveApiAuthListRequest"/></param>
         /// <returns><see cref="DescribeSensitiveApiAuthListResponse"/></returns>
@@ -988,7 +1492,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query the sensitive APIs that require permission
+        /// This API is used to query the sensitive API permission list
         /// </summary>
         /// <param name="req"><see cref="DescribeSensitiveApiAuthListRequest"/></param>
         /// <returns><see cref="DescribeSensitiveApiAuthListResponse"/></returns>
@@ -1041,7 +1545,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query team details
+        /// This API is used to query details of a team. 
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamRequest"/></param>
         /// <returns><see cref="DescribeTeamResponse"/></returns>
@@ -1051,7 +1555,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query team details
+        /// This API is used to query details of a team. 
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamRequest"/></param>
         /// <returns><see cref="DescribeTeamResponse"/></returns>
@@ -1083,7 +1587,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query the team list that can be viewed by the current role permissions
+        /// This API is used to query the list of teams. 
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamListRequest"/></param>
         /// <returns><see cref="DescribeTeamListResponse"/></returns>
@@ -1093,7 +1597,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to query the team list that can be viewed by the current role permissions
+        /// This API is used to query the list of teams. 
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamListRequest"/></param>
         /// <returns><see cref="DescribeTeamListResponse"/></returns>
@@ -1167,6 +1671,27 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
+        /// This API is used to query details of a user. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRequest"/></param>
+        /// <returns><see cref="DescribeUserResponse"/></returns>
+        public Task<DescribeUserResponse> DescribeUser(DescribeUserRequest req)
+        {
+            return InternalRequestAsync<DescribeUserResponse>(req, "DescribeUser");
+        }
+
+        /// <summary>
+        /// This API is used to query details of a user. 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRequest"/></param>
+        /// <returns><see cref="DescribeUserResponse"/></returns>
+        public DescribeUserResponse DescribeUserSync(DescribeUserRequest req)
+        {
+            return InternalRequestAsync<DescribeUserResponse>(req, "DescribeUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query user details
         /// </summary>
         /// <param name="req"><see cref="DescribeUserDetailRequest"/></param>
@@ -1209,6 +1734,27 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
+        /// This API is used to set a sensitive API to Restricted.
+        /// </summary>
+        /// <param name="req"><see cref="DisableApplicationSensitiveAPIRequest"/></param>
+        /// <returns><see cref="DisableApplicationSensitiveAPIResponse"/></returns>
+        public Task<DisableApplicationSensitiveAPIResponse> DisableApplicationSensitiveAPI(DisableApplicationSensitiveAPIRequest req)
+        {
+            return InternalRequestAsync<DisableApplicationSensitiveAPIResponse>(req, "DisableApplicationSensitiveAPI");
+        }
+
+        /// <summary>
+        /// This API is used to set a sensitive API to Restricted.
+        /// </summary>
+        /// <param name="req"><see cref="DisableApplicationSensitiveAPIRequest"/></param>
+        /// <returns><see cref="DisableApplicationSensitiveAPIResponse"/></returns>
+        public DisableApplicationSensitiveAPIResponse DisableApplicationSensitiveAPISync(DisableApplicationSensitiveAPIRequest req)
+        {
+            return InternalRequestAsync<DisableApplicationSensitiveAPIResponse>(req, "DisableApplicationSensitiveAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to disable the company’s domain name that obtained the ICP filing
         /// </summary>
         /// <param name="req"><see cref="DisableTeamDomainRequest"/></param>
@@ -1226,6 +1772,27 @@ namespace TencentCloud.Tcmpp.V20240801
         public DisableTeamDomainResponse DisableTeamDomainSync(DisableTeamDomainRequest req)
         {
             return InternalRequestAsync<DisableTeamDomainResponse>(req, "DisableTeamDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to set an application sensitive API to public.
+        /// </summary>
+        /// <param name="req"><see cref="EnableApplicationSensitiveAPIRequest"/></param>
+        /// <returns><see cref="EnableApplicationSensitiveAPIResponse"/></returns>
+        public Task<EnableApplicationSensitiveAPIResponse> EnableApplicationSensitiveAPI(EnableApplicationSensitiveAPIRequest req)
+        {
+            return InternalRequestAsync<EnableApplicationSensitiveAPIResponse>(req, "EnableApplicationSensitiveAPI");
+        }
+
+        /// <summary>
+        /// This API is used to set an application sensitive API to public.
+        /// </summary>
+        /// <param name="req"><see cref="EnableApplicationSensitiveAPIRequest"/></param>
+        /// <returns><see cref="EnableApplicationSensitiveAPIResponse"/></returns>
+        public EnableApplicationSensitiveAPIResponse EnableApplicationSensitiveAPISync(EnableApplicationSensitiveAPIRequest req)
+        {
+            return InternalRequestAsync<EnableApplicationSensitiveAPIResponse>(req, "EnableApplicationSensitiveAPI")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1356,6 +1923,27 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
+        /// This API is used to edit the mini program domain information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMNPDomainRequest"/></param>
+        /// <returns><see cref="ModifyMNPDomainResponse"/></returns>
+        public Task<ModifyMNPDomainResponse> ModifyMNPDomain(ModifyMNPDomainRequest req)
+        {
+            return InternalRequestAsync<ModifyMNPDomainResponse>(req, "ModifyMNPDomain");
+        }
+
+        /// <summary>
+        /// This API is used to edit the mini program domain information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMNPDomainRequest"/></param>
+        /// <returns><see cref="ModifyMNPDomainResponse"/></returns>
+        public ModifyMNPDomainResponse ModifyMNPDomainSync(ModifyMNPDomainRequest req)
+        {
+            return InternalRequestAsync<ModifyMNPDomainResponse>(req, "ModifyMNPDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to remove the mini program
         /// </summary>
         /// <param name="req"><see cref="ModifyMNPStatusOfflineRequest"/></param>
@@ -1377,7 +1965,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to configure the mini program trial version
+        /// This API is used to configure the mini program preview version
         /// </summary>
         /// <param name="req"><see cref="ModifyMNPVersionPreviewRequest"/></param>
         /// <returns><see cref="ModifyMNPVersionPreviewResponse"/></returns>
@@ -1387,7 +1975,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to configure the mini program trial version
+        /// This API is used to configure the mini program preview version
         /// </summary>
         /// <param name="req"><see cref="ModifyMNPVersionPreviewRequest"/></param>
         /// <returns><see cref="ModifyMNPVersionPreviewResponse"/></returns>
@@ -1419,7 +2007,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to approve the release of the mini program version
+        /// This API is used to approve or reject the release of the mini program version
         /// </summary>
         /// <param name="req"><see cref="ModifyPlatformAuditStatusRequest"/></param>
         /// <returns><see cref="ModifyPlatformAuditStatusResponse"/></returns>
@@ -1429,7 +2017,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to approve the release of the mini program version
+        /// This API is used to approve or reject the release of the mini program version
         /// </summary>
         /// <param name="req"><see cref="ModifyPlatformAuditStatusRequest"/></param>
         /// <returns><see cref="ModifyPlatformAuditStatusResponse"/></returns>
@@ -1440,7 +2028,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to approve sensitive API call permission
+        /// This API is used to approve or reject the sensitive API permission application
         /// </summary>
         /// <param name="req"><see cref="ModifySensitiveAPIAuditStatusRequest"/></param>
         /// <returns><see cref="ModifySensitiveAPIAuditStatusResponse"/></returns>
@@ -1450,7 +2038,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to approve sensitive API call permission
+        /// This API is used to approve or reject the sensitive API permission application
         /// </summary>
         /// <param name="req"><see cref="ModifySensitiveAPIAuditStatusRequest"/></param>
         /// <returns><see cref="ModifySensitiveAPIAuditStatusResponse"/></returns>
@@ -1482,7 +2070,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to change team member roles
+        /// This API is used to modify team member information.
         /// </summary>
         /// <param name="req"><see cref="ModifyTeamMemberRequest"/></param>
         /// <returns><see cref="ModifyTeamMemberResponse"/></returns>
@@ -1492,7 +2080,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to change team member roles
+        /// This API is used to modify team member information.
         /// </summary>
         /// <param name="req"><see cref="ModifyTeamMemberRequest"/></param>
         /// <returns><see cref="ModifyTeamMemberResponse"/></returns>
@@ -1503,7 +2091,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to edit user information
+        /// This API is used to modify user information.
         /// </summary>
         /// <param name="req"><see cref="ModifyUserRequest"/></param>
         /// <returns><see cref="ModifyUserResponse"/></returns>
@@ -1513,7 +2101,7 @@ namespace TencentCloud.Tcmpp.V20240801
         }
 
         /// <summary>
-        /// This API is used to edit user information
+        /// This API is used to modify user information.
         /// </summary>
         /// <param name="req"><see cref="ModifyUserRequest"/></param>
         /// <returns><see cref="ModifyUserResponse"/></returns>
@@ -1541,6 +2129,111 @@ namespace TencentCloud.Tcmpp.V20240801
         public ModifyUserPasswordResponse ModifyUserPasswordSync(ModifyUserPasswordRequest req)
         {
             return InternalRequestAsync<ModifyUserPasswordResponse>(req, "ModifyUserPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to approve or reject the release of a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="ProcessMNPApprovalRequest"/></param>
+        /// <returns><see cref="ProcessMNPApprovalResponse"/></returns>
+        public Task<ProcessMNPApprovalResponse> ProcessMNPApproval(ProcessMNPApprovalRequest req)
+        {
+            return InternalRequestAsync<ProcessMNPApprovalResponse>(req, "ProcessMNPApproval");
+        }
+
+        /// <summary>
+        /// This API is used to approve or reject the release of a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="ProcessMNPApprovalRequest"/></param>
+        /// <returns><see cref="ProcessMNPApprovalResponse"/></returns>
+        public ProcessMNPApprovalResponse ProcessMNPApprovalSync(ProcessMNPApprovalRequest req)
+        {
+            return InternalRequestAsync<ProcessMNPApprovalResponse>(req, "ProcessMNPApproval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to approve or reject the sensitive API permission application. 
+        /// </summary>
+        /// <param name="req"><see cref="ProcessMNPSensitiveAPIPermissionApprovalRequest"/></param>
+        /// <returns><see cref="ProcessMNPSensitiveAPIPermissionApprovalResponse"/></returns>
+        public Task<ProcessMNPSensitiveAPIPermissionApprovalResponse> ProcessMNPSensitiveAPIPermissionApproval(ProcessMNPSensitiveAPIPermissionApprovalRequest req)
+        {
+            return InternalRequestAsync<ProcessMNPSensitiveAPIPermissionApprovalResponse>(req, "ProcessMNPSensitiveAPIPermissionApproval");
+        }
+
+        /// <summary>
+        /// This API is used to approve or reject the sensitive API permission application. 
+        /// </summary>
+        /// <param name="req"><see cref="ProcessMNPSensitiveAPIPermissionApprovalRequest"/></param>
+        /// <returns><see cref="ProcessMNPSensitiveAPIPermissionApprovalResponse"/></returns>
+        public ProcessMNPSensitiveAPIPermissionApprovalResponse ProcessMNPSensitiveAPIPermissionApprovalSync(ProcessMNPSensitiveAPIPermissionApprovalRequest req)
+        {
+            return InternalRequestAsync<ProcessMNPSensitiveAPIPermissionApprovalResponse>(req, "ProcessMNPSensitiveAPIPermissionApproval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to release a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseMNPVersionRequest"/></param>
+        /// <returns><see cref="ReleaseMNPVersionResponse"/></returns>
+        public Task<ReleaseMNPVersionResponse> ReleaseMNPVersion(ReleaseMNPVersionRequest req)
+        {
+            return InternalRequestAsync<ReleaseMNPVersionResponse>(req, "ReleaseMNPVersion");
+        }
+
+        /// <summary>
+        /// This API is used to release a mini program version.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseMNPVersionRequest"/></param>
+        /// <returns><see cref="ReleaseMNPVersionResponse"/></returns>
+        public ReleaseMNPVersionResponse ReleaseMNPVersionSync(ReleaseMNPVersionRequest req)
+        {
+            return InternalRequestAsync<ReleaseMNPVersionResponse>(req, "ReleaseMNPVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to remove a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveMNPRequest"/></param>
+        /// <returns><see cref="RemoveMNPResponse"/></returns>
+        public Task<RemoveMNPResponse> RemoveMNP(RemoveMNPRequest req)
+        {
+            return InternalRequestAsync<RemoveMNPResponse>(req, "RemoveMNP");
+        }
+
+        /// <summary>
+        /// This API is used to remove a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveMNPRequest"/></param>
+        /// <returns><see cref="RemoveMNPResponse"/></returns>
+        public RemoveMNPResponse RemoveMNPSync(RemoveMNPRequest req)
+        {
+            return InternalRequestAsync<RemoveMNPResponse>(req, "RemoveMNP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to rollback a mini program online version.
+        /// </summary>
+        /// <param name="req"><see cref="RollbackMNPVersionRequest"/></param>
+        /// <returns><see cref="RollbackMNPVersionResponse"/></returns>
+        public Task<RollbackMNPVersionResponse> RollbackMNPVersion(RollbackMNPVersionRequest req)
+        {
+            return InternalRequestAsync<RollbackMNPVersionResponse>(req, "RollbackMNPVersion");
+        }
+
+        /// <summary>
+        /// This API is used to rollback a mini program online version.
+        /// </summary>
+        /// <param name="req"><see cref="RollbackMNPVersionRequest"/></param>
+        /// <returns><see cref="RollbackMNPVersionResponse"/></returns>
+        public RollbackMNPVersionResponse RollbackMNPVersionSync(RollbackMNPVersionRequest req)
+        {
+            return InternalRequestAsync<RollbackMNPVersionResponse>(req, "RollbackMNPVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

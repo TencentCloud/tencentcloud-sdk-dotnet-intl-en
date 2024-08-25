@@ -55,13 +55,13 @@ namespace TencentCloud.Tcmpp.V20240801.Models
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Android package name
+        /// Android app package name
         /// </summary>
         [JsonProperty("AndroidAppKey")]
         public string AndroidAppKey{ get; set; }
 
         /// <summary>
-        /// iOS bundleId
+        /// iOS App bundleId
         /// </summary>
         [JsonProperty("IosAppKey")]
         public string IosAppKey{ get; set; }
@@ -71,18 +71,6 @@ namespace TencentCloud.Tcmpp.V20240801.Models
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
-
-        /// <summary>
-        /// Android App download address
-        /// </summary>
-        [JsonProperty("AndroidAppURL")]
-        public string AndroidAppURL{ get; set; }
-
-        /// <summary>
-        /// iOS App download address
-        /// </summary>
-        [JsonProperty("IosAppURL")]
-        public string IosAppURL{ get; set; }
 
 
         /// <summary>
@@ -98,8 +86,6 @@ namespace TencentCloud.Tcmpp.V20240801.Models
             this.SetParamSimple(map, prefix + "AndroidAppKey", this.AndroidAppKey);
             this.SetParamSimple(map, prefix + "IosAppKey", this.IosAppKey);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
-            this.SetParamSimple(map, prefix + "AndroidAppURL", this.AndroidAppURL);
-            this.SetParamSimple(map, prefix + "IosAppURL", this.IosAppURL);
         }
     }
 }

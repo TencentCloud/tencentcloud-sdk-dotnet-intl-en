@@ -25,7 +25,6 @@ namespace TencentCloud.Tcmpp.V20240801.Models
     {
         
         /// <summary>
-        /// Response data
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Data")]

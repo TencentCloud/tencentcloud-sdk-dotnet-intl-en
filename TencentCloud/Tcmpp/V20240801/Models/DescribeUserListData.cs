@@ -43,6 +43,7 @@ namespace TencentCloud.Tcmpp.V20240801.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Teams")]
+        [System.Obsolete]
         public string Teams{ get; set; }
 
         /// <summary>
@@ -73,6 +74,13 @@ namespace TencentCloud.Tcmpp.V20240801.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// Team name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TeamName")]
+        public string TeamName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +94,7 @@ namespace TencentCloud.Tcmpp.V20240801.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "TeamName", this.TeamName);
         }
     }
 }

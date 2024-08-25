@@ -37,7 +37,7 @@ namespace TencentCloud.Tcmpp.V20240801.Models
         public string AdminUserId{ get; set; }
 
         /// <summary>
-        /// Team permission type 1 Mini program 2 App (Multiple selection)
+        /// Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
         /// </summary>
         [JsonProperty("TeamRoleTypeList")]
         public long?[] TeamRoleTypeList{ get; set; }

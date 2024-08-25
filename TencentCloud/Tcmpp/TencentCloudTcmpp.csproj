@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7C6032D8-905D-3B90-8ABF-89648A133152}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.967</VersionPrefix>
+    <VersionPrefix>3.0.968</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,23 +57,40 @@
     <Compile Include="V20240801\Models\ApplicationSimpleInfo.cs" />
     <Compile Include="V20240801\Models\ApplicationSimpleInfoResp.cs" />
     <Compile Include="V20240801\Models\ApplicationSimpleListInfoResp.cs" />
+    <Compile Include="V20240801\Models\ApprovalItem.cs" />
     <Compile Include="V20240801\Models\AuditInfoReq.cs" />
     <Compile Include="V20240801\Models\BooleanInfo.cs" />
     <Compile Include="V20240801\Models\CheckGlobalDomainRequest.cs" />
     <Compile Include="V20240801\Models\CheckGlobalDomainResponse.cs" />
+    <Compile Include="V20240801\Models\ConfigureMNPPreviewRequest.cs" />
+    <Compile Include="V20240801\Models\ConfigureMNPPreviewResponse.cs" />
     <Compile Include="V20240801\Models\CreateApplicationRequest.cs" />
     <Compile Include="V20240801\Models\CreateApplicationResponse.cs" />
+    <Compile Include="V20240801\Models\CreateApplicationSensitiveAPIReq.cs" />
+    <Compile Include="V20240801\Models\CreateApplicationSensitiveAPIRequest.cs" />
+    <Compile Include="V20240801\Models\CreateApplicationSensitiveAPIResponse.cs" />
     <Compile Include="V20240801\Models\CreateConsoleMNPVersionCompileTaskRequest.cs" />
     <Compile Include="V20240801\Models\CreateConsoleMNPVersionCompileTaskResponse.cs" />
     <Compile Include="V20240801\Models\CreateDomainParam.cs" />
     <Compile Include="V20240801\Models\CreateDomainRequest.cs" />
     <Compile Include="V20240801\Models\CreateDomainResponse.cs" />
+    <Compile Include="V20240801\Models\CreateGlobalDomainACLRequest.cs" />
+    <Compile Include="V20240801\Models\CreateGlobalDomainACLResponse.cs" />
     <Compile Include="V20240801\Models\CreateGlobalDomainRequest.cs" />
     <Compile Include="V20240801\Models\CreateGlobalDomainResp.cs" />
     <Compile Include="V20240801\Models\CreateGlobalDomainResponse.cs" />
+    <Compile Include="V20240801\Models\CreateMNPApprovalRequest.cs" />
+    <Compile Include="V20240801\Models\CreateMNPApprovalResponse.cs" />
+    <Compile Include="V20240801\Models\CreateMNPDomainACLRequest.cs" />
+    <Compile Include="V20240801\Models\CreateMNPDomainACLResponse.cs" />
     <Compile Include="V20240801\Models\CreateMNPRequest.cs" />
     <Compile Include="V20240801\Models\CreateMNPResponse.cs" />
+    <Compile Include="V20240801\Models\CreateMNPSensitiveAPIPermissionApprovalRequest.cs" />
+    <Compile Include="V20240801\Models\CreateMNPSensitiveAPIPermissionApprovalResponse.cs" />
     <Compile Include="V20240801\Models\CreateMNPVersionCompileTaskResp.cs" />
+    <Compile Include="V20240801\Models\CreateMNPVersionRequest.cs" />
+    <Compile Include="V20240801\Models\CreateMNPVersionResp.cs" />
+    <Compile Include="V20240801\Models\CreateMNPVersionResponse.cs" />
     <Compile Include="V20240801\Models\CreateOnlineApplyRequest.cs" />
     <Compile Include="V20240801\Models\CreateOnlineApplyResponse.cs" />
     <Compile Include="V20240801\Models\CreatePlatformAuditRequest.cs" />
@@ -95,6 +112,8 @@
     <Compile Include="V20240801\Models\CreateUserResponse.cs" />
     <Compile Include="V20240801\Models\DeleteApplicationRequest.cs" />
     <Compile Include="V20240801\Models\DeleteApplicationResponse.cs" />
+    <Compile Include="V20240801\Models\DeleteApplicationSensitiveAPIRequest.cs" />
+    <Compile Include="V20240801\Models\DeleteApplicationSensitiveAPIResponse.cs" />
     <Compile Include="V20240801\Models\DeleteGlobalDomainRequest.cs" />
     <Compile Include="V20240801\Models\DeleteGlobalDomainResponse.cs" />
     <Compile Include="V20240801\Models\DeleteMNPRequest.cs" />
@@ -107,6 +126,8 @@
     <Compile Include="V20240801\Models\DeleteTeamResponse.cs" />
     <Compile Include="V20240801\Models\DeleteUserRequest.cs" />
     <Compile Include="V20240801\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeApplicationConfigFileRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeApplicationConfigFileResponse.cs" />
     <Compile Include="V20240801\Models\DescribeApplicationConfigRequest.cs" />
     <Compile Include="V20240801\Models\DescribeApplicationConfigResponse.cs" />
     <Compile Include="V20240801\Models\DescribeApplicationListRequest.cs" />
@@ -117,6 +138,10 @@
     <Compile Include="V20240801\Models\DescribeApplicationMNPVersionAuditListResponse.cs" />
     <Compile Include="V20240801\Models\DescribeApplicationRequest.cs" />
     <Compile Include="V20240801\Models\DescribeApplicationResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeApplicationSensitiveAPIListData.cs" />
+    <Compile Include="V20240801\Models\DescribeApplicationSensitiveAPIListRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeApplicationSensitiveAPIListResp.cs" />
+    <Compile Include="V20240801\Models\DescribeApplicationSensitiveAPIListResponse.cs" />
     <Compile Include="V20240801\Models\DescribeConsoleMNPVersionCompileTaskRequest.cs" />
     <Compile Include="V20240801\Models\DescribeConsoleMNPVersionCompileTaskResponse.cs" />
     <Compile Include="V20240801\Models\DescribeDomainInfoParam.cs" />
@@ -126,12 +151,30 @@
     <Compile Include="V20240801\Models\DescribeDomainTeamListPageResp.cs" />
     <Compile Include="V20240801\Models\DescribeDomainTeamListRequest.cs" />
     <Compile Include="V20240801\Models\DescribeDomainTeamListResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeGlobalDomainACLRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeGlobalDomainACLResponse.cs" />
     <Compile Include="V20240801\Models\DescribeGlobalDomainListRequest.cs" />
     <Compile Include="V20240801\Models\DescribeGlobalDomainListResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeGlobalDomainsListData.cs" />
+    <Compile Include="V20240801\Models\DescribeGlobalDomainsResp.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPAllStageVersionsRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPAllStageVersionsResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPApprovalListData.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPApprovalListRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPApprovalListResp.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPApprovalListResponse.cs" />
     <Compile Include="V20240801\Models\DescribeMNPBoardRequest.cs" />
     <Compile Include="V20240801\Models\DescribeMNPBoardResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPCategoryRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPCategoryResponse.cs" />
     <Compile Include="V20240801\Models\DescribeMNPDetailRequest.cs" />
     <Compile Include="V20240801\Models\DescribeMNPDetailResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPDomainACLRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPDomainACLResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPListData.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPListRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPListResp.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPListResponse.cs" />
     <Compile Include="V20240801\Models\DescribeMNPManagerDetailData.cs" />
     <Compile Include="V20240801\Models\DescribeMNPManagerDetailRequest.cs" />
     <Compile Include="V20240801\Models\DescribeMNPManagerDetailResponse.cs" />
@@ -139,8 +182,28 @@
     <Compile Include="V20240801\Models\DescribeMNPManagerListRequest.cs" />
     <Compile Include="V20240801\Models\DescribeMNPManagerListResp.cs" />
     <Compile Include="V20240801\Models\DescribeMNPManagerListResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPOfflinePackageURLRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPOfflinePackageURLResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPPreviewRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPPreviewResp.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPPreviewResponse.cs" />
     <Compile Include="V20240801\Models\DescribeMNPPrivacyRequest.cs" />
     <Compile Include="V20240801\Models\DescribeMNPPrivacyResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPReleasedVersionHistoryRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPReleasedVersionHistoryResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionApprovalData.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionApprovalListData.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionApprovalListRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionApprovalListResp.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionApprovalListResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionApprovalRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionApprovalResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionListData.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionListRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionListResp.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPSensitiveAPIPermissionListResponse.cs" />
     <Compile Include="V20240801\Models\DescribeMNPTypeRequest.cs" />
     <Compile Include="V20240801\Models\DescribeMNPTypeResponse.cs" />
     <Compile Include="V20240801\Models\DescribeMNPVersionCompileTaskExtInfo.cs" />
@@ -148,6 +211,10 @@
     <Compile Include="V20240801\Models\DescribeMNPVersionCompileTaskSubSimpleInfo.cs" />
     <Compile Include="V20240801\Models\DescribeMNPVersionPreviewRequest.cs" />
     <Compile Include="V20240801\Models\DescribeMNPVersionPreviewResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPVersionRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPVersionResp.cs" />
+    <Compile Include="V20240801\Models\DescribeMNPVersionResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeMPAllStageVersionsResp.cs" />
     <Compile Include="V20240801\Models\DescribeOfflineMNPPackageRequest.cs" />
     <Compile Include="V20240801\Models\DescribeOfflineMNPPackageResponse.cs" />
     <Compile Include="V20240801\Models\DescribeOnlineVersionRequest.cs" />
@@ -205,10 +272,16 @@
     <Compile Include="V20240801\Models\DescribeUserListRequest.cs" />
     <Compile Include="V20240801\Models\DescribeUserListResp.cs" />
     <Compile Include="V20240801\Models\DescribeUserListResponse.cs" />
+    <Compile Include="V20240801\Models\DescribeUserRequest.cs" />
+    <Compile Include="V20240801\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20240801\Models\DisableApplicationSensitiveAPIRequest.cs" />
+    <Compile Include="V20240801\Models\DisableApplicationSensitiveAPIResponse.cs" />
     <Compile Include="V20240801\Models\DisableEnterpriseDomainResp.cs" />
     <Compile Include="V20240801\Models\DisableTeamDomainRequest.cs" />
     <Compile Include="V20240801\Models\DisableTeamDomainResponse.cs" />
     <Compile Include="V20240801\Models\DownloadApplicationConfigResp.cs" />
+    <Compile Include="V20240801\Models\EnableApplicationSensitiveAPIRequest.cs" />
+    <Compile Include="V20240801\Models\EnableApplicationSensitiveAPIResponse.cs" />
     <Compile Include="V20240801\Models\GlobalDomainCheckResp.cs" />
     <Compile Include="V20240801\Models\GlobalDomainDeleteResp.cs" />
     <Compile Include="V20240801\Models\GlobalDomainDescribeListInfoResp.cs" />
@@ -226,6 +299,8 @@
     <Compile Include="V20240801\Models\ModifyDomainResponse.cs" />
     <Compile Include="V20240801\Models\ModifyGlobalDomainRequest.cs" />
     <Compile Include="V20240801\Models\ModifyGlobalDomainResponse.cs" />
+    <Compile Include="V20240801\Models\ModifyMNPDomainRequest.cs" />
+    <Compile Include="V20240801\Models\ModifyMNPDomainResponse.cs" />
     <Compile Include="V20240801\Models\ModifyMNPRequest.cs" />
     <Compile Include="V20240801\Models\ModifyMNPResponse.cs" />
     <Compile Include="V20240801\Models\ModifyMNPStatusOfflineRequest.cs" />
@@ -247,9 +322,19 @@
     <Compile Include="V20240801\Models\ModifyUserRequest.cs" />
     <Compile Include="V20240801\Models\ModifyUserResponse.cs" />
     <Compile Include="V20240801\Models\PresetResp.cs" />
+    <Compile Include="V20240801\Models\ProcessMNPApprovalRequest.cs" />
+    <Compile Include="V20240801\Models\ProcessMNPApprovalResponse.cs" />
+    <Compile Include="V20240801\Models\ProcessMNPSensitiveAPIPermissionApprovalRequest.cs" />
+    <Compile Include="V20240801\Models\ProcessMNPSensitiveAPIPermissionApprovalResponse.cs" />
     <Compile Include="V20240801\Models\QueryOnlineVersionResp.cs" />
+    <Compile Include="V20240801\Models\ReleaseMNPVersionRequest.cs" />
+    <Compile Include="V20240801\Models\ReleaseMNPVersionResponse.cs" />
+    <Compile Include="V20240801\Models\RemoveMNPRequest.cs" />
+    <Compile Include="V20240801\Models\RemoveMNPResponse.cs" />
     <Compile Include="V20240801\Models\ResourceIdInfo.cs" />
     <Compile Include="V20240801\Models\ResourceIdStringInfo.cs" />
+    <Compile Include="V20240801\Models\RollbackMNPVersionRequest.cs" />
+    <Compile Include="V20240801\Models\RollbackMNPVersionResponse.cs" />
     <Compile Include="V20240801\Models\SensitiveApiAuditInfoPageResp.cs" />
     <Compile Include="V20240801\Models\SensitiveApiAuditInfoResp.cs" />
     <Compile Include="V20240801\Models\SensitiveApiInfoResp.cs" />
