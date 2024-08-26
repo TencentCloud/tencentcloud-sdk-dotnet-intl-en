@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.968";
+       private const string sdkVersion = "SDK_NET_3.0.969";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to add SAML signing certificates.
+        /// </summary>
+        /// <param name="req"><see cref="AddExternalSAMLIdPCertificateRequest"/></param>
+        /// <returns><see cref="AddExternalSAMLIdPCertificateResponse"/></returns>
+        public Task<AddExternalSAMLIdPCertificateResponse> AddExternalSAMLIdPCertificate(AddExternalSAMLIdPCertificateRequest req)
+        {
+            return InternalRequestAsync<AddExternalSAMLIdPCertificateResponse>(req, "AddExternalSAMLIdPCertificate");
+        }
+
+        /// <summary>
+        /// This API is used to add SAML signing certificates.
+        /// </summary>
+        /// <param name="req"><see cref="AddExternalSAMLIdPCertificateRequest"/></param>
+        /// <returns><see cref="AddExternalSAMLIdPCertificateResponse"/></returns>
+        public AddExternalSAMLIdPCertificateResponse AddExternalSAMLIdPCertificateSync(AddExternalSAMLIdPCertificateRequest req)
+        {
+            return InternalRequestAsync<AddExternalSAMLIdPCertificateResponse>(req, "AddExternalSAMLIdPCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to add an organization node.
         /// </summary>
         /// <param name="req"><see cref="AddOrganizationNodeRequest"/></param>
@@ -71,6 +92,48 @@ namespace TencentCloud.Organization.V20210331
         public AddOrganizationNodeResponse AddOrganizationNodeSync(AddOrganizationNodeRequest req)
         {
             return InternalRequestAsync<AddOrganizationNodeResponse>(req, "AddOrganizationNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add policies to permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="AddPermissionPolicyToRoleConfigurationRequest"/></param>
+        /// <returns><see cref="AddPermissionPolicyToRoleConfigurationResponse"/></returns>
+        public Task<AddPermissionPolicyToRoleConfigurationResponse> AddPermissionPolicyToRoleConfiguration(AddPermissionPolicyToRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<AddPermissionPolicyToRoleConfigurationResponse>(req, "AddPermissionPolicyToRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to add policies to permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="AddPermissionPolicyToRoleConfigurationRequest"/></param>
+        /// <returns><see cref="AddPermissionPolicyToRoleConfigurationResponse"/></returns>
+        public AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfigurationSync(AddPermissionPolicyToRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<AddPermissionPolicyToRoleConfigurationResponse>(req, "AddPermissionPolicyToRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add users to a user group.
+        /// </summary>
+        /// <param name="req"><see cref="AddUserToGroupRequest"/></param>
+        /// <returns><see cref="AddUserToGroupResponse"/></returns>
+        public Task<AddUserToGroupResponse> AddUserToGroup(AddUserToGroupRequest req)
+        {
+            return InternalRequestAsync<AddUserToGroupResponse>(req, "AddUserToGroup");
+        }
+
+        /// <summary>
+        /// This API is used to add users to a user group.
+        /// </summary>
+        /// <param name="req"><see cref="AddUserToGroupRequest"/></param>
+        /// <returns><see cref="AddUserToGroupResponse"/></returns>
+        public AddUserToGroupResponse AddUserToGroupSync(AddUserToGroupRequest req)
+        {
+            return InternalRequestAsync<AddUserToGroupResponse>(req, "AddUserToGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -113,6 +176,48 @@ namespace TencentCloud.Organization.V20210331
         public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccountSync(CancelOrganizationMemberAuthAccountRequest req)
         {
             return InternalRequestAsync<CancelOrganizationMemberAuthAccountResponse>(req, "CancelOrganizationMemberAuthAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to clear the SAML identity provider configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="ClearExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="ClearExternalSAMLIdentityProviderResponse"/></returns>
+        public Task<ClearExternalSAMLIdentityProviderResponse> ClearExternalSAMLIdentityProvider(ClearExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<ClearExternalSAMLIdentityProviderResponse>(req, "ClearExternalSAMLIdentityProvider");
+        }
+
+        /// <summary>
+        /// This API is used to clear the SAML identity provider configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="ClearExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="ClearExternalSAMLIdentityProviderResponse"/></returns>
+        public ClearExternalSAMLIdentityProviderResponse ClearExternalSAMLIdentityProviderSync(ClearExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<ClearExternalSAMLIdentityProviderResponse>(req, "ClearExternalSAMLIdentityProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create user groups.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupResponse"/></returns>
+        public Task<CreateGroupResponse> CreateGroup(CreateGroupRequest req)
+        {
+            return InternalRequestAsync<CreateGroupResponse>(req, "CreateGroup");
+        }
+
+        /// <summary>
+        /// This API is used to create user groups.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupResponse"/></returns>
+        public CreateGroupResponse CreateGroupSync(CreateGroupRequest req)
+        {
+            return InternalRequestAsync<CreateGroupResponse>(req, "CreateGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +285,111 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to grant authorizations on member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleAssignmentRequest"/></param>
+        /// <returns><see cref="CreateRoleAssignmentResponse"/></returns>
+        public Task<CreateRoleAssignmentResponse> CreateRoleAssignment(CreateRoleAssignmentRequest req)
+        {
+            return InternalRequestAsync<CreateRoleAssignmentResponse>(req, "CreateRoleAssignment");
+        }
+
+        /// <summary>
+        /// This API is used to grant authorizations on member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleAssignmentRequest"/></param>
+        /// <returns><see cref="CreateRoleAssignmentResponse"/></returns>
+        public CreateRoleAssignmentResponse CreateRoleAssignmentSync(CreateRoleAssignmentRequest req)
+        {
+            return InternalRequestAsync<CreateRoleAssignmentResponse>(req, "CreateRoleAssignment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleConfigurationRequest"/></param>
+        /// <returns><see cref="CreateRoleConfigurationResponse"/></returns>
+        public Task<CreateRoleConfigurationResponse> CreateRoleConfiguration(CreateRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<CreateRoleConfigurationResponse>(req, "CreateRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to create permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleConfigurationRequest"/></param>
+        /// <returns><see cref="CreateRoleConfigurationResponse"/></returns>
+        public CreateRoleConfigurationResponse CreateRoleConfigurationSync(CreateRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<CreateRoleConfigurationResponse>(req, "CreateRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a user.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public Task<CreateUserResponse> CreateUser(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser");
+        }
+
+        /// <summary>
+        /// This API is used to create a user.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public CreateUserResponse CreateUserSync(CreateUserRequest req)
+        {
+            return InternalRequestAsync<CreateUserResponse>(req, "CreateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create sub-user synchronization tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="CreateUserSyncProvisioningResponse"/></returns>
+        public Task<CreateUserSyncProvisioningResponse> CreateUserSyncProvisioning(CreateUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<CreateUserSyncProvisioningResponse>(req, "CreateUserSyncProvisioning");
+        }
+
+        /// <summary>
+        /// This API is used to create sub-user synchronization tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="CreateUserSyncProvisioningResponse"/></returns>
+        public CreateUserSyncProvisioningResponse CreateUserSyncProvisioningSync(CreateUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<CreateUserSyncProvisioningResponse>(req, "CreateUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete user groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public Task<DeleteGroupResponse> DeleteGroup(DeleteGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup");
+        }
+
+        /// <summary>
+        /// This API is used to delete user groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a delegated admin of the organization service.
         /// </summary>
         /// <param name="req"><see cref="DeleteOrgServiceAssignRequest"/></param>
@@ -201,7 +411,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to batch delete organization members.
+        /// This API is used to remove a member account from the organization, rather than delete the account.
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>
         /// <returns><see cref="DeleteOrganizationMembersResponse"/></returns>
@@ -211,7 +421,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to batch delete organization members.
+        /// This API is used to remove a member account from the organization, rather than delete the account.
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>
         /// <returns><see cref="DeleteOrganizationMembersResponse"/></returns>
@@ -239,6 +449,111 @@ namespace TencentCloud.Organization.V20210331
         public DeleteOrganizationNodesResponse DeleteOrganizationNodesSync(DeleteOrganizationNodesRequest req)
         {
             return InternalRequestAsync<DeleteOrganizationNodesResponse>(req, "DeleteOrganizationNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to remove authorizations on member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleAssignmentRequest"/></param>
+        /// <returns><see cref="DeleteRoleAssignmentResponse"/></returns>
+        public Task<DeleteRoleAssignmentResponse> DeleteRoleAssignment(DeleteRoleAssignmentRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleAssignmentResponse>(req, "DeleteRoleAssignment");
+        }
+
+        /// <summary>
+        /// This API is used to remove authorizations on member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleAssignmentRequest"/></param>
+        /// <returns><see cref="DeleteRoleAssignmentResponse"/></returns>
+        public DeleteRoleAssignmentResponse DeleteRoleAssignmentSync(DeleteRoleAssignmentRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleAssignmentResponse>(req, "DeleteRoleAssignment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete the permission configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleConfigurationRequest"/></param>
+        /// <returns><see cref="DeleteRoleConfigurationResponse"/></returns>
+        public Task<DeleteRoleConfigurationResponse> DeleteRoleConfiguration(DeleteRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleConfigurationResponse>(req, "DeleteRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to delete the permission configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoleConfigurationRequest"/></param>
+        /// <returns><see cref="DeleteRoleConfigurationResponse"/></returns>
+        public DeleteRoleConfigurationResponse DeleteRoleConfigurationSync(DeleteRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<DeleteRoleConfigurationResponse>(req, "DeleteRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a user.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser");
+        }
+
+        /// <summary>
+        /// This API is used to delete a user.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
+        {
+            return InternalRequestAsync<DeleteUserResponse>(req, "DeleteUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete sub-user synchronization tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="DeleteUserSyncProvisioningResponse"/></returns>
+        public Task<DeleteUserSyncProvisioningResponse> DeleteUserSyncProvisioning(DeleteUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<DeleteUserSyncProvisioningResponse>(req, "DeleteUserSyncProvisioning");
+        }
+
+        /// <summary>
+        /// This API is used to delete sub-user synchronization tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="DeleteUserSyncProvisioningResponse"/></returns>
+        public DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioningSync(DeleteUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<DeleteUserSyncProvisioningResponse>(req, "DeleteUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the CAM Identity Center service information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdentityCenterRequest"/></param>
+        /// <returns><see cref="DescribeIdentityCenterResponse"/></returns>
+        public Task<DescribeIdentityCenterResponse> DescribeIdentityCenter(DescribeIdentityCenterRequest req)
+        {
+            return InternalRequestAsync<DescribeIdentityCenterResponse>(req, "DescribeIdentityCenter");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the CAM Identity Center service information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdentityCenterRequest"/></param>
+        /// <returns><see cref="DescribeIdentityCenterResponse"/></returns>
+        public DescribeIdentityCenterResponse DescribeIdentityCenterSync(DescribeIdentityCenterRequest req)
+        {
+            return InternalRequestAsync<DescribeIdentityCenterResponse>(req, "DescribeIdentityCenter")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -285,7 +600,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to get the list of manageable identities of an organization member.
+        /// This API is used to obtain the list of organization member access authorization.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthIdentitiesRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberAuthIdentitiesResponse"/></returns>
@@ -295,7 +610,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to get the list of manageable identities of an organization member.
+        /// This API is used to obtain the list of organization member access authorization.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberAuthIdentitiesRequest"/></param>
         /// <returns><see cref="DescribeOrganizationMemberAuthIdentitiesResponse"/></returns>
@@ -369,6 +684,300 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to undeploy permission configurations on member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DismantleRoleConfigurationRequest"/></param>
+        /// <returns><see cref="DismantleRoleConfigurationResponse"/></returns>
+        public Task<DismantleRoleConfigurationResponse> DismantleRoleConfiguration(DismantleRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<DismantleRoleConfigurationResponse>(req, "DismantleRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to undeploy permission configurations on member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DismantleRoleConfigurationRequest"/></param>
+        /// <returns><see cref="DismantleRoleConfigurationResponse"/></returns>
+        public DismantleRoleConfigurationResponse DismantleRoleConfigurationSync(DismantleRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<DismantleRoleConfigurationResponse>(req, "DismantleRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the SAML identity provider configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="GetExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="GetExternalSAMLIdentityProviderResponse"/></returns>
+        public Task<GetExternalSAMLIdentityProviderResponse> GetExternalSAMLIdentityProvider(GetExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<GetExternalSAMLIdentityProviderResponse>(req, "GetExternalSAMLIdentityProvider");
+        }
+
+        /// <summary>
+        /// This API is used to query the SAML identity provider configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="GetExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="GetExternalSAMLIdentityProviderResponse"/></returns>
+        public GetExternalSAMLIdentityProviderResponse GetExternalSAMLIdentityProviderSync(GetExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<GetExternalSAMLIdentityProviderResponse>(req, "GetExternalSAMLIdentityProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the user group information.
+        /// </summary>
+        /// <param name="req"><see cref="GetGroupRequest"/></param>
+        /// <returns><see cref="GetGroupResponse"/></returns>
+        public Task<GetGroupResponse> GetGroup(GetGroupRequest req)
+        {
+            return InternalRequestAsync<GetGroupResponse>(req, "GetGroup");
+        }
+
+        /// <summary>
+        /// This API is used to query the user group information.
+        /// </summary>
+        /// <param name="req"><see cref="GetGroupRequest"/></param>
+        /// <returns><see cref="GetGroupResponse"/></returns>
+        public GetGroupResponse GetGroupSync(GetGroupRequest req)
+        {
+            return InternalRequestAsync<GetGroupResponse>(req, "GetGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the status of async tasks of user synchronization.
+        /// </summary>
+        /// <param name="req"><see cref="GetProvisioningTaskStatusRequest"/></param>
+        /// <returns><see cref="GetProvisioningTaskStatusResponse"/></returns>
+        public Task<GetProvisioningTaskStatusResponse> GetProvisioningTaskStatus(GetProvisioningTaskStatusRequest req)
+        {
+            return InternalRequestAsync<GetProvisioningTaskStatusResponse>(req, "GetProvisioningTaskStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query the status of async tasks of user synchronization.
+        /// </summary>
+        /// <param name="req"><see cref="GetProvisioningTaskStatusRequest"/></param>
+        /// <returns><see cref="GetProvisioningTaskStatusResponse"/></returns>
+        public GetProvisioningTaskStatusResponse GetProvisioningTaskStatusSync(GetProvisioningTaskStatusRequest req)
+        {
+            return InternalRequestAsync<GetProvisioningTaskStatusResponse>(req, "GetProvisioningTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the permission configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="GetRoleConfigurationRequest"/></param>
+        /// <returns><see cref="GetRoleConfigurationResponse"/></returns>
+        public Task<GetRoleConfigurationResponse> GetRoleConfiguration(GetRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<GetRoleConfigurationResponse>(req, "GetRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to query the permission configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="GetRoleConfigurationRequest"/></param>
+        /// <returns><see cref="GetRoleConfigurationResponse"/></returns>
+        public GetRoleConfigurationResponse GetRoleConfigurationSync(GetRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<GetRoleConfigurationResponse>(req, "GetRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the status of async tasks.
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskStatusRequest"/></param>
+        /// <returns><see cref="GetTaskStatusResponse"/></returns>
+        public Task<GetTaskStatusResponse> GetTaskStatus(GetTaskStatusRequest req)
+        {
+            return InternalRequestAsync<GetTaskStatusResponse>(req, "GetTaskStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query the status of async tasks.
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskStatusRequest"/></param>
+        /// <returns><see cref="GetTaskStatusResponse"/></returns>
+        public GetTaskStatusResponse GetTaskStatusSync(GetTaskStatusRequest req)
+        {
+            return InternalRequestAsync<GetTaskStatusResponse>(req, "GetTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the user information.
+        /// </summary>
+        /// <param name="req"><see cref="GetUserRequest"/></param>
+        /// <returns><see cref="GetUserResponse"/></returns>
+        public Task<GetUserResponse> GetUser(GetUserRequest req)
+        {
+            return InternalRequestAsync<GetUserResponse>(req, "GetUser");
+        }
+
+        /// <summary>
+        /// This API is used to query the user information.
+        /// </summary>
+        /// <param name="req"><see cref="GetUserRequest"/></param>
+        /// <returns><see cref="GetUserResponse"/></returns>
+        public GetUserResponse GetUserSync(GetUserRequest req)
+        {
+            return InternalRequestAsync<GetUserResponse>(req, "GetUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the CAM user synchronization.
+        /// </summary>
+        /// <param name="req"><see cref="GetUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="GetUserSyncProvisioningResponse"/></returns>
+        public Task<GetUserSyncProvisioningResponse> GetUserSyncProvisioning(GetUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<GetUserSyncProvisioningResponse>(req, "GetUserSyncProvisioning");
+        }
+
+        /// <summary>
+        /// This API is used to query the CAM user synchronization.
+        /// </summary>
+        /// <param name="req"><see cref="GetUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="GetUserSyncProvisioningResponse"/></returns>
+        public GetUserSyncProvisioningResponse GetUserSyncProvisioningSync(GetUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<GetUserSyncProvisioningResponse>(req, "GetUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the SAML service provider configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="GetZoneSAMLServiceProviderInfoRequest"/></param>
+        /// <returns><see cref="GetZoneSAMLServiceProviderInfoResponse"/></returns>
+        public Task<GetZoneSAMLServiceProviderInfoResponse> GetZoneSAMLServiceProviderInfo(GetZoneSAMLServiceProviderInfoRequest req)
+        {
+            return InternalRequestAsync<GetZoneSAMLServiceProviderInfoResponse>(req, "GetZoneSAMLServiceProviderInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query the SAML service provider configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="GetZoneSAMLServiceProviderInfoRequest"/></param>
+        /// <returns><see cref="GetZoneSAMLServiceProviderInfoResponse"/></returns>
+        public GetZoneSAMLServiceProviderInfoResponse GetZoneSAMLServiceProviderInfoSync(GetZoneSAMLServiceProviderInfoRequest req)
+        {
+            return InternalRequestAsync<GetZoneSAMLServiceProviderInfoResponse>(req, "GetZoneSAMLServiceProviderInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query space statistics.
+        /// </summary>
+        /// <param name="req"><see cref="GetZoneStatisticsRequest"/></param>
+        /// <returns><see cref="GetZoneStatisticsResponse"/></returns>
+        public Task<GetZoneStatisticsResponse> GetZoneStatistics(GetZoneStatisticsRequest req)
+        {
+            return InternalRequestAsync<GetZoneStatisticsResponse>(req, "GetZoneStatistics");
+        }
+
+        /// <summary>
+        /// This API is used to query space statistics.
+        /// </summary>
+        /// <param name="req"><see cref="GetZoneStatisticsRequest"/></param>
+        /// <returns><see cref="GetZoneStatisticsResponse"/></returns>
+        public GetZoneStatisticsResponse GetZoneStatisticsSync(GetZoneStatisticsRequest req)
+        {
+            return InternalRequestAsync<GetZoneStatisticsResponse>(req, "GetZoneStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the SAML signing certificate list.
+        /// </summary>
+        /// <param name="req"><see cref="ListExternalSAMLIdPCertificatesRequest"/></param>
+        /// <returns><see cref="ListExternalSAMLIdPCertificatesResponse"/></returns>
+        public Task<ListExternalSAMLIdPCertificatesResponse> ListExternalSAMLIdPCertificates(ListExternalSAMLIdPCertificatesRequest req)
+        {
+            return InternalRequestAsync<ListExternalSAMLIdPCertificatesResponse>(req, "ListExternalSAMLIdPCertificates");
+        }
+
+        /// <summary>
+        /// This API is used to query the SAML signing certificate list.
+        /// </summary>
+        /// <param name="req"><see cref="ListExternalSAMLIdPCertificatesRequest"/></param>
+        /// <returns><see cref="ListExternalSAMLIdPCertificatesResponse"/></returns>
+        public ListExternalSAMLIdPCertificatesResponse ListExternalSAMLIdPCertificatesSync(ListExternalSAMLIdPCertificatesRequest req)
+        {
+            return InternalRequestAsync<ListExternalSAMLIdPCertificatesResponse>(req, "ListExternalSAMLIdPCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the user list of the user group.
+        /// </summary>
+        /// <param name="req"><see cref="ListGroupMembersRequest"/></param>
+        /// <returns><see cref="ListGroupMembersResponse"/></returns>
+        public Task<ListGroupMembersResponse> ListGroupMembers(ListGroupMembersRequest req)
+        {
+            return InternalRequestAsync<ListGroupMembersResponse>(req, "ListGroupMembers");
+        }
+
+        /// <summary>
+        /// This API is used to query the user list of the user group.
+        /// </summary>
+        /// <param name="req"><see cref="ListGroupMembersRequest"/></param>
+        /// <returns><see cref="ListGroupMembersResponse"/></returns>
+        public ListGroupMembersResponse ListGroupMembersSync(ListGroupMembersRequest req)
+        {
+            return InternalRequestAsync<ListGroupMembersResponse>(req, "ListGroupMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the user group list.
+        /// </summary>
+        /// <param name="req"><see cref="ListGroupsRequest"/></param>
+        /// <returns><see cref="ListGroupsResponse"/></returns>
+        public Task<ListGroupsResponse> ListGroups(ListGroupsRequest req)
+        {
+            return InternalRequestAsync<ListGroupsResponse>(req, "ListGroups");
+        }
+
+        /// <summary>
+        /// This API is used to query the user group list.
+        /// </summary>
+        /// <param name="req"><see cref="ListGroupsRequest"/></param>
+        /// <returns><see cref="ListGroupsResponse"/></returns>
+        public ListGroupsResponse ListGroupsSync(ListGroupsRequest req)
+        {
+            return InternalRequestAsync<ListGroupsResponse>(req, "ListGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the user group joined by users.
+        /// </summary>
+        /// <param name="req"><see cref="ListJoinedGroupsForUserRequest"/></param>
+        /// <returns><see cref="ListJoinedGroupsForUserResponse"/></returns>
+        public Task<ListJoinedGroupsForUserResponse> ListJoinedGroupsForUser(ListJoinedGroupsForUserRequest req)
+        {
+            return InternalRequestAsync<ListJoinedGroupsForUserResponse>(req, "ListJoinedGroupsForUser");
+        }
+
+        /// <summary>
+        /// This API is used to query the user group joined by users.
+        /// </summary>
+        /// <param name="req"><see cref="ListJoinedGroupsForUserRequest"/></param>
+        /// <returns><see cref="ListJoinedGroupsForUserResponse"/></returns>
+        public ListJoinedGroupsForUserResponse ListJoinedGroupsForUserSync(ListJoinedGroupsForUserRequest req)
+        {
+            return InternalRequestAsync<ListJoinedGroupsForUserResponse>(req, "ListJoinedGroupsForUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the list of delegated admins of the organization service.
         /// </summary>
         /// <param name="req"><see cref="ListOrgServiceAssignMemberRequest"/></param>
@@ -432,6 +1041,153 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to obtain the policy list in permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionPoliciesInRoleConfigurationRequest"/></param>
+        /// <returns><see cref="ListPermissionPoliciesInRoleConfigurationResponse"/></returns>
+        public Task<ListPermissionPoliciesInRoleConfigurationResponse> ListPermissionPoliciesInRoleConfiguration(ListPermissionPoliciesInRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<ListPermissionPoliciesInRoleConfigurationResponse>(req, "ListPermissionPoliciesInRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the policy list in permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionPoliciesInRoleConfigurationRequest"/></param>
+        /// <returns><see cref="ListPermissionPoliciesInRoleConfigurationResponse"/></returns>
+        public ListPermissionPoliciesInRoleConfigurationResponse ListPermissionPoliciesInRoleConfigurationSync(ListPermissionPoliciesInRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<ListPermissionPoliciesInRoleConfigurationResponse>(req, "ListPermissionPoliciesInRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the authorization list.
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleAssignmentsRequest"/></param>
+        /// <returns><see cref="ListRoleAssignmentsResponse"/></returns>
+        public Task<ListRoleAssignmentsResponse> ListRoleAssignments(ListRoleAssignmentsRequest req)
+        {
+            return InternalRequestAsync<ListRoleAssignmentsResponse>(req, "ListRoleAssignments");
+        }
+
+        /// <summary>
+        /// This API is used to query the authorization list.
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleAssignmentsRequest"/></param>
+        /// <returns><see cref="ListRoleAssignmentsResponse"/></returns>
+        public ListRoleAssignmentsResponse ListRoleAssignmentsSync(ListRoleAssignmentsRequest req)
+        {
+            return InternalRequestAsync<ListRoleAssignmentsResponse>(req, "ListRoleAssignments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the permission configuration deployment list.
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationProvisioningsRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationProvisioningsResponse"/></returns>
+        public Task<ListRoleConfigurationProvisioningsResponse> ListRoleConfigurationProvisionings(ListRoleConfigurationProvisioningsRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationProvisioningsResponse>(req, "ListRoleConfigurationProvisionings");
+        }
+
+        /// <summary>
+        /// This API is used to query the permission configuration deployment list.
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationProvisioningsRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationProvisioningsResponse"/></returns>
+        public ListRoleConfigurationProvisioningsResponse ListRoleConfigurationProvisioningsSync(ListRoleConfigurationProvisioningsRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationProvisioningsResponse>(req, "ListRoleConfigurationProvisionings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the permission configuration list.
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationsRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationsResponse"/></returns>
+        public Task<ListRoleConfigurationsResponse> ListRoleConfigurations(ListRoleConfigurationsRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationsResponse>(req, "ListRoleConfigurations");
+        }
+
+        /// <summary>
+        /// This API is used to query the permission configuration list.
+        /// </summary>
+        /// <param name="req"><see cref="ListRoleConfigurationsRequest"/></param>
+        /// <returns><see cref="ListRoleConfigurationsResponse"/></returns>
+        public ListRoleConfigurationsResponse ListRoleConfigurationsSync(ListRoleConfigurationsRequest req)
+        {
+            return InternalRequestAsync<ListRoleConfigurationsResponse>(req, "ListRoleConfigurations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the async task list.
+        /// </summary>
+        /// <param name="req"><see cref="ListTasksRequest"/></param>
+        /// <returns><see cref="ListTasksResponse"/></returns>
+        public Task<ListTasksResponse> ListTasks(ListTasksRequest req)
+        {
+            return InternalRequestAsync<ListTasksResponse>(req, "ListTasks");
+        }
+
+        /// <summary>
+        /// This API is used to query the async task list.
+        /// </summary>
+        /// <param name="req"><see cref="ListTasksRequest"/></param>
+        /// <returns><see cref="ListTasksResponse"/></returns>
+        public ListTasksResponse ListTasksSync(ListTasksRequest req)
+        {
+            return InternalRequestAsync<ListTasksResponse>(req, "ListTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the CAM user synchronization list.
+        /// </summary>
+        /// <param name="req"><see cref="ListUserSyncProvisioningsRequest"/></param>
+        /// <returns><see cref="ListUserSyncProvisioningsResponse"/></returns>
+        public Task<ListUserSyncProvisioningsResponse> ListUserSyncProvisionings(ListUserSyncProvisioningsRequest req)
+        {
+            return InternalRequestAsync<ListUserSyncProvisioningsResponse>(req, "ListUserSyncProvisionings");
+        }
+
+        /// <summary>
+        /// This API is used to query the CAM user synchronization list.
+        /// </summary>
+        /// <param name="req"><see cref="ListUserSyncProvisioningsRequest"/></param>
+        /// <returns><see cref="ListUserSyncProvisioningsResponse"/></returns>
+        public ListUserSyncProvisioningsResponse ListUserSyncProvisioningsSync(ListUserSyncProvisioningsRequest req)
+        {
+            return InternalRequestAsync<ListUserSyncProvisioningsResponse>(req, "ListUserSyncProvisionings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the user list.
+        /// </summary>
+        /// <param name="req"><see cref="ListUsersRequest"/></param>
+        /// <returns><see cref="ListUsersResponse"/></returns>
+        public Task<ListUsersResponse> ListUsers(ListUsersRequest req)
+        {
+            return InternalRequestAsync<ListUsersResponse>(req, "ListUsers");
+        }
+
+        /// <summary>
+        /// This API is used to query the user list.
+        /// </summary>
+        /// <param name="req"><see cref="ListUsersRequest"/></param>
+        /// <returns><see cref="ListUsersResponse"/></returns>
+        public ListUsersResponse ListUsersSync(ListUsersRequest req)
+        {
+            return InternalRequestAsync<ListUsersResponse>(req, "ListUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to move a member to the specified organization node.
         /// </summary>
         /// <param name="req"><see cref="MoveOrganizationNodeMembersRequest"/></param>
@@ -453,6 +1209,153 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to activate the CIC service.
+        /// </summary>
+        /// <param name="req"><see cref="OpenIdentityCenterRequest"/></param>
+        /// <returns><see cref="OpenIdentityCenterResponse"/></returns>
+        public Task<OpenIdentityCenterResponse> OpenIdentityCenter(OpenIdentityCenterRequest req)
+        {
+            return InternalRequestAsync<OpenIdentityCenterResponse>(req, "OpenIdentityCenter");
+        }
+
+        /// <summary>
+        /// This API is used to activate the CIC service.
+        /// </summary>
+        /// <param name="req"><see cref="OpenIdentityCenterRequest"/></param>
+        /// <returns><see cref="OpenIdentityCenterResponse"/></returns>
+        public OpenIdentityCenterResponse OpenIdentityCenterSync(OpenIdentityCenterRequest req)
+        {
+            return InternalRequestAsync<OpenIdentityCenterResponse>(req, "OpenIdentityCenter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to deploy permission configurations on member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="ProvisionRoleConfigurationRequest"/></param>
+        /// <returns><see cref="ProvisionRoleConfigurationResponse"/></returns>
+        public Task<ProvisionRoleConfigurationResponse> ProvisionRoleConfiguration(ProvisionRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<ProvisionRoleConfigurationResponse>(req, "ProvisionRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to deploy permission configurations on member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="ProvisionRoleConfigurationRequest"/></param>
+        /// <returns><see cref="ProvisionRoleConfigurationResponse"/></returns>
+        public ProvisionRoleConfigurationResponse ProvisionRoleConfigurationSync(ProvisionRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<ProvisionRoleConfigurationResponse>(req, "ProvisionRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to remove SAML signing certificates.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveExternalSAMLIdPCertificateRequest"/></param>
+        /// <returns><see cref="RemoveExternalSAMLIdPCertificateResponse"/></returns>
+        public Task<RemoveExternalSAMLIdPCertificateResponse> RemoveExternalSAMLIdPCertificate(RemoveExternalSAMLIdPCertificateRequest req)
+        {
+            return InternalRequestAsync<RemoveExternalSAMLIdPCertificateResponse>(req, "RemoveExternalSAMLIdPCertificate");
+        }
+
+        /// <summary>
+        /// This API is used to remove SAML signing certificates.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveExternalSAMLIdPCertificateRequest"/></param>
+        /// <returns><see cref="RemoveExternalSAMLIdPCertificateResponse"/></returns>
+        public RemoveExternalSAMLIdPCertificateResponse RemoveExternalSAMLIdPCertificateSync(RemoveExternalSAMLIdPCertificateRequest req)
+        {
+            return InternalRequestAsync<RemoveExternalSAMLIdPCertificateResponse>(req, "RemoveExternalSAMLIdPCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to remove policies from permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="RemovePermissionPolicyFromRoleConfigurationRequest"/></param>
+        /// <returns><see cref="RemovePermissionPolicyFromRoleConfigurationResponse"/></returns>
+        public Task<RemovePermissionPolicyFromRoleConfigurationResponse> RemovePermissionPolicyFromRoleConfiguration(RemovePermissionPolicyFromRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<RemovePermissionPolicyFromRoleConfigurationResponse>(req, "RemovePermissionPolicyFromRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to remove policies from permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="RemovePermissionPolicyFromRoleConfigurationRequest"/></param>
+        /// <returns><see cref="RemovePermissionPolicyFromRoleConfigurationResponse"/></returns>
+        public RemovePermissionPolicyFromRoleConfigurationResponse RemovePermissionPolicyFromRoleConfigurationSync(RemovePermissionPolicyFromRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<RemovePermissionPolicyFromRoleConfigurationResponse>(req, "RemovePermissionPolicyFromRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to removes users from a user group.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserFromGroupRequest"/></param>
+        /// <returns><see cref="RemoveUserFromGroupResponse"/></returns>
+        public Task<RemoveUserFromGroupResponse> RemoveUserFromGroup(RemoveUserFromGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveUserFromGroupResponse>(req, "RemoveUserFromGroup");
+        }
+
+        /// <summary>
+        /// This API is used to removes users from a user group.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserFromGroupRequest"/></param>
+        /// <returns><see cref="RemoveUserFromGroupResponse"/></returns>
+        public RemoveUserFromGroupResponse RemoveUserFromGroupSync(RemoveUserFromGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveUserFromGroupResponse>(req, "RemoveUserFromGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to configure the SAML identity provider information.
+        /// </summary>
+        /// <param name="req"><see cref="SetExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="SetExternalSAMLIdentityProviderResponse"/></returns>
+        public Task<SetExternalSAMLIdentityProviderResponse> SetExternalSAMLIdentityProvider(SetExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<SetExternalSAMLIdentityProviderResponse>(req, "SetExternalSAMLIdentityProvider");
+        }
+
+        /// <summary>
+        /// This API is used to configure the SAML identity provider information.
+        /// </summary>
+        /// <param name="req"><see cref="SetExternalSAMLIdentityProviderRequest"/></param>
+        /// <returns><see cref="SetExternalSAMLIdentityProviderResponse"/></returns>
+        public SetExternalSAMLIdentityProviderResponse SetExternalSAMLIdentityProviderSync(SetExternalSAMLIdentityProviderRequest req)
+        {
+            return InternalRequestAsync<SetExternalSAMLIdentityProviderResponse>(req, "SetExternalSAMLIdentityProvider")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify user group information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGroupRequest"/></param>
+        /// <returns><see cref="UpdateGroupResponse"/></returns>
+        public Task<UpdateGroupResponse> UpdateGroup(UpdateGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateGroupResponse>(req, "UpdateGroup");
+        }
+
+        /// <summary>
+        /// This API is used to modify user group information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGroupRequest"/></param>
+        /// <returns><see cref="UpdateGroupResponse"/></returns>
+        public UpdateGroupResponse UpdateGroupSync(UpdateGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateGroupResponse>(req, "UpdateGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to update an organization node.
         /// </summary>
         /// <param name="req"><see cref="UpdateOrganizationNodeRequest"/></param>
@@ -470,6 +1373,111 @@ namespace TencentCloud.Organization.V20210331
         public UpdateOrganizationNodeResponse UpdateOrganizationNodeSync(UpdateOrganizationNodeRequest req)
         {
             return InternalRequestAsync<UpdateOrganizationNodeResponse>(req, "UpdateOrganizationNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the permission configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRoleConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateRoleConfigurationResponse"/></returns>
+        public Task<UpdateRoleConfigurationResponse> UpdateRoleConfiguration(UpdateRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateRoleConfigurationResponse>(req, "UpdateRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to modify the permission configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRoleConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateRoleConfigurationResponse"/></returns>
+        public UpdateRoleConfigurationResponse UpdateRoleConfigurationSync(UpdateRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateRoleConfigurationResponse>(req, "UpdateRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify user information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserRequest"/></param>
+        /// <returns><see cref="UpdateUserResponse"/></returns>
+        public Task<UpdateUserResponse> UpdateUser(UpdateUserRequest req)
+        {
+            return InternalRequestAsync<UpdateUserResponse>(req, "UpdateUser");
+        }
+
+        /// <summary>
+        /// This API is used to modify user information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserRequest"/></param>
+        /// <returns><see cref="UpdateUserResponse"/></returns>
+        public UpdateUserResponse UpdateUserSync(UpdateUserRequest req)
+        {
+            return InternalRequestAsync<UpdateUserResponse>(req, "UpdateUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the user status.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserStatusRequest"/></param>
+        /// <returns><see cref="UpdateUserStatusResponse"/></returns>
+        public Task<UpdateUserStatusResponse> UpdateUserStatus(UpdateUserStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateUserStatusResponse>(req, "UpdateUserStatus");
+        }
+
+        /// <summary>
+        /// This API is used to modify the user status.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserStatusRequest"/></param>
+        /// <returns><see cref="UpdateUserStatusResponse"/></returns>
+        public UpdateUserStatusResponse UpdateUserStatusSync(UpdateUserStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateUserStatusResponse>(req, "UpdateUserStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create sub-user synchronization tasks.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="UpdateUserSyncProvisioningResponse"/></returns>
+        public Task<UpdateUserSyncProvisioningResponse> UpdateUserSyncProvisioning(UpdateUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<UpdateUserSyncProvisioningResponse>(req, "UpdateUserSyncProvisioning");
+        }
+
+        /// <summary>
+        /// This API is used to create sub-user synchronization tasks.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserSyncProvisioningRequest"/></param>
+        /// <returns><see cref="UpdateUserSyncProvisioningResponse"/></returns>
+        public UpdateUserSyncProvisioningResponse UpdateUserSyncProvisioningSync(UpdateUserSyncProvisioningRequest req)
+        {
+            return InternalRequestAsync<UpdateUserSyncProvisioningResponse>(req, "UpdateUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the user's space name.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateZoneRequest"/></param>
+        /// <returns><see cref="UpdateZoneResponse"/></returns>
+        public Task<UpdateZoneResponse> UpdateZone(UpdateZoneRequest req)
+        {
+            return InternalRequestAsync<UpdateZoneResponse>(req, "UpdateZone");
+        }
+
+        /// <summary>
+        /// This API is used to update the user's space name.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateZoneRequest"/></param>
+        /// <returns><see cref="UpdateZoneResponse"/></returns>
+        public UpdateZoneResponse UpdateZoneSync(UpdateZoneRequest req)
+        {
+            return InternalRequestAsync<UpdateZoneResponse>(req, "UpdateZone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

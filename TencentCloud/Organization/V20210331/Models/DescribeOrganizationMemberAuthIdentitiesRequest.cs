@@ -37,10 +37,16 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Organization member UIN.
+        /// Uin of the organization member. At least one of the input parameters MemberUin and IdentityId must be entered.
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
+
+        /// <summary>
+        /// Identity ID. At least one of the input parameters MemberUin and IdentityId must be provided. It can be obtained through [ListOrganizationIdentity](https://intl.cloud.tencent.com/document/product/850/82934?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("IdentityId")]
+        public ulong? IdentityId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "IdentityId", this.IdentityId);
         }
     }
 }

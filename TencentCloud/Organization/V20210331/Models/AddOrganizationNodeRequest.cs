@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
+        /// Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ParentNodeId")]
         public ulong? ParentNodeId{ get; set; }

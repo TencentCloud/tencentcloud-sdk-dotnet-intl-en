@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Offset.
+        /// Offset. Its value must be an integer multiple of the limit. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number of returned results.
+        /// Limit. Value range: 1-50. Default value: 10.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// Policy ID.
+        /// Policy ID, which can be obtained through [DescribeOrganizationMemberPolicies](https://intl.cloud.tencent.com/document/product/850/82935?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }

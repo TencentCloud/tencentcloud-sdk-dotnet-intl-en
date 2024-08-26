@@ -31,7 +31,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset.
+        /// Offset. Its value must be an integer multiple of the limit. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

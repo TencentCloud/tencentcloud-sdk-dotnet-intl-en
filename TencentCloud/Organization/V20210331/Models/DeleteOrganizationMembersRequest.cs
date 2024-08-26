@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// List of UINs of the members to be deleted.
+        /// Uin list of the deleted members.
         /// </summary>
         [JsonProperty("MemberUin")]
         public long?[] MemberUin{ get; set; }

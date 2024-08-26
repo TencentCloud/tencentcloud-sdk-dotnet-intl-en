@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Node ID.
+        /// Node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("NodeId")]
         public ulong? NodeId{ get; set; }

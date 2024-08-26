@@ -25,13 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Offset.
+        /// Offset. Its value must be an integer multiple of the limit. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number of returned results. Maximum value: `50`.
+        /// Limit. Value range: 1-50. Default value: 10.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

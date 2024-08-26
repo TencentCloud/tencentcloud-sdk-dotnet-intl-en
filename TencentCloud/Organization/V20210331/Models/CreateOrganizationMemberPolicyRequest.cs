@@ -37,7 +37,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+        /// Member access identity ID, which can be obtained through [DescribeOrganizationMemberAuthIdentities](https://intl.cloud.tencent.com/document/product/850/82936?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }

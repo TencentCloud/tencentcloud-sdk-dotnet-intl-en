@@ -46,32 +46,53 @@ namespace TencentCloud.Organization.V20210331.Models
         public string IdentityRoleAliasName{ get; set; }
 
         /// <summary>
-        /// Description
+        /// Identity description.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// Time of initial configuration success.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time.
+        /// Time of last configuration success.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Identity type (`1`: Preset; `2`: Custom)
+        /// Identity type. Valid values: 1 (preset identity), 2 (custom identity).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityType")]
         public ulong? IdentityType{ get; set; }
+
+        /// <summary>
+        /// Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// Member Uin.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MemberUin")]
+        public long? MemberUin{ get; set; }
+
+        /// <summary>
+        /// Member name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MemberName")]
+        public string MemberName{ get; set; }
 
 
         /// <summary>
@@ -86,6 +107,9 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "IdentityType", this.IdentityType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "MemberName", this.MemberName);
         }
     }
 }

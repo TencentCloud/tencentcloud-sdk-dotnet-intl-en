@@ -25,16 +25,30 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Policy ID
+        /// CAM preset policy ID, which is valid and required when PolicyType is a preset policy.
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// Policy name
+        /// CAM preset policy name, which is valid and required when PolicyType is a preset policy.
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
+
+        /// <summary>
+        /// Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PolicyType")]
+        public ulong? PolicyType{ get; set; }
+
+        /// <summary>
+        /// Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PolicyDocument")]
+        public string PolicyDocument{ get; set; }
 
 
         /// <summary>
@@ -44,6 +58,8 @@ namespace TencentCloud.Organization.V20210331.Models
         {
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
+            this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
+            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
         }
     }
 }

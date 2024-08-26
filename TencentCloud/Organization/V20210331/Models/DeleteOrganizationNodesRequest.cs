@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// List of node IDs.
+        /// Node ID list, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("NodeId")]
         public long?[] NodeId{ get; set; }
