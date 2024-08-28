@@ -1,0 +1,155 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Cwp.V20180228.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeSecurityProtectionStatResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// 0: asset not paid; 1: agent not installed; 2: Pro or Ultimate Edition for some assets; 3: Pro or Ultimate Edition for all assets.
+        /// </summary>
+        [JsonProperty("AssetManageStat")]
+        public ulong? AssetManageStat{ get; set; }
+
+        /// <summary>
+        /// 0: never scanned or asset not paid; 1: vulnerability risk found; 2: no risk.
+        /// </summary>
+        [JsonProperty("VulManageStat")]
+        public ulong? VulManageStat{ get; set; }
+
+        /// <summary>
+        /// 0: never scanned or asset not paid; 1: baseline risk found; 2: no risk.
+        /// </summary>
+        [JsonProperty("SecureBasicLineStat")]
+        public ulong? SecureBasicLineStat{ get; set; }
+
+        /// <summary>
+        /// 0: never scanned or asset not paid; 1: scanned and malicious files found; 2: scanned but isolation protection disabled; 3: scanned, protection enabled, and no risk found.
+        /// </summary>
+        [JsonProperty("MalwareScanStat")]
+        public ulong? MalwareScanStat{ get; set; }
+
+        /// <summary>
+        /// Enabling status of password cracking prevention. 0: disabled or asset not paid; 1: enabled; 2: events pending fixing found.
+        /// </summary>
+        [JsonProperty("DefenseBruteAttackStat")]
+        public ulong? DefenseBruteAttackStat{ get; set; }
+
+        /// <summary>
+        /// Core file monitoring. 0: disabled (asset not paid); 1: enabled.
+        /// </summary>
+        [JsonProperty("FileTamperStat")]
+        public ulong? FileTamperStat{ get; set; }
+
+        /// <summary>
+        /// Web page tamper prevention. 0: disabled; 1: enabled.
+        /// </summary>
+        [JsonProperty("WebPageStat")]
+        public ulong? WebPageStat{ get; set; }
+
+        /// <summary>
+        /// Abnormal log-in. 0: unfixed risks found; 1: no risk and allowlist not configured; 2: no risk and allowlist configured.
+        /// </summary>
+        [JsonProperty("LoginLogStat")]
+        public ulong? LoginLogStat{ get; set; }
+
+        /// <summary>
+        /// Password cracking risk detection. 0: unfixed risks found; 1: no risk with detection in progress.
+        /// </summary>
+        [JsonProperty("DiscoverBruteAttackStat")]
+        public ulong? DiscoverBruteAttackStat{ get; set; }
+
+        /// <summary>
+        /// Malicious request. 0: no asset in Pro or Ultimate Edition; 1: unfixed malicious request risks found; 2: paid assets found with no risk.
+        /// </summary>
+        [JsonProperty("MaliciousRequestStat")]
+        public ulong? MaliciousRequestStat{ get; set; }
+
+        /// <summary>
+        /// Local privilege escalation. 0: no asset in Pro or Ultimate Edition; 1: unfixed risks found; 2: paid assets found with no risk.
+        /// </summary>
+        [JsonProperty("PrivilegeStat")]
+        public ulong? PrivilegeStat{ get; set; }
+
+        /// <summary>
+        /// Reverse shell. 0: no asset in Pro or Ultimate Edition; 1: unfixed risks found; 2: paid assets found with no risk.
+        /// </summary>
+        [JsonProperty("ReverseShellStat")]
+        public ulong? ReverseShellStat{ get; set; }
+
+        /// <summary>
+        /// Expert service. 0: disabled; 1: enabled.
+        /// </summary>
+        [JsonProperty("ExpertServiceStat")]
+        public ulong? ExpertServiceStat{ get; set; }
+
+        /// <summary>
+        /// Log analysis. 0: disabled; 1: enabled.
+        /// </summary>
+        [JsonProperty("LogAnalysisStat")]
+        public ulong? LogAnalysisStat{ get; set; }
+
+        /// <summary>
+        /// Security alarm. 0: disabled (for all assets); 1: enabled (for at least one asset).
+        /// </summary>
+        [JsonProperty("WarningSetStat")]
+        public ulong? WarningSetStat{ get; set; }
+
+        /// <summary>
+        /// High-risk command. 0: no asset in Pro or Ultimate Edition; 1: unfixed risks found; 2: paid assets found with no risk.
+        /// </summary>
+        [JsonProperty("EventBashStat")]
+        public ulong? EventBashStat{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "AssetManageStat", this.AssetManageStat);
+            this.SetParamSimple(map, prefix + "VulManageStat", this.VulManageStat);
+            this.SetParamSimple(map, prefix + "SecureBasicLineStat", this.SecureBasicLineStat);
+            this.SetParamSimple(map, prefix + "MalwareScanStat", this.MalwareScanStat);
+            this.SetParamSimple(map, prefix + "DefenseBruteAttackStat", this.DefenseBruteAttackStat);
+            this.SetParamSimple(map, prefix + "FileTamperStat", this.FileTamperStat);
+            this.SetParamSimple(map, prefix + "WebPageStat", this.WebPageStat);
+            this.SetParamSimple(map, prefix + "LoginLogStat", this.LoginLogStat);
+            this.SetParamSimple(map, prefix + "DiscoverBruteAttackStat", this.DiscoverBruteAttackStat);
+            this.SetParamSimple(map, prefix + "MaliciousRequestStat", this.MaliciousRequestStat);
+            this.SetParamSimple(map, prefix + "PrivilegeStat", this.PrivilegeStat);
+            this.SetParamSimple(map, prefix + "ReverseShellStat", this.ReverseShellStat);
+            this.SetParamSimple(map, prefix + "ExpertServiceStat", this.ExpertServiceStat);
+            this.SetParamSimple(map, prefix + "LogAnalysisStat", this.LogAnalysisStat);
+            this.SetParamSimple(map, prefix + "WarningSetStat", this.WarningSetStat);
+            this.SetParamSimple(map, prefix + "EventBashStat", this.EventBashStat);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+
