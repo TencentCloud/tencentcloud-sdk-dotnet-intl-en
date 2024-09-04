@@ -25,25 +25,25 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+        /// Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// Public IP of user’s application client, which is used for nearby scheduling.
+        /// Public IP address of the user's client, which is used for nearby scheduling.
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// The project ID.
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of other versions is requested, you need to specify the version through this field.
+        /// Application version ID. If the application of the current version is requested, you do not need to fill in this field. If the application of the other versions is requested, you need to specify the version through this field.
         /// </summary>
         [JsonProperty("ApplicationVersionId")]
         public string ApplicationVersionId{ get; set; }

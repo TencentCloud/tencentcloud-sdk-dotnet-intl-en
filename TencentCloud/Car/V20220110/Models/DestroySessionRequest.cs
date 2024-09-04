@@ -25,7 +25,7 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+        /// Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

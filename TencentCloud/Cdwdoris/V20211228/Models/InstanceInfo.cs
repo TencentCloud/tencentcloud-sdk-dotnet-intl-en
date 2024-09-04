@@ -361,6 +361,27 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CoolDownBucket")]
         public string CoolDownBucket{ get; set; }
 
+        /// <summary>
+        /// Instance extension information
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Details")]
+        public InstanceDetail Details{ get; set; }
+
+        /// <summary>
+        /// Whether to enable DLC. 0: disable; 1: enable.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnableDlc")]
+        public long? EnableDlc{ get; set; }
+
+        /// <summary>
+        /// Account type. 0: ordinary user; 1: CAM user.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public long? AccountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -414,6 +435,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "UserNetworkInfos", this.UserNetworkInfos);
             this.SetParamSimple(map, prefix + "EnableCoolDown", this.EnableCoolDown);
             this.SetParamSimple(map, prefix + "CoolDownBucket", this.CoolDownBucket);
+            this.SetParamObj(map, prefix + "Details.", this.Details);
+            this.SetParamSimple(map, prefix + "EnableDlc", this.EnableDlc);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

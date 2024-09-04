@@ -25,13 +25,13 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Unique user ID, which is customized by you and is not understood by CAR. It will be used as the `StreamId` for pushing streams. For example, if the bound push domain is **abc.livepush.myqcloud.com**, the push address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
+        /// Unique user ID, which is customized by you and is not parsed by CAR. It will be used as the `StreamId` for streaming. For example, if the bound streaming domain is **abc.livepush.myqcloud.com**, the streaming address will be **rtmp://abc.livepush.myqcloud.com/live/UserId?txSecret=xxx&txTime=xxx**.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// Push parameter, which is a custom parameter carried during stream pushing.
+        /// Streaming parameter, which is a custom parameter carried during streaming.
         /// </summary>
         [JsonProperty("PublishStreamArgs")]
         public string PublishStreamArgs{ get; set; }

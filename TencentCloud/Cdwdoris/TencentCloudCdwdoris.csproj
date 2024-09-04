@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{30E1AC6A-DB82-3A63-BE17-56AB4B24E00E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.971</VersionPrefix>
+    <VersionPrefix>3.0.972</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="V20211228\CdwdorisClient.cs" />
     <Compile Include="V20211228\Models\AccountDetailInfo.cs" />
+    <Compile Include="V20211228\Models\ActionAlterUserRequest.cs" />
+    <Compile Include="V20211228\Models\ActionAlterUserResponse.cs" />
     <Compile Include="V20211228\Models\AttachCBSSpec.cs" />
     <Compile Include="V20211228\Models\BackUpJobDisplay.cs" />
     <Compile Include="V20211228\Models\BackupCosInfo.cs" />
@@ -58,15 +60,23 @@
     <Compile Include="V20211228\Models\CancelBackupJobRequest.cs" />
     <Compile Include="V20211228\Models\CancelBackupJobResponse.cs" />
     <Compile Include="V20211228\Models\ChargeProperties.cs" />
+    <Compile Include="V20211228\Models\CheckCoolDownWorkingVariableConfigCorrectRequest.cs" />
+    <Compile Include="V20211228\Models\CheckCoolDownWorkingVariableConfigCorrectResponse.cs" />
     <Compile Include="V20211228\Models\ClusterConfigsHistory.cs" />
     <Compile Include="V20211228\Models\ClusterConfigsInfoFromEMR.cs" />
     <Compile Include="V20211228\Models\Column.cs" />
     <Compile Include="V20211228\Models\ConfigKeyValue.cs" />
+    <Compile Include="V20211228\Models\ConfigSubmitContext.cs" />
+    <Compile Include="V20211228\Models\CoolDownBackend.cs" />
+    <Compile Include="V20211228\Models\CoolDownPolicyInfo.cs" />
+    <Compile Include="V20211228\Models\CoolDownTableDataInfo.cs" />
     <Compile Include="V20211228\Models\CopyTableDatasRequest.cs" />
     <Compile Include="V20211228\Models\CopyTableDatasResponse.cs" />
     <Compile Include="V20211228\Models\CosSourceInfo.cs" />
     <Compile Include="V20211228\Models\CreateBackUpScheduleRequest.cs" />
     <Compile Include="V20211228\Models\CreateBackUpScheduleResponse.cs" />
+    <Compile Include="V20211228\Models\CreateCoolDownPolicyRequest.cs" />
+    <Compile Include="V20211228\Models\CreateCoolDownPolicyResponse.cs" />
     <Compile Include="V20211228\Models\CreateDatabaseRequest.cs" />
     <Compile Include="V20211228\Models\CreateDatabaseResponse.cs" />
     <Compile Include="V20211228\Models\CreateInstanceNewRequest.cs" />
@@ -74,11 +84,13 @@
     <Compile Include="V20211228\Models\CreateInstanceSpec.cs" />
     <Compile Include="V20211228\Models\CreateTableRequest.cs" />
     <Compile Include="V20211228\Models\CreateTableResponse.cs" />
+    <Compile Include="V20211228\Models\CreateTablesDDL.cs" />
     <Compile Include="V20211228\Models\CreateWorkloadGroupRequest.cs" />
     <Compile Include="V20211228\Models\CreateWorkloadGroupResponse.cs" />
     <Compile Include="V20211228\Models\DataBaseAuditRecord.cs" />
     <Compile Include="V20211228\Models\DatabasePermissions.cs" />
     <Compile Include="V20211228\Models\DbInfo.cs" />
+    <Compile Include="V20211228\Models\DbTablesInfo.cs" />
     <Compile Include="V20211228\Models\DeleteBackUpDataRequest.cs" />
     <Compile Include="V20211228\Models\DeleteBackUpDataResponse.cs" />
     <Compile Include="V20211228\Models\DeleteTableRequest.cs" />
@@ -101,6 +113,14 @@
     <Compile Include="V20211228\Models\DescribeClusterConfigsHistoryResponse.cs" />
     <Compile Include="V20211228\Models\DescribeClusterConfigsRequest.cs" />
     <Compile Include="V20211228\Models\DescribeClusterConfigsResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeCoolDownBackendsRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeCoolDownBackendsResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeCoolDownPoliciesRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeCoolDownPoliciesResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeCoolDownTableDataRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeCoolDownTableDataResponse.cs" />
+    <Compile Include="V20211228\Models\DescribeCreateTablesDDLRequest.cs" />
+    <Compile Include="V20211228\Models\DescribeCreateTablesDDLResponse.cs" />
     <Compile Include="V20211228\Models\DescribeDatabaseAuditDownloadRequest.cs" />
     <Compile Include="V20211228\Models\DescribeDatabaseAuditDownloadResponse.cs" />
     <Compile Include="V20211228\Models\DescribeDatabaseAuditRecordsRequest.cs" />
@@ -163,10 +183,15 @@
     <Compile Include="V20211228\Models\InsertDatasToTableRequest.cs" />
     <Compile Include="V20211228\Models\InsertDatasToTableResponse.cs" />
     <Compile Include="V20211228\Models\InstanceConfigItem.cs" />
+    <Compile Include="V20211228\Models\InstanceDetail.cs" />
     <Compile Include="V20211228\Models\InstanceInfo.cs" />
     <Compile Include="V20211228\Models\InstanceNode.cs" />
     <Compile Include="V20211228\Models\InstanceOperation.cs" />
     <Compile Include="V20211228\Models\ListInfo.cs" />
+    <Compile Include="V20211228\Models\ModifyClusterConfigsRequest.cs" />
+    <Compile Include="V20211228\Models\ModifyClusterConfigsResponse.cs" />
+    <Compile Include="V20211228\Models\ModifyCoolDownPolicyRequest.cs" />
+    <Compile Include="V20211228\Models\ModifyCoolDownPolicyResponse.cs" />
     <Compile Include="V20211228\Models\ModifyDatabaseTableAccessRequest.cs" />
     <Compile Include="V20211228\Models\ModifyDatabaseTableAccessResponse.cs" />
     <Compile Include="V20211228\Models\ModifyInstanceKeyValConfigsRequest.cs" />
@@ -189,6 +214,10 @@
     <Compile Include="V20211228\Models\NodeInfo.cs" />
     <Compile Include="V20211228\Models\NodeInfos.cs" />
     <Compile Include="V20211228\Models\NodesSummary.cs" />
+    <Compile Include="V20211228\Models\OpenCoolDownPolicyRequest.cs" />
+    <Compile Include="V20211228\Models\OpenCoolDownPolicyResponse.cs" />
+    <Compile Include="V20211228\Models\OpenCoolDownRequest.cs" />
+    <Compile Include="V20211228\Models\OpenCoolDownResponse.cs" />
     <Compile Include="V20211228\Models\Partition.cs" />
     <Compile Include="V20211228\Models\PermissionHostInfo.cs" />
     <Compile Include="V20211228\Models\PropertiesMap.cs" />
@@ -219,12 +248,16 @@
     <Compile Include="V20211228\Models\SearchTags.cs" />
     <Compile Include="V20211228\Models\SlowQueryRecord.cs" />
     <Compile Include="V20211228\Models\TablePermissions.cs" />
+    <Compile Include="V20211228\Models\TablesDDL.cs" />
     <Compile Include="V20211228\Models\Tag.cs" />
+    <Compile Include="V20211228\Models\UpdateCoolDownRequest.cs" />
+    <Compile Include="V20211228\Models\UpdateCoolDownResponse.cs" />
     <Compile Include="V20211228\Models\UpdateDatabaseRequest.cs" />
     <Compile Include="V20211228\Models\UpdateDatabaseResponse.cs" />
     <Compile Include="V20211228\Models\UpdateTableSchemaRequest.cs" />
     <Compile Include="V20211228\Models\UpdateTableSchemaResponse.cs" />
     <Compile Include="V20211228\Models\UpdateUserPrivileges.cs" />
+    <Compile Include="V20211228\Models\UserInfo.cs" />
     <Compile Include="V20211228\Models\UserWorkloadGroup.cs" />
     <Compile Include="V20211228\Models\WorkloadGroupConfig.cs" />
     <Compile Include="V20211228\Models\ZoneInfo.cs" />

@@ -25,58 +25,48 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// Table data model: 
-        /// AGG_KEY: aggregation model; 
-        /// UNI_KEY: primary key model; 
-        /// DUP_KEY: detail model
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeysType")]
         public string KeysType{ get; set; }
 
         /// <summary>
-        /// Table column information
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Columns")]
         public Column[] Columns{ get; set; }
 
         /// <summary>
-        /// Index information. The inverted index and N-Gram index can be viewed through this parameter.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IndexInfos")]
         public IndexInfo[] IndexInfos{ get; set; }
 
         /// <summary>
-        /// Partition information
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Partition")]
         public Partition Partition{ get; set; }
 
         /// <summary>
-        /// Bucket information
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Distribution")]
         public Distribution Distribution{ get; set; }
 
         /// <summary>
-        /// Table description
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TableComment")]
         public string TableComment{ get; set; }
 
         /// <summary>
-        /// Table attributes
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
 
         /// <summary>
-        /// Error message
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Message")]

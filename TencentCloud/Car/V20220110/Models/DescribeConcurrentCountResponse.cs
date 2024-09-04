@@ -25,13 +25,13 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Total Concurrency Count
+        /// Total number of concurrencies.
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// The number of concurrent executions, including those in pre-launch, connected, waiting for reconnection, to be cleaned up or recovered, and all non-idle concurrent executions. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
+        /// The number of concurrent executions, including all non-idle concurrent executions such as those in prelaunch, connected, waiting for reconnection, and to be cleaned up or recovered. Therefore, refreshing projects or disconnecting user connections with concurrency packages will affect this value.
         /// </summary>
         [JsonProperty("Running")]
         public ulong? Running{ get; set; }

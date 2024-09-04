@@ -25,7 +25,7 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// The server-side session data, which is returned to the SDK.
+        /// Server-side session information, which is returned to the SDK.
         /// </summary>
         [JsonProperty("ServerSession")]
         public string ServerSession{ get; set; }

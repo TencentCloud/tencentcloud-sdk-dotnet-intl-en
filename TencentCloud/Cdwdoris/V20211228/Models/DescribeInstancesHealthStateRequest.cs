@@ -32,7 +32,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// "" or a cluster ID
+        /// If this parameter is left blank, all clusters corresponding to the current appId are involved. Otherwise, a specific cluster is involved.
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Unique user ID, which is customized by you and is not understood by CAR. It can also be randomly generated using the timestamp and should be kept unchanged during user reconnection.
+        /// Unique user ID, which is customized by you and is not parsed by CAR. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

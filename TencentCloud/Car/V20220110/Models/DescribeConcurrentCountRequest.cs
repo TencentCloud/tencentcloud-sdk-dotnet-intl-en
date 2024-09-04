@@ -25,7 +25,7 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Project ID
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

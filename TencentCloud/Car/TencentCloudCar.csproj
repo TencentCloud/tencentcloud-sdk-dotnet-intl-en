@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EAB3DE77-5DC9-3C44-9F57-8B20BED7F837}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.971</VersionPrefix>
+    <VersionPrefix>3.0.972</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,19 +48,57 @@
 
   <ItemGroup>
     <Compile Include="V20220110\CarClient.cs" />
+    <Compile Include="V20220110\Models\ApplicationBaseInfo.cs" />
     <Compile Include="V20220110\Models\ApplyConcurrentRequest.cs" />
     <Compile Include="V20220110\Models\ApplyConcurrentResponse.cs" />
+    <Compile Include="V20220110\Models\CreateApplicationRequest.cs" />
+    <Compile Include="V20220110\Models\CreateApplicationResponse.cs" />
+    <Compile Include="V20220110\Models\CreateApplicationSnapshotRequest.cs" />
+    <Compile Include="V20220110\Models\CreateApplicationSnapshotResponse.cs" />
+    <Compile Include="V20220110\Models\CreateApplicationVersionRequest.cs" />
+    <Compile Include="V20220110\Models\CreateApplicationVersionResponse.cs" />
     <Compile Include="V20220110\Models\CreateSessionRequest.cs" />
     <Compile Include="V20220110\Models\CreateSessionResponse.cs" />
+    <Compile Include="V20220110\Models\DeleteApplicationRequest.cs" />
+    <Compile Include="V20220110\Models\DeleteApplicationResponse.cs" />
+    <Compile Include="V20220110\Models\DeleteApplicationVersionRequest.cs" />
+    <Compile Include="V20220110\Models\DeleteApplicationVersionResponse.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationFileInfoRequest.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationFileInfoResponse.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationListRequest.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationListResponse.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationPathListRequest.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationPathListResponse.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationStatusRequest.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationStatusResponse.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationVersionRequest.cs" />
+    <Compile Include="V20220110\Models\DescribeApplicationVersionResponse.cs" />
     <Compile Include="V20220110\Models\DescribeConcurrentCountRequest.cs" />
     <Compile Include="V20220110\Models\DescribeConcurrentCountResponse.cs" />
+    <Compile Include="V20220110\Models\DescribeCosCredentialRequest.cs" />
+    <Compile Include="V20220110\Models\DescribeCosCredentialResponse.cs" />
     <Compile Include="V20220110\Models\DestroySessionRequest.cs" />
     <Compile Include="V20220110\Models\DestroySessionResponse.cs" />
+    <Compile Include="V20220110\Models\Filter.cs" />
+    <Compile Include="V20220110\Models\ModifyApplicationBaseInfoRequest.cs" />
+    <Compile Include="V20220110\Models\ModifyApplicationBaseInfoResponse.cs" />
+    <Compile Include="V20220110\Models\ModifyApplicationVersionRequest.cs" />
+    <Compile Include="V20220110\Models\ModifyApplicationVersionResponse.cs" />
+    <Compile Include="V20220110\Models\ModifyMobileApplicationInfoRequest.cs" />
+    <Compile Include="V20220110\Models\ModifyMobileApplicationInfoResponse.cs" />
+    <Compile Include="V20220110\Models\SetApplicationVersionOnlineRequest.cs" />
+    <Compile Include="V20220110\Models\SetApplicationVersionOnlineResponse.cs" />
     <Compile Include="V20220110\Models\StartPublishStreamRequest.cs" />
     <Compile Include="V20220110\Models\StartPublishStreamResponse.cs" />
     <Compile Include="V20220110\Models\StartPublishStreamWithURLRequest.cs" />
     <Compile Include="V20220110\Models\StartPublishStreamWithURLResponse.cs" />
     <Compile Include="V20220110\Models\StopPublishStreamRequest.cs" />
     <Compile Include="V20220110\Models\StopPublishStreamResponse.cs" />
+    <Compile Include="V20220110\Models\UserApplicationFileInfo.cs" />
+    <Compile Include="V20220110\Models\UserApplicationInfo.cs" />
+    <Compile Include="V20220110\Models\UserApplicationStatus.cs" />
+    <Compile Include="V20220110\Models\UserApplicationStore.cs" />
+    <Compile Include="V20220110\Models\UserApplicationVersion.cs" />
+    <Compile Include="V20220110\Models\UserMobileApplicationInfo.cs" />
   </ItemGroup>
 </Project>

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// Output parameter
+        /// Base64-encoded data, which contains the cluster health information
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Data")]

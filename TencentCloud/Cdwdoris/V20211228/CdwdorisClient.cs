@@ -28,7 +28,7 @@ namespace TencentCloud.Cdwdoris.V20211228
 
        private const string endpoint = "cdwdoris.tencentcloudapi.com";
        private const string version = "2021-12-28";
-       private const string sdkVersion = "SDK_NET_3.0.971";
+       private const string sdkVersion = "SDK_NET_3.0.972";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
+        /// This API is used to add and modify a user.
+        /// </summary>
+        /// <param name="req"><see cref="ActionAlterUserRequest"/></param>
+        /// <returns><see cref="ActionAlterUserResponse"/></returns>
+        public Task<ActionAlterUserResponse> ActionAlterUser(ActionAlterUserRequest req)
+        {
+            return InternalRequestAsync<ActionAlterUserResponse>(req, "ActionAlterUser");
+        }
+
+        /// <summary>
+        /// This API is used to add and modify a user.
+        /// </summary>
+        /// <param name="req"><see cref="ActionAlterUserRequest"/></param>
+        /// <returns><see cref="ActionAlterUserResponse"/></returns>
+        public ActionAlterUserResponse ActionAlterUserSync(ActionAlterUserRequest req)
+        {
+            return InternalRequestAsync<ActionAlterUserResponse>(req, "ActionAlterUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to cancel the corresponding backup instance task.
         /// </summary>
         /// <param name="req"><see cref="CancelBackupJobRequest"/></param>
@@ -71,6 +92,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         public CancelBackupJobResponse CancelBackupJobSync(CancelBackupJobRequest req)
         {
             return InternalRequestAsync<CancelBackupJobResponse>(req, "CancelBackupJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check whether variables and configurations for hot/cold data layering are correct.
+        /// </summary>
+        /// <param name="req"><see cref="CheckCoolDownWorkingVariableConfigCorrectRequest"/></param>
+        /// <returns><see cref="CheckCoolDownWorkingVariableConfigCorrectResponse"/></returns>
+        public Task<CheckCoolDownWorkingVariableConfigCorrectResponse> CheckCoolDownWorkingVariableConfigCorrect(CheckCoolDownWorkingVariableConfigCorrectRequest req)
+        {
+            return InternalRequestAsync<CheckCoolDownWorkingVariableConfigCorrectResponse>(req, "CheckCoolDownWorkingVariableConfigCorrect");
+        }
+
+        /// <summary>
+        /// This API is used to check whether variables and configurations for hot/cold data layering are correct.
+        /// </summary>
+        /// <param name="req"><see cref="CheckCoolDownWorkingVariableConfigCorrectRequest"/></param>
+        /// <returns><see cref="CheckCoolDownWorkingVariableConfigCorrectResponse"/></returns>
+        public CheckCoolDownWorkingVariableConfigCorrectResponse CheckCoolDownWorkingVariableConfigCorrectSync(CheckCoolDownWorkingVariableConfigCorrectRequest req)
+        {
+            return InternalRequestAsync<CheckCoolDownWorkingVariableConfigCorrectResponse>(req, "CheckCoolDownWorkingVariableConfigCorrect")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -113,6 +155,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         public CreateBackUpScheduleResponse CreateBackUpScheduleSync(CreateBackUpScheduleRequest req)
         {
             return InternalRequestAsync<CreateBackUpScheduleResponse>(req, "CreateBackUpSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a hot/cold data layering policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="CreateCoolDownPolicyResponse"/></returns>
+        public Task<CreateCoolDownPolicyResponse> CreateCoolDownPolicy(CreateCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateCoolDownPolicyResponse>(req, "CreateCoolDownPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to create a hot/cold data layering policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="CreateCoolDownPolicyResponse"/></returns>
+        public CreateCoolDownPolicyResponse CreateCoolDownPolicySync(CreateCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateCoolDownPolicyResponse>(req, "CreateCoolDownPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -428,6 +491,90 @@ namespace TencentCloud.Cdwdoris.V20211228
         public DescribeClusterConfigsHistoryResponse DescribeClusterConfigsHistorySync(DescribeClusterConfigsHistoryRequest req)
         {
             return InternalRequestAsync<DescribeClusterConfigsHistoryResponse>(req, "DescribeClusterConfigsHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of backend nodes supporting hot/cold data layering.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownBackendsRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownBackendsResponse"/></returns>
+        public Task<DescribeCoolDownBackendsResponse> DescribeCoolDownBackends(DescribeCoolDownBackendsRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownBackendsResponse>(req, "DescribeCoolDownBackends");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of backend nodes supporting hot/cold data layering.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownBackendsRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownBackendsResponse"/></returns>
+        public DescribeCoolDownBackendsResponse DescribeCoolDownBackendsSync(DescribeCoolDownBackendsRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownBackendsResponse>(req, "DescribeCoolDownBackends")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of hot/cold data layering policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownPoliciesResponse"/></returns>
+        public Task<DescribeCoolDownPoliciesResponse> DescribeCoolDownPolicies(DescribeCoolDownPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownPoliciesResponse>(req, "DescribeCoolDownPolicies");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of hot/cold data layering policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownPoliciesResponse"/></returns>
+        public DescribeCoolDownPoliciesResponse DescribeCoolDownPoliciesSync(DescribeCoolDownPoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownPoliciesResponse>(req, "DescribeCoolDownPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the layered hot and cold data in a table.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownTableDataRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownTableDataResponse"/></returns>
+        public Task<DescribeCoolDownTableDataResponse> DescribeCoolDownTableData(DescribeCoolDownTableDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownTableDataResponse>(req, "DescribeCoolDownTableData");
+        }
+
+        /// <summary>
+        /// This API is used to query the layered hot and cold data in a table.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCoolDownTableDataRequest"/></param>
+        /// <returns><see cref="DescribeCoolDownTableDataResponse"/></returns>
+        public DescribeCoolDownTableDataResponse DescribeCoolDownTableDataSync(DescribeCoolDownTableDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCoolDownTableDataResponse>(req, "DescribeCoolDownTableData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch obtain the table creation DDL.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateTablesDDLRequest"/></param>
+        /// <returns><see cref="DescribeCreateTablesDDLResponse"/></returns>
+        public Task<DescribeCreateTablesDDLResponse> DescribeCreateTablesDDL(DescribeCreateTablesDDLRequest req)
+        {
+            return InternalRequestAsync<DescribeCreateTablesDDLResponse>(req, "DescribeCreateTablesDDL");
+        }
+
+        /// <summary>
+        /// This API is used to batch obtain the table creation DDL.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateTablesDDLRequest"/></param>
+        /// <returns><see cref="DescribeCreateTablesDDLResponse"/></returns>
+        public DescribeCreateTablesDDLResponse DescribeCreateTablesDDLSync(DescribeCreateTablesDDLRequest req)
+        {
+            return InternalRequestAsync<DescribeCreateTablesDDLResponse>(req, "DescribeCreateTablesDDL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -810,7 +957,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// This API is used to query the CK cluster API for the driver SQL command.
+        /// This API is used to query the cluster information by executing SQL commands.
         /// </summary>
         /// <param name="req"><see cref="DescribeSqlApisRequest"/></param>
         /// <returns><see cref="DescribeSqlApisResponse"/></returns>
@@ -820,7 +967,7 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
-        /// This API is used to query the CK cluster API for the driver SQL command.
+        /// This API is used to query the cluster information by executing SQL commands.
         /// </summary>
         /// <param name="req"><see cref="DescribeSqlApisRequest"/></param>
         /// <returns><see cref="DescribeSqlApisResponse"/></returns>
@@ -1020,6 +1167,48 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
+        /// This API is used to modify the XML cluster configuration file on the cluster configuration page.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterConfigsRequest"/></param>
+        /// <returns><see cref="ModifyClusterConfigsResponse"/></returns>
+        public Task<ModifyClusterConfigsResponse> ModifyClusterConfigs(ModifyClusterConfigsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterConfigsResponse>(req, "ModifyClusterConfigs");
+        }
+
+        /// <summary>
+        /// This API is used to modify the XML cluster configuration file on the cluster configuration page.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterConfigsRequest"/></param>
+        /// <returns><see cref="ModifyClusterConfigsResponse"/></returns>
+        public ModifyClusterConfigsResponse ModifyClusterConfigsSync(ModifyClusterConfigsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterConfigsResponse>(req, "ModifyClusterConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the hot/cold data layering policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCoolDownPolicyResponse"/></returns>
+        public Task<ModifyCoolDownPolicyResponse> ModifyCoolDownPolicy(ModifyCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyCoolDownPolicyResponse>(req, "ModifyCoolDownPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to modify the hot/cold data layering policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCoolDownPolicyResponse"/></returns>
+        public ModifyCoolDownPolicyResponse ModifyCoolDownPolicySync(ModifyCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyCoolDownPolicyResponse>(req, "ModifyCoolDownPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to GRANT and REVOKE the database and table in the Doris database.
         /// </summary>
         /// <param name="req"><see cref="ModifyDatabaseTableAccessRequest"/></param>
@@ -1209,6 +1398,48 @@ namespace TencentCloud.Cdwdoris.V20211228
         }
 
         /// <summary>
+        /// This API is used to enable hot/cold data layering.
+        /// </summary>
+        /// <param name="req"><see cref="OpenCoolDownRequest"/></param>
+        /// <returns><see cref="OpenCoolDownResponse"/></returns>
+        public Task<OpenCoolDownResponse> OpenCoolDown(OpenCoolDownRequest req)
+        {
+            return InternalRequestAsync<OpenCoolDownResponse>(req, "OpenCoolDown");
+        }
+
+        /// <summary>
+        /// This API is used to enable hot/cold data layering.
+        /// </summary>
+        /// <param name="req"><see cref="OpenCoolDownRequest"/></param>
+        /// <returns><see cref="OpenCoolDownResponse"/></returns>
+        public OpenCoolDownResponse OpenCoolDownSync(OpenCoolDownRequest req)
+        {
+            return InternalRequestAsync<OpenCoolDownResponse>(req, "OpenCoolDown")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable and describe the cold storage policy.
+        /// </summary>
+        /// <param name="req"><see cref="OpenCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="OpenCoolDownPolicyResponse"/></returns>
+        public Task<OpenCoolDownPolicyResponse> OpenCoolDownPolicy(OpenCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<OpenCoolDownPolicyResponse>(req, "OpenCoolDownPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to enable and describe the cold storage policy.
+        /// </summary>
+        /// <param name="req"><see cref="OpenCoolDownPolicyRequest"/></param>
+        /// <returns><see cref="OpenCoolDownPolicyResponse"/></returns>
+        public OpenCoolDownPolicyResponse OpenCoolDownPolicySync(OpenCoolDownPolicyRequest req)
+        {
+            return InternalRequestAsync<OpenCoolDownPolicyResponse>(req, "OpenCoolDownPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query data according to the specified database and table names, and support field selection and pagination.
         /// </summary>
         /// <param name="req"><see cref="QueryTableDataRequest"/></param>
@@ -1373,6 +1604,27 @@ namespace TencentCloud.Cdwdoris.V20211228
         public ScaleUpInstanceResponse ScaleUpInstanceSync(ScaleUpInstanceRequest req)
         {
             return InternalRequestAsync<ScaleUpInstanceResponse>(req, "ScaleUpInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the hot/cold data layering information on a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCoolDownRequest"/></param>
+        /// <returns><see cref="UpdateCoolDownResponse"/></returns>
+        public Task<UpdateCoolDownResponse> UpdateCoolDown(UpdateCoolDownRequest req)
+        {
+            return InternalRequestAsync<UpdateCoolDownResponse>(req, "UpdateCoolDown");
+        }
+
+        /// <summary>
+        /// This API is used to update the hot/cold data layering information on a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCoolDownRequest"/></param>
+        /// <returns><see cref="UpdateCoolDownResponse"/></returns>
+        public UpdateCoolDownResponse UpdateCoolDownSync(UpdateCoolDownRequest req)
+        {
+            return InternalRequestAsync<UpdateCoolDownResponse>(req, "UpdateCoolDown")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

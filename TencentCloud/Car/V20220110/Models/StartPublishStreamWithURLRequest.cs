@@ -25,13 +25,13 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Unique user ID, which is customized by you and is not understood by CAR.
+        /// Unique user ID, which is customized by you and is not parsed by CAR.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// Push address. Only RTMP is supported for push currently.
+        /// Streaming address. Only RTMP is supported for streaming currently.
         /// </summary>
         [JsonProperty("PublishStreamURL")]
         public string PublishStreamURL{ get; set; }

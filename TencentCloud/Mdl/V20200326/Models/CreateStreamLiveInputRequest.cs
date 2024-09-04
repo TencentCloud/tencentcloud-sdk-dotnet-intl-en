@@ -32,7 +32,7 @@ namespace TencentCloud.Mdl.V20200326.Models
 
         /// <summary>
         /// Input type
-        /// Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`
+        /// Valid values: `RTMP_PUSH`, `RTP_PUSH`, `UDP_PUSH`, `RTMP_PULL`, `HLS_PULL`, `MP4_PULL`,`RTP-FEC_PUSH`,`RTSP_PULL`,`SRT_PUSH `,`SRT_PULL `
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -45,7 +45,11 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Input settings. For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+        /// Input settings. 
+        /// For the type:
+        /// `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+        /// For the type:
+        /// `SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
         /// </summary>
         [JsonProperty("InputSettings")]
         public InputSettingInfo[] InputSettings{ get; set; }
