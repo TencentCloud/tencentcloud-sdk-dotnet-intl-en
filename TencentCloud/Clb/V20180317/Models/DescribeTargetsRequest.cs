@@ -49,9 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Query the list of backend services associated with a load balancer
-        /// <li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
-        /// <li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+        /// Conditions for querying the list of real servers bound to the CLB. The filter criteria are as follows:<li> location-id - String - Required: No - (Filter criterion) Filter by rule ID, such as loc-12345678.</li><li> private-ip-address - String - Required: No - (Filter criterion) Filter by private IP address of the real server, such as 172.16.1.1.</li><li> tag - String - Required: No - (Filter criterion) Filter by tag, such as tag-test.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

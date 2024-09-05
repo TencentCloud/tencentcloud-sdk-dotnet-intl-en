@@ -129,7 +129,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SecurityGroup{ get; set; }
 
         /// <summary>
-        /// Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+        /// Primary availability zone ID, such as 100001 (corresponding to Guangzhou Zone 1). You can obtain the list of availability zones through [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }

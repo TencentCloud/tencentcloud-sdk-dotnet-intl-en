@@ -88,8 +88,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// ISP to which the CLB IP address belongs.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// ISP for the IP address of the CLB instance. Valid values: BGP (multi-line), CMCC (China Mobile), CUCC (China Unicom), CTCC (China Telecom), INTERNAL (private network).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AddressIsp")]
         public string AddressIsp{ get; set; }
@@ -116,8 +115,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// CLB instance billing mode.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Billing type of a CLB instance. Valid values: PREPAID (prepaid), POSTPAID_BY_HOUR (pay-as-you-go).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
@@ -242,8 +240,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// Whether the CLB instance is billed by IP.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether to enable moving up CLB security groups. Valid values: 1 (enabled), 0 (not enabled).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]
         public ulong? LoadBalancerPassToTarget{ get; set; }
@@ -297,6 +294,24 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AttributeFlags")]
+        public string[] AttributeFlags{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Exclusive")]
+        public ulong? Exclusive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -342,6 +357,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
+        /// When the Fields include TargetId, TargetAddress, TargetPort, TargetWeight, ListenerId, Protocol, Port, LocationId, Domain, and Url, you should select exporting the Target of the target group or a non-target group. Valid values: NODE, GROUP.
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }

@@ -65,7 +65,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateOutput Certificate{ get; set; }
 
         /// <summary>
-        /// Request forwarding method of the rule
+        /// Request forwarding method in the rules.WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -120,7 +120,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Real server type
+        /// Real server type. NODE indicates binding to a general node, and TARGETGROUP indicates binding to a target group.
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
@@ -154,8 +154,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TrpcFunc{ get; set; }
 
         /// <summary>
-        /// QUIC status
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QuicStatus")]
         public string QuicStatus{ get; set; }
@@ -173,6 +172,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("TargetGroupList")]
         public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
+
+        /// <summary>
+        /// OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OAuth")]
+        public OAuth OAuth{ get; set; }
 
 
         /// <summary>
@@ -203,6 +208,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
+            this.SetParamObj(map, prefix + "OAuth.", this.OAuth);
         }
     }
 }

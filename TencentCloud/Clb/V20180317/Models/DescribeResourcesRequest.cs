@@ -37,9 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter to query the list of AZ resources as detailed below:
-        /// <li> `zone` - String - Optional - Filter by AZ, such as "ap-guangzhou-1".</li>
-        /// <li> `isp` -- String - Optional - Filter by the ISP. Values: `BGP`, `CMCC`, `CUCC` and `CTCC`.</li>
+        /// Conditions for querying the list of availability zone resources. Detailed filter criteria are as follows:<li>master-zone -- String - Required: No - (Filter criterion) Filter by region type, such as ap-guangzhou-2.</li><li>ip-version -- String - Required: No - (Filter criterion) Filter by IP type. Valid values: IPv4, IPv6, IPv6_Nat.</li><li> isp -- String - Required: No - (Filter criterion) Filter by ISP type, such as BGP, CMCC, CUCC, and CTCC.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID. You can obtain it through the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

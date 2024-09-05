@@ -50,8 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Forward{ get; set; }
 
         /// <summary>
-        /// Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -124,6 +123,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Log")]
+        [System.Obsolete]
         public string Log{ get; set; }
 
         /// <summary>
@@ -176,8 +176,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? NumericalVpcId{ get; set; }
 
         /// <summary>
-        /// ISP to which a CLB IP address belongs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VipIsp")]
         public string VipIsp{ get; set; }
@@ -309,8 +308,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
-        /// Specification of the LCU-supported instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
@@ -405,6 +403,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Exclusive")]
+        public ulong? Exclusive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -466,6 +470,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
         }
     }
 }

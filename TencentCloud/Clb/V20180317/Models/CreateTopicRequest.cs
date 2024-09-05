@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// Logset retention period (in days). Default: 30 days.
+        /// Logset retention period, in days. Default value: 30 days. Value range: [1, 3600].
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }

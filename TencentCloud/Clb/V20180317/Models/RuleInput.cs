@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+        /// Session persistence duration, in seconds. 0 indicates that session persistence is disabled, and a value ranging from 30 to 86400 indicates that session persistence is enabled.
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }

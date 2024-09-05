@@ -25,15 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Specification type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specification type.<li>clb.c2.medium: Standard</li><li>clb.c3.small: Advanced 1</li><li>clb.c3.medium: Advanced 2</li><li>clb.c4.small: Super Large 1</li><li>clb.c4.medium: Super Large 2</li><li>clb.c4.large: Super Large 3</li><li>clb.c4.xlarge: Super Large 4</li><li>shared: Shared</li>Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SpecType")]
         public string SpecType{ get; set; }
 
         /// <summary>
-        /// Specification availability
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specification availability. It indicates the resource availability. Valid values: Available, Unavailable.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Availability")]
         public string Availability{ get; set; }

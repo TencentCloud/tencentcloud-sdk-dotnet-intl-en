@@ -56,10 +56,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// Layer-7 rule ID.
+        /// Layer-7 rule ID. This parameter is required for Layer-7 CLB.
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
+
+        /// <summary>
+        /// Tag.
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
 
 
         /// <summary>
@@ -73,6 +79,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "EniIp", this.EniIp);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

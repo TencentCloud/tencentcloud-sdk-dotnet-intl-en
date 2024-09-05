@@ -85,7 +85,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] NewDomains{ get; set; }
 
         /// <summary>
-        /// Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+        /// Certificate information related to the domain name. Note: This applies only to listeners with SNI enabled. Multiple server certificates with different algorithm types can be input simultaneously, but this parameter cannot be input together with the Certificate.
         /// </summary>
         [JsonProperty("MultiCertInfo")]
         public MultiCertInfo MultiCertInfo{ get; set; }

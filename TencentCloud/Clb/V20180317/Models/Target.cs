@@ -61,6 +61,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }
 
+        /// <summary>
+        /// Tag.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tag")]
+        public string Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "EniIp", this.EniIp);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

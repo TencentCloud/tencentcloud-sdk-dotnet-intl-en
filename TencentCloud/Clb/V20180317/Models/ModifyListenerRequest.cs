@@ -61,14 +61,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateInput Certificate{ get; set; }
 
         /// <summary>
-        /// Forwarding method of a listener. Value range: WRR, LEAST_CONN.
-        /// They represent weighted round robin and least connections, respectively. Default value: WRR.
+        /// Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+        /// Whether to enable the SNI feature. This parameter applies only to HTTPS listeners. The default value is 0, indicating disabled, and 1 indicates enabled. Note: The SNI feature can be enabled for listeners that have not enabled SNI, but cannot be disabled for listeners that have enabled SNI.
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
@@ -80,7 +79,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+        /// Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }
@@ -92,7 +91,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? DeregisterTargetRst{ get; set; }
 
         /// <summary>
-        /// Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+        /// Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
@@ -104,13 +103,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public MultiCertInfo MultiCertInfo{ get; set; }
 
         /// <summary>
-        /// The maximum number of concurrent connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum concurrency of the instance. -1 indicates that no limit is set on concurrent connections.
+        /// Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
-        /// The maximum number of new connections at the listener level. This parameter takes effect only on LCU-supported instances and TCP/UDP/TCP_SSL/QUIC listeners. Value range: 1 to the maximum number of new connections of the instance. -1 indicates that no limit is set on concurrent connections.
+        /// Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
         /// </summary>
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
@@ -120,6 +119,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("IdleConnectTimeout")]
         public long? IdleConnectTimeout{ get; set; }
+
+        /// <summary>
+        /// Whether to enable SNAT.
+        /// </summary>
+        [JsonProperty("SnatEnable")]
+        public bool? SnatEnable{ get; set; }
 
 
         /// <summary>
@@ -143,6 +148,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+            this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
         }
     }
 }

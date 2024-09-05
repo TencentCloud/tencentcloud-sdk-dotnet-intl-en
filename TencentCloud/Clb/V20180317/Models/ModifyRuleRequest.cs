@@ -62,13 +62,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Session persistence time
+        /// Session persistence duration, in seconds. Value range: 0 or 30-86400.
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+        /// Forwarding protocol between a CLB instance and the real server. Default value: HTTP. Valid values: HTTP, HTTPS, GRPC. This parameter is valid only for HTTPS listeners.
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
@@ -84,6 +84,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }
+
+        /// <summary>
+        /// OAuth configuration information.
+        /// </summary>
+        [JsonProperty("OAuth")]
+        public OAuth OAuth{ get; set; }
 
 
         /// <summary>
@@ -101,6 +107,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
             this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+            this.SetParamObj(map, prefix + "OAuth.", this.OAuth);
         }
     }
 }

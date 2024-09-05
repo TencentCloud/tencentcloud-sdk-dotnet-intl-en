@@ -91,7 +91,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? UnhealthNum{ get; set; }
 
         /// <summary>
-        /// A request balancing method for HTTP and HTTPS listeners of a public network classic CLB. wrr means weighted round robin, while ip_hash means consistent hashing based on source IPs of access requests.
+        /// Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
         /// </summary>
         [JsonProperty("HttpHash")]
         public string HttpHash{ get; set; }

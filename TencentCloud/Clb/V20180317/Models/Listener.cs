@@ -57,8 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// Request scheduling method
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -182,6 +181,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("IdleConnectTimeout")]
         public long? IdleConnectTimeout{ get; set; }
 
+        /// <summary>
+        /// Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RescheduleInterval")]
+        public ulong? RescheduleInterval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +216,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+            this.SetParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
         }
     }
 }

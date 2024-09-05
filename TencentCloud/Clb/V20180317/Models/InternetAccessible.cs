@@ -32,19 +32,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// Maximum outgoing bandwidth in Mbps. It works on LCU-supported instances on private networks and all instances on public networks.
-        /// - For shared and dedicated CLB instances on public networks, the range is 1Mbps-2048Mbps.
-        /// - For all LCU-supported CLB instances:
-        ///   - It defaults to General LCU-supported instance. SLA corresponds to Super Large 1, and the range of maximum outgoing bandwidth is 1 Mbps - 10240 Mbps.
-        ///   - If you have enabled Super Large specification, the range of maximum outgoing bandwidth is 1 Mbps - 61440 Mbps Super Large LCU-supported specification is in beta now. To join the beta, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Maximum outbound bandwidth, in Mbps. This applies only to shared, LCU-supported, and exclusive CLB instances of the public network type, as well as the LCU-supported CLB instances of the private network type.- For shared and exclusive CLB instances of the public network type, the maximum outbound bandwidth ranges from 1 Mbps to 2048 Mbps.- For LCU-supported CLB instances of the public network type and the private network type, the maximum outbound bandwidth ranges from 1 Mbps to 61440 Mbps.(If this parameter is not specified when CreateLoadBalancer is called to create a CLB instance, it defaults to 10 Mbps. This upper limit can be adjusted.)Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// Bandwidth package type, such as SINGLEISP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BandwidthpkgSubType")]
         public string BandwidthpkgSubType{ get; set; }

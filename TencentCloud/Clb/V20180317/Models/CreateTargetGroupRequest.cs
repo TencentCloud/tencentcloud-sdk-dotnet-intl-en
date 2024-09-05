@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Default port of a target group, which can be used for subsequently added servers.
+        /// Default port of the target group, which can be used for adding servers subsequently. Either the Port or the port in TargetGroupInstances.N should be input.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }

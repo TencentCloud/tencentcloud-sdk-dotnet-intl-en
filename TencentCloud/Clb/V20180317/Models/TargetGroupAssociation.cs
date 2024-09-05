@@ -31,22 +31,28 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Listener ID
-        /// </summary>
-        [JsonProperty("ListenerId")]
-        public string ListenerId{ get; set; }
-
-        /// <summary>
         /// Target group ID
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
 
         /// <summary>
+        /// Listener ID. This parameter is required when the AssociateTargetGroups and DisassociateTargetGroups APIs are called.
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
+
+        /// <summary>
         /// Forwarding rule ID
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
+
+        /// <summary>
+        /// Weight of the target group. Value range: [0, 100]. It takes effect only for binding v2 target groups. If not specified, it defaults to 10.
+        /// </summary>
+        [JsonProperty("Weight")]
+        public long? Weight{ get; set; }
 
 
         /// <summary>
@@ -55,9 +61,10 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }
