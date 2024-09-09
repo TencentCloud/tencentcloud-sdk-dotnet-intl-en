@@ -43,7 +43,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long?[] GroupIdList{ get; set; }
 
         /// <summary>
-        /// Filter agent status list.
+        /// Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
         /// </summary>
         [JsonProperty("StatusList")]
         public string[] StatusList{ get; set; }

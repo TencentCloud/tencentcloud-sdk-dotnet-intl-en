@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Start timestamp. Unix second-level timestamp.
+        /// Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
         /// </summary>
         [JsonProperty("StartTimeStamp")]
         public long? StartTimeStamp{ get; set; }
 
         /// <summary>
-        /// End timestamp. Unix second-level timestamp.
+        /// End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
         /// </summary>
         [JsonProperty("EndTimeStamp")]
         public long? EndTimeStamp{ get; set; }

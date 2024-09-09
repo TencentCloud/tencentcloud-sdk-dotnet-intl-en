@@ -67,13 +67,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffEmail{ get; set; }
 
         /// <summary>
-        /// Agent work number.
+        /// Agent ID
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// Agent status: inProgress for in progress.
+        /// Agent Status inProgress Ongoing
         /// </summary>
         [JsonProperty("SessionStatus")]
         public string SessionStatus{ get; set; }

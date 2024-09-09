@@ -68,35 +68,65 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// Agent information.
+        /// Agent Information
         /// </summary>
         [JsonProperty("SeatUser")]
         public SeatUserInfo SeatUser{ get; set; }
 
         /// <summary>
-        /// EndStatus corresponds one-to-one with EndStatusString, the specific enumeration is as follows:
-        /// **Scenario        EndStatus	EndStatusString	Status Description**
-        /// Inbound & Outbound Call	1	        ok	                        Successfully ended
-        /// Inbound & Outbound Call	0	        error	                System error
-        /// Inbound Call	             102	        ivrGiveUp	        User hangs up during IVR
-        /// Inbound Call	             103	        waitingGiveUp	        User hangs up while on hold
-        /// Inbound Call	             104	        ringingGiveUp	        User hangs up when ringing
-        /// Inbound Call	             105	        noSeatOnline	       No agent online
-        /// Inbound Call              106	       notWorkTime	       Non-working hours
-        /// Inbound Call	            107	       ivrEnd	              Ends after IVR
-        /// Inbound Call	            100	      Inbound call blocklist 
-        /// Outgoing Call               2	              unconnected	Unanswered
-        /// < 10,000 minutesOutgoing Call             201            unknown	Unknown status
-        /// Outgoing Call             202            notAnswer	Unanswered
-        /// Outgoing Call            203	    userReject	Call declined
-        /// Outgoing Call	          204	    powerOff	Phone switched off
-        /// Outgoing Call           205            numberNotExist	Nonexistent number
-        /// Outgoing Call	         206	           busy	On another call
-        /// Outgoing Call   	 207	           outOfCredit	Overdue
-        /// Outgoing Call	         208	           operatorError	 ISP channel exception
-        /// Outgoing Call         	209	           callerCancel	Caller cancellation
-        /// Outgoing Call	        210	           notInService	Not in service area
-        /// Inbound & Outbound Calls	211    clientError    Client error
+        /// EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+        /// 
+        /// **Scenario	         EndStatus	EndStatusString	Status Description**
+        /// 
+        /// Incoming & Outgoing Calls	1	        ok	                        Normal End
+        /// 
+        /// Incoming & Outgoing Calls	0	        error	                System Error
+        /// 
+        /// Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+        /// 
+        /// Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+        /// 
+        /// Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+        /// 
+        /// Incoming Call	             105	        noSeatOnline	       No Seat Online
+        /// 
+        /// Incoming Call              106	       notWorkTime	       Non-Working Hours   
+        /// 
+        /// Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+        /// 
+        /// Incoming Call	            100	      blackList Incoming blocklist  
+        /// 
+        /// Outgoing Call               2	              unconnected	Unconnected
+        /// 
+        /// Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+        /// 
+        /// Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+        /// 
+        /// Outgoing Call             110	        restrictedArea	    Call to restricted area
+        /// 
+        /// Outgoing Call             111	        restrictedTime	Call time restricted
+        ///                          
+        /// Outgoing Call             201            unknown	Unknown status
+        /// 
+        /// Outgoing Call             202            notAnswer	Missed call
+        /// 
+        /// Outgoing Call            203	    userReject	Reject/Hang Up
+        /// 
+        /// Outgoing Call	          204	    powerOff	Shutting down
+        /// 
+        /// Outgoing Call           205            numberNotExist	Disconnected Number
+        /// 
+        /// Outgoing Call	         206	           busy	During the call
+        /// 
+        /// Outgoing Call   	        207	           outOfCredit	Overdue Payment
+        /// 
+        /// Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+        /// 
+        /// Outgoing Call         	209	           callerCancel	Caller Cancelled
+        /// 
+        /// Outgoing Call	        210	           notInService	Out of Service Area
+        /// 
+        /// Incoming & Outgoing Calls	211    clientError    Client Error
         /// </summary>
         [JsonProperty("EndStatus")]
         public long? EndStatus{ get; set; }
@@ -149,8 +179,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string[] IVRKeyPressed{ get; set; }
 
         /// <summary>
-        /// Hang-up side, seat, user, system.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Hanging Up Party seat Seat user Users system system
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HungUpSide")]
         public string HungUpSide{ get; set; }
@@ -170,30 +200,61 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
-        /// EndStatus corresponds one-to-one with EndStatusString, the specific enumeration is as follows:
-        /// **Scenario        EndStatus	EndStatusString	Status Description**
-        /// Inbound & Outbound Call	1	        ok	                        Successfully ended
-        /// Inbound & Outbound Call	0	        error	                System error
-        /// Inbound Call	             102	        ivrGiveUp	        User hangs up during IVR
-        /// Inbound Call	             103	        waitingGiveUp	        User hangs up while on hold
-        /// Inbound Call	             104	        ringingGiveUp	        User hangs up when ringing
-        /// Inbound Call	             105	        noSeatOnline	       No agent online
-        /// Inbound Call              106	       notWorkTime	       Non-working hours
-        /// Inbound Call	            107	       ivrEnd	              Ends after IVR
-        /// Inbound Call	            100	      Inbound call blocklist 
-        /// Outgoing Call               2	              unconnected	Unanswered
-        /// < 10,000 minutesOutgoing Call             201            unknown	Unknown status
-        /// Outgoing Call             202            notAnswer	Unanswered
-        /// Outgoing Call            203	    userReject	Call declined
-        /// Outgoing Call	          204	    powerOff	Phone switched off
-        /// Outgoing Call           205            numberNotExist	Nonexistent number
-        /// Outgoing Call	         206	           busy	On another call
-        /// Outgoing Call   	 207	           outOfCredit	Overdue
-        /// Outgoing Call	         208	           operatorError	 ISP channel exception
-        /// Outgoing Call         	209	           callerCancel	Caller cancellation
-        /// Outgoing Call	        210	           notInService	Not in service area
-        /// Inbound & Outbound Calls	211    clientError    Client error
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+        /// 
+        /// **Scenario	         EndStatus	EndStatusString	Status Description**
+        /// 
+        /// Incoming & Outgoing Calls	1	        ok	                        Normal End
+        /// 
+        /// Incoming & Outgoing Calls	0	        error	                System Error
+        /// 
+        /// Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+        /// 
+        /// Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+        /// 
+        /// Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+        /// 
+        /// Incoming Call	             105	        noSeatOnline	       No Seat Online
+        /// 
+        /// Incoming Call              106	       notWorkTime	       Non-Working Hours   
+        /// 
+        /// Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+        /// 
+        /// Incoming Call	            100	      blackList Incoming blocklist  
+        /// 
+        /// Outgoing Call               2	              unconnected	Unconnected
+        /// 
+        /// Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+        /// 
+        /// Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+        /// 
+        /// Outgoing Call             110	        restrictedArea	    Call to restricted area
+        /// 
+        /// Outgoing Call             111	        restrictedTime	Call time restricted
+        ///                          
+        /// Outgoing Call             201            unknown	Unknown status
+        /// 
+        /// Outgoing Call             202            notAnswer	Missed call
+        /// 
+        /// Outgoing Call            203	    userReject	Reject/Hang Up
+        /// 
+        /// Outgoing Call	          204	    powerOff	Shutting down
+        /// 
+        /// Outgoing Call           205            numberNotExist	Disconnected Number
+        /// 
+        /// Phone Call Out	         206	           busy	In Call
+        /// 
+        /// Outgoing Call   	        207	           outOfCredit	Overdue Payment
+        /// 
+        /// Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+        /// 
+        /// Outgoing Call         	209	           callerCancel	Caller Cancelled
+        /// 
+        /// Outgoing Call	        210	           notInService	Out of Service Area
+        /// 
+        /// Phone Call In & Out	211    clientError    Client Error
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }

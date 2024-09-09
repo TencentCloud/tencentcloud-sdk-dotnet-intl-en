@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Number of agents purchased.
+        /// Number of agents purchased
         /// </summary>
         [JsonProperty("Num")]
         public long? Num{ get; set; }

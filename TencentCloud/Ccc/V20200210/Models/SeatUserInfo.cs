@@ -44,7 +44,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// Agent phone number (preceded by 0086).
+        /// Agent's Telephone Number (With 0086 Prefix)
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
@@ -62,8 +62,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// List of skill groups associated with the agent.
-        /// Note: This field may return null, indicating that no valid value could be obtained.
+        /// List of skill groups associated with the seat
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SkillGroupNameList")]
         public string[] SkillGroupNameList{ get; set; }

@@ -76,34 +76,40 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration information for RTMP_PULL.
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public CreateInputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration information of RTSP_PULL.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public CreateInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// HLS_PULL configuration information.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public CreateInputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Delayed broadcast smooth streaming configuration information.
         /// </summary>
         [JsonProperty("ResilientStream")]
         public ResilientStreamConf ResilientStream{ get; set; }
 
         /// <summary>
-        /// The bound security group IDs. 
+        /// The ID of the input security group to bind. Only one security group can be associated.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
 
 
         /// <summary>
@@ -124,6 +130,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
             this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

@@ -73,16 +73,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffEmail{ get; set; }
 
         /// <summary>
-        /// Agent work number.
+        /// Agent ID
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// Session state.
-        /// ringing - In progress.
-        /// seatJoining - Waiting for agent to receive call.
-        /// InProgress - Ongoing.
+        /// Session Status
+        /// ringing Ringing
+        /// seatJoining  waiting for the agent to answer
+        /// inProgress  Ongoing
         /// finished - Completed.
         /// </summary>
         [JsonProperty("SessionStatus")]

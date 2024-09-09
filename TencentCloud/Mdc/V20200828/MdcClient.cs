@@ -28,7 +28,7 @@ namespace TencentCloud.Mdc.V20200828
 
        private const string endpoint = "mdc.tencentcloudapi.com";
        private const string version = "2020-08-28";
-       private const string sdkVersion = "SDK_NET_3.0.974";
+       private const string sdkVersion = "SDK_NET_3.0.975";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Mdc.V20200828
         public CreateStreamLinkFlowResponse CreateStreamLinkFlowSync(CreateStreamLinkFlowRequest req)
         {
             return InternalRequestAsync<CreateStreamLinkFlowResponse>(req, "CreateStreamLinkFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create an input configuration for the StreamLink.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkInputRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkInputResponse"/></returns>
+        public Task<CreateStreamLinkInputResponse> CreateStreamLinkInput(CreateStreamLinkInputRequest req)
+        {
+            return InternalRequestAsync<CreateStreamLinkInputResponse>(req, "CreateStreamLinkInput");
+        }
+
+        /// <summary>
+        /// Create an input configuration for the StreamLink.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkInputRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkInputResponse"/></returns>
+        public CreateStreamLinkInputResponse CreateStreamLinkInputSync(CreateStreamLinkInputRequest req)
+        {
+            return InternalRequestAsync<CreateStreamLinkInputResponse>(req, "CreateStreamLinkInput")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

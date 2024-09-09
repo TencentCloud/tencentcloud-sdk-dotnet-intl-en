@@ -50,8 +50,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string RoutePolicy{ get; set; }
 
         /// <summary>
-        /// Whether the session is allocated to the last serviced agent first.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Should the conversation allocation prioritize the last service seat?
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UsingLastSeat")]
         public long? UsingLastSeat{ get; set; }
@@ -77,6 +77,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SkillGroupType")]
         public long? SkillGroupType{ get; set; }
 
+        /// <summary>
+        /// Extension number within the skill group
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +98,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
             this.SetParamSimple(map, prefix + "SkillGroupType", this.SkillGroupType);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

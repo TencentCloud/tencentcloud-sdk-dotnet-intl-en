@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.974";
+       private const string sdkVersion = "SDK_NET_3.0.975";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,28 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to pause the predictive outbound call task.
+        /// If you want to stop running agent's individual auto task, then call AbortAgentCruiseDialingCampaign to terminate.
+        /// </summary>
+        /// <param name="req"><see cref="AbortAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="AbortAgentCruiseDialingCampaignResponse"/></returns>
+        public Task<AbortAgentCruiseDialingCampaignResponse> AbortAgentCruiseDialingCampaign(AbortAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<AbortAgentCruiseDialingCampaignResponse>(req, "AbortAgentCruiseDialingCampaign");
+        }
+
+        /// <summary>
+        /// If you want to stop running agent's individual auto task, then call AbortAgentCruiseDialingCampaign to terminate.
+        /// </summary>
+        /// <param name="req"><see cref="AbortAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="AbortAgentCruiseDialingCampaignResponse"/></returns>
+        public AbortAgentCruiseDialingCampaignResponse AbortAgentCruiseDialingCampaignSync(AbortAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<AbortAgentCruiseDialingCampaignResponse>(req, "AbortAgentCruiseDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to pause predictive dialing campaign
         /// </summary>
         /// <param name="req"><see cref="AbortPredictiveDialingCampaignRequest"/></param>
         /// <returns><see cref="AbortPredictiveDialingCampaignResponse"/></returns>
@@ -64,7 +85,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to pause the predictive outbound call task.
+        /// This API is used to pause predictive dialing campaign
         /// </summary>
         /// <param name="req"><see cref="AbortPredictiveDialingCampaignRequest"/></param>
         /// <returns><see cref="AbortPredictiveDialingCampaignResponse"/></returns>
@@ -75,7 +96,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to bind outbound skill group of number.
+        /// This API is used to assign outbound skill group(s) to your number
         /// </summary>
         /// <param name="req"><see cref="BindNumberCallOutSkillGroupRequest"/></param>
         /// <returns><see cref="BindNumberCallOutSkillGroupResponse"/></returns>
@@ -85,7 +106,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to bind outbound skill group of number.
+        /// This API is used to assign outbound skill group(s) to your number
         /// </summary>
         /// <param name="req"><see cref="BindNumberCallOutSkillGroupRequest"/></param>
         /// <returns><see cref="BindNumberCallOutSkillGroupResponse"/></returns>
@@ -96,7 +117,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to bind the agent's skill group.
+        /// This API is used to assign an agent to skill group
         /// </summary>
         /// <param name="req"><see cref="BindStaffSkillGroupListRequest"/></param>
         /// <returns><see cref="BindStaffSkillGroupListResponse"/></returns>
@@ -106,7 +127,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to bind the agent's skill group.
+        /// This API is used to assign an agent to skill group
         /// </summary>
         /// <param name="req"><see cref="BindStaffSkillGroupListRequest"/></param>
         /// <returns><see cref="BindStaffSkillGroupListResponse"/></returns>
@@ -134,6 +155,27 @@ namespace TencentCloud.Ccc.V20200210
         public CreateAdminURLResponse CreateAdminURLSync(CreateAdminURLRequest req)
         {
             return InternalRequestAsync<CreateAdminURLResponse>(req, "CreateAdminURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This document shows how to call API to create an individual auto dialing campaign for agent
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="CreateAgentCruiseDialingCampaignResponse"/></returns>
+        public Task<CreateAgentCruiseDialingCampaignResponse> CreateAgentCruiseDialingCampaign(CreateAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<CreateAgentCruiseDialingCampaignResponse>(req, "CreateAgentCruiseDialingCampaign");
+        }
+
+        /// <summary>
+        /// This document shows how to call API to create an individual auto dialing campaign for agent
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="CreateAgentCruiseDialingCampaignResponse"/></returns>
+        public CreateAgentCruiseDialingCampaignResponse CreateAgentCruiseDialingCampaignSync(CreateAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<CreateAgentCruiseDialingCampaignResponse>(req, "CreateAgentCruiseDialingCampaign")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -218,6 +260,27 @@ namespace TencentCloud.Ccc.V20200210
         public CreateExtensionResponse CreateExtensionSync(CreateExtensionRequest req)
         {
             return InternalRequestAsync<CreateExtensionResponse>(req, "CreateExtension")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a session associated with IVR. This feature is supported only in the Advanced Version. Currently, it supports inbound and automatic outbound IVR types. Upon receiving the request, TCCC will first attempt to call the callee, then enter the IVR flow.
+        /// </summary>
+        /// <param name="req"><see cref="CreateIVRSessionRequest"/></param>
+        /// <returns><see cref="CreateIVRSessionResponse"/></returns>
+        public Task<CreateIVRSessionResponse> CreateIVRSession(CreateIVRSessionRequest req)
+        {
+            return InternalRequestAsync<CreateIVRSessionResponse>(req, "CreateIVRSession");
+        }
+
+        /// <summary>
+        /// Create a session associated with IVR. This feature is supported only in the Advanced Version. Currently, it supports inbound and automatic outbound IVR types. Upon receiving the request, TCCC will first attempt to call the callee, then enter the IVR flow.
+        /// </summary>
+        /// <param name="req"><see cref="CreateIVRSessionRequest"/></param>
+        /// <returns><see cref="CreateIVRSessionResponse"/></returns>
+        public CreateIVRSessionResponse CreateIVRSessionSync(CreateIVRSessionRequest req)
+        {
+            return InternalRequestAsync<CreateIVRSessionResponse>(req, "CreateIVRSession")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +411,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// Query Agent Cruise-style Outbound Call Task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="DescribeAgentCruiseDialingCampaignResponse"/></returns>
+        public Task<DescribeAgentCruiseDialingCampaignResponse> DescribeAgentCruiseDialingCampaign(DescribeAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentCruiseDialingCampaignResponse>(req, "DescribeAgentCruiseDialingCampaign");
+        }
+
+        /// <summary>
+        /// Query Agent Cruise-style Outbound Call Task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentCruiseDialingCampaignRequest"/></param>
+        /// <returns><see cref="DescribeAgentCruiseDialingCampaignResponse"/></returns>
+        public DescribeAgentCruiseDialingCampaignResponse DescribeAgentCruiseDialingCampaignSync(DescribeAgentCruiseDialingCampaignRequest req)
+        {
+            return InternalRequestAsync<DescribeAgentCruiseDialingCampaignResponse>(req, "DescribeAgentCruiseDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query automatic outbound call task details.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoCalloutTaskRequest"/></param>
@@ -369,7 +453,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to query auto-task outbound calls in batch.
+        /// Batch Query Automatic Outbound Call Tasks
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoCalloutTasksRequest"/></param>
         /// <returns><see cref="DescribeAutoCalloutTasksResponse"/></returns>
@@ -379,7 +463,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to query auto-task outbound calls in batch.
+        /// Batch Query Automatic Outbound Call Tasks
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoCalloutTasksRequest"/></param>
         /// <returns><see cref="DescribeAutoCalloutTasksResponse"/></returns>
@@ -470,6 +554,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeExtensionsResponse DescribeExtensionsSync(DescribeExtensionsRequest req)
         {
             return InternalRequestAsync<DescribeExtensionsResponse>(req, "DescribeExtensions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query IVR Audio File List Information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIvrAudioListRequest"/></param>
+        /// <returns><see cref="DescribeIvrAudioListResponse"/></returns>
+        public Task<DescribeIvrAudioListResponse> DescribeIvrAudioList(DescribeIvrAudioListRequest req)
+        {
+            return InternalRequestAsync<DescribeIvrAudioListResponse>(req, "DescribeIvrAudioList");
+        }
+
+        /// <summary>
+        /// Query IVR Audio File List Information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIvrAudioListRequest"/></param>
+        /// <returns><see cref="DescribeIvrAudioListResponse"/></returns>
+        public DescribeIvrAudioListResponse DescribeIvrAudioListSync(DescribeIvrAudioListRequest req)
+        {
+            return InternalRequestAsync<DescribeIvrAudioListResponse>(req, "DescribeIvrAudioList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,7 +768,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to access telephone consumption statistics by instance.
+        /// This API is used to access call detail records by application
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCallInfoRequest"/></param>
         /// <returns><see cref="DescribeTelCallInfoResponse"/></returns>
@@ -673,7 +778,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to access telephone consumption statistics by instance.
+        /// This API is used to access call detail records by application
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCallInfoRequest"/></param>
         /// <returns><see cref="DescribeTelCallInfoResponse"/></returns>
@@ -789,7 +894,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to modify the customer service account.
+        /// This API is used to modify  customer service / agent account.
         /// </summary>
         /// <param name="req"><see cref="ModifyStaffRequest"/></param>
         /// <returns><see cref="ModifyStaffResponse"/></returns>
@@ -799,13 +904,34 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to modify the customer service account.
+        /// This API is used to modify  customer service / agent account.
         /// </summary>
         /// <param name="req"><see cref="ModifyStaffRequest"/></param>
         /// <returns><see cref="ModifyStaffResponse"/></returns>
         public ModifyStaffResponse ModifyStaffSync(ModifyStaffRequest req)
         {
             return InternalRequestAsync<ModifyStaffResponse>(req, "ModifyStaff")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify Agent's Password
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStaffPasswordRequest"/></param>
+        /// <returns><see cref="ModifyStaffPasswordResponse"/></returns>
+        public Task<ModifyStaffPasswordResponse> ModifyStaffPassword(ModifyStaffPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyStaffPasswordResponse>(req, "ModifyStaffPassword");
+        }
+
+        /// <summary>
+        /// Modify Agent's Password
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStaffPasswordRequest"/></param>
+        /// <returns><see cref="ModifyStaffPasswordResponse"/></returns>
+        public ModifyStaffPasswordResponse ModifyStaffPasswordSync(ModifyStaffPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyStaffPasswordResponse>(req, "ModifyStaffPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -974,6 +1100,27 @@ namespace TencentCloud.Ccc.V20200210
         public UpdatePredictiveDialingCampaignResponse UpdatePredictiveDialingCampaignSync(UpdatePredictiveDialingCampaignRequest req)
         {
             return InternalRequestAsync<UpdatePredictiveDialingCampaignResponse>(req, "UpdatePredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Upload audio files used in IVR, with a daily upload limit of 50 files. (It is recommended to use temporary links stored in Tencent Cloud Cos for the audio file URL in the parameters)
+        /// </summary>
+        /// <param name="req"><see cref="UploadIvrAudioRequest"/></param>
+        /// <returns><see cref="UploadIvrAudioResponse"/></returns>
+        public Task<UploadIvrAudioResponse> UploadIvrAudio(UploadIvrAudioRequest req)
+        {
+            return InternalRequestAsync<UploadIvrAudioResponse>(req, "UploadIvrAudio");
+        }
+
+        /// <summary>
+        /// Upload audio files used in IVR, with a daily upload limit of 50 files. (It is recommended to use temporary links stored in Tencent Cloud Cos for the audio file URL in the parameters)
+        /// </summary>
+        /// <param name="req"><see cref="UploadIvrAudioRequest"/></param>
+        /// <returns><see cref="UploadIvrAudioResponse"/></returns>
+        public UploadIvrAudioResponse UploadIvrAudioSync(UploadIvrAudioRequest req)
+        {
+            return InternalRequestAsync<UploadIvrAudioResponse>(req, "UploadIvrAudio")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

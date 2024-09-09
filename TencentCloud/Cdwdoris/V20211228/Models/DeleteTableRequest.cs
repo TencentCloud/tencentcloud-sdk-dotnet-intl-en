@@ -31,7 +31,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The name of the database where the table belongs needs to be deleted
+        /// The name of the database where the table belongs needs to be deleted.
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }

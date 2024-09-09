@@ -31,13 +31,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// Agent status: Free for Available | busy for Busy | rest for Break | notReady for Not Ready | afterCallWork for After Call Work | offline for Offline.
+        /// Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Supplementary agent status information.
+        /// Supplementary Information on Agent Status
         /// </summary>
         [JsonProperty("StatusExtra")]
         public StaffStatusExtra StatusExtra{ get; set; }

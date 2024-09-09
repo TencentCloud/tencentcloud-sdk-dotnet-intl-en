@@ -26,7 +26,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// Agent name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -38,28 +38,28 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Mail{ get; set; }
 
         /// <summary>
-        /// Agent telephone number.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Agent's Telephone Number
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
         /// Agent nickname.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// Agent number.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Agent ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// 
+        /// User Role ID
         /// </summary>
         [JsonProperty("RoleId")]
         public ulong? RoleId{ get; set; }

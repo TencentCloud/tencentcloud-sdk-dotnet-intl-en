@@ -37,13 +37,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Number of agents purchased (still within the validity period).
+        /// Agent Purchase Count (still within the validity period)
         /// </summary>
         [JsonProperty("StaffBuyNum")]
         public long? StaffBuyNum{ get; set; }
 
         /// <summary>
-        /// List of agents purchased (still within the validity period).
+        /// Agent Purchase List (still within the validity period)
         /// </summary>
         [JsonProperty("StaffBuyList")]
         public StaffBuyInfo[] StaffBuyList{ get; set; }

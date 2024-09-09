@@ -61,6 +61,12 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("OutputGroup")]
         public DescribeOutput[] OutputGroup{ get; set; }
 
+        /// <summary>
+        /// EventId of the StreamLink event associated with this Flow.
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
             this.SetParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
             this.SetParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

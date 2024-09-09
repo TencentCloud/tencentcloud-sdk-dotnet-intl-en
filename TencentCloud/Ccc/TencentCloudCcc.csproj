@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.974</VersionPrefix>
+    <VersionPrefix>3.0.975</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,8 +48,11 @@
 
   <ItemGroup>
     <Compile Include="V20200210\CccClient.cs" />
+    <Compile Include="V20200210\Models\AbortAgentCruiseDialingCampaignRequest.cs" />
+    <Compile Include="V20200210\Models\AbortAgentCruiseDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\AbortPredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\AbortPredictiveDialingCampaignResponse.cs" />
+    <Compile Include="V20200210\Models\AudioFileInfo.cs" />
     <Compile Include="V20200210\Models\AutoCalloutTaskCalleeInfo.cs" />
     <Compile Include="V20200210\Models\AutoCalloutTaskInfo.cs" />
     <Compile Include="V20200210\Models\BindNumberCallOutSkillGroupRequest.cs" />
@@ -62,6 +65,8 @@
     <Compile Include="V20200210\Models\CalleeAttribute.cs" />
     <Compile Include="V20200210\Models\CreateAdminURLRequest.cs" />
     <Compile Include="V20200210\Models\CreateAdminURLResponse.cs" />
+    <Compile Include="V20200210\Models\CreateAgentCruiseDialingCampaignRequest.cs" />
+    <Compile Include="V20200210\Models\CreateAgentCruiseDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\CreateAutoCalloutTaskRequest.cs" />
     <Compile Include="V20200210\Models\CreateAutoCalloutTaskResponse.cs" />
     <Compile Include="V20200210\Models\CreateCCCSkillGroupRequest.cs" />
@@ -70,6 +75,8 @@
     <Compile Include="V20200210\Models\CreateCallOutSessionResponse.cs" />
     <Compile Include="V20200210\Models\CreateExtensionRequest.cs" />
     <Compile Include="V20200210\Models\CreateExtensionResponse.cs" />
+    <Compile Include="V20200210\Models\CreateIVRSessionRequest.cs" />
+    <Compile Include="V20200210\Models\CreateIVRSessionResponse.cs" />
     <Compile Include="V20200210\Models\CreatePredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\CreatePredictiveDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\CreateSDKLoginTokenRequest.cs" />
@@ -82,6 +89,8 @@
     <Compile Include="V20200210\Models\DeletePredictiveDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\DeleteStaffRequest.cs" />
     <Compile Include="V20200210\Models\DeleteStaffResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeAgentCruiseDialingCampaignRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeAgentCruiseDialingCampaignResponse.cs" />
     <Compile Include="V20200210\Models\DescribeAutoCalloutTaskRequest.cs" />
     <Compile Include="V20200210\Models\DescribeAutoCalloutTaskResponse.cs" />
     <Compile Include="V20200210\Models\DescribeAutoCalloutTasksRequest.cs" />
@@ -94,6 +103,8 @@
     <Compile Include="V20200210\Models\DescribeExtensionResponse.cs" />
     <Compile Include="V20200210\Models\DescribeExtensionsRequest.cs" />
     <Compile Include="V20200210\Models\DescribeExtensionsResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeIvrAudioListRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeIvrAudioListResponse.cs" />
     <Compile Include="V20200210\Models\DescribeNumbersRequest.cs" />
     <Compile Include="V20200210\Models\DescribeNumbersResponse.cs" />
     <Compile Include="V20200210\Models\DescribePSTNActiveSessionListRequest.cs" />
@@ -128,6 +139,8 @@
     <Compile Include="V20200210\Models\IVRKeyPressedElement.cs" />
     <Compile Include="V20200210\Models\ModifyExtensionRequest.cs" />
     <Compile Include="V20200210\Models\ModifyExtensionResponse.cs" />
+    <Compile Include="V20200210\Models\ModifyStaffPasswordRequest.cs" />
+    <Compile Include="V20200210\Models\ModifyStaffPasswordResponse.cs" />
     <Compile Include="V20200210\Models\ModifyStaffRequest.cs" />
     <Compile Include="V20200210\Models\ModifyStaffResponse.cs" />
     <Compile Include="V20200210\Models\NumberInfo.cs" />
@@ -162,6 +175,10 @@
     <Compile Include="V20200210\Models\UpdateCCCSkillGroupResponse.cs" />
     <Compile Include="V20200210\Models\UpdatePredictiveDialingCampaignRequest.cs" />
     <Compile Include="V20200210\Models\UpdatePredictiveDialingCampaignResponse.cs" />
+    <Compile Include="V20200210\Models\UploadAudioInfo.cs" />
+    <Compile Include="V20200210\Models\UploadIvrAudioFailedInfo.cs" />
+    <Compile Include="V20200210\Models\UploadIvrAudioRequest.cs" />
+    <Compile Include="V20200210\Models\UploadIvrAudioResponse.cs" />
     <Compile Include="V20200210\Models\Variable.cs" />
   </ItemGroup>
 </Project>

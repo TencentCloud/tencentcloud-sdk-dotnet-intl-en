@@ -31,7 +31,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string InputName{ get; set; }
 
         /// <summary>
-        /// Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+        /// Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -67,25 +67,25 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input RTMP_PULL configuration information.
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public CreateInputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input RTSP_PULL configuration information.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public CreateInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input HLS_PULL configuration information.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public CreateInputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Delayed broadcast smooth streaming configuration information.
         /// </summary>
         [JsonProperty("ResilientStream")]
         public ResilientStreamConf ResilientStream{ get; set; }
@@ -95,6 +95,12 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
             this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

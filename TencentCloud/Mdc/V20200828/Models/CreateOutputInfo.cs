@@ -67,14 +67,13 @@ namespace TencentCloud.Mdc.V20200828.Models
         public CreateOutputInfoRTPSettings RTPSettings{ get; set; }
 
         /// <summary>
-        /// The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
-        /// This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+        /// IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// 
+        /// The maximum number of concurrent stream pulls is 4, and the default value is 4.
         /// </summary>
         [JsonProperty("MaxConcurrent")]
         public ulong? MaxConcurrent{ get; set; }
@@ -84,6 +83,12 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// Availability zone: output supports at most one availability zone as input.
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
 
 
         /// <summary>
@@ -101,6 +106,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
             this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

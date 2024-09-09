@@ -32,7 +32,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Mail{ get; set; }
 
         /// <summary>
-        /// Agent phone number.
+        /// Agent Telephone
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Phone")]
@@ -60,7 +60,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? EndedTimestamp{ get; set; }
 
         /// <summary>
-        /// Recording ID can be indexed to the agent side recording.
+        /// Recording ID, which can be used to index the recording on the agent side
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RecordId")]
@@ -74,7 +74,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Transfer source agent information.
+        /// Transfer Source Agent Information
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransferFrom")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string TransferFromType{ get; set; }
 
         /// <summary>
-        /// Transfer destination agent information.
+        /// Transfer Destination Agent Information
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransferTo")]

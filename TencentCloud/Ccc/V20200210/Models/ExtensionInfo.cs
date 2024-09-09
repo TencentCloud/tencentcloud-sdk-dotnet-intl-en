@@ -79,13 +79,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public bool? Register{ get; set; }
 
         /// <summary>
-        /// Bind agent email.
+        /// Bind Agent Email
         /// </summary>
         [JsonProperty("Relation")]
         public string Relation{ get; set; }
 
         /// <summary>
-        /// Bind agent name
+        /// Bind Agent Name
         /// </summary>
         [JsonProperty("RelationName")]
         public string RelationName{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("InputGroup")]
         public CreateInput[] InputGroup{ get; set; }
 
+        /// <summary>
+        /// The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
             this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
             this.SetParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

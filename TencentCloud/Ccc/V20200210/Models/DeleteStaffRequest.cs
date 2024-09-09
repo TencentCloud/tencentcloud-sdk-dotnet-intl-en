@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// List of customer service emails to be deleted.
+        /// Customer service emails, supports up to 200 at a time.
         /// </summary>
         [JsonProperty("StaffList")]
         public string[] StaffList{ get; set; }
