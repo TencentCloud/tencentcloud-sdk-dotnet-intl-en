@@ -61,7 +61,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// SQL type
+        /// SQL Type: 0 is non-query, 1 is query, -1 is unrestricted.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SQLType")]

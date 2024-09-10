@@ -129,6 +129,20 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("MainlandIDCard")]
         public MainlandIDCard MainlandIDCard{ get; set; }
 
+        /// <summary>
+        /// Japan ID Card
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("JapanIDCard")]
+        public JapanIDCard JapanIDCard{ get; set; }
+
+        /// <summary>
+        /// Taiwan ID Card
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TaiWanIDCard")]
+        public TaiWanIDCard TaiWanIDCard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +164,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "SingaporeIDCard.", this.SingaporeIDCard);
             this.SetParamObj(map, prefix + "MacaoIDCard.", this.MacaoIDCard);
             this.SetParamObj(map, prefix + "MainlandIDCard.", this.MainlandIDCard);
+            this.SetParamObj(map, prefix + "JapanIDCard.", this.JapanIDCard);
+            this.SetParamObj(map, prefix + "TaiWanIDCard.", this.TaiWanIDCard);
         }
     }
 }

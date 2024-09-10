@@ -15,45 +15,49 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Faceid.V20180301.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PermissionHostInfo : AbstractModel
+    public class TaiWanIDCard : AbstractModel
     {
         
         /// <summary>
-        /// A list of user permissions in the global scope, which can be applied to all databases and tables.
-        /// 
+        /// Full name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("GlobalPermissions")]
-        public string[] GlobalPermissions{ get; set; }
+        [JsonProperty("FullName")]
+        public string FullName{ get; set; }
 
         /// <summary>
-        /// The key is the database name, and the value is the permission list of the user on the database.
+        /// License number
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("DatabasePermissions")]
-        public DatabasePermissions[] DatabasePermissions{ get; set; }
+        [JsonProperty("LicenseNumber")]
+        public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// The key is the full name of the table, and the value is the permission list of the user on the table.
-        /// 
+        /// Gender
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TablePermissions")]
-        public TablePermissions[] TablePermissions{ get; set; }
+        [JsonProperty("Sex")]
+        public string Sex{ get; set; }
 
         /// <summary>
-        /// The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
-        /// 
+        /// Issued country
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("CatalogPermissions")]
-        public CatalogPermission[] CatalogPermissions{ get; set; }
+        [JsonProperty("IssuedCountry")]
+        public string IssuedCountry{ get; set; }
+
+        /// <summary>
+        /// Registration number
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RegistrationNumber")]
+        public string RegistrationNumber{ get; set; }
 
 
         /// <summary>
@@ -61,10 +65,11 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "GlobalPermissions.", this.GlobalPermissions);
-            this.SetParamArrayObj(map, prefix + "DatabasePermissions.", this.DatabasePermissions);
-            this.SetParamArrayObj(map, prefix + "TablePermissions.", this.TablePermissions);
-            this.SetParamArrayObj(map, prefix + "CatalogPermissions.", this.CatalogPermissions);
+            this.SetParamSimple(map, prefix + "FullName", this.FullName);
+            this.SetParamSimple(map, prefix + "LicenseNumber", this.LicenseNumber);
+            this.SetParamSimple(map, prefix + "Sex", this.Sex);
+            this.SetParamSimple(map, prefix + "IssuedCountry", this.IssuedCountry);
+            this.SetParamSimple(map, prefix + "RegistrationNumber", this.RegistrationNumber);
         }
     }
 }

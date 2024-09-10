@@ -32,6 +32,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// MYS: Malaysia
         /// SGP: Singapore
         /// JPN: Japan
+        /// TWN:Taiwan
         /// AUTO: Automatic Identification
         /// </summary>
         [JsonProperty("Nationality")]

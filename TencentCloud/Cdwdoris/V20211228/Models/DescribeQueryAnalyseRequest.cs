@@ -90,6 +90,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
+        /// <summary>
+        /// Minimum query execution time, in milliseconds.
+        /// </summary>
+        [JsonProperty("QueryTime")]
+        public ulong? QueryTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "SQLTypeFilter", this.SQLTypeFilter);
             this.SetParamSimple(map, prefix + "SortField", this.SortField);
             this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
+            this.SetParamSimple(map, prefix + "QueryTime", this.QueryTime);
         }
     }
 }

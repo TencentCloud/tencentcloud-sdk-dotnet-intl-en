@@ -79,10 +79,29 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string PassWord{ get; set; }
 
         /// <summary>
-        /// Column type
+        /// Column type, this field has been deprecated, please use Types
         /// </summary>
         [JsonProperty("ColumnTypes")]
+        [System.Obsolete]
         public string ColumnTypes{ get; set; }
+
+        /// <summary>
+        /// Array of column types
+        /// </summary>
+        [JsonProperty("Types")]
+        public string[] Types{ get; set; }
+
+        /// <summary>
+        /// Catalog name, defaults to 'internal' if not specified.
+        /// </summary>
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
+
+        /// <summary>
+        /// InstanceId
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -100,6 +119,9 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
             this.SetParamSimple(map, prefix + "ColumnTypes", this.ColumnTypes);
+            this.SetParamArraySimple(map, prefix + "Types.", this.Types);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

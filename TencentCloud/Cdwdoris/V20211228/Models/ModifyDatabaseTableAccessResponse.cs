@@ -31,7 +31,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public bool? Success{ get; set; }
 
         /// <summary>
-        /// Message description of the operation result
+        /// Error message
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

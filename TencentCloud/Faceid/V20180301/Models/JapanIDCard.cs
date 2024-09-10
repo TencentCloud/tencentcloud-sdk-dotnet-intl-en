@@ -15,45 +15,56 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdwdoris.V20211228.Models
+namespace TencentCloud.Faceid.V20180301.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PermissionHostInfo : AbstractModel
+    public class JapanIDCard : AbstractModel
     {
         
         /// <summary>
-        /// A list of user permissions in the global scope, which can be applied to all databases and tables.
-        /// 
+        /// Full name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("GlobalPermissions")]
-        public string[] GlobalPermissions{ get; set; }
+        [JsonProperty("FullName")]
+        public string FullName{ get; set; }
 
         /// <summary>
-        /// The key is the database name, and the value is the permission list of the user on the database.
+        /// License number
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("DatabasePermissions")]
-        public DatabasePermissions[] DatabasePermissions{ get; set; }
+        [JsonProperty("LicenseNumber")]
+        public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// The key is the full name of the table, and the value is the permission list of the user on the table.
-        /// 
+        /// Age
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TablePermissions")]
-        public TablePermissions[] TablePermissions{ get; set; }
+        [JsonProperty("Age")]
+        public string Age{ get; set; }
 
         /// <summary>
-        /// The key is the full name of the catalog, and the value is the permission list of the user on the catalog.
-        /// 
+        /// Birthday
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("CatalogPermissions")]
-        public CatalogPermission[] CatalogPermissions{ get; set; }
+        [JsonProperty("Birthday")]
+        public string Birthday{ get; set; }
+
+        /// <summary>
+        /// Expire date
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExpirationDate")]
+        public string ExpirationDate{ get; set; }
+
+        /// <summary>
+        /// Address
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FormattedAddress")]
+        public string FormattedAddress{ get; set; }
 
 
         /// <summary>
@@ -61,10 +72,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "GlobalPermissions.", this.GlobalPermissions);
-            this.SetParamArrayObj(map, prefix + "DatabasePermissions.", this.DatabasePermissions);
-            this.SetParamArrayObj(map, prefix + "TablePermissions.", this.TablePermissions);
-            this.SetParamArrayObj(map, prefix + "CatalogPermissions.", this.CatalogPermissions);
+            this.SetParamSimple(map, prefix + "FullName", this.FullName);
+            this.SetParamSimple(map, prefix + "LicenseNumber", this.LicenseNumber);
+            this.SetParamSimple(map, prefix + "Age", this.Age);
+            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
+            this.SetParamSimple(map, prefix + "FormattedAddress", this.FormattedAddress);
         }
     }
 }
