@@ -59,6 +59,17 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 7.PhilippinesSSSID: Philippines SSSID card
         /// 8.PhilippinesUMID: Philippines UMID card
         /// 9.InternationalIDPassport: ID cards of Hong Kong, Macao and Taiwan (China), and international passport.
+        /// 10.IndonesiaDrivingLicense:Indonesia driving license
+        /// 11.ThailandIDCard: Thailand ID card
+        /// 12.ThailandDrivingLicense: Thailand driving license
+        /// 13.MLDrivingLicense: Malaysia driving license
+        /// 14.SingaporeIDCard: Singapore ID card
+        /// 15.SingaporeDrivingLicense: Singapore driving license
+        /// 16.JapanIDCard: Japan ID card
+        /// 17.JapanDrivingLicense: Japan driving license
+        /// 18.PhilippinesIDCard: Philippines ID card
+        /// 19.MainlandIDCard: Mainland ID card
+        /// 20.MacaoIDCard: Macao ID card
         /// Example: HKIDCard
         /// </summary>
         [JsonProperty("IDCardType")]

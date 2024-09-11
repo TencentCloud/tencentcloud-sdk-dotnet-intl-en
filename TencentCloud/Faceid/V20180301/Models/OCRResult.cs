@@ -41,7 +41,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// OCR result of the ID card.
         /// </summary>
         [JsonProperty("CardInfo")]
+        [System.Obsolete]
         public CardInfo CardInfo{ get; set; }
+
+        /// <summary>
+        /// OCR result of the ID card.
+        /// </summary>
+        [JsonProperty("NormalCardInfo")]
+        public NormalCardInfo NormalCardInfo{ get; set; }
 
         /// <summary>
         /// The request id
@@ -70,6 +77,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IsPass", this.IsPass);
             this.SetParamSimple(map, prefix + "CardImageBase64", this.CardImageBase64);
             this.SetParamObj(map, prefix + "CardInfo.", this.CardInfo);
+            this.SetParamObj(map, prefix + "NormalCardInfo.", this.NormalCardInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
             this.SetParamSimple(map, prefix + "CardCutImageBase64", this.CardCutImageBase64);
             this.SetParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
