@@ -31,7 +31,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Name of the database where the source table is located
+        /// Name of the database where the source table is located.
         /// </summary>
         [JsonProperty("CopiedFromDb")]
         public string CopiedFromDb{ get; set; }

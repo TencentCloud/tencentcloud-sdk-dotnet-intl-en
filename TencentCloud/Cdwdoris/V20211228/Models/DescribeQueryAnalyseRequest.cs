@@ -49,7 +49,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of operation period
+        /// End time of operation period.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

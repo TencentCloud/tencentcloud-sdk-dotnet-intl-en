@@ -26,7 +26,7 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         
         /// <summary>
         /// Error message
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
