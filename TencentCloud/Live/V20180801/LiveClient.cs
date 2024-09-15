@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.978";
+       private const string sdkVersion = "SDK_NET_3.0.979";
 
         /// <summary>
         /// Client constructor.
@@ -966,7 +966,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query the data of billable LVB bandwidth and traffic.
+        /// This API is used to query the data of billable bandwidth and traffic.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
         /// <returns><see cref="DescribeBillBandwidthAndFluxListResponse"/></returns>
@@ -976,7 +976,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to query the data of billable LVB bandwidth and traffic.
+        /// This API is used to query the data of billable bandwidth and traffic.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
         /// <returns><see cref="DescribeBillBandwidthAndFluxListResponse"/></returns>

@@ -37,6 +37,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string Operation{ get; set; }
 
         /// <summary>
+        /// InstanceId
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// Quota value, which is used to set the quota of data volume or replicas.
         /// </summary>
         [JsonProperty("Quota")]
@@ -67,10 +73,10 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string PassWord{ get; set; }
 
         /// <summary>
-        /// InstanceId
+        /// The name of the catalog, if left unspecified, defaults to "internal".
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("CatalogName")]
+        public string CatalogName{ get; set; }
 
 
         /// <summary>
@@ -80,12 +86,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Quota", this.Quota);
             this.SetParamSimple(map, prefix + "NewDbName", this.NewDbName);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
         }
     }
 }

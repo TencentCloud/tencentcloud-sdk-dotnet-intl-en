@@ -31,18 +31,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-        /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
-
-        /// <summary>
-        /// Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
-        /// </summary>
-        [JsonProperty("PassWord")]
-        public string PassWord{ get; set; }
-
-        /// <summary>
         /// Database name
         /// </summary>
         [JsonProperty("DbName")]
@@ -61,16 +49,28 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public Column[] Columns{ get; set; }
 
         /// <summary>
-        /// Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
-        /// </summary>
-        [JsonProperty("IndexInfos")]
-        public IndexInfo[] IndexInfos{ get; set; }
-
-        /// <summary>
         /// Bucket information
         /// </summary>
         [JsonProperty("Distribution")]
         public Distribution Distribution{ get; set; }
+
+        /// <summary>
+        /// Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
+        /// <summary>
+        /// Password corresponding to the user. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
+        /// </summary>
+        [JsonProperty("PassWord")]
+        public string PassWord{ get; set; }
+
+        /// <summary>
+        /// Index information. The inverted index and N-Gram index can be configured through this parameter. The Prefix index is related to the sort key and key column, and do not require additional configuration. Configure bloom_filter_columns in the table attribute when BloomFilter index is required.
+        /// </summary>
+        [JsonProperty("IndexInfos")]
+        public IndexInfo[] IndexInfos{ get; set; }
 
         /// <summary>
         /// Table description
@@ -91,13 +91,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
-            this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
-            this.SetParamArrayObj(map, prefix + "IndexInfos.", this.IndexInfos);
             this.SetParamObj(map, prefix + "Distribution.", this.Distribution);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
+            this.SetParamArrayObj(map, prefix + "IndexInfos.", this.IndexInfos);
             this.SetParamSimple(map, prefix + "TableComment", this.TableComment);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
         }

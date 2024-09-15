@@ -31,28 +31,34 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// Table name. If it is null, it indicates that the entire database is authorized.
-        /// </summary>
-        [JsonProperty("Table")]
-        public string Table{ get; set; }
-
-        /// <summary>
         /// Permission list
         /// </summary>
         [JsonProperty("Privileges")]
         public string[] Privileges{ get; set; }
 
         /// <summary>
-        /// Role name, if authorized to the role
-        /// </summary>
-        [JsonProperty("Role")]
-        public string Role{ get; set; }
-
-        /// <summary>
         /// Operation type: GRANT or REVOKE
         /// </summary>
         [JsonProperty("GrantOrRevoke")]
         public string GrantOrRevoke{ get; set; }
+
+        /// <summary>
+        /// InstanceId
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Table name. If it is null, it indicates that the entire database is authorized.
+        /// </summary>
+        [JsonProperty("Table")]
+        public string Table{ get; set; }
+
+        /// <summary>
+        /// Role name, if authorized to the role
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
 
         /// <summary>
         /// Use the user who has corresponding permissions for operations. If the TCHouse-D cluster uses a kernel account registered by a CAM user, you do not need to fill it in.
@@ -73,12 +79,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string CatalogName{ get; set; }
 
         /// <summary>
-        /// InstanceId
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
         /// Machine Group, defaults to % if not specified.
         /// </summary>
         [JsonProperty("WhiteHost")]
@@ -91,14 +91,14 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Database", this.Database);
-            this.SetParamSimple(map, prefix + "Table", this.Table);
             this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
-            this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "GrantOrRevoke", this.GrantOrRevoke);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Table", this.Table);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
             this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
         }
     }

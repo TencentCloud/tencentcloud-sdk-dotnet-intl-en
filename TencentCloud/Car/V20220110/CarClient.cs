@@ -28,7 +28,7 @@ namespace TencentCloud.Car.V20220110
 
        private const string endpoint = "car.tencentcloudapi.com";
        private const string version = "2022-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.978";
+       private const string sdkVersion = "SDK_NET_3.0.979";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// This API is used to bind a concurrency pack to a project.
+        /// </summary>
+        /// <param name="req"><see cref="BindConcurrentPackagesToProjectRequest"/></param>
+        /// <returns><see cref="BindConcurrentPackagesToProjectResponse"/></returns>
+        public Task<BindConcurrentPackagesToProjectResponse> BindConcurrentPackagesToProject(BindConcurrentPackagesToProjectRequest req)
+        {
+            return InternalRequestAsync<BindConcurrentPackagesToProjectResponse>(req, "BindConcurrentPackagesToProject");
+        }
+
+        /// <summary>
+        /// This API is used to bind a concurrency pack to a project.
+        /// </summary>
+        /// <param name="req"><see cref="BindConcurrentPackagesToProjectRequest"/></param>
+        /// <returns><see cref="BindConcurrentPackagesToProjectResponse"/></returns>
+        public BindConcurrentPackagesToProjectResponse BindConcurrentPackagesToProjectSync(BindConcurrentPackagesToProjectRequest req)
+        {
+            return InternalRequestAsync<BindConcurrentPackagesToProjectResponse>(req, "BindConcurrentPackagesToProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create an application.
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
@@ -92,6 +113,27 @@ namespace TencentCloud.Car.V20220110
         public CreateApplicationResponse CreateApplicationSync(CreateApplicationRequest req)
         {
             return InternalRequestAsync<CreateApplicationResponse>(req, "CreateApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a cloud application project.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationProjectRequest"/></param>
+        /// <returns><see cref="CreateApplicationProjectResponse"/></returns>
+        public Task<CreateApplicationProjectResponse> CreateApplicationProject(CreateApplicationProjectRequest req)
+        {
+            return InternalRequestAsync<CreateApplicationProjectResponse>(req, "CreateApplicationProject");
+        }
+
+        /// <summary>
+        /// This API is used to create a cloud application project.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationProjectRequest"/></param>
+        /// <returns><see cref="CreateApplicationProjectResponse"/></returns>
+        public CreateApplicationProjectResponse CreateApplicationProjectSync(CreateApplicationProjectRequest req)
+        {
+            return InternalRequestAsync<CreateApplicationProjectResponse>(req, "CreateApplicationProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +222,27 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// This API is used to delete cloud application projects in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationProjectsRequest"/></param>
+        /// <returns><see cref="DeleteApplicationProjectsResponse"/></returns>
+        public Task<DeleteApplicationProjectsResponse> DeleteApplicationProjects(DeleteApplicationProjectsRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationProjectsResponse>(req, "DeleteApplicationProjects");
+        }
+
+        /// <summary>
+        /// This API is used to delete cloud application projects in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationProjectsRequest"/></param>
+        /// <returns><see cref="DeleteApplicationProjectsResponse"/></returns>
+        public DeleteApplicationProjectsResponse DeleteApplicationProjectsSync(DeleteApplicationProjectsRequest req)
+        {
+            return InternalRequestAsync<DeleteApplicationProjectsResponse>(req, "DeleteApplicationProjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a cloud application version.
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationVersionRequest"/></param>
@@ -264,6 +327,48 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// This API is used to obtain the advanced configuration information of a cloud application project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationProjectAdvancedConfigRequest"/></param>
+        /// <returns><see cref="DescribeApplicationProjectAdvancedConfigResponse"/></returns>
+        public Task<DescribeApplicationProjectAdvancedConfigResponse> DescribeApplicationProjectAdvancedConfig(DescribeApplicationProjectAdvancedConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationProjectAdvancedConfigResponse>(req, "DescribeApplicationProjectAdvancedConfig");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the advanced configuration information of a cloud application project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationProjectAdvancedConfigRequest"/></param>
+        /// <returns><see cref="DescribeApplicationProjectAdvancedConfigResponse"/></returns>
+        public DescribeApplicationProjectAdvancedConfigResponse DescribeApplicationProjectAdvancedConfigSync(DescribeApplicationProjectAdvancedConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationProjectAdvancedConfigResponse>(req, "DescribeApplicationProjectAdvancedConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the cloud application project list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationProjectsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationProjectsResponse"/></returns>
+        public Task<DescribeApplicationProjectsResponse> DescribeApplicationProjects(DescribeApplicationProjectsRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationProjectsResponse>(req, "DescribeApplicationProjects");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the cloud application project list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationProjectsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationProjectsResponse"/></returns>
+        public DescribeApplicationProjectsResponse DescribeApplicationProjectsSync(DescribeApplicationProjectsRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationProjectsResponse>(req, "DescribeApplicationProjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the running status of a cloud application and update status information.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationStatusRequest"/></param>
@@ -323,6 +428,48 @@ namespace TencentCloud.Car.V20220110
         public DescribeConcurrentCountResponse DescribeConcurrentCountSync(DescribeConcurrentCountRequest req)
         {
             return InternalRequestAsync<DescribeConcurrentCountResponse>(req, "DescribeConcurrentCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the cloud application concurrency pack list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentPackagesRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentPackagesResponse"/></returns>
+        public Task<DescribeConcurrentPackagesResponse> DescribeConcurrentPackages(DescribeConcurrentPackagesRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrentPackagesResponse>(req, "DescribeConcurrentPackages");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the cloud application concurrency pack list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentPackagesRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentPackagesResponse"/></returns>
+        public DescribeConcurrentPackagesResponse DescribeConcurrentPackagesSync(DescribeConcurrentPackagesRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrentPackagesResponse>(req, "DescribeConcurrentPackages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the concurrency overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentSummaryRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentSummaryResponse"/></returns>
+        public Task<DescribeConcurrentSummaryResponse> DescribeConcurrentSummary(DescribeConcurrentSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrentSummaryResponse>(req, "DescribeConcurrentSummary");
+        }
+
+        /// <summary>
+        /// This API is used to query the concurrency overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConcurrentSummaryRequest"/></param>
+        /// <returns><see cref="DescribeConcurrentSummaryResponse"/></returns>
+        public DescribeConcurrentSummaryResponse DescribeConcurrentSummarySync(DescribeConcurrentSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeConcurrentSummaryResponse>(req, "DescribeConcurrentSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -390,6 +537,27 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// This API is used to modify a cloud application project.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationProjectRequest"/></param>
+        /// <returns><see cref="ModifyApplicationProjectResponse"/></returns>
+        public Task<ModifyApplicationProjectResponse> ModifyApplicationProject(ModifyApplicationProjectRequest req)
+        {
+            return InternalRequestAsync<ModifyApplicationProjectResponse>(req, "ModifyApplicationProject");
+        }
+
+        /// <summary>
+        /// This API is used to modify a cloud application project.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationProjectRequest"/></param>
+        /// <returns><see cref="ModifyApplicationProjectResponse"/></returns>
+        public ModifyApplicationProjectResponse ModifyApplicationProjectSync(ModifyApplicationProjectRequest req)
+        {
+            return InternalRequestAsync<ModifyApplicationProjectResponse>(req, "ModifyApplicationProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the version information of a cloud application.
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationVersionRequest"/></param>
@@ -407,6 +575,27 @@ namespace TencentCloud.Car.V20220110
         public ModifyApplicationVersionResponse ModifyApplicationVersionSync(ModifyApplicationVersionRequest req)
         {
             return InternalRequestAsync<ModifyApplicationVersionResponse>(req, "ModifyApplicationVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a cloud application concurrency pack.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConcurrentPackageRequest"/></param>
+        /// <returns><see cref="ModifyConcurrentPackageResponse"/></returns>
+        public Task<ModifyConcurrentPackageResponse> ModifyConcurrentPackage(ModifyConcurrentPackageRequest req)
+        {
+            return InternalRequestAsync<ModifyConcurrentPackageResponse>(req, "ModifyConcurrentPackage");
+        }
+
+        /// <summary>
+        /// This API is used to modify a cloud application concurrency pack.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConcurrentPackageRequest"/></param>
+        /// <returns><see cref="ModifyConcurrentPackageResponse"/></returns>
+        public ModifyConcurrentPackageResponse ModifyConcurrentPackageSync(ModifyConcurrentPackageRequest req)
+        {
+            return InternalRequestAsync<ModifyConcurrentPackageResponse>(req, "ModifyConcurrentPackage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -432,6 +621,27 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// This API is used to reset a concurrency pack and disconnect all user connections.
+        /// </summary>
+        /// <param name="req"><see cref="ResetConcurrentPackagesRequest"/></param>
+        /// <returns><see cref="ResetConcurrentPackagesResponse"/></returns>
+        public Task<ResetConcurrentPackagesResponse> ResetConcurrentPackages(ResetConcurrentPackagesRequest req)
+        {
+            return InternalRequestAsync<ResetConcurrentPackagesResponse>(req, "ResetConcurrentPackages");
+        }
+
+        /// <summary>
+        /// This API is used to reset a concurrency pack and disconnect all user connections.
+        /// </summary>
+        /// <param name="req"><see cref="ResetConcurrentPackagesRequest"/></param>
+        /// <returns><see cref="ResetConcurrentPackagesResponse"/></returns>
+        public ResetConcurrentPackagesResponse ResetConcurrentPackagesSync(ResetConcurrentPackagesRequest req)
+        {
+            return InternalRequestAsync<ResetConcurrentPackagesResponse>(req, "ResetConcurrentPackages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to launch an application version.
         /// </summary>
         /// <param name="req"><see cref="SetApplicationVersionOnlineRequest"/></param>
@@ -453,7 +663,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to start cloud-based streaming. The codec for the cloud-based streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9.
+        /// This API is used to start pushing your cloud application's video streams in real time to CSS. The codec for the streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9.
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamRequest"/></param>
         /// <returns><see cref="StartPublishStreamResponse"/></returns>
@@ -463,7 +673,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to start cloud-based streaming. The codec for the cloud-based streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9.
+        /// This API is used to start pushing your cloud application's video streams in real time to CSS. The codec for the streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9.
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamRequest"/></param>
         /// <returns><see cref="StartPublishStreamResponse"/></returns>
@@ -474,7 +684,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to start cloud-based streaming to the specified URL. The codec for the cloud-based streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9. This streaming method will be billed separately. For details about the billing method, see [Charging for Streaming to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
+        /// This API is used to start pushing your cloud application's video streams to a specified URL. The codec for the streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9. This streaming method will be billed separately. For details about the billing method, see [Charging for Streaming to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
         /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
@@ -484,7 +694,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to start cloud-based streaming to the specified URL. The codec for the cloud-based streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9. This streaming method will be billed separately. For details about the billing method, see [Charging for Streaming to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
+        /// This API is used to start pushing your cloud application's video streams to a specified URL. The codec for the streaming is automatically selected based on the client's (SDK) capabilities, with a default order of H.265, H.264, VP8, and VP9. This streaming method will be billed separately. For details about the billing method, see [Charging for Streaming to Specified URL](https://intl.cloud.tencent.com/document/product/1547/72168?from_cn_redirect=1#98ac188a-d122-4caf-88be-05268ecefdf6).
         /// </summary>
         /// <param name="req"><see cref="StartPublishStreamWithURLRequest"/></param>
         /// <returns><see cref="StartPublishStreamWithURLResponse"/></returns>
@@ -495,7 +705,7 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to stop cloud-based streaming.
+        /// This API is used to stop pushing streams.
         /// </summary>
         /// <param name="req"><see cref="StopPublishStreamRequest"/></param>
         /// <returns><see cref="StopPublishStreamResponse"/></returns>
@@ -505,13 +715,34 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
-        /// This API is used to stop cloud-based streaming.
+        /// This API is used to stop pushing streams.
         /// </summary>
         /// <param name="req"><see cref="StopPublishStreamRequest"/></param>
         /// <returns><see cref="StopPublishStreamResponse"/></returns>
         public StopPublishStreamResponse StopPublishStreamSync(StopPublishStreamRequest req)
         {
             return InternalRequestAsync<StopPublishStreamResponse>(req, "StopPublishStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind a concurrency pack from a project.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindConcurrentPackagesFromProjectRequest"/></param>
+        /// <returns><see cref="UnbindConcurrentPackagesFromProjectResponse"/></returns>
+        public Task<UnbindConcurrentPackagesFromProjectResponse> UnbindConcurrentPackagesFromProject(UnbindConcurrentPackagesFromProjectRequest req)
+        {
+            return InternalRequestAsync<UnbindConcurrentPackagesFromProjectResponse>(req, "UnbindConcurrentPackagesFromProject");
+        }
+
+        /// <summary>
+        /// This API is used to unbind a concurrency pack from a project.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindConcurrentPackagesFromProjectRequest"/></param>
+        /// <returns><see cref="UnbindConcurrentPackagesFromProjectResponse"/></returns>
+        public UnbindConcurrentPackagesFromProjectResponse UnbindConcurrentPackagesFromProjectSync(UnbindConcurrentPackagesFromProjectRequest req)
+        {
+            return InternalRequestAsync<UnbindConcurrentPackagesFromProjectResponse>(req, "UnbindConcurrentPackagesFromProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

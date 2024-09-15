@@ -37,6 +37,12 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         public string Sql{ get; set; }
 
         /// <summary>
+        /// InstanceId
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// Query parameter array.
         /// </summary>
         [JsonProperty("QueryParameter")]
@@ -72,12 +78,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("CatalogName")]
         public string CatalogName{ get; set; }
 
-        /// <summary>
-        /// InstanceId
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,13 +86,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         {
             this.SetParamSimple(map, prefix + "Database", this.Database);
             this.SetParamSimple(map, prefix + "Sql", this.Sql);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "QueryParameter.", this.QueryParameter);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
             this.SetParamSimple(map, prefix + "CatalogName", this.CatalogName);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

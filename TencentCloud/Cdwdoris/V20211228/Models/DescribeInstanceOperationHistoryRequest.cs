@@ -66,13 +66,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
 
-        /// <summary>
-        /// Information, deprecated.
-        /// </summary>
-        [JsonProperty("Message")]
-        [System.Obsolete]
-        public string Message{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,7 +79,6 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

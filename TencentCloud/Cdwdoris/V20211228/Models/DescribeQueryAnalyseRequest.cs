@@ -96,6 +96,18 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
         [JsonProperty("QueryTime")]
         public ulong? QueryTime{ get; set; }
 
+        /// <summary>
+        /// Page number, defaults to 1.
+        /// </summary>
+        [JsonProperty("PageNum")]
+        public ulong? PageNum{ get; set; }
+
+        /// <summary>
+        /// Number of records per page, defaults to 10.
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
             this.SetParamSimple(map, prefix + "SortField", this.SortField);
             this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
             this.SetParamSimple(map, prefix + "QueryTime", this.QueryTime);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }
