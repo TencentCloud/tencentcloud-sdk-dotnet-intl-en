@@ -43,9 +43,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Input settings
-        /// For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+        /// Input settings. 
+        /// For the type:
+        /// `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`,`RTSP_PULL`,`SRT_PULL` or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
+        /// For the type:
+        /// `SRT_PUSH`, 0 or 2 inputs of the corresponding type can be configured.
         /// This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
+        /// 
         /// Note: If this parameter is not specified or empty, the original input settings will be used.
         /// </summary>
         [JsonProperty("InputSettings")]

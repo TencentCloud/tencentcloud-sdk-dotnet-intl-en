@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to enable special configuration for audio transcoding: 1: Enable 0: Disable, the default value is 0.
         /// </summary>
         [JsonProperty("AudioNormalizationEnabled")]
         public ulong? AudioNormalizationEnabled{ get; set; }
 
         /// <summary>
-        /// 
+        /// Loudness value, floating-point number, rounded to one decimal place, range -5 to -70.
         /// </summary>
         [JsonProperty("TargetLUFS")]
         public float? TargetLUFS{ get; set; }

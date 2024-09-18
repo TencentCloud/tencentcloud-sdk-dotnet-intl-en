@@ -31,7 +31,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? SegmentDuration{ get; set; }
 
         /// <summary>
-        /// Number of segments. Value range: [1,30]. Default value: 5.
+        /// Number of segments. Value range: [3,30]. Default value: 5.
         /// </summary>
         [JsonProperty("SegmentNumber")]
         public ulong? SegmentNumber{ get; set; }

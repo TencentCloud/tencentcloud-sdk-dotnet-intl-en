@@ -73,7 +73,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? BitrateCompressionRatio{ get; set; }
 
         /// <summary>
-        /// Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+        /// Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
         /// </summary>
         [JsonProperty("RateControlMode")]
         public string RateControlMode{ get; set; }
@@ -133,6 +133,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("VideoCodecDetails")]
         public VideoCodecDetail VideoCodecDetails{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VideoEnhanceEnabled")]
+        public ulong? VideoEnhanceEnabled{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VideoEnhanceSettings")]
+        public VideoEnhanceSetting[] VideoEnhanceSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +169,8 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "RefFramesNum", this.RefFramesNum);
             this.SetParamObj(map, prefix + "AdditionalRateSettings.", this.AdditionalRateSettings);
             this.SetParamObj(map, prefix + "VideoCodecDetails.", this.VideoCodecDetails);
+            this.SetParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
+            this.SetParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
         }
     }
 }

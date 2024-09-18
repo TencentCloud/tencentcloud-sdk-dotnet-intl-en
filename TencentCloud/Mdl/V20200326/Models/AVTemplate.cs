@@ -98,7 +98,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+        /// Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
         /// </summary>
         [JsonProperty("RateControlMode")]
         public string RateControlMode{ get; set; }
@@ -211,6 +211,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("AudioTracks")]
         public AudioTrackInfo[] AudioTracks{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VideoEnhanceEnabled")]
+        public ulong? VideoEnhanceEnabled{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VideoEnhanceSettings")]
+        public VideoEnhanceSetting[] VideoEnhanceSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +259,8 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
             this.SetParamSimple(map, prefix + "MultiAudioTrackEnabled", this.MultiAudioTrackEnabled);
             this.SetParamArrayObj(map, prefix + "AudioTracks.", this.AudioTracks);
+            this.SetParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
+            this.SetParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
         }
     }
 }

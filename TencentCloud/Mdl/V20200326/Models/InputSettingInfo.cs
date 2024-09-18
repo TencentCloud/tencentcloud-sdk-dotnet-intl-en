@@ -69,8 +69,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public long? DelayTime{ get; set; }
 
         /// <summary>
-        /// The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// The domain name of the SRT_PUSH push address. No need to fill in the input parameter.
         /// </summary>
         [JsonProperty("InputDomain")]
         public string InputDomain{ get; set; }
@@ -89,6 +88,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// This parameter is valid when the input source is HLS_PULL and MP4_PULL. It indicates the type of file the source is. The optional values are: LIVE, VOD. Please note that if you do not enter this parameter, the system will take the default input value VOD.
+        /// </summary>
+        [JsonProperty("ContentType")]
+        public string ContentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +109,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "InputDomain", this.InputDomain);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
         }
     }
 }

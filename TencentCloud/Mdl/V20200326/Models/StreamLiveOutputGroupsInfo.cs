@@ -32,7 +32,7 @@ namespace TencentCloud.Mdl.V20200326.Models
 
         /// <summary>
         /// Output protocol
-        /// Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`
+        /// Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
