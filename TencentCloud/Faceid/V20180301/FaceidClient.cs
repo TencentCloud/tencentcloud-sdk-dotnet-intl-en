@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.982";
+       private const string sdkVersion = "SDK_NET_3.0.983";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Faceid.V20180301
         public CreateUploadUrlResponse CreateUploadUrlSync(CreateUploadUrlRequest req)
         {
             return InternalRequestAsync<CreateUploadUrlResponse>(req, "CreateUploadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Based on the multimodal AI large model algorithm, it provides anti-attack detection capabilities for facial images and videos. It can effectively identify highly simulated AIGC face-changing, high-definition remakes, batch black market attacks, watermarks and other attack traces, and enhance the anti-counterfeiting security capabilities of images and videos.
+        /// </summary>
+        /// <param name="req"><see cref="DetectAIFakeFacesRequest"/></param>
+        /// <returns><see cref="DetectAIFakeFacesResponse"/></returns>
+        public Task<DetectAIFakeFacesResponse> DetectAIFakeFaces(DetectAIFakeFacesRequest req)
+        {
+            return InternalRequestAsync<DetectAIFakeFacesResponse>(req, "DetectAIFakeFaces");
+        }
+
+        /// <summary>
+        /// Based on the multimodal AI large model algorithm, it provides anti-attack detection capabilities for facial images and videos. It can effectively identify highly simulated AIGC face-changing, high-definition remakes, batch black market attacks, watermarks and other attack traces, and enhance the anti-counterfeiting security capabilities of images and videos.
+        /// </summary>
+        /// <param name="req"><see cref="DetectAIFakeFacesRequest"/></param>
+        /// <returns><see cref="DetectAIFakeFacesResponse"/></returns>
+        public DetectAIFakeFacesResponse DetectAIFakeFacesSync(DetectAIFakeFacesRequest req)
+        {
+            return InternalRequestAsync<DetectAIFakeFacesResponse>(req, "DetectAIFakeFaces")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
