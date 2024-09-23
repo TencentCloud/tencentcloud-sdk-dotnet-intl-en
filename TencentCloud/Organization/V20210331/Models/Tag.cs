@@ -21,26 +21,24 @@ namespace TencentCloud.Organization.V20210331.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOrganizationNodesRequest : AbstractModel
+    public class Tag : AbstractModel
     {
         
         /// <summary>
-        /// Maximum number of returned results. Maximum value: `50`.
+        /// Tag key
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// Offset. Its value must be an integer multiple of the limit. Default value: 0.
+        /// Tag value
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// Department tag search list, with a maximum of 10.
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -48,9 +46,8 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

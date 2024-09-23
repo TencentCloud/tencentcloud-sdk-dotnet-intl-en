@@ -21,26 +21,23 @@ namespace TencentCloud.Organization.V20210331.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOrganizationNodesRequest : AbstractModel
+    public class AuthRelationFile : AbstractModel
     {
         
         /// <summary>
-        /// Maximum number of returned results. Maximum value: `50`.
+        /// File name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Offset. Its value must be an integer multiple of the limit. Default value: 0.
+        /// File path.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// Department tag search list, with a maximum of 10.
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -48,9 +45,8 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

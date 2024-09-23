@@ -21,11 +21,17 @@ namespace TencentCloud.Organization.V20210331.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOrganizationMemberRequest : AbstractModel
+    public class InviteOrganizationMemberRequest : AbstractModel
     {
         
         /// <summary>
-        /// Member name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
+        /// UIN of an invited account.
+        /// </summary>
+        [JsonProperty("MemberUin")]
+        public long? MemberUin{ get; set; }
+
+        /// <summary>
+        /// Member name, which contains up to 25 characters, including English letters, digits, and symbols `+@&._[]-:,`.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -37,7 +43,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// List of member financial permission IDs. `7` indicates paying, which is the default value.
+        /// List of member financial permission IDs. Valid values: 1: View bills. 2: View balance. 3: Transfer funds. 4: Consolidate bills. 5: Issue invoice. 6: Inherit discounts. 7: Pay on behalf. 1 and 2 are required by default.
         /// </summary>
         [JsonProperty("PermissionIds")]
         public ulong?[] PermissionIds{ get; set; }
@@ -49,40 +55,34 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? NodeId{ get; set; }
 
         /// <summary>
-        /// Account name, which can contain up to 25 letters, digits, and symbols `+@&._[]-:,`.
-        /// </summary>
-        [JsonProperty("AccountName")]
-        public string AccountName{ get; set; }
-
-        /// <summary>
         /// Remarks.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Member creation record ID, which is required during retry upon creation exception.
+        /// Whether to allow a member to exit. Valid values: Allow, Denied.
         /// </summary>
-        [JsonProperty("RecordId")]
-        public long? RecordId{ get; set; }
+        [JsonProperty("IsAllowQuit")]
+        public string IsAllowQuit{ get; set; }
 
         /// <summary>
-        /// Payer UIN, which is required during paying for a member.
+        /// Payer UIN, which is required when pay-on-behalf mode is used.
         /// </summary>
         [JsonProperty("PayUin")]
         public string PayUin{ get; set; }
 
         /// <summary>
-        /// List of member access identity IDs, which can be obtained through the `ListOrganizationIdentity` API. `1` indicates supported, which is the default value.
+        /// Name of a mutual trust real-name entity.
         /// </summary>
-        [JsonProperty("IdentityRoleID")]
-        public ulong?[] IdentityRoleID{ get; set; }
+        [JsonProperty("RelationAuthName")]
+        public string RelationAuthName{ get; set; }
 
         /// <summary>
-        /// Verified entity relationship ID, which is required during creating members for different entities.
+        /// List of proof files of a mutual trust entity.
         /// </summary>
-        [JsonProperty("AuthRelationId")]
-        public long? AuthRelationId{ get; set; }
+        [JsonProperty("AuthFile")]
+        public AuthRelationFile[] AuthFile{ get; set; }
 
         /// <summary>
         /// Member tag list, with a maximum of 10.
@@ -96,16 +96,16 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
             this.SetParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
-            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
             this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
-            this.SetParamArraySimple(map, prefix + "IdentityRoleID.", this.IdentityRoleID);
-            this.SetParamSimple(map, prefix + "AuthRelationId", this.AuthRelationId);
+            this.SetParamSimple(map, prefix + "RelationAuthName", this.RelationAuthName);
+            this.SetParamArrayObj(map, prefix + "AuthFile.", this.AuthFile);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

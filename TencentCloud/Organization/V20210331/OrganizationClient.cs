@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.984";
+       private const string sdkVersion = "SDK_NET_3.0.985";
 
         /// <summary>
         /// Client constructor.
@@ -890,6 +890,27 @@ namespace TencentCloud.Organization.V20210331
         public GetZoneStatisticsResponse GetZoneStatisticsSync(GetZoneStatisticsRequest req)
         {
             return InternalRequestAsync<GetZoneStatisticsResponse>(req, "GetZoneStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to invite a member.
+        /// </summary>
+        /// <param name="req"><see cref="InviteOrganizationMemberRequest"/></param>
+        /// <returns><see cref="InviteOrganizationMemberResponse"/></returns>
+        public Task<InviteOrganizationMemberResponse> InviteOrganizationMember(InviteOrganizationMemberRequest req)
+        {
+            return InternalRequestAsync<InviteOrganizationMemberResponse>(req, "InviteOrganizationMember");
+        }
+
+        /// <summary>
+        /// This API is used to invite a member.
+        /// </summary>
+        /// <param name="req"><see cref="InviteOrganizationMemberRequest"/></param>
+        /// <returns><see cref="InviteOrganizationMemberResponse"/></returns>
+        public InviteOrganizationMemberResponse InviteOrganizationMemberSync(InviteOrganizationMemberRequest req)
+        {
+            return InternalRequestAsync<InviteOrganizationMemberResponse>(req, "InviteOrganizationMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
