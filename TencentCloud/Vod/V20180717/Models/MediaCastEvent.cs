@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AttachPluginRequest : AbstractModel
+    public class MediaCastEvent : AbstractModel
     {
         
         /// <summary>
-        /// ID of the plugin to be bound.
+        /// 
         /// </summary>
-        [JsonProperty("PluginId")]
-        public string PluginId{ get; set; }
+        [JsonProperty("CastId")]
+        public string CastId{ get; set; }
 
         /// <summary>
-        /// Service ID.
+        /// 
         /// </summary>
-        [JsonProperty("ServiceId")]
-        public string ServiceId{ get; set; }
-
-        /// <summary>
-        /// API environment.
-        /// </summary>
-        [JsonProperty("EnvironmentName")]
-        public string EnvironmentName{ get; set; }
-
-        /// <summary>
-        /// List of APIs bound with the plugin
-        /// </summary>
-        [JsonProperty("ApiIds")]
-        public string[] ApiIds{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
-            this.SetParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
-            this.SetParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
+            this.SetParamSimple(map, prefix + "CastId", this.CastId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

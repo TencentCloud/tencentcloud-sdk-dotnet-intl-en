@@ -86,6 +86,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Precision")]
+        public string Precision{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OutputMediaType")]
+        public string OutputMediaType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +120,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "Precision", this.Precision);
+            this.SetParamSimple(map, prefix + "OutputMediaType", this.OutputMediaType);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

@@ -79,7 +79,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public long? NeedAudio{ get; set; }
 
         /// <summary>
-        /// Audio codec. Valid value: `AAC` (default)
+        /// Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }

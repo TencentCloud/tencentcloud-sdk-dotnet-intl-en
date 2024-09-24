@@ -31,7 +31,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string TrackName{ get; set; }
 
         /// <summary>
-        /// Only AAC is supported.
+        /// Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
         /// </summary>
         [JsonProperty("AudioCodec")]
         public string AudioCodec{ get; set; }
