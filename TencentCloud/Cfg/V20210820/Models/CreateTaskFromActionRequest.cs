@@ -31,7 +31,7 @@ namespace TencentCloud.Cfg.V20210820.Models
         public ulong? TaskActionId{ get; set; }
 
         /// <summary>
-        /// ID of the instance participating in the experiment
+        /// ID of the instance participating in the experiment.
         /// </summary>
         [JsonProperty("TaskInstances")]
         public string[] TaskInstances{ get; set; }

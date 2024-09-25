@@ -1,0 +1,254 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.987</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDKIntlEN.Waf</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180125\WafClient.cs" />
+    <Compile Include="V20180125\Models\AddAntiFakeUrlRequest.cs" />
+    <Compile Include="V20180125\Models\AddAntiFakeUrlResponse.cs" />
+    <Compile Include="V20180125\Models\AddAntiInfoLeakRulesRequest.cs" />
+    <Compile Include="V20180125\Models\AddAntiInfoLeakRulesResponse.cs" />
+    <Compile Include="V20180125\Models\AddCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\AddCustomRuleResponse.cs" />
+    <Compile Include="V20180125\Models\AddSpartaProtectionRequest.cs" />
+    <Compile Include="V20180125\Models\AddSpartaProtectionResponse.cs" />
+    <Compile Include="V20180125\Models\BatchIpAccessControlData.cs" />
+    <Compile Include="V20180125\Models\BatchIpAccessControlItem.cs" />
+    <Compile Include="V20180125\Models\CCRuleData.cs" />
+    <Compile Include="V20180125\Models\CCRuleItem.cs" />
+    <Compile Include="V20180125\Models\CCRuleItems.cs" />
+    <Compile Include="V20180125\Models\CCRuleLists.cs" />
+    <Compile Include="V20180125\Models\CacheUrlItem.cs" />
+    <Compile Include="V20180125\Models\CacheUrlItems.cs" />
+    <Compile Include="V20180125\Models\ClbDomainsInfo.cs" />
+    <Compile Include="V20180125\Models\ClbObject.cs" />
+    <Compile Include="V20180125\Models\CreateDealsGoods.cs" />
+    <Compile Include="V20180125\Models\CreateDealsGoodsDetail.cs" />
+    <Compile Include="V20180125\Models\CreateDealsRequest.cs" />
+    <Compile Include="V20180125\Models\CreateDealsResponse.cs" />
+    <Compile Include="V20180125\Models\CreateHostRequest.cs" />
+    <Compile Include="V20180125\Models\CreateHostResponse.cs" />
+    <Compile Include="V20180125\Models\CronJob.cs" />
+    <Compile Include="V20180125\Models\DealData.cs" />
+    <Compile Include="V20180125\Models\DeleteAntiFakeUrlRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteAntiFakeUrlResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteAntiInfoLeakRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteAntiInfoLeakRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteCCRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteCCRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteCustomRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteHostRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteHostResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteSpartaProtectionRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteSpartaProtectionResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiFakeRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiFakeRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiFakeUrlRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiFakeUrlResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesRuleItem.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiInfoLeakRulesStrategyItem.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiInfoLeakageRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiInfoLeakageRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAntiLeakageItem.cs" />
+    <Compile Include="V20180125\Models\DescribeAttackTypeRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAttackTypeResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeBatchIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeBatchIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCCRuleListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCCRuleListResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCCRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCCRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCertificateVerifyResultRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCertificateVerifyResultResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCiphersDetailRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCiphersDetailResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRuleListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRuleListResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainCountInfoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainCountInfoResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainDetailsClbRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainDetailsClbResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainDetailsSaasRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainDetailsSaasResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeFindDomainListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeFindDomainListResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeHistogramRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeHistogramResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeHostLimitRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeHostLimitResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeHostRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeHostResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeHostsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeHostsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeModuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeModuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeObjectsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeObjectsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribePeakPointsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribePeakPointsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribePolicyStatusRequest.cs" />
+    <Compile Include="V20180125\Models\DescribePolicyStatusResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeRuleLimitRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeRuleLimitResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeSessionRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeSessionResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeTlsVersionRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeTlsVersionResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeTopAttackDomainRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeTopAttackDomainResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeUserDomainInfoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeUserDomainInfoResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeUserLevelRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeUserLevelResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeVipInfoRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeVipInfoResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeWebshellStatusRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeWebshellStatusResponse.cs" />
+    <Compile Include="V20180125\Models\DomainInfo.cs" />
+    <Compile Include="V20180125\Models\DomainRuleId.cs" />
+    <Compile Include="V20180125\Models\DomainURI.cs" />
+    <Compile Include="V20180125\Models\DomainsPartInfo.cs" />
+    <Compile Include="V20180125\Models\FiltersItemNew.cs" />
+    <Compile Include="V20180125\Models\FindAllDomainDetail.cs" />
+    <Compile Include="V20180125\Models\FreshAntiFakeUrlRequest.cs" />
+    <Compile Include="V20180125\Models\FreshAntiFakeUrlResponse.cs" />
+    <Compile Include="V20180125\Models\GenerateDealsAndPayNewRequest.cs" />
+    <Compile Include="V20180125\Models\GenerateDealsAndPayNewResponse.cs" />
+    <Compile Include="V20180125\Models\GetAttackTotalCountRequest.cs" />
+    <Compile Include="V20180125\Models\GetAttackTotalCountResponse.cs" />
+    <Compile Include="V20180125\Models\GoodNews.cs" />
+    <Compile Include="V20180125\Models\GoodsDetailNew.cs" />
+    <Compile Include="V20180125\Models\HostDel.cs" />
+    <Compile Include="V20180125\Models\HostRecord.cs" />
+    <Compile Include="V20180125\Models\HostStatus.cs" />
+    <Compile Include="V20180125\Models\JobDateTime.cs" />
+    <Compile Include="V20180125\Models\KVInt.cs" />
+    <Compile Include="V20180125\Models\LoadBalancer.cs" />
+    <Compile Include="V20180125\Models\LoadBalancerPackageNew.cs" />
+    <Compile Include="V20180125\Models\ModifyAntiFakeUrlRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyAntiFakeUrlResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyAntiFakeUrlStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyAntiFakeUrlStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyAntiInfoLeakRuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyAntiInfoLeakRuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyAntiInfoLeakRulesRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyAntiInfoLeakRulesResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyApiAnalyzeStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyApiAnalyzeStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyBotStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyBotStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomWhiteRuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomWhiteRuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainIpv6StatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainIpv6StatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainsCLSStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainsCLSStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyHostFlowModeRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyHostFlowModeResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyHostModeRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyHostModeResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyHostRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyHostResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyHostStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyHostStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyModuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyModuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyObjectRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyObjectResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyProtectionStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyProtectionStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifySpartaProtectionModeRequest.cs" />
+    <Compile Include="V20180125\Models\ModifySpartaProtectionModeResponse.cs" />
+    <Compile Include="V20180125\Models\ModifySpartaProtectionRequest.cs" />
+    <Compile Include="V20180125\Models\ModifySpartaProtectionResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyUserLevelRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyUserLevelResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyUserSignatureRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyUserSignatureRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyWebshellStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyWebshellStatusResponse.cs" />
+    <Compile Include="V20180125\Models\PageInfo.cs" />
+    <Compile Include="V20180125\Models\PeakPointsItem.cs" />
+    <Compile Include="V20180125\Models\PiechartItem.cs" />
+    <Compile Include="V20180125\Models\PortInfo.cs" />
+    <Compile Include="V20180125\Models\PortItem.cs" />
+    <Compile Include="V20180125\Models\RefreshAccessCheckResultRequest.cs" />
+    <Compile Include="V20180125\Models\RefreshAccessCheckResultResponse.cs" />
+    <Compile Include="V20180125\Models\ReqUserRule.cs" />
+    <Compile Include="V20180125\Models\ResponseCode.cs" />
+    <Compile Include="V20180125\Models\SearchItem.cs" />
+    <Compile Include="V20180125\Models\SessionData.cs" />
+    <Compile Include="V20180125\Models\SessionItem.cs" />
+    <Compile Include="V20180125\Models\SpartaProtectionPort.cs" />
+    <Compile Include="V20180125\Models\Strategy.cs" />
+    <Compile Include="V20180125\Models\StrategyForAntiInfoLeak.cs" />
+    <Compile Include="V20180125\Models\TLSCiphers.cs" />
+    <Compile Include="V20180125\Models\TLSVersion.cs" />
+    <Compile Include="V20180125\Models\TargetEntity.cs" />
+    <Compile Include="V20180125\Models\TimedJob.cs" />
+    <Compile Include="V20180125\Models\UpsertCCRuleRequest.cs" />
+    <Compile Include="V20180125\Models\UpsertCCRuleResponse.cs" />
+    <Compile Include="V20180125\Models\UpsertSessionRequest.cs" />
+    <Compile Include="V20180125\Models\UpsertSessionResponse.cs" />
+    <Compile Include="V20180125\Models\UserDomainInfo.cs" />
+    <Compile Include="V20180125\Models\VipInfo.cs" />
+    <Compile Include="V20180125\Models\WafRuleLimit.cs" />
+    <Compile Include="V20180125\Models\WebshellStatus.cs" />
+  </ItemGroup>
+</Project>

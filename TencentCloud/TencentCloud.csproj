@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.986</VersionPrefix>
+    <VersionPrefix>3.0.987</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -39,12 +39,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="TencentCloudSDK.Common" Version="3.0.1095" />
+    <PackageReference Include="TencentCloudSDK.Common" Version="3.0.1096" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="Common\**\*.cs" />
     <Compile Include="Advisor\**\*.cs" />
+    <Compile Include="Aiart\**\*.cs" />
     <Compile Include="Ams\**\*.cs" />
     <Compile Include="Antiddos\**\*.cs" />
     <Compile Include="Apigateway\**\*.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Eiam\**\*.cs" />
     <Compile Include="Emr\**\*.cs" />
     <Compile Include="Es\**\*.cs" />
+    <Compile Include="Facefusion\**\*.cs" />
     <Compile Include="Faceid\**\*.cs" />
     <Compile Include="Gaap\**\*.cs" />
     <Compile Include="Gme\**\*.cs" />
@@ -146,6 +148,7 @@
     <Compile Include="Vm\**\*.cs" />
     <Compile Include="Vod\**\*.cs" />
     <Compile Include="Vpc\**\*.cs" />
+    <Compile Include="Waf\**\*.cs" />
     <Compile Include="Wedata\**\*.cs" />
     <Compile Include="Yunjing\**\*.cs" />
   </ItemGroup>
