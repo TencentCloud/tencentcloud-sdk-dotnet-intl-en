@@ -143,6 +143,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("TaiWanIDCard")]
         public TaiWanIDCard TaiWanIDCard{ get; set; }
 
+        /// <summary>
+        /// exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HMTPermitCard")]
+        public HMTPermit HMTPermitCard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "MainlandIDCard.", this.MainlandIDCard);
             this.SetParamObj(map, prefix + "JapanIDCard.", this.JapanIDCard);
             this.SetParamObj(map, prefix + "TaiWanIDCard.", this.TaiWanIDCard);
+            this.SetParamObj(map, prefix + "HMTPermitCard.", this.HMTPermitCard);
         }
     }
 }

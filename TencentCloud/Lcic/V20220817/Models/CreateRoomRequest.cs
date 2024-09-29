@@ -55,7 +55,9 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? Resolution{ get; set; }
 
         /// <summary>
-        /// Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+        /// Maximum number of mic-on users (excluding teachers). Value range: [0, 16]. This value affects billing, please set it according to the actual business situation. For billing rules, see "Billing Overview" under "Purchase Guide". Example:
+        /// 1: Billing based on the 1v1 rule;
+        /// 10: Billing based on the 1v7-12 rule.
         /// </summary>
         [JsonProperty("MaxMicNumber")]
         public ulong? MaxMicNumber{ get; set; }
@@ -201,6 +203,12 @@ namespace TencentCloud.Lcic.V20220817.Models
         [System.Obsolete]
         public string RecordLang{ get; set; }
 
+        /// <summary>
+        /// Recording type. 0: Records only mixed streams (default); 1: Records mixed streams and single streams. In this mode, in addition to the mixed streams, the audio and video streams of the teacher and students on stage are recorded separately. Each recording incurs corresponding recording fees. Example: 0.
+        /// </summary>
+        [JsonProperty("RecordStream")]
+        public ulong? RecordStream{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -236,6 +244,7 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
             this.SetParamSimple(map, prefix + "RecordScene", this.RecordScene);
             this.SetParamSimple(map, prefix + "RecordLang", this.RecordLang);
+            this.SetParamSimple(map, prefix + "RecordStream", this.RecordStream);
         }
     }
 }

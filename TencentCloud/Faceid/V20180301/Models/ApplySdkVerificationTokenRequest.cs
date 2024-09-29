@@ -66,6 +66,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 17.ThailandDrivingLicense: Thailand Driving License
         /// 18.SingaporeDrivingLicense: Singapore Driving License
         /// 19.JapanDrivingLicense: Japan Driving License
+        /// 20.TaiWanIDCard:Taiwan ID Card
+        /// 21.HMTPermit: exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
