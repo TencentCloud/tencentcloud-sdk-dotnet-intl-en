@@ -50,6 +50,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
+        /// <summary>
+        /// Reference bitrate, in kbps. Value range: 26-10000.
+        /// If set, the encoder will try to encode at this bitrate.
+        /// If not set, the service will automatically adopt a suitable bitrate based on audio parameters.
+        /// </summary>
+        [JsonProperty("Bitrate")]
+        public long? Bitrate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
         }
     }
 }

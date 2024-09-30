@@ -33,7 +33,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string FontType{ get; set; }
 
         /// <summary>
-        /// Font size in Npx format where N is a numeric value.
+        /// Font size, in the format of Npx. N is a numerical value with a value range of [0, 1] or [8, 4096].
         /// </summary>
         [JsonProperty("FontSize")]
         public string FontSize{ get; set; }
@@ -52,6 +52,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FontAlpha")]
         public float? FontAlpha{ get; set; }
 
+        /// <summary>
+        /// Text content, up to 100 characters.
+        /// </summary>
+        [JsonProperty("TextContent")]
+        public string TextContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "FontSize", this.FontSize);
             this.SetParamSimple(map, prefix + "FontColor", this.FontColor);
             this.SetParamSimple(map, prefix + "FontAlpha", this.FontAlpha);
+            this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
         }
     }
 }

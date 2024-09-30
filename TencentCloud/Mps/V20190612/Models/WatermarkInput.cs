@@ -53,19 +53,23 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SvgContent{ get; set; }
 
         /// <summary>
-        /// Start time offset of a watermark in seconds. If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame.
-        /// <li>If this parameter is left empty or 0 is entered, the watermark will appear upon the first video frame;</li>
-        /// <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-        /// <li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+        /// Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+        /// <li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+        /// <li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+        /// <li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
+        /// 
+        /// Note: It is only used for video scenarios. Screenshots are not supported.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of a watermark in seconds.
-        /// <li>If this parameter is left empty or 0 is entered, the watermark will exist till the last video frame;</li>
-        /// <li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-        /// <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+        /// End time offset of a watermark, in seconds.
+        /// <li>If not set or set to 0, a watermark will last until the end of a video.</li>
+        /// <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+        /// <li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
+        /// 
+        /// Note: It is only used for video scenarios. Screenshots are not supported.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

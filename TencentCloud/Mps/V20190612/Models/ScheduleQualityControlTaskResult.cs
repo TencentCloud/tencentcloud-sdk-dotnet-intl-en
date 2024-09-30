@@ -49,14 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// The input of the quality control task.
+        /// Media quality inspection task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiQualityControlTaskInput Input{ get; set; }
 
         /// <summary>
-        /// The output of the quality control task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Media quality inspection task output.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public QualityControlData Output{ get; set; }

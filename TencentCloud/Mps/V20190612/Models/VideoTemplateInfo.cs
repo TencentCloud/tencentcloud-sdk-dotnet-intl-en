@@ -25,30 +25,41 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The video codec. Valid values:
-        /// <li>`libx264`: H.264</li>
-        /// <li>`libx265`: H.265</li>
-        /// <li>`av1`: AOMedia Video 1</li>
-        /// Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
-        /// Note: You can only use the AOMedia Video 1 codec for MP4 files.
+        /// Video stream encoding format. Valid values:
+        /// <li>h264: H.264 encoding.</li>
+        /// <li>h265: H.265 encoding.</li>
+        /// <li>h266: H.266 encoding.</li>
+        /// <li>av1: AOMedia Video 1 encoding.</li>
+        /// <li>vp8: VP8 encoding.</li>
+        /// <li>vp9: VP9 encoding.</li>
+        /// <li>mpeg2: MPEG2 encoding.</li>
+        /// <li>dnxhd: DNxHD encoding.</li>
+        /// <li>mv-hevc: MV-HEVC encoding.</li>
+        /// Note: A resolution within 640x480 should be specified for H.265 encoding.
+        /// 
+        /// Note: AV1 encoding containers only support mp4, webm, and mkv.
+        /// Note: H.266 encoding containers only support mp4, hls, ts, and mov.
+        /// Note: VP8 and VP9 encoding containers only support webm and mkv.
+        /// Note: MPEG2 and DNxHD encoding containers only support mxf.
+        /// Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// The video frame rate (Hz). Value range: [0, 100].
+        /// Video frame rate. Value range:
+        /// When FpsDenominator is empty, the range is [0, 120], in Hz.
+        /// When FpsDenominator is not empty, the Fps/FpsDenominator range is [0, 120].
         /// If the value is 0, the frame rate will be the same as that of the source video.
-        /// Note: For adaptive bitrate streaming, the value range of this parameter is [0, 60].
         /// </summary>
         [JsonProperty("Fps")]
-        public ulong? Fps{ get; set; }
+        public long? Fps{ get; set; }
 
         /// <summary>
-        /// The video bitrate (Kbps). Value range: 0 and [128, 35000].
-        /// If the value is 0, the bitrate of the video will be the same as that of the source video.
+        /// Bitrate of a video stream, in kbps. Value range: 0 and [128, 100000].If the value is 0, the bitrate of the video will be the same as that of the source video.
         /// </summary>
         [JsonProperty("Bitrate")]
-        public ulong? Bitrate{ get; set; }
+        public long? Bitrate{ get; set; }
 
         /// <summary>
         /// Resolution adaption. Valid values:
@@ -83,8 +94,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Frame interval between I keyframes. Value range: 0 and [1,100000].
-        /// If this parameter is 0 or left empty, the system will automatically set the GOP length.
+        /// Interval between I-frames, in frames. Value range: 0 and [1, 100000]. When it is set to 0 or not set, the system will automatically set the gop length.
         /// </summary>
         [JsonProperty("Gop")]
         public ulong? Gop{ get; set; }
@@ -109,6 +119,37 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
 
+        /// <summary>
+        /// HLS segment type. Valid values:
+        /// <li>0: HLS+TS segment.</li>
+        /// <li>2: HLS+TS byte range.</li>
+        /// <li>7: HLS+MP4 segment.</li>
+        /// <li>5: HLS+MP4 byte range.</li>
+        /// Default value: 0
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SegmentType")]
+        public long? SegmentType{ get; set; }
+
+        /// <summary>
+        /// Denominator of the frame rate.
+        /// Note: The value must be greater than 0.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FpsDenominator")]
+        public long? FpsDenominator{ get; set; }
+
+        /// <summary>
+        /// 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
+        /// <li>side_by_side: side-by-side view.</li>
+        /// <li>top_bottom: top-bottom view.</li>
+        /// Default value: side_by_side.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Stereo3dType")]
+        public string Stereo3dType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +165,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
+            this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
+            this.SetParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
+            this.SetParamSimple(map, prefix + "Stereo3dType", this.Stereo3dType);
         }
     }
 }

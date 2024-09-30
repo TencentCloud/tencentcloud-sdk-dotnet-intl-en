@@ -25,16 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The parameters for detecting sensitive information in images.
-        /// </summary>
-        [JsonProperty("ImgReviewInfo")]
-        public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
-
-        /// <summary>
         /// The parameters for detecting sensitive information based on OCR.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }
+
+        /// <summary>
+        /// The parameters for detecting sensitive information in images.
+        /// </summary>
+        [JsonProperty("ImgReviewInfo")]
+        public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
             this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
+            this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
         }
     }
 }

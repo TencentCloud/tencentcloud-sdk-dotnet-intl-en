@@ -84,6 +84,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TransTextTask")]
         public AiRecognitionTaskTransTextResult TransTextTask{ get; set; }
 
+        /// <summary>
+        /// Object recognition result, which is valid when Type is
+        /// 
+        /// ObjectRecognition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ObjectTask")]
+        public AiRecognitionTaskObjectResult ObjectTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +106,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
             this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
             this.SetParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
+            this.SetParamObj(map, prefix + "ObjectTask.", this.ObjectTask);
         }
     }
 }

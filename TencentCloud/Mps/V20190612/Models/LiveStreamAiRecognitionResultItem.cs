@@ -25,13 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The result type. Valid values:
-        /// <li>FaceRecognition: Face recognition</li>
-        /// <li>AsrWordsRecognition: Speech keyword recognition</li>
-        /// <li>OcrWordsRecognition: Text keyword recognition</li>
-        /// <li>AsrFullTextRecognition: Full speech recognition</li>
-        /// <li>OcrFullTextRecognition: Full text recognition</li>
-        /// <li>TransTextRecognition: Speech translation</li>
+        /// Result type. Valid values:
+        /// <li>FaceRecognition: face recognition.</li>
+        /// <li>AsrWordsRecognition: speech keyword recognition.</li>
+        /// <li>OcrWordsRecognition: text keyword recognition.</li>
+        /// <li>AsrFullTextRecognition: full speech recognition.</li>
+        /// <li>OcrFullTextRecognition: full text recognition.</li>
+        /// <li>TransTextRecognition: speech translation.</li>
+        /// 
+        /// <li>ObjectRecognition: object recognition.</li>
+        /// <li>TagRecognition: highlights marking.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -77,6 +80,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TransTextRecognitionResultSet")]
         public LiveStreamTransTextRecognitionResult[] TransTextRecognitionResultSet{ get; set; }
 
+        /// <summary>
+        /// Object recognition result, which is valid when Type is ObjectRecognition.
+        /// </summary>
+        [JsonProperty("ObjectRecognitionResultSet")]
+        public LiveStreamObjectRecognitionResult[] ObjectRecognitionResultSet{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TagRecognitionResultSet")]
+        public LiveStreamTagRecognitionResult[] TagRecognitionResultSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +105,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "AsrFullTextRecognitionResultSet.", this.AsrFullTextRecognitionResultSet);
             this.SetParamArrayObj(map, prefix + "OcrFullTextRecognitionResultSet.", this.OcrFullTextRecognitionResultSet);
             this.SetParamArrayObj(map, prefix + "TransTextRecognitionResultSet.", this.TransTextRecognitionResultSet);
+            this.SetParamArrayObj(map, prefix + "ObjectRecognitionResultSet.", this.ObjectRecognitionResultSet);
+            this.SetParamArrayObj(map, prefix + "TagRecognitionResultSet.", this.TagRecognitionResultSet);
         }
     }
 }

@@ -25,18 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The subtask type.
-        /// <li>`input`: The start.</li>
-        /// <li>`output`: The end.</li>
-        /// <li>`action-trans`: Transcoding.</li>
-        /// <li>`action-samplesnapshot`: Sampled screencapturing.</li>
-        /// <li>`action-AIAnalysis`: Content analysis.</li>
-        /// <li>`action-AIRecognition`: Content recognition.</li>
-        /// <li>`action-aiReview`: Content moderation.</li>
-        /// <li>`action-animated-graphics`: Animated screenshot generation.</li>
-        /// <li>`action-image-sprite`: Image sprite generation.</li>
-        /// <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
-        /// <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+        /// Atomic task type.
+        /// <li>input: start node.</li>
+        /// <li>output: termination node.</li>
+        /// <li>action-trans: transcoding.</li>
+        /// <li>action-samplesnapshot: sampled screenshot taking.</li>
+        /// <li>action-AIAnalysis: analysis.</li>
+        /// <li>action-AIRecognition: recognition.</li>
+        /// <li>action-aiReview: auditing.</li>
+        /// <li>action-animated-graphics: animated image generating.</li>
+        /// <li>action-image-sprite: sprite image generating.</li>
+        /// <li>action-snapshotByTimeOffset: time point screenshot taking.</li>
+        /// <li>action-adaptive-substream: adaptive bitrate streaming.</li>
+        /// <li>action-AIQualityControl: media quality inspection.</li>
+        /// 
+        /// 
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ActivityType")]

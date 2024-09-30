@@ -44,13 +44,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputDir{ get; set; }
 
         /// <summary>
-        /// The scheme ID.
-        /// Note 1: About `OutputStorage` and `OutputDir`
-        /// <li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-        /// <li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-        /// Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+        /// Orchestration ID.
+        /// Note 1: For parameters OutputStorage and OutputDir:
+        /// <li>When a sub-task node in service orchestration has OutputStorage and OutputDir configured, the output configured in this sub-task node is used as the output of the sub-task.</li>
+        /// <li>When a sub-task node in service orchestration does not have OutputStorage and OutputDir configured, if the task creation API (ProcessMedia) has specified an output, it will override the default output of the original orchestration.</li>
+        /// <li>The priority of output settings is: Orchestration sub-task node > Output specified by the task API > Corresponding configuration within an orchestration.</li>
+        /// Note 2: For the TaskNotifyConfig parameter, if the task creation API (ProcessMedia) has set this parameter, it will override the default callback of the original orchestration.
         /// 
-        /// Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+        /// Note 3: The trigger configured for an orchestration is for automatically starting the orchestration. It stops working when you manually call this API to start an orchestration.
         /// </summary>
         [JsonProperty("ScheduleId")]
         public long? ScheduleId{ get; set; }
@@ -80,7 +81,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// The parameters of a quality control task.
+        /// Media quality inspection type task parameters.
         /// </summary>
         [JsonProperty("AiQualityControlTask")]
         public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
@@ -98,7 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+        /// Identification code for deduplication, up to 50 characters. If a request with the same identification code was made within the past 3 days, an error will be returned for the current request. If this parameter is not provided or is an empty string, deduplication will not be performed for this request.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

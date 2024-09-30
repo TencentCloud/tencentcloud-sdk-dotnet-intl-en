@@ -89,7 +89,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionResult[] AiRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// The execution status and result of a quality control task.
+        /// Execution status and results of a media quality inspection task.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AiQualityControlTaskResult")]

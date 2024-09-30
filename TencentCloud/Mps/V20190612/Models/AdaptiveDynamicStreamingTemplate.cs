@@ -92,6 +92,27 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// Whether it is an audio-only template. 0: video template. 1: audio-only template.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PureAudio")]
+        public ulong? PureAudio{ get; set; }
+
+        /// <summary>
+        /// HLS segment type. Valid values:
+        /// <li>ts-segment: HLS+TS segment.</li>
+        /// <li>ts-byterange: HLS+TS byte range.</li>
+        /// <li>mp4-segment: HLS+MP4 segment.</li>
+        /// <li>mp4-byterange: HLS+MP4 byte range.</li>
+        /// <li>ts-packed-audio: TS+Packed audio.</li>
+        /// <li>mp4-packed-audio: MP4+Packed audio.</li>
+        /// Default value: ts-segment.
+        /// 
+        /// Note: The HLS segment format for adaptive bitrate streaming is based on this field.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SegmentType")]
+        public string SegmentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +129,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "PureAudio", this.PureAudio);
+            this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
         }
     }
 }

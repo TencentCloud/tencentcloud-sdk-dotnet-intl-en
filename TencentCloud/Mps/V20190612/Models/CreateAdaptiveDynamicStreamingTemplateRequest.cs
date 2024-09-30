@@ -69,6 +69,27 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+        /// 1. StreamInfos.N.RemoveVideo=1
+        /// 2. StreamInfos.N.RemoveAudio=0
+        /// 3. StreamInfos.N.Video.Codec=copy
+        /// 
+        /// When the value is 0:
+        /// 
+        /// 1. StreamInfos.N.Video.Codec cannot be copy.
+        /// 2. StreamInfos.N.Video.Fps cannot be null.
+        /// </summary>
+        [JsonProperty("PureAudio")]
+        public ulong? PureAudio{ get; set; }
+
+        /// <summary>
+        /// HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
+        /// Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+        /// </summary>
+        [JsonProperty("SegmentType")]
+        public string SegmentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +102,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "PureAudio", this.PureAudio);
+            this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
         }
     }
 }

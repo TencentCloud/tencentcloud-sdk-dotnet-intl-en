@@ -31,6 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("LiveRecordTask")]
         public LiveScheduleLiveRecordTaskResult LiveRecordTask{ get; set; }
 
+        /// <summary>
+        /// Media quality inspection task output.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LiveQualityControlTask")]
+        public ScheduleQualityControlTaskResult LiveQualityControlTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "LiveRecordTask.", this.LiveRecordTask);
+            this.SetParamObj(map, prefix + "LiveQualityControlTask.", this.LiveQualityControlTask);
         }
     }
 }

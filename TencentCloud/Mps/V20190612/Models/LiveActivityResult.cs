@@ -25,9 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The task type.
-        /// <li>`LiveRecord`: Live recording. </li>
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Atomic task type.
+        /// <li>LiveRecord: live recording.</li>
+        /// <li>AiQualityControl: media quality inspection.</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }

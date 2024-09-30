@@ -26,11 +26,14 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>Classification: intelligent categorization</li>
-        /// <li>Cover: intelligent cover generating</li>
-        /// <li>Tag: intelligent tagging</li>
-        /// <li>FrameTag: intelligent frame-specific tagging</li>
-        /// <li>Highlight: intelligent highlight generating</li>
+        /// <li>Classification: intelligent classification.</li>
+        /// <li>Cover: intelligent thumbnail generating.</li>
+        /// <li>Tag: intelligent tagging.</li>
+        /// <li>FrameTag: intelligent frame-by-frame tagging.</li>
+        /// <li>Highlight: intelligent highlights generating.</li>
+        /// 
+        /// <li>DeLogo: intelligent removal.</li>
+        /// <li>Description: large model summarization.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -66,6 +69,41 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HighlightTask")]
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }
 
+        /// <summary>
+        /// The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeLogoTask")]
+        public AiAnalysisTaskDelLogoResult DeLogoTask{ get; set; }
+
+        /// <summary>
+        /// The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SegmentTask")]
+        public AiAnalysisTaskSegmentResult SegmentTask{ get; set; }
+
+        /// <summary>
+        /// The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HeadTailTask")]
+        public AiAnalysisTaskHeadTailResult HeadTailTask{ get; set; }
+
+        /// <summary>
+        /// The query result of a video analysis summarization task, which is valid when the task type is Description.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DescriptionTask")]
+        public AiAnalysisTaskDescriptionResult DescriptionTask{ get; set; }
+
+        /// <summary>
+        /// The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HorizontalToVerticalTask")]
+        public AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +116,11 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "TagTask.", this.TagTask);
             this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
             this.SetParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
+            this.SetParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
+            this.SetParamObj(map, prefix + "SegmentTask.", this.SegmentTask);
+            this.SetParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
+            this.SetParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
+            this.SetParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
         }
     }
 }

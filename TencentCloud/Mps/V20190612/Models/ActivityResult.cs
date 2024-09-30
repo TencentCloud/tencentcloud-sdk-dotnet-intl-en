@@ -25,16 +25,18 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The type of the scheme’s subtask.
-        /// <li>Transcode: Transcoding</li>
-        /// <li>SampleSnapshot: Sampled screenshot</li>
-        /// <li>AnimatedGraphics: Animated image generating</li>
-        /// <li>SnapshotByTimeOffset: Time point screenshot</li>
-        /// <li>ImageSprites: Image sprite generating</li>
-        /// <li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
-        /// <li>AiContentReview: Content moderation</li>
-        /// <li>AIRecognition: Content recognition</li>
-        /// <li>AIAnalysis: Content analysis</li>
+        /// Atomic task type.
+        /// <li>Transcode: transcoding.</li>
+        /// <li>SampleSnapshot: sampled screenshot taking.</li>
+        /// <li>AnimatedGraphics: animated image generating.</li>
+        /// <li>SnapshotByTimeOffset: time point screenshot taking.</li>
+        /// <li>ImageSprites: sprite image generating.</li>
+        /// <li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+        /// <li>AiContentReview: content moderation.</li>
+        /// <li>AIRecognition: intelligent identification.</li>
+        /// <li>AIAnalysis: intelligent analysis.</li>
+        /// 
+        /// <li>AiQualityControl: media quality inspection.</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }

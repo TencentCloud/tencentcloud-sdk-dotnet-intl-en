@@ -50,6 +50,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// Whether it is an audio-only template. 0: video template. 1: audio-only template.
+        /// </summary>
+        [JsonProperty("PureAudio")]
+        public ulong? PureAudio{ get; set; }
+
+        /// <summary>
+        /// Filter condition for adaptive transcoding template identifiers, with a length limit of 64 characters.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +72,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "PureAudio", this.PureAudio);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

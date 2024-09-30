@@ -38,6 +38,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
+        /// <summary>
+        /// Reference bitrate, in kbps. Value range: 50-35000.
+        /// If set, the encoder will try to encode at this bitrate.
+        /// If not set, the service will automatically adopt a suitable bitrate based on the complexity of an image.
+        /// </summary>
+        [JsonProperty("Bitrate")]
+        public long? Bitrate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +54,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
+            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
         }
     }
 }

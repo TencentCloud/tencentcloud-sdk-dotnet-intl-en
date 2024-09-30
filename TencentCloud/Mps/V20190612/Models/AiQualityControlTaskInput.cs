@@ -25,7 +25,12 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The ID of the quality control template.
+        /// Media quality inspection template ID.
+        /// You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+        /// - 10: Enable all quality inspection items.
+        /// - 20: Only enable quality inspection items corresponding to format diagnosis.
+        /// - 30: Only enable quality inspection items corresponding to no-reference scoring.
+        /// - 40: Only enable quality inspection items corresponding to screen quality.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Definition")]

@@ -25,22 +25,24 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Audio stream codec.
-        /// When the outer `Container` parameter is `mp3`, the valid value is:
-        /// <li>libmp3lame.</li>
-        /// When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
+        /// Audio stream encoding format.
+        /// When audio transcoding is not needed, the value is:
+        /// <li>copy.</li>
+        /// When the outer parameter Container is mp3, the value is:
+        /// <li>mp3.</li>
+        /// When the outer parameter Container is ogg or flac, the value is:
         /// <li>flac.</li>
-        /// When the outer `Container` parameter is `m4a`, the valid values include:
-        /// <li>libfdk_aac;</li>
-        /// <li>libmp3lame;</li>
+        /// When the outer parameter Container is m4a, valid values are:
+        /// <li>aac;</li>
         /// <li>ac3.</li>
-        /// When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-        /// <li>libfdk_aac: More suitable for mp4;</li>
-        /// <li>libmp3lame: More suitable for flv;</li>
+        /// When the outer parameter Container is mp4 or flv, valid values are:
+        /// <li>aac: more suitable for mp4;</li>
+        /// <li>mp3: more suitable for flv;</li>
         /// <li>mp2.</li>
-        /// When the outer `Container` parameter is `hls`, the valid values include:
-        /// <li>libfdk_aac;</li>
-        /// <li>libmp3lame.</li>
+        /// When the outer parameter Container is hls, valid values are:
+        /// <li>aac;</li>
+        /// <li>mp3.</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
@@ -49,7 +51,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
         /// </summary>
         [JsonProperty("Bitrate")]
-        public ulong? Bitrate{ get; set; }
+        public long? Bitrate{ get; set; }
 
         /// <summary>
         /// Audio stream sample rate. Valid values:
@@ -62,11 +64,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? SampleRate{ get; set; }
 
         /// <summary>
-        /// Audio channel system. Valid values:
-        /// <li>1: Mono</li>
-        /// <li>2: Dual</li>
-        /// <li>6: Stereo</li>
-        /// When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+        /// Audio channel mode. Valid values:
+        /// <li>1: single channel.</li>
+        /// <li>2: dual channel.</li>
+        /// <li>6: 5.1 surround sound.</li>
+        /// When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }

@@ -61,6 +61,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Output")]
         public AiRecognitionTaskAsrFullTextResultOutput Output{ get; set; }
 
+        /// <summary>
+        /// Task progress.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Progress")]
+        public ulong? Progress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

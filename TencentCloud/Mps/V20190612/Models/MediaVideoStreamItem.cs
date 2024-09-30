@@ -87,6 +87,26 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HdrType")]
         public string HdrType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Codecs")]
+        public string Codecs{ get; set; }
+
+        /// <summary>
+        /// Numerator of the frame rate.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FpsNumerator")]
+        public long? FpsNumerator{ get; set; }
+
+        /// <summary>
+        /// Denominator of the frame rate.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FpsDenominator")]
+        public long? FpsDenominator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +122,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
             this.SetParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
             this.SetParamSimple(map, prefix + "HdrType", this.HdrType);
+            this.SetParamSimple(map, prefix + "Codecs", this.Codecs);
+            this.SetParamSimple(map, prefix + "FpsNumerator", this.FpsNumerator);
+            this.SetParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
         }
     }
 }

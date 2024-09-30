@@ -46,11 +46,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? QualityEvaluationScore{ get; set; }
 
         /// <summary>
-        /// The issues detected by quality control.
+        /// Exception items detected in content quality inspection.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QualityControlResultSet")]
         public QualityControlResult[] QualityControlResultSet{ get; set; }
+
+        /// <summary>
+        /// Exception items detected in format diagnosis.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ContainerDiagnoseResultSet")]
+        public ContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }
 
 
         /// <summary>
@@ -62,6 +69,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NoVideo", this.NoVideo);
             this.SetParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
             this.SetParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
+            this.SetParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
         }
     }
 }

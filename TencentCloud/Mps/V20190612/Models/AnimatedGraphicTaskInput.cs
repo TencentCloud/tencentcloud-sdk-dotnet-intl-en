@@ -50,7 +50,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+        /// Output path of a file after animated image generating, which can be a relative or absolute path.
+        /// If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
+        /// Relative path example:
+        /// <li>Filename_{Variable name}.{format}.</li>
+        /// <li>Filename.{format}.</li>
+        /// Absolute path example:
+        /// <li>/Custom path/Filename_{Variable name}.{format}.</li>
+        /// If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }

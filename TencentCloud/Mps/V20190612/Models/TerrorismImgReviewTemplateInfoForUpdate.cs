@@ -33,16 +33,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-        /// <li>guns</li>
-        /// <li>crowd</li>
-        /// <li>bloody</li>
-        /// <li>police</li>
-        /// <li>banners (sensitive flags)</li>
-        /// <li>militant</li>
-        /// <li>explosion</li>
-        /// <li>terrorists</li>
-        /// <li>scenario (sensitive scenes) </li>
+        /// Sensitive content filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. Valid values:
+        /// <li>guns: weapons and guns;</li>
+        /// <li>crowd: crowd gathering;</li>
+        /// <li>bloody: bloodiness;</li>
+        /// <li>police: police force;</li>
+        /// <li>banners: sensitive flags;</li>
+        /// <li>militant: militants;</li>
+        /// <li>explosion: explosions and fires;</li>
+        /// <li>terrorists: sensitive persons.</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }

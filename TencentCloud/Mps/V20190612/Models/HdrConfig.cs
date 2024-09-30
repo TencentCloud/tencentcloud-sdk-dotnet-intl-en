@@ -34,12 +34,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The strength. Valid values:
+        /// Type. Valid values:
         /// <li>HDR10</li>
         /// <li>HLG</li>
-        /// Default value: HDR10.
-        /// Note: The video codec must be `libx265`.
-        /// Note: The bit depth for video encoding is 10 bits.
+        /// Default Value: HDR10.
+        /// Note: The video encoding method should be H.265.
+        /// Note: The video encoding bit depth is 10.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]

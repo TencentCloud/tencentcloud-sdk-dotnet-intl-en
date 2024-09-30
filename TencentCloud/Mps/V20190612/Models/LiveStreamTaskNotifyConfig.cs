@@ -25,6 +25,14 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
+        /// The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+        /// 
+        /// <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
+
+        /// <summary>
         /// CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
         /// </summary>
         [JsonProperty("CmqModel")]
@@ -49,18 +57,17 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-        /// 
-        /// <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-        /// </summary>
-        [JsonProperty("NotifyType")]
-        public string NotifyType{ get; set; }
-
-        /// <summary>
         /// HTTP callback URL, required if `NotifyType` is set to `URL`
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
+
+        /// <summary>
+        /// Key used to generate a callback signature.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NotifyKey")]
+        public string NotifyKey{ get; set; }
 
 
         /// <summary>
@@ -68,12 +75,13 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "CmqModel", this.CmqModel);
             this.SetParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+            this.SetParamSimple(map, prefix + "NotifyKey", this.NotifyKey);
         }
     }
 }

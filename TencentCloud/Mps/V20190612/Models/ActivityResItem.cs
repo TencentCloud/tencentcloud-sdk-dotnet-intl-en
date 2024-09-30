@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
-        public MediaProcessTaskSampleSnapshotResult SnapshotByTimeOffsetTask{ get; set; }
+        public MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
         /// The result of a sampled screenshot task.
@@ -87,6 +87,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AnalysisTask")]
         public ScheduleAnalysisTaskResult AnalysisTask{ get; set; }
 
+        /// <summary>
+        /// Media quality inspection task output.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("QualityControlTask")]
+        public ScheduleQualityControlTaskResult QualityControlTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "RecognitionTask.", this.RecognitionTask);
             this.SetParamObj(map, prefix + "ReviewTask.", this.ReviewTask);
             this.SetParamObj(map, prefix + "AnalysisTask.", this.AnalysisTask);
+            this.SetParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
         }
     }
 }
