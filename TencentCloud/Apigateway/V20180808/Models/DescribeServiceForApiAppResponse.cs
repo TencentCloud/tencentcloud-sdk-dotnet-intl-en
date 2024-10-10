@@ -72,13 +72,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ModifiedTime{ get; set; }
 
         /// <summary>
-        /// Self-Deployed cluster name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ExclusiveSetName")]
-        public string ExclusiveSetName{ get; set; }
-
-        /// <summary>
         /// Network type list. INNER: private network access; OUTER: public network access.
         /// </summary>
         [JsonProperty("NetTypes")]
@@ -183,7 +176,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
-            this.SetParamSimple(map, prefix + "ExclusiveSetName", this.ExclusiveSetName);
             this.SetParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
             this.SetParamSimple(map, prefix + "InternalSubDomain", this.InternalSubDomain);
             this.SetParamSimple(map, prefix + "OuterSubDomain", this.OuterSubDomain);

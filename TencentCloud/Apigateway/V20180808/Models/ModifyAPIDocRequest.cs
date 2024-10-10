@@ -25,12 +25,6 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// API document ID
-        /// </summary>
-        [JsonProperty("ApiDocId")]
-        public string ApiDocId{ get; set; }
-
-        /// <summary>
         /// API document name
         /// </summary>
         [JsonProperty("ApiDocName")]
@@ -54,17 +48,23 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ApiIds")]
         public string[] ApiIds{ get; set; }
 
+        /// <summary>
+        /// API document ID
+        /// </summary>
+        [JsonProperty("ApiDocId")]
+        public string ApiDocId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApiDocId", this.ApiDocId);
             this.SetParamSimple(map, prefix + "ApiDocName", this.ApiDocName);
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
             this.SetParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
+            this.SetParamSimple(map, prefix + "ApiDocId", this.ApiDocId);
         }
     }
 }

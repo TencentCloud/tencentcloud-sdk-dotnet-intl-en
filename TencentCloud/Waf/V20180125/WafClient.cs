@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.993";
+       private const string sdkVersion = "SDK_NET_3.0.994";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// Add precision allowlist rules
+        /// </summary>
+        /// <param name="req"><see cref="AddCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="AddCustomWhiteRuleResponse"/></returns>
+        public Task<AddCustomWhiteRuleResponse> AddCustomWhiteRule(AddCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<AddCustomWhiteRuleResponse>(req, "AddCustomWhiteRule");
+        }
+
+        /// <summary>
+        /// Add precision allowlist rules
+        /// </summary>
+        /// <param name="req"><see cref="AddCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="AddCustomWhiteRuleResponse"/></returns>
+        public AddCustomWhiteRuleResponse AddCustomWhiteRuleSync(AddCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<AddCustomWhiteRuleResponse>(req, "AddCustomWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Add SaaS WAF protection domain
         /// </summary>
         /// <param name="req"><see cref="AddSpartaProtectionRequest"/></param>
@@ -176,6 +197,27 @@ namespace TencentCloud.Waf.V20180125
         public CreateHostResponse CreateHostSync(CreateHostRequest req)
         {
             return InternalRequestAsync<CreateHostResponse>(req, "CreateHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add WAF IP allowlists/blocklists.
+        /// </summary>
+        /// <param name="req"><see cref="CreateIpAccessControlRequest"/></param>
+        /// <returns><see cref="CreateIpAccessControlResponse"/></returns>
+        public Task<CreateIpAccessControlResponse> CreateIpAccessControl(CreateIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<CreateIpAccessControlResponse>(req, "CreateIpAccessControl");
+        }
+
+        /// <summary>
+        /// This API is used to add WAF IP allowlists/blocklists.
+        /// </summary>
+        /// <param name="req"><see cref="CreateIpAccessControlRequest"/></param>
+        /// <returns><see cref="CreateIpAccessControlResponse"/></returns>
+        public CreateIpAccessControlResponse CreateIpAccessControlSync(CreateIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<CreateIpAccessControlResponse>(req, "CreateIpAccessControl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -264,6 +306,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// Delete precision allowlist rules
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteCustomWhiteRuleResponse"/></returns>
+        public Task<DeleteCustomWhiteRuleResponse> DeleteCustomWhiteRule(DeleteCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomWhiteRuleResponse>(req, "DeleteCustomWhiteRule");
+        }
+
+        /// <summary>
+        /// Delete precision allowlist rules
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="DeleteCustomWhiteRuleResponse"/></returns>
+        public DeleteCustomWhiteRuleResponse DeleteCustomWhiteRuleSync(DeleteCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomWhiteRuleResponse>(req, "DeleteCustomWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a domain name protected by CLB WAF. Batch operation is supported.
         /// </summary>
         /// <param name="req"><see cref="DeleteHostRequest"/></param>
@@ -281,6 +344,48 @@ namespace TencentCloud.Waf.V20180125
         public DeleteHostResponse DeleteHostSync(DeleteHostRequest req)
         {
             return InternalRequestAsync<DeleteHostResponse>(req, "DeleteHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete latest versions of WAF IP allowlists/blocklists.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIpAccessControlV2Request"/></param>
+        /// <returns><see cref="DeleteIpAccessControlV2Response"/></returns>
+        public Task<DeleteIpAccessControlV2Response> DeleteIpAccessControlV2(DeleteIpAccessControlV2Request req)
+        {
+            return InternalRequestAsync<DeleteIpAccessControlV2Response>(req, "DeleteIpAccessControlV2");
+        }
+
+        /// <summary>
+        /// This API is used to delete latest versions of WAF IP allowlists/blocklists.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIpAccessControlV2Request"/></param>
+        /// <returns><see cref="DeleteIpAccessControlV2Response"/></returns>
+        public DeleteIpAccessControlV2Response DeleteIpAccessControlV2Sync(DeleteIpAccessControlV2Request req)
+        {
+            return InternalRequestAsync<DeleteIpAccessControlV2Response>(req, "DeleteIpAccessControlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete CC attack session settings
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSessionRequest"/></param>
+        /// <returns><see cref="DeleteSessionResponse"/></returns>
+        public Task<DeleteSessionResponse> DeleteSession(DeleteSessionRequest req)
+        {
+            return InternalRequestAsync<DeleteSessionResponse>(req, "DeleteSession");
+        }
+
+        /// <summary>
+        /// Delete CC attack session settings
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSessionRequest"/></param>
+        /// <returns><see cref="DeleteSessionResponse"/></returns>
+        public DeleteSessionResponse DeleteSessionSync(DeleteSessionRequest req)
+        {
+            return InternalRequestAsync<DeleteSessionResponse>(req, "DeleteSession")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -553,6 +658,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// Obtain the precision allowlist policy list in the protection configuration
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="DescribeCustomWhiteRuleResponse"/></returns>
+        public Task<DescribeCustomWhiteRuleResponse> DescribeCustomWhiteRule(DescribeCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomWhiteRuleResponse>(req, "DescribeCustomWhiteRule");
+        }
+
+        /// <summary>
+        /// Obtain the precision allowlist policy list in the protection configuration
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="DescribeCustomWhiteRuleResponse"/></returns>
+        public DescribeCustomWhiteRuleResponse DescribeCustomWhiteRuleSync(DescribeCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomWhiteRuleResponse>(req, "DescribeCustomWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Obtain domain overview
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainCountInfoRequest"/></param>
@@ -612,6 +738,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeDomainDetailsSaasResponse DescribeDomainDetailsSaasSync(DescribeDomainDetailsSaasRequest req)
         {
             return InternalRequestAsync<DescribeDomainDetailsSaasResponse>(req, "DescribeDomainDetailsSaas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain the result of adding domain operation
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainVerifyResultRequest"/></param>
+        /// <returns><see cref="DescribeDomainVerifyResultResponse"/></returns>
+        public Task<DescribeDomainVerifyResultResponse> DescribeDomainVerifyResult(DescribeDomainVerifyResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDomainVerifyResultResponse>(req, "DescribeDomainVerifyResult");
+        }
+
+        /// <summary>
+        /// Obtain the result of adding domain operation
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainVerifyResultRequest"/></param>
+        /// <returns><see cref="DescribeDomainVerifyResultResponse"/></returns>
+        public DescribeDomainVerifyResultResponse DescribeDomainVerifyResultSync(DescribeDomainVerifyResultRequest req)
+        {
+            return InternalRequestAsync<DescribeDomainVerifyResultResponse>(req, "DescribeDomainVerifyResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -742,6 +889,48 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// Query detailed information of all user instances
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesResponse"/></returns>
+        public Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances");
+        }
+
+        /// <summary>
+        /// Query detailed information of all user instances
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesResponse"/></returns>
+        public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// WAF IP blocklist/allowlist query
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpAccessControlRequest"/></param>
+        /// <returns><see cref="DescribeIpAccessControlResponse"/></returns>
+        public Task<DescribeIpAccessControlResponse> DescribeIpAccessControl(DescribeIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<DescribeIpAccessControlResponse>(req, "DescribeIpAccessControl");
+        }
+
+        /// <summary>
+        /// WAF IP blocklist/allowlist query
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpAccessControlRequest"/></param>
+        /// <returns><see cref="DescribeIpAccessControlResponse"/></returns>
+        public DescribeIpAccessControlResponse DescribeIpAccessControlSync(DescribeIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<DescribeIpAccessControlResponse>(req, "DescribeIpAccessControl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the switch status of each WAF basic security module, check if each module is enabled
         /// </summary>
         /// <param name="req"><see cref="DescribeModuleStatusRequest"/></param>
@@ -822,6 +1011,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribePolicyStatusResponse DescribePolicyStatusSync(DescribePolicyStatusRequest req)
         {
             return InternalRequestAsync<DescribePolicyStatusResponse>(req, "DescribePolicyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain the SaaS-type WAF protection port list
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortsRequest"/></param>
+        /// <returns><see cref="DescribePortsResponse"/></returns>
+        public Task<DescribePortsResponse> DescribePorts(DescribePortsRequest req)
+        {
+            return InternalRequestAsync<DescribePortsResponse>(req, "DescribePorts");
+        }
+
+        /// <summary>
+        /// Obtain the SaaS-type WAF protection port list
+        /// </summary>
+        /// <param name="req"><see cref="DescribePortsRequest"/></param>
+        /// <returns><see cref="DescribePortsResponse"/></returns>
+        public DescribePortsResponse DescribePortsSync(DescribePortsRequest req)
+        {
+            return InternalRequestAsync<DescribePortsResponse>(req, "DescribePorts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -927,6 +1137,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeTopAttackDomainResponse DescribeTopAttackDomainSync(DescribeTopAttackDomainRequest req)
         {
             return InternalRequestAsync<DescribeTopAttackDomainResponse>(req, "DescribeTopAttackDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// During the addition and modification of Domain Configuration for CLB-type WAF, it is required to display the supported region list for CLB-type WAF (clb-waf) through DescribeUserClbWafRegions to obtain the currently available region list for the customer.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserClbWafRegionsRequest"/></param>
+        /// <returns><see cref="DescribeUserClbWafRegionsResponse"/></returns>
+        public Task<DescribeUserClbWafRegionsResponse> DescribeUserClbWafRegions(DescribeUserClbWafRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeUserClbWafRegionsResponse>(req, "DescribeUserClbWafRegions");
+        }
+
+        /// <summary>
+        /// During the addition and modification of Domain Configuration for CLB-type WAF, it is required to display the supported region list for CLB-type WAF (clb-waf) through DescribeUserClbWafRegions to obtain the currently available region list for the customer.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserClbWafRegionsRequest"/></param>
+        /// <returns><see cref="DescribeUserClbWafRegionsResponse"/></returns>
+        public DescribeUserClbWafRegionsResponse DescribeUserClbWafRegionsSync(DescribeUserClbWafRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeUserClbWafRegionsResponse>(req, "DescribeUserClbWafRegions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1074,6 +1305,48 @@ namespace TencentCloud.Waf.V20180125
         public GetAttackTotalCountResponse GetAttackTotalCountSync(GetAttackTotalCountRequest req)
         {
             return InternalRequestAsync<GetAttackTotalCountResponse>(req, "GetAttackTotalCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain the elastic QPS limit of package instances
+        /// </summary>
+        /// <param name="req"><see cref="GetInstanceQpsLimitRequest"/></param>
+        /// <returns><see cref="GetInstanceQpsLimitResponse"/></returns>
+        public Task<GetInstanceQpsLimitResponse> GetInstanceQpsLimit(GetInstanceQpsLimitRequest req)
+        {
+            return InternalRequestAsync<GetInstanceQpsLimitResponse>(req, "GetInstanceQpsLimit");
+        }
+
+        /// <summary>
+        /// Obtain the elastic QPS limit of package instances
+        /// </summary>
+        /// <param name="req"><see cref="GetInstanceQpsLimitRequest"/></param>
+        /// <returns><see cref="GetInstanceQpsLimitResponse"/></returns>
+        public GetInstanceQpsLimitResponse GetInstanceQpsLimitSync(GetInstanceQpsLimitRequest req)
+        {
+            return InternalRequestAsync<GetInstanceQpsLimitResponse>(req, "GetInstanceQpsLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to import IP allowlists/blocklists.
+        /// </summary>
+        /// <param name="req"><see cref="ImportIpAccessControlRequest"/></param>
+        /// <returns><see cref="ImportIpAccessControlResponse"/></returns>
+        public Task<ImportIpAccessControlResponse> ImportIpAccessControl(ImportIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ImportIpAccessControlResponse>(req, "ImportIpAccessControl");
+        }
+
+        /// <summary>
+        /// This API is used to import IP allowlists/blocklists.
+        /// </summary>
+        /// <param name="req"><see cref="ImportIpAccessControlRequest"/></param>
+        /// <returns><see cref="ImportIpAccessControlResponse"/></returns>
+        public ImportIpAccessControlResponse ImportIpAccessControlSync(ImportIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ImportIpAccessControlResponse>(req, "ImportIpAccessControl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1246,6 +1519,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// This API is used to edit a precise allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyCustomWhiteRuleResponse"/></returns>
+        public Task<ModifyCustomWhiteRuleResponse> ModifyCustomWhiteRule(ModifyCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomWhiteRuleResponse>(req, "ModifyCustomWhiteRule");
+        }
+
+        /// <summary>
+        /// This API is used to edit a precise allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyCustomWhiteRuleResponse"/></returns>
+        public ModifyCustomWhiteRuleResponse ModifyCustomWhiteRuleSync(ModifyCustomWhiteRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomWhiteRuleResponse>(req, "ModifyCustomWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Enable or disable a precision allowlist
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomWhiteRuleStatusRequest"/></param>
@@ -1391,6 +1685,111 @@ namespace TencentCloud.Waf.V20180125
         public ModifyHostStatusResponse ModifyHostStatusSync(ModifyHostStatusRequest req)
         {
             return InternalRequestAsync<ModifyHostStatusResponse>(req, "ModifyHostStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify the QPS elastic billing switch for an instance
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceElasticModeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceElasticModeResponse"/></returns>
+        public Task<ModifyInstanceElasticModeResponse> ModifyInstanceElasticMode(ModifyInstanceElasticModeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceElasticModeResponse>(req, "ModifyInstanceElasticMode");
+        }
+
+        /// <summary>
+        /// Modify the QPS elastic billing switch for an instance
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceElasticModeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceElasticModeResponse"/></returns>
+        public ModifyInstanceElasticModeResponse ModifyInstanceElasticModeSync(ModifyInstanceElasticModeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceElasticModeResponse>(req, "ModifyInstanceElasticMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify instance name
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNameResponse"/></returns>
+        public Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceNameResponse>(req, "ModifyInstanceName");
+        }
+
+        /// <summary>
+        /// Modify instance name
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNameResponse"/></returns>
+        public ModifyInstanceNameResponse ModifyInstanceNameSync(ModifyInstanceNameRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceNameResponse>(req, "ModifyInstanceName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Set elastic QPS limit for package instances
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceQpsLimitRequest"/></param>
+        /// <returns><see cref="ModifyInstanceQpsLimitResponse"/></returns>
+        public Task<ModifyInstanceQpsLimitResponse> ModifyInstanceQpsLimit(ModifyInstanceQpsLimitRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceQpsLimitResponse>(req, "ModifyInstanceQpsLimit");
+        }
+
+        /// <summary>
+        /// Set elastic QPS limit for package instances
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceQpsLimitRequest"/></param>
+        /// <returns><see cref="ModifyInstanceQpsLimitResponse"/></returns>
+        public ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimitSync(ModifyInstanceQpsLimitRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceQpsLimitResponse>(req, "ModifyInstanceQpsLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Enable or disable auto-renewal for instance
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstanceRenewFlagResponse"/></returns>
+        public Task<ModifyInstanceRenewFlagResponse> ModifyInstanceRenewFlag(ModifyInstanceRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceRenewFlagResponse>(req, "ModifyInstanceRenewFlag");
+        }
+
+        /// <summary>
+        /// Enable or disable auto-renewal for instance
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstanceRenewFlagResponse"/></returns>
+        public ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlagSync(ModifyInstanceRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceRenewFlagResponse>(req, "ModifyInstanceRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to edit WAF IP allowlists/blocklists.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpAccessControlRequest"/></param>
+        /// <returns><see cref="ModifyIpAccessControlResponse"/></returns>
+        public Task<ModifyIpAccessControlResponse> ModifyIpAccessControl(ModifyIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ModifyIpAccessControlResponse>(req, "ModifyIpAccessControl");
+        }
+
+        /// <summary>
+        /// This API is used to edit WAF IP allowlists/blocklists.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpAccessControlRequest"/></param>
+        /// <returns><see cref="ModifyIpAccessControlResponse"/></returns>
+        public ModifyIpAccessControlResponse ModifyIpAccessControlSync(ModifyIpAccessControlRequest req)
+        {
+            return InternalRequestAsync<ModifyIpAccessControlResponse>(req, "ModifyIpAccessControl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1580,6 +1979,27 @@ namespace TencentCloud.Waf.V20180125
         public RefreshAccessCheckResultResponse RefreshAccessCheckResultSync(RefreshAccessCheckResultRequest req)
         {
             return InternalRequestAsync<RefreshAccessCheckResultResponse>(req, "RefreshAccessCheckResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Toggle elasticity switch
+        /// </summary>
+        /// <param name="req"><see cref="SwitchElasticModeRequest"/></param>
+        /// <returns><see cref="SwitchElasticModeResponse"/></returns>
+        public Task<SwitchElasticModeResponse> SwitchElasticMode(SwitchElasticModeRequest req)
+        {
+            return InternalRequestAsync<SwitchElasticModeResponse>(req, "SwitchElasticMode");
+        }
+
+        /// <summary>
+        /// Toggle elasticity switch
+        /// </summary>
+        /// <param name="req"><see cref="SwitchElasticModeRequest"/></param>
+        /// <returns><see cref="SwitchElasticModeResponse"/></returns>
+        public SwitchElasticModeResponse SwitchElasticModeSync(SwitchElasticModeRequest req)
+        {
+            return InternalRequestAsync<SwitchElasticModeResponse>(req, "SwitchElasticMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

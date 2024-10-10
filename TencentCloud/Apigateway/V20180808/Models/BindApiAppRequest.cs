@@ -37,7 +37,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Environment{ get; set; }
 
         /// <summary>
-        /// Unique ID of the service to be bound.
+        /// Unique ID of the service to be bound
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }

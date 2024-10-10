@@ -86,6 +86,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// ":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
         /// </summary>
         [JsonProperty("LogQuerys")]
+        [System.Obsolete]
         public LogQuery[] LogQuerys{ get; set; }
 
 
