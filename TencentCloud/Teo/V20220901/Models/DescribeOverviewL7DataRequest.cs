@@ -25,78 +25,78 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The start time.
+        /// Start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time.
+        /// End time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The metric to query. Values:
-        /// <li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
-        /// <li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
-        /// <li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
-        /// <li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
-        /// <li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
-        /// <li>`l7Flow_request`: Access requests</li>
-        /// <li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
-        /// <li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+        /// Queried metric. Valid values:
+        /// <li>l7Flow_outFlux: EdgeOne response traffic;</li>
+        /// <li>l7Flow_inFlux: EdgeOne request traffic;</li>
+        /// <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
+        /// <li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+        /// <li>l7Flow_hit_outFlux: cache hit traffic;</li>
+        /// <li>l7Flow_request: number of access requests;</li>
+        /// <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
+        /// <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// ZoneId set. This parameter is required.
+        /// Site ID set. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// Queried domain name set. This parameter has been discarded.
+        /// Queried domain name set. This parameter has been deprecated.
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// The protocol type. Values:
-        /// <li>`http`: HTTP protocol;</li>
-        /// <li>`https`: HTTPS protocol;</li>
-        /// <li>`http2`: HTTP2 protocol;</li>
-        /// <li>`all`: All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+        /// Protocol type of the query. Valid values:
+        /// <li>http: HTTP protocol;</li>
+        /// <li>https: HTTPS protocol;</li>
+        /// <li>http2: HTTP/2 protocol;</li>
+        /// <li>all: all protocols.</li>If this parameter is not input, the default value `all` is used. This parameter is not yet effective.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// The query granularity. Values:
-        /// <li>`min`: 1 minute;</li>
-        /// <li>`5min`: 5 minutes;</li>
-        /// <li>`hour`: 1 hour;</li>
-        /// <li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+        /// Time granularity of the query. Valid values:
+        /// <li>min: 1 minute;</li>
+        /// <li>5min: 5 minutes;</li>
+        /// <li>hour: 1 hour;</li>
+        /// <li>day: 1 day.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, the granularity value is min, 5min, hour, and day respectively for queries of data within 1 hour, within 2 days, within 7 days, and over 7 days.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Filtering condition. The detailed filtering condition key values are as follows: 
-        /// <li>socket: Filter based on HTTP protocol type. Corresponding value options: <br> HTTP: HTTP protocol; <br> HTTPS: HTTPS protocol; <br> QUIC: QUIC protocol. </li>
-        /// <li>domains: Filter based on domain name. </li>
-        /// <li>tagKey: Filter based on Tag Key. </li>
-        /// <li>tagValue: Filter based on Tag Value. </li>
+        /// Filter criteria. The detailed Key values of filter criteria are as follows:
+        /// <li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+        /// <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
+        /// <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
+        /// <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
 
         /// <summary>
-        /// Geolocation scope. Values:
-        /// <li>`overseas`: Regions outside the Chinese mainland</li>
-        /// <li>`mainland`: Chinese mainland</li>
-        /// <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+        /// Data ownership area. Valid values:
+        /// <li>overseas: global (excluding the Chinese mainland) data;</li>
+        /// <li>mainland: Chinese mainland data;</li>
+        /// <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

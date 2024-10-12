@@ -25,39 +25,39 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The address of the custom HTTP interface for real-time log delivery. Currently, only HTTP and HTTPS protocols are supported.
+        /// Address of the custom HTTP API for real-time log shipping. Currently, only HTTP and HTTPS protocols are supported.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Specifies the custom SecretId for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+        /// Custom SecretId used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
         /// </summary>
         [JsonProperty("AccessId")]
         public string AccessId{ get; set; }
 
         /// <summary>
-        /// Specifies the custom SecretKey for generating an encrypted signature. This parameter is required if the origin server needs authentication.
+        /// Custom SecretKey used for generating an encrypted signature. This parameter is required if the origin server needs authentication.
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// The type of data compression. Valid values:<li>gzip: gzip compression.</li>If this field is not filled in, compression is disabled.
+        /// Type of data compression. Valid values:<li>gzip: gzip compression.</li>If this parameter is not input, compression is disabled.
         /// </summary>
         [JsonProperty("CompressType")]
         public string CompressType{ get; set; }
 
         /// <summary>
-        /// The type of the application layer protocol used when POST requests log delivery. Valid values:
+        /// Type of the application layer protocol used in POST requests for log shipping. Valid values: 
         /// <li>http: HTTP protocol;</li>
-        /// <li>https: HTTPS protocol.</li>If this field is not filled in, the protocol type will be parsed from the URL field.
+        /// <li>https: HTTPS protocol.</li>If this parameter is not input, the protocol type is parsed from the URL field.	
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// The custom request header carried during log delivery. If the header name you fill in is the default header carried by EdgeOne log delivery such as Content-Type, then the header value you fill in will override the default value. The header value supports referring to a single variable ${batchSize} to obtain the number of log entries included in each POST request.
+        /// Custom request header carried in log shipping. For a header carried by default in EdgeOne log pushing, such as Content-Type, the header value you input will overwrite the default value. The header value references a single variable ${batchSize} to obtain the number of log entries included in each POST request.
         /// </summary>
         [JsonProperty("Headers")]
         public Header[] Headers{ get; set; }

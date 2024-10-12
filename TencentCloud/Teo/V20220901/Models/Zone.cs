@@ -60,11 +60,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Site connection method, valid values:
-        /// <li>full: Connect via NS;</li>
-        /// <li>partial: Connect via CNAME;</li>
-        /// <li>noDomainAccess: Connect without using a domain name;</li>
-        /// <li>vodeo: Connect by default when VODEO is enabled.</li>
+        /// Site access method. Valid values:
+        /// <li>full: NS access;</li>
+        /// <li>partial: CNAME access;</li>
+        /// <li>noDomainAccess: access with no domain name.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

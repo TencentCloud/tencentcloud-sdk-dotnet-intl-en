@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.994";
+       private const string sdkVersion = "SDK_NET_3.0.995";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,48 @@ namespace TencentCloud.Teo.V20220901
         public CreateCustomizeErrorPageResponse CreateCustomizeErrorPageSync(CreateCustomizeErrorPageRequest req)
         {
             return InternalRequestAsync<CreateCustomizeErrorPageResponse>(req, "CreateCustomizeErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create and deploy an edge function to EdgeOne edge nodes.
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRequest"/></param>
+        /// <returns><see cref="CreateFunctionResponse"/></returns>
+        public Task<CreateFunctionResponse> CreateFunction(CreateFunctionRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionResponse>(req, "CreateFunction");
+        }
+
+        /// <summary>
+        /// This API is used to create and deploy an edge function to EdgeOne edge nodes.
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRequest"/></param>
+        /// <returns><see cref="CreateFunctionResponse"/></returns>
+        public CreateFunctionResponse CreateFunctionSync(CreateFunctionRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionResponse>(req, "CreateFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a trigger rule for an edge function.
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
+        /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
+        public Task<CreateFunctionRuleResponse> CreateFunctionRule(CreateFunctionRuleRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionRuleResponse>(req, "CreateFunctionRule");
+        }
+
+        /// <summary>
+        /// This API is used to create a trigger rule for an edge function.
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
+        /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
+        public CreateFunctionRuleResponse CreateFunctionRuleSync(CreateFunctionRuleRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionRuleResponse>(req, "CreateFunctionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -654,6 +696,48 @@ namespace TencentCloud.Teo.V20220901
         public DeleteCustomErrorPageResponse DeleteCustomErrorPageSync(DeleteCustomErrorPageRequest req)
         {
             return InternalRequestAsync<DeleteCustomErrorPageResponse>(req, "DeleteCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an edge function. Once deleted, the function cannot be recovered, and associated trigger rules are also deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
+        /// <returns><see cref="DeleteFunctionResponse"/></returns>
+        public Task<DeleteFunctionResponse> DeleteFunction(DeleteFunctionRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionResponse>(req, "DeleteFunction");
+        }
+
+        /// <summary>
+        /// This API is used to delete an edge function. Once deleted, the function cannot be recovered, and associated trigger rules are also deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
+        /// <returns><see cref="DeleteFunctionResponse"/></returns>
+        public DeleteFunctionResponse DeleteFunctionSync(DeleteFunctionRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionResponse>(req, "DeleteFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a trigger rule for an edge function.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRulesRequest"/></param>
+        /// <returns><see cref="DeleteFunctionRulesResponse"/></returns>
+        public Task<DeleteFunctionRulesResponse> DeleteFunctionRules(DeleteFunctionRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionRulesResponse>(req, "DeleteFunctionRules");
+        }
+
+        /// <summary>
+        /// This API is used to delete a trigger rule for an edge function.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRulesRequest"/></param>
+        /// <returns><see cref="DeleteFunctionRulesResponse"/></returns>
+        public DeleteFunctionRulesResponse DeleteFunctionRulesSync(DeleteFunctionRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionRulesResponse>(req, "DeleteFunctionRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1158,6 +1242,69 @@ namespace TencentCloud.Teo.V20220901
         public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
         {
             return InternalRequestAsync<DescribeEnvironmentsResponse>(req, "DescribeEnvironments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of trigger rules for an edge function. It supports filtering by rule ID, function ID, rule description, and so on.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionRulesRequest"/></param>
+        /// <returns><see cref="DescribeFunctionRulesResponse"/></returns>
+        public Task<DescribeFunctionRulesResponse> DescribeFunctionRules(DescribeFunctionRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionRulesResponse>(req, "DescribeFunctionRules");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of trigger rules for an edge function. It supports filtering by rule ID, function ID, rule description, and so on.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionRulesRequest"/></param>
+        /// <returns><see cref="DescribeFunctionRulesResponse"/></returns>
+        public DescribeFunctionRulesResponse DescribeFunctionRulesSync(DescribeFunctionRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionRulesResponse>(req, "DescribeFunctionRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the runtime environment of an edge function, including environment variables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionRuntimeEnvironmentRequest"/></param>
+        /// <returns><see cref="DescribeFunctionRuntimeEnvironmentResponse"/></returns>
+        public Task<DescribeFunctionRuntimeEnvironmentResponse> DescribeFunctionRuntimeEnvironment(DescribeFunctionRuntimeEnvironmentRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionRuntimeEnvironmentResponse>(req, "DescribeFunctionRuntimeEnvironment");
+        }
+
+        /// <summary>
+        /// This API is used to query the runtime environment of an edge function, including environment variables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionRuntimeEnvironmentRequest"/></param>
+        /// <returns><see cref="DescribeFunctionRuntimeEnvironmentResponse"/></returns>
+        public DescribeFunctionRuntimeEnvironmentResponse DescribeFunctionRuntimeEnvironmentSync(DescribeFunctionRuntimeEnvironmentRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionRuntimeEnvironmentResponse>(req, "DescribeFunctionRuntimeEnvironment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of edge functions. It supports filtering by function ID, name, description, and so on.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionsResponse"/></returns>
+        public Task<DescribeFunctionsResponse> DescribeFunctions(DescribeFunctionsRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionsResponse>(req, "DescribeFunctions");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of edge functions. It supports filtering by function ID, name, description, and so on.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionsResponse"/></returns>
+        public DescribeFunctionsResponse DescribeFunctionsSync(DescribeFunctionsRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionsResponse>(req, "DescribeFunctions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1728,6 +1875,29 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
+        /// After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
+        /// </summary>
+        /// <param name="req"><see cref="HandleFunctionRuntimeEnvironmentRequest"/></param>
+        /// <returns><see cref="HandleFunctionRuntimeEnvironmentResponse"/></returns>
+        public Task<HandleFunctionRuntimeEnvironmentResponse> HandleFunctionRuntimeEnvironment(HandleFunctionRuntimeEnvironmentRequest req)
+        {
+            return InternalRequestAsync<HandleFunctionRuntimeEnvironmentResponse>(req, "HandleFunctionRuntimeEnvironment");
+        }
+
+        /// <summary>
+        /// This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
+        /// After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
+        /// </summary>
+        /// <param name="req"><see cref="HandleFunctionRuntimeEnvironmentRequest"/></param>
+        /// <returns><see cref="HandleFunctionRuntimeEnvironmentResponse"/></returns>
+        public HandleFunctionRuntimeEnvironmentResponse HandleFunctionRuntimeEnvironmentSync(HandleFunctionRuntimeEnvironmentRequest req)
+        {
+            return InternalRequestAsync<HandleFunctionRuntimeEnvironmentResponse>(req, "HandleFunctionRuntimeEnvironment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to verify ownership of the site.
         /// </summary>
         /// <param name="req"><see cref="IdentifyZoneRequest"/></param>
@@ -1961,6 +2131,69 @@ namespace TencentCloud.Teo.V20220901
         public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
         {
             return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify an edge function. It supports modifying the function content and description. The function will take effect immediately after modification and redeployment.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRequest"/></param>
+        /// <returns><see cref="ModifyFunctionResponse"/></returns>
+        public Task<ModifyFunctionResponse> ModifyFunction(ModifyFunctionRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionResponse>(req, "ModifyFunction");
+        }
+
+        /// <summary>
+        /// This API is used to modify an edge function. It supports modifying the function content and description. The function will take effect immediately after modification and redeployment.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRequest"/></param>
+        /// <returns><see cref="ModifyFunctionResponse"/></returns>
+        public ModifyFunctionResponse ModifyFunctionSync(ModifyFunctionRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionResponse>(req, "ModifyFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
+        /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
+        public Task<ModifyFunctionRuleResponse> ModifyFunctionRule(ModifyFunctionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionRuleResponse>(req, "ModifyFunctionRule");
+        }
+
+        /// <summary>
+        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
+        /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
+        public ModifyFunctionRuleResponse ModifyFunctionRuleSync(ModifyFunctionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionRuleResponse>(req, "ModifyFunctionRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the priority of trigger rules for an edge function.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyFunctionRulePriorityResponse"/></returns>
+        public Task<ModifyFunctionRulePriorityResponse> ModifyFunctionRulePriority(ModifyFunctionRulePriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionRulePriorityResponse>(req, "ModifyFunctionRulePriority");
+        }
+
+        /// <summary>
+        /// This API is used to modify the priority of trigger rules for an edge function.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyFunctionRulePriorityResponse"/></returns>
+        public ModifyFunctionRulePriorityResponse ModifyFunctionRulePrioritySync(ModifyFunctionRulePriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionRulePriorityResponse>(req, "ModifyFunctionRulePriority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

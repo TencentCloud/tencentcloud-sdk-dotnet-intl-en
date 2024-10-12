@@ -31,68 +31,68 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters.
+        /// Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// The type of the real-time log delivery task. Valid values:
-        /// <li>cls: Push to Tencent Cloud CLS;</li>
-        /// <li>custom_endpoint: Push to a user-defined HTTP(S) address;</li>
-        /// <li>s3: Push to an AWS S3-compatible bucket address.</li>
+        /// Type of a real-time log shipping task. Valid values:
+        /// <li>cls: push to Tencent Cloud CLS;</li>
+        /// <li>custom_endpoint: push to a custom HTTP(S) address;</li>
+        /// <li>s3: push to an AWS S3-compatible bucket address.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-        /// <li>Layer 7 domain: domain.example.com;</li>
-        /// <li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+        /// List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+        /// <li>L7 domain name: domain.example.com;</li>
+        /// <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
         /// </summary>
         [JsonProperty("EntityList")]
         public string[] EntityList{ get; set; }
 
         /// <summary>
-        /// The type of data delivery. Valid values:
-        /// <li>domain: Site acceleration log;</li>
-        /// <li>application: Layer 4 proxy log;</li>
-        /// <li>web-rateLiming: Rate limit and CC attack defense log;</li>
-        /// <li>web-attack: Managed rule log;</li>
-        /// <li>web-rule: Custom rule log;</li>
-        /// <li>web-bot: Bot management log.</li>
+        /// Data shipping type. Valid values:
+        /// <li>domain: site acceleration logs;</li>
+        /// <li>application: L4 proxy logs;</li>
+        /// <li>web-rateLiming: rate limit and CC attack defense logs;</li>
+        /// <li>web-attack: managed rule logs;</li>
+        /// <li>web-rule: custom rule logs;</li>
+        /// <li>web-bot: Bot management logs.</li>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// The data delivery area. Valid values:
-        /// <li>mainland: Within the Chinese mainland;</li>
-        /// <li>overseas: Global (excluding the Chinese mainland).</li>
+        /// Data shipping area. Valid values:
+        /// <li>mainland: within the Chinese mainland;</li>
+        /// <li>overseas: global (excluding the Chinese mainland).</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// The list of predefined fields for delivery.
+        /// List of predefined fields for shipping.
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// The list of custom fields for delivery, supporting extracting specified field values from HTTP request headers, response headers, and cookies. Each custom field name must be unique and the maximum number of fields is 200.
+        /// List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
         /// </summary>
         [JsonProperty("CustomFields")]
         public CustomField[] CustomFields{ get; set; }
 
         /// <summary>
-        /// Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+        /// Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
         /// </summary>
         [JsonProperty("DeliveryConditions")]
         public DeliveryCondition[] DeliveryConditions{ get; set; }
 
         /// <summary>
-        /// The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the sampling ratio is 100%.
+        /// Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
         /// </summary>
         [JsonProperty("Sample")]
         public ulong? Sample{ get; set; }
@@ -106,19 +106,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public LogFormat LogFormat{ get; set; }
 
         /// <summary>
-        /// The configuration information of CLS. This parameter is required when TaskType is cls.
+        /// Configuration information of CLS. This parameter is required when TaskType is cls.
         /// </summary>
         [JsonProperty("CLS")]
         public CLSTopic CLS{ get; set; }
 
         /// <summary>
-        /// The configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+        /// Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
         /// </summary>
         [JsonProperty("CustomEndpoint")]
         public CustomEndpoint CustomEndpoint{ get; set; }
 
         /// <summary>
-        /// The configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+        /// Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
         /// </summary>
         [JsonProperty("S3")]
         public S3 S3{ get; set; }

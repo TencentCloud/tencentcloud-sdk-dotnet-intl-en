@@ -25,22 +25,20 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Feature execution conditions.
-        /// Note: If any condition in the array is met, the feature will run.
+        /// Judgment condition for executing the feature.
+        /// Note: The feature can be executed if any condition in the array is met.
         /// </summary>
         [JsonProperty("Conditions")]
         public RuleAndConditions[] Conditions{ get; set; }
 
         /// <summary>
-        /// Feature to be executed.
-        /// Note: Actions and SubRules cannot both be empty.
+        /// Executed feature. Note: Actions and SubRules cannot be both empty.
         /// </summary>
         [JsonProperty("Actions")]
         public Action[] Actions{ get; set; }
 
         /// <summary>
-        /// The nested rule.
-        /// Note: Actions and SubRules cannot both be empty.
+        /// Nested rule. Note: SubRules and Actions cannot be both empty.
         /// </summary>
         [JsonProperty("SubRules")]
         public SubRuleItem[] SubRules{ get; set; }

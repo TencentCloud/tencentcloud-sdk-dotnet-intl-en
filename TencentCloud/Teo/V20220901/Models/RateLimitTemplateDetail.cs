@@ -25,37 +25,48 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
+        /// Template level name. Valid values:
+        /// <li>sup_loose: super loose;</li>
+        /// <li>loose: loose;</li>
+        /// <li>emergency: emergency;</li>
+        /// <li>normal: normal;</li>
+        /// <li>strict: strict;</li>
+        /// <li>close: disabled, effective only for precise rate limiting.</li>
         /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// The unique ID.
+        /// Unique ID.
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
+        /// Template action. Valid values:
+        /// <li>alg: JavaScript challenge;</li>
+        /// <li>monitor: observation.</li>
         /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
+        /// Penalty duration, in seconds. Value range: 0-2 days.
         /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }
 
         /// <summary>
-        /// The request threshold. Value range: 0-4294967294.
+        /// Statistical threshold, in times. Value range: 0-4294967294.
         /// </summary>
         [JsonProperty("Threshold")]
         public long? Threshold{ get; set; }
 
         /// <summary>
-        /// The statistical period. Value range: 0-120 seconds.
+        /// Statistical cycle. Value range: 0-120 seconds.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

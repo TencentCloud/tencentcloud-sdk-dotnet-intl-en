@@ -25,13 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of query results.
+        /// Total number of entries in the query result.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Note: This field may return 'null', which indicates a failure to obtain a valid value.
+        /// List of time series traffic data in L7 monitoring.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Data")]
         public TimingDataRecord[] Data{ get; set; }

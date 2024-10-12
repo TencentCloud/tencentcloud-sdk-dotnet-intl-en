@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total entries that match the specified query condition.
+        /// Total number of items in the query condition.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of tasks returned.
+        /// Task result list.
         /// </summary>
         [JsonProperty("Tasks")]
         public Task[] Tasks{ get; set; }

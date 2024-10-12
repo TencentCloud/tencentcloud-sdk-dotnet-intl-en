@@ -68,6 +68,20 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("CardBackCutImageBase64")]
         public string CardBackCutImageBase64{ get; set; }
 
+        /// <summary>
+        /// Card Warning Information
+        /// 
+        /// -9101 Alarm for covered certificate,
+        /// -9102 Alarm for photocopied certificate,
+        /// -9103 Alarm for photographed certificate,
+        /// -9104 Alarm for PS certificate,
+        /// -9107 Alarm for reflective certificate,
+        /// -9108 Alarm for blurry image,
+        /// -9109 This capability is not enabled.
+        /// </summary>
+        [JsonProperty("WarnCardInfos")]
+        public long?[] WarnCardInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +95,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
             this.SetParamSimple(map, prefix + "CardCutImageBase64", this.CardCutImageBase64);
             this.SetParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
+            this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         }
     }
 }

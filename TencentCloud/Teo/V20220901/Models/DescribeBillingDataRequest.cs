@@ -25,56 +25,59 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Start time of the query.
+        /// Start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the query.
+        /// End time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Zone ID set. This parameter is required.
+        /// Site ID set. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// Indicator list. Valid values:<li>acc_flux: Content acceleration traffic, in bytes;</li>
-        /// <li>smt_flux: Smart acceleration traffic, in bytes;</li>
-        /// <li>l4_flux: Layer 4 acceleration traffic, in bytes;</li>
-        /// <li>sec_flux: Exclusive DDoS mitigation traffic, in bytes;</li>
-        /// <li>zxctg_flux: Cross-MLC-border acceleration traffic, in bytes;</li>
-        /// <li>acc_bandwidth: Content acceleration bandwidth, in bps;</li>
-        /// <li>smt_bandwidth: Smart acceleration bandwidth, in bps;</li>
-        /// <li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li>
-        /// <li>sec_bandwidth: Exclusive DDoS mitigation bandwidth, in bps;</li>
-        /// <li>zxctg_bandwidth: Cross-MLC-border acceleration bandwidth, in bps;</li><li>sec_request_clean: HTTP/HTTPS requests, in count;</li>
-        /// <li>smt_request_clean: Smart acceleration requests, in count;</li>
-        /// <li>quic_request: QUIC requests, in count;</li>
-        /// <li>bot_request_clean: Bot requests, in count;</li>
-        /// <li>cls_count: Real-time log delivery log counts, in count;</li>
-        /// <li>ddos_bandwidth: Exclusive DDoS mitigation elastic bandwidth, in bps.</li>
+        /// Metric list. Valid values:
+        /// <li>acc_flux: content acceleration traffic, in bytes;</li>
+        /// <li>smt_flux: smart acceleration traffic, in bytes;</li>
+        /// <li>l4_flux: L4 acceleration traffic, in bytes;</li>
+        /// <li>sec_flux: exclusive protection traffic, in bytes;</li>
+        /// <li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes;</li>
+        /// <li>acc_bandwidth: content acceleration bandwidth, in bps;</li>
+        /// <li>smt_bandwidth: smart acceleration bandwidth, in bps;</li>
+        /// <li>l4_bandwidth: L4 acceleration bandwidth, in bps;</li>
+        /// <li>sec_bandwidth: exclusive protection bandwidth, in bps;</li>
+        /// <li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps;</li>
+        /// <li>sec_request_clean: number of HTTP/HTTPS requests;</li>
+        /// <li>smt_request_clean: number of smart acceleration requests;</li>
+        /// <li>quic_request: number of QUIC requests;</li>
+        /// <li>bot_request_clean: number of Bot requests;</li>
+        /// <li>cls_count: number of real-time log entries pushed;</li>
+        /// <li>ddos_bandwidth: elastic DDoS protection bandwidth, in bps.</li>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// Query granularity. Valid values:<li>5min: 5-minute granularity;</li>
-        /// <li>hour: 1-hour granularity;</li>
-        /// <li>day: 1-day granularity.</li>
+        /// Time granularity of the query. Valid values:
+        /// <li>5min: 5 minutes;</li>
+        /// <li>hour: 1 hour;</li>
+        /// <li>day: 1 day.</li>
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Filter. The detailed filters are as follows:
-        /// <li>host: Filter by Domain Name. Example: test.example.com.<br></li>
-        /// <li>proxy-id: Filter by Layer 4 Proxy Instance ID. Example: sid-2rugn89bkla9.<br></li>
-        /// <li>region-id: Filter by Billing Region.Options are:<br>   CH: Chinese mainland<br>   AF: Africa<br>   AS1: Asia-Pacific Region 1<br>   AS2: Asia-Pacific Region 2<br>   AS3: Asia-Pacific Region 3<br>  EU: Europe<br>   MidEast: Middle East<br>   NA: North America<br>   SA: South America</li>
+        /// Filter criteria. The detailed values of filter criteria are as follows:
+        /// <li>host: Filter by domain name, such as test.example.com.<br></li>
+        /// <li>proxy-id: Filter by L4 proxy instance ID, such as sid-2rugn89bkla9.<br></li>
+        /// <li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
         /// </summary>
         [JsonProperty("Filters")]
         public BillingDataFilter[] Filters{ get; set; }

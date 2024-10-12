@@ -75,6 +75,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// VODEO sub-application ID. This parameter is required when OriginType is VODEO.
         /// </summary>
         [JsonProperty("VodeoSubAppId")]
+        [System.Obsolete]
         public long? VodeoSubAppId{ get; set; }
 
         /// <summary>
@@ -83,12 +84,14 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>Bucket: a specified bucket.</li>
         /// </summary>
         [JsonProperty("VodeoDistributionRange")]
+        [System.Obsolete]
         public string VodeoDistributionRange{ get; set; }
 
         /// <summary>
         /// VODEO storage bucket ID. This parameter is required when OriginType is VODEO and VodeoDistributionRange is Bucket.
         /// </summary>
         [JsonProperty("VodeoBucketId")]
+        [System.Obsolete]
         public string VodeoBucketId{ get; set; }
 
 

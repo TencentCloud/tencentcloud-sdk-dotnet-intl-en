@@ -69,9 +69,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Filters
-        /// <li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
-        /// <li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+        /// Filter criteria. The detailed Key values of filter criteria are as follows:
+        /// <li>ruleId: Filter by forwarding rule ID.</li>
+        /// <li>proxyId: Filter by L4 proxy instance ID.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }

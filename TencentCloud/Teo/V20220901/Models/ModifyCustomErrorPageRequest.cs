@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Custom response page ID.
+        /// Custom error page ID.
         /// </summary>
         [JsonProperty("PageId")]
         public string PageId{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Custom response page name. The name must be 2-60 characters long.
+        /// Custom error page name. The name must be 2-60 characters long.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Custom response page description, not exceeding 60 characters.
+        /// Custom error page description, not exceeding 60 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Custom response page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
+        /// Custom error page type, with values:<li>text/html. </li><li>application/json.</li><li>plain/text.</li><li>text/xml.</li>
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }
 
         /// <summary>
-        /// Custom response page content, not exceeding 2 KB.
+        /// Custom error page content, not exceeding 2 KB.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

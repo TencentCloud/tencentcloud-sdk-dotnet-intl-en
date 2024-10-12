@@ -25,8 +25,8 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data point list.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Data")]
         public BillingData[] Data{ get; set; }

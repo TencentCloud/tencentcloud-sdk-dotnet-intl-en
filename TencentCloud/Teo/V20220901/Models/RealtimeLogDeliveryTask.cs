@@ -25,67 +25,67 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of the real-time log delivery task.
+        /// ID of a real-time log shipping task.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// The name of the real-time log delivery task.
+        /// Name of a real-time log shipping task.
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// The status of the real-time log delivery task. Valid values:<li>enabled: Enabled;</li><li>disabled: Disabled;</li><li>deleted: Abnormal deletion. Check whether the destination Tencent Cloud CLS log set/log topic has been deleted.</li>
+        /// Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li>
         /// </summary>
         [JsonProperty("DeliveryStatus")]
         public string DeliveryStatus{ get; set; }
 
         /// <summary>
-        /// The type of the real-time log delivery task. Valid values:<li>cls: Push to Tencent Cloud CLS;</li><li>custom_endpoint: Push to a custom HTTP(S) address;</li><li>s3: Push to an AWS S3-compatible bucket address.</li>
+        /// Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:<li>Layer 7 domain: domain.example.com;</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>
+        /// List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples: <li>L7 domain name: domain.example.com;</li><li>L4 proxy instance: sid-2s69eb5wcms7.</li>	
         /// </summary>
         [JsonProperty("EntityList")]
         public string[] EntityList{ get; set; }
 
         /// <summary>
-        /// The data delivery type. Valid values: <li>domain: Site acceleration log;</li><li>application: Layer 4 proxy log;</li><li>web-rateLiming: Rate limit and CC attack defense log;</li><li>web-attack: Managed rule log;</li><li>web-rule: Custom rule log;</li><li>web-bot: Bot management log.</li>
+        /// Data shipping type. Valid values: <li>domain: site acceleration logs;</li><li>application: L4 proxy logs;</li><li>web-rateLiming: rate limiting and CC attack defense logs;</li><li>web-attack: managed rule logs;</li><li>web-rule: custom rule logs;</li><li>web-bot: Bot management logs.</li>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// The data delivery area. Valid values:<li>mainland: Within the Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland).</li>
+        /// Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// The list of predefined fields for delivery.
+        /// List of predefined fields for shipping.
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// The list of custom fields for delivery.
+        /// List of custom fields for shipping.
         /// </summary>
         [JsonProperty("CustomFields")]
         public CustomField[] CustomFields{ get; set; }
 
         /// <summary>
-        /// Log delivery filter conditions.
+        /// Filter criteria of log shipping.
         /// </summary>
         [JsonProperty("DeliveryConditions")]
         public DeliveryCondition[] DeliveryConditions{ get; set; }
 
         /// <summary>
-        /// The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%.
+        /// Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%.
         /// </summary>
         [JsonProperty("Sample")]
         public ulong? Sample{ get; set; }
@@ -100,31 +100,34 @@ namespace TencentCloud.Teo.V20220901.Models
         public LogFormat LogFormat{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Configuration information of the CLS.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("CLS")]
         public CLSTopic CLS{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Configuration information of the custom HTTP service.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("CustomEndpoint")]
         public CustomEndpoint CustomEndpoint{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Configuration information of the AWS S3-compatible bucket.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("S3")]
         public S3 S3{ get; set; }
 
         /// <summary>
-        /// The creation time.
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// The update time.
+        /// Update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

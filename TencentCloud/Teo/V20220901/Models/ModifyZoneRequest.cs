@@ -31,9 +31,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Access mode of the site. Values:
-        /// <li> `full`: Access through a name server.</li>
-        /// <li> `partial`: Access through a CNAME record. A site using domainless access can only switch to CNAME access. </li>The original configuration applies if this field is not specified.
+        /// Site access method. Valid values:
+        /// <li>full: NS access.</li>
+        /// <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
+        /// <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

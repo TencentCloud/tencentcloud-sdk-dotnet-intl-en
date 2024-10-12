@@ -25,27 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Origin server type, with values:
+        /// Origin server type. Valid values:
         /// <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
         /// <li>COS: Tencent Cloud COS origin server;</li>
-        /// <li>AWS_S3: AWS S3 origin server;</li>
-        /// <li>ORIGIN_GROUP: origin server group type origin server;</li>
-        /// <li>VODEO: VOD on EO;</li>
+        /// <li>AWS_S3: AWS S3 COS origin server;</li>
+        /// <li>ORIGIN_GROUP: origin server group;</li>
         /// <li>VOD: Video on Demand;</li>
-        /// <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+        /// <li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
         /// <li>LB: load balancing. Currently only available to the allowlist. </li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Origin server address, which varies according to the value of OriginType:
-        /// <li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
-        /// <li>When OriginType = COS, this parameter should be the access domain name of the COS bucket;</li>
-        /// <li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
-        /// <li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID;</li>
-        /// <li>When OriginType = VOD, this parameter should be the VOD application ID;</li>
-        /// <li>When OriginType = VODEO, if VodeoDistributionRange = ALL, then this parameter is "all-buckets-in-vodeo-application"; if VodeoDistributionRange = Bucket, then this parameter is the domain name of the corresponding bucket. </li>
+        /// Origin server address, which varies with the value of OriginType:
+        /// <li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
+        /// <li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
+        /// <li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
+        /// <li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+        /// <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
@@ -88,18 +86,21 @@ namespace TencentCloud.Teo.V20220901.Models
         /// MO sub-application ID
         /// </summary>
         [JsonProperty("VodeoSubAppId")]
+        [System.Obsolete]
         public long? VodeoSubAppId{ get; set; }
 
         /// <summary>
         /// MO distribution range. Valid values: <li>All: all</li> <li>Bucket: bucket</li>
         /// </summary>
         [JsonProperty("VodeoDistributionRange")]
+        [System.Obsolete]
         public string VodeoDistributionRange{ get; set; }
 
         /// <summary>
         /// MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
         /// </summary>
         [JsonProperty("VodeoBucketId")]
+        [System.Obsolete]
         public string VodeoBucketId{ get; set; }
 
 

@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Filter criteria. The upper limit for Filters.Values is 20. The detailed filter criteria are as follows:
+        /// Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
         /// <li>page-id: Filter by page ID;</li>
         /// <li>name: Filter by page name;</li>
         /// <li>description: Filter by page description;</li>
@@ -47,7 +47,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The limit of paginated query. Default value: 20. Maximum value: 1,000.
+        /// The limit of paginated query. Default value: 20. Maximum value: 1,000.  
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of the successfully created task.
+        /// ID of the successfully created task.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

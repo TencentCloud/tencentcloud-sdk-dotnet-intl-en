@@ -25,10 +25,11 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site access types. Options include:
-        /// <li>`partial`: (Default) Access through a CNAME record</li>
-        /// <li>`full`: Access through a name server</li>
-        /// <li>`noDomainAccess`: Access without using a domain name</li>
+        /// Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+        /// <li>partial: CNAME access;</li>
+        /// <li>full: NS access;</li>
+        /// <li>noDomainAccess: access with no domain name.</li>
+        /// <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

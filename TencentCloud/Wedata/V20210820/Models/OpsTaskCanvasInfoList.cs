@@ -41,7 +41,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CirculateTaskList")]
-        public OpsTaskCanvasDto CirculateTaskList{ get; set; }
+        public OpsTaskCanvasDto[] CirculateTaskList{ get; set; }
 
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         {
             this.SetParamArrayObj(map, prefix + "TasksList.", this.TasksList);
             this.SetParamArrayObj(map, prefix + "LinksList.", this.LinksList);
-            this.SetParamObj(map, prefix + "CirculateTaskList.", this.CirculateTaskList);
+            this.SetParamArrayObj(map, prefix + "CirculateTaskList.", this.CirculateTaskList);
         }
     }
 }

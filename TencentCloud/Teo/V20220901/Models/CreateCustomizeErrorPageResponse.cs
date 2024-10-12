@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Custom response page ID.
+        /// Page ID.
         /// </summary>
         [JsonProperty("PageId")]
         public string PageId{ get; set; }

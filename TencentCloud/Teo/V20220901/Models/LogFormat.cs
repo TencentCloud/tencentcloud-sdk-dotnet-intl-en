@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Predefined output format type for log delivery. Valid values:
-        /// <li>json: Use the predefined log output format JSON Lines, where fields in each log record are presented as key-value pairs;</li>
-        /// <li>csv: Use the predefined log output format csv, where fields in each log record is only presented as field values, excluding field names. </li>
+        /// Predefined output format for log shipping. Valid values:
+        /// <li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
+        /// <li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
         /// </summary>
         [JsonProperty("FormatType")]
         public string FormatType{ get; set; }
@@ -58,8 +58,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// A string inserted between log records as a separator. Valid values:
-        /// <li>\n: Line break;</li>
-        /// <li>\t: Tab character;</li>
+        /// <li>\n: line break;</li>
+        /// <li>\t: tab character;</li>
         /// <li>,: Half-width comma. </li>
         /// </summary>
         [JsonProperty("RecordDelimiter")]
@@ -67,8 +67,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// A string inserted between fields as a separator within a single log record. Valid values:
-        /// <li>\t: Tab character;</li>
-        /// <li>,: Half-width comma;</li>
+        /// <li>\t: tab character;</li>
+        /// <li>,: half-width comma;</li>
         /// <li>;: Half-width semicolon. </li>
         /// </summary>
         [JsonProperty("FieldDelimiter")]

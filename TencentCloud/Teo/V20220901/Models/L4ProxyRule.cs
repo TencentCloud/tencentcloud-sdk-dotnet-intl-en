@@ -128,6 +128,14 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("BuId")]
         public string BuId{ get; set; }
 
+        /// <summary>
+        /// Remote authentication information.
+        /// Note: RemoteAuth cannot be used as an input parameter in CreateL4ProxyRules or ModifyL4ProxyRules. If this parameter is input, it will be ignored. If the returned data of DescribeL4ProxyRules is empty, it indicates that remote authentication is disabled.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// </summary>
+        [JsonProperty("RemoteAuth")]
+        public L4ProxyRemoteAuth RemoteAuth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +154,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "RuleTag", this.RuleTag);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "BuId", this.BuId);
+            this.SetParamObj(map, prefix + "RemoteAuth.", this.RemoteAuth);
         }
     }
 }
