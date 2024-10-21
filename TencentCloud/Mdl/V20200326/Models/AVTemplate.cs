@@ -223,6 +223,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("VideoEnhanceSettings")]
         public VideoEnhanceSetting[] VideoEnhanceSettings{ get; set; }
 
+        /// <summary>
+        /// Key frame interval, 300-10000, optional.
+        /// </summary>
+        [JsonProperty("GopSize")]
+        public long? GopSize{ get; set; }
+
+        /// <summary>
+        /// Keyframe units, only support MILLISECONDS (milliseconds).
+        /// </summary>
+        [JsonProperty("GopSizeUnits")]
+        public string GopSizeUnits{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +273,8 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArrayObj(map, prefix + "AudioTracks.", this.AudioTracks);
             this.SetParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
             this.SetParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
+            this.SetParamSimple(map, prefix + "GopSize", this.GopSize);
+            this.SetParamSimple(map, prefix + "GopSizeUnits", this.GopSizeUnits);
         }
     }
 }

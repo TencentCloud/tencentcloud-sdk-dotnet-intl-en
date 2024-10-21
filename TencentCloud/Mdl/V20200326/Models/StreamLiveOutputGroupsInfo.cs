@@ -32,14 +32,17 @@ namespace TencentCloud.Mdl.V20200326.Models
 
         /// <summary>
         /// Output protocol
-        /// Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `DASH_ARCHIVE`,`HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`, `FRAME_CAPTURE`,`RTP`,`RTMP`.
+        /// Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
+        ///  `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
+        ///  `DASH_STREAM_PACKAGE`, 
+        ///  `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Output information
-        /// If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+        /// If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
         /// </summary>
         [JsonProperty("Outputs")]
         public OutputInfo[] Outputs{ get; set; }
