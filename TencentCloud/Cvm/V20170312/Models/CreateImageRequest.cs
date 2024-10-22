@@ -43,7 +43,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageDescription{ get; set; }
 
         /// <summary>
-        /// Whether to force shut down an instance to create an image when a soft shutdown fails
+        /// Whether to perform forced power-off operation to create an image.
+        /// Valid values:<br><li>true: indicates that an image is created after forced power-off operation</li><br><li>false: indicates that an image is created in the power-on state</li><br><br>Default value: false.<br><br>Creating an image in the power-on state may result in some unbacked-up data, affecting data security.
         /// </summary>
         [JsonProperty("ForcePoweroff")]
         public string ForcePoweroff{ get; set; }
@@ -81,6 +82,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
+        /// <summary>
+        /// Image family
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         }
     }
 }

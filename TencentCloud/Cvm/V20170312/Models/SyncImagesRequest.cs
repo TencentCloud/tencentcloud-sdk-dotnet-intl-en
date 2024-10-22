@@ -25,31 +25,35 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// List of image IDs. You can obtain the image IDs in two ways: <br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response. <br><li>Find the image IDs in the [Image Console](https://console.cloud.tencent.com/cvm/image). <br>The specified images must meet the following requirement: <br><li>the images must be in the `NORMAL` state. <br>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
+        /// Image ID list. You can obtain the image IDs in the following ways:<br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response.</li><li>Obtain the image IDs in the [Image console](https://console.cloud.tencent.com/cvm/image).<br>The image IDs should meet the following requirement:</li><li>The image ID should correspond to an image in the `NORMAL` state.</li>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
         /// </summary>
         [JsonProperty("ImageIds")]
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// List of destination regions for synchronization. Limits:<br><li>It must be a valid region.<br><li>For a custom image, the destination region cannot be the source region.<br><li>For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.<br><li>Image synchronization is only available in limited regions.<br>See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
+        /// List of target synchronization regions, which should meet the following requirements:<br><li>It should be a valid region.</li><li>If it is a custom image, the target synchronization region cannot be the source region.</li><li>If it is a shared image, the target synchronization region only supports the source region, meaning the shared image will be copied as a custom image in the source region.</li><li>Partial region synchronization is not supported currently. For details, see [Copying Images](https://intl.cloud.tencent.com/document/product/213/4943?from_cn_redirect=1#.E5.A4.8D.E5.88.B6.E8.AF.B4.E6.98.8E).</li>For specific regional parameters, refer to [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DestinationRegions")]
         public string[] DestinationRegions{ get; set; }
 
         /// <summary>
         /// Checks whether image synchronization can be initiated.
+        /// 
+        /// Default value: false.
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// Destination image name.
+        /// Target image name. By default, the source image name is used.
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// Whether to return the ID of image created in the destination region
+        /// Whether to return the ID of the image created in the target region.
+        /// 
+        /// Default value: false.
         /// </summary>
         [JsonProperty("ImageSetRequired")]
         public bool? ImageSetRequired{ get; set; }

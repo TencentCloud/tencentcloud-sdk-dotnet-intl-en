@@ -48,6 +48,20 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DiscountUsagePrice")]
         public float? DiscountUsagePrice{ get; set; }
 
+        /// <summary>
+        /// Discount on upfront cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("FixedPriceDiscount")]
+        public float? FixedPriceDiscount{ get; set; }
+
+        /// <summary>
+        /// Discount on subsequent cost. For example, 20.0 indicates 80% off. Note: This field may return null, indicating that no valid value is found.
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("UsagePriceDiscount")]
+        public float? UsagePriceDiscount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +72,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DiscountFixedPrice", this.DiscountFixedPrice);
             this.SetParamSimple(map, prefix + "OriginalUsagePrice", this.OriginalUsagePrice);
             this.SetParamSimple(map, prefix + "DiscountUsagePrice", this.DiscountUsagePrice);
+            this.SetParamSimple(map, prefix + "FixedPriceDiscount", this.FixedPriceDiscount);
+            this.SetParamSimple(map, prefix + "UsagePriceDiscount", this.UsagePriceDiscount);
         }
     }
 }

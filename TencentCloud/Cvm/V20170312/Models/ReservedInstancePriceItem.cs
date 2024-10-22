@@ -68,6 +68,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ProductDescription")]
         public string ProductDescription{ get; set; }
 
+        /// <summary>
+        /// Upfront total cost, in USD.
+        /// </summary>
+        [JsonProperty("DiscountUsagePrice")]
+        public float? DiscountUsagePrice{ get; set; }
+
+        /// <summary>
+        /// Discount price for subsequent total cost, in USD/hr.
+        /// </summary>
+        [JsonProperty("DiscountFixedPrice")]
+        public float? DiscountFixedPrice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +93,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
+            this.SetParamSimple(map, prefix + "DiscountUsagePrice", this.DiscountUsagePrice);
+            this.SetParamSimple(map, prefix + "DiscountFixedPrice", this.DiscountFixedPrice);
         }
     }
 }

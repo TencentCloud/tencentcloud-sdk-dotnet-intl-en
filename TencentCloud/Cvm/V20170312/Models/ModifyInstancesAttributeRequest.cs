@@ -38,6 +38,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
+        /// User data provided to an instance, which needs to be encoded in Base64 format with a maximum size of 16 KB. For details on obtaining this parameter, refer to the startup commands for [Windows](https://intl.cloud.tencent.com/document/product/213/17526?from_cn_redirect=1) and [Linux](https://intl.cloud.tencent.com/document/product/213/17525?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
+        /// <summary>
         /// IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
         /// </summary>
         [JsonProperty("SecurityGroups")]
@@ -50,13 +56,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+        /// Modified hostname of an instance.<li>Period (.) and hyphen (-) should not be used as the first or last character of the hostname, and should not be used consecutively.</li><li>Windows instances: The hostname should contain 2 to 15 characters, including letters (case insensitive), digits, and hyphens (-), does not support periods (.), and should not be all digits.</li><li>Instances of other types (such as Linux instances): The hostname should contain 2 to 60 characters, including multiple periods (.), with each segment between periods considered as one section. Each section can contain letters (case insensitive), digits, and hyphens (-).</li>Note: After the hostname is modified, the instance will restart immediately, and the new hostname will take effect after the restart.
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+        /// Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li>Default value: false.
         /// </summary>
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
@@ -69,6 +75,15 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("CamRoleType")]
         public string CamRoleType{ get; set; }
 
+        /// <summary>
+        /// Whether to automatically restart an instance when modifying a hostname. If not specified, the instance will automatically restart by default.
+        /// - true: Modify the hostname and automatically restart the instance.
+        /// - false: Modify the hostname without automatically restarting the instance. A manual restart is required for the new hostname to take effect.
+        /// Note: This parameter is valid only when a hostname is modified.
+        /// </summary>
+        [JsonProperty("AutoReboot")]
+        public bool? AutoReboot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,11 +92,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
+            this.SetParamSimple(map, prefix + "AutoReboot", this.AutoReboot);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1001";
+       private const string sdkVersion = "SDK_NET_3.0.1002";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Trtc.V20190722
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// Provides server-side control of AI Conversation
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public Task<ControlAIConversationResponse> ControlAIConversation(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation");
+        }
+
+        /// <summary>
+        /// Provides server-side control of AI Conversation
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -114,6 +135,48 @@ namespace TencentCloud.Trtc.V20190722
         public DeleteCloudRecordingResponse DeleteCloudRecordingSync(DeleteCloudRecordingRequest req)
         {
             return InternalRequestAsync<DeleteCloudRecordingResponse>(req, "DeleteCloudRecording")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Describe the AI conversation task status
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIConversationRequest"/></param>
+        /// <returns><see cref="DescribeAIConversationResponse"/></returns>
+        public Task<DescribeAIConversationResponse> DescribeAIConversation(DescribeAIConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeAIConversationResponse>(req, "DescribeAIConversation");
+        }
+
+        /// <summary>
+        /// Describe the AI conversation task status
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIConversationRequest"/></param>
+        /// <returns><see cref="DescribeAIConversationResponse"/></returns>
+        public DescribeAIConversationResponse DescribeAIConversationSync(DescribeAIConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeAIConversationResponse>(req, "DescribeAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Describe AI transcription task status
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAITranscriptionRequest"/></param>
+        /// <returns><see cref="DescribeAITranscriptionResponse"/></returns>
+        public Task<DescribeAITranscriptionResponse> DescribeAITranscription(DescribeAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeAITranscriptionResponse>(req, "DescribeAITranscription");
+        }
+
+        /// <summary>
+        /// Describe AI transcription task status
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAITranscriptionRequest"/></param>
+        /// <returns><see cref="DescribeAITranscriptionResponse"/></returns>
+        public DescribeAITranscriptionResponse DescribeAITranscriptionSync(DescribeAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeAITranscriptionResponse>(req, "DescribeAITranscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -742,6 +805,56 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// Initiate AI conversation task, where the AI bot enters the TRTC room to engage in AI conversation with specified members in the room. This is suitable for scenarios such as intelligent customer service and AI language teachers. The TRTC AI conversation feature has built-in speech-to-text capabilities , allowing customers to flexibly specify third-party AI model (LLM) services and text-to-speech (TTS) services. For more [feature details](https://cloud.tencent.com/document/product/647/108901).
+        /// </summary>
+        /// <param name="req"><see cref="StartAIConversationRequest"/></param>
+        /// <returns><see cref="StartAIConversationResponse"/></returns>
+        public Task<StartAIConversationResponse> StartAIConversation(StartAIConversationRequest req)
+        {
+            return InternalRequestAsync<StartAIConversationResponse>(req, "StartAIConversation");
+        }
+
+        /// <summary>
+        /// Initiate AI conversation task, where the AI bot enters the TRTC room to engage in AI conversation with specified members in the room. This is suitable for scenarios such as intelligent customer service and AI language teachers. The TRTC AI conversation feature has built-in speech-to-text capabilities , allowing customers to flexibly specify third-party AI model (LLM) services and text-to-speech (TTS) services. For more [feature details](https://cloud.tencent.com/document/product/647/108901).
+        /// </summary>
+        /// <param name="req"><see cref="StartAIConversationRequest"/></param>
+        /// <returns><see cref="StartAIConversationResponse"/></returns>
+        public StartAIConversationResponse StartAIConversationSync(StartAIConversationRequest req)
+        {
+            return InternalRequestAsync<StartAIConversationResponse>(req, "StartAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Initiate the transcription bot. The backend will pull the stream through the bot to perform real-time speech recognition and deliver subtitles and transcription messages. The transcription bot supports two stream pulling modes, controlled by the `TranscriptionMode` field:
+        /// - Pull the stream of the entire room.
+        /// - Pull the stream of a specific user.
+        /// 
+        /// The server delivers subtitles and transcription messages in real-time through TRTC's custom messages, with `CmdId` fixed at 1. The client only needs to listen for the callback of custom messages. For example, see the [C++ callback](https://cloud.tencent.com/document/product/647/79637#4cd82f4edb24992a15a25187089e1565). Other clients, such as Android, Web, etc., can also be found at the same link.
+        /// </summary>
+        /// <param name="req"><see cref="StartAITranscriptionRequest"/></param>
+        /// <returns><see cref="StartAITranscriptionResponse"/></returns>
+        public Task<StartAITranscriptionResponse> StartAITranscription(StartAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<StartAITranscriptionResponse>(req, "StartAITranscription");
+        }
+
+        /// <summary>
+        /// Initiate the transcription bot. The backend will pull the stream through the bot to perform real-time speech recognition and deliver subtitles and transcription messages. The transcription bot supports two stream pulling modes, controlled by the `TranscriptionMode` field:
+        /// - Pull the stream of the entire room.
+        /// - Pull the stream of a specific user.
+        /// 
+        /// The server delivers subtitles and transcription messages in real-time through TRTC's custom messages, with `CmdId` fixed at 1. The client only needs to listen for the callback of custom messages. For example, see the [C++ callback](https://cloud.tencent.com/document/product/647/79637#4cd82f4edb24992a15a25187089e1565). Other clients, such as Android, Web, etc., can also be found at the same link.
+        /// </summary>
+        /// <param name="req"><see cref="StartAITranscriptionRequest"/></param>
+        /// <returns><see cref="StartAITranscriptionResponse"/></returns>
+        public StartAITranscriptionResponse StartAITranscriptionSync(StartAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<StartAITranscriptionResponse>(req, "StartAITranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// In a TRTC room, there may be multiple audio and video streams concurrently active. You can use the MixTranscoding API to notify Tencent Cloud server to mix multiple video screens from the same room or multiple rooms together, and specify the position of each screen, while mixing multiple audio streams together. The final result is a single audio and video stream, which can be used for recording and live viewing. It also supports pushing this mixed audio and video stream back to the TRTC room.
         /// 
         /// The Cloud API MixTranscoding feature includes three interfaces:
@@ -892,6 +1005,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// Stop AI Transcription task
+        /// </summary>
+        /// <param name="req"><see cref="StopAITranscriptionRequest"/></param>
+        /// <returns><see cref="StopAITranscriptionResponse"/></returns>
+        public Task<StopAITranscriptionResponse> StopAITranscription(StopAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<StopAITranscriptionResponse>(req, "StopAITranscription");
+        }
+
+        /// <summary>
+        /// Stop AI Transcription task
+        /// </summary>
+        /// <param name="req"><see cref="StopAITranscriptionRequest"/></param>
+        /// <returns><see cref="StopAITranscriptionResponse"/></returns>
+        public StopAITranscriptionResponse StopAITranscriptionSync(StopAITranscriptionRequest req)
+        {
+            return InternalRequestAsync<StopAITranscriptionResponse>(req, "StopAITranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to stop a relaying task.
         /// </summary>
         /// <param name="req"><see cref="StopPublishCdnStreamRequest"/></param>
@@ -930,6 +1064,27 @@ namespace TencentCloud.Trtc.V20190722
         public StopStreamIngestResponse StopStreamIngestSync(StopStreamIngestRequest req)
         {
             return InternalRequestAsync<StopStreamIngestResponse>(req, "StopStreamIngest")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Update AI conversation task parameters
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAIConversationRequest"/></param>
+        /// <returns><see cref="UpdateAIConversationResponse"/></returns>
+        public Task<UpdateAIConversationResponse> UpdateAIConversation(UpdateAIConversationRequest req)
+        {
+            return InternalRequestAsync<UpdateAIConversationResponse>(req, "UpdateAIConversation");
+        }
+
+        /// <summary>
+        /// Update AI conversation task parameters
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAIConversationRequest"/></param>
+        /// <returns><see cref="UpdateAIConversationResponse"/></returns>
+        public UpdateAIConversationResponse UpdateAIConversationSync(UpdateAIConversationRequest req)
+        {
+            return InternalRequestAsync<UpdateAIConversationResponse>(req, "UpdateAIConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

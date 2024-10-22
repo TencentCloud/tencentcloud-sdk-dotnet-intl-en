@@ -130,6 +130,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
+        /// <summary>
+        /// Image family, Note: This field may return empty
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
+
+        /// <summary>
+        /// Whether the image is deprecated
+        /// </summary>
+        [JsonProperty("ImageDeprecated")]
+        public bool? ImageDeprecated{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -153,6 +165,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+            this.SetParamSimple(map, prefix + "ImageDeprecated", this.ImageDeprecated);
         }
     }
 }

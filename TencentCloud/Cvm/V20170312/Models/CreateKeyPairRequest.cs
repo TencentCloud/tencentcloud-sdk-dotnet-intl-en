@@ -31,10 +31,11 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string KeyName{ get; set; }
 
         /// <summary>
-        /// The ID of the project to which the new key pair belongs.
-        /// You can query the project IDs in two ways:
-        /// <li>Query the project IDs in the project list.
-        /// <li>Call `DescribeProject` and look for `projectId` in the response.
+        /// ID of the project to which the created key pair belongs.
+        /// 
+        /// You can obtain a project ID in the following ways:
+        /// <li>Query the project ID through the project list.</li>
+        /// <li>Call the [DescribeProjects](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) API and obtain the `projectId` from the return information.</li>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

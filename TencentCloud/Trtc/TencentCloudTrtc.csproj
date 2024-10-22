@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1001</VersionPrefix>
+    <VersionPrefix>3.0.1002</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,16 +50,23 @@
     <Compile Include="V20190722\TrtcClient.cs" />
     <Compile Include="V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="V20190722\Models\AbnormalExperience.cs" />
+    <Compile Include="V20190722\Models\AgentConfig.cs" />
     <Compile Include="V20190722\Models\AgentParams.cs" />
     <Compile Include="V20190722\Models\AudioEncode.cs" />
     <Compile Include="V20190722\Models\AudioEncodeParams.cs" />
     <Compile Include="V20190722\Models\AudioParams.cs" />
     <Compile Include="V20190722\Models\CloudStorage.cs" />
     <Compile Include="V20190722\Models\CloudVod.cs" />
+    <Compile Include="V20190722\Models\ControlAIConversationRequest.cs" />
+    <Compile Include="V20190722\Models\ControlAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\CreateCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeAIConversationRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeAIConversationResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeAITranscriptionRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailInfoRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCloudRecordingRequest.cs" />
@@ -122,6 +129,7 @@
     <Compile Include="V20190722\Models\ModifyCloudRecordingRequest.cs" />
     <Compile Include="V20190722\Models\ModifyCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\QualityData.cs" />
+    <Compile Include="V20190722\Models\RecognizeConfig.cs" />
     <Compile Include="V20190722\Models\RecordParams.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />
@@ -129,17 +137,25 @@
     <Compile Include="V20190722\Models\RemoveUserResponse.cs" />
     <Compile Include="V20190722\Models\RoomState.cs" />
     <Compile Include="V20190722\Models\RowValues.cs" />
+    <Compile Include="V20190722\Models\STTConfig.cs" />
     <Compile Include="V20190722\Models\ScaleInfomation.cs" />
     <Compile Include="V20190722\Models\SeriesInfos.cs" />
+    <Compile Include="V20190722\Models\ServerPushText.cs" />
     <Compile Include="V20190722\Models\SetUserBlockedByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\SetUserBlockedByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\SetUserBlockedRequest.cs" />
     <Compile Include="V20190722\Models\SetUserBlockedResponse.cs" />
     <Compile Include="V20190722\Models\SingleSubscribeParams.cs" />
+    <Compile Include="V20190722\Models\StartAIConversationRequest.cs" />
+    <Compile Include="V20190722\Models\StartAIConversationResponse.cs" />
+    <Compile Include="V20190722\Models\StartAITranscriptionRequest.cs" />
+    <Compile Include="V20190722\Models\StartAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\StartPublishCdnStreamRequest.cs" />
     <Compile Include="V20190722\Models\StartPublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\StartStreamIngestRequest.cs" />
     <Compile Include="V20190722\Models\StartStreamIngestResponse.cs" />
+    <Compile Include="V20190722\Models\StopAITranscriptionRequest.cs" />
+    <Compile Include="V20190722\Models\StopAITranscriptionResponse.cs" />
     <Compile Include="V20190722\Models\StopPublishCdnStreamRequest.cs" />
     <Compile Include="V20190722\Models\StopPublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\StopStreamIngestRequest.cs" />
@@ -150,7 +166,10 @@
     <Compile Include="V20190722\Models\TRTCDataResult.cs" />
     <Compile Include="V20190722\Models\TencentVod.cs" />
     <Compile Include="V20190722\Models\TimeValue.cs" />
+    <Compile Include="V20190722\Models\TranscriptionParams.cs" />
     <Compile Include="V20190722\Models\TrtcUsage.cs" />
+    <Compile Include="V20190722\Models\UpdateAIConversationRequest.cs" />
+    <Compile Include="V20190722\Models\UpdateAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamRequest.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamResponse.cs" />
     <Compile Include="V20190722\Models\UpdateStreamIngestRequest.cs" />

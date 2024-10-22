@@ -86,7 +86,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public LocalDiskType[] LocalDiskTypeList{ get; set; }
 
         /// <summary>
-        /// Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+        /// Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -158,6 +158,17 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Frequency")]
         public string Frequency{ get; set; }
 
+        /// <summary>
+        /// Inventory status. Valid values:
+        /// <li>EnoughStock: Inventory is sufficient.</li> 
+        /// <li>NormalStock: Supply is guaranteed.</li>
+        /// <li>UnderStock: Inventory is about to sell out.</li> 
+        /// <li>WithoutStock: Inventory is already sold out.</li>
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("StatusCategory")]
+        public string StatusCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +197,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "GpuCount", this.GpuCount);
             this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
+            this.SetParamSimple(map, prefix + "StatusCategory", this.StatusCategory);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
+        /// The cluster ID, obtained through the [DescribeClusters](https://www.tencentcloud.com/document/api/457/32025) API.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

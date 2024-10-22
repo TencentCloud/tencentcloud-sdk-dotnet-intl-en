@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack
+        /// Type of a spread placement group. Valid values:<br><li>HOST: physical machine.</li><li>SW: switch.</li><li>RACK: rack.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

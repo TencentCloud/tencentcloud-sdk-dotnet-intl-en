@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1001";
+       private const string sdkVersion = "SDK_NET_3.0.1002";
 
         /// <summary>
         /// Client constructor.
@@ -167,6 +167,27 @@ namespace TencentCloud.Cvm.V20170312
         public ConfigureChcDeployVpcResponse ConfigureChcDeployVpcSync(ConfigureChcDeployVpcRequest req)
         {
             return InternalRequestAsync<ConfigureChcDeployVpcResponse>(req, "ConfigureChcDeployVpc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to switch the operating system of an instance with CentOS 7 or CentOS 8 as the source operating system.
+        /// </summary>
+        /// <param name="req"><see cref="ConvertOperatingSystemsRequest"/></param>
+        /// <returns><see cref="ConvertOperatingSystemsResponse"/></returns>
+        public Task<ConvertOperatingSystemsResponse> ConvertOperatingSystems(ConvertOperatingSystemsRequest req)
+        {
+            return InternalRequestAsync<ConvertOperatingSystemsResponse>(req, "ConvertOperatingSystems");
+        }
+
+        /// <summary>
+        /// This API is used to switch the operating system of an instance with CentOS 7 or CentOS 8 as the source operating system.
+        /// </summary>
+        /// <param name="req"><see cref="ConvertOperatingSystemsRequest"/></param>
+        /// <returns><see cref="ConvertOperatingSystemsResponse"/></returns>
+        public ConvertOperatingSystemsResponse ConvertOperatingSystemsSync(ConvertOperatingSystemsRequest req)
+        {
+            return InternalRequestAsync<ConvertOperatingSystemsResponse>(req, "ConvertOperatingSystems")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -491,6 +512,27 @@ namespace TencentCloud.Cvm.V20170312
         public DescribeHostsResponse DescribeHostsSync(DescribeHostsRequest req)
         {
             return InternalRequestAsync<DescribeHostsResponse>(req, "DescribeHosts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to view information about available images within an image family.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageFromFamilyRequest"/></param>
+        /// <returns><see cref="DescribeImageFromFamilyResponse"/></returns>
+        public Task<DescribeImageFromFamilyResponse> DescribeImageFromFamily(DescribeImageFromFamilyRequest req)
+        {
+            return InternalRequestAsync<DescribeImageFromFamilyResponse>(req, "DescribeImageFromFamily");
+        }
+
+        /// <summary>
+        /// This API is used to view information about available images within an image family.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageFromFamilyRequest"/></param>
+        /// <returns><see cref="DescribeImageFromFamilyResponse"/></returns>
+        public DescribeImageFromFamilyResponse DescribeImageFromFamilySync(DescribeImageFromFamilyRequest req)
+        {
+            return InternalRequestAsync<DescribeImageFromFamilyResponse>(req, "DescribeImageFromFamily")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -930,6 +972,48 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to enter the rescue mode.
+        /// </summary>
+        /// <param name="req"><see cref="EnterRescueModeRequest"/></param>
+        /// <returns><see cref="EnterRescueModeResponse"/></returns>
+        public Task<EnterRescueModeResponse> EnterRescueMode(EnterRescueModeRequest req)
+        {
+            return InternalRequestAsync<EnterRescueModeResponse>(req, "EnterRescueMode");
+        }
+
+        /// <summary>
+        /// This API is used to enter the rescue mode.
+        /// </summary>
+        /// <param name="req"><see cref="EnterRescueModeRequest"/></param>
+        /// <returns><see cref="EnterRescueModeResponse"/></returns>
+        public EnterRescueModeResponse EnterRescueModeSync(EnterRescueModeRequest req)
+        {
+            return InternalRequestAsync<EnterRescueModeResponse>(req, "EnterRescueMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to exit the rescue mode.
+        /// </summary>
+        /// <param name="req"><see cref="ExitRescueModeRequest"/></param>
+        /// <returns><see cref="ExitRescueModeResponse"/></returns>
+        public Task<ExitRescueModeResponse> ExitRescueMode(ExitRescueModeRequest req)
+        {
+            return InternalRequestAsync<ExitRescueModeResponse>(req, "ExitRescueMode");
+        }
+
+        /// <summary>
+        /// This API is used to exit the rescue mode.
+        /// </summary>
+        /// <param name="req"><see cref="ExitRescueModeRequest"/></param>
+        /// <returns><see cref="ExitRescueModeResponse"/></returns>
+        public ExitRescueModeResponse ExitRescueModeSync(ExitRescueModeRequest req)
+        {
+            return InternalRequestAsync<ExitRescueModeResponse>(req, "ExitRescueMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to export custom images to the specified COS bucket.
         /// </summary>
         /// <param name="req"><see cref="ExportImagesRequest"/></param>
@@ -951,7 +1035,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// The API is used to import an image. The image imported can be used to create instances. Currently, this API can import images in formats like RAW, VHD, QCOW2, and VMDK.
+        /// This API is used to import an image. The image imported can be used to create instances. Currently, this API supports RAW, VHD, QCOW2, and VMDK image formats.
         /// </summary>
         /// <param name="req"><see cref="ImportImageRequest"/></param>
         /// <returns><see cref="ImportImageResponse"/></returns>
@@ -961,7 +1045,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// The API is used to import an image. The image imported can be used to create instances. Currently, this API can import images in formats like RAW, VHD, QCOW2, and VMDK.
+        /// This API is used to import an image. The image imported can be used to create instances. Currently, this API supports RAW, VHD, QCOW2, and VMDK image formats.
         /// </summary>
         /// <param name="req"><see cref="ImportImageRequest"/></param>
         /// <returns><see cref="ImportImageResponse"/></returns>
@@ -1022,11 +1106,11 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the price for reinstalling an instance.
+        /// This API is used to inquire about the price for reinstalling an instance.
         /// 
-        /// * If you have specified the `ImageId` parameter, the price query is performed with the specified image. Otherwise, the image used by the current instance is used.
-        /// * You can only query the price for reinstallation caused by switching between Linux and Windows OS. And the [system disk type](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#SystemDisk) of the instance must be `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
-        /// * Currently, this API only supports instances in Mainland China regions.
+        /// * If you have specified the parameter `ImageId`, inquire about the price for reinstallation by using the specified image. Otherwise, inquire about the price for reinstallation based on the image currently used by the instance.
+        /// * Currently, only instances with a [system disk type](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#SystemDisk) of `CLOUD_BSSD`, `CLOUD_PREMIUM`, or `CLOUD_SSD` are supported for inquiring about the price for reinstallation caused by switching between `Linux` and `Windows` operating systems through this API.
+        /// * Currently, instances in regions outside the Chinese mainland are not supported for inquiring about the price for reinstallation caused by switching between `Linux` and `Windows` operating systems through this API.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceResetInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceResetInstanceResponse"/></returns>
@@ -1036,11 +1120,11 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the price for reinstalling an instance.
+        /// This API is used to inquire about the price for reinstalling an instance.
         /// 
-        /// * If you have specified the `ImageId` parameter, the price query is performed with the specified image. Otherwise, the image used by the current instance is used.
-        /// * You can only query the price for reinstallation caused by switching between Linux and Windows OS. And the [system disk type](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#SystemDisk) of the instance must be `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
-        /// * Currently, this API only supports instances in Mainland China regions.
+        /// * If you have specified the parameter `ImageId`, inquire about the price for reinstallation by using the specified image. Otherwise, inquire about the price for reinstallation based on the image currently used by the instance.
+        /// * Currently, only instances with a [system disk type](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#SystemDisk) of `CLOUD_BSSD`, `CLOUD_PREMIUM`, or `CLOUD_SSD` are supported for inquiring about the price for reinstallation caused by switching between `Linux` and `Windows` operating systems through this API.
+        /// * Currently, instances in regions outside the Chinese mainland are not supported for inquiring about the price for reinstallation caused by switching between `Linux` and `Windows` operating systems through this API.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceResetInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceResetInstanceResponse"/></returns>
@@ -1243,10 +1327,10 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// This API is used to modify image sharing information.
         /// 
-        /// * The accounts with which an image is shared can use the shared image to create instances.
-        /// * Each custom image can be shared with up to 50 accounts.
-        /// * You can use a shared image to create instances, but you cannot change its name and description.
-        /// * If an image is shared with another account, the shared image will be in the same region as the original image.
+        /// * The account with shared image access can use the image to create instances.
+        /// * Each custom image can be shared with a maximum of 500 accounts.
+        /// * Shared images cannot have their names or description changed. They can only be used to create instances.
+        /// * Sharing is only supported within the same region as the recipient's account.
         /// </summary>
         /// <param name="req"><see cref="ModifyImageSharePermissionRequest"/></param>
         /// <returns><see cref="ModifyImageSharePermissionResponse"/></returns>
@@ -1258,10 +1342,10 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// This API is used to modify image sharing information.
         /// 
-        /// * The accounts with which an image is shared can use the shared image to create instances.
-        /// * Each custom image can be shared with up to 50 accounts.
-        /// * You can use a shared image to create instances, but you cannot change its name and description.
-        /// * If an image is shared with another account, the shared image will be in the same region as the original image.
+        /// * The account with shared image access can use the image to create instances.
+        /// * Each custom image can be shared with a maximum of 500 accounts.
+        /// * Shared images cannot have their names or description changed. They can only be used to create instances.
+        /// * Sharing is only supported within the same region as the recipient's account.
         /// </summary>
         /// <param name="req"><see cref="ModifyImageSharePermissionRequest"/></param>
         /// <returns><see cref="ModifyImageSharePermissionResponse"/></returns>
@@ -1363,11 +1447,13 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the attributes of key pairs.
+        /// This API is used to modify attributes of a key pair.
         /// 
-        /// * This API modifies the name and description of the key pair identified by the key pair ID.
-        /// * The name of the key pair must be unique.
-        /// * Key pair ID is the unique identifier of a key pair and cannot be modified.
+        /// * Modify the name and description information of the key pair specified by the key pair ID.
+        /// * The key pair name should not be the same as the name of an existing key pair.
+        /// * The key pair ID is the unique identifier of a key pair and cannot be modified.
+        /// 
+        /// * Either the key pair name or description information should be specified, and both can also be specified simultaneously.
         /// </summary>
         /// <param name="req"><see cref="ModifyKeyPairAttributeRequest"/></param>
         /// <returns><see cref="ModifyKeyPairAttributeResponse"/></returns>
@@ -1377,11 +1463,13 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the attributes of key pairs.
+        /// This API is used to modify attributes of a key pair.
         /// 
-        /// * This API modifies the name and description of the key pair identified by the key pair ID.
-        /// * The name of the key pair must be unique.
-        /// * Key pair ID is the unique identifier of a key pair and cannot be modified.
+        /// * Modify the name and description information of the key pair specified by the key pair ID.
+        /// * The key pair name should not be the same as the name of an existing key pair.
+        /// * The key pair ID is the unique identifier of a key pair and cannot be modified.
+        /// 
+        /// * Either the key pair name or description information should be specified, and both can also be specified simultaneously.
         /// </summary>
         /// <param name="req"><see cref="ModifyKeyPairAttributeRequest"/></param>
         /// <returns><see cref="ModifyKeyPairAttributeResponse"/></returns>
@@ -1507,14 +1595,15 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to reinstall the operating system of the specified instance.
+        /// This API (ResetInstance) is used to reinstall the operating system on a specified instance.
         /// 
-        /// * If you specify an `ImageId`, the specified image is used. Otherwise, the image used by the current instance is used.
-        /// * The system disk will be formatted and reset. Therefore, make sure that no important files are stored on the system disk.
-        /// * If the operating system switches between `Linux` and `Windows`, the system disk `ID` of the instance will change, and the snapshots that are associated with the system disk can no longer be used to roll back and restore data.
-        /// * If no password is specified, you will get a random password via internal message.
-        /// * You can only use this API to switch the operating system between `Linux` and `Windows` for instances whose [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#SystemDisk) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
-        /// * Currently, this API only supports instances in Mainland China regions.
+        /// 
+        /// 
+        /// * If you have specified the parameter `ImageId`, use the specified image for reinstallation. Otherwise, perform reinstallation based on the image currently used by the instance.
+        /// * The system disk will be formatted and reset. Ensure that there are no important files in the system disk.
+        /// * If you do not specify a password, a random password will be sent via Message Center.
+        /// * Currently, only instances with a [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#SystemDisk) of `CLOUD_BASIC`, `CLOUD_PREMIUM`, `CLOUD_SSD`, or `CLOUD_BSSD` are supported for implementing operating system switching through this API.
+        /// * You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
         /// </summary>
         /// <param name="req"><see cref="ResetInstanceRequest"/></param>
         /// <returns><see cref="ResetInstanceResponse"/></returns>
@@ -1524,14 +1613,15 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to reinstall the operating system of the specified instance.
+        /// This API (ResetInstance) is used to reinstall the operating system on a specified instance.
         /// 
-        /// * If you specify an `ImageId`, the specified image is used. Otherwise, the image used by the current instance is used.
-        /// * The system disk will be formatted and reset. Therefore, make sure that no important files are stored on the system disk.
-        /// * If the operating system switches between `Linux` and `Windows`, the system disk `ID` of the instance will change, and the snapshots that are associated with the system disk can no longer be used to roll back and restore data.
-        /// * If no password is specified, you will get a random password via internal message.
-        /// * You can only use this API to switch the operating system between `Linux` and `Windows` for instances whose [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#SystemDisk) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
-        /// * Currently, this API only supports instances in Mainland China regions.
+        /// 
+        /// 
+        /// * If you have specified the parameter `ImageId`, use the specified image for reinstallation. Otherwise, perform reinstallation based on the image currently used by the instance.
+        /// * The system disk will be formatted and reset. Ensure that there are no important files in the system disk.
+        /// * If you do not specify a password, a random password will be sent via Message Center.
+        /// * Currently, only instances with a [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#SystemDisk) of `CLOUD_BASIC`, `CLOUD_PREMIUM`, `CLOUD_SSD`, or `CLOUD_BSSD` are supported for implementing operating system switching through this API.
+        /// * You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
         /// </summary>
         /// <param name="req"><see cref="ResetInstanceRequest"/></param>
         /// <returns><see cref="ResetInstanceResponse"/></returns>
@@ -1745,11 +1835,11 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to sync a custom image to other regions.
+        /// This API is used to synchronize custom images to other regions.
         /// 
-        /// * Each API call syncs a single image.
-        /// * This API supports syncing an image to multiple regions.
-        /// * Each account can have up to 10 custom images in each region. 
+        /// * This API only supports synchronizing one image per call.
+        /// * This API supports multiple synchronization regions.
+        /// * A single account can have a maximum of 500 custom images in each region.
         /// </summary>
         /// <param name="req"><see cref="SyncImagesRequest"/></param>
         /// <returns><see cref="SyncImagesResponse"/></returns>
@@ -1759,11 +1849,11 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to sync a custom image to other regions.
+        /// This API is used to synchronize custom images to other regions.
         /// 
-        /// * Each API call syncs a single image.
-        /// * This API supports syncing an image to multiple regions.
-        /// * Each account can have up to 10 custom images in each region. 
+        /// * This API only supports synchronizing one image per call.
+        /// * This API supports multiple synchronization regions.
+        /// * A single account can have a maximum of 500 custom images in each region.
         /// </summary>
         /// <param name="req"><see cref="SyncImagesRequest"/></param>
         /// <returns><see cref="SyncImagesResponse"/></returns>

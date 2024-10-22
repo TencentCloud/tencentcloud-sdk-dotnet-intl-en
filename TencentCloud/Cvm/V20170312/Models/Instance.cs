@@ -231,6 +231,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] RdmaIpAddresses{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
+        /// <summary>
         /// The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
         /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
@@ -314,6 +320,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
             this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);

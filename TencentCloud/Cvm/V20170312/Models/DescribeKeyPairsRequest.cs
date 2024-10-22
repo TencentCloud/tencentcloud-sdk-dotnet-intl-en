@@ -39,7 +39,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Offset; default value: 0. For more information on `Offset`, see the corresponding sections in API [Introduction](https://intl.cloud.tencent.com/document/product/377). Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
+        /// Offset. The default value is `0`. For more information on `Offset`, see the relevant section in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
