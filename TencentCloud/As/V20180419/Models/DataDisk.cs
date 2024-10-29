@@ -25,8 +25,16 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Data disk type. For restrictions on data disk type, see [Cloud Block Storage Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
+        /// <li>LOCAL_BASIC: Local hard disk.</li>
+        /// <li>LOCAL_SSD: Local SSD.</li>
+        /// <li>CLOUD_BASIC: General cloud disk.</li>
+        /// <li>CLOUD_PREMIUM: Premium cloud disk.</li>
+        /// <li>CLOUD_SSD: Cloud SSD.</li>
+        /// <li>CLOUD_HSSD: Enhanced SSD.</li>
+        /// <li>CLOUD_TSSD: Ultra SSD.</li>
+        /// The default value is consistent with the system disk type (SystemDisk.DiskType).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -46,15 +54,19 @@ namespace TencentCloud.As.V20180419.Models
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the data disk is terminated along with the instance. Valid values:
+        /// <li>TRUE: When the instance is terminated, the data disk is also terminated. This option is only supported for hourly postpaid cloud disks.</li>
+        /// <li>FALSE: When the instance is terminated, the data disk is retained.</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
-        /// Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the data disk is encrypted. Valid values:
+        /// <li>TRUE: Encrypted.</li>
+        /// <li>FALSE: Not encrypted.</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }
@@ -66,6 +78,15 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public ulong? ThroughputPerformance{ get; set; }
+
+        /// <summary>
+        /// Burst performance: Whether to enable burst performance. The default value is false.
+        /// 
+        /// Note: This feature is in beta test and requires a ticket to be submitted for usage.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BurstPerformance")]
+        public bool? BurstPerformance{ get; set; }
 
 
         /// <summary>
@@ -79,6 +100,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
             this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+            this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
         }
     }
 }

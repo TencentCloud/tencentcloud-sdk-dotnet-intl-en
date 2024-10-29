@@ -97,6 +97,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("VideoResolution")]
         public ulong? VideoResolution{ get; set; }
 
+        /// <summary>
+        /// Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+        /// </summary>
+        [JsonProperty("EndListTag")]
+        public long? EndListTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "PartialSegmentPlaySite", this.PartialSegmentPlaySite);
             this.SetParamSimple(map, prefix + "StreamOrder", this.StreamOrder);
             this.SetParamSimple(map, prefix + "VideoResolution", this.VideoResolution);
+            this.SetParamSimple(map, prefix + "EndListTag", this.EndListTag);
         }
     }
 }

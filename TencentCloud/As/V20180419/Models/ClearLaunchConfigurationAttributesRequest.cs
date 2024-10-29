@@ -58,6 +58,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ClearDisasterRecoverGroupIds")]
         public bool? ClearDisasterRecoverGroupIds{ get; set; }
 
+        /// <summary>
+        /// Whether to clear the instance tag list. This parameter is optional, and its default value is false.
+        /// If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+        /// </summary>
+        [JsonProperty("ClearInstanceTags")]
+        public bool? ClearInstanceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
             this.SetParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
             this.SetParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
+            this.SetParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
         }
     }
 }

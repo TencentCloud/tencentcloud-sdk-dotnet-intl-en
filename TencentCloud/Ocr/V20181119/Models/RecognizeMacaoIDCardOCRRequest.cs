@@ -33,12 +33,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
+        /// The URL address of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. Storing images in Tencent Cloud URLs can ensure higher download speed and stability. It is recommended that images be stored in Tencent Cloud. The URL speed and stability of non-Tencent cloud storage may be affected to a certain extent.
+        /// </summary>
+        [JsonProperty("BackImageUrl")]
+        public string BackImageUrl{ get; set; }
+
+        /// <summary>
         /// Base64 value of the image.Supported image formats: PNG, JPG, JPEG. Not support GIF yet.
         /// Supported image size: The downloaded image should not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds.
         /// One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
+
+        /// <summary>
+        /// Base64 value of the image on the back of the card. Supported image formats: PNG, JPG, JPEG. The GIF format is not supported yet. Supported image size: The downloaded image does not exceed 7M after Base64 encoding. The image download takes no more than 3 seconds. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
+        /// </summary>
+        [JsonProperty("BackImageBase64")]
+        public string BackImageBase64{ get; set; }
 
         /// <summary>
         /// The following optional fields are of string type and are empty by default: 
@@ -54,7 +66,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "BackImageUrl", this.BackImageUrl);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamSimple(map, prefix + "BackImageBase64", this.BackImageBase64);
             this.SetParamSimple(map, prefix + "Config", this.Config);
         }
     }

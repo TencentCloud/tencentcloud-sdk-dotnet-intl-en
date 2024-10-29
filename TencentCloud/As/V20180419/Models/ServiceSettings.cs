@@ -45,6 +45,16 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ReplaceLoadBalancerUnhealthy")]
         public bool? ReplaceLoadBalancerUnhealthy{ get; set; }
 
+        /// <summary>
+        /// Replace mode of unhealthy replacement service. Valid values:
+        /// RECREATE: Rebuild an instance to replace the original unhealthy instance.
+        /// RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+        /// Default value: RECREATE.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReplaceMode")]
+        public string ReplaceMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +64,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
             this.SetParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
             this.SetParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
+            this.SetParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
         }
     }
 }

@@ -120,12 +120,12 @@ namespace TencentCloud.As.V20180419.Models
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// Instance type verification policy. Value range: ALL, ANY. Default value: ANY.
-        /// <br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-        /// <br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
+        /// InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
+        /// <li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+        /// <li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
         /// 
-        /// Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-        /// If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+        /// Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+        /// If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
         /// </summary>
         [JsonProperty("InstanceTypesCheckPolicy")]
         public string InstanceTypesCheckPolicy{ get; set; }
@@ -162,9 +162,9 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-        /// <br><li>ORIGINAL: uses the configured cloud disk type
-        /// <br><li>AUTOMATIC: automatically chooses an available cloud disk type
+        /// Cloud disk type selection policy, whose default value is ORIGINAL. Valid values:
+        /// <li>ORIGINAL: Use the set cloud disk type.</li>
+        /// <li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
         /// </summary>
         [JsonProperty("DiskTypePolicy")]
         public string DiskTypePolicy{ get; set; }
@@ -187,6 +187,12 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
+
+        /// <summary>
+        /// Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
 
 
         /// <summary>
@@ -219,6 +225,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         }
     }
 }

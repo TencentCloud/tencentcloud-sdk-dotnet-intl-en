@@ -24,12 +24,47 @@ namespace TencentCloud.Tcss.V20201101.Models
     public class DescribeAssetImageRegistryRegistryListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Number to return, default is 10, maximum is 100
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// Offset, the default is 0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+        /// </summary>
+        [JsonProperty("Filters")]
+        public AssetFilters[] Filters{ get; set; }
+
+        /// <summary>
+        /// Sort field
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
+        /// <summary>
+        /// Sort by asc, desc
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

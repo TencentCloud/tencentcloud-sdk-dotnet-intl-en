@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1003";
+       private const string sdkVersion = "SDK_NET_3.0.1004";
 
         /// <summary>
         /// Client constructor.
@@ -1001,6 +1001,27 @@ namespace TencentCloud.Trtc.V20190722
         public StartStreamIngestResponse StartStreamIngestSync(StartStreamIngestRequest req)
         {
             return InternalRequestAsync<StartStreamIngestResponse>(req, "StartStreamIngest")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Stop AI conversation task
+        /// </summary>
+        /// <param name="req"><see cref="StopAIConversationRequest"/></param>
+        /// <returns><see cref="StopAIConversationResponse"/></returns>
+        public Task<StopAIConversationResponse> StopAIConversation(StopAIConversationRequest req)
+        {
+            return InternalRequestAsync<StopAIConversationResponse>(req, "StopAIConversation");
+        }
+
+        /// <summary>
+        /// Stop AI conversation task
+        /// </summary>
+        /// <param name="req"><see cref="StopAIConversationRequest"/></param>
+        /// <returns><see cref="StopAIConversationResponse"/></returns>
+        public StopAIConversationResponse StopAIConversationSync(StopAIConversationRequest req)
+        {
+            return InternalRequestAsync<StopAIConversationResponse>(req, "StopAIConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

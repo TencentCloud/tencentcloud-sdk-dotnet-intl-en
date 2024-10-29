@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1003";
+       private const string sdkVersion = "SDK_NET_3.0.1004";
 
         /// <summary>
         /// Client constructor.
@@ -978,6 +978,27 @@ namespace TencentCloud.Antiddos.V20200309
         public DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThresholdSync(DescribeDefaultAlarmThresholdRequest req)
         {
             return InternalRequestAsync<DescribeDefaultAlarmThresholdResponse>(req, "DescribeDefaultAlarmThreshold")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpBlockListRequest"/></param>
+        /// <returns><see cref="DescribeIpBlockListResponse"/></returns>
+        public Task<DescribeIpBlockListResponse> DescribeIpBlockList(DescribeIpBlockListRequest req)
+        {
+            return InternalRequestAsync<DescribeIpBlockListResponse>(req, "DescribeIpBlockList");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpBlockListRequest"/></param>
+        /// <returns><see cref="DescribeIpBlockListResponse"/></returns>
+        public DescribeIpBlockListResponse DescribeIpBlockListSync(DescribeIpBlockListRequest req)
+        {
+            return InternalRequestAsync<DescribeIpBlockListResponse>(req, "DescribeIpBlockList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

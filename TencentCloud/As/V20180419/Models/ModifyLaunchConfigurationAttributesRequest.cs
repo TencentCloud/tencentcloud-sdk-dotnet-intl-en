@@ -44,12 +44,11 @@ namespace TencentCloud.As.V20180419.Models
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// Instance type verification policy which works when InstanceTypes is actually modified. Value range: ALL, ANY. Default value: ANY.
-        /// <br><li> ALL: The verification will success only if all instance types (InstanceType) are available; otherwise, an error will be reported.
-        /// <br><li> ANY: The verification will success if any instance type (InstanceType) is available; otherwise, an error will be reported.
-        /// 
-        /// Common reasons why an instance type is unavailable include stock-out of the instance type or the corresponding cloud disk.
-        /// If a model in InstanceTypes does not exist or has been discontinued, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
+        /// InstanceType verification policy, which is effective when actual modification is made to InstanceTypes. Valid values include ALL and ANY and the default value is ANY.
+        /// <li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
+        /// <li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+        /// Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+        /// If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
         /// </summary>
         [JsonProperty("InstanceTypesCheckPolicy")]
         public string InstanceTypesCheckPolicy{ get; set; }
@@ -107,9 +106,9 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
         /// <summary>
-        /// Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
-        /// <br><li>ORIGINAL: uses the configured cloud disk type
-        /// <br><li>AUTOMATIC: automatically chooses an available cloud disk type
+        /// Cloud disk type selection policy. Valid values:
+        /// <li>ORIGINAL: Use the set cloud disk type.</li>
+        /// <li>AUTOMATIC: Automatically select the currently available cloud disk type.</li>
         /// </summary>
         [JsonProperty("DiskTypePolicy")]
         public string DiskTypePolicy{ get; set; }
@@ -181,6 +180,19 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
 
+        /// <summary>
+        /// Instance tag list. By specifying this parameter, the instances added through scale-out can be bound to the tag. Up to 10 Tags can be specified.
+        /// This parameter will overwrite the original instance tag list. To add new tags, you need to pass the new tags along with the original tags.
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public InstanceTag[] InstanceTags{ get; set; }
+
+        /// <summary>
+        /// Image family name.
+        /// </summary>
+        [JsonProperty("ImageFamily")]
+        public string ImageFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -209,6 +221,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+            this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         }
     }
 }

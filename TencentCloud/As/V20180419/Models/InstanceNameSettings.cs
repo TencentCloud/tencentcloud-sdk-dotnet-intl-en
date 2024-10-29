@@ -40,6 +40,15 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceNameStyle")]
         public string InstanceNameStyle{ get; set; }
 
+        /// <summary>
+        /// CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
+        /// 
+        /// Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceNameSuffix")]
+        public string InstanceNameSuffix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +57,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "InstanceNameStyle", this.InstanceNameStyle);
+            this.SetParamSimple(map, prefix + "InstanceNameSuffix", this.InstanceNameSuffix);
         }
     }
 }

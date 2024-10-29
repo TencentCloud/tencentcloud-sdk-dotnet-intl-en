@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// Whether binding succeeded.
+        /// Whether the binding operation is successful.
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }
