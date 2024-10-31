@@ -50,10 +50,17 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SubtitleFormat{ get; set; }
 
         /// <summary>
-        /// Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note：</font> If it fills in an empty string or leave this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+        /// Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
         /// </summary>
         [JsonProperty("SrcLanguage")]
         public string SrcLanguage{ get; set; }
+
+        /// <summary>
+        /// Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
+        /// <font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
+        /// </summary>
+        [JsonProperty("SubtitleName")]
+        public string SubtitleName{ get; set; }
 
 
         /// <summary>
@@ -65,6 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "SubtitleFormats.", this.SubtitleFormats);
             this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
             this.SetParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
+            this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
         }
     }
 }

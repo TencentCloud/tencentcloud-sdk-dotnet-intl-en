@@ -25,6 +25,26 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
+        /// <font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// Media asset subtitle name, used for player display, only valid when Format is vtt.
+        /// <font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// Subtitle Language.
+        /// </summary>
+        [JsonProperty("Language")]
+        public string Language{ get; set; }
+
+        /// <summary>
         /// The format of the subtitle files. Valid values:
         /// <li>vtt</li>
         /// <li>srt</li>
@@ -44,6 +64,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Url", this.Url);
         }

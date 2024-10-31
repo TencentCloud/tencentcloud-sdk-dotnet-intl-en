@@ -38,10 +38,19 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Subtitle language. Common values:
-        /// <li>`cn`: Chinese</li>
+        /// <li>`zh`: Chinese</li>
+        /// <li>`en`: English</li>
         /// <li>`ja`: Japanese</li>
-        /// <li>`en-US`: English</li>
-        /// For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+        /// <li>`ko`: Korean</li>
+        /// <li>`vi`: Vietnamese</li>
+        /// <li>`ms`: Malay</li>
+        /// <li>`th`: Thai</li>
+        /// <li>`pt`: Portuguese</li>
+        /// <li>`tr`: Turkish</li>
+        /// <li>`ar`: Arabic</li>
+        /// <li>`es`: Spanish</li>
+        /// <li>`hi`: Hindi</li>
+        /// <li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
@@ -59,6 +68,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// Subtitle source, values:
+        /// <li>UserUploaded: user uploaded;</li>
+        /// <li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +87,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

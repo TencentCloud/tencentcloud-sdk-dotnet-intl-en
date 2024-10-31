@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1004";
+       private const string sdkVersion = "SDK_NET_3.0.1005";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeAccountBalanceResponse DescribeAccountBalanceSync(DescribeAccountBalanceRequest req)
         {
             return InternalRequestAsync<DescribeAccountBalanceResponse>(req, "DescribeAccountBalance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillAdjustInfoRequest"/></param>
+        /// <returns><see cref="DescribeBillAdjustInfoResponse"/></returns>
+        public Task<DescribeBillAdjustInfoResponse> DescribeBillAdjustInfo(DescribeBillAdjustInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeBillAdjustInfoResponse>(req, "DescribeBillAdjustInfo");
+        }
+
+        /// <summary>
+        /// This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBillAdjustInfoRequest"/></param>
+        /// <returns><see cref="DescribeBillAdjustInfoResponse"/></returns>
+        public DescribeBillAdjustInfoResponse DescribeBillAdjustInfoSync(DescribeBillAdjustInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeBillAdjustInfoResponse>(req, "DescribeBillAdjustInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

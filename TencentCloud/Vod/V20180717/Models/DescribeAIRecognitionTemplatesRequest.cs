@@ -37,6 +37,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public long?[] Definitions{ get; set; }
 
         /// <summary>
+        /// Template type filter. Optional values:
+        /// <li>Preset: preset template;</li>
+        /// <li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
@@ -56,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

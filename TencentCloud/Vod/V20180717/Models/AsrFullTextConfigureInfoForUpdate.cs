@@ -53,6 +53,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SrcLanguage")]
         public string SrcLanguage{ get; set; }
 
+        /// <summary>
+        /// Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+        /// </summary>
+        [JsonProperty("SubtitleName")]
+        public string SubtitleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "SubtitleFormatsOperation.", this.SubtitleFormatsOperation);
             this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
             this.SetParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
+            this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
         }
     }
 }

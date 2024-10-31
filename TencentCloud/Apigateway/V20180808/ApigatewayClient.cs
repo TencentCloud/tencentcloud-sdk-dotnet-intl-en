@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1004";
+       private const string sdkVersion = "SDK_NET_3.0.1005";
 
         /// <summary>
         /// Client constructor.
@@ -873,7 +873,6 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to query the information of one or more API keys.
-        ///  
         /// </summary>
         /// <param name="req"><see cref="DescribeApiKeysStatusRequest"/></param>
         /// <returns><see cref="DescribeApiKeysStatusResponse"/></returns>
@@ -884,7 +883,6 @@ namespace TencentCloud.Apigateway.V20180808
 
         /// <summary>
         /// This API is used to query the information of one or more API keys.
-        ///  
         /// </summary>
         /// <param name="req"><see cref="DescribeApiKeysStatusRequest"/></param>
         /// <returns><see cref="DescribeApiKeysStatusResponse"/></returns>

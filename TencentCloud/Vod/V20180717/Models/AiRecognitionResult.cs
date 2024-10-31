@@ -30,6 +30,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>AsrWordsRecognition: speech keyword recognition,</li>
         /// <li>OcrWordsRecognition: text keyword recognition,</li>
         /// <li>AsrFullTextRecognition: full speech recognition,</li>
+        /// <li>AsrTranslateRecognition: voice translation recognition,</li>
         /// <li>OcrFullTextRecognition: full text recognition,</li>
         /// <li>HeadTailRecognition: video opening and ending credits recognition,</li>
         /// <li>ObjectRecognition: object recognition.</li>
@@ -78,6 +79,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
+        /// Voice translation result, valid when Type is AsrTranslateRecognition.
+        /// </summary>
+        [JsonProperty("AsrTranslateTask")]
+        public AiRecognitionTaskAsrTranslateResult AsrTranslateTask{ get; set; }
+
+        /// <summary>
         /// Text keyword recognition result, which is valid when `Type` is
         ///  `OcrWordsRecognition`.
         /// Note: this field may return null, indicating that no valid values can be obtained.
@@ -113,6 +120,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "FaceTask.", this.FaceTask);
             this.SetParamObj(map, prefix + "AsrWordsTask.", this.AsrWordsTask);
             this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
+            this.SetParamObj(map, prefix + "AsrTranslateTask.", this.AsrTranslateTask);
             this.SetParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
             this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
             this.SetParamObj(map, prefix + "ObjectTask.", this.ObjectTask);

@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1004";
+       private const string sdkVersion = "SDK_NET_3.0.1005";
 
         /// <summary>
         /// Client constructor.
@@ -4429,6 +4429,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyAddressesBandwidthResponse ModifyAddressesBandwidthSync(ModifyAddressesBandwidthRequest req)
         {
             return InternalRequestAsync<ModifyAddressesBandwidthResponse>(req, "ModifyAddressesBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to adjust the renewal flag for the monthly subscription EIP.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyAddressesRenewFlagResponse"/></returns>
+        public Task<ModifyAddressesRenewFlagResponse> ModifyAddressesRenewFlag(ModifyAddressesRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyAddressesRenewFlagResponse>(req, "ModifyAddressesRenewFlag");
+        }
+
+        /// <summary>
+        /// This API is used to adjust the renewal flag for the monthly subscription EIP.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyAddressesRenewFlagResponse"/></returns>
+        public ModifyAddressesRenewFlagResponse ModifyAddressesRenewFlagSync(ModifyAddressesRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyAddressesRenewFlagResponse>(req, "ModifyAddressesRenewFlag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

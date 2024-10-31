@@ -43,7 +43,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// <summary>
         /// Text description.
         /// It is used to increase the possibility that the generation result contains the described content.
-        /// Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+        /// A maximum of 256 UTF-8 characters are supported.
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// <summary>
         /// Negative text description.
         /// It is used to reduce the possibility that the generation result contains the described content, but such content cannot be completely avoided.
-        /// Chinese is recommended. A maximum of 256 UTF-8 characters are supported.
+        /// English is recommended. A maximum of 256 UTF-8 characters are supported.
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Aiart.V20221229.Models
         /// Switch indicating whether to  enhance image clarity. Default value: 0.
         /// 1: on
         /// 0: off
-        /// If the switch is turned on, the image clarity will be enhanced, but the generation time will increase.
+        /// If the switch is turned on, the image clarity will be enhanced and the generation time will increase.
         /// </summary>
         [JsonProperty("EnhanceImage")]
         public long? EnhanceImage{ get; set; }
