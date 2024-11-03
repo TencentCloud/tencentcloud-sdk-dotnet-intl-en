@@ -117,6 +117,21 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("AutoDowngrade")]
         public long? AutoDowngrade{ get; set; }
 
+        /// <summary>
+        /// This interface is used to control th action sequences.
+        /// Action types are as follows:
+        /// "blink"
+        /// "mouth"
+        /// "nod"
+        /// "shake"
+        /// You can choose 1-2 actions out of the four.
+        /// Single action example: "blink"
+        /// Multiple action example: "blink,mouth"
+        /// The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+        /// </summary>
+        [JsonProperty("ActionList")]
+        public string ActionList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +149,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ThemeColor", this.ThemeColor);
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
+            this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
         }
     }
 }
