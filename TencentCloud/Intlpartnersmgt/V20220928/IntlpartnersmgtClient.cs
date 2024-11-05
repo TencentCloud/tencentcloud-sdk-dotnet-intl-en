@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1007";
+       private const string sdkVersion = "SDK_NET_3.0.1008";
 
         /// <summary>
         /// Client constructor.
@@ -583,6 +583,27 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public QueryVoucherPoolResponse QueryVoucherPoolSync(QueryVoucherPoolRequest req)
         {
             return InternalRequestAsync<QueryVoucherPoolResponse>(req, "QueryVoucherPool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to send a verification code for account registration.
+        /// </summary>
+        /// <param name="req"><see cref="SendVerifyCodeRequest"/></param>
+        /// <returns><see cref="SendVerifyCodeResponse"/></returns>
+        public Task<SendVerifyCodeResponse> SendVerifyCode(SendVerifyCodeRequest req)
+        {
+            return InternalRequestAsync<SendVerifyCodeResponse>(req, "SendVerifyCode");
+        }
+
+        /// <summary>
+        /// This API is used to send a verification code for account registration.
+        /// </summary>
+        /// <param name="req"><see cref="SendVerifyCodeRequest"/></param>
+        /// <returns><see cref="SendVerifyCodeResponse"/></returns>
+        public SendVerifyCodeResponse SendVerifyCodeSync(SendVerifyCodeRequest req)
+        {
+            return InternalRequestAsync<SendVerifyCodeResponse>(req, "SendVerifyCode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

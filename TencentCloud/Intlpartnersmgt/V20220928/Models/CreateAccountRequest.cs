@@ -52,8 +52,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string ConfirmPassword{ get; set; }
 
         /// <summary>
-        /// Customer mobile number, which should be valid and correct.
-        /// A global mobile number within 1-32 digits is allowed, such as 18888888888.
+        /// Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
         /// </summary>
         [JsonProperty("PhoneNum")]
         public string PhoneNum{ get; set; }
@@ -76,6 +75,12 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         [JsonProperty("Extended")]
         public string Extended{ get; set; }
 
+        /// <summary>
+        /// Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+        /// </summary>
+        [JsonProperty("VerifyCode")]
+        public string VerifyCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +95,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "CountryCode", this.CountryCode);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Extended", this.Extended);
+            this.SetParamSimple(map, prefix + "VerifyCode", this.VerifyCode);
         }
     }
 }

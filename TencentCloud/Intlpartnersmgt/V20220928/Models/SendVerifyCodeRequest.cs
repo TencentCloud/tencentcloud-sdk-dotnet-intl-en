@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateApiKeyRequest : AbstractModel
+    public class SendVerifyCodeRequest : AbstractModel
     {
         
         /// <summary>
-        /// ID of the key to be changed.
+        /// Country code.
         /// </summary>
-        [JsonProperty("AccessKeyId")]
-        public string AccessKeyId{ get; set; }
+        [JsonProperty("CountryCode")]
+        public string CountryCode{ get; set; }
 
         /// <summary>
-        /// Key to be updated, which is required when a custom key is updated. It can contain 10-50 letters, digits, and underscores.
+        /// Mobile number.
         /// </summary>
-        [JsonProperty("AccessKeySecret")]
-        public string AccessKeySecret{ get; set; }
+        [JsonProperty("PhoneNum")]
+        public string PhoneNum{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AccessKeyId", this.AccessKeyId);
-            this.SetParamSimple(map, prefix + "AccessKeySecret", this.AccessKeySecret);
+            this.SetParamSimple(map, prefix + "CountryCode", this.CountryCode);
+            this.SetParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
         }
     }
 }
