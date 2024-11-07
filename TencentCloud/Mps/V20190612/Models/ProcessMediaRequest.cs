@@ -31,7 +31,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+        /// Target storage for Media Processing Service output files. If left blank, it inherits the storage location in InputInfo.
+        /// 
+        /// Note: When InputInfo.Type is URL, this parameter is required.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

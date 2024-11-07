@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// There can be up to 10 tags, each with a length limit of 16 characters.
         /// </summary>
         [JsonProperty("LabelSet")]
-        public string LabelSet{ get; set; }
+        public string[] LabelSet{ get; set; }
 
         /// <summary>
         /// Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
@@ -58,7 +58,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "LabelSet", this.LabelSet);
+            this.SetParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
             this.SetParamSimple(map, prefix + "BlockConfidence", this.BlockConfidence);
             this.SetParamSimple(map, prefix + "ReviewConfidence", this.ReviewConfidence);
         }

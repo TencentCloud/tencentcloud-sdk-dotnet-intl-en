@@ -25,16 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video parameter information.
-        /// </summary>
-        [JsonProperty("Video")]
-        public VideoTemplateInfo Video{ get; set; }
-
-        /// <summary>
         /// Audio parameter information.
         /// </summary>
         [JsonProperty("Audio")]
         public AudioTemplateInfo Audio{ get; set; }
+
+        /// <summary>
+        /// Video parameter information.
+        /// </summary>
+        [JsonProperty("Video")]
+        public VideoTemplateInfo Video{ get; set; }
 
         /// <summary>
         /// Whether to remove audio stream. Valid values:
@@ -58,8 +58,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Video.", this.Video);
             this.SetParamObj(map, prefix + "Audio.", this.Audio);
+            this.SetParamObj(map, prefix + "Video.", this.Video);
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
         }

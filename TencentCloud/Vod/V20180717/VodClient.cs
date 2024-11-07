@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1009";
+       private const string sdkVersion = "SDK_NET_3.0.1010";
 
         /// <summary>
         /// Client constructor.
@@ -336,6 +336,47 @@ namespace TencentCloud.Vod.V20180717
         public CreateClassResponse CreateClassSync(CreateClassRequest req)
         {
             return InternalRequestAsync<CreateClassResponse>(req, "CreateClass")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Initiate an adaptive bitrate streaming processing task, with the following features:
+        /// 1. Output HLS and MPEG-DASH adaptive streams based on the specified templates;
+        /// 2. DRM options for the adaptive bitrate streaming include no encryption, Widevine, or FairPlay.
+        /// 3. The output adaptive bitrate streaming can include multiple audio streams in different languages, with each language sourced from different media files.
+        /// 4. The output adaptive stream can also include multiple subtitle streams in different languages.
+        /// 
+        /// **Notes:**
+        /// 1. When using opening/closing credits, the video stream in the opening credit must be synchronized with the audio stream; otherwise, it will result in audio and video desynchronization in the output content.
+        /// 2. If the output adaptive bitrate streaming needs to include audio from the main media, the FileId of the main media must be specified in the AudioSet parameter.
+        /// 3. Subtitles must be added to the main media beforehand, which can be done through the ModifyMediaInfo API interface or the Video Management page in the console.
+        /// 4. Support for TESHD transcoding and watermarking is currently not available.
+        /// </summary>
+        /// <param name="req"><see cref="CreateComplexAdaptiveDynamicStreamingTaskRequest"/></param>
+        /// <returns><see cref="CreateComplexAdaptiveDynamicStreamingTaskResponse"/></returns>
+        public Task<CreateComplexAdaptiveDynamicStreamingTaskResponse> CreateComplexAdaptiveDynamicStreamingTask(CreateComplexAdaptiveDynamicStreamingTaskRequest req)
+        {
+            return InternalRequestAsync<CreateComplexAdaptiveDynamicStreamingTaskResponse>(req, "CreateComplexAdaptiveDynamicStreamingTask");
+        }
+
+        /// <summary>
+        /// Initiate an adaptive bitrate streaming processing task, with the following features:
+        /// 1. Output HLS and MPEG-DASH adaptive streams based on the specified templates;
+        /// 2. DRM options for the adaptive bitrate streaming include no encryption, Widevine, or FairPlay.
+        /// 3. The output adaptive bitrate streaming can include multiple audio streams in different languages, with each language sourced from different media files.
+        /// 4. The output adaptive stream can also include multiple subtitle streams in different languages.
+        /// 
+        /// **Notes:**
+        /// 1. When using opening/closing credits, the video stream in the opening credit must be synchronized with the audio stream; otherwise, it will result in audio and video desynchronization in the output content.
+        /// 2. If the output adaptive bitrate streaming needs to include audio from the main media, the FileId of the main media must be specified in the AudioSet parameter.
+        /// 3. Subtitles must be added to the main media beforehand, which can be done through the ModifyMediaInfo API interface or the Video Management page in the console.
+        /// 4. Support for TESHD transcoding and watermarking is currently not available.
+        /// </summary>
+        /// <param name="req"><see cref="CreateComplexAdaptiveDynamicStreamingTaskRequest"/></param>
+        /// <returns><see cref="CreateComplexAdaptiveDynamicStreamingTaskResponse"/></returns>
+        public CreateComplexAdaptiveDynamicStreamingTaskResponse CreateComplexAdaptiveDynamicStreamingTaskSync(CreateComplexAdaptiveDynamicStreamingTaskRequest req)
+        {
+            return InternalRequestAsync<CreateComplexAdaptiveDynamicStreamingTaskResponse>(req, "CreateComplexAdaptiveDynamicStreamingTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,23 +25,24 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video stream encoding format. Valid values:
-        /// <li>h264: H.264 encoding.</li>
-        /// <li>h265: H.265 encoding.</li>
-        /// <li>h266: H.266 encoding.</li>
-        /// <li>av1: AOMedia Video 1 encoding.</li>
-        /// <li>vp8: VP8 encoding.</li>
-        /// <li>vp9: VP9 encoding.</li>
-        /// <li>mpeg2: MPEG2 encoding.</li>
-        /// <li>dnxhd: DNxHD encoding.</li>
-        /// <li>mv-hevc: MV-HEVC encoding.</li>
-        /// Note: A resolution within 640x480 should be specified for H.265 encoding.
+        /// Encoding format for video streams. Optional values:
+        /// <li>h264: H.264 encoding</li>
+        /// <li>h265: H.265 encoding</li>
+        /// <li>h266: H.266 encoding</li>
+        /// <li>av1: AOMedia Video 1 encoding</li>
+        /// <li>vp8: VP8 encoding</li>
+        /// <li>vp9: VP9 encoding</li>
+        /// <li>mpeg2: MPEG2 encoding</li>
+        /// <li>dnxhd: DNxHD encoding</li>
+        /// <li>mv-hevc: MV-HEVC encoding</li>
         /// 
-        /// Note: AV1 encoding containers only support mp4, webm, and mkv.
-        /// Note: H.266 encoding containers only support mp4, hls, ts, and mov.
-        /// Note: VP8 and VP9 encoding containers only support webm and mkv.
-        /// Note: MPEG2 and DNxHD encoding containers only support mxf.
-        /// Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: AV1 encoding containers currently only support mp4, webm, and mkv.
+        /// Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
+        /// Note: VP8 and VP9 encoding containers currently only support webm and mkv.
+        /// Note: MPEG2 and DNxHD encoding containers currently only support mxf.
+        /// Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+        /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
@@ -87,24 +88,49 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Frame interval between I keyframes. Value range: 0 and [1,100000]. If this parameter is 0, the system will automatically set the GOP length.
+        /// Interval between I-frames (keyframes), which can be customized in frames or seconds. GOP value range: 0 and [1, 100000].
+        /// If this parameter is 0, the system will automatically set the GOP length.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Gop")]
         public ulong? Gop{ get; set; }
 
         /// <summary>
-        /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-        /// <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-        /// <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-        /// <li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-        /// <li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+        /// GOP value unit. Optional values: 
+        /// frame: indicates frame 
+        /// second: indicates second
+        /// Default value: frame
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("GopUnit")]
+        public string GopUnit{ get; set; }
+
+        /// <summary>
+        /// Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+        ///  <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
+        /// <li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+        /// <li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
+        /// <li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+        /// 
+        /// <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
+        /// Default value: black.
+        /// 
+        /// Note: Only stretch and black are supported for adaptive bitrate streaming.
+        /// 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
         /// <summary>
-        /// The control factor of video constant bitrate. Value range: [0, 51]. This parameter will be disabled if you enter `0`.
-        /// It is not recommended to specify this parameter if there are no special requirements.
+        /// Control factor for constant video bitrate. Value range: [0, 51] and 100.
+        /// It is recommended not to specify this parameter if there are no special requirements.
+        /// 
+        /// Note:
+        /// When you need to set it to auto, fill in 100.
+        /// If Mode is set to ABR, the Vcrf value does not need to be configured.
+        /// If Mode is set to CBR, the Vcrf value does not need to be configured.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
@@ -117,6 +143,15 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("ContentAdaptStream")]
         public ulong? ContentAdaptStream{ get; set; }
+
+        /// <summary>
+        /// Average segment duration. Value range: (0-10], unit: second
+        /// Default value: 10
+        /// Note: It is used only in the format of HLS.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("HlsTime")]
+        public ulong? HlsTime{ get; set; }
 
         /// <summary>
         /// HLS segment type. Valid values:
@@ -149,6 +184,101 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Stereo3dType")]
         public string Stereo3dType{ get; set; }
 
+        /// <summary>
+        /// Profile, suitable for different scenarios. 
+        /// baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos. 
+        /// main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices. 
+        /// high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+        /// default: automatic filling along with the original video
+        /// 
+        /// This configuration appears only when the encoding standard is set to H264. Default value: default
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VideoProfile")]
+        public string VideoProfile{ get; set; }
+
+        /// <summary>
+        /// Encoder level. Default value: auto ("")
+        /// If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1. 
+        /// If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VideoLevel")]
+        public string VideoLevel{ get; set; }
+
+        /// <summary>
+        /// Maximum number of consecutive B-frames. The default is auto, and 0 - 16 and -1 are supported.
+        /// Note:
+        /// 
+        /// -1 indicates auto.	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Bframes")]
+        public long? Bframes{ get; set; }
+
+        /// <summary>
+        /// Bitrate control mode. Optional values: 
+        /// VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements. 
+        /// ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained. 
+        /// CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming. 
+        /// VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired. 
+        /// VBR is selected by default.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// Display aspect ratio. Optional values: [1:1, 2:1, default]
+        /// Default value: default
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Sar")]
+        public string Sar{ get; set; }
+
+        /// <summary>
+        /// Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values: 
+        /// 0: Disable the adaptive I-frame decision 
+        /// 1: Enable the adaptive I-frame decision 
+        /// Default value: 0	
+        /// 	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("NoScenecut")]
+        public long? NoScenecut{ get; set; }
+
+        /// <summary>
+        /// Bit: 8/10 is supported. Default value: 8	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BitDepth")]
+        public long? BitDepth{ get; set; }
+
+        /// <summary>
+        /// Preservation of original timestamp. Optional values: 
+        /// 0: Disabled 
+        /// 1: Enabled 
+        /// Default value: Disabled	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("RawPts")]
+        public long? RawPts{ get; set; }
+
+        /// <summary>
+        /// Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100, optional values: [0-100] and -1 
+        /// Note: -1 indicates auto.	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Compress")]
+        public long? Compress{ get; set; }
+
+        /// <summary>
+        /// Special segment configuration	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SegmentSpecificInfo")]
+        public SegmentSpecificInfo SegmentSpecificInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,12 +292,24 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
+            this.SetParamSimple(map, prefix + "GopUnit", this.GopUnit);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
             this.SetParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
+            this.SetParamSimple(map, prefix + "HlsTime", this.HlsTime);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
             this.SetParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
             this.SetParamSimple(map, prefix + "Stereo3dType", this.Stereo3dType);
+            this.SetParamSimple(map, prefix + "VideoProfile", this.VideoProfile);
+            this.SetParamSimple(map, prefix + "VideoLevel", this.VideoLevel);
+            this.SetParamSimple(map, prefix + "Bframes", this.Bframes);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "Sar", this.Sar);
+            this.SetParamSimple(map, prefix + "NoScenecut", this.NoScenecut);
+            this.SetParamSimple(map, prefix + "BitDepth", this.BitDepth);
+            this.SetParamSimple(map, prefix + "RawPts", this.RawPts);
+            this.SetParamSimple(map, prefix + "Compress", this.Compress);
+            this.SetParamObj(map, prefix + "SegmentSpecificInfo.", this.SegmentSpecificInfo);
         }
     }
 }

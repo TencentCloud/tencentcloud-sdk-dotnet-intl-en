@@ -40,6 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Subtitles file storage location.
         /// </summary>
         [JsonProperty("OutputStorage")]
+        [System.Obsolete]
         public TaskOutputStorage OutputStorage{ get; set; }
 
 

@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// If this parameter is left empty or 0 is entered, there will be no upper limit for bitrate.
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
-        public ulong? MaxVideoBitrate{ get; set; }
+        public long? MaxVideoBitrate{ get; set; }
 
 
         /// <summary>

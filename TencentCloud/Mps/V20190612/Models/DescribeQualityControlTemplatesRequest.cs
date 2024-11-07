@@ -46,7 +46,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Preset: preset template. Custom: custom template.
+        /// "Preset": preset template, "Custom": custom template
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

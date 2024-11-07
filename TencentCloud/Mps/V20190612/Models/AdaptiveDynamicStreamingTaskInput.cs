@@ -25,52 +25,59 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Adaptive bitrate streaming template ID.
+        /// Adaptive dynamic streaming template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// List of up to 10 image or text watermarks.
+        /// Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// The relative or absolute output path of the manifest file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}.{format}`.
+        /// Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
+        /// If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
+        /// Example of relative path:
+        /// <li>filename_{variable name}.{format}</li>
+        /// <li>filename.{format}</li>
+        /// Example of absolute path:
+        /// <li>/custom path/filename_{variable name}.{format}</li>
+        /// If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// The relative output path of the substream file after being transcoded to adaptive bitrate streaming. If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+        /// After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
         /// </summary>
         [JsonProperty("SubStreamObjectName")]
         public string SubStreamObjectName{ get; set; }
 
         /// <summary>
-        /// The relative output path of the segment file after being transcoded to adaptive bitrate streaming (in HLS format only). If this parameter is left empty, a relative path in the following format will be used by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+        /// After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
         /// </summary>
         [JsonProperty("SegmentObjectName")]
         public string SegmentObjectName{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Subtitle file to be inserted.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Drm information.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }

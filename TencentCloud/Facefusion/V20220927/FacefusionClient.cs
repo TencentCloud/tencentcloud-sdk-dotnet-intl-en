@@ -28,7 +28,7 @@ namespace TencentCloud.Facefusion.V20220927
 
        private const string endpoint = "facefusion.tencentcloudapi.com";
        private const string version = "2022-09-27";
-       private const string sdkVersion = "SDK_NET_3.0.1009";
+       private const string sdkVersion = "SDK_NET_3.0.1010";
 
         /// <summary>
         /// Client constructor.
@@ -79,6 +79,48 @@ namespace TencentCloud.Facefusion.V20220927
         public FuseFaceResponse FuseFaceSync(FuseFaceRequest req)
         {
             return InternalRequestAsync<FuseFaceResponse>(req, "FuseFace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the progress and status of video face fusion tasks by Job ID.
+        /// </summary>
+        /// <param name="req"><see cref="QueryVideoFaceFusionJobRequest"/></param>
+        /// <returns><see cref="QueryVideoFaceFusionJobResponse"/></returns>
+        public Task<QueryVideoFaceFusionJobResponse> QueryVideoFaceFusionJob(QueryVideoFaceFusionJobRequest req)
+        {
+            return InternalRequestAsync<QueryVideoFaceFusionJobResponse>(req, "QueryVideoFaceFusionJob");
+        }
+
+        /// <summary>
+        /// This API is used to query the progress and status of video face fusion tasks by Job ID.
+        /// </summary>
+        /// <param name="req"><see cref="QueryVideoFaceFusionJobRequest"/></param>
+        /// <returns><see cref="QueryVideoFaceFusionJobResponse"/></returns>
+        public QueryVideoFaceFusionJobResponse QueryVideoFaceFusionJobSync(QueryVideoFaceFusionJobRequest req)
+        {
+            return InternalRequestAsync<QueryVideoFaceFusionJobResponse>(req, "QueryVideoFaceFusionJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to submit asynchronous processing tasks of video face fusion. After a task is submitted, the Job ID, estimated completion time, and current queue length will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoFaceFusionJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoFaceFusionJobResponse"/></returns>
+        public Task<SubmitVideoFaceFusionJobResponse> SubmitVideoFaceFusionJob(SubmitVideoFaceFusionJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoFaceFusionJobResponse>(req, "SubmitVideoFaceFusionJob");
+        }
+
+        /// <summary>
+        /// This API is used to submit asynchronous processing tasks of video face fusion. After a task is submitted, the Job ID, estimated completion time, and current queue length will be returned.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitVideoFaceFusionJobRequest"/></param>
+        /// <returns><see cref="SubmitVideoFaceFusionJobResponse"/></returns>
+        public SubmitVideoFaceFusionJobResponse SubmitVideoFaceFusionJobSync(SubmitVideoFaceFusionJobRequest req)
+        {
+            return InternalRequestAsync<SubmitVideoFaceFusionJobResponse>(req, "SubmitVideoFaceFusionJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
