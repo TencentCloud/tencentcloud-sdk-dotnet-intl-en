@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1010";
+       private const string sdkVersion = "SDK_NET_3.0.1011";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,69 @@ namespace TencentCloud.Privatedns.V20201028
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to create an endpoint.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEndPointRequest"/></param>
+        /// <returns><see cref="CreateEndPointResponse"/></returns>
+        public Task<CreateEndPointResponse> CreateEndPoint(CreateEndPointRequest req)
+        {
+            return InternalRequestAsync<CreateEndPointResponse>(req, "CreateEndPoint");
+        }
+
+        /// <summary>
+        /// This API is used to create an endpoint.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEndPointRequest"/></param>
+        /// <returns><see cref="CreateEndPointResponse"/></returns>
+        public CreateEndPointResponse CreateEndPointSync(CreateEndPointRequest req)
+        {
+            return InternalRequestAsync<CreateEndPointResponse>(req, "CreateEndPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an endpoint and an endpoint service simultaneously.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEndPointAndEndPointServiceRequest"/></param>
+        /// <returns><see cref="CreateEndPointAndEndPointServiceResponse"/></returns>
+        public Task<CreateEndPointAndEndPointServiceResponse> CreateEndPointAndEndPointService(CreateEndPointAndEndPointServiceRequest req)
+        {
+            return InternalRequestAsync<CreateEndPointAndEndPointServiceResponse>(req, "CreateEndPointAndEndPointService");
+        }
+
+        /// <summary>
+        /// This API is used to create an endpoint and an endpoint service simultaneously.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEndPointAndEndPointServiceRequest"/></param>
+        /// <returns><see cref="CreateEndPointAndEndPointServiceResponse"/></returns>
+        public CreateEndPointAndEndPointServiceResponse CreateEndPointAndEndPointServiceSync(CreateEndPointAndEndPointServiceRequest req)
+        {
+            return InternalRequestAsync<CreateEndPointAndEndPointServiceResponse>(req, "CreateEndPointAndEndPointService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a custom forwarding rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateForwardRuleRequest"/></param>
+        /// <returns><see cref="CreateForwardRuleResponse"/></returns>
+        public Task<CreateForwardRuleResponse> CreateForwardRule(CreateForwardRuleRequest req)
+        {
+            return InternalRequestAsync<CreateForwardRuleResponse>(req, "CreateForwardRule");
+        }
+
+        /// <summary>
+        /// This API is used to create a custom forwarding rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateForwardRuleRequest"/></param>
+        /// <returns><see cref="CreateForwardRuleResponse"/></returns>
+        public CreateForwardRuleResponse CreateForwardRuleSync(CreateForwardRuleRequest req)
+        {
+            return InternalRequestAsync<CreateForwardRuleResponse>(req, "CreateForwardRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -197,6 +260,48 @@ namespace TencentCloud.Privatedns.V20201028
         public DescribeDashboardResponse DescribeDashboardSync(DescribeDashboardRequest req)
         {
             return InternalRequestAsync<DescribeDashboardResponse>(req, "DescribeDashboard")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the endpoint list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndPointListRequest"/></param>
+        /// <returns><see cref="DescribeEndPointListResponse"/></returns>
+        public Task<DescribeEndPointListResponse> DescribeEndPointList(DescribeEndPointListRequest req)
+        {
+            return InternalRequestAsync<DescribeEndPointListResponse>(req, "DescribeEndPointList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the endpoint list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndPointListRequest"/></param>
+        /// <returns><see cref="DescribeEndPointListResponse"/></returns>
+        public DescribeEndPointListResponse DescribeEndPointListSync(DescribeEndPointListRequest req)
+        {
+            return InternalRequestAsync<DescribeEndPointListResponse>(req, "DescribeEndPointList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the forwarding rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForwardRuleListRequest"/></param>
+        /// <returns><see cref="DescribeForwardRuleListResponse"/></returns>
+        public Task<DescribeForwardRuleListResponse> DescribeForwardRuleList(DescribeForwardRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeForwardRuleListResponse>(req, "DescribeForwardRuleList");
+        }
+
+        /// <summary>
+        /// This API is used to query the forwarding rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeForwardRuleListRequest"/></param>
+        /// <returns><see cref="DescribeForwardRuleListResponse"/></returns>
+        public DescribeForwardRuleListResponse DescribeForwardRuleListSync(DescribeForwardRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeForwardRuleListResponse>(req, "DescribeForwardRuleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
