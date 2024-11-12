@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1011";
+       private const string sdkVersion = "SDK_NET_3.0.1012";
 
         /// <summary>
         /// Client constructor.
@@ -4492,6 +4492,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttributeSync(ModifyBandwidthPackageAttributeRequest req)
         {
             return InternalRequestAsync<ModifyBandwidthPackageAttributeResponse>(req, "ModifyBandwidthPackageAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to adjust the bandwidth of a [bandwidth package](https://www.tencentcloud.com/document/product/684/15245).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBandwidthPackageBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyBandwidthPackageBandwidthResponse"/></returns>
+        public Task<ModifyBandwidthPackageBandwidthResponse> ModifyBandwidthPackageBandwidth(ModifyBandwidthPackageBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyBandwidthPackageBandwidthResponse>(req, "ModifyBandwidthPackageBandwidth");
+        }
+
+        /// <summary>
+        /// This API is used to adjust the bandwidth of a [bandwidth package](https://www.tencentcloud.com/document/product/684/15245).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBandwidthPackageBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyBandwidthPackageBandwidthResponse"/></returns>
+        public ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidthSync(ModifyBandwidthPackageBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyBandwidthPackageBandwidthResponse>(req, "ModifyBandwidthPackageBandwidth")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

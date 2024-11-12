@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string RefreshActivityId{ get; set; }
 
         /// <summary>
-        /// The recovery method for the current batch's failed instances. If there are no failed instances, this parameter becomes invalid. Default value: RETRY. Valid values: <br><li>RETRY: Retry refreshing failed instances in the current batch.</li> <li>CONTINUE: Skip failed instances in the current batch.
+        /// Recovery mode of instances that have failed to be refreshed in the current batch. If there are no failed instances, this parameter is invalid. Default value: RETRY. Valid values: <li>RETRY: Retry instances that have failed to be refreshed in the current batch.</li> <li>CONTINUE: Skip instances that have failed to be refreshed in the current batch.</li>
         /// </summary>
         [JsonProperty("ResumeMode")]
         public string ResumeMode{ get; set; }

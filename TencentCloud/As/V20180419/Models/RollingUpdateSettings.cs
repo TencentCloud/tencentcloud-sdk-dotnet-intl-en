@@ -31,10 +31,19 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? BatchNumber{ get; set; }
 
         /// <summary>
-        /// Pause policy between batches. Default value: Automatic. Valid values: <br><li>FIRST_BATCH_PAUSE: Pause after the first batch update completes.</li> <li>BATCH_INTERVAL_PAUSE: Pause between each batch update.</li> <li>AUTOMATIC: No pauses.
+        /// Pause policy between batches. Default value: Automatic. Valid values:
+        /// <li>FIRST_BATCH_PAUSE: Pause after the first batch of updates is completed.</li>
+        /// <li>BATCH_INTERVAL_PAUSE: Pause between batches.</li>
+        /// <li>AUTOMATIC: Do not pause.</li>
         /// </summary>
         [JsonProperty("BatchPause")]
         public string BatchPause{ get; set; }
+
+        /// <summary>
+        /// The maximum additional quantity of instances. After this parameter is set, create a batch of additional pay-as-you-go instances according to the launch configuration before the rolling update starts. After the rolling update is completed, the additional instances will be terminated.This parameter is used to ensure a certain number of instances available during the rolling update. The maximum additional quantity of instances cannot exceed the number of refreshing instances in a single batch of the rolling update. The rollback process does not support this parameter currently.
+        /// </summary>
+        [JsonProperty("MaxSurge")]
+        public long? MaxSurge{ get; set; }
 
 
         /// <summary>
@@ -44,6 +53,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "BatchNumber", this.BatchNumber);
             this.SetParamSimple(map, prefix + "BatchPause", this.BatchPause);
+            this.SetParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
         }
     }
 }

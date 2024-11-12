@@ -87,11 +87,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? NextRotationTime{ get; set; }
 
         /// <summary>
-        /// `0`: user-defined secret.
-        /// `1`: Tencent Cloud services secret.
-        /// `2`: SSH key secret.
-        /// `3`: Tencent Cloud API key secret.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// 0: custom secret;1: database credential;2: SSH key secret;3: cloud API key secret;4: Redis secret;Note: This field may return `null`, indicating no valid value can be obtained.
         /// </summary>
         [JsonProperty("SecretType")]
         public long? SecretType{ get; set; }
