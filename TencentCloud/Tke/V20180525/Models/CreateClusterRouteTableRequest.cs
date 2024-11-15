@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Route table name
+        /// Route table name, usually the cluster ID
         /// </summary>
         [JsonProperty("RouteTableName")]
         public string RouteTableName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Whether to ignore CIDR conflicts
+        /// Whether to ignore CIDR and VPC route table conflicts, 0 means not to ignore, 1 means to ignore. The default is not to ignore.
         /// </summary>
         [JsonProperty("IgnoreClusterCidrConflict")]
         public long? IgnoreClusterCidrConflict{ get; set; }

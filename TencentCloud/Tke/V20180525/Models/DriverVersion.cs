@@ -26,12 +26,16 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// Version of GPU driver or CUDA
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// Name of GPU driver or CUDA
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

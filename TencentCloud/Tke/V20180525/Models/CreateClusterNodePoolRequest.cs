@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string LaunchConfigurePara{ get; set; }
 
         /// <summary>
-        /// Sample parameters
+        /// InstanceAdvancedSettings
         /// </summary>
         [JsonProperty("InstanceAdvancedSettings")]
         public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
@@ -71,6 +71,12 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
+
+        /// <summary>
+        /// Node Annotation List
+        /// </summary>
+        [JsonProperty("Annotations")]
+        public AnnotationValue[] Annotations{ get; set; }
 
         /// <summary>
         /// Node pool runtime type and version
@@ -122,6 +128,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
+            this.SetParamArrayObj(map, prefix + "Annotations.", this.Annotations);
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);

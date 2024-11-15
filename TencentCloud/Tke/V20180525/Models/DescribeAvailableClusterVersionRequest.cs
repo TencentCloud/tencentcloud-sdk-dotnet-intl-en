@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID. If you need to query the upgradable version of a specific cluster, this field is required.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// List of cluster IDs
+        /// Cluster ID list. If you need to query the upgradable versions of multiple clusters, this field is required.
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }

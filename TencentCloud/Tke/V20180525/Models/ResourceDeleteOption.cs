@@ -25,16 +25,22 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Resource type, for example `CBS`
+        /// Resource type, such as CBS, CLB, CVM
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+        /// Deletion mode for CBS resources when the cluster is deleted: terminate, retain. Other resources are terminated by default.
         /// </summary>
         [JsonProperty("DeleteMode")]
         public string DeleteMode{ get; set; }
+
+        /// <summary>
+        /// Whether to skip the resources with deletion protection enabled. It is false by default. When set to true, the resources with deletion protection enabled are not cleaned up. CLB with terminal nodes also belongs to the resources with deletion protection enabled.
+        /// </summary>
+        [JsonProperty("SkipDeletionProtection")]
+        public bool? SkipDeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "DeleteMode", this.DeleteMode);
+            this.SetParamSimple(map, prefix + "SkipDeletionProtection", this.SkipDeletionProtection);
         }
     }
 }

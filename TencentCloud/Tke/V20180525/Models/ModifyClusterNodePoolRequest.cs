@@ -67,6 +67,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public Taint[] Taints{ get; set; }
 
         /// <summary>
+        /// Node Annotation List
+        /// </summary>
+        [JsonProperty("Annotations")]
+        public AnnotationValue[] Annotations{ get; set; }
+
+        /// <summary>
         /// Indicates whether auto scaling is enabled.
         /// </summary>
         [JsonProperty("EnableAutoscale")]
@@ -132,6 +138,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DockerGraphPath")]
         public string DockerGraphPath{ get; set; }
 
+        /// <summary>
+        /// Base64-encoded custom script
+        /// </summary>
+        [JsonProperty("PreStartUserScript")]
+        public string PreStartUserScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +157,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
+            this.SetParamArrayObj(map, prefix + "Annotations.", this.Annotations);
             this.SetParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
@@ -156,6 +169,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
+            this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         }
     }
 }

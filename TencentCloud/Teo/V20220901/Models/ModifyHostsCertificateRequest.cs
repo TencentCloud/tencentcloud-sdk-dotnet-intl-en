@@ -46,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Mode{ get; set; }
 
         /// <summary>
-        /// ID of the SSL certificate. It takes effect when `mode=sslcert`. To check the certificate ID, go to the [SSL Certificate](https://console.cloud.tencent.com/certoview) console.
+        /// SSL certificate configuration. This parameter is effective only when the mode is sslcert. You only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
         /// </summary>
         [JsonProperty("ServerCertInfo")]
         public ServerCertInfo[] ServerCertInfo{ get; set; }
@@ -61,6 +61,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [System.Obsolete]
         public string ApplyType{ get; set; }
 
+        /// <summary>
+        /// In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+        /// </summary>
+        [JsonProperty("ClientCertInfo")]
+        public MutualTLS ClientCertInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
             this.SetParamSimple(map, prefix + "ApplyType", this.ApplyType);
+            this.SetParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
         }
     }
 }

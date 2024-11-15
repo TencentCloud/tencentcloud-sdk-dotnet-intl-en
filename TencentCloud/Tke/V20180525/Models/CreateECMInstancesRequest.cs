@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID. Edge clusters need to enable public network access before adding ECM nodes.
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// Module ID
+        /// Edge module ID
         /// </summary>
         [JsonProperty("ModuleId")]
         public string ModuleId{ get; set; }

@@ -73,6 +73,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public Taint[] Taints{ get; set; }
 
         /// <summary>
+        /// Node Annotation List
+        /// </summary>
+        [JsonProperty("Annotations")]
+        public AnnotationValue[] Annotations{ get; set; }
+
+        /// <summary>
         /// Node list
         /// </summary>
         [JsonProperty("NodeCountSummary")]
@@ -104,6 +110,13 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("DesiredNodesNum")]
         public long? DesiredNodesNum{ get; set; }
+
+        /// <summary>
+        /// Runtime Description
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("RuntimeConfig")]
+        public RuntimeConfig RuntimeConfig{ get; set; }
 
         /// <summary>
         /// The operating system of the node pool
@@ -154,6 +167,50 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
 
+        /// <summary>
+        /// Node Configuration
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ExtraArgs")]
+        public InstanceExtraArgs ExtraArgs{ get; set; }
+
+        /// <summary>
+        /// GPU Driver-related Parameters
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("GPUArgs")]
+        public GPUArgs GPUArgs{ get; set; }
+
+        /// <summary>
+        /// Specified value of dockerd --graph. Default value: /var/lib/docker
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DockerGraphPath")]
+        public string DockerGraphPath{ get; set; }
+
+        /// <summary>
+        /// Multiple Disk Data Disk Mount Information: When creating a new node, make sure that the CVM purchase parameters include the information of purchasing multiple data disks. For example, in the DataDisks under RunInstancesPara of CreateClusterInstances API, it must also be set to purchase multiple data disks. Refer to the example of adding cluster nodes (multiple data disks) of CreateClusterInstances API; when adding existing nodes, ensure that the specified partition information actually exists on the node.
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
+        /// <summary>
+        /// Unschedulable or not
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Unschedulable")]
+        public long? Unschedulable{ get; set; }
+
+        /// <summary>
+        /// Custom script, executed before UserScript
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("PreStartUserScript")]
+        public string PreStartUserScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,11 +225,13 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
+            this.SetParamArrayObj(map, prefix + "Annotations.", this.Annotations);
             this.SetParamObj(map, prefix + "NodeCountSummary.", this.NodeCountSummary);
             this.SetParamSimple(map, prefix + "AutoscalingGroupStatus", this.AutoscalingGroupStatus);
             this.SetParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);
             this.SetParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
             this.SetParamSimple(map, prefix + "DesiredNodesNum", this.DesiredNodesNum);
+            this.SetParamObj(map, prefix + "RuntimeConfig.", this.RuntimeConfig);
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
@@ -180,6 +239,12 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+            this.SetParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+            this.SetParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
+            this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         }
     }
 }

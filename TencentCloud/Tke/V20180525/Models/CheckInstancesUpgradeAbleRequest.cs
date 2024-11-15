@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Upgrade type
+        /// Upgrade type, enum values: reset (Reinstallation and Upgrade, supports major and minor versions), hot (In-place Rolling Minor Version Upgrade), major (In-place Rolling Major Version Upgrade).
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }

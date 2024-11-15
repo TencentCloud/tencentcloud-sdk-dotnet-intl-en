@@ -185,6 +185,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("StandardDebug")]
         public StandardDebug StandardDebug{ get; set; }
 
+        /// <summary>
+        /// Just-in-time media processing configuration.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// </summary>
+        [JsonProperty("JITVideoProcess")]
+        public JITVideoProcess JITVideoProcess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +221,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
             this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
             this.SetParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
+            this.SetParamObj(map, prefix + "JITVideoProcess.", this.JITVideoProcess);
         }
     }
 }

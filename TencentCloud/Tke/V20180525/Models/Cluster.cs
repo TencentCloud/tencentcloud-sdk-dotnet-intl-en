@@ -179,6 +179,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterEtcdNodeNum")]
         public ulong? ClusterEtcdNodeNum{ get; set; }
 
+        /// <summary>
+        /// CDC Id
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -209,6 +216,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
             this.SetParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

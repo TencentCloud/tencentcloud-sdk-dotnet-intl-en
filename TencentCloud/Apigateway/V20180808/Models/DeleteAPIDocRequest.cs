@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// API document ID
+        /// API document ID.
         /// </summary>
         [JsonProperty("ApiDocId")]
         public string ApiDocId{ get; set; }

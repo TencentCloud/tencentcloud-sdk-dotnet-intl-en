@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1013";
+       private const string sdkVersion = "SDK_NET_3.0.1014";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to create log collection configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSLogConfigRequest"/></param>
+        /// <returns><see cref="CreateCLSLogConfigResponse"/></returns>
+        public Task<CreateCLSLogConfigResponse> CreateCLSLogConfig(CreateCLSLogConfigRequest req)
+        {
+            return InternalRequestAsync<CreateCLSLogConfigResponse>(req, "CreateCLSLogConfig");
+        }
+
+        /// <summary>
+        /// This API is used to create log collection configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSLogConfigRequest"/></param>
+        /// <returns><see cref="CreateCLSLogConfigResponse"/></returns>
+        public CreateCLSLogConfigResponse CreateCLSLogConfigSync(CreateCLSLogConfigRequest req)
+        {
+            return InternalRequestAsync<CreateCLSLogConfigResponse>(req, "CreateCLSLogConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>
@@ -327,7 +348,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to create a virtual node.
+        /// This API is used to create the Pay-as-you-go Super Node.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="CreateClusterVirtualNodeResponse"/></returns>
@@ -337,7 +358,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to create a virtual node.
+        /// This API is used to create the Pay-as-you-go Super Node.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="CreateClusterVirtualNodeResponse"/></returns>
@@ -348,7 +369,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to create a virtual node pool.
+        /// This API is used to create the Super Node Pool.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterVirtualNodePoolRequest"/></param>
         /// <returns><see cref="CreateClusterVirtualNodePoolResponse"/></returns>
@@ -358,7 +379,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to create a virtual node pool.
+        /// This API is used to create the Super Node Pool.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterVirtualNodePoolRequest"/></param>
         /// <returns><see cref="CreateClusterVirtualNodePoolResponse"/></returns>
@@ -428,6 +449,27 @@ namespace TencentCloud.Tke.V20180525
         public CreateEdgeLogConfigResponse CreateEdgeLogConfigSync(CreateEdgeLogConfigRequest req)
         {
             return InternalRequestAsync<CreateEdgeLogConfigResponse>(req, "CreateEdgeLogConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create Log Collection Configuration for Elastic Cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEksLogConfigRequest"/></param>
+        /// <returns><see cref="CreateEksLogConfigResponse"/></returns>
+        public Task<CreateEksLogConfigResponse> CreateEksLogConfig(CreateEksLogConfigRequest req)
+        {
+            return InternalRequestAsync<CreateEksLogConfigResponse>(req, "CreateEksLogConfig");
+        }
+
+        /// <summary>
+        /// This API is used to create Log Collection Configuration for Elastic Cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEksLogConfigRequest"/></param>
+        /// <returns><see cref="CreateEksLogConfigResponse"/></returns>
+        public CreateEksLogConfigResponse CreateEksLogConfigSync(CreateEksLogConfigRequest req)
+        {
+            return InternalRequestAsync<CreateEksLogConfigResponse>(req, "CreateEksLogConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -684,7 +726,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to delete a virtual node.
+        /// This API is used to delete the super node.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="DeleteClusterVirtualNodeResponse"/></returns>
@@ -694,7 +736,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to delete a virtual node.
+        /// This API is used to delete the super node.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="DeleteClusterVirtualNodeResponse"/></returns>
@@ -705,7 +747,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to delete a virtual node pool.
+        /// This API is used to delete the Super Node Pool.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterVirtualNodePoolRequest"/></param>
         /// <returns><see cref="DeleteClusterVirtualNodePoolResponse"/></returns>
@@ -715,7 +757,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to delete a virtual node pool.
+        /// This API is used to delete the Super Node Pool.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterVirtualNodePoolRequest"/></param>
         /// <returns><see cref="DeleteClusterVirtualNodePoolResponse"/></returns>
@@ -785,6 +827,27 @@ namespace TencentCloud.Tke.V20180525
         public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstancesSync(DeleteEdgeClusterInstancesRequest req)
         {
             return InternalRequestAsync<DeleteEdgeClusterInstancesResponse>(req, "DeleteEdgeClusterInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete collection rules within the cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogConfigsRequest"/></param>
+        /// <returns><see cref="DeleteLogConfigsResponse"/></returns>
+        public Task<DeleteLogConfigsResponse> DeleteLogConfigs(DeleteLogConfigsRequest req)
+        {
+            return InternalRequestAsync<DeleteLogConfigsResponse>(req, "DeleteLogConfigs");
+        }
+
+        /// <summary>
+        /// This API is used to delete collection rules within the cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogConfigsRequest"/></param>
+        /// <returns><see cref="DeleteLogConfigsResponse"/></returns>
+        public DeleteLogConfigsResponse DeleteLogConfigsSync(DeleteLogConfigsRequest req)
+        {
+            return InternalRequestAsync<DeleteLogConfigsResponse>(req, "DeleteLogConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -936,6 +999,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query batch modification Tag status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchModifyTagsStatusRequest"/></param>
+        /// <returns><see cref="DescribeBatchModifyTagsStatusResponse"/></returns>
+        public Task<DescribeBatchModifyTagsStatusResponse> DescribeBatchModifyTagsStatus(DescribeBatchModifyTagsStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchModifyTagsStatusResponse>(req, "DescribeBatchModifyTagsStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query batch modification Tag status.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchModifyTagsStatusRequest"/></param>
+        /// <returns><see cref="DescribeBatchModifyTagsStatusResponse"/></returns>
+        public DescribeBatchModifyTagsStatusResponse DescribeBatchModifyTagsStatusSync(DescribeBatchModifyTagsStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchModifyTagsStatusResponse>(req, "DescribeBatchModifyTagsStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Cluster auto scaling configuration
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterAsGroupOptionRequest"/></param>
@@ -1079,6 +1163,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeClusterEndpointsResponse DescribeClusterEndpointsSync(DescribeClusterEndpointsRequest req)
         {
             return InternalRequestAsync<DescribeClusterEndpointsResponse>(req, "DescribeClusterEndpoints")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query custom parameters of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeClusterExtraArgsResponse"/></returns>
+        public Task<DescribeClusterExtraArgsResponse> DescribeClusterExtraArgs(DescribeClusterExtraArgsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterExtraArgsResponse>(req, "DescribeClusterExtraArgs");
+        }
+
+        /// <summary>
+        /// This API is used to query custom parameters of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterExtraArgsRequest"/></param>
+        /// <returns><see cref="DescribeClusterExtraArgsResponse"/></returns>
+        public DescribeClusterExtraArgsResponse DescribeClusterExtraArgsSync(DescribeClusterExtraArgsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterExtraArgsResponse>(req, "DescribeClusterExtraArgs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1293,7 +1398,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the list of virtual nodes.
+        /// This API is used to view the Super Node list.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="DescribeClusterVirtualNodeResponse"/></returns>
@@ -1303,7 +1408,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the list of virtual nodes.
+        /// This API is used to view the Super Node list.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="DescribeClusterVirtualNodeResponse"/></returns>
@@ -1314,7 +1419,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the list of virtual node pools.
+        /// This API is used to view the Super Node Pool list.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterVirtualNodePoolsRequest"/></param>
         /// <returns><see cref="DescribeClusterVirtualNodePoolsResponse"/></returns>
@@ -1324,7 +1429,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to query the list of virtual node pools.
+        /// This API is used to view the Super Node Pool list.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterVirtualNodePoolsRequest"/></param>
         /// <returns><see cref="DescribeClusterVirtualNodePoolsResponse"/></returns>
@@ -1566,6 +1671,48 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to view third-party node pool configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodeSupportConfigRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodeSupportConfigResponse"/></returns>
+        public Task<DescribeExternalNodeSupportConfigResponse> DescribeExternalNodeSupportConfig(DescribeExternalNodeSupportConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalNodeSupportConfigResponse>(req, "DescribeExternalNodeSupportConfig");
+        }
+
+        /// <summary>
+        /// This API is used to view third-party node pool configuration information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalNodeSupportConfigRequest"/></param>
+        /// <returns><see cref="DescribeExternalNodeSupportConfigResponse"/></returns>
+        public DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfigSync(DescribeExternalNodeSupportConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeExternalNodeSupportConfigResponse>(req, "DescribeExternalNodeSupportConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain eniipamd component information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPAMDRequest"/></param>
+        /// <returns><see cref="DescribeIPAMDResponse"/></returns>
+        public Task<DescribeIPAMDResponse> DescribeIPAMD(DescribeIPAMDRequest req)
+        {
+            return InternalRequestAsync<DescribeIPAMDResponse>(req, "DescribeIPAMD");
+        }
+
+        /// <summary>
+        /// This API is used to obtain eniipamd component information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPAMDRequest"/></param>
+        /// <returns><see cref="DescribeIPAMDResponse"/></returns>
+        public DescribeIPAMDResponse DescribeIPAMDSync(DescribeIPAMDRequest req)
+        {
+            return InternalRequestAsync<DescribeIPAMDResponse>(req, "DescribeIPAMD")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get image information.
         /// </summary>
         /// <param name="req"><see cref="DescribeImagesRequest"/></param>
@@ -1583,6 +1730,69 @@ namespace TencentCloud.Tke.V20180525
         public DescribeImagesResponse DescribeImagesSync(DescribeImagesRequest req)
         {
             return InternalRequestAsync<DescribeImagesResponse>(req, "DescribeImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the log collection rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogConfigsRequest"/></param>
+        /// <returns><see cref="DescribeLogConfigsResponse"/></returns>
+        public Task<DescribeLogConfigsResponse> DescribeLogConfigs(DescribeLogConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogConfigsResponse>(req, "DescribeLogConfigs");
+        }
+
+        /// <summary>
+        /// This API is used to query the log collection rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogConfigsRequest"/></param>
+        /// <returns><see cref="DescribeLogConfigsResponse"/></returns>
+        public DescribeLogConfigsResponse DescribeLogConfigsSync(DescribeLogConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogConfigsResponse>(req, "DescribeLogConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query Cluster Log (Auditing, Event, Common Log) Switch List.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeLogSwitchesResponse"/></returns>
+        public Task<DescribeLogSwitchesResponse> DescribeLogSwitches(DescribeLogSwitchesRequest req)
+        {
+            return InternalRequestAsync<DescribeLogSwitchesResponse>(req, "DescribeLogSwitches");
+        }
+
+        /// <summary>
+        /// This API is used to query Cluster Log (Auditing, Event, Common Log) Switch List.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeLogSwitchesResponse"/></returns>
+        public DescribeLogSwitchesResponse DescribeLogSwitchesSync(DescribeLogSwitchesRequest req)
+        {
+            return InternalRequestAsync<DescribeLogSwitchesResponse>(req, "DescribeLogSwitches")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the billing information of running Pods. You can query a specific Pod by Namespace and Name or batch query by Pod Uid.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodChargeInfoRequest"/></param>
+        /// <returns><see cref="DescribePodChargeInfoResponse"/></returns>
+        public Task<DescribePodChargeInfoResponse> DescribePodChargeInfo(DescribePodChargeInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePodChargeInfoResponse>(req, "DescribePodChargeInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query the billing information of running Pods. You can query a specific Pod by Namespace and Name or batch query by Pod Uid.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodChargeInfoRequest"/></param>
+        /// <returns><see cref="DescribePodChargeInfoResponse"/></returns>
+        public DescribePodChargeInfoResponse DescribePodChargeInfoSync(DescribePodChargeInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePodChargeInfoResponse>(req, "DescribePodChargeInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1629,6 +1839,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query the usage rate of various types of Reserved Coupons.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstanceUtilizationRateRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstanceUtilizationRateResponse"/></returns>
+        public Task<DescribeReservedInstanceUtilizationRateResponse> DescribeReservedInstanceUtilizationRate(DescribeReservedInstanceUtilizationRateRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstanceUtilizationRateResponse>(req, "DescribeReservedInstanceUtilizationRate");
+        }
+
+        /// <summary>
+        /// This API is used to query the usage rate of various types of Reserved Coupons.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstanceUtilizationRateRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstanceUtilizationRateResponse"/></returns>
+        public DescribeReservedInstanceUtilizationRateResponse DescribeReservedInstanceUtilizationRateSync(DescribeReservedInstanceUtilizationRateRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstanceUtilizationRateResponse>(req, "DescribeReservedInstanceUtilizationRate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the cluster resource usage.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceUsageRequest"/></param>
@@ -1667,6 +1898,27 @@ namespace TencentCloud.Tke.V20180525
         public DescribeRouteTableConflictsResponse DescribeRouteTableConflictsSync(DescribeRouteTableConflictsRequest req)
         {
             return InternalRequestAsync<DescribeRouteTableConflictsResponse>(req, "DescribeRouteTableConflicts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve optional runtime versions based on K8S version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedRuntimeRequest"/></param>
+        /// <returns><see cref="DescribeSupportedRuntimeResponse"/></returns>
+        public Task<DescribeSupportedRuntimeResponse> DescribeSupportedRuntime(DescribeSupportedRuntimeRequest req)
+        {
+            return InternalRequestAsync<DescribeSupportedRuntimeResponse>(req, "DescribeSupportedRuntime");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve optional runtime versions based on K8S version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedRuntimeRequest"/></param>
+        /// <returns><see cref="DescribeSupportedRuntimeResponse"/></returns>
+        public DescribeSupportedRuntimeResponse DescribeSupportedRuntimeSync(DescribeSupportedRuntimeRequest req)
+        {
+            return InternalRequestAsync<DescribeSupportedRuntimeResponse>(req, "DescribeSupportedRuntime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1860,7 +2112,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to drain a virtual node.
+        /// This API is used to evict the Super Node.
         /// </summary>
         /// <param name="req"><see cref="DrainClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="DrainClusterVirtualNodeResponse"/></returns>
@@ -1870,7 +2122,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to drain a virtual node.
+        /// This API is used to evict the Super Node.
         /// </summary>
         /// <param name="req"><see cref="DrainClusterVirtualNodeRequest"/></param>
         /// <returns><see cref="DrainClusterVirtualNodeResponse"/></returns>
@@ -1902,7 +2154,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to enable encryption protection.
+        /// This API is used to enable Encrypted Data Protection, which requires enabling KMS capability and completing KMS authorization.
         /// </summary>
         /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
         /// <returns><see cref="EnableEncryptionProtectionResponse"/></returns>
@@ -1912,7 +2164,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to enable encryption protection.
+        /// This API is used to enable Encrypted Data Protection, which requires enabling KMS capability and completing KMS authorization.
         /// </summary>
         /// <param name="req"><see cref="EnableEncryptionProtectionRequest"/></param>
         /// <returns><see cref="EnableEncryptionProtectionResponse"/></returns>
@@ -1986,7 +2238,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to obtain the current progress of the node upgrade.
+        /// This API is used to obtain the current progress of node upgrade. If the cluster is not in node upgrade status, the API will report an error: Task not found.
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
         /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
@@ -1996,7 +2248,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to obtain the current progress of the node upgrade.
+        /// This API is used to obtain the current progress of node upgrade. If the cluster is not in node upgrade status, the API will report an error: Task not found.
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
         /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
@@ -2154,6 +2406,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to modify the cluster image.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterImageRequest"/></param>
+        /// <returns><see cref="ModifyClusterImageResponse"/></returns>
+        public Task<ModifyClusterImageResponse> ModifyClusterImage(ModifyClusterImageRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterImageResponse>(req, "ModifyClusterImage");
+        }
+
+        /// <summary>
+        /// This API is used to modify the cluster image.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterImageRequest"/></param>
+        /// <returns><see cref="ModifyClusterImageResponse"/></returns>
+        public ModifyClusterImageResponse ModifyClusterImageSync(ModifyClusterImageRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterImageResponse>(req, "ModifyClusterImage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to edit a node pool.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterNodePoolRequest"/></param>
@@ -2175,7 +2448,49 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to modify a virtual node pool.
+        /// This API is used to modify the latitude runtime configuration of clusters and node pools.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterRuntimeConfigRequest"/></param>
+        /// <returns><see cref="ModifyClusterRuntimeConfigResponse"/></returns>
+        public Task<ModifyClusterRuntimeConfigResponse> ModifyClusterRuntimeConfig(ModifyClusterRuntimeConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterRuntimeConfigResponse>(req, "ModifyClusterRuntimeConfig");
+        }
+
+        /// <summary>
+        /// This API is used to modify the latitude runtime configuration of clusters and node pools.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterRuntimeConfigRequest"/></param>
+        /// <returns><see cref="ModifyClusterRuntimeConfigResponse"/></returns>
+        public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfigSync(ModifyClusterRuntimeConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterRuntimeConfigResponse>(req, "ModifyClusterRuntimeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify cluster tags.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterTagsRequest"/></param>
+        /// <returns><see cref="ModifyClusterTagsResponse"/></returns>
+        public Task<ModifyClusterTagsResponse> ModifyClusterTags(ModifyClusterTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterTagsResponse>(req, "ModifyClusterTags");
+        }
+
+        /// <summary>
+        /// This API is used to modify cluster tags.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterTagsRequest"/></param>
+        /// <returns><see cref="ModifyClusterTagsResponse"/></returns>
+        public ModifyClusterTagsResponse ModifyClusterTagsSync(ModifyClusterTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterTagsResponse>(req, "ModifyClusterTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the Super Node Pool.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterVirtualNodePoolRequest"/></param>
         /// <returns><see cref="ModifyClusterVirtualNodePoolResponse"/></returns>
@@ -2185,7 +2500,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// This API is used to modify a virtual node pool.
+        /// This API is used to modify the Super Node Pool.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterVirtualNodePoolRequest"/></param>
         /// <returns><see cref="ModifyClusterVirtualNodePoolResponse"/></returns>

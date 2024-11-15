@@ -45,6 +45,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("TKEDirectENI")]
         public long? TKEDirectENI{ get; set; }
 
+        /// <summary>
+        /// Number of Pods supported by TKE relay network card mode
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("TKESubENI")]
+        public long? TKESubENI{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "TKERouteENINonStaticIP", this.TKERouteENINonStaticIP);
             this.SetParamSimple(map, prefix + "TKERouteENIStaticIP", this.TKERouteENIStaticIP);
             this.SetParamSimple(map, prefix + "TKEDirectENI", this.TKEDirectENI);
+            this.SetParamSimple(map, prefix + "TKESubENI", this.TKESubENI);
         }
     }
 }

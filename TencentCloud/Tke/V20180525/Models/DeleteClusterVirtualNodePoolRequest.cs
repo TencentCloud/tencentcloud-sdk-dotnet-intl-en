@@ -31,13 +31,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// List of virtual node pool IDs
+        /// Super Node Pool ID list
         /// </summary>
         [JsonProperty("NodePoolIds")]
         public string[] NodePoolIds{ get; set; }
 
         /// <summary>
-        /// Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+        /// Mandatory deletion or not. If there are pods on the super node, and you choose non-mandatory deletion, the deletion will fail.
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }

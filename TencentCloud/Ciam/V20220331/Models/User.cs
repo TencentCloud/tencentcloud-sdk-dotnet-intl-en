@@ -161,6 +161,13 @@ namespace TencentCloud.Ciam.V20220331.Models
         public string AlipayUserId{ get; set; }
 
         /// <summary>
+        /// WeCom user ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WeComUserId")]
+        public string WeComUserId{ get; set; }
+
+        /// <summary>
         /// Description
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -333,6 +340,7 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "WechatOpenId", this.WechatOpenId);
             this.SetParamSimple(map, prefix + "WechatUnionId", this.WechatUnionId);
             this.SetParamSimple(map, prefix + "AlipayUserId", this.AlipayUserId);
+            this.SetParamSimple(map, prefix + "WeComUserId", this.WeComUserId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Locale", this.Locale);

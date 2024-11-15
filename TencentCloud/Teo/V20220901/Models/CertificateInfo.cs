@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the server certificate.
+        /// Certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

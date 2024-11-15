@@ -25,16 +25,16 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Container networking configuration information for the cluster
-        /// </summary>
-        [JsonProperty("ClusterCIDRSettings")]
-        public ClusterCIDRSettings ClusterCIDRSettings{ get; set; }
-
-        /// <summary>
         /// Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// Container networking configuration information for the cluster
+        /// </summary>
+        [JsonProperty("ClusterCIDRSettings")]
+        public ClusterCIDRSettings ClusterCIDRSettings{ get; set; }
 
         /// <summary>
         /// Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
@@ -78,14 +78,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtensionAddons")]
         public ExtensionAddon[] ExtensionAddons{ get; set; }
 
+        /// <summary>
+        /// CDC Id
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);
             this.SetParamArrayObj(map, prefix + "RunInstancesForNode.", this.RunInstancesForNode);
             this.SetParamObj(map, prefix + "ClusterBasicSettings.", this.ClusterBasicSettings);
             this.SetParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
@@ -93,6 +99,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
             this.SetParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
             this.SetParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

@@ -32,8 +32,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? DesiredPodNumber{ get; set; }
 
         /// <summary>
-        /// GPU driver parameters
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// GPU driver-related parameters. Relevant GPU parameters can be found at: https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("GPUArgs")]
         public GPUArgs GPUArgs{ get; set; }

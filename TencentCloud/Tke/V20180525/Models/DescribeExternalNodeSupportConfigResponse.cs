@@ -1,0 +1,154 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tke.V20180525.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeExternalNodeSupportConfigResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC. The network segment must be within the private network segment, for example, 10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16.
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterCIDR")]
+        public string ClusterCIDR{ get; set; }
+
+        /// <summary>
+        /// Cluster network plugin type, support: CiliumBGP, CiliumVXLan
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// Subnet ID
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// Whether to enable third-party node direct connect support
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
+
+        /// <summary>
+        /// BGP AS number of the switch to which the node belongs
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("AS")]
+        public string AS{ get; set; }
+
+        /// <summary>
+        /// Switch IP of the switch to which the node belongs
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SwitchIP")]
+        public string SwitchIP{ get; set; }
+
+        /// <summary>
+        /// Enabling third-party node pool status
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// Reason if enabling failed
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("FailedReason")]
+        public string FailedReason{ get; set; }
+
+        /// <summary>
+        /// Private Network Access Address
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Master")]
+        public string Master{ get; set; }
+
+        /// <summary>
+        /// Image Repository Proxy Address
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Proxy")]
+        public string Proxy{ get; set; }
+
+        /// <summary>
+        /// Used to record which step the enabling of external nodes process is at
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Progress")]
+        public Step[] Progress{ get; set; }
+
+        /// <summary>
+        /// Whether to enable third-party node public network connection support
+        /// </summary>
+        [JsonProperty("EnabledPublicConnect")]
+        public bool? EnabledPublicConnect{ get; set; }
+
+        /// <summary>
+        /// Public Network Connection Address of the registered node public network version
+        /// </summary>
+        [JsonProperty("PublicConnectUrl")]
+        public string PublicConnectUrl{ get; set; }
+
+        /// <summary>
+        /// Custom Domain Name of the registered node public network version
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("PublicCustomDomain")]
+        public string PublicCustomDomain{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ClusterCIDR", this.ClusterCIDR);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "AS", this.AS);
+            this.SetParamSimple(map, prefix + "SwitchIP", this.SwitchIP);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FailedReason", this.FailedReason);
+            this.SetParamSimple(map, prefix + "Master", this.Master);
+            this.SetParamSimple(map, prefix + "Proxy", this.Proxy);
+            this.SetParamArrayObj(map, prefix + "Progress.", this.Progress);
+            this.SetParamSimple(map, prefix + "EnabledPublicConnect", this.EnabledPublicConnect);
+            this.SetParamSimple(map, prefix + "PublicConnectUrl", this.PublicConnectUrl);
+            this.SetParamSimple(map, prefix + "PublicCustomDomain", this.PublicCustomDomain);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+

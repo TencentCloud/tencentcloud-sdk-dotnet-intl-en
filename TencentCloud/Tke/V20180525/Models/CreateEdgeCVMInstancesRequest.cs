@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID. Edge clusters need to enable public network access before adding CVM nodes.
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }

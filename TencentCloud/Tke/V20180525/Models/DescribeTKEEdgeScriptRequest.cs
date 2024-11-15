@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// ENI
+        /// Network Card Name, specifies the network card used by the kubelet on edge nodes to register with the apiserver.
         /// </summary>
         [JsonProperty("Interface")]
         public string Interface{ get; set; }

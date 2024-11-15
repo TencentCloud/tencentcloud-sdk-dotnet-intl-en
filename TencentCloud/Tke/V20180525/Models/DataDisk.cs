@@ -53,18 +53,18 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? AutoFormatAndMount{ get; set; }
 
         /// <summary>
-        /// Mounted device name or partition name (only required when adding an existing node)
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("DiskPartition")]
-        public string DiskPartition{ get; set; }
-
-        /// <summary>
         /// Mounting directory
         /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("MountTarget")]
         public string MountTarget{ get; set; }
+
+        /// <summary>
+        /// Mounted device name or partition name (only required when adding an existing node)
+        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DiskPartition")]
+        public string DiskPartition{ get; set; }
 
 
         /// <summary>
@@ -76,8 +76,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "FileSystem", this.FileSystem);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
-            this.SetParamSimple(map, prefix + "DiskPartition", this.DiskPartition);
             this.SetParamSimple(map, prefix + "MountTarget", this.MountTarget);
+            this.SetParamSimple(map, prefix + "DiskPartition", this.DiskPartition);
         }
     }
 }

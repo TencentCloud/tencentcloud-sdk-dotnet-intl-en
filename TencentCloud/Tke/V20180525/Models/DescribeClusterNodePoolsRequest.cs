@@ -31,25 +31,24 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// ·  NodePoolsName
-        ///     Filters by the node pool name
+        /// · "Name":"NodePoolsName","Values": ["test"]
+        ///     Filter by [Node Pool Name].
         ///     Type: String
-        ///     Required: No
+        ///         Required: No
         /// 
-        /// ·  NodePoolsId
-        ///     Filters by the node pool ID
-        ///     Type: String
-        ///     Required: No
         /// 
-        /// ·  tags
-        ///     Filters by key-value pairs of tags
-        ///     Type: String
-        ///     Required: No
         /// 
-        /// ·  tag:tag-key
-        ///     Filters by key-value pairs of tags
+        /// ·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
+        ///     Filter by [Node Pool ID].
         ///     Type: String
-        ///     Required: No
+        ///         Required: No
+        /// 
+        /// 
+        /// 
+        /// ·  "Name":"Tags","Values": ["abc:1"]
+        ///     Filter by [Key-value Pairs of Tags].
+        ///     Type: String
+        ///         Required: No
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

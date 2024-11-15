@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1013";
+       private const string sdkVersion = "SDK_NET_3.0.1014";
 
         /// <summary>
         /// Client constructor.
@@ -369,6 +369,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateL4ProxyRulesResponse CreateL4ProxyRulesSync(CreateL4ProxyRulesRequest req)
         {
             return InternalRequestAsync<CreateL4ProxyRulesResponse>(req, "CreateL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
+        public Task<CreateLoadBalancerResponse> CreateLoadBalancer(CreateLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<CreateLoadBalancerResponse>(req, "CreateLoadBalancer");
+        }
+
+        /// <summary>
+        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
+        public CreateLoadBalancerResponse CreateLoadBalancerSync(CreateLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<CreateLoadBalancerResponse>(req, "CreateLoadBalancer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -780,6 +801,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteL4ProxyRulesResponse DeleteL4ProxyRulesSync(DeleteL4ProxyRulesRequest req)
         {
             return InternalRequestAsync<DeleteL4ProxyRulesResponse>(req, "DeleteL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
+        public Task<DeleteLoadBalancerResponse> DeleteLoadBalancer(DeleteLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<DeleteLoadBalancerResponse>(req, "DeleteLoadBalancer");
+        }
+
+        /// <summary>
+        /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
+        public DeleteLoadBalancerResponse DeleteLoadBalancerSync(DeleteLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<DeleteLoadBalancerResponse>(req, "DeleteLoadBalancer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1414,6 +1456,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the LoadBalancer list. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerListRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerListResponse"/></returns>
+        public Task<DescribeLoadBalancerListResponse> DescribeLoadBalancerList(DescribeLoadBalancerListRequest req)
+        {
+            return InternalRequestAsync<DescribeLoadBalancerListResponse>(req, "DescribeLoadBalancerList");
+        }
+
+        /// <summary>
+        /// This API is used to query the LoadBalancer list. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerListRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerListResponse"/></returns>
+        public DescribeLoadBalancerListResponse DescribeLoadBalancerListSync(DescribeLoadBalancerListRequest req)
+        {
+            return InternalRequestAsync<DescribeLoadBalancerListResponse>(req, "DescribeLoadBalancerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain a list of origin groups.
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginGroupRequest"/></param>
@@ -1431,6 +1494,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeOriginGroupResponse DescribeOriginGroupSync(DescribeOriginGroupRequest req)
         {
             return InternalRequestAsync<DescribeOriginGroupResponse>(req, "DescribeOriginGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the health status of origin server groups under a LoadBalancer. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginGroupHealthStatusRequest"/></param>
+        /// <returns><see cref="DescribeOriginGroupHealthStatusResponse"/></returns>
+        public Task<DescribeOriginGroupHealthStatusResponse> DescribeOriginGroupHealthStatus(DescribeOriginGroupHealthStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginGroupHealthStatusResponse>(req, "DescribeOriginGroupHealthStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query the health status of origin server groups under a LoadBalancer. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginGroupHealthStatusRequest"/></param>
+        /// <returns><see cref="DescribeOriginGroupHealthStatusResponse"/></returns>
+        public DescribeOriginGroupHealthStatusResponse DescribeOriginGroupHealthStatusSync(DescribeOriginGroupHealthStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginGroupHealthStatusResponse>(req, "DescribeOriginGroupHealthStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1672,7 +1756,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the L7 data recorded over time.
+        /// This API is used to query the time series data of the L7 domain name. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
@@ -1682,7 +1766,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the L7 data recorded over time.
+        /// This API is used to query the time series data of the L7 domain name. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
@@ -1693,7 +1777,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the time-series L7 cached data.
+        /// This API is used to query the time series traffic data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
@@ -1703,7 +1787,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the time-series L7 cached data.
+        /// This API is used to query the time series traffic data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
@@ -1714,7 +1798,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the top-ranked L7 traffic data.
+        /// This API is used to query the top N data of the L7 domain name by a specified dimension. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7AnalysisDataResponse"/></returns>
@@ -1724,7 +1808,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the top-ranked L7 traffic data.
+        /// This API is used to query the top N data of the L7 domain name by a specified dimension. Note that there is a delay of about 10 minutes for this API. It is recommended to pull data from 10 minutes before the current time.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7AnalysisDataResponse"/></returns>
@@ -1735,7 +1819,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the cached L7 top-ranked data.
+        /// This API is used to query the top N data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80646?from_cn_redirect=1"> DescribeTopL7AnalysisData</a> API instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
@@ -1745,7 +1829,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the cached L7 top-ranked data.
+        /// This API is used to query the top N data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80646?from_cn_redirect=1"> DescribeTopL7AnalysisData</a> API instead.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
@@ -2307,6 +2391,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to modify LoadBalancer configuration. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerResponse"/></returns>
+        public Task<ModifyLoadBalancerResponse> ModifyLoadBalancer(ModifyLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<ModifyLoadBalancerResponse>(req, "ModifyLoadBalancer");
+        }
+
+        /// <summary>
+        /// This API is used to modify LoadBalancer configuration. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerResponse"/></returns>
+        public ModifyLoadBalancerResponse ModifyLoadBalancerSync(ModifyLoadBalancerRequest req)
+        {
+            return InternalRequestAsync<ModifyLoadBalancerResponse>(req, "ModifyLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
@@ -2349,7 +2454,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+        /// This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType);</li><li>Does not support modifying the data delivery area (Area);</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
         /// </summary>
         /// <param name="req"><see cref="ModifyRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="ModifyRealtimeLogDeliveryTaskResponse"/></returns>
@@ -2359,7 +2464,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType)</li><li>Does not support modifying the data delivery area (Area)</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
+        /// This API is used to modify the real-time log delivery task configuration. This API has the following restrictions:<li>Does not support modifying the destination type of the real-time log delivery task (TaskType);</li><li>Does not support modifying the data delivery type (LogType);</li><li>Does not support modifying the data delivery area (Area);</li><li>Does not support modifying the detailed destination configuration, such as log set and log topic, when the destination of the original real-time log delivery task is Tencent Cloud CLS.</li>
         /// </summary>
         /// <param name="req"><see cref="ModifyRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="ModifyRealtimeLogDeliveryTaskResponse"/></returns>

@@ -26,24 +26,32 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// cuDNN version
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
         /// cuDNN name
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Doc name of cuDNN
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DocName")]
         public string DocName{ get; set; }
 
         /// <summary>
         /// Dev name of cuDNN
+        /// 
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DevName")]
         public string DevName{ get; set; }

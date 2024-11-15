@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string PluginId{ get; set; }
 
         /// <summary>
-        /// ID of the service to be operated
+        /// ID of the service to be operated.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }

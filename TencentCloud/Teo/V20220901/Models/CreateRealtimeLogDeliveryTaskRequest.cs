@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Name of a real-time log shipping task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
+        /// Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// Type of a real-time log shipping task. Valid values:
+        /// Type of a real-time log delivery task. Valid values:
         /// <li>cls: push to Tencent Cloud CLS;</li>
         /// <li>custom_endpoint: push to a custom HTTP(S) address;</li>
         /// <li>s3: push to an AWS S3-compatible bucket address.</li>
@@ -46,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log shipping task. Valid value examples:
+        /// List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
         /// <li>L7 domain name: domain.example.com;</li>
         /// <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
         /// </summary>
@@ -54,7 +54,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] EntityList{ get; set; }
 
         /// <summary>
-        /// Data shipping type. Valid values:
+        /// Dataset type. Valid values:
         /// <li>domain: site acceleration logs;</li>
         /// <li>application: L4 proxy logs;</li>
         /// <li>web-rateLiming: rate limit and CC attack defense logs;</li>
@@ -66,7 +66,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Data shipping area. Valid values:
+        /// Data area. Valid values:
         /// <li>mainland: within the Chinese mainland;</li>
         /// <li>overseas: global (excluding the Chinese mainland).</li>
         /// </summary>
@@ -74,25 +74,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// List of predefined fields for shipping.
+        /// List of predefined fields for delivery.
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// List of custom fields for shipping. It supports extracting specified field values from HTTP request headers, response headers, and cookies. The name of each custom field must be unique and the maximum number of fields is 200.
+        /// The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
         /// </summary>
         [JsonProperty("CustomFields")]
         public CustomField[] CustomFields{ get; set; }
 
         /// <summary>
-        /// Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.
+        /// Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
         /// </summary>
         [JsonProperty("DeliveryConditions")]
         public DeliveryCondition[] DeliveryConditions{ get; set; }
 
         /// <summary>
-        /// Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.
+        /// Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not specified, the sampling ratio is 100%.
         /// </summary>
         [JsonProperty("Sample")]
         public ulong? Sample{ get; set; }

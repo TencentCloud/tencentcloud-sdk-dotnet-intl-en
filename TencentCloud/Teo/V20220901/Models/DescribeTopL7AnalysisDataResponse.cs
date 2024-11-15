@@ -31,8 +31,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The list of top-ranked L7 traffic data.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Data")]
         public TopDataRecord[] Data{ get; set; }
