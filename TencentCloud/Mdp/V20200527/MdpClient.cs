@@ -28,7 +28,7 @@ namespace TencentCloud.Mdp.V20200527
 
        private const string endpoint = "mdp.tencentcloudapi.com";
        private const string version = "2020-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1014";
+       private const string sdkVersion = "SDK_NET_3.0.1015";
 
         /// <summary>
         /// Client constructor.
@@ -138,6 +138,90 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
+        /// Create a linear assembly channel.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<CreateStreamPackageLinearAssemblyChannelResponse> CreateStreamPackageLinearAssemblyChannel(CreateStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageLinearAssemblyChannelResponse>(req, "CreateStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// Create a linear assembly channel.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public CreateStreamPackageLinearAssemblyChannelResponse CreateStreamPackageLinearAssemblyChannelSync(CreateStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageLinearAssemblyChannelResponse>(req, "CreateStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a linear assembly program.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public Task<CreateStreamPackageLinearAssemblyProgramResponse> CreateStreamPackageLinearAssemblyProgram(CreateStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageLinearAssemblyProgramResponse>(req, "CreateStreamPackageLinearAssemblyProgram");
+        }
+
+        /// <summary>
+        /// Create a linear assembly program.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public CreateStreamPackageLinearAssemblyProgramResponse CreateStreamPackageLinearAssemblyProgramSync(CreateStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageLinearAssemblyProgramResponse>(req, "CreateStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create channel linear assembly Source.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSourceResponse"/></returns>
+        public Task<CreateStreamPackageSourceResponse> CreateStreamPackageSource(CreateStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSourceResponse>(req, "CreateStreamPackageSource");
+        }
+
+        /// <summary>
+        /// Create channel linear assembly Source.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSourceResponse"/></returns>
+        public CreateStreamPackageSourceResponse CreateStreamPackageSourceSync(CreateStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSourceResponse>(req, "CreateStreamPackageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create Linear Assembly SourceLocation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSourceLocationResponse"/></returns>
+        public Task<CreateStreamPackageSourceLocationResponse> CreateStreamPackageSourceLocation(CreateStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSourceLocationResponse>(req, "CreateStreamPackageSourceLocation");
+        }
+
+        /// <summary>
+        /// Create Linear Assembly SourceLocation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSourceLocationResponse"/></returns>
+        public CreateStreamPackageSourceLocationResponse CreateStreamPackageSourceLocationSync(CreateStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSourceLocationResponse>(req, "CreateStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete endpoints from a StreamPackage channel in batches.
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamPackageChannelEndpointsRequest"/></param>
@@ -218,6 +302,132 @@ namespace TencentCloud.Mdp.V20200527
         public DeleteStreamPackageHarvestJobsResponse DeleteStreamPackageHarvestJobsSync(DeleteStreamPackageHarvestJobsRequest req)
         {
             return InternalRequestAsync<DeleteStreamPackageHarvestJobsResponse>(req, "DeleteStreamPackageHarvestJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete channel linear assemblyChannel.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyChannelResponse> DeleteStreamPackageLinearAssemblyChannel(DeleteStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyChannelResponse>(req, "DeleteStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// Delete channel linear assemblyChannel.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyChannelResponse DeleteStreamPackageLinearAssemblyChannelSync(DeleteStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyChannelResponse>(req, "DeleteStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete channels in batches and linearly assemble channels.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyChannelsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyChannelsResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyChannelsResponse> DeleteStreamPackageLinearAssemblyChannels(DeleteStreamPackageLinearAssemblyChannelsRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyChannelsResponse>(req, "DeleteStreamPackageLinearAssemblyChannels");
+        }
+
+        /// <summary>
+        /// Delete channels in batches and linearly assemble channels.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyChannelsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyChannelsResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyChannelsResponse DeleteStreamPackageLinearAssemblyChannelsSync(DeleteStreamPackageLinearAssemblyChannelsRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyChannelsResponse>(req, "DeleteStreamPackageLinearAssemblyChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete Channel Linear Assembly Program.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyProgramResponse> DeleteStreamPackageLinearAssemblyProgram(DeleteStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramResponse>(req, "DeleteStreamPackageLinearAssemblyProgram");
+        }
+
+        /// <summary>
+        /// Delete Channel Linear Assembly Program.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyProgramResponse DeleteStreamPackageLinearAssemblyProgramSync(DeleteStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramResponse>(req, "DeleteStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Batch deletion of channels linear assembly program.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramsResponse"/></returns>
+        public Task<DeleteStreamPackageLinearAssemblyProgramsResponse> DeleteStreamPackageLinearAssemblyPrograms(DeleteStreamPackageLinearAssemblyProgramsRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramsResponse>(req, "DeleteStreamPackageLinearAssemblyPrograms");
+        }
+
+        /// <summary>
+        /// Batch deletion of channels linear assembly program.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageLinearAssemblyProgramsRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageLinearAssemblyProgramsResponse"/></returns>
+        public DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyProgramsSync(DeleteStreamPackageLinearAssemblyProgramsRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramsResponse>(req, "DeleteStreamPackageLinearAssemblyPrograms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete channel linear assembly Source.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSourceResponse"/></returns>
+        public Task<DeleteStreamPackageSourceResponse> DeleteStreamPackageSource(DeleteStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSourceResponse>(req, "DeleteStreamPackageSource");
+        }
+
+        /// <summary>
+        /// Delete channel linear assembly Source.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSourceResponse"/></returns>
+        public DeleteStreamPackageSourceResponse DeleteStreamPackageSourceSync(DeleteStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSourceResponse>(req, "DeleteStreamPackageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Batch delete media packaging SourceLocation.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSourceLocationResponse"/></returns>
+        public Task<DeleteStreamPackageSourceLocationResponse> DeleteStreamPackageSourceLocation(DeleteStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSourceLocationResponse>(req, "DeleteStreamPackageSourceLocation");
+        }
+
+        /// <summary>
+        /// Batch delete media packaging SourceLocation.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSourceLocationResponse"/></returns>
+        public DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocationSync(DeleteStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSourceLocationResponse>(req, "DeleteStreamPackageSourceLocation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -306,6 +516,258 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
+        /// Query channel linear assembly Channel information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyChannelResponse> DescribeStreamPackageLinearAssemblyChannel(DescribeStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelResponse>(req, "DescribeStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Channel information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyChannelResponse DescribeStreamPackageLinearAssemblyChannelSync(DescribeStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelResponse>(req, "DescribeStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query linear assembly channel alarm information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelAlertsResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyChannelAlertsResponse> DescribeStreamPackageLinearAssemblyChannelAlerts(DescribeStreamPackageLinearAssemblyChannelAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelAlertsResponse>(req, "DescribeStreamPackageLinearAssemblyChannelAlerts");
+        }
+
+        /// <summary>
+        /// Query linear assembly channel alarm information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelAlertsResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyChannelAlertsResponse DescribeStreamPackageLinearAssemblyChannelAlertsSync(DescribeStreamPackageLinearAssemblyChannelAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelAlertsResponse>(req, "DescribeStreamPackageLinearAssemblyChannelAlerts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Channel information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelsResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyChannelsResponse> DescribeStreamPackageLinearAssemblyChannels(DescribeStreamPackageLinearAssemblyChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelsResponse>(req, "DescribeStreamPackageLinearAssemblyChannels");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Channel information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyChannelsResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyChannelsResponse DescribeStreamPackageLinearAssemblyChannelsSync(DescribeStreamPackageLinearAssemblyChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyChannelsResponse>(req, "DescribeStreamPackageLinearAssemblyChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly program information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyProgramResponse> DescribeStreamPackageLinearAssemblyProgram(DescribeStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramResponse>(req, "DescribeStreamPackageLinearAssemblyProgram");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly program information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyProgramResponse DescribeStreamPackageLinearAssemblyProgramSync(DescribeStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramResponse>(req, "DescribeStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Programl assembly scheduling information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramSchedulesRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramSchedulesResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyProgramSchedulesResponse> DescribeStreamPackageLinearAssemblyProgramSchedules(DescribeStreamPackageLinearAssemblyProgramSchedulesRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramSchedulesResponse>(req, "DescribeStreamPackageLinearAssemblyProgramSchedules");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Programl assembly scheduling information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramSchedulesRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramSchedulesResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyProgramSchedulesResponse DescribeStreamPackageLinearAssemblyProgramSchedulesSync(DescribeStreamPackageLinearAssemblyProgramSchedulesRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramSchedulesResponse>(req, "DescribeStreamPackageLinearAssemblyProgramSchedules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Programl information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramsResponse"/></returns>
+        public Task<DescribeStreamPackageLinearAssemblyProgramsResponse> DescribeStreamPackageLinearAssemblyPrograms(DescribeStreamPackageLinearAssemblyProgramsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramsResponse>(req, "DescribeStreamPackageLinearAssemblyPrograms");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Programl information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageLinearAssemblyProgramsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageLinearAssemblyProgramsResponse"/></returns>
+        public DescribeStreamPackageLinearAssemblyProgramsResponse DescribeStreamPackageLinearAssemblyProgramsSync(DescribeStreamPackageLinearAssemblyProgramsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageLinearAssemblyProgramsResponse>(req, "DescribeStreamPackageLinearAssemblyPrograms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Source information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceResponse"/></returns>
+        public Task<DescribeStreamPackageSourceResponse> DescribeStreamPackageSource(DescribeStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceResponse>(req, "DescribeStreamPackageSource");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Source information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceResponse"/></returns>
+        public DescribeStreamPackageSourceResponse DescribeStreamPackageSourceSync(DescribeStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceResponse>(req, "DescribeStreamPackageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Source alarm information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceAlertsResponse"/></returns>
+        public Task<DescribeStreamPackageSourceAlertsResponse> DescribeStreamPackageSourceAlerts(DescribeStreamPackageSourceAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceAlertsResponse>(req, "DescribeStreamPackageSourceAlerts");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Source alarm information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceAlertsResponse"/></returns>
+        public DescribeStreamPackageSourceAlertsResponse DescribeStreamPackageSourceAlertsSync(DescribeStreamPackageSourceAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceAlertsResponse>(req, "DescribeStreamPackageSourceAlerts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly sourceLocation information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationResponse"/></returns>
+        public Task<DescribeStreamPackageSourceLocationResponse> DescribeStreamPackageSourceLocation(DescribeStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationResponse>(req, "DescribeStreamPackageSourceLocation");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly sourceLocation information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationResponse"/></returns>
+        public DescribeStreamPackageSourceLocationResponse DescribeStreamPackageSourceLocationSync(DescribeStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationResponse>(req, "DescribeStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Location alarm information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationAlertsResponse"/></returns>
+        public Task<DescribeStreamPackageSourceLocationAlertsResponse> DescribeStreamPackageSourceLocationAlerts(DescribeStreamPackageSourceLocationAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationAlertsResponse>(req, "DescribeStreamPackageSourceLocationAlerts");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Location alarm information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationAlertsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationAlertsResponse"/></returns>
+        public DescribeStreamPackageSourceLocationAlertsResponse DescribeStreamPackageSourceLocationAlertsSync(DescribeStreamPackageSourceLocationAlertsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationAlertsResponse>(req, "DescribeStreamPackageSourceLocationAlerts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly SourceLocation information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationsResponse"/></returns>
+        public Task<DescribeStreamPackageSourceLocationsResponse> DescribeStreamPackageSourceLocations(DescribeStreamPackageSourceLocationsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationsResponse>(req, "DescribeStreamPackageSourceLocations");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly SourceLocation information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourceLocationsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourceLocationsResponse"/></returns>
+        public DescribeStreamPackageSourceLocationsResponse DescribeStreamPackageSourceLocationsSync(DescribeStreamPackageSourceLocationsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourceLocationsResponse>(req, "DescribeStreamPackageSourceLocations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Source information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourcesRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourcesResponse"/></returns>
+        public Task<DescribeStreamPackageSourcesResponse> DescribeStreamPackageSources(DescribeStreamPackageSourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourcesResponse>(req, "DescribeStreamPackageSources");
+        }
+
+        /// <summary>
+        /// Query channel linear assembly Source information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSourcesRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSourcesResponse"/></returns>
+        public DescribeStreamPackageSourcesResponse DescribeStreamPackageSourcesSync(DescribeStreamPackageSourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSourcesResponse>(req, "DescribeStreamPackageSources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a StreamPackage channel.
         /// </summary>
         /// <param name="req"><see cref="ModifyStreamPackageChannelRequest"/></param>
@@ -365,6 +827,132 @@ namespace TencentCloud.Mdp.V20200527
         public ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfoSync(ModifyStreamPackageChannelInputAuthInfoRequest req)
         {
             return InternalRequestAsync<ModifyStreamPackageChannelInputAuthInfoResponse>(req, "ModifyStreamPackageChannelInputAuthInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify channel linear assembly Channel configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<ModifyStreamPackageLinearAssemblyChannelResponse> ModifyStreamPackageLinearAssemblyChannel(ModifyStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageLinearAssemblyChannelResponse>(req, "ModifyStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// Modify channel linear assembly Channel configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public ModifyStreamPackageLinearAssemblyChannelResponse ModifyStreamPackageLinearAssemblyChannelSync(ModifyStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageLinearAssemblyChannelResponse>(req, "ModifyStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify channel linear assembly Program configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public Task<ModifyStreamPackageLinearAssemblyProgramResponse> ModifyStreamPackageLinearAssemblyProgram(ModifyStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageLinearAssemblyProgramResponse>(req, "ModifyStreamPackageLinearAssemblyProgram");
+        }
+
+        /// <summary>
+        /// Modify channel linear assembly Program configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageLinearAssemblyProgramRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageLinearAssemblyProgramResponse"/></returns>
+        public ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgramSync(ModifyStreamPackageLinearAssemblyProgramRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageLinearAssemblyProgramResponse>(req, "ModifyStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify channel linear assembly Source configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSourceResponse"/></returns>
+        public Task<ModifyStreamPackageSourceResponse> ModifyStreamPackageSource(ModifyStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSourceResponse>(req, "ModifyStreamPackageSource");
+        }
+
+        /// <summary>
+        /// Modify channel linear assembly Source configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSourceRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSourceResponse"/></returns>
+        public ModifyStreamPackageSourceResponse ModifyStreamPackageSourceSync(ModifyStreamPackageSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSourceResponse>(req, "ModifyStreamPackageSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify channel linear assembly SourceLocation configuration
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSourceLocationResponse"/></returns>
+        public Task<ModifyStreamPackageSourceLocationResponse> ModifyStreamPackageSourceLocation(ModifyStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSourceLocationResponse>(req, "ModifyStreamPackageSourceLocation");
+        }
+
+        /// <summary>
+        /// Modify channel linear assembly SourceLocation configuration
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSourceLocationRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSourceLocationResponse"/></returns>
+        public ModifyStreamPackageSourceLocationResponse ModifyStreamPackageSourceLocationSync(ModifyStreamPackageSourceLocationRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSourceLocationResponse>(req, "ModifyStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Start Linear Assembly Channel.
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="StartStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<StartStreamPackageLinearAssemblyChannelResponse> StartStreamPackageLinearAssemblyChannel(StartStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<StartStreamPackageLinearAssemblyChannelResponse>(req, "StartStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// Start Linear Assembly Channel.
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="StartStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannelSync(StartStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<StartStreamPackageLinearAssemblyChannelResponse>(req, "StartStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Stop linear assembly channel.
+        /// </summary>
+        /// <param name="req"><see cref="StopStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="StopStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public Task<StopStreamPackageLinearAssemblyChannelResponse> StopStreamPackageLinearAssemblyChannel(StopStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<StopStreamPackageLinearAssemblyChannelResponse>(req, "StopStreamPackageLinearAssemblyChannel");
+        }
+
+        /// <summary>
+        /// Stop linear assembly channel.
+        /// </summary>
+        /// <param name="req"><see cref="StopStreamPackageLinearAssemblyChannelRequest"/></param>
+        /// <returns><see cref="StopStreamPackageLinearAssemblyChannelResponse"/></returns>
+        public StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannelSync(StopStreamPackageLinearAssemblyChannelRequest req)
+        {
+            return InternalRequestAsync<StopStreamPackageLinearAssemblyChannelResponse>(req, "StopStreamPackageLinearAssemblyChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

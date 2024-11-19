@@ -26,6 +26,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         
         /// <summary>
         /// Country code.
+        /// Parameter value is not allowed to be 7,380,86.
         /// </summary>
         [JsonProperty("CountryCode")]
         public string CountryCode{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1014</VersionPrefix>
+    <VersionPrefix>3.0.1015</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,12 +48,15 @@
 
   <ItemGroup>
     <Compile Include="V20200527\MdpClient.cs" />
+    <Compile Include="V20200527\Models\AdBreakInfo.cs" />
     <Compile Include="V20200527\Models\AliasValueConf.cs" />
     <Compile Include="V20200527\Models\BindNewLVBDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\BindNewLVBDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\CacheInfo.cs" />
     <Compile Include="V20200527\Models\CacheInfoInfo.cs" />
+    <Compile Include="V20200527\Models\ChannelAlertResp.cs" />
     <Compile Include="V20200527\Models\ChannelInfo.cs" />
+    <Compile Include="V20200527\Models\ClipRangeInfo.cs" />
     <Compile Include="V20200527\Models\ConfigAliasesInfo.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointResponse.cs" />
@@ -61,6 +64,14 @@
     <Compile Include="V20200527\Models\CreateStreamPackageChannelResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageHarvestJobRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageHarvestJobResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageLinearAssemblyProgramRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageSourceLocationRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageSourceLocationResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageSourceRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageSourceResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsRequest.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelsRequest.cs" />
@@ -69,6 +80,18 @@
     <Compile Include="V20200527\Models\DeleteStreamPackageHarvestJobResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageHarvestJobsRequest.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageHarvestJobsResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyChannelsRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyProgramRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyProgramsRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyProgramsResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageSourceLocationRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageSourceLocationResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageSourceRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageSourceResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageChannelRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageChannelResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageChannelsRequest.cs" />
@@ -77,19 +100,77 @@
     <Compile Include="V20200527\Models\DescribeStreamPackageHarvestJobResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageHarvestJobsRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageHarvestJobsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyChannelAlertsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyChannelAlertsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyChannelsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramSchedulesRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramSchedulesResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceAlertsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceAlertsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceLocationAlertsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceLocationAlertsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceLocationRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceLocationResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceLocationsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceLocationsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourceResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourcesRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSourcesResponse.cs" />
     <Compile Include="V20200527\Models\EndpointAuthInfo.cs" />
     <Compile Include="V20200527\Models\EndpointInfo.cs" />
     <Compile Include="V20200527\Models\HarvestJobResp.cs" />
     <Compile Include="V20200527\Models\InputAuthInfo.cs" />
     <Compile Include="V20200527\Models\InputInfo.cs" />
+    <Compile Include="V20200527\Models\LinearAssemblyChannelInfo.cs" />
+    <Compile Include="V20200527\Models\LinearAssemblyProgramInfo.cs" />
+    <Compile Include="V20200527\Models\LocationAlert.cs" />
+    <Compile Include="V20200527\Models\ManifestInfo.cs" />
+    <Compile Include="V20200527\Models\Metadata.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelEndpointRequest.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelEndpointResponse.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelInputAuthInfoRequest.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelInputAuthInfoResponse.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelRequest.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageChannelResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageLinearAssemblyProgramRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageSourceLocationRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageSourceLocationResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageSourceRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageSourceResponse.cs" />
+    <Compile Include="V20200527\Models\NameServer.cs" />
+    <Compile Include="V20200527\Models\OutputInfo.cs" />
+    <Compile Include="V20200527\Models\OutputReq.cs" />
+    <Compile Include="V20200527\Models\PlaybackInfo.cs" />
+    <Compile Include="V20200527\Models\PlaybackInfoReq.cs" />
     <Compile Include="V20200527\Models\PointInfo.cs" />
+    <Compile Include="V20200527\Models\ProgramAlertCounts.cs" />
+    <Compile Include="V20200527\Models\ProgramAlertInfos.cs" />
+    <Compile Include="V20200527\Models\ProgramScheduleInfo.cs" />
     <Compile Include="V20200527\Models\SSAIConf.cs" />
+    <Compile Include="V20200527\Models\SegmentDeliverInfo.cs" />
+    <Compile Include="V20200527\Models\SlateInfo.cs" />
+    <Compile Include="V20200527\Models\SourceAlert.cs" />
+    <Compile Include="V20200527\Models\SourceInfo.cs" />
+    <Compile Include="V20200527\Models\SourceLocationInfo.cs" />
+    <Compile Include="V20200527\Models\SourcePackageConf.cs" />
+    <Compile Include="V20200527\Models\SpliceInsertInfo.cs" />
+    <Compile Include="V20200527\Models\StartStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20200527\Models\StartStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20200527\Models\StopStreamPackageLinearAssemblyChannelRequest.cs" />
+    <Compile Include="V20200527\Models\StopStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20200527\Models\TimeShiftInfo.cs" />
+    <Compile Include="V20200527\Models\TimeSignalInfo.cs" />
     <Compile Include="V20200527\Models\UnbindCdnDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\UnbindCdnDomainWithChannelResponse.cs" />
   </ItemGroup>

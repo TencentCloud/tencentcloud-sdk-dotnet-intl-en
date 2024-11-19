@@ -25,25 +25,25 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// Channel ID
+        /// Channel ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// New channel name
+        /// New channel name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// New channel protocol. Valid values: HLS, DASH
+        /// New channel protocol. Valid values: HLS, DASH, CMAF.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Cache configuration
+        /// Cache configuration.
         /// </summary>
         [JsonProperty("CacheInfo")]
         public CacheInfo CacheInfo{ get; set; }

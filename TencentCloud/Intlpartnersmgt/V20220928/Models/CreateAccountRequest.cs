@@ -25,7 +25,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Account type of a new customer. Valid values: `personal`, `company`.
+        /// Account type of a new customer.
+        /// Valid values: `personal`, `company`.
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
@@ -38,7 +39,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string Mail{ get; set; }
 
         /// <summary>
-        /// Account password
+        /// Account password.
         /// Length limit: 8-20 characters
         /// A password must contain numbers, letters, and symbols (!@#$%^&*()). Space is not allowed.
         /// </summary>
@@ -52,13 +53,16 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string ConfirmPassword{ get; set; }
 
         /// <summary>
-        /// Customer's mobile number. The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. Starting from October 25, 2024, the system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
+        /// Customer's mobile number. 
+        /// The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed. 
+        /// The system will perform binding limit verification of the mobile number you provide, allowing a maximum of 5 accounts per mobile number.
         /// </summary>
         [JsonProperty("PhoneNum")]
         public string PhoneNum{ get; set; }
 
         /// <summary>
         /// Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+        /// Parameter value is not allowed to be 7,380,86.
         /// </summary>
         [JsonProperty("CountryCode")]
         public string CountryCode{ get; set; }
@@ -76,7 +80,9 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string Extended{ get; set; }
 
         /// <summary>
-        /// Verification code. Starting from October 25, 2024, a new parameter will be used to verify the validity of the mobile number you provide. When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
+        /// Verification code. 
+        /// It will be used to verify the validity of the mobile number you provide. 
+        /// When the interface is requested for the first time, a null value can be passed in. The interface will send a 6-digit verification code by SMS to the mobile number you provide, and you need to pass it in again together with other parameters after you receive it.
         /// </summary>
         [JsonProperty("VerifyCode")]
         public string VerifyCode{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1014";
+       private const string sdkVersion = "SDK_NET_3.0.1015";
 
         /// <summary>
         /// Client constructor.
@@ -104,7 +104,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to create Tencent Cloud customer accounts for first-level resellers/second-level resellers. After the account is created, it will be automatically bound to the partner account.Note:1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.2. Customers need to add personal information when logging in for the first time.3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+        /// This API is used to create Tencent Cloud customer accounts for first-level resellers/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
+        /// 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
+        /// 2.  Customers need to add personal information when logging in for the first time.
+        /// 3.  This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
         /// <returns><see cref="CreateAccountResponse"/></returns>
@@ -114,7 +117,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to create Tencent Cloud customer accounts for first-level resellers/second-level resellers. After the account is created, it will be automatically bound to the partner account.Note:1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.2. Customers need to add personal information when logging in for the first time.3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+        /// This API is used to create Tencent Cloud customer accounts for first-level resellers/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
+        /// 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
+        /// 2.  Customers need to add personal information when logging in for the first time.
+        /// 3.  This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
         /// <returns><see cref="CreateAccountResponse"/></returns>
