@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1015";
+       private const string sdkVersion = "SDK_NET_3.0.1016";
 
         /// <summary>
         /// Client constructor.
@@ -337,6 +337,27 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeCustomerUinResponse DescribeCustomerUinSync(DescribeCustomerUinRequest req)
         {
             return InternalRequestAsync<DescribeCustomerUinResponse>(req, "DescribeCustomerUin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to set and cancel forced service suspension.Reseller need to be allowlisted to use the API.
+        /// </summary>
+        /// <param name="req"><see cref="ForceQNRequest"/></param>
+        /// <returns><see cref="ForceQNResponse"/></returns>
+        public Task<ForceQNResponse> ForceQN(ForceQNRequest req)
+        {
+            return InternalRequestAsync<ForceQNResponse>(req, "ForceQN");
+        }
+
+        /// <summary>
+        /// This API is used to set and cancel forced service suspension.Reseller need to be allowlisted to use the API.
+        /// </summary>
+        /// <param name="req"><see cref="ForceQNRequest"/></param>
+        /// <returns><see cref="ForceQNResponse"/></returns>
+        public ForceQNResponse ForceQNSync(ForceQNRequest req)
+        {
+            return InternalRequestAsync<ForceQNResponse>(req, "ForceQN")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
