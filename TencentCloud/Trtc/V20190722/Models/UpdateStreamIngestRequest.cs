@@ -42,6 +42,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("StreamUrl")]
         public string StreamUrl{ get; set; }
 
+        /// <summary>
+        /// Volume. Valid value range: [0, 100], default value is 100, indicating the original volume.
+        /// </summary>
+        [JsonProperty("Volume")]
+        public ulong? Volume{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312
 
        private const string endpoint = "mariadb.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1016";
+       private const string sdkVersion = "SDK_NET_3.0.1017";
 
         /// <summary>
         /// Client constructor.
@@ -459,7 +459,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to obtain a temp u200drollback instance.
+        /// This API is used to obtain a temp rollback instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>
@@ -469,7 +469,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to obtain a temp u200drollback instance.
+        /// This API is used to obtain a temp rollback instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBTmpInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBTmpInstancesResponse"/></returns>

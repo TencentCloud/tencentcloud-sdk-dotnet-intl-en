@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1016";
+       private const string sdkVersion = "SDK_NET_3.0.1017";
 
         /// <summary>
         /// Client constructor.
@@ -1839,35 +1839,6 @@ namespace TencentCloud.Cdb.V20170320
         public DisassociateSecurityGroupsResponse DisassociateSecurityGroupsSync(DisassociateSecurityGroupsRequest req)
         {
             return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
-        /// 
-        /// This API was disused. You can refer to the CreateDBInstance API, and initialize the instance when creating it.
-        /// 
-        /// This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
-        /// </summary>
-        /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
-        /// <returns><see cref="InitDBInstancesResponse"/></returns>
-        public Task<InitDBInstancesResponse> InitDBInstances(InitDBInstancesRequest req)
-        {
-            return InternalRequestAsync<InitDBInstancesResponse>(req, "InitDBInstances");
-        }
-
-        /// <summary>
-        /// 该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
-        /// 
-        /// This API was disused. You can refer to the CreateDBInstance API, and initialize the instance when creating it.
-        /// 
-        /// This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
-        /// </summary>
-        /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
-        /// <returns><see cref="InitDBInstancesResponse"/></returns>
-        public InitDBInstancesResponse InitDBInstancesSync(InitDBInstancesRequest req)
-        {
-            return InternalRequestAsync<InitDBInstancesResponse>(req, "InitDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

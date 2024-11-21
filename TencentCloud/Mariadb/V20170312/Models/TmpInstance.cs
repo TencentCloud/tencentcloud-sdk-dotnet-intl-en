@@ -26,105 +26,105 @@ namespace TencentCloud.Mariadb.V20170312.Models
         
         /// <summary>
         /// Application ID
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Instance remarks
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceRemark")]
         public string InstanceRemark{ get; set; }
 
         /// <summary>
         /// Whether it is a temp instance. Valid values: `0` (non-temp instance), `1` (invalid temp instance), `2` (valid temp rollback instance).
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TempType")]
         public long? TempType{ get; set; }
 
         /// <summary>
         /// Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-1` (isolated), `-2` (eliminated).
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// Instance ID in the format of `tdsql-ow728lmc`
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Virtual instance IP
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// Virtual instance port
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
         /// Validity end time
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
         /// Source instance ID in the format of `tdsql-ow728lmc`
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SrcInstanceId")]
         public string SrcInstanceId{ get; set; }
 
         /// <summary>
         /// Instance status description
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
         /// Instance region
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// AZ of the instance
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
         /// Virtual IPv6 of the instance
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vipv6")]
         public string Vipv6{ get; set; }
 
         /// <summary>
         /// Instance IPv6 flag
-        /// Note: u200dThis field may returnu200d·nullu200d, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Ipv6Flag")]
         public ulong? Ipv6Flag{ get; set; }
