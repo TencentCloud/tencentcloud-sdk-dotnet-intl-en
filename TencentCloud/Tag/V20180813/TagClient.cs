@@ -28,7 +28,7 @@ namespace TencentCloud.Tag.V20180813
 
        private const string endpoint = "tag.tencentcloudapi.com";
        private const string version = "2018-08-13";
-       private const string sdkVersion = "SDK_NET_3.0.1017";
+       private const string sdkVersion = "SDK_NET_3.0.1018";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Tag.V20180813
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// Creates a project
+        /// </summary>
+        /// <param name="req"><see cref="AddProjectRequest"/></param>
+        /// <returns><see cref="AddProjectResponse"/></returns>
+        public Task<AddProjectResponse> AddProject(AddProjectRequest req)
+        {
+            return InternalRequestAsync<AddProjectResponse>(req, "AddProject");
+        }
+
+        /// <summary>
+        /// Creates a project
+        /// </summary>
+        /// <param name="req"><see cref="AddProjectRequest"/></param>
+        /// <returns><see cref="AddProjectResponse"/></returns>
+        public AddProjectResponse AddProjectSync(AddProjectRequest req)
+        {
+            return InternalRequestAsync<AddProjectResponse>(req, "AddProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

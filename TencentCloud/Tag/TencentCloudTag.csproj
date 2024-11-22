@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{80362009-8C42-353D-A625-92286A782F86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1017</VersionPrefix>
+    <VersionPrefix>3.0.1018</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
 
   <ItemGroup>
     <Compile Include="V20180813\TagClient.cs" />
+    <Compile Include="V20180813\Models\AddProjectRequest.cs" />
+    <Compile Include="V20180813\Models\AddProjectResponse.cs" />
     <Compile Include="V20180813\Models\AddResourceTagRequest.cs" />
     <Compile Include="V20180813\Models\AddResourceTagResponse.cs" />
     <Compile Include="V20180813\Models\AttachResourcesTagRequest.cs" />
