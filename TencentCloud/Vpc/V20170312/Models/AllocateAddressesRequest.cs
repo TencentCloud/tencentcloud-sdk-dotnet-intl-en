@@ -85,6 +85,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AnycastZone{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VipCluster")]
+        public string[] VipCluster{ get; set; }
+
+        /// <summary>
         /// <b>**[Disused]**</b>
         /// Whether the Anycast EIP can be bound to CLB instances.
         /// <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
@@ -110,6 +116,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("AddressName")]
         public string AddressName{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
 
         /// <summary>
         /// Network egress. It defaults to `center_egress1`.
@@ -142,10 +154,12 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
             this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+            this.SetParamArraySimple(map, prefix + "VipCluster.", this.VipCluster);
             this.SetParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);

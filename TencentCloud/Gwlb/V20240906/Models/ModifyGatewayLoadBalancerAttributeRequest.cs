@@ -31,7 +31,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// GWLB name.
+        /// GWLB instance name. It supports input of 1 to 60 characters.
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }

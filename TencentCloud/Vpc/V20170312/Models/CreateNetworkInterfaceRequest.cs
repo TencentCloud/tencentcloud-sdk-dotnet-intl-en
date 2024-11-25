@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }
 
         /// <summary>
-        /// IP u200dservice level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` u200d(Gold), `AU` u200d(Silver), `AG` (Bronze) and `DEFAULT` (Default).
+        /// IP service level. It is used together with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT` (Default).
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }
@@ -84,6 +84,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TrunkingFlag")]
         public string TrunkingFlag{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TrunkingFlag", this.TrunkingFlag);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

@@ -76,6 +76,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// Subnet of the NAT gateway
         /// </summary>
         [JsonProperty("SubnetId")]
+        [System.Obsolete]
         public string SubnetId{ get; set; }
 
         /// <summary>
@@ -97,7 +98,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? PublicIpFromSameZone{ get; set; }
 
         /// <summary>
-        /// 
+        /// NAT gateway major version. `1`: Classic, `2`: Standard
         /// </summary>
         [JsonProperty("NatProductVersion")]
         public ulong? NatProductVersion{ get; set; }

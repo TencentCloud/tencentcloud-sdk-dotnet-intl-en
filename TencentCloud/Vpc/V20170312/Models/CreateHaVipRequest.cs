@@ -31,16 +31,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The `ID` of the subnet to which the `HAVIP` belongs.
-        /// </summary>
-        [JsonProperty("SubnetId")]
-        public string SubnetId{ get; set; }
-
-        /// <summary>
         /// The name of the `HAVIP`.
         /// </summary>
         [JsonProperty("HaVipName")]
         public string HaVipName{ get; set; }
+
+        /// <summary>
+        /// The `ID` of the subnet to which the `HAVIP` belongs.
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
 
         /// <summary>
         /// The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
@@ -61,8 +61,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "HaVipName", this.HaVipName);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         }

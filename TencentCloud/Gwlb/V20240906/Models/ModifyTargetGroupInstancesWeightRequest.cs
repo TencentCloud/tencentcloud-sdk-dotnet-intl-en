@@ -31,7 +31,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// Array of servers whose weight is to be modified.
+        /// Instance binding configuration array.
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

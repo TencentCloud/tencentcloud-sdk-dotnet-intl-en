@@ -72,6 +72,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
         }
     }
 }

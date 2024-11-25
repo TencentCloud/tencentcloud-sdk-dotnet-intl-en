@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// Current billable usage, in Mbps
         /// </summary>
         [JsonProperty("BandwidthUsage")]
-        public ulong? BandwidthUsage{ get; set; }
+        public float? BandwidthUsage{ get; set; }
 
 
         /// <summary>

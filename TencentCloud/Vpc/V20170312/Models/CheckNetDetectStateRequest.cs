@@ -31,28 +31,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] DetectDestinationIp{ get; set; }
 
         /// <summary>
-        /// The type of the next hop. Currently supported types are:
-        /// VPN: VPN gateway;
-        /// DIRECTCONNECT: direct connect gateway;
-        /// PEERCONNECTION: peering connection;
-        /// NAT: NAT gateway;
-        /// NORMAL_CVM: normal CVM.
-        /// </summary>
-        [JsonProperty("NextHopType")]
-        public string NextHopType{ get; set; }
-
-        /// <summary>
-        /// The next-hop destination gateway. The value is related to NextHopType.
-        /// If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
-        /// If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
-        /// If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
-        /// If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
-        /// If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-        /// </summary>
-        [JsonProperty("NextHopDestination")]
-        public string NextHopDestination{ get; set; }
-
-        /// <summary>
         /// ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
         /// </summary>
         [JsonProperty("NetDetectId")]
@@ -76,6 +54,28 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NetDetectName")]
         public string NetDetectName{ get; set; }
 
+        /// <summary>
+        /// The type of the next hop. Currently supported types are:
+        /// VPN: VPN gateway;
+        /// DIRECTCONNECT: direct connect gateway;
+        /// PEERCONNECTION: peering connection;
+        /// NAT: NAT gateway;
+        /// NORMAL_CVM: normal CVM.
+        /// </summary>
+        [JsonProperty("NextHopType")]
+        public string NextHopType{ get; set; }
+
+        /// <summary>
+        /// The next-hop destination gateway. The value is related to NextHopType.
+        /// If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
+        /// If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
+        /// If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
+        /// If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
+        /// If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+        /// </summary>
+        [JsonProperty("NextHopDestination")]
+        public string NextHopDestination{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,12 +83,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DetectDestinationIp.", this.DetectDestinationIp);
-            this.SetParamSimple(map, prefix + "NextHopType", this.NextHopType);
-            this.SetParamSimple(map, prefix + "NextHopDestination", this.NextHopDestination);
             this.SetParamSimple(map, prefix + "NetDetectId", this.NetDetectId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "NetDetectName", this.NetDetectName);
+            this.SetParamSimple(map, prefix + "NextHopType", this.NextHopType);
+            this.SetParamSimple(map, prefix + "NextHopDestination", this.NextHopDestination);
         }
     }
 }

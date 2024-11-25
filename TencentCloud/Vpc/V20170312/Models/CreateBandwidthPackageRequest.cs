@@ -71,6 +71,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public ulong? TimeSpan{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +90,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidth", this.InternetMaxBandwidth);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         }
     }
 }

@@ -31,7 +31,8 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public ItemPrice InstancePrice{ get; set; }
 
         /// <summary>
-        /// It describes the instance price.Note: This field may return null, indicating that no valid value can be obtained.
+        /// It describes the price of GLCU.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("LcuPrice")]
         public ItemPrice LcuPrice{ get; set; }

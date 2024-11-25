@@ -25,6 +25,15 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
+        /// The type of the associated instance. Available values are:
+        /// <li>`VPC`: VPC</li>
+        /// <li>`DIRECTCONNECT`: Direct Connect</li>
+        /// <li>`BMVPC`: BM VPC</li>
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
         /// The ID of the associated instance.
         /// </summary>
         [JsonProperty("InstanceId")]
@@ -35,15 +44,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }
-
-        /// <summary>
-        /// The type of the associated instance. Available values are:
-        /// <li>`VPC`: VPC</li>
-        /// <li>`DIRECTCONNECT`: Direct Connect</li>
-        /// <li>`BMVPC`: BM VPC</li>
-        /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
 
         /// <summary>
         /// Description
@@ -64,9 +64,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         }

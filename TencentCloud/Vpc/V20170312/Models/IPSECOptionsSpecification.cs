@@ -34,6 +34,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
         /// </summary>
         [JsonProperty("IntegrityAlgorith")]
+        [System.Obsolete]
         public string IntegrityAlgorith{ get; set; }
 
         /// <summary>

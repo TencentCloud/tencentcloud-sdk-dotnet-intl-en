@@ -154,6 +154,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NatProductVersion")]
         public ulong? NatProductVersion{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SmartScheduleMode")]
+        public bool? SmartScheduleMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +186,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
             this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
             this.SetParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
+            this.SetParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
         }
     }
 }

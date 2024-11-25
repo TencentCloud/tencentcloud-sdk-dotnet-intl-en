@@ -31,7 +31,10 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public bool? HealthSwitch{ get; set; }
 
         /// <summary>
-        /// Protocol used for health checks. ICMP and TCP are supported, and the default is ICMP.
+        /// Protocol used for health check, which supports PING and TCP and is PING by default.
+        /// 
+        /// - PING: icmp
+        /// - TCP: tcp
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

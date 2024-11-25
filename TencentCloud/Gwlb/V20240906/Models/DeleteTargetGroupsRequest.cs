@@ -25,7 +25,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// Target group list.
+        /// Target group ID list.
         /// </summary>
         [JsonProperty("TargetGroupIds")]
         public string[] TargetGroupIds{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
     {
         
         /// <summary>
-        /// Target group name, up to 50 characters
+        /// Target group name, limited to 60 characters.
         /// </summary>
         [JsonProperty("TargetGroupName")]
         public string TargetGroupName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Default port of target group. This default port can be used when servers are added subsequently. Either Port or port in TargetGroupInstances.N is required.
+        /// Default port of the target group, which can be used when servers are added later. Either 'Port' or 'TargetGroupInstances.N.port' must be filled in.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
@@ -49,19 +49,23 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }
 
         /// <summary>
-        /// GWLB target group protocol.- AWS_GENEVE: GENEVE compatible protocol - TENCENT_GENEVE: GENEVE standard protocol
+        /// GWLB target group protocol.
+        /// - TENCENT_GENEVE: GENEVE standard protocol
+        /// 
+        /// - AWS_GENEVE: GENEVE compatibility protocol (a ticket is required for allowlisting)
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Health check.
+        /// Health check settings.
         /// </summary>
         [JsonProperty("HealthCheck")]
         public TargetGroupHealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// RS scheduling algorithm.- IP_HASH_3_ELASTIC: elastic hashing
+        /// Load balancing algorithm.
+        /// - IP_HASH_3_ELASTIC: elastic hashing
         /// </summary>
         [JsonProperty("ScheduleAlgorithm")]
         public string ScheduleAlgorithm{ get; set; }

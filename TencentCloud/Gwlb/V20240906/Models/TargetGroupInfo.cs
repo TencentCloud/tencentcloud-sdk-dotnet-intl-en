@@ -75,7 +75,9 @@ namespace TencentCloud.Gwlb.V20240906.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Scheduling algorithm.ip_hash_3: 3-tuple symmetric elastic hashingip_hash_3_consistent: 3-tuple symmetric consistent hashingNote: This field may return null, indicating that no valid value can be obtained.
+        /// Scheduling algorithm.
+        /// ip_hash_3: elastic hashing
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ScheduleAlgorithm")]
         public string ScheduleAlgorithm{ get; set; }

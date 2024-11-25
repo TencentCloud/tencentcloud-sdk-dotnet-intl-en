@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: u200dDo not publish
+        /// Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
         /// </summary>
         [JsonProperty("EnableCdcPublish")]
         public bool? EnableCdcPublish{ get; set; }
