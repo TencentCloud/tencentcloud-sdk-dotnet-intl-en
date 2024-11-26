@@ -25,13 +25,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// Number of private domains
+        /// Number of private domains.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of private domains
+        /// Private domain list.
         /// </summary>
         [JsonProperty("PrivateZoneSet")]
         public PrivateZone[] PrivateZoneSet{ get; set; }

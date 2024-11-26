@@ -70,6 +70,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// Whether full-text indexes are enabled. Valid values: `0` (no), `1` (yes)
         /// </summary>
         [JsonProperty("IsFulltextEnabled")]
+        [System.Obsolete]
         public string IsFulltextEnabled{ get; set; }
 
         /// <summary>

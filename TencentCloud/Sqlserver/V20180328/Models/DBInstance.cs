@@ -217,50 +217,43 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Instance isolation.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolateOperator")]
         public string IsolateOperator{ get; set; }
 
         /// <summary>
-        /// Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubFlag")]
         public string SubFlag{ get; set; }
 
         /// <summary>
-        /// Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ROFlag")]
         public string ROFlag{ get; set; }
 
         /// <summary>
-        /// Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HAFlag")]
         public string HAFlag{ get; set; }
 
         /// <summary>
-        /// The list of tags associated with the instance
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupModel")]
         public string BackupModel{ get; set; }
 
         /// <summary>
-        /// Instance backup info
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceNote")]
         public string InstanceNote{ get; set; }
@@ -338,21 +331,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public bool? IsDrZone{ get; set; }
 
         /// <summary>
-        /// Replica AZ information
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SlaveZones")]
         public SlaveZones SlaveZones{ get; set; }
 
         /// <summary>
-        /// Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node).
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Style")]

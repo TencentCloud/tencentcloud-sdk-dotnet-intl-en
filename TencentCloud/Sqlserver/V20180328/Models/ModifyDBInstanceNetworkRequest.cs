@@ -54,6 +54,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DRNetwork")]
+        public ulong? DRNetwork{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "NewSubnetId", this.NewSubnetId);
             this.SetParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "DRNetwork", this.DRNetwork);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// Pagination offset, starting from 0
+        /// Pagination offset, starting from 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Maximum value: 100. Default value: 20
+        /// Pagination limit. Maximum value: 100. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter parameter
+        /// Filter parameters.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

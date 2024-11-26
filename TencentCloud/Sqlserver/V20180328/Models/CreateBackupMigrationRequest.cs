@@ -37,7 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string RecoveryType{ get; set; }
 
         /// <summary>
-        /// Backup upload type. COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
+        /// Backup upload type. COS_URL: the backup is stored in user's Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application's Cloud Object Storage and needs to be uploaded by the user.
         /// </summary>
         [JsonProperty("UploadType")]
         public string UploadType{ get; set; }

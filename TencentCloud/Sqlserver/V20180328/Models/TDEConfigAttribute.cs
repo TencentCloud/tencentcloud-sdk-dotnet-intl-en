@@ -37,7 +37,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string CertificateAttribution{ get; set; }
 
         /// <summary>
-        /// ID of the other referenced root account when enabling TDE
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QuoteUin")]

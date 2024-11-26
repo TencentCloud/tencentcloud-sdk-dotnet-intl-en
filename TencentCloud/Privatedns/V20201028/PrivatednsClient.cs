@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.
@@ -327,7 +327,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// This API is used to get the list of private domains.
+        /// This API is used to obtain the private domain list.
         /// </summary>
         /// <param name="req"><see cref="DescribePrivateZoneListRequest"/></param>
         /// <returns><see cref="DescribePrivateZoneListResponse"/></returns>
@@ -337,7 +337,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// This API is used to get the list of private domains.
+        /// This API is used to obtain the private domain list.
         /// </summary>
         /// <param name="req"><see cref="DescribePrivateZoneListRequest"/></param>
         /// <returns><see cref="DescribePrivateZoneListResponse"/></returns>

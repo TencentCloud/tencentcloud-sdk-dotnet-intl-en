@@ -25,37 +25,43 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Replica server status. Valid values: enable - running; disable - unavailable
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SlaveStatus")]
         public string SlaveStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Replica server readable status. Valid values: enable - enabled; disable - disabled
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReadableStatus")]
         public string ReadableStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Replica server read-only VIP
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 
+        /// Replica server read-only port
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VPort")]
         public long? VPort{ get; set; }
 
         /// <summary>
-        /// 
+        /// Replica server VPC ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Replica server VPC subnet ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }

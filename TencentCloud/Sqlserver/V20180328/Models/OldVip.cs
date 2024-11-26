@@ -25,19 +25,20 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Unrecovered old IP addresses
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 
+        /// IP recovery time
         /// </summary>
         [JsonProperty("RecycleTime")]
         public string RecycleTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Old IP retention time (hours)
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OldIpRetainTime")]
         public long? OldIpRetainTime{ get; set; }

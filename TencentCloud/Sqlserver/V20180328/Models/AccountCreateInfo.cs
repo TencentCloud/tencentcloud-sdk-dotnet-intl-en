@@ -49,7 +49,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+        /// Whether it is an admin account. Valid values: true (it is an admin account when the instance is a single-node type and AccountType is L0; when the instance is a two-node type and AccountType is L1), false (it is a standard account when AccountType is L3)
         /// </summary>
         [JsonProperty("IsAdmin")]
         public bool? IsAdmin{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
 
+        /// <summary>
+        /// Whether CAM authentication is enabled
+        /// </summary>
+        [JsonProperty("IsCam")]
+        public bool? IsCam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
             this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
+            this.SetParamSimple(map, prefix + "IsCam", this.IsCam);
         }
     }
 }

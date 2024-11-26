@@ -25,19 +25,19 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// Private domain ID: zone-xxxxxxxx
+        /// Private domain ID, which is in zone-xxxxxxxx format.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Domain name owner UIN
+        /// UIN of the domain name owner.
         /// </summary>
         [JsonProperty("OwnerUin")]
         public long? OwnerUin{ get; set; }
 
         /// <summary>
-        /// Private domain
+        /// Private domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -55,48 +55,97 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public string UpdatedOn{ get; set; }
 
         /// <summary>
-        /// Number of results
+        /// Number of records.
         /// </summary>
         [JsonProperty("RecordCount")]
         public long? RecordCount{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Remarks.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// List of bound VPCs
+        /// List of bound VPCs.
         /// </summary>
         [JsonProperty("VpcSet")]
         public VpcInfo[] VpcSet{ get; set; }
 
         /// <summary>
-        /// Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
+        /// Status of the VPC bound with the private domain. SUSPEND: The VPC is not associated; ENABLED: the VPC has been associated.
+        /// , FAILED: the VPC fails to be associated.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
+        /// Recursive resolution status of the domain name. ENABLED: enabled; DISABLED: disabled.
         /// </summary>
         [JsonProperty("DnsForwardStatus")]
         public string DnsForwardStatus{ get; set; }
 
         /// <summary>
-        /// Set of tag key-value pairs
+        /// Tag key-value pair collection.
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// List of authorized accounts' VPCs associated with the private domain
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// List of bound VPCs of the associated account.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AccountVpcSet")]
         public AccountVpcInfoOutput[] AccountVpcSet{ get; set; }
+
+        /// <summary>
+        /// Whether the TLD is a custom one.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsCustomTld")]
+        public bool? IsCustomTld{ get; set; }
+
+        /// <summary>
+        /// CNAME acceleration status. ENABLED: enabled; DISABLED: disabled.
+        /// </summary>
+        [JsonProperty("CnameSpeedupStatus")]
+        public string CnameSpeedupStatus{ get; set; }
+
+        /// <summary>
+        /// Forwarding rule name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ForwardRuleName")]
+        public string ForwardRuleName{ get; set; }
+
+        /// <summary>
+        /// Forwarding rule type. DOWN: from cloud to off-cloud; UP: from off-cloud to cloud. Currently, only DOWN is supported.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ForwardRuleType")]
+        public string ForwardRuleType{ get; set; }
+
+        /// <summary>
+        /// Forwarding address.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ForwardAddress")]
+        public string ForwardAddress{ get; set; }
+
+        /// <summary>
+        /// Endpoint name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EndPointName")]
+        public string EndPointName{ get; set; }
+
+        /// <summary>
+        /// Deleted VPC.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DeletedVpcSet")]
+        public VpcInfo[] DeletedVpcSet{ get; set; }
 
 
         /// <summary>
@@ -116,6 +165,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+            this.SetParamSimple(map, prefix + "IsCustomTld", this.IsCustomTld);
+            this.SetParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
+            this.SetParamSimple(map, prefix + "ForwardRuleName", this.ForwardRuleName);
+            this.SetParamSimple(map, prefix + "ForwardRuleType", this.ForwardRuleType);
+            this.SetParamSimple(map, prefix + "ForwardAddress", this.ForwardAddress);
+            this.SetParamSimple(map, prefix + "EndPointName", this.EndPointName);
+            this.SetParamArrayObj(map, prefix + "DeletedVpcSet.", this.DeletedVpcSet);
         }
     }
 }

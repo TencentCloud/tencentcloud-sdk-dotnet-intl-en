@@ -85,6 +85,7 @@ namespace TencentCloud.Omics.V20221128.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GitInfo")]
+        [System.Obsolete]
         public string GitInfo{ get; set; }
 
 

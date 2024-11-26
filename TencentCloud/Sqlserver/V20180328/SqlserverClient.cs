@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1020";
+       private const string sdkVersion = "SDK_NET_3.0.1021";
 
         /// <summary>
         /// Client constructor.
@@ -159,7 +159,28 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to create a business intelligence service instance.
+        /// This API is used to create basic edition instances (cloud disk).
+        /// </summary>
+        /// <param name="req"><see cref="CreateBasicDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateBasicDBInstancesResponse"/></returns>
+        public Task<CreateBasicDBInstancesResponse> CreateBasicDBInstances(CreateBasicDBInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateBasicDBInstancesResponse>(req, "CreateBasicDBInstances");
+        }
+
+        /// <summary>
+        /// This API is used to create basic edition instances (cloud disk).
+        /// </summary>
+        /// <param name="req"><see cref="CreateBasicDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateBasicDBInstancesResponse"/></returns>
+        public CreateBasicDBInstancesResponse CreateBasicDBInstancesSync(CreateBasicDBInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateBasicDBInstancesResponse>(req, "CreateBasicDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create business intelligence service instances (cloud disk).
         /// </summary>
         /// <param name="req"><see cref="CreateBusinessDBInstancesRequest"/></param>
         /// <returns><see cref="CreateBusinessDBInstancesResponse"/></returns>
@@ -169,7 +190,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to create a business intelligence service instance.
+        /// This API is used to create business intelligence service instances (cloud disk).
         /// </summary>
         /// <param name="req"><see cref="CreateBusinessDBInstancesRequest"/></param>
         /// <returns><see cref="CreateBusinessDBInstancesResponse"/></returns>
@@ -201,7 +222,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to create a high-availability instance of cloud disk edition.
+        /// This API is used to create high-availability instances (cloud disk).
         /// </summary>
         /// <param name="req"><see cref="CreateCloudDBInstancesRequest"/></param>
         /// <returns><see cref="CreateCloudDBInstancesResponse"/></returns>
@@ -211,7 +232,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to create a high-availability instance of cloud disk edition.
+        /// This API is used to create high-availability instances (cloud disk).
         /// </summary>
         /// <param name="req"><see cref="CreateCloudDBInstancesRequest"/></param>
         /// <returns><see cref="CreateCloudDBInstancesResponse"/></returns>
@@ -222,7 +243,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to add a read-only replica instance of cloud disk edition.
+        /// This API is used to create read-only instances (cloud disk).
         /// </summary>
         /// <param name="req"><see cref="CreateCloudReadOnlyDBInstancesRequest"/></param>
         /// <returns><see cref="CreateCloudReadOnlyDBInstancesResponse"/></returns>
@@ -232,7 +253,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to add a read-only replica instance of cloud disk edition.
+        /// This API is used to create read-only instances (cloud disk).
         /// </summary>
         /// <param name="req"><see cref="CreateCloudReadOnlyDBInstancesRequest"/></param>
         /// <returns><see cref="CreateCloudReadOnlyDBInstancesResponse"/></returns>
@@ -264,7 +285,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to create an instance.
+        /// This API is used to create high-availability instances (local disk)
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -274,7 +295,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to create an instance.
+        /// This API is used to create high-availability instances (local disk)
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -323,6 +344,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public CreateMigrationResponse CreateMigrationSync(CreateMigrationRequest req)
         {
             return InternalRequestAsync<CreateMigrationResponse>(req, "CreateMigration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create read-only instances (local disk).
+        /// </summary>
+        /// <param name="req"><see cref="CreateReadOnlyDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateReadOnlyDBInstancesResponse"/></returns>
+        public Task<CreateReadOnlyDBInstancesResponse> CreateReadOnlyDBInstances(CreateReadOnlyDBInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateReadOnlyDBInstancesResponse>(req, "CreateReadOnlyDBInstances");
+        }
+
+        /// <summary>
+        /// This API is used to create read-only instances (local disk).
+        /// </summary>
+        /// <param name="req"><see cref="CreateReadOnlyDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateReadOnlyDBInstancesResponse"/></returns>
+        public CreateReadOnlyDBInstancesResponse CreateReadOnlyDBInstancesSync(CreateReadOnlyDBInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateReadOnlyDBInstancesResponse>(req, "CreateReadOnlyDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -936,6 +978,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the time range available for rollback by time point.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTimeRangeRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTimeRangeResponse"/></returns>
+        public Task<DescribeRestoreTimeRangeResponse> DescribeRestoreTimeRange(DescribeRestoreTimeRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeRestoreTimeRangeResponse>(req, "DescribeRestoreTimeRange");
+        }
+
+        /// <summary>
+        /// This API is used to query the time range available for rollback by time point.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTimeRangeRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTimeRangeResponse"/></returns>
+        public DescribeRestoreTimeRangeResponse DescribeRestoreTimeRangeSync(DescribeRestoreTimeRangeRequest req)
+        {
+            return InternalRequestAsync<DescribeRestoreTimeRangeResponse>(req, "DescribeRestoreTimeRange")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the time range available for instance rollback.
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackTimeRequest"/></param>
@@ -1291,6 +1354,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public ModifyDBRemarkResponse ModifyDBRemarkSync(ModifyDBRemarkRequest req)
         {
             return InternalRequestAsync<ModifyDBRemarkResponse>(req, "ModifyDBRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the read-only feature of the replica server.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDReadableRequest"/></param>
+        /// <returns><see cref="ModifyDReadableResponse"/></returns>
+        public Task<ModifyDReadableResponse> ModifyDReadable(ModifyDReadableRequest req)
+        {
+            return InternalRequestAsync<ModifyDReadableResponse>(req, "ModifyDReadable");
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the read-only feature of the replica server.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDReadableRequest"/></param>
+        /// <returns><see cref="ModifyDReadableResponse"/></returns>
+        public ModifyDReadableResponse ModifyDReadableSync(ModifyDReadableRequest req)
+        {
+            return InternalRequestAsync<ModifyDReadableResponse>(req, "ModifyDReadable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

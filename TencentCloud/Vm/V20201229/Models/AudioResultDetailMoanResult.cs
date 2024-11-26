@@ -62,6 +62,12 @@ namespace TencentCloud.Vm.V20201229.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+        /// </summary>
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Vm.V20201229.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
         }
     }
 }
