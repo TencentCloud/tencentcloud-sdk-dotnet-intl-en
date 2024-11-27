@@ -31,13 +31,13 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Rule ID list, which supports deletion in batches.
+        /// Rule ID list. Batch deletion is supported. This parameter does not need to be specified when DeleteAll is true.
         /// </summary>
         [JsonProperty("RuleIds")]
         public ulong?[] RuleIds{ get; set; }
 
         /// <summary>
-        /// Whether to delete all IP blocklists/allowlists under the corresponding domain. True indicates deleting all; false indicates only deleting a specified IP list.
+        /// Whether to delete all IP blocklists/allowlists under the corresponding domain name. true: delete all lists; false: delete only the specified lists. Batch protection is not supported.
         /// </summary>
         [JsonProperty("DeleteAll")]
         public bool? DeleteAll{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// IP allowlist/blocklist type. 40: IP allowlist; 42: IP blocklist.
+        /// IP blocklist/allowlist type. 40: IP allowlist; 42: IP blocklist. This parameter should be passed in when DeleteAll is true.
         /// </summary>
         [JsonProperty("ActionType")]
         public ulong? ActionType{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// Project ID/Workspace ID
+        /// Project ID/Workspace ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Task Type (consistent with scheduling parameters)
+        /// Task Type (consistent with scheduling parameters).
         /// </summary>
         [JsonProperty("TypeId")]
         public long? TypeId{ get; set; }
 
         /// <summary>
-        /// Task Name
+        /// Task Name.
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }

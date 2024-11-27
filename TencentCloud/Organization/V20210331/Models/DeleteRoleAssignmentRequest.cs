@@ -49,19 +49,19 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? TargetUin{ get; set; }
 
         /// <summary>
-        /// Identity type for the CAM user synchronization. Valid values: User: indicates that the identity for the CAM user synchronization is a CIC user; Group: indicates that the identity for the CAM user synchronization is a CIC user group.
+        /// Identity types synchronized for CAM users. Valid values: User: indicates the synchronized identity is a user. Group: indicates the synchronized identity is a user group.
         /// </summary>
         [JsonProperty("PrincipalType")]
         public string PrincipalType{ get; set; }
 
         /// <summary>
-        /// Identity ID for the CAM user synchronization. Valid values: When the PrincipalType value is Group, it is the CIC user group ID (g-********). When the PrincipalType value is User, it is the CIC user ID (u-********).  	
+        /// User synchronization ID. Valid values: When PrincipalType is Group, it is a user group ID (g-********). When PrincipalType is User, it is a user ID (u-********).
         /// </summary>
         [JsonProperty("PrincipalId")]
         public string PrincipalId{ get; set; }
 
         /// <summary>
-        /// Whether to undeploy an access configuration synchronously when you remove the last authorization for using this access configuration on the target account of the Tencent Cloud Organization. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Undeploy the access configuration; None (default): Do not undeploy access configuration.
+        /// Whether to remove the permission configuration deployment when removing the last authorization with a certain permission configuration from a target account in TCO. Valid values: DeprovisionForLastRoleAssignmentOnAccount: Remove the permission configuration deployment. None (default): Do not remove the permission configuration deployment.
         /// </summary>
         [JsonProperty("DeprovisionStrategy")]
         public string DeprovisionStrategy{ get; set; }

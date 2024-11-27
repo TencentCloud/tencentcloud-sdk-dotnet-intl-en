@@ -31,37 +31,37 @@ namespace TencentCloud.Cmq.V20190304.Models
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+        /// Maximum number of heaped messages. The value range is 1,000,000-10,000,000 during the beta test and can be 1,000,000-1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
         /// </summary>
         [JsonProperty("MaxMsgHeapNum")]
         public ulong? MaxMsgHeapNum{ get; set; }
 
         /// <summary>
-        /// Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
+        /// Long polling wait time for message reception. Value range: 0-30 seconds. Default value: 0.
         /// </summary>
         [JsonProperty("PollingWaitSeconds")]
         public ulong? PollingWaitSeconds{ get; set; }
 
         /// <summary>
-        /// Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
+        /// Message visibility timeout period. Value range: 1-43200 seconds (i.e., 12 hours). Default value: 30.
         /// </summary>
         [JsonProperty("VisibilityTimeout")]
         public ulong? VisibilityTimeout{ get; set; }
 
         /// <summary>
-        /// Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+        /// Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
-        /// Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+        /// Message retention period. Value range: 60-1296000 seconds (i.e., 1 minute-15 days). Default value: 345600 (i.e., 4 days).
         /// </summary>
         [JsonProperty("MsgRetentionSeconds")]
         public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
-        /// Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
+        /// Maximum message rewindable period. Value range: 0-msgRetentionSeconds (maximum message retention period of a queue). 0 means not to enable message rewinding.
         /// </summary>
         [JsonProperty("RewindSeconds")]
         public ulong? RewindSeconds{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cmq.V20190304.Models
         public string DeadLetterQueueName{ get; set; }
 
         /// <summary>
-        /// Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+        /// Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300-43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
         /// </summary>
         [JsonProperty("MaxTimeToLive")]
         public ulong? MaxTimeToLive{ get; set; }

@@ -164,6 +164,14 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("ObjectFlowMode")]
         public long? ObjectFlowMode{ get; set; }
 
+        /// <summary>
+        /// VPC ID in numerical format
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NumericalVpcId")]
+        public long? NumericalVpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +200,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "BotStatus", this.BotStatus);
             this.SetParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
             this.SetParamSimple(map, prefix + "ObjectFlowMode", this.ObjectFlowMode);
+            this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         }
     }
 }

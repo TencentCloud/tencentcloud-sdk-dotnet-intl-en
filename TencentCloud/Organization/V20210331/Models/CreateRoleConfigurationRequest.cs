@@ -31,25 +31,25 @@ namespace TencentCloud.Organization.V20210331.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Access configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
+        /// Permission configuration name, which contains up to 128 characters, including English letters, digits, and hyphens (-).
         /// </summary>
         [JsonProperty("RoleConfigurationName")]
         public string RoleConfigurationName{ get; set; }
 
         /// <summary>
-        /// Access configuration description, which contains up to 1024 characters.
+        /// Permission configuration description, which contains up to 1,024 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours). Default value: 3600 (1 hour).
+        /// Session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours). Default: 3600 (1 hour).
         /// </summary>
         [JsonProperty("SessionDuration")]
         public long? SessionDuration{ get; set; }
 
         /// <summary>
-        /// Initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page. The default is null, which indicates navigating to the home page of the Tencent Cloud console.
+        /// Initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page. The default value is empty, representing a redirection to the home page of the Tencent Cloud console.
         /// </summary>
         [JsonProperty("RelayState")]
         public string RelayState{ get; set; }

@@ -88,6 +88,14 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Arg")]
         public string Arg{ get; set; }
 
+        /// <summary>
+        /// 0: case-sensitive.
+        /// 1: case-insensitive.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CaseNotSensitive")]
+        public ulong? CaseNotSensitive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +106,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CompareFunc", this.CompareFunc);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "Arg", this.Arg);
+            this.SetParamSimple(map, prefix + "CaseNotSensitive", this.CaseNotSensitive);
         }
     }
 }

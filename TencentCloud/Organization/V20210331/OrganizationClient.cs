@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1021";
+       private const string sdkVersion = "SDK_NET_3.0.1022";
 
         /// <summary>
         /// Client constructor.
@@ -243,6 +243,48 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to create an organization.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationRequest"/></param>
+        /// <returns><see cref="CreateOrganizationResponse"/></returns>
+        public Task<CreateOrganizationResponse> CreateOrganization(CreateOrganizationRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationResponse>(req, "CreateOrganization");
+        }
+
+        /// <summary>
+        /// This API is used to create an organization.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationRequest"/></param>
+        /// <returns><see cref="CreateOrganizationResponse"/></returns>
+        public CreateOrganizationResponse CreateOrganizationSync(CreateOrganizationRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationResponse>(req, "CreateOrganization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add an organization identity.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationIdentityRequest"/></param>
+        /// <returns><see cref="CreateOrganizationIdentityResponse"/></returns>
+        public Task<CreateOrganizationIdentityResponse> CreateOrganizationIdentity(CreateOrganizationIdentityRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationIdentityResponse>(req, "CreateOrganizationIdentity");
+        }
+
+        /// <summary>
+        /// This API is used to add an organization identity.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationIdentityRequest"/></param>
+        /// <returns><see cref="CreateOrganizationIdentityResponse"/></returns>
+        public CreateOrganizationIdentityResponse CreateOrganizationIdentitySync(CreateOrganizationIdentityRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationIdentityResponse>(req, "CreateOrganizationIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create an organization member.
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationMemberRequest"/></param>
@@ -264,7 +306,28 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to create an organization member access policy.
+        /// This API is used to add organization member access authorization.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationMemberAuthIdentityRequest"/></param>
+        /// <returns><see cref="CreateOrganizationMemberAuthIdentityResponse"/></returns>
+        public Task<CreateOrganizationMemberAuthIdentityResponse> CreateOrganizationMemberAuthIdentity(CreateOrganizationMemberAuthIdentityRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationMemberAuthIdentityResponse>(req, "CreateOrganizationMemberAuthIdentity");
+        }
+
+        /// <summary>
+        /// This API is used to add organization member access authorization.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationMemberAuthIdentityRequest"/></param>
+        /// <returns><see cref="CreateOrganizationMemberAuthIdentityResponse"/></returns>
+        public CreateOrganizationMemberAuthIdentityResponse CreateOrganizationMemberAuthIdentitySync(CreateOrganizationMemberAuthIdentityRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationMemberAuthIdentityResponse>(req, "CreateOrganizationMemberAuthIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an organization member access authorization policy.
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationMemberPolicyRequest"/></param>
         /// <returns><see cref="CreateOrganizationMemberPolicyResponse"/></returns>
@@ -274,13 +337,34 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to create an organization member access policy.
+        /// This API is used to create an organization member access authorization policy.
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationMemberPolicyRequest"/></param>
         /// <returns><see cref="CreateOrganizationMemberPolicyResponse"/></returns>
         public CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicySync(CreateOrganizationMemberPolicyRequest req)
         {
             return InternalRequestAsync<CreateOrganizationMemberPolicyResponse>(req, "CreateOrganizationMemberPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an organization member access policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="CreateOrganizationMembersPolicyResponse"/></returns>
+        public Task<CreateOrganizationMembersPolicyResponse> CreateOrganizationMembersPolicy(CreateOrganizationMembersPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationMembersPolicyResponse>(req, "CreateOrganizationMembersPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to create an organization member access policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="CreateOrganizationMembersPolicyResponse"/></returns>
+        public CreateOrganizationMembersPolicyResponse CreateOrganizationMembersPolicySync(CreateOrganizationMembersPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateOrganizationMembersPolicyResponse>(req, "CreateOrganizationMembersPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -323,6 +407,27 @@ namespace TencentCloud.Organization.V20210331
         public CreateRoleConfigurationResponse CreateRoleConfigurationSync(CreateRoleConfigurationRequest req)
         {
             return InternalRequestAsync<CreateRoleConfigurationResponse>(req, "CreateRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a SCIM key.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSCIMCredentialRequest"/></param>
+        /// <returns><see cref="CreateSCIMCredentialResponse"/></returns>
+        public Task<CreateSCIMCredentialResponse> CreateSCIMCredential(CreateSCIMCredentialRequest req)
+        {
+            return InternalRequestAsync<CreateSCIMCredentialResponse>(req, "CreateSCIMCredential");
+        }
+
+        /// <summary>
+        /// This API is used to create a SCIM key.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSCIMCredentialRequest"/></param>
+        /// <returns><see cref="CreateSCIMCredentialResponse"/></returns>
+        public CreateSCIMCredentialResponse CreateSCIMCredentialSync(CreateSCIMCredentialRequest req)
+        {
+            return InternalRequestAsync<CreateSCIMCredentialResponse>(req, "CreateSCIMCredential")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -411,6 +516,69 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to delete an organization.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationResponse"/></returns>
+        public Task<DeleteOrganizationResponse> DeleteOrganization(DeleteOrganizationRequest req)
+        {
+            return InternalRequestAsync<DeleteOrganizationResponse>(req, "DeleteOrganization");
+        }
+
+        /// <summary>
+        /// This API is used to delete an organization.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationResponse"/></returns>
+        public DeleteOrganizationResponse DeleteOrganizationSync(DeleteOrganizationRequest req)
+        {
+            return InternalRequestAsync<DeleteOrganizationResponse>(req, "DeleteOrganization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an organization identity.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationIdentityRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationIdentityResponse"/></returns>
+        public Task<DeleteOrganizationIdentityResponse> DeleteOrganizationIdentity(DeleteOrganizationIdentityRequest req)
+        {
+            return InternalRequestAsync<DeleteOrganizationIdentityResponse>(req, "DeleteOrganizationIdentity");
+        }
+
+        /// <summary>
+        /// This API is used to delete an organization identity.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationIdentityRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationIdentityResponse"/></returns>
+        public DeleteOrganizationIdentityResponse DeleteOrganizationIdentitySync(DeleteOrganizationIdentityRequest req)
+        {
+            return InternalRequestAsync<DeleteOrganizationIdentityResponse>(req, "DeleteOrganizationIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete organization member access authorization.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMemberAuthIdentityRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMemberAuthIdentityResponse"/></returns>
+        public Task<DeleteOrganizationMemberAuthIdentityResponse> DeleteOrganizationMemberAuthIdentity(DeleteOrganizationMemberAuthIdentityRequest req)
+        {
+            return InternalRequestAsync<DeleteOrganizationMemberAuthIdentityResponse>(req, "DeleteOrganizationMemberAuthIdentity");
+        }
+
+        /// <summary>
+        /// This API is used to delete organization member access authorization.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMemberAuthIdentityRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMemberAuthIdentityResponse"/></returns>
+        public DeleteOrganizationMemberAuthIdentityResponse DeleteOrganizationMemberAuthIdentitySync(DeleteOrganizationMemberAuthIdentityRequest req)
+        {
+            return InternalRequestAsync<DeleteOrganizationMemberAuthIdentityResponse>(req, "DeleteOrganizationMemberAuthIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to remove a member account from the organization, rather than delete the account.
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>
@@ -428,6 +596,27 @@ namespace TencentCloud.Organization.V20210331
         public DeleteOrganizationMembersResponse DeleteOrganizationMembersSync(DeleteOrganizationMembersRequest req)
         {
             return InternalRequestAsync<DeleteOrganizationMembersResponse>(req, "DeleteOrganizationMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an organization member access policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMembersPolicyResponse"/></returns>
+        public Task<DeleteOrganizationMembersPolicyResponse> DeleteOrganizationMembersPolicy(DeleteOrganizationMembersPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteOrganizationMembersPolicyResponse>(req, "DeleteOrganizationMembersPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to delete an organization member access policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMembersPolicyResponse"/></returns>
+        public DeleteOrganizationMembersPolicyResponse DeleteOrganizationMembersPolicySync(DeleteOrganizationMembersPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteOrganizationMembersPolicyResponse>(req, "DeleteOrganizationMembersPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -495,6 +684,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to delete a SCIM key.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSCIMCredentialRequest"/></param>
+        /// <returns><see cref="DeleteSCIMCredentialResponse"/></returns>
+        public Task<DeleteSCIMCredentialResponse> DeleteSCIMCredential(DeleteSCIMCredentialRequest req)
+        {
+            return InternalRequestAsync<DeleteSCIMCredentialResponse>(req, "DeleteSCIMCredential");
+        }
+
+        /// <summary>
+        /// This API is used to delete a SCIM key.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSCIMCredentialRequest"/></param>
+        /// <returns><see cref="DeleteSCIMCredentialResponse"/></returns>
+        public DeleteSCIMCredentialResponse DeleteSCIMCredentialSync(DeleteSCIMCredentialRequest req)
+        {
+            return InternalRequestAsync<DeleteSCIMCredentialResponse>(req, "DeleteSCIMCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a user.
         /// </summary>
         /// <param name="req"><see cref="DeleteUserRequest"/></param>
@@ -537,7 +747,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to obtain the CAM Identity Center service information.
+        /// This API is used to obtain TCO Identity Center service information.
         /// </summary>
         /// <param name="req"><see cref="DescribeIdentityCenterRequest"/></param>
         /// <returns><see cref="DescribeIdentityCenterResponse"/></returns>
@@ -547,7 +757,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to obtain the CAM Identity Center service information.
+        /// This API is used to obtain TCO Identity Center service information.
         /// </summary>
         /// <param name="req"><see cref="DescribeIdentityCenterRequest"/></param>
         /// <returns><see cref="DescribeIdentityCenterResponse"/></returns>
@@ -785,6 +995,27 @@ namespace TencentCloud.Organization.V20210331
         public GetRoleConfigurationResponse GetRoleConfigurationSync(GetRoleConfigurationRequest req)
         {
             return InternalRequestAsync<GetRoleConfigurationResponse>(req, "GetRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query SCIM synchronization status.
+        /// </summary>
+        /// <param name="req"><see cref="GetSCIMSynchronizationStatusRequest"/></param>
+        /// <returns><see cref="GetSCIMSynchronizationStatusResponse"/></returns>
+        public Task<GetSCIMSynchronizationStatusResponse> GetSCIMSynchronizationStatus(GetSCIMSynchronizationStatusRequest req)
+        {
+            return InternalRequestAsync<GetSCIMSynchronizationStatusResponse>(req, "GetSCIMSynchronizationStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query SCIM synchronization status.
+        /// </summary>
+        /// <param name="req"><see cref="GetSCIMSynchronizationStatusRequest"/></param>
+        /// <returns><see cref="GetSCIMSynchronizationStatusResponse"/></returns>
+        public GetSCIMSynchronizationStatusResponse GetSCIMSynchronizationStatusSync(GetSCIMSynchronizationStatusRequest req)
+        {
+            return InternalRequestAsync<GetSCIMSynchronizationStatusResponse>(req, "GetSCIMSynchronizationStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1146,6 +1377,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to query the user SCIM key list.
+        /// </summary>
+        /// <param name="req"><see cref="ListSCIMCredentialsRequest"/></param>
+        /// <returns><see cref="ListSCIMCredentialsResponse"/></returns>
+        public Task<ListSCIMCredentialsResponse> ListSCIMCredentials(ListSCIMCredentialsRequest req)
+        {
+            return InternalRequestAsync<ListSCIMCredentialsResponse>(req, "ListSCIMCredentials");
+        }
+
+        /// <summary>
+        /// This API is used to query the user SCIM key list.
+        /// </summary>
+        /// <param name="req"><see cref="ListSCIMCredentialsRequest"/></param>
+        /// <returns><see cref="ListSCIMCredentialsResponse"/></returns>
+        public ListSCIMCredentialsResponse ListSCIMCredentialsSync(ListSCIMCredentialsRequest req)
+        {
+            return InternalRequestAsync<ListSCIMCredentialsResponse>(req, "ListSCIMCredentials")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the async task list.
         /// </summary>
         /// <param name="req"><see cref="ListTasksRequest"/></param>
@@ -1230,7 +1482,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to activate the CIC service.
+        /// This API is used to activate Identity Center service (CIC).
         /// </summary>
         /// <param name="req"><see cref="OpenIdentityCenterRequest"/></param>
         /// <returns><see cref="OpenIdentityCenterResponse"/></returns>
@@ -1240,7 +1492,7 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
-        /// This API is used to activate the CIC service.
+        /// This API is used to activate Identity Center service (CIC).
         /// </summary>
         /// <param name="req"><see cref="OpenIdentityCenterRequest"/></param>
         /// <returns><see cref="OpenIdentityCenterResponse"/></returns>
@@ -1268,6 +1520,27 @@ namespace TencentCloud.Organization.V20210331
         public ProvisionRoleConfigurationResponse ProvisionRoleConfigurationSync(ProvisionRoleConfigurationRequest req)
         {
             return InternalRequestAsync<ProvisionRoleConfigurationResponse>(req, "ProvisionRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to exit an organization.
+        /// </summary>
+        /// <param name="req"><see cref="QuitOrganizationRequest"/></param>
+        /// <returns><see cref="QuitOrganizationResponse"/></returns>
+        public Task<QuitOrganizationResponse> QuitOrganization(QuitOrganizationRequest req)
+        {
+            return InternalRequestAsync<QuitOrganizationResponse>(req, "QuitOrganization");
+        }
+
+        /// <summary>
+        /// This API is used to exit an organization.
+        /// </summary>
+        /// <param name="req"><see cref="QuitOrganizationRequest"/></param>
+        /// <returns><see cref="QuitOrganizationResponse"/></returns>
+        public QuitOrganizationResponse QuitOrganizationSync(QuitOrganizationRequest req)
+        {
+            return InternalRequestAsync<QuitOrganizationResponse>(req, "QuitOrganization")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1356,6 +1629,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to modify a custom policy for permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomPolicyForRoleConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateCustomPolicyForRoleConfigurationResponse"/></returns>
+        public Task<UpdateCustomPolicyForRoleConfigurationResponse> UpdateCustomPolicyForRoleConfiguration(UpdateCustomPolicyForRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomPolicyForRoleConfigurationResponse>(req, "UpdateCustomPolicyForRoleConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to modify a custom policy for permission configurations.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomPolicyForRoleConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateCustomPolicyForRoleConfigurationResponse"/></returns>
+        public UpdateCustomPolicyForRoleConfigurationResponse UpdateCustomPolicyForRoleConfigurationSync(UpdateCustomPolicyForRoleConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomPolicyForRoleConfigurationResponse>(req, "UpdateCustomPolicyForRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify user group information.
         /// </summary>
         /// <param name="req"><see cref="UpdateGroupRequest"/></param>
@@ -1373,6 +1667,48 @@ namespace TencentCloud.Organization.V20210331
         public UpdateGroupResponse UpdateGroupSync(UpdateGroupRequest req)
         {
             return InternalRequestAsync<UpdateGroupResponse>(req, "UpdateGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update an organization identity.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationIdentityRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationIdentityResponse"/></returns>
+        public Task<UpdateOrganizationIdentityResponse> UpdateOrganizationIdentity(UpdateOrganizationIdentityRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationIdentityResponse>(req, "UpdateOrganizationIdentity");
+        }
+
+        /// <summary>
+        /// This API is used to update an organization identity.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationIdentityRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationIdentityResponse"/></returns>
+        public UpdateOrganizationIdentityResponse UpdateOrganizationIdentitySync(UpdateOrganizationIdentityRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationIdentityResponse>(req, "UpdateOrganizationIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update organization member information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberResponse"/></returns>
+        public Task<UpdateOrganizationMemberResponse> UpdateOrganizationMember(UpdateOrganizationMemberRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationMemberResponse>(req, "UpdateOrganizationMember");
+        }
+
+        /// <summary>
+        /// This API is used to update organization member information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberResponse"/></returns>
+        public UpdateOrganizationMemberResponse UpdateOrganizationMemberSync(UpdateOrganizationMemberRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationMemberResponse>(req, "UpdateOrganizationMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1415,6 +1751,48 @@ namespace TencentCloud.Organization.V20210331
         public UpdateRoleConfigurationResponse UpdateRoleConfigurationSync(UpdateRoleConfigurationRequest req)
         {
             return InternalRequestAsync<UpdateRoleConfigurationResponse>(req, "UpdateRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable a SCIM key.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSCIMCredentialStatusRequest"/></param>
+        /// <returns><see cref="UpdateSCIMCredentialStatusResponse"/></returns>
+        public Task<UpdateSCIMCredentialStatusResponse> UpdateSCIMCredentialStatus(UpdateSCIMCredentialStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateSCIMCredentialStatusResponse>(req, "UpdateSCIMCredentialStatus");
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable a SCIM key.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSCIMCredentialStatusRequest"/></param>
+        /// <returns><see cref="UpdateSCIMCredentialStatusResponse"/></returns>
+        public UpdateSCIMCredentialStatusResponse UpdateSCIMCredentialStatusSync(UpdateSCIMCredentialStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateSCIMCredentialStatusResponse>(req, "UpdateSCIMCredentialStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable user SCIM synchronization.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSCIMSynchronizationStatusRequest"/></param>
+        /// <returns><see cref="UpdateSCIMSynchronizationStatusResponse"/></returns>
+        public Task<UpdateSCIMSynchronizationStatusResponse> UpdateSCIMSynchronizationStatus(UpdateSCIMSynchronizationStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateSCIMSynchronizationStatusResponse>(req, "UpdateSCIMSynchronizationStatus");
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable user SCIM synchronization.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSCIMSynchronizationStatusRequest"/></param>
+        /// <returns><see cref="UpdateSCIMSynchronizationStatusResponse"/></returns>
+        public UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatusSync(UpdateSCIMSynchronizationStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateSCIMSynchronizationStatusResponse>(req, "UpdateSCIMSynchronizationStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -117,6 +117,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
+        /// <summary>
+        /// Domain name tag.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Labels")]
+        public string[] Labels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
             this.SetParamSimple(map, prefix + "CloudType", this.CloudType);
             this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
         }
     }
 }

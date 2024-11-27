@@ -73,7 +73,7 @@ namespace TencentCloud.Car.V20220110.Models
         public long? FPS{ get; set; }
 
         /// <summary>
-        /// Waiting time for application pre-launch.
+        /// Waiting time for pre-launch.
         /// </summary>
         [JsonProperty("PreloadDuration")]
         public string PreloadDuration{ get; set; }

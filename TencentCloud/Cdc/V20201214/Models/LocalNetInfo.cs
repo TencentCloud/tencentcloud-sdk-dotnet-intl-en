@@ -15,50 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Cdc.V20201214.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CacheUrlItem : AbstractModel
+    public class LocalNetInfo : AbstractModel
     {
         
         /// <summary>
-        /// Id
-        /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
-
-        /// <summary>
-        /// Name
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Domain name
-        /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
-
-        /// <summary>
-        /// uri
-        /// </summary>
-        [JsonProperty("Uri")]
-        public string Uri{ get; set; }
-
-        /// <summary>
-        /// Protocol
+        /// Protocol 
+        /// Note: The returned value of this field may be null, indicating that no valid value is obtained.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Status
+        /// Network id 
+        /// Note: The returned value of this field may be null, indicating that no valid value is obtained.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// Routing information 
+        /// Note: The returned value of this field may be null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("BGPRoute")]
+        public string BGPRoute{ get; set; }
+
+        /// <summary>
+        /// Local IP 
+        /// Note: The returned value of this field may be null, indicating that no valid value is obtained.
+        /// </summary>
+        [JsonProperty("LocalIp")]
+        public string LocalIp{ get; set; }
 
 
         /// <summary>
@@ -66,12 +58,10 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Uri", this.Uri);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "BGPRoute", this.BGPRoute);
+            this.SetParamSimple(map, prefix + "LocalIp", this.LocalIp);
         }
     }
 }

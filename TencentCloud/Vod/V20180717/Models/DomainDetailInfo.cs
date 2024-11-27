@@ -81,6 +81,19 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IPFilterPolicy")]
+        public IPFilterPolicy IPFilterPolicy{ get; set; }
+
+        /// <summary>
+        /// Domain type. Valid values:
+        /// <li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +108,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
+            this.SetParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

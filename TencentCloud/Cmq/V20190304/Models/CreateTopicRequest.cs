@@ -31,7 +31,7 @@ namespace TencentCloud.Cmq.V20190304.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+        /// Maximum message length. Value range: 1024-65536 bytes (i.e., 1-64 KB). Default value: 65536.
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? FilterType{ get; set; }
 
         /// <summary>
-        /// Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
+        /// Message retention period. Value range: 60-86400 seconds (i.e., 1 minute-1 day). Default value: 86400.
         /// </summary>
         [JsonProperty("MsgRetentionSeconds")]
         public ulong? MsgRetentionSeconds{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? MaxResults{ get; set; }
 
         /// <summary>
-        /// Filter criterion, case-insensitive. Currently, only RoleConfigurationName is supported, and only eq (Equals) and sw (Starts With) are supported. For example, Filter = "RoleConfigurationName, sw test" indicates querying all access configurations with names starting with test; Filter = "RoleConfigurationName, eq TestRoleConfiguration" indicates querying the access configuration with the name TestRoleConfiguration.
+        /// Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }

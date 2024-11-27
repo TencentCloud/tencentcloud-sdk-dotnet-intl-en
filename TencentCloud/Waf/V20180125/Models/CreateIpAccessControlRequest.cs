@@ -47,6 +47,7 @@ namespace TencentCloud.Waf.V20180125.Models
         /// valid_ts indicates a valid date. Its value is a second-level timestamp, such as 1680570420, which indicates 2023-04-04 09:07:00.
         /// </summary>
         [JsonProperty("ValidTS")]
+        [System.Obsolete]
         public long? ValidTS{ get; set; }
 
         /// <summary>

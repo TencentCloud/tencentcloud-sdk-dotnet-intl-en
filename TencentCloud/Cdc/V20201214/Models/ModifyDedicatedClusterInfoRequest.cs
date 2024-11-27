@@ -15,50 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Cdc.V20201214.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAntiInfoLeakRulesRuleItem : AbstractModel
+    public class ModifyDedicatedClusterInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// Rule ID
+        /// CDC ID
         /// </summary>
-        [JsonProperty("RuleId")]
-        public string RuleId{ get; set; }
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
 
         /// <summary>
-        /// Rule name
+        /// New cluster name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Rule status
+        /// New cluster AZ
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
-        /// Rule Action Type
+        /// New cluster description
         /// </summary>
-        [JsonProperty("ActionType")]
-        public string ActionType{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
-        /// Rule creation time
+        /// Site where the cluster resides
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
-        /// Detailed Rules
-        /// </summary>
-        [JsonProperty("Strategies")]
-        public DescribeAntiInfoLeakRulesStrategyItem[] Strategies{ get; set; }
+        [JsonProperty("SiteId")]
+        public string SiteId{ get; set; }
 
 
         /// <summary>
@@ -66,12 +60,11 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamArrayObj(map, prefix + "Strategies.", this.Strategies);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "SiteId", this.SiteId);
         }
     }
 }

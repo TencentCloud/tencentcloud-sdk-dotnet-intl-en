@@ -72,6 +72,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
+        /// <summary>
+        /// Pagination offset. Do not use it together with NextToken, prioritizing using NextToken.
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamArraySimple(map, prefix + "FilterUsers.", this.FilterUsers);
             this.SetParamSimple(map, prefix + "SortField", this.SortField);
             this.SetParamSimple(map, prefix + "SortType", this.SortType);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

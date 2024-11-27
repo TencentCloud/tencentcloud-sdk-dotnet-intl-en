@@ -31,7 +31,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Certificate type. 0: no certificate, with only the HTTP listening port configured; 1: self-owned certificate; 2: managed certificate.
+        /// Certificate type. 0: Do not check international standard certificates; 1: The certificate is a self-owned certificate; 2: The certificate is a managed certificate.
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
@@ -54,6 +54,42 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }
 
+        /// <summary>
+        /// SM certificate type. 0: Do not check SM certificates; 1: The certificate is a self-owned SM certificate; 2: The certificate is a managed SM certificate.
+        /// </summary>
+        [JsonProperty("GmCertType")]
+        public long? GmCertType{ get; set; }
+
+        /// <summary>
+        /// When GmCertType is 1, this parameter needs to be set, indicating the certificate chain of the self-owned SM certificate.
+        /// </summary>
+        [JsonProperty("GmCert")]
+        public string GmCert{ get; set; }
+
+        /// <summary>
+        /// When GmCertType is 1, this parameter needs to be set, indicating the private key of the self-owned SM certificate.
+        /// </summary>
+        [JsonProperty("GmPrivateKey")]
+        public string GmPrivateKey{ get; set; }
+
+        /// <summary>
+        /// When GmCertType is 1, this parameter needs to be set, indicating the encryption certificate of the self-owned SM certificate.
+        /// </summary>
+        [JsonProperty("GmEncCert")]
+        public string GmEncCert{ get; set; }
+
+        /// <summary>
+        /// When GmCertType is 1, this parameter needs to be set, indicating the private key of the encryption certificate for the self-owned SM certificate.
+        /// </summary>
+        [JsonProperty("GmEncPrivateKey")]
+        public string GmEncPrivateKey{ get; set; }
+
+        /// <summary>
+        /// When GmCertType is 2, this parameter needs to be set, indicating the ID of the certificate managed by the Tencent Cloud SSL platform.
+        /// </summary>
+        [JsonProperty("GmSSLId")]
+        public string GmSSLId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +101,12 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Certificate", this.Certificate);
             this.SetParamSimple(map, prefix + "CertID", this.CertID);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
+            this.SetParamSimple(map, prefix + "GmCertType", this.GmCertType);
+            this.SetParamSimple(map, prefix + "GmCert", this.GmCert);
+            this.SetParamSimple(map, prefix + "GmPrivateKey", this.GmPrivateKey);
+            this.SetParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
+            this.SetParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
+            this.SetParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
         }
     }
 }

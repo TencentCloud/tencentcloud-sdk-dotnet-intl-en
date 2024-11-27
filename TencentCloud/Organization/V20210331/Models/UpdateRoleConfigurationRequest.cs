@@ -37,19 +37,19 @@ namespace TencentCloud.Organization.V20210331.Models
         public string RoleConfigurationId{ get; set; }
 
         /// <summary>
-        /// Description of new access configuration, which contains up to 1024 characters.
+        /// New permission configuration description, which contains up to 1,024 characters.
         /// </summary>
         [JsonProperty("NewDescription")]
         public string NewDescription{ get; set; }
 
         /// <summary>
-        /// New session duration. It indicates the maximum session duration when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. Unit: seconds. Value range: 900-43,200 (15 minutes to 12 hours).
+        /// New session duration, in seconds. It is the maximum time a CIC user can maintain a session while using permission configurations to access a target account in TCO. Value range: 900 to 43200 (15 minutes to 12 hours).
         /// </summary>
         [JsonProperty("NewSessionDuration")]
         public long? NewSessionDuration{ get; set; }
 
         /// <summary>
-        /// New initial access page. It indicates the initial access page URL when CIC users use the access configuration to access the target account of the Tencent Cloud Organization. This page must be the Tencent Cloud console page.
+        /// New initial access page. It is the initial page address when a CIC user uses permission configurations to access a target account in TCO. This page must be a Tencent Cloud console page.
         /// </summary>
         [JsonProperty("NewRelayState")]
         public string NewRelayState{ get; set; }

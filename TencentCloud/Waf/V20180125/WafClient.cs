@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1021";
+       private const string sdkVersion = "SDK_NET_3.0.1022";
 
         /// <summary>
         /// Client constructor.
@@ -432,64 +432,6 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 废弃接口
-        /// 
-        /// This API has been deprecated.
-        /// 
-        /// Obtain a tamper-proof URL
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAntiFakeUrlRequest"/></param>
-        /// <returns><see cref="DescribeAntiFakeUrlResponse"/></returns>
-        public Task<DescribeAntiFakeUrlResponse> DescribeAntiFakeUrl(DescribeAntiFakeUrlRequest req)
-        {
-            return InternalRequestAsync<DescribeAntiFakeUrlResponse>(req, "DescribeAntiFakeUrl");
-        }
-
-        /// <summary>
-        /// 废弃接口
-        /// 
-        /// This API has been deprecated.
-        /// 
-        /// Obtain a tamper-proof URL
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAntiFakeUrlRequest"/></param>
-        /// <returns><see cref="DescribeAntiFakeUrlResponse"/></returns>
-        public DescribeAntiFakeUrlResponse DescribeAntiFakeUrlSync(DescribeAntiFakeUrlRequest req)
-        {
-            return InternalRequestAsync<DescribeAntiFakeUrlResponse>(req, "DescribeAntiFakeUrl")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 老接口已经不再使用。
-        /// 
-        /// The old API is no longer in use.
-        /// 
-        /// Obtain the information leakage prevention rule list
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAntiInfoLeakRulesRequest"/></param>
-        /// <returns><see cref="DescribeAntiInfoLeakRulesResponse"/></returns>
-        public Task<DescribeAntiInfoLeakRulesResponse> DescribeAntiInfoLeakRules(DescribeAntiInfoLeakRulesRequest req)
-        {
-            return InternalRequestAsync<DescribeAntiInfoLeakRulesResponse>(req, "DescribeAntiInfoLeakRules");
-        }
-
-        /// <summary>
-        /// 老接口已经不再使用。
-        /// 
-        /// The old API is no longer in use.
-        /// 
-        /// Obtain the information leakage prevention rule list
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAntiInfoLeakRulesRequest"/></param>
-        /// <returns><see cref="DescribeAntiInfoLeakRulesResponse"/></returns>
-        public DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRulesSync(DescribeAntiInfoLeakRulesRequest req)
-        {
-            return InternalRequestAsync<DescribeAntiInfoLeakRulesResponse>(req, "DescribeAntiInfoLeakRules")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// Obtain the information leakage prevention rule list
         /// </summary>
         /// <param name="req"><see cref="DescribeAntiInfoLeakageRulesRequest"/></param>
@@ -507,6 +449,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRulesSync(DescribeAntiInfoLeakageRulesRequest req)
         {
             return InternalRequestAsync<DescribeAntiInfoLeakageRulesResponse>(req, "DescribeAntiInfoLeakageRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to describe the attack overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAttackOverviewResponse"/></returns>
+        public Task<DescribeAttackOverviewResponse> DescribeAttackOverview(DescribeAttackOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAttackOverviewResponse>(req, "DescribeAttackOverview");
+        }
+
+        /// <summary>
+        /// This API is used to describe the attack overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAttackOverviewResponse"/></returns>
+        public DescribeAttackOverviewResponse DescribeAttackOverviewSync(DescribeAttackOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAttackOverviewResponse>(req, "DescribeAttackOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1288,6 +1251,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// This API is used to generate a bar chart for the generation time of attack logs.
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackHistogramRequest"/></param>
+        /// <returns><see cref="GetAttackHistogramResponse"/></returns>
+        public Task<GetAttackHistogramResponse> GetAttackHistogram(GetAttackHistogramRequest req)
+        {
+            return InternalRequestAsync<GetAttackHistogramResponse>(req, "GetAttackHistogram");
+        }
+
+        /// <summary>
+        /// This API is used to generate a bar chart for the generation time of attack logs.
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackHistogramRequest"/></param>
+        /// <returns><see cref="GetAttackHistogramResponse"/></returns>
+        public GetAttackHistogramResponse GetAttackHistogramSync(GetAttackHistogramRequest req)
+        {
+            return InternalRequestAsync<GetAttackHistogramResponse>(req, "GetAttackHistogram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Display total attack count by querying based on conditions
         /// </summary>
         /// <param name="req"><see cref="GetAttackTotalCountRequest"/></param>
@@ -1578,6 +1562,27 @@ namespace TencentCloud.Waf.V20180125
         public ModifyDomainIpv6StatusResponse ModifyDomainIpv6StatusSync(ModifyDomainIpv6StatusRequest req)
         {
             return InternalRequestAsync<ModifyDomainIpv6StatusResponse>(req, "ModifyDomainIpv6Status")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the domain shipping status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainPostActionRequest"/></param>
+        /// <returns><see cref="ModifyDomainPostActionResponse"/></returns>
+        public Task<ModifyDomainPostActionResponse> ModifyDomainPostAction(ModifyDomainPostActionRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainPostActionResponse>(req, "ModifyDomainPostAction");
+        }
+
+        /// <summary>
+        /// This API is used to modify the domain shipping status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainPostActionRequest"/></param>
+        /// <returns><see cref="ModifyDomainPostActionResponse"/></returns>
+        public ModifyDomainPostActionResponse ModifyDomainPostActionSync(ModifyDomainPostActionRequest req)
+        {
+            return InternalRequestAsync<ModifyDomainPostActionResponse>(req, "ModifyDomainPostAction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1979,6 +1984,27 @@ namespace TencentCloud.Waf.V20180125
         public RefreshAccessCheckResultResponse RefreshAccessCheckResultSync(RefreshAccessCheckResultRequest req)
         {
             return InternalRequestAsync<RefreshAccessCheckResultResponse>(req, "RefreshAccessCheckResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// The new version of the CLS API has parameter changes, with query changed to query_string to support Lucene syntax for API search queries.
+        /// </summary>
+        /// <param name="req"><see cref="SearchAttackLogRequest"/></param>
+        /// <returns><see cref="SearchAttackLogResponse"/></returns>
+        public Task<SearchAttackLogResponse> SearchAttackLog(SearchAttackLogRequest req)
+        {
+            return InternalRequestAsync<SearchAttackLogResponse>(req, "SearchAttackLog");
+        }
+
+        /// <summary>
+        /// The new version of the CLS API has parameter changes, with query changed to query_string to support Lucene syntax for API search queries.
+        /// </summary>
+        /// <param name="req"><see cref="SearchAttackLogRequest"/></param>
+        /// <returns><see cref="SearchAttackLogResponse"/></returns>
+        public SearchAttackLogResponse SearchAttackLogSync(SearchAttackLogRequest req)
+        {
+            return InternalRequestAsync<SearchAttackLogResponse>(req, "SearchAttackLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

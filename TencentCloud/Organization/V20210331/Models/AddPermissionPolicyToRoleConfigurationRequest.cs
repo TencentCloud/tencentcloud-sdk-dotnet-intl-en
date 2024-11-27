@@ -37,19 +37,19 @@ namespace TencentCloud.Organization.V20210331.Models
         public string RoleConfigurationId{ get; set; }
 
         /// <summary>
-        /// Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure. Only the system policy is supported at the early stage, and the custom policy will be supported later.
+        /// Permission policy type. Valid values: System: system policy, namely the CAM system policy reused; Custom: custom policy, namely the custom policy prepared according to the CAM permission policy syntax and structure.  
         /// </summary>
         [JsonProperty("RolePolicyType")]
         public string RolePolicyType{ get; set; }
 
         /// <summary>
-        /// Permission policy name, which includes up to 20 policies, each containing up to 32 characters.
+        /// Permission policy name, supporting up to 20 policies, with each policy having a maximum of 32 characters. If you need to add a system policy, it is recommended to use the RolePolicies parameter. For custom policies, the array length is up to 1.
         /// </summary>
         [JsonProperty("RolePolicyNames")]
         public string[] RolePolicyNames{ get; set; }
 
         /// <summary>
-        /// Policy details.
+        /// Details of an added system policy.
         /// </summary>
         [JsonProperty("RolePolicies")]
         public PolicyDetail[] RolePolicies{ get; set; }

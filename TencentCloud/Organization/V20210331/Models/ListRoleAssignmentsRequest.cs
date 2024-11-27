@@ -61,13 +61,13 @@ namespace TencentCloud.Organization.V20210331.Models
         public long? TargetUin{ get; set; }
 
         /// <summary>
-        /// Identity type for the CAM user synchronization. Valid values: User: indicates that the identity for the CAM user synchronization is a CIC user; Group: indicates that the identity for the CAM user synchronization is a CIC user group.
+        /// Identity types synchronized for CAM users. Valid values: User: indicates the synchronized identity is a user. Group: indicates the synchronized identity is a user group.
         /// </summary>
         [JsonProperty("PrincipalType")]
         public string PrincipalType{ get; set; }
 
         /// <summary>
-        /// Identity ID for the CAM user synchronization. Valid values: When the PrincipalType value is Group, it is the CIC user group ID (g-********). When the PrincipalType value is User, it is the CIC user ID (u-********).
+        /// User synchronization ID. Valid values: When PrincipalType is Group, it is a user group ID (g-****). When PrincipalType is User, it is a user ID (u-****).
         /// </summary>
         [JsonProperty("PrincipalId")]
         public string PrincipalId{ get; set; }
