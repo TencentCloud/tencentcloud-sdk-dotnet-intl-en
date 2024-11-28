@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1022";
+       private const string sdkVersion = "SDK_NET_3.0.1023";
 
         /// <summary>
         /// Client constructor.
@@ -55,9 +55,9 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// This API is used to roll back the system disk snapshot of the specified instance.
-        /// <li>Only rollback to the original system disk is supported.</li>
+        /// <li>Only rollback to the original system disk is supported. </li>
         /// <li>Only snapshots in `NORMAL` status can be used for rollback. To query the status of a snapshot, you can call the `DescribeSnapshots` API and see the `SnapshotState` field in the response.</li>
-        /// <li>When a snapshot is rolled back, the status of the instance must be `STOPPED` or `RUNNING`. You can call the `DescribeInstances` API to query the instance status. Instances in `RUNNING` status will be forcibly shut down before snapshot rollback.</li>
+        /// <li>When a snapshot is rolled back, the status of the instance must be `STOPPED` or `RUNNING`. You can call the `DescribeInstances` API to query the instance status. Instances in `RUNNING` status will be forcibly shut down before snapshot rollback. </li>
         /// </summary>
         /// <param name="req"><see cref="ApplyInstanceSnapshotRequest"/></param>
         /// <returns><see cref="ApplyInstanceSnapshotResponse"/></returns>
@@ -68,9 +68,9 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// This API is used to roll back the system disk snapshot of the specified instance.
-        /// <li>Only rollback to the original system disk is supported.</li>
+        /// <li>Only rollback to the original system disk is supported. </li>
         /// <li>Only snapshots in `NORMAL` status can be used for rollback. To query the status of a snapshot, you can call the `DescribeSnapshots` API and see the `SnapshotState` field in the response.</li>
-        /// <li>When a snapshot is rolled back, the status of the instance must be `STOPPED` or `RUNNING`. You can call the `DescribeInstances` API to query the instance status. Instances in `RUNNING` status will be forcibly shut down before snapshot rollback.</li>
+        /// <li>When a snapshot is rolled back, the status of the instance must be `STOPPED` or `RUNNING`. You can call the `DescribeInstances` API to query the instance status. Instances in `RUNNING` status will be forcibly shut down before snapshot rollback. </li>
         /// </summary>
         /// <param name="req"><see cref="ApplyInstanceSnapshotRequest"/></param>
         /// <returns><see cref="ApplyInstanceSnapshotResponse"/></returns>

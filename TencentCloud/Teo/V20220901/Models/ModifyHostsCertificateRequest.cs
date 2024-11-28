@@ -62,7 +62,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ApplyType{ get; set; }
 
         /// <summary>
-        /// In the Edge mTLS scenario, this field represents the client's CA certificate, which is deployed at the EO entry side for authenticating the client access to EO nodes. The original configuration applies if this field is not specified.
+        /// In the mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for the client to authenticate the EO node. By default, it is disabled. If it is left blank, it indicates retaining the original configuration.
         /// </summary>
         [JsonProperty("ClientCertInfo")]
         public MutualTLS ClientCertInfo{ get; set; }

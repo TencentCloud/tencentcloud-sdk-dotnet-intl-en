@@ -31,11 +31,23 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Mode{ get; set; }
 
         /// <summary>
-        /// List of certificates
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// List of server certificates. The relevant certificates are deployed on the entrance side of the EO.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("List")]
         public CertificateInfo[] List{ get; set; }
+
+        /// <summary>
+        /// In the edge mutual authentication scenario, this field represents the client's CA certificate, which is deployed inside the EO node and used for EO node authentication of the client certificate.
+        /// </summary>
+        [JsonProperty("ClientCertInfo")]
+        public MutualTLS ClientCertInfo{ get; set; }
+
+        /// <summary>
+        /// The certificate carried during EO node origin-pull is used when the origin server enables the mutual authentication handshake to validate the client certificate, ensuring that the request originates from a trusted EO node.
+        /// </summary>
+        [JsonProperty("UpstreamCertInfo")]
+        public UpstreamCertInfo UpstreamCertInfo{ get; set; }
 
 
         /// <summary>
@@ -45,6 +57,8 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
+            this.SetParamObj(map, prefix + "UpstreamCertInfo.", this.UpstreamCertInfo);
         }
     }
 }

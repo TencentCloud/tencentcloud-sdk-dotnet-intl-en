@@ -25,17 +25,17 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// u200cInformation required for authentication using DNS resolution. It's applicable to sites connected via CNAME. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-        ///  
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
+        /// ](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("DnsVerification")]
         public DnsVerification DnsVerification{ get; set; }
 
         /// <summary>
-        /// u200cInformation required for verifying via a file. It's applicable to sites connected via CNAMEs. See [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-        ///  
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
+        /// ](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("FileVerification")]
         public FileVerification FileVerification{ get; set; }
