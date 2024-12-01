@@ -21,44 +21,26 @@ namespace TencentCloud.Cfs.V20190719.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCfsFileSystemsRequest : AbstractModel
+    public class AutoScaleUpRule : AbstractModel
     {
         
         /// <summary>
-        /// File system ID
+        /// 
         /// </summary>
-        [JsonProperty("FileSystemId")]
-        public string FileSystemId{ get; set; }
-
-        /// <summary>
-        /// VPC ID
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
-        /// Subnet ID
-        /// </summary>
-        [JsonProperty("SubnetId")]
-        public string SubnetId{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("ScaleThreshold")]
+        public ulong? ScaleThreshold{ get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("CreationToken")]
-        public string CreationToken{ get; set; }
+        [JsonProperty("TargetThreshold")]
+        public ulong? TargetThreshold{ get; set; }
 
 
         /// <summary>
@@ -66,12 +48,9 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "CreationToken", this.CreationToken);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ScaleThreshold", this.ScaleThreshold);
+            this.SetParamSimple(map, prefix + "TargetThreshold", this.TargetThreshold);
         }
     }
 }

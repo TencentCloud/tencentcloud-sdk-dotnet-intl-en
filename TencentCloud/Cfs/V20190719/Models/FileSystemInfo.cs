@@ -139,6 +139,18 @@ namespace TencentCloud.Cfs.V20190719.Models
         public float? BandwidthLimit{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyId")]
+        public string AutoSnapshotPolicyId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SnapStatus")]
+        public string SnapStatus{ get; set; }
+
+        /// <summary>
         /// Total capacity of the file system
         /// </summary>
         [JsonProperty("Capacity")]
@@ -162,6 +174,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         [JsonProperty("TieringDetail")]
         public TieringDetailInfo TieringDetail{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutoScaleUpRule")]
+        public AutoScaleUpRule AutoScaleUpRule{ get; set; }
 
 
         /// <summary>
@@ -187,10 +205,13 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+            this.SetParamSimple(map, prefix + "SnapStatus", this.SnapStatus);
             this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TieringState", this.TieringState);
             this.SetParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
+            this.SetParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
         }
     }
 }
