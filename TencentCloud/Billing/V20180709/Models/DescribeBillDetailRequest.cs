@@ -99,27 +99,21 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Action type to query. Valid values:
-        /// Purchase
-        /// Renewal
-        /// Modify
-        /// Refund
-        /// Deduction
         /// Hourly settlement
         /// Daily settlement
         /// Monthly settlement
-        /// Offline project deduction
-        /// Offline deduction
-        /// adjust-CR
-        /// adjust-DR
-        /// One-off RI Fee
         /// Spot
-        /// Hourly RI fee
         /// New monthly subscription
         /// Monthly subscription renewal
         /// Monthly subscription specification adjustment
-        /// Monthly subscription specification adjustment
         /// Monthly subscription refund
+        /// Adjustment - deduction
+        /// Adjustment - refund
+        /// Hourly RI fee
+        /// One-off RI Fee
+        /// Hourly Savings Plan fee
+        /// Offline project deduction
+        /// Offline product deduction
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1024";
+       private const string sdkVersion = "SDK_NET_3.0.1025";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,31 @@ namespace TencentCloud.Ccc.V20200210
         public BindStaffSkillGroupListResponse BindStaffSkillGroupListSync(BindStaffSkillGroupListRequest req)
         {
             return InternalRequestAsync<BindStaffSkillGroupListResponse>(req, "BindStaffSkillGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Used to make outbound calls by invoking AI models, limited to the use of proprietary phone numbers. Currently, the Advanced version seats are available for a **limited time** free trial.
+        /// 
+        /// Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://intl.cloud.tencent.com/document/product/679/112100?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="CreateAICallRequest"/></param>
+        /// <returns><see cref="CreateAICallResponse"/></returns>
+        public Task<CreateAICallResponse> CreateAICall(CreateAICallRequest req)
+        {
+            return InternalRequestAsync<CreateAICallResponse>(req, "CreateAICall");
+        }
+
+        /// <summary>
+        /// Used to make outbound calls by invoking AI models, limited to the use of proprietary phone numbers. Currently, the Advanced version seats are available for a **limited time** free trial.
+        /// 
+        /// Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://intl.cloud.tencent.com/document/product/679/112100?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="CreateAICallRequest"/></param>
+        /// <returns><see cref="CreateAICallResponse"/></returns>
+        public CreateAICallResponse CreateAICallSync(CreateAICallRequest req)
+        {
+            return InternalRequestAsync<CreateAICallResponse>(req, "CreateAICall")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

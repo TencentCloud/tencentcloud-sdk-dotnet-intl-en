@@ -43,9 +43,10 @@ namespace TencentCloud.Billing.V20180709.Models
         public string Month{ get; set; }
 
         /// <summary>
-        /// The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+        /// The period type. byUsedTime
         /// </summary>
         [JsonProperty("PeriodType")]
+        [System.Obsolete]
         public string PeriodType{ get; set; }
 
         /// <summary>
@@ -56,26 +57,21 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? NeedRecordNum{ get; set; }
 
         /// <summary>
-        /// Action type to query. Valid values:
-        /// Purchase
-        /// Renewal
-        /// Modify
-        /// Refund
-        /// Deduction
         /// Hourly settlement
         /// Daily settlement
         /// Monthly settlement
-        /// Offline project deduction
-        /// Offline deduction
-        /// adjust-CR
-        /// adjust-DR
-        /// One-off RI Fee
         /// Spot
-        /// Hourly RI fee
         /// New monthly subscription
         /// Monthly subscription renewal
         /// Monthly subscription specification adjustment
         /// Monthly subscription refund
+        /// Adjustment - deduction
+        /// Adjustment - refund
+        /// Hourly RI fee
+        /// One-off RI Fee
+        /// Hourly Savings Plan fee
+        /// Offline project deduction
+        /// Offline product deduction
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -87,7 +83,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+        /// Billing mode: prePay/postPay
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+        /// Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Computing C5t.
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ReduceType{ get; set; }
 
         /// <summary>
-        /// Total amount after discount
+        /// Total amount after discount (Including Tax):  = Total Amount After Discount (Excluding Tax) + TaxAmount
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }
@@ -151,19 +151,19 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Cash credit: The amount paid from the user’s cash account
+        /// Cash credit: The amount paid from the user's cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit: The amount paid with the user’s free credit
+        /// Free credit: The amount paid with the user's free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

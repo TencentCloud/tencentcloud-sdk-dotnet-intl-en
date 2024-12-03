@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1024</VersionPrefix>
+    <VersionPrefix>3.0.1025</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -72,6 +72,7 @@
     <Compile Include="V20200527\Models\CreateStreamPackageSourceLocationResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageSourceRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageSourceResponse.cs" />
+    <Compile Include="V20200527\Models\DashManifestInfo.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsRequest.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelsRequest.cs" />

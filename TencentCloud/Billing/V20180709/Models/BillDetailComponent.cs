@@ -122,19 +122,19 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Cash credit: The amount paid from the user’s cash account
+        /// Cash credit: The amount paid from the user's cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit: The amount paid with the user’s free credit
+        /// Free credit: The amount paid with the user's free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
@@ -207,6 +207,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ComponentConfig")]
         public BillDetailComponentConfig[] ComponentConfig{ get; set; }
 
+        /// <summary>
+        /// The tax rate.
+        /// </summary>
+        [JsonProperty("TaxRate")]
+        public string TaxRate{ get; set; }
+
+        /// <summary>
+        /// The tax amount.
+        /// </summary>
+        [JsonProperty("TaxAmount")]
+        public string TaxAmount{ get; set; }
+
+        /// <summary>
+        /// The currency used for the settlement of a component.
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -243,6 +261,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
             this.SetParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
             this.SetParamArrayObj(map, prefix + "ComponentConfig.", this.ComponentConfig);
+            this.SetParamSimple(map, prefix + "TaxRate", this.TaxRate);
+            this.SetParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
         }
     }
 }

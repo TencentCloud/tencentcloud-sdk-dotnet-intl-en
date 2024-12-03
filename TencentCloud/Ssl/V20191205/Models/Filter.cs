@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string FilterKey{ get; set; }
 
         /// <summary>
-        /// u200cThe value of the filter parameter.
+        /// The value of the filter parameter.
         /// </summary>
         [JsonProperty("FilterValue")]
         public string FilterValue{ get; set; }

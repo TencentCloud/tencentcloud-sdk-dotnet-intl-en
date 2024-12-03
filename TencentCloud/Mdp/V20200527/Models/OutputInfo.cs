@@ -43,7 +43,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         public string ManifestName{ get; set; }
 
         /// <summary>
-        /// Advertisement configuration.
+        /// The manifest info, used when Type is HLS.
         /// </summary>
         [JsonProperty("ManifestConf")]
         public ManifestInfo ManifestConf{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         [JsonProperty("PlaybackURL")]
         public string PlaybackURL{ get; set; }
+
+        /// <summary>
+        /// The manifest info, used when Type is DASH.
+        /// </summary>
+        [JsonProperty("DashManifestConf")]
+        public DashManifestInfo DashManifestConf{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "ManifestName", this.ManifestName);
             this.SetParamObj(map, prefix + "ManifestConf.", this.ManifestConf);
             this.SetParamSimple(map, prefix + "PlaybackURL", this.PlaybackURL);
+            this.SetParamObj(map, prefix + "DashManifestConf.", this.DashManifestConf);
         }
     }
 }
