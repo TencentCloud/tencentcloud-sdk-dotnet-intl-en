@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+        /// Whether the parameter configuration is successfully modified.<br> <li>true: successful;</li> <li>false: failed.</li>
         /// </summary>
         [JsonProperty("Changed")]
         public bool? Changed{ get; set; }

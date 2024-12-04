@@ -25,37 +25,51 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance ID.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Account name.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Account description.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Read/write permission policy.
+        /// - r: read-only.
+        /// - w: write-only.
+        /// - rw: read/write.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Read-only routing policy.
+        /// - master: primary node.
+        /// - replication: secondary node.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sub-account status.
+        /// - 1: changing.
+        /// - 2: valid.
+        /// - 4: deleted.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

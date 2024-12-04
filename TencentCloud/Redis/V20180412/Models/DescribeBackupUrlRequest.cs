@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,11 +37,11 @@ namespace TencentCloud.Redis.V20180412.Models
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// Type of the network restriction for downloading backup files. If this parameter is not configured, the user-defined configuration will be used.
-        /// 
-        /// - `NoLimit`: Backup files can be downloaded over both public and private networks.
-        /// - `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
-        /// - `Customize`: Backup files can be downloaded only in the customized VPC.
+        /// Limit type of the network from which you can download backup files. If this parameter is not configured, the user-defined configuration will be used.
+        /// - NoLimit: There is no limit. Backup files can be downloaded from both Tencent Cloud private and public networks.
+        /// - LimitOnlyIntranet: Backup files can be downloaded 
+        ///  only from the private IP address automatically assigned by Tencent Cloud.
+        /// - Customize: Backup files can be downloaded from the user-defined VPC.
         /// </summary>
         [JsonProperty("LimitType")]
         public string LimitType{ get; set; }
@@ -53,10 +53,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public string VpcComparisonSymbol{ get; set; }
 
         /// <summary>
-        /// Whether backups can be downloaded at the custom `LimitIp` address.
-        /// 
-        /// - `In` (default value): Download is allowed for the custom IP.
-        /// - `NotIn`: Download is not allowed for the custom IP.
+        /// Whether backup files can be downloaded from the custom IP address specified by LimitIp.
+        /// - In: yes. This is the default value.
+        /// - NotIn: no.
         /// </summary>
         [JsonProperty("IpComparisonSymbol")]
         public string IpComparisonSymbol{ get; set; }

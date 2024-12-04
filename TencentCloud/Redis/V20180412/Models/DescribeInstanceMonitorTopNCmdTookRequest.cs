@@ -25,13 +25,17 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+        /// Query time range.
+        /// - 1: real-time.
+        /// - 2: last 30 minutes.
+        /// - 3: last 6 hours.
+        /// - 4: last 24 hours.
         /// </summary>
         [JsonProperty("SpanType")]
         public long? SpanType{ get; set; }

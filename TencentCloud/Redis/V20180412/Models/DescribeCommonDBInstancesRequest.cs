@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// List of instance IDs
+        /// Instance ID filter information list, with a maximum array length of 100.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

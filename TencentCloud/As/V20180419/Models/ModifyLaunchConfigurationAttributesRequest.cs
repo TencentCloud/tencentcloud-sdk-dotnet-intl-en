@@ -193,6 +193,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }
 
+        /// <summary>
+        /// Cloud Dedicated Cluster (CDC) ID.
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +229,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

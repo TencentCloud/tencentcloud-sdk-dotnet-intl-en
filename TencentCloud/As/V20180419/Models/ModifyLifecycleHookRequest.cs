@@ -37,17 +37,17 @@ namespace TencentCloud.As.V20180419.Models
         public string LifecycleHookName{ get; set; }
 
         /// <summary>
-        /// The time when the lifecycle hook is applied. Valid values:
-        /// <li> `INSTANCE_LAUNCHING`: After the instance launch
-        /// <li> `INSTANCE_TERMINATING`: Before the instance termination
+        /// Scenario for entering the lifecycle hook. Valid values:
+        /// <li>INSTANCE_LAUNCHING: after the instance is launched.</li>
+        /// <li>INSTANCE_TERMINATING: before the instance is terminated.</li>
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
 
         /// <summary>
-        /// Actions after the lifecycle hook times out. Valid values:
-        /// <li> `CONTINUE`: Continue the scaling activity after the timeout
-        /// <li> `ABANDON`: Terminate the scaling activity after the timeout
+        /// Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
+        /// <li>CONTINUE: Continue the scaling activity after timeout.</li>
+        /// <li>ABANDON: Terminate the scaling activity after timeout.</li>
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }

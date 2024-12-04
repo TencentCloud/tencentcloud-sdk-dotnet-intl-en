@@ -25,25 +25,27 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Source instance ID
+        /// Source instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("SrcInstanceId")]
         public string SrcInstanceId{ get; set; }
 
         /// <summary>
-        /// Target instance ID
+        /// Target instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("DstInstanceId")]
         public string DstInstanceId{ get; set; }
 
         /// <summary>
-        /// The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
+        /// DTS disconnection time between the source instance and target instance. Unit: second. If the DTS disconnection time exceeds TimeDelay, the VIP will not be switched. It is recommended to set an acceptable value based on business needs.
         /// </summary>
         [JsonProperty("TimeDelay")]
         public long? TimeDelay{ get; set; }
 
         /// <summary>
-        /// Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
+        /// Whether to force a switch in the case of a DTS disconnection.
+        /// - 1: Force the switch.
+        /// - 0: Do not force the switch.
         /// </summary>
         [JsonProperty("ForceSwitch")]
         public long? ForceSwitch{ get; set; }

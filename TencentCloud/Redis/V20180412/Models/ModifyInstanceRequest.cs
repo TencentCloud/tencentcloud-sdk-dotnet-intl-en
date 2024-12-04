@@ -25,37 +25,44 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
+        /// Instance modification operation. Valid values:
+        /// - rename: Rename the instance.
+        /// - modifyProject: Modify the project to which the instance belongs.
+        /// - modifyAutoRenew: Modify the instance renewal flag.
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. The maximum number of instances per request is 10.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// New name of the instance
+        /// New name of the instance.
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID. Log in to the [Project Management](https://console.tencentcloud.com/project) page of the Redis console and copy the project ID in **Project Name**.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+        /// Auto-renewal flag.
+        /// 
+        /// - 0: default status (manual renewal).
+        /// - 1: automatic renewal.
+        /// - 2: no automatic renewal.
         /// </summary>
         [JsonProperty("AutoRenews")]
         public long?[] AutoRenews{ get; set; }
 
         /// <summary>
-        /// Disused
+        /// This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -67,7 +74,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Disused
+        /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }

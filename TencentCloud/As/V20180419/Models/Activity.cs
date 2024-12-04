@@ -37,23 +37,29 @@ namespace TencentCloud.As.V20180419.Models
         public string ActivityId{ get; set; }
 
         /// <summary>
-        /// Type of the scaling activity. Valid values:<br>
-        /// <li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
-        /// <li>`START_INSTANCES`: Starts up instances.
-        /// <li>`STOP_INSTANCES`: Shut down instances.
-        /// <li>`INVOKE_COMMAND`: Execute commands
+        /// Scaling activity type. Valid values:
+        /// <li>SCALE_OUT: Scale out an instance.</li>
+        /// <li>SCALE_IN: Scale in an instance.</li>
+        /// <li>ATTACH_INSTANCES: Add an instance.</li>
+        /// <li>REMOVE_INSTANCES: Terminate an instance.</li>
+        /// <li>DETACH_INSTANCES: Remove an instance.</li>
+        /// <li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
+        /// <li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
+        /// <li>START_INSTANCES: Start an instance.</li>
+        /// <li>STOP_INSTANCES: Stop an instance.</li>
+        /// <li>INVOKE_COMMAND: Execute a command.</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
-        /// Scaling activity status. Value range:<br>
-        /// <li>INIT: initializing
-        /// <li>RUNNING: running
-        /// <li>SUCCESSFUL: succeeded
-        /// <li>PARTIALLY_SUCCESSFUL: partially succeeded
-        /// <li>FAILED: failed
-        /// <li>CANCELLED: canceled
+        /// Scaling activity status. Valid values:
+        /// <li>INIT: initializing.</li>
+        /// <li>RUNNING: running.</li>
+        /// <li>SUCCESSFUL: successful.</li>
+        /// <li>PARTIALLY_SUCCESSFUL: partially successful.</li>
+        /// <li>FAILED: failed.</li>
+        /// <li>CANCELLED: canceled.</li>
         /// </summary>
         [JsonProperty("StatusCode")]
         public string StatusCode{ get; set; }

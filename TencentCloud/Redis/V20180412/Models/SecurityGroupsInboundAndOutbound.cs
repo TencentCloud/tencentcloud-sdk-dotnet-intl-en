@@ -25,7 +25,9 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Identify whether the IP and port for accessing the database are allowed
+        /// Whether the inbound and outbound IP addresses and ports of the database are allowed.
+        /// - ACCEPT: allowed.
+        /// - DROP: disallowed.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

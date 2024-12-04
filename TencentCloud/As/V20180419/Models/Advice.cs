@@ -43,9 +43,9 @@ namespace TencentCloud.As.V20180419.Models
         public string Solution{ get; set; }
 
         /// <summary>
-        /// Risk level of the scaling group configuration. Valid values: <br>
-        /// <li>WARNING<br>
-        /// <li>CRITICAL<br>
+        /// Scaling suggestion warning level. Valid values:
+        /// <li>WARNING: warning.</li>
+        /// <li>CRITICAL: critical.</li>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }

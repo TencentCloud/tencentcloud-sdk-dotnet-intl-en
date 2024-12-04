@@ -62,13 +62,23 @@ namespace TencentCloud.As.V20180419.Models
         public RefreshSettings RefreshSettings{ get; set; }
 
         /// <summary>
-        /// Refresh activity type. Valid values: <br><li>NORMAL: Normal refresh activity.</li> <li>ROLLBACK: Rollback refresh activity.
+        /// Refresh activity type. Valid values:
+        /// <li>NORMAL: normal refresh activity.</li>
+        /// <li>ROLLBACK: rollback refresh activity.</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
-        /// Refresh activity status. Valid values: <br><li>INIT: Initializing.</li> <li>RUNNING: Running.</li> <li>SUCCESSFUL: Activity successful.</li> <li>FAILED_PAUSE: Paused due to a failed refresh batch.</li> <li>AUTO_PAUSE: Automatically paused according to pause policy.</li> <li>MANUAL_PAUSE: Manually paused.</li> <li>CANCELLED: Activity canceled.</li> <li>FAILED: Activity failed.
+        /// Refresh activity status. Valid values:
+        /// <li>INIT: initializing.</li>
+        /// <li>RUNNING: running.</li>
+        /// <li>SUCCESSFUL: successful.</li>
+        /// <li>FAILED_PAUSE: paused due to the failure of a refresh batch.</li>
+        /// <li>AUTO_PAUSE: automatically paused due to the pause policy.</li>
+        /// <li>MANUAL_PAUSE: manually paused.</li>
+        /// <li>CANCELLED: canceled.</li>
+        /// <li>FAILED: failed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

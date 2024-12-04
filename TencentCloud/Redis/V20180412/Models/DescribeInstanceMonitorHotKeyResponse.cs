@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Hot key details
+        /// Hot key details.
         /// </summary>
         [JsonProperty("Data")]
         public HotKeyInfo[] Data{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time of slow query
+        /// Start time of a slow query, with a maximum query span of 30 days.
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// End time of slow query
+        /// End time of a slow query, with a maximum query span of 30 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// Number of results per page.  Default value: `20`. Value range: [20,1000].
+        /// Number of tasks output on each page. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`.
+        /// Pagination offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number - 1).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

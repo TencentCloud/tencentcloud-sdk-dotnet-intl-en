@@ -39,8 +39,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public CompareObjectItem[] ObjectItems{ get; set; }
 
         /// <summary>
-        /// Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Advanced object types, such as account, index, shardkey, schema.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AdvancedObjects")]
         public string[] AdvancedObjects{ get; set; }

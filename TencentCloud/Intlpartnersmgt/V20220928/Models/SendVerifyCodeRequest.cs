@@ -33,6 +33,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 
         /// <summary>
         /// Mobile number.
+        /// The caller needs to ensure the validity and correctness of the mobile number. A global mobile number within a range of 1-32 digits is allowed.No need to add CountryCode before mobile number.
         /// </summary>
         [JsonProperty("PhoneNum")]
         public string PhoneNum{ get; set; }

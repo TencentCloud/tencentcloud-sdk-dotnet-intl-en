@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1025";
+       private const string sdkVersion = "SDK_NET_3.0.1026";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Dts.V20211206
         public CompleteMigrateJobResponse CompleteMigrateJobSync(CompleteMigrateJobRequest req)
         {
             return InternalRequestAsync<CompleteMigrateJobResponse>(req, "CompleteMigrateJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to configure data subscription instances.
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureSubscribeJobRequest"/></param>
+        /// <returns><see cref="ConfigureSubscribeJobResponse"/></returns>
+        public Task<ConfigureSubscribeJobResponse> ConfigureSubscribeJob(ConfigureSubscribeJobRequest req)
+        {
+            return InternalRequestAsync<ConfigureSubscribeJobResponse>(req, "ConfigureSubscribeJob");
+        }
+
+        /// <summary>
+        /// This API is used to configure data subscription instances.
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureSubscribeJobRequest"/></param>
+        /// <returns><see cref="ConfigureSubscribeJobResponse"/></returns>
+        public ConfigureSubscribeJobResponse ConfigureSubscribeJobSync(ConfigureSubscribeJobRequest req)
+        {
+            return InternalRequestAsync<ConfigureSubscribeJobResponse>(req, "ConfigureSubscribeJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -184,6 +205,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to creat a consumer group for the subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerGroupResponse>(req, "CreateConsumerGroup");
+        }
+
+        /// <summary>
+        /// This API is used to creat a consumer group for the subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public CreateConsumerGroupResponse CreateConsumerGroupSync(CreateConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerGroupResponse>(req, "CreateConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to verify a migration task.
         /// Before migration, you should call this API to create a check task. Migration will start only if the check succeeds. You can view the check result through the `DescribeMigrationCheckJob` API.
         /// After successful check, if the migration task needs to be modified, a new check task should be created, and migration will start only after the new check succeeds.
@@ -251,6 +293,48 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to create a data subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
+        /// <returns><see cref="CreateSubscribeResponse"/></returns>
+        public Task<CreateSubscribeResponse> CreateSubscribe(CreateSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateSubscribeResponse>(req, "CreateSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to create a data subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeRequest"/></param>
+        /// <returns><see cref="CreateSubscribeResponse"/></returns>
+        public CreateSubscribeResponse CreateSubscribeSync(CreateSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateSubscribeResponse>(req, "CreateSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a subscription check task. The task must have successfully called the ConfigureSubscribeJob interface to configure all necessary information before starting the check.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeCheckJobRequest"/></param>
+        /// <returns><see cref="CreateSubscribeCheckJobResponse"/></returns>
+        public Task<CreateSubscribeCheckJobResponse> CreateSubscribeCheckJob(CreateSubscribeCheckJobRequest req)
+        {
+            return InternalRequestAsync<CreateSubscribeCheckJobResponse>(req, "CreateSubscribeCheckJob");
+        }
+
+        /// <summary>
+        /// This API is used to create a subscription check task. The task must have successfully called the ConfigureSubscribeJob interface to configure all necessary information before starting the check.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubscribeCheckJobRequest"/></param>
+        /// <returns><see cref="CreateSubscribeCheckJobResponse"/></returns>
+        public CreateSubscribeCheckJobResponse CreateSubscribeCheckJobSync(CreateSubscribeCheckJobRequest req)
+        {
+            return InternalRequestAsync<CreateSubscribeCheckJobResponse>(req, "CreateSubscribeCheckJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a sync task.
         /// </summary>
         /// <param name="req"><see cref="CreateSyncJobRequest"/></param>
@@ -289,6 +373,27 @@ namespace TencentCloud.Dts.V20211206
         public DeleteCompareTaskResponse DeleteCompareTaskSync(DeleteCompareTaskRequest req)
         {
             return InternalRequestAsync<DeleteCompareTaskResponse>(req, "DeleteCompareTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a consumer group of a subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup");
+        }
+
+        /// <summary>
+        /// This API is used to delete a consumer group of a subscription task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public DeleteConsumerGroupResponse DeleteConsumerGroupSync(DeleteConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -352,6 +457,27 @@ namespace TencentCloud.Dts.V20211206
         public DescribeCompareTasksResponse DescribeCompareTasksSync(DescribeCompareTasksRequest req)
         {
             return InternalRequestAsync<DescribeCompareTasksResponse>(req, "DescribeCompareTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get consumer group details for the subscription instance configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupsResponse"/></returns>
+        public Task<DescribeConsumerGroupsResponse> DescribeConsumerGroups(DescribeConsumerGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupsResponse>(req, "DescribeConsumerGroups");
+        }
+
+        /// <summary>
+        /// This API is used to get consumer group details for the subscription instance configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupsResponse"/></returns>
+        public DescribeConsumerGroupsResponse DescribeConsumerGroupsSync(DescribeConsumerGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupsResponse>(req, "DescribeConsumerGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -465,6 +591,111 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to query the latest offset before the specified time in KafkaTopic.The offset output by the interface is the closest offset to this time.If the input time is much later than the current time, the output is equivalent to the latest offset;If the input time is much earlier than the current time, the output is equivalent to the oldest offset;If the input is empty, the default time is 0, which is the oldest offset to be queried.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOffsetByTimeRequest"/></param>
+        /// <returns><see cref="DescribeOffsetByTimeResponse"/></returns>
+        public Task<DescribeOffsetByTimeResponse> DescribeOffsetByTime(DescribeOffsetByTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeOffsetByTimeResponse>(req, "DescribeOffsetByTime");
+        }
+
+        /// <summary>
+        /// This API is used to query the latest offset before the specified time in KafkaTopic.The offset output by the interface is the closest offset to this time.If the input time is much later than the current time, the output is equivalent to the latest offset;If the input time is much earlier than the current time, the output is equivalent to the oldest offset;If the input is empty, the default time is 0, which is the oldest offset to be queried.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOffsetByTimeRequest"/></param>
+        /// <returns><see cref="DescribeOffsetByTimeResponse"/></returns>
+        public DescribeOffsetByTimeResponse DescribeOffsetByTimeSync(DescribeOffsetByTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeOffsetByTimeResponse>(req, "DescribeOffsetByTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the results of a subscription check task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeCheckJobRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeCheckJobResponse"/></returns>
+        public Task<DescribeSubscribeCheckJobResponse> DescribeSubscribeCheckJob(DescribeSubscribeCheckJobRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeCheckJobResponse>(req, "DescribeSubscribeCheckJob");
+        }
+
+        /// <summary>
+        /// This API is used to query the results of a subscription check task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeCheckJobRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeCheckJobResponse"/></returns>
+        public DescribeSubscribeCheckJobResponse DescribeSubscribeCheckJobSync(DescribeSubscribeCheckJobRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeCheckJobResponse>(req, "DescribeSubscribeCheckJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the configuration information of the data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeDetailRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeDetailResponse"/></returns>
+        public Task<DescribeSubscribeDetailResponse> DescribeSubscribeDetail(DescribeSubscribeDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeDetailResponse>(req, "DescribeSubscribeDetail");
+        }
+
+        /// <summary>
+        /// This API is used to get the configuration information of the data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeDetailRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeDetailResponse"/></returns>
+        public DescribeSubscribeDetailResponse DescribeSubscribeDetailSync(DescribeSubscribeDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeDetailResponse>(req, "DescribeSubscribeDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the information list of data subscription instances. Pagination is enabled by default with 20 results returned each time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeJobsResponse"/></returns>
+        public Task<DescribeSubscribeJobsResponse> DescribeSubscribeJobs(DescribeSubscribeJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeJobsResponse>(req, "DescribeSubscribeJobs");
+        }
+
+        /// <summary>
+        /// This API is used to get the information list of data subscription instances. Pagination is enabled by default with 20 results returned each time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeJobsResponse"/></returns>
+        public DescribeSubscribeJobsResponse DescribeSubscribeJobsSync(DescribeSubscribeJobsRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeJobsResponse>(req, "DescribeSubscribeJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query whether a subscription task can be terminated and returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeReturnableRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeReturnableResponse"/></returns>
+        public Task<DescribeSubscribeReturnableResponse> DescribeSubscribeReturnable(DescribeSubscribeReturnableRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeReturnableResponse>(req, "DescribeSubscribeReturnable");
+        }
+
+        /// <summary>
+        /// This API is used to query whether a subscription task can be terminated and returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscribeReturnableRequest"/></param>
+        /// <returns><see cref="DescribeSubscribeReturnableResponse"/></returns>
+        public DescribeSubscribeReturnableResponse DescribeSubscribeReturnableSync(DescribeSubscribeReturnableRequest req)
+        {
+            return InternalRequestAsync<DescribeSubscribeReturnableResponse>(req, "DescribeSubscribeReturnable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the information of a sync task.
         /// </summary>
         /// <param name="req"><see cref="DescribeSyncJobsRequest"/></param>
@@ -482,6 +713,27 @@ namespace TencentCloud.Dts.V20211206
         public DescribeSyncJobsResponse DescribeSyncJobsSync(DescribeSyncJobsRequest req)
         {
             return InternalRequestAsync<DescribeSyncJobsResponse>(req, "DescribeSyncJobs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to deactivate an isolated data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyIsolatedSubscribeRequest"/></param>
+        /// <returns><see cref="DestroyIsolatedSubscribeResponse"/></returns>
+        public Task<DestroyIsolatedSubscribeResponse> DestroyIsolatedSubscribe(DestroyIsolatedSubscribeRequest req)
+        {
+            return InternalRequestAsync<DestroyIsolatedSubscribeResponse>(req, "DestroyIsolatedSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to deactivate an isolated data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyIsolatedSubscribeRequest"/></param>
+        /// <returns><see cref="DestroyIsolatedSubscribeResponse"/></returns>
+        public DestroyIsolatedSubscribeResponse DestroyIsolatedSubscribeSync(DestroyIsolatedSubscribeRequest req)
+        {
+            return InternalRequestAsync<DestroyIsolatedSubscribeResponse>(req, "DestroyIsolatedSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -549,6 +801,27 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to isolate the subscription task. After calling, the subscription task will not be available. Pay-as-you-go tasks will stop billing, and monthly subscription tasks will refund automatically.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
+        /// <returns><see cref="IsolateSubscribeResponse"/></returns>
+        public Task<IsolateSubscribeResponse> IsolateSubscribe(IsolateSubscribeRequest req)
+        {
+            return InternalRequestAsync<IsolateSubscribeResponse>(req, "IsolateSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to isolate the subscription task. After calling, the subscription task will not be available. Pay-as-you-go tasks will stop billing, and monthly subscription tasks will refund automatically.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
+        /// <returns><see cref="IsolateSubscribeResponse"/></returns>
+        public IsolateSubscribeResponse IsolateSubscribeSync(IsolateSubscribeRequest req)
+        {
+            return InternalRequestAsync<IsolateSubscribeResponse>(req, "IsolateSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to isolate a sync task. After the task is isolated, you can call the `DescribeSyncJobs` API to query its status, call `RecoverSyncJob` to recover it, or directly delete it. For a free task, calling this API will directly delete it permanently.
         /// </summary>
         /// <param name="req"><see cref="IsolateSyncJobRequest"/></param>
@@ -612,6 +885,48 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to modify the description of the specified subscription consumption group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupDescriptionResponse"/></returns>
+        public Task<ModifyConsumerGroupDescriptionResponse> ModifyConsumerGroupDescription(ModifyConsumerGroupDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupDescriptionResponse>(req, "ModifyConsumerGroupDescription");
+        }
+
+        /// <summary>
+        /// This API is used to modify the description of the specified subscription consumption group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupDescriptionResponse"/></returns>
+        public ModifyConsumerGroupDescriptionResponse ModifyConsumerGroupDescriptionSync(ModifyConsumerGroupDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupDescriptionResponse>(req, "ModifyConsumerGroupDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the password of the specified subscription consumer group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupPasswordRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupPasswordResponse"/></returns>
+        public Task<ModifyConsumerGroupPasswordResponse> ModifyConsumerGroupPassword(ModifyConsumerGroupPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupPasswordResponse>(req, "ModifyConsumerGroupPassword");
+        }
+
+        /// <summary>
+        /// This API is used to modify the password of the specified subscription consumer group.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupPasswordRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupPasswordResponse"/></returns>
+        public ModifyConsumerGroupPasswordResponse ModifyConsumerGroupPasswordSync(ModifyConsumerGroupPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupPasswordResponse>(req, "ModifyConsumerGroupPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to adjust the specification of a pay-as-you-go task. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrateJobSpecRequest"/></param>
@@ -654,6 +969,48 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to restrict the rate limit of the task, when a user finds that migration task has a large impact on the load of user's database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrateRateLimitRequest"/></param>
+        /// <returns><see cref="ModifyMigrateRateLimitResponse"/></returns>
+        public Task<ModifyMigrateRateLimitResponse> ModifyMigrateRateLimit(ModifyMigrateRateLimitRequest req)
+        {
+            return InternalRequestAsync<ModifyMigrateRateLimitResponse>(req, "ModifyMigrateRateLimit");
+        }
+
+        /// <summary>
+        /// This API is used to restrict the rate limit of the task, when a user finds that migration task has a large impact on the load of user's database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrateRateLimitRequest"/></param>
+        /// <returns><see cref="ModifyMigrateRateLimitResponse"/></returns>
+        public ModifyMigrateRateLimitResponse ModifyMigrateRateLimitSync(ModifyMigrateRateLimitRequest req)
+        {
+            return InternalRequestAsync<ModifyMigrateRateLimitResponse>(req, "ModifyMigrateRateLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify task runtime attributes. This interface is different from the configuration class interface and does not perform state machine evaluation.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrateRuntimeAttributeRequest"/></param>
+        /// <returns><see cref="ModifyMigrateRuntimeAttributeResponse"/></returns>
+        public Task<ModifyMigrateRuntimeAttributeResponse> ModifyMigrateRuntimeAttribute(ModifyMigrateRuntimeAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyMigrateRuntimeAttributeResponse>(req, "ModifyMigrateRuntimeAttribute");
+        }
+
+        /// <summary>
+        /// This API is used to modify task runtime attributes. This interface is different from the configuration class interface and does not perform state machine evaluation.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrateRuntimeAttributeRequest"/></param>
+        /// <returns><see cref="ModifyMigrateRuntimeAttributeResponse"/></returns>
+        public ModifyMigrateRuntimeAttributeResponse ModifyMigrateRuntimeAttributeSync(ModifyMigrateRuntimeAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyMigrateRuntimeAttributeResponse>(req, "ModifyMigrateRuntimeAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to configure a migration task. After it is configured successfully, you can call the `CreateMigrationCheckJob` API to create a check task, and only after it passes the check can it be started.
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrationJobRequest"/></param>
@@ -675,6 +1032,69 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to modify the auto-renewal flag of your subscription instance. Only the monthly subscription modification task makes sense. After modifying, the pay-as-you-go task has no impact.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifySubscribeAutoRenewFlagResponse"/></returns>
+        public Task<ModifySubscribeAutoRenewFlagResponse> ModifySubscribeAutoRenewFlag(ModifySubscribeAutoRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeAutoRenewFlagResponse>(req, "ModifySubscribeAutoRenewFlag");
+        }
+
+        /// <summary>
+        /// This API is used to modify the auto-renewal flag of your subscription instance. Only the monthly subscription modification task makes sense. After modifying, the pay-as-you-go task has no impact.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifySubscribeAutoRenewFlagResponse"/></returns>
+        public ModifySubscribeAutoRenewFlagResponse ModifySubscribeAutoRenewFlagSync(ModifySubscribeAutoRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeAutoRenewFlagResponse>(req, "ModifySubscribeAutoRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the name of the data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifySubscribeNameResponse"/></returns>
+        public Task<ModifySubscribeNameResponse> ModifySubscribeName(ModifySubscribeNameRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeNameResponse>(req, "ModifySubscribeName");
+        }
+
+        /// <summary>
+        /// This API is used to modify the name of the data subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifySubscribeNameResponse"/></returns>
+        public ModifySubscribeNameResponse ModifySubscribeNameSync(ModifySubscribeNameRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeNameResponse>(req, "ModifySubscribeName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the data subscription object and Kafka partition rule. For MongoDB subscription, you can also modify the output aggregation rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeObjectsRequest"/></param>
+        /// <returns><see cref="ModifySubscribeObjectsResponse"/></returns>
+        public Task<ModifySubscribeObjectsResponse> ModifySubscribeObjects(ModifySubscribeObjectsRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeObjectsResponse>(req, "ModifySubscribeObjects");
+        }
+
+        /// <summary>
+        /// This API is used to modify the data subscription object and Kafka partition rule. For MongoDB subscription, you can also modify the output aggregation rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeObjectsRequest"/></param>
+        /// <returns><see cref="ModifySubscribeObjectsResponse"/></returns>
+        public ModifySubscribeObjectsResponse ModifySubscribeObjectsSync(ModifySubscribeObjectsRequest req)
+        {
+            return InternalRequestAsync<ModifySubscribeObjectsResponse>(req, "ModifySubscribeObjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the configuration of a data sync task after the task is started.\n Configuration modification steps:  Modify sync task configuration -> Create a modification check task -> Query the check task result -> Start the configuration modification check task
         /// </summary>
         /// <param name="req"><see cref="ModifySyncJobConfigRequest"/></param>
@@ -692,6 +1112,27 @@ namespace TencentCloud.Dts.V20211206
         public ModifySyncJobConfigResponse ModifySyncJobConfigSync(ModifySyncJobConfigRequest req)
         {
             return InternalRequestAsync<ModifySyncJobConfigResponse>(req, "ModifySyncJobConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to restrict the rate limit of the task, when a user finds that the sync task has a large impact on the load of user's database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncRateLimitRequest"/></param>
+        /// <returns><see cref="ModifySyncRateLimitResponse"/></returns>
+        public Task<ModifySyncRateLimitResponse> ModifySyncRateLimit(ModifySyncRateLimitRequest req)
+        {
+            return InternalRequestAsync<ModifySyncRateLimitResponse>(req, "ModifySyncRateLimit");
+        }
+
+        /// <summary>
+        /// This API is used to restrict the rate limit of the task, when a user finds that the sync task has a large impact on the load of user's database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncRateLimitRequest"/></param>
+        /// <returns><see cref="ModifySyncRateLimitResponse"/></returns>
+        public ModifySyncRateLimitResponse ModifySyncRateLimitSync(ModifySyncRateLimitRequest req)
+        {
+            return InternalRequestAsync<ModifySyncRateLimitResponse>(req, "ModifySyncRateLimit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -780,6 +1221,48 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
+        /// This API is used to reset the offset of the subscription consumer group. Call the DescribeConsumerGroups API to query the status of the consumer group, only when the status is Dead or Empty can this operation be executed. Otherwise, the reset will not be effective and the API will not return any error.
+        /// </summary>
+        /// <param name="req"><see cref="ResetConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ResetConsumerGroupOffsetResponse"/></returns>
+        public Task<ResetConsumerGroupOffsetResponse> ResetConsumerGroupOffset(ResetConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ResetConsumerGroupOffsetResponse>(req, "ResetConsumerGroupOffset");
+        }
+
+        /// <summary>
+        /// This API is used to reset the offset of the subscription consumer group. Call the DescribeConsumerGroups API to query the status of the consumer group, only when the status is Dead or Empty can this operation be executed. Otherwise, the reset will not be effective and the API will not return any error.
+        /// </summary>
+        /// <param name="req"><see cref="ResetConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ResetConsumerGroupOffsetResponse"/></returns>
+        public ResetConsumerGroupOffsetResponse ResetConsumerGroupOffsetSync(ResetConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ResetConsumerGroupOffsetResponse>(req, "ResetConsumerGroupOffset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to reset the subscription instance. After resetting, the subscription task can be reconfigured.You can call DescribeSubscribeDetail to query the subscription information to determine whether the subscription is successful. When SubsStatus changes to notStarted, it means the reset is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ResetSubscribeRequest"/></param>
+        /// <returns><see cref="ResetSubscribeResponse"/></returns>
+        public Task<ResetSubscribeResponse> ResetSubscribe(ResetSubscribeRequest req)
+        {
+            return InternalRequestAsync<ResetSubscribeResponse>(req, "ResetSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to reset the subscription instance. After resetting, the subscription task can be reconfigured.You can call DescribeSubscribeDetail to query the subscription information to determine whether the subscription is successful. When SubsStatus changes to notStarted, it means the reset is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ResetSubscribeRequest"/></param>
+        /// <returns><see cref="ResetSubscribeResponse"/></returns>
+        public ResetSubscribeResponse ResetSubscribeSync(ResetSubscribeRequest req)
+        {
+            return InternalRequestAsync<ResetSubscribeResponse>(req, "ResetSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to adjust the specification of a pay-as-you-go sync task. After this API is called, the backend needs to take about 3-5 minutes to implement the adjustment. You can call the `DescribeSyncJobs` API to query the latest task status.
         /// </summary>
         /// <param name="req"><see cref="ResizeSyncJobRequest"/></param>
@@ -818,6 +1301,27 @@ namespace TencentCloud.Dts.V20211206
         public ResumeMigrateJobResponse ResumeMigrateJobSync(ResumeMigrateJobRequest req)
         {
             return InternalRequestAsync<ResumeMigrateJobResponse>(req, "ResumeMigrateJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to resume faulty subscription tasks. When the status of the subscription task is set to error, you can resume task via this API.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeSubscribeRequest"/></param>
+        /// <returns><see cref="ResumeSubscribeResponse"/></returns>
+        public Task<ResumeSubscribeResponse> ResumeSubscribe(ResumeSubscribeRequest req)
+        {
+            return InternalRequestAsync<ResumeSubscribeResponse>(req, "ResumeSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to resume faulty subscription tasks. When the status of the subscription task is set to error, you can resume task via this API.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeSubscribeRequest"/></param>
+        /// <returns><see cref="ResumeSubscribeResponse"/></returns>
+        public ResumeSubscribeResponse ResumeSubscribeSync(ResumeSubscribeRequest req)
+        {
+            return InternalRequestAsync<ResumeSubscribeResponse>(req, "ResumeSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -944,6 +1448,27 @@ namespace TencentCloud.Dts.V20211206
         public StartModifySyncJobResponse StartModifySyncJobSync(StartModifySyncJobRequest req)
         {
             return InternalRequestAsync<StartModifySyncJobResponse>(req, "StartModifySyncJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to start a Kafka version of the data subscription instance. This interface can be called only when the status of the subscription task is checkPass.
+        /// </summary>
+        /// <param name="req"><see cref="StartSubscribeRequest"/></param>
+        /// <returns><see cref="StartSubscribeResponse"/></returns>
+        public Task<StartSubscribeResponse> StartSubscribe(StartSubscribeRequest req)
+        {
+            return InternalRequestAsync<StartSubscribeResponse>(req, "StartSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to start a Kafka version of the data subscription instance. This interface can be called only when the status of the subscription task is checkPass.
+        /// </summary>
+        /// <param name="req"><see cref="StartSubscribeRequest"/></param>
+        /// <returns><see cref="StartSubscribeResponse"/></returns>
+        public StartSubscribeResponse StartSubscribeSync(StartSubscribeRequest req)
+        {
+            return InternalRequestAsync<StartSubscribeResponse>(req, "StartSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

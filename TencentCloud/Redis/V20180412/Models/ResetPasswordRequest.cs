@@ -25,19 +25,21 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Redis instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+        /// Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+        /// Whether to switch to a password-free instance.
+        /// - false: Switch to a non-password-free instance.
+        /// - true: Switch to a password-free instance. Default value: false.
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }

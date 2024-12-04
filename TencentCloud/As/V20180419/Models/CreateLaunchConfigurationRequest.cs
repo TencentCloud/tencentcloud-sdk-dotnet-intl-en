@@ -194,6 +194,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }
 
+        /// <summary>
+        /// CDC ID.
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
             this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

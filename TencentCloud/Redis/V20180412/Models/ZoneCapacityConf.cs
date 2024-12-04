@@ -31,25 +31,28 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// AZ name
+        /// Availability zone name.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Whether a product is sold out in an AZ
+        /// Whether the AZ is sold out.
         /// </summary>
         [JsonProperty("IsSaleout")]
         public bool? IsSaleout{ get; set; }
 
         /// <summary>
-        /// Whether it is a default AZ
+        /// Whether the default AZ is used.
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
-        /// Network type. basenet: basic network; vpcnet: VPC
+        /// Network type.
+        /// 
+        /// - basenet: basic network.
+        /// - vpcnet: VPC.
         /// </summary>
         [JsonProperty("NetWorkType")]
         public string[] NetWorkType{ get; set; }

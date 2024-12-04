@@ -25,13 +25,16 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Start time of the maintenance window, such as 17:00.
+        /// Start time of the maintenance window. Value range: any time point between 00:00 and 23:00, for example, 03:24.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the maintenance window, such as 19:00.
+        /// End time of the maintenance window.
+        /// - Value range: any time point between 00:00 and 23:00, for example, 04:24.
+        /// - The minimum maintenance duration is 30 minutes and the maximum is 3 hours.
+        /// - The end time should be later than the start time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

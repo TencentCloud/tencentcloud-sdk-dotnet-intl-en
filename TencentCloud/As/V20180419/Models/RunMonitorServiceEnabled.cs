@@ -25,7 +25,10 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Whether to enable the [Cloud Monitor](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) service. Value range: <br><li>TRUE: Cloud Monitor is enabled <br><li>FALSE: Cloud Monitor is disabled <br><br>Default value: TRUE. |
+        /// Whether to enable the [Tencent Cloud Observability Platform](https://www.tencentcloud.com/document/product/248?lang=en&pg=) service. Valid values:
+        /// <li>TRUE: enable.</li>
+        /// <li>FALSE: disable.</li>
+        /// Default value: TRUE.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Enabled")]

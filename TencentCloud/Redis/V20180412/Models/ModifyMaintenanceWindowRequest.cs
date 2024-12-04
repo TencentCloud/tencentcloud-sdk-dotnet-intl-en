@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Maintenance start time, such as 17:00
+        /// Start time of the maintenance window, for example, 17:00.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Maintenance end time, such as 19:00
+        /// End time of the maintenance window, for example, 19:00.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

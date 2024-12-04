@@ -25,23 +25,24 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Custom the name of the database to access.
-        /// - Contains only letters, digits, underscores, and hyphens.
+        /// Custom account name for accessing the database.
+        /// - It contains only letters, digits, underscores (_), and hyphens (-).
         /// - The length cannot exceed 32 characters.
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Set a password for the customized account. The password complexity requirements are as follows:
-        /// - Value range: [8, 32].
-        /// - Contains at least two types of characters from the following categories: lowercase letters, uppercase letters, digits, and characters ()`~!@#$%^&*-+=_|{}[]:;<>,.? /.- Cannot start with "/".
+        /// Password of the custom account. The password complexity requirements are as follows:
+        /// - It can contain 8 to 64 characters.
+        /// - It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
+        /// - It cannot start with a forward slash (/).
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }

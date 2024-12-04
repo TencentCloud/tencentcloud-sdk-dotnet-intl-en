@@ -85,7 +85,9 @@ namespace TencentCloud.As.V20180419.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+        /// Scheduled task execution type. Valid values:
+        /// <li>CRONTAB: repeated execution.</li>
+        /// <li>ONCE: single execution.</li>
         /// </summary>
         [JsonProperty("ScheduledType")]
         public string ScheduledType{ get; set; }

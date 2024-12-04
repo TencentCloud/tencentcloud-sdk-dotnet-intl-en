@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Latency distribution information
+        /// Latency distribution information.
         /// </summary>
         [JsonProperty("Data")]
         public DelayDistribution[] Data{ get; set; }

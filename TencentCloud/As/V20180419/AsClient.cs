@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1025";
+       private const string sdkVersion = "SDK_NET_3.0.1026";
 
         /// <summary>
         /// Client constructor.
@@ -1536,9 +1536,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (UpgradeLifecycleHook) is used to upgrade a lifecycle hook.
+        /// This API is used to upgrade the lifecycle hook.
         /// 
-        /// * This API is used to upgrade a lifecycle hook in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
+        /// * This API is used to upgrade the lifecycle hook, adopting a "comprehensive overwrite" style. Regardless of how the previous parameters were set, it uniformly uses the new configurations for API parameters. For optional fields, if they are not filled in, default values will be used.
         /// </summary>
         /// <param name="req"><see cref="UpgradeLifecycleHookRequest"/></param>
         /// <returns><see cref="UpgradeLifecycleHookResponse"/></returns>
@@ -1548,9 +1548,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (UpgradeLifecycleHook) is used to upgrade a lifecycle hook.
+        /// This API is used to upgrade the lifecycle hook.
         /// 
-        /// * This API is used to upgrade a lifecycle hook in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
+        /// * This API is used to upgrade the lifecycle hook, adopting a "comprehensive overwrite" style. Regardless of how the previous parameters were set, it uniformly uses the new configurations for API parameters. For optional fields, if they are not filled in, default values will be used.
         /// </summary>
         /// <param name="req"><see cref="UpgradeLifecycleHookRequest"/></param>
         /// <returns><see cref="UpgradeLifecycleHookResponse"/></returns>

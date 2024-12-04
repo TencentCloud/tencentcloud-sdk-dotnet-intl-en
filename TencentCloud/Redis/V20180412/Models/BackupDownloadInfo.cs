@@ -34,7 +34,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
         /// </summary>
         [JsonProperty("FileSize")]
-        public ulong? FileSize{ get; set; }
+        public long? FileSize{ get; set; }
 
         /// <summary>
         /// Address (valid for six hours) used to download the backup file over the public network

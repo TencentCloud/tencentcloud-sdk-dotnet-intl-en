@@ -25,7 +25,10 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Instance login password. <br><li>Linux: 8-16 characters. It should contain at least two sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+=|{}[]:;',.?/]. <br><li>Windows: 12-16 characters. It should contain at least three sets of the following categories: [a-z], [A-Z], [0-9] and [()`~!@#$%^&*-+={}[]:;',.?/]. <br><br>If this parameter is not specified, a random password is generated and sent to you via the Message Center.
+        /// Instance login password. The password complexity requirements vary according to the operating system type. The details are as follows:
+        /// <li>The login password for Linux instances should contain 8 to 16 characters, including at least two types of the following characters: letters, digits, and special characters (such as ()`~!@#$%^&*-+=|{}[]:;',.?/).</li>
+        /// <li>The login password for Windows instances should contain 12 to 16 characters, including at least three types of the following characters: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+={}[]:;',.?/).</li>
+        /// If this parameter is not specified, the system will generate a random password and notify the user via the message center.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -37,7 +40,9 @@ namespace TencentCloud.As.V20180419.Models
         public string[] KeyIds{ get; set; }
 
         /// <summary>
-        /// Whether to keep the original settings of an image. It cannot be specified together with `Password` or `KeyIds.N`. You can specify this parameter as `TRUE` only when you create an instance using a custom image, a shared image, or an imported image. Valid values: <br><li>`TRUE`: Keep the login settings of the image <br><li>`FALSE` (Default): Do not keep the login settings of the image <br>
+        /// Retain the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can only be set to TRUE when you create an instance by using a custom image, shared image, or externally imported image. Valid values:
+        /// <li>TRUE: Retain the login settings of the image.</li>
+        /// <li>FALSE: Do not retain the login settings of the image.</li> Default value: FALSE.
         /// </summary>
         [JsonProperty("KeepImageLogin")]
         public bool? KeepImageLogin{ get; set; }

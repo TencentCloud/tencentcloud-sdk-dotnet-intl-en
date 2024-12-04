@@ -31,6 +31,18 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
+        /// <summary>
+        /// In column mode, all refers to all data, while partial refers to part of the data (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ColumnMode")]
+        public string ColumnMode{ get; set; }
+
+        /// <summary>
+        /// This field is required when ColumnMode is set to partial (this parameter is only valid for data sync tasks).Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Columns")]
+        public CompareColumnItem[] Columns{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +50,8 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "ColumnMode", this.ColumnMode);
+            this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
         }
     }
 }

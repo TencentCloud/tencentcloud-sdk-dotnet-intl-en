@@ -142,6 +142,13 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("AlarmPolicyList")]
         public string[] AlarmPolicyList{ get; set; }
 
+        /// <summary>
+        /// Time to restore data for cloning.
+        /// Only instances with second-level backup enabled are supported.
+        /// </summary>
+        [JsonProperty("CloneTime")]
+        public string CloneTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +174,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
+            this.SetParamSimple(map, prefix + "CloneTime", this.CloneTime);
         }
     }
 }

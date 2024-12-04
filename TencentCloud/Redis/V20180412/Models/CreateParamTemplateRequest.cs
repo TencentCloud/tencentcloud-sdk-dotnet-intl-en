@@ -37,7 +37,16 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture). If `TempateId` is specified, this parameter can be left blank; otherwise, it is required.
+        /// Product type.
+        /// - 2: Redis 2.8 Memory Edition (standard architecture).
+        /// - 6: Redis 4.0 Memory Edition (standard architecture).
+        /// - 7: Redis 4.0 Memory Edition (cluster architecture).
+        /// - 8: Redis 5.0 Memory Edition (standard architecture).
+        /// - 9: Redis 5.0 Memory Edition (cluster architecture).
+        /// - 15: Redis 6.2 Memory Edition (standard architecture).
+        /// - 16: Redis 6.2 Memory Edition (cluster architecture).
+        /// - 17: Redis 7.0 Memory Edition (standard architecture).
+        /// - 18: Redis 7.0 Memory Edition (cluster architecture).
         /// </summary>
         [JsonProperty("ProductType")]
         public ulong? ProductType{ get; set; }

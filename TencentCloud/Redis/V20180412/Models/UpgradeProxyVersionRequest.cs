@@ -25,25 +25,27 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The current proxy version
+        /// Current Proxy version.
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
-        /// Upgradeable redis version
+        /// Upgradable Redis version.
         /// </summary>
         [JsonProperty("UpgradeProxyVersion")]
         public string UpgradeProxyVersion{ get; set; }
 
         /// <summary>
-        /// `1` (upgrade immediately), `0` (upgrade during maintenance time)
+        /// Specifies whether to upgrade immediately.
+        /// - 1: Upgrade immediately.
+        /// - 0: Upgrade during the maintenance window.
         /// </summary>
         [JsonProperty("InstanceTypeUpgradeNow")]
         public long? InstanceTypeUpgradeNow{ get; set; }

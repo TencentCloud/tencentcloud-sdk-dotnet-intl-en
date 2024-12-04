@@ -67,7 +67,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? Saleout{ get; set; }
 
         /// <summary>
-        /// Product engines, including Tencent Cloud CKV and Redis Community Edition.
+        /// Product engine. Valid values: Redis and CKV.
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }

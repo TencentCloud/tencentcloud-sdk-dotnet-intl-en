@@ -25,19 +25,30 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Array of instance types. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture).
+        /// Product type array.
+        /// - 2: Redis 2.8 Memory Edition (standard architecture).
+        /// - 3: CKV 3.2 Memory Edition (standard architecture).
+        /// - 4: CKV 3.2 Memory Edition (cluster architecture).
+        /// - 6: Redis 4.0 Memory Edition (standard architecture).
+        /// - 7: Redis 4.0 Memory Edition (cluster architecture).
+        /// - 8: Redis 5.0 Memory Edition (standard architecture).
+        /// - 9: Redis 5.0 Memory Edition (cluster architecture).
+        /// - 15: Redis 6.2 Memory Edition (standard architecture).
+        /// - 16: Redis 6.2 Memory Edition (cluster architecture).
+        /// - 17: Redis 7.0 Memory Edition (standard architecture).
+        /// - 18: Redis 7.0 Memory Edition (cluster architecture).
         /// </summary>
         [JsonProperty("ProductTypes")]
         public long?[] ProductTypes{ get; set; }
 
         /// <summary>
-        /// Array of template names.
+        /// Template name array, with the maximum array length of 50.
         /// </summary>
         [JsonProperty("TemplateNames")]
         public string[] TemplateNames{ get; set; }
 
         /// <summary>
-        /// Array of template IDs.
+        /// Template ID array, with the maximum array length of 50.
         /// </summary>
         [JsonProperty("TemplateIds")]
         public string[] TemplateIds{ get; set; }

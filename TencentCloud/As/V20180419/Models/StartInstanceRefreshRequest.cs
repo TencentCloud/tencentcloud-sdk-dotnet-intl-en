@@ -37,7 +37,9 @@ namespace TencentCloud.As.V20180419.Models
         public RefreshSettings RefreshSettings{ get; set; }
 
         /// <summary>
-        /// Refresh mode, currently, only rolling updates are supported, with the default value being ROLLING_UPDATE_RESET.
+        /// Refresh mode. Valid values:
+        /// <li>ROLLING_UPDATE_RESET: Reinstall the system for rolling updates.</li>
+        /// <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
         /// </summary>
         [JsonProperty("RefreshMode")]
         public string RefreshMode{ get; set; }

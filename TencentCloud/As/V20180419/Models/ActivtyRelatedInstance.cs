@@ -31,11 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Status of the instance in the scaling activity. Value range:
-        /// <li>INIT: initializing
-        /// <li>RUNNING: running
-        /// <li>SUCCESSFUL: succeeded
-        /// <li>FAILED: failed
+        /// Status of the instance in the scaling activity. Valid values: <br><li>INIT: initializing;</li> <li>RUNNING: instance in operation;</li> <li>SUCCESSFUL: activity successful;</li> <li>FAILED: activity failed.
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }

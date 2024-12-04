@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -47,23 +47,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+        /// VPC ID after the modification.
+        /// - Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+        /// - Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the VPC name next to the associated network in the **Network Information** area to obtain the VPC ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+        /// ID of the subnet to which the VPC belongs after the modification.
+        /// - Configure this parameter when **Operation** is set to **changeVpc** or **changeBaseToVpc**.
+        /// - Log in to the [Redis console](https://console.tencentcloud.com/redis/instance), switch to the **Instance Details** page, and click the subnet name next to the associated network in the **Network Information** area to obtain the subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Retention period of the original private IPv4 address
-        /// - Unit: Days.
-        /// - Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
-        /// 
-        /// **Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+        /// Retention duration of the original private IPv4 address.
+        /// - Unit: day.
+        /// - Valid values: 0, 1, 2, 3, 7, and 15.
         /// </summary>
         [JsonProperty("Recycle")]
         public long? Recycle{ get; set; }

@@ -43,9 +43,9 @@ namespace TencentCloud.As.V20180419.Models
         public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }
 
         /// <summary>
-        /// CLB verification policy. Valid values: "ALL" and "DIFF". Default value: "ALL"
-        /// <br><li> ALL. Verification is successful only when all CLBs are valid. Otherwise, verification fails.
-        /// <br><li> DIFF. Only the changes in the CLB parameters are verified. If valid, the verification is successful. Otherwise, verification fails.
+        /// CLB verification policy. Valid values: ALL and DIFF. Default value: ALL.
+        /// <li>ALL: The CLB passes the verification only when all CLB parameters are valid. Otherwise, a verification error occurs.</li>
+        /// <li>DIFF: The CLB passes the verification only when the CLB parameters with changes are valid. Otherwise, a verification error occurs.</li>
         /// </summary>
         [JsonProperty("LoadBalancersCheckPolicy")]
         public string LoadBalancersCheckPolicy{ get; set; }

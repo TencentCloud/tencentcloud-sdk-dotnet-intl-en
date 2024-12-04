@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Node group type. Valid values: master (master node group); replica (replica node group)
+        /// Node group type. master: primary node; replica: replica node.
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

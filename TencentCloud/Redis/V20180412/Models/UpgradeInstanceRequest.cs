@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// Additional information for adding replicas for multi-AZ instances, including replica AZ and type (`NodeType` is `1`). This parameter is not required for single-AZ instances.
+        /// Node information set when you add a replica for multi-AZ instances, including the ID and AZ information of the replica. This parameter is not required for non-multi-AZ instances.
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }

@@ -60,15 +60,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public CompareTableItem[] Tables{ get; set; }
 
         /// <summary>
-        /// View selection mode. Valid values: `all`, `partial`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// View selection mode: all refers to all view objects under the current object, partial refers to partial view objects (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ViewMode")]
         public string ViewMode{ get; set; }
 
         /// <summary>
-        /// View configuration for data consistency check, which is required if `ViewMode` is `partial`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// View configuration used for consistency check. When ViewMode is partial, it needs to be filled in (consistency check does not check views, and the current parameters are disabled).Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Views")]
         public CompareViewItem[] Views{ get; set; }

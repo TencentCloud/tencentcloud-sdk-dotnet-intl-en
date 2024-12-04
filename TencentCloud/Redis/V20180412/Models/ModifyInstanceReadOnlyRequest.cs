@@ -25,13 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+        /// Instance input mode.
+        /// - 0: read/write.
+        /// - 1: read-only.
         /// </summary>
         [JsonProperty("InputMode")]
         public string InputMode{ get; set; }

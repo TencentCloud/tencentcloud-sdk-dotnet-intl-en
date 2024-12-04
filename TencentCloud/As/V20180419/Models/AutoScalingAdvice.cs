@@ -31,10 +31,10 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// Scaling group warning level. Valid values:<br>
-        /// <li>NORMAL: Normal<br>
-        /// <li>WARNING: Warning<br>
-        /// <li>CRITICAL: Serious warning<br>
+        /// Scaling group warning level. Valid values:
+        /// <li>NORMAL: normal.</li>
+        /// <li>WARNING: warning.</li>
+        /// <li>CRITICAL: critical.</li>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }

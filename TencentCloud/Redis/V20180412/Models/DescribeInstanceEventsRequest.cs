@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Configures the start date for querying the event execution schedule.
+        /// Start date for querying the event execution plan, with a maximum query span of 30 days.
         /// </summary>
         [JsonProperty("ExecutionStartDate")]
         public string ExecutionStartDate{ get; set; }
 
         /// <summary>
-        /// Configures the end date for querying the event execution schedule.
+        /// End date for querying the event execution plan, with a maximum query span of 30 days.
         /// </summary>
         [JsonProperty("ExecutionEndDate")]
         public string ExecutionEndDate{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Outputs the number of events displayed per page. Default value: 10.
+        /// Number of events displayed per page. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

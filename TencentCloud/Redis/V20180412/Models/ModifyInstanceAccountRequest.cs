@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Sub-account name. If the root account is to be modified, enter `root`.
+        /// Sub-account name. If you want to change it to the root account, fill in root.
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Sub-account password
+        /// Sub-account password.
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
@@ -49,19 +49,26 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Routing policy. Valid values: master (master node); replication (replica node)
+        /// Account read/write routing policy.
+        /// - master: primary node.
+        /// - replication: secondary node.
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+        /// Sub-account read/write policy.
+        /// - r: read-only.
+        /// - w: write-only.
+        /// - rw: read/write.
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+        /// Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
+        /// - true: Switch the root account to a password-free account.
+        /// - false: Do not switch it.
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }

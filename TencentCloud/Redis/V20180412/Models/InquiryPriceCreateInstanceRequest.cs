@@ -25,7 +25,16 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance type. Valid values: `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture).
+        /// Instance type.
+        /// - 2: Redis 2.8 Memory Edition (standard architecture).
+        /// - 6: Redis 4.0 Memory Edition (standard architecture).
+        /// - 7: Redis 4.0 Memory Edition (cluster architecture).
+        /// - 8: Redis 5.0 Memory Edition (standard architecture).
+        /// - 9: Redis 5.0 Memory Edition (cluster architecture).
+        /// - 15: Redis 6.2 Memory Edition (standard architecture).
+        /// - 16: Redis 6.2 Memory Edition (cluster architecture).
+        /// - 17: Redis 7.0 Memory Edition (standard architecture).
+        /// - 18: Redis 7.0 Memory Edition (cluster architecture).
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
@@ -50,7 +59,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+        /// Billing mode.
+        /// - 0: pay-as-you-go.
+        /// - 1: monthly subscription.
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
@@ -62,19 +73,21 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Instance shard quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, Redis 2.8 standalone edition, and Redis 4.0 standard architecture.
+        /// Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// Instance replica quantity. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+        /// Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// Whether to support read-only replicas. This field is not required by Redis 2.8 standard architecture, CKV standard architecture, and Redis 2.8 standalone edition.
+        /// Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
+        /// - true: Replica read-only is not required.
+        /// - false: Replica read-only is required.
         /// </summary>
         [JsonProperty("ReplicasReadonly")]
         public bool? ReplicasReadonly{ get; set; }
@@ -86,7 +99,10 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+        /// Deployment mode.
+        /// - local: local disk. This is the default value.
+        /// - cloud: cloud disk.
+        /// - cdc: CDC.
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }

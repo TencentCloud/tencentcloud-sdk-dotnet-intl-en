@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time for prequerying a slow log
+        /// Start time for pre-querying slow query logs, with a maximum query span of 30 days.
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// End time for prequerying a slow log
+        /// End time for pre-querying slow query logs, with a maximum query span of 30 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// Number of slow queries displayed per page. Default value: `20`. Value range:  [20,1000].
+        /// Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

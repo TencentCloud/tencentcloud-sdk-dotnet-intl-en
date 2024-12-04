@@ -37,7 +37,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// Shard ID of a sharded cluster
+        /// Sharded cluster ID, which can be obtained through **ClusterId** of the response parameter 
+        ///  **Redis** of the API [DescribeInstanceNodeInfo](https://intl.cloud.tencent.com/document/product/239/48603?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ShardIds")]
         public long?[] ShardIds{ get; set; }

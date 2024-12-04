@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Specifies the ID of the primary instance in the replication group.
+        /// ID of the primary instance in the replication group. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Replication group name. It supports only Chinese characters, letters, digits, underscores (_), and hyphens (-), with a length of 2-64 characters.
+        /// Replication group name. The name should contain 2 to 64 characters, including only letters, digits, underscores (_), and hyphens (-).
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }

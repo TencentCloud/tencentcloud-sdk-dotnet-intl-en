@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Node name
+        /// Node group name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

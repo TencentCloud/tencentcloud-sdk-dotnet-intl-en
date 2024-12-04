@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Command
+        /// Command name.
         /// </summary>
         [JsonProperty("Cmd")]
         public string Cmd{ get; set; }
 
         /// <summary>
-        /// Duration
+        /// Time consumed. Unit: ms.
         /// </summary>
         [JsonProperty("Took")]
         public long? Took{ get; set; }

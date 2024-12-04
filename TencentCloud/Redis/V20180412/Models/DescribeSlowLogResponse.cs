@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Due to the naming irregularity of this parameter. It is recommended to use the parameter InstanceSlowLogDetail instead. Details of slow queries.
+        /// Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
         /// </summary>
         [JsonProperty("InstanceSlowlogDetail")]
         public InstanceSlowlogDetail[] InstanceSlowlogDetail{ get; set; }

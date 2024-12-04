@@ -31,24 +31,23 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Region ID. Valid values:
-        /// - `1`: Guangzhou 
-        /// - `4`: Shanghai 
-        /// - `5`: Hong Kong (China) 
-        /// - `6`: Toronto 
-        /// - `7`: Shanghai Finance 
-        /// - `8`: Beijing 
-        /// - `9`: Singapore
-        /// - `11`: Shenzhen Finance
-        /// - `15`: Silicon Valley (West US)
-        /// - `16`: Chengdu 
-        /// - `17`: Germany 
-        /// - `18`: South Korea 
-        /// - `19`: Chongqing 
-        /// - `21`: India 
-        /// - `22`: Virginia (East US)
-        /// - `23`: Thailand 
-        /// - `25`: Japan
+        /// Region ID.
+        /// - 1: Guangzhou.
+        /// - 4: Shanghai.
+        /// - 5: Hong Kong (China).
+        /// - 7: Shanghai Finance.
+        /// - 8: Beijing.
+        /// - 9: Singapore.
+        /// - 11: Shenzhen Finance.
+        /// - 15: Western United States (Silicon Valley).
+        /// - 16: Chengdu.
+        /// - 17: Germany.
+        /// - 18: South Korea.
+        /// - 19: Chongqing.
+        /// - 21: India.
+        /// - 22: Eastern United States (Virginia).
+        /// - 23: Thailand.
+        /// - 25: Japan.
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
