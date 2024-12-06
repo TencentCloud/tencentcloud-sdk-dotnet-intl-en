@@ -34,30 +34,35 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// Number of Tencent Cloud machines
         /// </summary>
         [JsonProperty("TencentCloudMachineCnt")]
+        [System.Obsolete]
         public ulong? TencentCloudMachineCnt{ get; set; }
 
         /// <summary>
         /// Number of Alibaba Cloud machines
         /// </summary>
         [JsonProperty("AliCloudMachineCnt")]
+        [System.Obsolete]
         public ulong? AliCloudMachineCnt{ get; set; }
 
         /// <summary>
         /// Number of Baidu Cloud machines
         /// </summary>
         [JsonProperty("BaiduCloudMachineCnt")]
+        [System.Obsolete]
         public ulong? BaiduCloudMachineCnt{ get; set; }
 
         /// <summary>
         /// Number of IDC machines
         /// </summary>
         [JsonProperty("IDCMachineCnt")]
+        [System.Obsolete]
         public ulong? IDCMachineCnt{ get; set; }
 
         /// <summary>
         /// Number of machines from other cloud service vendors
         /// </summary>
         [JsonProperty("OtherCloudMachineCnt")]
+        [System.Obsolete]
         public ulong? OtherCloudMachineCnt{ get; set; }
 
         /// <summary>

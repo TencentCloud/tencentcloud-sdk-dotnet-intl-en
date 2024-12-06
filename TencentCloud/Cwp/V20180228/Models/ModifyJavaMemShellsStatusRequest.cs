@@ -25,16 +25,16 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Event ID Array
-        /// </summary>
-        [JsonProperty("Ids")]
-        public ulong?[] Ids{ get; set; }
-
-        /// <summary>
         /// Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// Event ID Array
+        /// </summary>
+        [JsonProperty("Ids")]
+        public ulong?[] Ids{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
         }
     }
 }

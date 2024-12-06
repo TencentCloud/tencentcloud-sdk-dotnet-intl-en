@@ -25,7 +25,16 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
+        /// System disk type. For the restrictions on the system disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range:<br>
+        /// <li>LOCAL_BASIC: Local Disk</li>
+        /// <li>LOCAL_SSD: Local SSD Disk</li>
+        /// <li>CLOUD_BASIC: HDD Cloud Disk</li>
+        /// <li>CLOUD_SSD: Cloud SSD</li>
+        /// <li>CLOUD_PREMIUM: Premium Cloud Disk</li>
+        /// <li>CLOUD_BSSD: Balanced SSD</li>
+        /// <li>CLOUD_HSSD: Enhanced SSD</li>
+        /// <li>CLOUD_TSSD: ulTra SSD</li><br>
+        /// Default value: Current disk types with inventory available.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -49,6 +58,15 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
+        /// <summary>
+        /// Disk name, with a length of not more than 128 characters.
+        /// 
+        /// This parameter is in invite-only testing and is not yet open for use.
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("DiskName")]
+        public string DiskName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +77,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
         }
     }
 }

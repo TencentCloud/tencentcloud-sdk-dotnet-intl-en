@@ -28,7 +28,7 @@ namespace TencentCloud.Kms.V20190118
 
        private const string endpoint = "kms.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1027";
+       private const string sdkVersion = "SDK_NET_3.0.1028";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+        /// This API is used to archive keys.The archived keys can only be used for decryption but not encryption.
         /// </summary>
         /// <param name="req"><see cref="ArchiveKeyRequest"/></param>
         /// <returns><see cref="ArchiveKeyResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+        /// This API is used to archive keys.The archived keys can only be used for decryption but not encryption.
         /// </summary>
         /// <param name="req"><see cref="ArchiveKeyRequest"/></param>
         /// <returns><see cref="ArchiveKeyResponse"/></returns>

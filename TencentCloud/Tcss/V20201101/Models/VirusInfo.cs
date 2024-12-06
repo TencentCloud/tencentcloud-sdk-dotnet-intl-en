@@ -252,7 +252,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string NodeUniqueID{ get; set; }
 
         /// <summary>
-        /// ID for u200dthe general node
+        /// ID for the general node
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }

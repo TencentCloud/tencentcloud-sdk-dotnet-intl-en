@@ -31,37 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-        /// <li>
-        ///   LOCAL_BASIC: local disk.<br/>
-        ///   <li>
-        ///     LOCAL_SSD: local SSD.<br/>
-        ///     <li>
-        ///       LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-        ///       <li>
-        ///         LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        ///         <li>
-        ///           CLOUD_BASIC: basic cloud disk.<br/>
-        ///           <li>
-        ///             CLOUD_PREMIUM: premium cloud disk.<br/>
-        ///             <li>
-        ///               CLOUD_SSD: cloud SSD.<br />
-        ///               <li>
-        ///                 CLOUD_HSSD: enhanced SSD.<br/>
-        ///                 <li>
-        ///                   CLOUD_TSSD: tremendous SSD.<br/>
-        ///                   <li>
-        ///                     CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-        ///                   </li>
-        ///                 </li>
-        ///               </li>
-        ///             </li>
-        ///           </li>
-        ///         </li>
-        ///       </li>
-        ///     </li>
-        ///   </li>
-        /// </li>
+        /// Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD Disk <br /><li>LOCAL_NVME: Local NVME Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD Disk, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: HDD Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Cloud Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: ulTra SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -74,12 +44,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-        /// <li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
+        /// Whether the data disk is destroyed with the Cloud Virtual Machine (CVM). Value range:
+        /// <li>true: Destroy the data disk when the CVM is destroyed. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
         /// <li>
-        ///   FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-        ///   Default value: TRUE.<br/>
-        ///   This parameter is currently used only in the `RunInstances` API.
+        ///   false: Retain the data disk when the CVM is destroyed.<br />
+        ///   Default value: true.<br />
+        ///   This parameter is currently only used for the `RunInstances` API.
         /// </li>
         /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
@@ -138,6 +108,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }
 
+        /// <summary>
+        /// Disk name, with a length of not more than 128 characters.
+        /// 
+        /// This parameter is in invite-only testing and is not yet open for use.
+        /// </summary>
+        [JsonProperty("DiskName")]
+        public string DiskName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +132,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
+            this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
         }
     }
 }

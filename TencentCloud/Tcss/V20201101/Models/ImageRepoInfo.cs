@@ -94,6 +94,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// Number of sensitive data items
         /// </summary>
         [JsonProperty("SentiveInfoCnt")]
+        [System.Obsolete]
         public ulong? SentiveInfoCnt{ get; set; }
 
         /// <summary>

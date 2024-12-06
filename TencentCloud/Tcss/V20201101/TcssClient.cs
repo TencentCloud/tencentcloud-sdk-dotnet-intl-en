@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1027";
+       private const string sdkVersion = "SDK_NET_3.0.1028";
 
         /// <summary>
         /// Client constructor.
@@ -1383,6 +1383,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 产品重构优化，这几个接口已经没有调用了
+        /// 
         /// This API is used to remove the specified check item from the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteCompliancePolicyItemFromWhitelistRequest"/></param>
@@ -1393,6 +1395,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 产品重构优化，这几个接口已经没有调用了
+        /// 
         /// This API is used to remove the specified check item from the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteCompliancePolicyItemFromWhitelistRequest"/></param>
@@ -1698,6 +1702,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to query and export the list of abnormal process events at runtime.
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessEventsExportRequest"/></param>
@@ -1708,6 +1714,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to query and export the list of abnormal process events at runtime.
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessEventsExportRequest"/></param>
@@ -1782,6 +1790,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to query and export the list of abnormal process policies at runtime.
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessRulesExportRequest"/></param>
@@ -1792,6 +1802,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to query and export the list of abnormal process policies at runtime.
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessRulesExportRequest"/></param>
@@ -1908,6 +1920,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to export the list of access control policies at runtime.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessControlRulesExportRequest"/></param>
@@ -1918,6 +1932,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to export the list of access control policies at runtime.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessControlRulesExportRequest"/></param>
@@ -2286,6 +2302,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to export the list of images.
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetImageListExportRequest"/></param>
@@ -2296,6 +2314,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to export the list of images.
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetImageListExportRequest"/></param>
@@ -3399,6 +3419,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to export the list of container escape events.
         /// </summary>
         /// <param name="req"><see cref="DescribeEscapeEventsExportRequest"/></param>
@@ -3409,6 +3431,8 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to export the list of container escape events.
         /// </summary>
         /// <param name="req"><see cref="DescribeEscapeEventsExportRequest"/></param>

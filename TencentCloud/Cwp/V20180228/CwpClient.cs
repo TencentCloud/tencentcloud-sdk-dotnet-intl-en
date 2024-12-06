@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1027";
+       private const string sdkVersion = "SDK_NET_3.0.1028";
 
         /// <summary>
         /// Client constructor.
@@ -323,31 +323,6 @@ namespace TencentCloud.Cwp.V20180228
         public CreateBuyBindTaskResponse CreateBuyBindTaskSync(CreateBuyBindTaskRequest req)
         {
             return InternalRequestAsync<CreateBuyBindTaskResponse>(req, "CreateBuyBindTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 云护航计费产品已下线
-        /// 
-        /// This API is used to confirm the receipt after using the cloud escort service.
-        /// </summary>
-        /// <param name="req"><see cref="CreateCloudProtectServiceOrderRecordRequest"/></param>
-        /// <returns><see cref="CreateCloudProtectServiceOrderRecordResponse"/></returns>
-        public Task<CreateCloudProtectServiceOrderRecordResponse> CreateCloudProtectServiceOrderRecord(CreateCloudProtectServiceOrderRecordRequest req)
-        {
-            return InternalRequestAsync<CreateCloudProtectServiceOrderRecordResponse>(req, "CreateCloudProtectServiceOrderRecord");
-        }
-
-        /// <summary>
-        /// 云护航计费产品已下线
-        /// 
-        /// This API is used to confirm the receipt after using the cloud escort service.
-        /// </summary>
-        /// <param name="req"><see cref="CreateCloudProtectServiceOrderRecordRequest"/></param>
-        /// <returns><see cref="CreateCloudProtectServiceOrderRecordResponse"/></returns>
-        public CreateCloudProtectServiceOrderRecordResponse CreateCloudProtectServiceOrderRecordSync(CreateCloudProtectServiceOrderRecordRequest req)
-        {
-            return InternalRequestAsync<CreateCloudProtectServiceOrderRecordResponse>(req, "CreateCloudProtectServiceOrderRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2479,6 +2454,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// DescribeAttackEvents 代替
+        /// 
         /// This API is used to display the list of network attack logs in pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackLogsRequest"/></param>
@@ -2489,6 +2466,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// DescribeAttackEvents 代替
+        /// 
         /// This API is used to display the list of network attack logs in pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackLogsRequest"/></param>
@@ -2500,6 +2479,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 已废弃
+        /// 
         /// This API is used to backtrack attacks.
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackSourceRequest"/></param>
@@ -2510,6 +2491,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 已废弃
+        /// 
         /// This API is used to backtrack attacks.
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackSourceRequest"/></param>
@@ -2521,6 +2504,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 已废弃
+        /// 
         /// This API is used to query attack backtracking events.
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackSourceEventsRequest"/></param>
@@ -2531,6 +2516,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 已废弃
+        /// 
         /// This API is used to query attack backtracking events.
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackSourceEventsRequest"/></param>
@@ -3298,31 +3285,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 云护航计费产品已下线
+        /// 接口已无效
         /// 
-        /// This API is used to query the list of cloud escort service orders.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudProtectServiceOrderListRequest"/></param>
-        /// <returns><see cref="DescribeCloudProtectServiceOrderListResponse"/></returns>
-        public Task<DescribeCloudProtectServiceOrderListResponse> DescribeCloudProtectServiceOrderList(DescribeCloudProtectServiceOrderListRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudProtectServiceOrderListResponse>(req, "DescribeCloudProtectServiceOrderList");
-        }
-
-        /// <summary>
-        /// 云护航计费产品已下线
-        /// 
-        /// This API is used to query the list of cloud escort service orders.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudProtectServiceOrderListRequest"/></param>
-        /// <returns><see cref="DescribeCloudProtectServiceOrderListResponse"/></returns>
-        public DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderListSync(DescribeCloudProtectServiceOrderListRequest req)
-        {
-            return InternalRequestAsync<DescribeCloudProtectServiceOrderListResponse>(req, "DescribeCloudProtectServiceOrderList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to obtain the data of the component statistics list.
         /// </summary>
         /// <param name="req"><see cref="DescribeComponentStatisticsRequest"/></param>
@@ -3333,6 +3297,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 接口已无效
+        /// 
         /// This API is used to obtain the data of the component statistics list.
         /// </summary>
         /// <param name="req"><see cref="DescribeComponentStatisticsRequest"/></param>
@@ -3848,6 +3814,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to obtain the index list.
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
@@ -3858,6 +3826,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 接口已废弃
+        /// 
         /// This API is used to obtain the index list.
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
@@ -6011,6 +5981,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 接口已无效
+        /// 
         /// This API is used to obtain the summary of security protection statuses.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityProtectionStatRequest"/></param>
@@ -6021,6 +5993,8 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 接口已无效
+        /// 
         /// This API is used to obtain the summary of security protection statuses.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityProtectionStatRequest"/></param>

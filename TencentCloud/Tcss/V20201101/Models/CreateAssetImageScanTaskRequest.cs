@@ -28,6 +28,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// Whether to scan all images.
         /// </summary>
         [JsonProperty("All")]
+        [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
