@@ -43,8 +43,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string VideoBase64{ get; set; }
 
         /// <summary>
-        /// The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
-        /// `LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+        /// The liveness detection type. Valid values: `ACTION`, and `SILENT`.
+        /// `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
         /// Example value: "SILENT"
         /// </summary>
         [JsonProperty("LivenessType")]

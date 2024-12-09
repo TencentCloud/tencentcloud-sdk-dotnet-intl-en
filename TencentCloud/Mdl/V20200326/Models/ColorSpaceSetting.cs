@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Csip.V20221121.Models
+namespace TencentCloud.Mdl.V20200326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterPodAssetsRequest : AbstractModel
+    public class ColorSpaceSetting : AbstractModel
     {
         
         /// <summary>
-        /// Member id
+        /// Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
         /// </summary>
-        [JsonProperty("MemberId")]
-        public string[] MemberId{ get; set; }
-
-        /// <summary>
-        /// Filter conditions
-        /// </summary>
-        [JsonProperty("Filter")]
-        public Filter Filter{ get; set; }
+        [JsonProperty("ColorSpace")]
+        public string ColorSpace{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
-            this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
         }
     }
 }

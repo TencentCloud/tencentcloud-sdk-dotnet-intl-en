@@ -145,6 +145,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("VideoEnhanceSettings")]
         public VideoEnhanceSetting[] VideoEnhanceSettings{ get; set; }
 
+        /// <summary>
+        /// Color space setting.
+        /// </summary>
+        [JsonProperty("ColorSpaceSettings")]
+        public ColorSpaceSetting ColorSpaceSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +177,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "VideoCodecDetails.", this.VideoCodecDetails);
             this.SetParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
             this.SetParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
+            this.SetParamObj(map, prefix + "ColorSpaceSettings.", this.ColorSpaceSettings);
         }
     }
 }

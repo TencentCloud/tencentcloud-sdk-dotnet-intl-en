@@ -235,6 +235,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("GopSizeUnits")]
         public string GopSizeUnits{ get; set; }
 
+        /// <summary>
+        /// Color space setting.
+        /// </summary>
+        [JsonProperty("ColorSpaceSettings")]
+        public ColorSpaceSetting ColorSpaceSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +281,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
             this.SetParamSimple(map, prefix + "GopSize", this.GopSize);
             this.SetParamSimple(map, prefix + "GopSizeUnits", this.GopSizeUnits);
+            this.SetParamObj(map, prefix + "ColorSpaceSettings.", this.ColorSpaceSettings);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1028";
+       private const string sdkVersion = "SDK_NET_3.0.1029";
 
         /// <summary>
         /// Client constructor.
@@ -201,7 +201,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to list cluster pods. 
+        /// This API is used to list cluster pods.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterPodAssetsRequest"/></param>
         /// <returns><see cref="DescribeClusterPodAssetsResponse"/></returns>
@@ -211,7 +211,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to list cluster pods. 
+        /// This API is used to list cluster pods.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterPodAssetsRequest"/></param>
         /// <returns><see cref="DescribeClusterPodAssetsResponse"/></returns>
