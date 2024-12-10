@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20180330
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2018-03-30";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.
@@ -261,27 +261,6 @@ namespace TencentCloud.Dts.V20180330
         public DescribeMigrateJobsResponse DescribeMigrateJobsSync(DescribeMigrateJobsRequest req)
         {
             return InternalRequestAsync<DescribeMigrateJobsResponse>(req, "DescribeMigrateJobs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to query the purchasable subscription instance regions.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRegionConfRequest"/></param>
-        /// <returns><see cref="DescribeRegionConfResponse"/></returns>
-        public Task<DescribeRegionConfResponse> DescribeRegionConf(DescribeRegionConfRequest req)
-        {
-            return InternalRequestAsync<DescribeRegionConfResponse>(req, "DescribeRegionConf");
-        }
-
-        /// <summary>
-        /// This API is used to query the purchasable subscription instance regions.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRegionConfRequest"/></param>
-        /// <returns><see cref="DescribeRegionConfResponse"/></returns>
-        public DescribeRegionConfResponse DescribeRegionConfSync(DescribeRegionConfRequest req)
-        {
-            return InternalRequestAsync<DescribeRegionConfResponse>(req, "DescribeRegionConf")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

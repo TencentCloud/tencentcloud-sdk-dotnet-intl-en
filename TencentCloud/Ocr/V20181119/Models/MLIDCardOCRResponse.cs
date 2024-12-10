@@ -97,6 +97,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Birthday{ get; set; }
 
         /// <summary>
+        /// Number on the back of Malaysia ID card 
+        /// </summary>
+        [JsonProperty("MyKadNumber")]
+        public string MyKadNumber{ get; set; }
+
+        /// <summary>
         /// Card Warning Information
         /// 
         /// -9101 Alarm for covered certificate,
@@ -131,6 +137,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamSimple(map, prefix + "MyKadNumber", this.MyKadNumber);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

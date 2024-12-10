@@ -25,16 +25,16 @@ namespace TencentCloud.Dts.V20180330.Models
     {
         
         /// <summary>
-        /// Target instance ID, such as cdb-jd92ijd8
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
         /// Target instance region, such as ap-guangzhou
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
+
+        /// <summary>
+        /// Target instance ID, such as cdb-jd92ijd8
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// Target instance VIP, which has been disused and does not need to be entered
@@ -72,8 +72,8 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);

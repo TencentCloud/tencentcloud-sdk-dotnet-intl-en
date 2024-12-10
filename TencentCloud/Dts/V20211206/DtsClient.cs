@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1029";
+       private const string sdkVersion = "SDK_NET_3.0.1030";
 
         /// <summary>
         /// Client constructor.
@@ -56,7 +56,7 @@ namespace TencentCloud.Dts.V20211206
         /// <summary>
         /// This API is used to complete a data migration task.
         /// For tasks in incremental migration mode, you need to call this API before migration gets ready for completion to stop migrating incremental data.
-        /// If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete), you can call this API to complete the migration task.
+        /// If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete`), you can call this API to complete the migration task.
         /// </summary>
         /// <param name="req"><see cref="CompleteMigrateJobRequest"/></param>
         /// <returns><see cref="CompleteMigrateJobResponse"/></returns>
@@ -68,7 +68,7 @@ namespace TencentCloud.Dts.V20211206
         /// <summary>
         /// This API is used to complete a data migration task.
         /// For tasks in incremental migration mode, you need to call this API before migration gets ready for completion to stop migrating incremental data.
-        /// If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete), you can call this API to complete the migration task.
+        /// If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete`), you can call this API to complete the migration task.
         /// </summary>
         /// <param name="req"><see cref="CompleteMigrateJobRequest"/></param>
         /// <returns><see cref="CompleteMigrateJobResponse"/></returns>
