@@ -32,8 +32,11 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Container{ get; set; }
 
         /// <summary>
-        /// The clip mode. Valid values: `normal` (default), `fast`.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Editing mode. Optional values:
+        /// normal (default): Precise editing
+        /// fast: Fast editing, with faster processing speed but lower precision to some extent
+        /// Note: fast only supports individual files, and the default output transcoding format of normal is h264.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

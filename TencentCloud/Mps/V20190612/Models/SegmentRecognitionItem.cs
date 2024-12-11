@@ -49,6 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SegmentUrl{ get; set; }
 
         /// <summary>
+        /// Segment cover.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CovImgUrl")]
+        public string CovImgUrl{ get; set; }
+
+        /// <summary>
         /// Segment title.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -62,6 +69,26 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
 
+        /// <summary>
+        /// Segmentation keywords.
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
+
+        /// <summary>
+        /// The start time of a live streaming segment, in the ISO date format.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
+
+        /// <summary>
+        /// The end time of a live streaming segment, in the ISO date format.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,8 +99,12 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamSimple(map, prefix + "SegmentUrl", this.SegmentUrl);
+            this.SetParamSimple(map, prefix + "CovImgUrl", this.CovImgUrl);
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamSimple(map, prefix + "Summary", this.Summary);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

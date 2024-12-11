@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1030";
+       private const string sdkVersion = "SDK_NET_3.0.1031";
 
         /// <summary>
         /// Client constructor.
@@ -1625,6 +1625,31 @@ namespace TencentCloud.Mps.V20190612
         public ParseNotificationResponse ParseNotificationSync(ParseNotificationRequest req)
         {
             return InternalRequestAsync<ParseNotificationResponse>(req, "ParseNotification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to initiate image processing. Its features include:
+        /// 1. Format conversion;
+        /// 2. Image enhancement;
+        /// </summary>
+        /// <param name="req"><see cref="ProcessImageRequest"/></param>
+        /// <returns><see cref="ProcessImageResponse"/></returns>
+        public Task<ProcessImageResponse> ProcessImage(ProcessImageRequest req)
+        {
+            return InternalRequestAsync<ProcessImageResponse>(req, "ProcessImage");
+        }
+
+        /// <summary>
+        /// This API is used to initiate image processing. Its features include:
+        /// 1. Format conversion;
+        /// 2. Image enhancement;
+        /// </summary>
+        /// <param name="req"><see cref="ProcessImageRequest"/></param>
+        /// <returns><see cref="ProcessImageResponse"/></returns>
+        public ProcessImageResponse ProcessImageSync(ProcessImageRequest req)
+        {
+            return InternalRequestAsync<ProcessImageResponse>(req, "ProcessImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

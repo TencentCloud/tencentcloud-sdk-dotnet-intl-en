@@ -122,6 +122,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
+        /// <summary>
+        /// Transcoding template alias.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("AliasName")]
+        public string AliasName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+            this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
         }
     }
 }
