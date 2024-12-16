@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1033";
+       private const string sdkVersion = "SDK_NET_3.0.1034";
 
         /// <summary>
         /// Client constructor.
@@ -1840,6 +1840,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneConfigImportResultRequest"/></param>
+        /// <returns><see cref="DescribeZoneConfigImportResultResponse"/></returns>
+        public Task<DescribeZoneConfigImportResultResponse> DescribeZoneConfigImportResult(DescribeZoneConfigImportResultRequest req)
+        {
+            return InternalRequestAsync<DescribeZoneConfigImportResultResponse>(req, "DescribeZoneConfigImportResult");
+        }
+
+        /// <summary>
+        /// This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneConfigImportResultRequest"/></param>
+        /// <returns><see cref="DescribeZoneConfigImportResultResponse"/></returns>
+        public DescribeZoneConfigImportResultResponse DescribeZoneConfigImportResultSync(DescribeZoneConfigImportResultRequest req)
+        {
+            return InternalRequestAsync<DescribeZoneConfigImportResultResponse>(req, "DescribeZoneConfigImportResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the site configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneSettingRequest"/></param>
@@ -1959,6 +1980,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to export site configuration . The exported configuration is used for import via the API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// </summary>
+        /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
+        /// <returns><see cref="ExportZoneConfigResponse"/></returns>
+        public Task<ExportZoneConfigResponse> ExportZoneConfig(ExportZoneConfigRequest req)
+        {
+            return InternalRequestAsync<ExportZoneConfigResponse>(req, "ExportZoneConfig");
+        }
+
+        /// <summary>
+        /// This API is used to export site configuration . The exported configuration is used for import via the API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// </summary>
+        /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
+        /// <returns><see cref="ExportZoneConfigResponse"/></returns>
+        public ExportZoneConfigResponse ExportZoneConfigSync(ExportZoneConfigRequest req)
+        {
+            return InternalRequestAsync<ExportZoneConfigResponse>(req, "ExportZoneConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
         /// After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
         /// </summary>
@@ -1999,6 +2041,27 @@ namespace TencentCloud.Teo.V20220901
         public IdentifyZoneResponse IdentifyZoneSync(IdentifyZoneRequest req)
         {
             return InternalRequestAsync<IdentifyZoneResponse>(req, "IdentifyZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API (DescribeZoneConfigImportResult) to obtain the results of this import task. This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// </summary>
+        /// <param name="req"><see cref="ImportZoneConfigRequest"/></param>
+        /// <returns><see cref="ImportZoneConfigResponse"/></returns>
+        public Task<ImportZoneConfigResponse> ImportZoneConfig(ImportZoneConfigRequest req)
+        {
+            return InternalRequestAsync<ImportZoneConfigResponse>(req, "ImportZoneConfig");
+        }
+
+        /// <summary>
+        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API (DescribeZoneConfigImportResult) to obtain the results of this import task. This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// </summary>
+        /// <param name="req"><see cref="ImportZoneConfigRequest"/></param>
+        /// <returns><see cref="ImportZoneConfigResponse"/></returns>
+        public ImportZoneConfigResponse ImportZoneConfigSync(ImportZoneConfigRequest req)
+        {
+            return InternalRequestAsync<ImportZoneConfigResponse>(req, "ImportZoneConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

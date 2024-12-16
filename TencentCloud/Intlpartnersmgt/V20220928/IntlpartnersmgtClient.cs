@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1033";
+       private const string sdkVersion = "SDK_NET_3.0.1034";
 
         /// <summary>
         /// Client constructor.
@@ -547,6 +547,27 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public QueryPartnerCreditResponse QueryPartnerCreditSync(QueryPartnerCreditRequest req)
         {
             return InternalRequestAsync<QueryPartnerCreditResponse>(req, "QueryPartnerCredit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="QueryPolicyProductListByCodeRequest"/></param>
+        /// <returns><see cref="QueryPolicyProductListByCodeResponse"/></returns>
+        public Task<QueryPolicyProductListByCodeResponse> QueryPolicyProductListByCode(QueryPolicyProductListByCodeRequest req)
+        {
+            return InternalRequestAsync<QueryPolicyProductListByCodeResponse>(req, "QueryPolicyProductListByCode");
+        }
+
+        /// <summary>
+        /// This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="QueryPolicyProductListByCodeRequest"/></param>
+        /// <returns><see cref="QueryPolicyProductListByCodeResponse"/></returns>
+        public QueryPolicyProductListByCodeResponse QueryPolicyProductListByCodeSync(QueryPolicyProductListByCodeRequest req)
+        {
+            return InternalRequestAsync<QueryPolicyProductListByCodeResponse>(req, "QueryPolicyProductListByCode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
