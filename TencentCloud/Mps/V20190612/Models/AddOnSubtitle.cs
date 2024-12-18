@@ -29,17 +29,24 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>`subtitle-stream`: Add a subtitle track.</li>
         /// <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
         /// <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// The subtitle file.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Subtitle")]
         public MediaInputInfo Subtitle{ get; set; }
+
+        /// <summary>
+        /// Subtitle name.	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SubtitleName")]
+        public string SubtitleName{ get; set; }
 
 
         /// <summary>
@@ -49,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Subtitle.", this.Subtitle);
+            this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
         }
     }
 }

@@ -26,25 +26,24 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Super-resolution configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SuperResolution")]
         public SuperResolutionConfig SuperResolution{ get; set; }
 
         /// <summary>
-        /// 
+        /// Color enhancement configuration.
         /// </summary>
         [JsonProperty("ColorEnhance")]
         public ColorEnhanceConfig ColorEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// Detail enhancement configuration.
         /// </summary>
         [JsonProperty("SharpEnhance")]
         public SharpEnhanceConfig SharpEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// Face enhancement configuration.
         /// </summary>
         [JsonProperty("FaceEnhance")]
         public FaceEnhanceConfig FaceEnhance{ get; set; }
