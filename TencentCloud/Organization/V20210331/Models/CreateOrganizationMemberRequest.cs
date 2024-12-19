@@ -37,7 +37,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// List of member financial permission IDs. `7` indicates paying, which is the default value.
+        /// Member Finanace Authorization. Valid values: 1: View Bills. 2: View Balance.  4: Consolidate Bills. 5: Invoice. 6: Inherit Offer. 7: Pay On Behalf. 8: Cost Explorer. 9: Budget Management.  1, 2 and 7 are required.
         /// </summary>
         [JsonProperty("PermissionIds")]
         public ulong?[] PermissionIds{ get; set; }

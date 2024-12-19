@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1036";
+       private const string sdkVersion = "SDK_NET_3.0.1037";
 
         /// <summary>
         /// Client constructor.
@@ -127,6 +127,37 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public CreateAccountResponse CreateAccountSync(CreateAccountRequest req)
         {
             return InternalRequestAsync<CreateAccountResponse>(req, "CreateAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
+        /// 1.This API is used to create an invitation link, which you can send to a specified email address.
+        /// 2.Customer need to click the invitation link in the email, fill in and submit the required information.
+        /// 3.You can review the customer's application in customer management  after submission.
+        /// 
+        /// Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndSendClientInvitationMailRequest"/></param>
+        /// <returns><see cref="CreateAndSendClientInvitationMailResponse"/></returns>
+        public Task<CreateAndSendClientInvitationMailResponse> CreateAndSendClientInvitationMail(CreateAndSendClientInvitationMailRequest req)
+        {
+            return InternalRequestAsync<CreateAndSendClientInvitationMailResponse>(req, "CreateAndSendClientInvitationMail");
+        }
+
+        /// <summary>
+        /// This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
+        /// 1.This API is used to create an invitation link, which you can send to a specified email address.
+        /// 2.Customer need to click the invitation link in the email, fill in and submit the required information.
+        /// 3.You can review the customer's application in customer management  after submission.
+        /// 
+        /// Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndSendClientInvitationMailRequest"/></param>
+        /// <returns><see cref="CreateAndSendClientInvitationMailResponse"/></returns>
+        public CreateAndSendClientInvitationMailResponse CreateAndSendClientInvitationMailSync(CreateAndSendClientInvitationMailRequest req)
+        {
+            return InternalRequestAsync<CreateAndSendClientInvitationMailResponse>(req, "CreateAndSendClientInvitationMail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
