@@ -42,7 +42,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo Subtitle{ get; set; }
 
         /// <summary>
-        /// Subtitle name.	
+        /// Subtitle name.
+        /// Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SubtitleName")]

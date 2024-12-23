@@ -94,6 +94,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("Tags")]
         public RoleTags[] Tags{ get; set; }
 
+        /// <summary>
+        /// The Role Arn 
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +117,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
             this.SetParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
         }
     }
 }

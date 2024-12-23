@@ -36,11 +36,12 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>dnxhd: DNxHD encoding</li>
         /// <li>mv-hevc: MV-HEVC encoding</li>
         /// 
-        /// Note: AV1 encoding containers currently only support mp4, webm, and mkv.
-        /// Note: H.266 encoding containers currently only support mp4, hls, ts, and mov.
-        /// Note: VP8 and VP9 encoding containers currently only support webm and mkv.
-        /// Note: MPEG2 and DNxHD encoding containers currently only support mxf.
-        /// Note: MV-HEVC encoding containers only support mp4, hls, and mov. Among them, the hls format only supports mp4 segmentation format.
+        /// Note: 
+        /// AV1 encoding containers currently only support mp4, webm, and mkv.
+        /// H.266 encoding containers currently only support mp4, hls, ts, and move. 
+        /// VP8 and VP9 encoding containers currently only support webm and mkv.
+        /// MPEG2 and DNxHD encoding containers currently only support mxf.
+        /// MV-HEVC encoding containers only support mp4, hls, and mov. Also, the hls format only supports mp4 segmentation format.
         /// 
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
@@ -106,16 +107,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string GopUnit{ get; set; }
 
         /// <summary>
-        /// Filling mode. When the configured aspect ratio parameter for video streams differs from the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:
+        /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
         ///  <li>stretch: Each frame is stretched to fill the entire screen, which may cause the transcoded video to be "flattened" or "stretched".</li>
-        /// <li>black: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with black.</li>
+        /// <li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
         /// <li>white: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with white.</li>
-        /// <li>gauss: The aspect ratio of the video is kept unchanged, and the rest of the edges is filled with a Gaussian blur.</li>
+        /// <li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
         /// 
         /// <li>smarttailor: Video images are smartly selected to ensure proportional image cropping.</li>
         /// Default value: black.
-        /// 
-        /// Note: Only stretch and black are supported for adaptive bitrate streaming.
         /// 
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
@@ -123,13 +122,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string FillType{ get; set; }
 
         /// <summary>
-        /// Control factor for constant video bitrate. Value range: [0, 51] and 100.
-        /// It is recommended not to specify this parameter if there are no special requirements.
+        /// The control factor of video constant bitrate. Value range: [0, 51]. If not specified, it means "auto". It is recommended not to specify this parameter unless necessary.
+        /// When the Mode parameter is set to VBR, if the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
+        /// When the Mode parameter is set to CRF, the Bitrate setting will be invalid, and the encoding will be based on the Vcrf value.
+        /// When the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
+        /// Note: When you need to set it to auto, fill in 100.
         /// 
-        /// Note:
-        /// When you need to set it to auto, fill in 100.
-        /// If Mode is set to ABR, the Vcrf value does not need to be configured.
-        /// If Mode is set to CBR, the Vcrf value does not need to be configured.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Vcrf")]
@@ -155,13 +153,14 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// HLS segment type. Valid values:
-        /// <li>0: HLS+TS segment.</li>
-        /// <li>2: HLS+TS byte range.</li>
-        /// <li>7: HLS+MP4 segment.</li>
-        /// <li>5: HLS+MP4 byte range.</li>
+        /// <li>0: HLS+TS segment</li>
+        /// <li>2: HLS+TS byte range</li>
+        /// <li>7: HLS+MP4 segment</li>
+        /// <li>5: HLS+MP4 byte range</li>
         /// Default value: 0
         /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field is used for normal/Top Speed Codec transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SegmentType")]
         public long? SegmentType{ get; set; }
@@ -273,46 +272,48 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Compress{ get; set; }
 
         /// <summary>
-        /// Special segment configuration	
+        /// Segment duration at startup.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SegmentSpecificInfo")]
         public SegmentSpecificInfo SegmentSpecificInfo{ get; set; }
 
         /// <summary>
-        /// Whether to enable scenario-based settings for the template 
-        /// 0: disable 
+        /// Indicates whether to enable scenario-based settings for the template. 
+        /// 0: Disable. 
         /// 1: enable 
         ///  
         /// Default value: 0	
         /// 	
+        /// Note: This value takes effect only when the value of this field is 1.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ScenarioBased")]
         public long? ScenarioBased{ get; set; }
 
         /// <summary>
-        /// Video scenario. Optional values: 
-        /// normal: General transcoding scenario: General transcoding and compression scenario
-        /// pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
+        /// Video scenario. Valid values: 
+        /// normal: General transcoding scenario: General transcoding and compression scenario. pgc: PGC HD film and television: Emphasis is placed on the viewing experience of films and TV shows during compression, with ROI encoding based on the characteristics of films and TV shows, while maintaining high-quality video and audio content. 
         /// materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
         /// ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
         /// e-commerce_video: Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
         /// educational_video: Education: At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed.
-        /// Default value: normal
+        /// Default value: normal.
+        /// Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
         /// <summary>
-        /// Transcoding policy. Optional values: 
+        /// Transcoding policy. Valid values: 
         /// ultra_compress: Extreme compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-        /// standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-        /// high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-        /// low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-        /// Default value: standard_compress 
-        /// Note: If you need to watch videos on TV, it is recommended no to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+        /// standard_compress: Comprehensively optimal: Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. This policy only charges audio and video TSC transcoding fees. 
+        /// high_compress: Bitrate priority: Prioritizes reducing file size, which may result in some image quality loss. This policy only charges audio and video TSC transcoding fees. 
+        /// low_compress: Image quality priority: Prioritizes ensuring image quality, and the size of compressed files may be relatively large. This policy only charges audio and video TSC transcoding fees. 
+        /// Default value: standard_compress. 
+        /// Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
+        /// Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CompressType")]

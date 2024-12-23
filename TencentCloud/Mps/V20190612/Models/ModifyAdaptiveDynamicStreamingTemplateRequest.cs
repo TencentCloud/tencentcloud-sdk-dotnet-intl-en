@@ -62,7 +62,11 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
-        /// Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+        /// 
+        /// Note:
+        /// 
+        /// 1. The frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+        /// 2. When modifying substream information, all field values must be fully modified and added; otherwise, fields not filled in will use default values.
         /// </summary>
         [JsonProperty("StreamInfos")]
         public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
@@ -74,15 +78,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Whether it is an audio-only template. 0: video template. 1: audio-only template.When the value is 1:
+        /// Indicates whether it is audio-only. 0 means video template, 1 means audio-only template.
+        /// When the value is 1.
         /// 1. StreamInfos.N.RemoveVideo=1
         /// 2. StreamInfos.N.RemoveAudio=0
         /// 3. StreamInfos.N.Video.Codec=copy
-        /// 
-        /// When the value is 0:
-        /// 
+        /// When the value is 0.
         /// 1. StreamInfos.N.Video.Codec cannot be copy.
         /// 2. StreamInfos.N.Video.Fps cannot be null.
+        /// 
+        /// Note:
+        /// 
+        /// This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
         /// </summary>
         [JsonProperty("PureAudio")]
         public ulong? PureAudio{ get; set; }

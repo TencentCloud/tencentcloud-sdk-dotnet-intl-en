@@ -31,7 +31,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// EIP of the Anti-DDoS instance ID
+        /// EIP of the Anti-DDoS instance ID.
         /// </summary>
         [JsonProperty("Eip")]
         public string Eip{ get; set; }

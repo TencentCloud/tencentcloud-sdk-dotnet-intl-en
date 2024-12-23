@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303
 
        private const string endpoint = "iai.tencentcloudapi.com";
        private const string version = "2020-03-03";
-       private const string sdkVersion = "SDK_NET_3.0.1037";
+       private const string sdkVersion = "SDK_NET_3.0.1038";
 
         /// <summary>
         /// Client constructor.
@@ -414,6 +414,29 @@ namespace TencentCloud.Iai.V20200303
         public DetectFaceAttributesResponse DetectFaceAttributesSync(DetectFaceAttributesRequest req)
         {
             return InternalRequestAsync<DetectFaceAttributesResponse>(req, "DetectFaceAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Compare the faces in the two pictures for similarity and return the face similarity score. If you need to determine "whether this person is someone", that is, to verify whether the person in a picture is someone with a known identity, such as a common face login scenario, it is recommended to use [VerifyFace] (https://www.tencentcloud.com/document/product/1059/36972) or [VerifyPerson] (https://www.tencentcloud.com/document/product/1059/36971) inferface. 
+        /// Please use the V3 version for the signature method in the public parameters, that is, configure the SignatureMethod parameter to TC3-HMAC-SHA256
+        /// </summary>
+        /// <param name="req"><see cref="DetectFaceSimilarityRequest"/></param>
+        /// <returns><see cref="DetectFaceSimilarityResponse"/></returns>
+        public Task<DetectFaceSimilarityResponse> DetectFaceSimilarity(DetectFaceSimilarityRequest req)
+        {
+            return InternalRequestAsync<DetectFaceSimilarityResponse>(req, "DetectFaceSimilarity");
+        }
+
+        /// <summary>
+        /// Compare the faces in the two pictures for similarity and return the face similarity score. If you need to determine "whether this person is someone", that is, to verify whether the person in a picture is someone with a known identity, such as a common face login scenario, it is recommended to use [VerifyFace] (https://www.tencentcloud.com/document/product/1059/36972) or [VerifyPerson] (https://www.tencentcloud.com/document/product/1059/36971) inferface. 
+        /// Please use the V3 version for the signature method in the public parameters, that is, configure the SignatureMethod parameter to TC3-HMAC-SHA256
+        /// </summary>
+        /// <param name="req"><see cref="DetectFaceSimilarityRequest"/></param>
+        /// <returns><see cref="DetectFaceSimilarityResponse"/></returns>
+        public DetectFaceSimilarityResponse DetectFaceSimilaritySync(DetectFaceSimilarityRequest req)
+        {
+            return InternalRequestAsync<DetectFaceSimilarityResponse>(req, "DetectFaceSimilarity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
