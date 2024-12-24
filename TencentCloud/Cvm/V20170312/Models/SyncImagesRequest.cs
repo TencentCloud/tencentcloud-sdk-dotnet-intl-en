@@ -58,6 +58,22 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ImageSetRequired")]
         public bool? ImageSetRequired{ get; set; }
 
+        /// <summary>
+        /// Whether to synchronize as an encrypted custom image.
+        /// Default value is `false`.
+        /// Synchronization to an encrypted custom image is only supported within the same region.
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public bool? Encrypt{ get; set; }
+
+        /// <summary>
+        /// KMS key ID used when synchronizing to an encrypted custom image. 
+        /// This parameter is valid only synchronizing to an encrypted image.
+        /// If KmsKeyId is not specified, the default CBS cloud product KMS key is used.
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +85,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "ImageSetRequired", this.ImageSetRequired);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         }
     }
 }
