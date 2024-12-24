@@ -42,6 +42,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 1: OCR+living detection & face comparison;
         /// 2: Living detection & face comparison;
         /// 3: Living detection;
+        /// 4: OCR;
         /// The default value is 2.
         /// Example value: 3
         /// </summary>
