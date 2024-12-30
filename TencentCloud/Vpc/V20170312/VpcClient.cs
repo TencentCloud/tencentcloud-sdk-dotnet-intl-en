@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1043";
+       private const string sdkVersion = "SDK_NET_3.0.1044";
 
         /// <summary>
         /// Client constructor.
@@ -4289,6 +4289,69 @@ namespace TencentCloud.Vpc.V20170312
         public InquirePriceCreateDirectConnectGatewayResponse InquirePriceCreateDirectConnectGatewaySync(InquirePriceCreateDirectConnectGatewayRequest req)
         {
             return InternalRequestAsync<InquirePriceCreateDirectConnectGatewayResponse>(req, "InquirePriceCreateDirectConnectGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API (InquiryPriceAllocateAddresses) is used to query the price of purchasing EIPs.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceAllocateAddressesRequest"/></param>
+        /// <returns><see cref="InquiryPriceAllocateAddressesResponse"/></returns>
+        public Task<InquiryPriceAllocateAddressesResponse> InquiryPriceAllocateAddresses(InquiryPriceAllocateAddressesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceAllocateAddressesResponse>(req, "InquiryPriceAllocateAddresses");
+        }
+
+        /// <summary>
+        /// This API (InquiryPriceAllocateAddresses) is used to query the price of purchasing EIPs.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceAllocateAddressesRequest"/></param>
+        /// <returns><see cref="InquiryPriceAllocateAddressesResponse"/></returns>
+        public InquiryPriceAllocateAddressesResponse InquiryPriceAllocateAddressesSync(InquiryPriceAllocateAddressesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceAllocateAddressesResponse>(req, "InquiryPriceAllocateAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the price of modifying EIP bandwidth.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyAddressesBandwidthRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyAddressesBandwidthResponse"/></returns>
+        public Task<InquiryPriceModifyAddressesBandwidthResponse> InquiryPriceModifyAddressesBandwidth(InquiryPriceModifyAddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceModifyAddressesBandwidthResponse>(req, "InquiryPriceModifyAddressesBandwidth");
+        }
+
+        /// <summary>
+        /// This API is used to query the price of modifying EIP bandwidth.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyAddressesBandwidthRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyAddressesBandwidthResponse"/></returns>
+        public InquiryPriceModifyAddressesBandwidthResponse InquiryPriceModifyAddressesBandwidthSync(InquiryPriceModifyAddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceModifyAddressesBandwidthResponse>(req, "InquiryPriceModifyAddressesBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API (InquiryPriceRenewAddresses) is used to query the price of renewing prepaid EIPs.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewAddressesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewAddressesResponse"/></returns>
+        public Task<InquiryPriceRenewAddressesResponse> InquiryPriceRenewAddresses(InquiryPriceRenewAddressesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewAddressesResponse>(req, "InquiryPriceRenewAddresses");
+        }
+
+        /// <summary>
+        /// This API (InquiryPriceRenewAddresses) is used to query the price of renewing prepaid EIPs.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewAddressesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewAddressesResponse"/></returns>
+        public InquiryPriceRenewAddressesResponse InquiryPriceRenewAddressesSync(InquiryPriceRenewAddressesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewAddressesResponse>(req, "InquiryPriceRenewAddresses")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

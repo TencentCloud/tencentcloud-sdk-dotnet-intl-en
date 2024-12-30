@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1043";
+       private const string sdkVersion = "SDK_NET_3.0.1044";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateCustomizeErrorPageResponse CreateCustomizeErrorPageSync(CreateCustomizeErrorPageRequest req)
         {
             return InternalRequestAsync<CreateCustomizeErrorPageResponse>(req, "CreateCustomizeErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a DNS record.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
+        /// <returns><see cref="CreateDnsRecordResponse"/></returns>
+        public Task<CreateDnsRecordResponse> CreateDnsRecord(CreateDnsRecordRequest req)
+        {
+            return InternalRequestAsync<CreateDnsRecordResponse>(req, "CreateDnsRecord");
+        }
+
+        /// <summary>
+        /// This API is used to create a DNS record.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
+        /// <returns><see cref="CreateDnsRecordResponse"/></returns>
+        public CreateDnsRecordResponse CreateDnsRecordSync(CreateDnsRecordRequest req)
+        {
+            return InternalRequestAsync<CreateDnsRecordResponse>(req, "CreateDnsRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -717,6 +738,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteCustomErrorPageResponse DeleteCustomErrorPageSync(DeleteCustomErrorPageRequest req)
         {
             return InternalRequestAsync<DeleteCustomErrorPageResponse>(req, "DeleteCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete DNS records in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
+        /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
+        public Task<DeleteDnsRecordsResponse> DeleteDnsRecords(DeleteDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<DeleteDnsRecordsResponse>(req, "DeleteDnsRecords");
+        }
+
+        /// <summary>
+        /// This API is used to delete DNS records in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
+        /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
+        public DeleteDnsRecordsResponse DeleteDnsRecordsSync(DeleteDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<DeleteDnsRecordsResponse>(req, "DeleteDnsRecords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1263,6 +1305,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeDeployHistoryResponse DescribeDeployHistorySync(DescribeDeployHistoryRequest req)
         {
             return InternalRequestAsync<DescribeDeployHistoryResponse>(req, "DescribeDeployHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query DNS records. Paging, sorting and filtering are supported.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
+        /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
+        public Task<DescribeDnsRecordsResponse> DescribeDnsRecords(DescribeDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeDnsRecordsResponse>(req, "DescribeDnsRecords");
+        }
+
+        /// <summary>
+        /// This API is used to query DNS records. Paging, sorting and filtering are supported.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
+        /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
+        public DescribeDnsRecordsResponse DescribeDnsRecordsSync(DescribeDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeDnsRecordsResponse>(req, "DescribeDnsRecords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2278,6 +2341,48 @@ namespace TencentCloud.Teo.V20220901
         public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
         {
             return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// You can use this interface to batch modify DNS records.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDnsRecordsRequest"/></param>
+        /// <returns><see cref="ModifyDnsRecordsResponse"/></returns>
+        public Task<ModifyDnsRecordsResponse> ModifyDnsRecords(ModifyDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<ModifyDnsRecordsResponse>(req, "ModifyDnsRecords");
+        }
+
+        /// <summary>
+        /// You can use this interface to batch modify DNS records.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDnsRecordsRequest"/></param>
+        /// <returns><see cref="ModifyDnsRecordsResponse"/></returns>
+        public ModifyDnsRecordsResponse ModifyDnsRecordsSync(ModifyDnsRecordsRequest req)
+        {
+            return InternalRequestAsync<ModifyDnsRecordsResponse>(req, "ModifyDnsRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// You can use this interface to batch modify the status of DNS records, enabling and disabling records in bulk.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDnsRecordsStatusRequest"/></param>
+        /// <returns><see cref="ModifyDnsRecordsStatusResponse"/></returns>
+        public Task<ModifyDnsRecordsStatusResponse> ModifyDnsRecordsStatus(ModifyDnsRecordsStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDnsRecordsStatusResponse>(req, "ModifyDnsRecordsStatus");
+        }
+
+        /// <summary>
+        /// You can use this interface to batch modify the status of DNS records, enabling and disabling records in bulk.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDnsRecordsStatusRequest"/></param>
+        /// <returns><see cref="ModifyDnsRecordsStatusResponse"/></returns>
+        public ModifyDnsRecordsStatusResponse ModifyDnsRecordsStatusSync(ModifyDnsRecordsStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDnsRecordsStatusResponse>(req, "ModifyDnsRecordsStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

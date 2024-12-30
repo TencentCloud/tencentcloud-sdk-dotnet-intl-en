@@ -48,6 +48,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
 
+        /// <summary>
+        /// Whether to pause, the default value of false indicates no pause. During the pause, the task is still in progress and is billed. If you want to terminate the task, please call the stop interface.
+        /// </summary>
+        [JsonProperty("IsPause")]
+        public bool? IsPause{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
+            this.SetParamSimple(map, prefix + "IsPause", this.IsPause);
         }
     }
 }
