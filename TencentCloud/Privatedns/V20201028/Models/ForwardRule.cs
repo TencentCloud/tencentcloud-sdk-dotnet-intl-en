@@ -80,7 +80,6 @@ namespace TencentCloud.Privatedns.V20201028.Models
 
         /// <summary>
         /// List of VPCs bound to the private domain.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcSet")]
         public VpcInfo[] VpcSet{ get; set; }
@@ -92,8 +91,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Tag.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }

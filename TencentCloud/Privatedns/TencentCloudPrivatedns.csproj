@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F711E1FC-542C-3536-9601-50E098B1102E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1046</VersionPrefix>
+    <VersionPrefix>3.0.1047</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20201028\Models\CreateEndPointAndEndPointServiceResponse.cs" />
     <Compile Include="V20201028\Models\CreateEndPointRequest.cs" />
     <Compile Include="V20201028\Models\CreateEndPointResponse.cs" />
+    <Compile Include="V20201028\Models\CreateExtendEndpointRequest.cs" />
+    <Compile Include="V20201028\Models\CreateExtendEndpointResponse.cs" />
     <Compile Include="V20201028\Models\CreateForwardRuleRequest.cs" />
     <Compile Include="V20201028\Models\CreateForwardRuleResponse.cs" />
     <Compile Include="V20201028\Models\CreatePrivateDNSAccountRequest.cs" />
@@ -66,6 +68,10 @@
     <Compile Include="V20201028\Models\CreatePrivateZoneRequest.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneResponse.cs" />
     <Compile Include="V20201028\Models\DatePoint.cs" />
+    <Compile Include="V20201028\Models\DeleteEndPointRequest.cs" />
+    <Compile Include="V20201028\Models\DeleteEndPointResponse.cs" />
+    <Compile Include="V20201028\Models\DeleteForwardRuleRequest.cs" />
+    <Compile Include="V20201028\Models\DeleteForwardRuleResponse.cs" />
     <Compile Include="V20201028\Models\DeletePrivateZoneRecordRequest.cs" />
     <Compile Include="V20201028\Models\DeletePrivateZoneRecordResponse.cs" />
     <Compile Include="V20201028\Models\DescribeAccountVpcListRequest.cs" />
@@ -76,8 +82,14 @@
     <Compile Include="V20201028\Models\DescribeDashboardResponse.cs" />
     <Compile Include="V20201028\Models\DescribeEndPointListRequest.cs" />
     <Compile Include="V20201028\Models\DescribeEndPointListResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeEndPointRegionRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeEndPointRegionResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeExtendEndpointListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeExtendEndpointListResponse.cs" />
     <Compile Include="V20201028\Models\DescribeForwardRuleListRequest.cs" />
     <Compile Include="V20201028\Models\DescribeForwardRuleListResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeForwardRuleRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeForwardRuleResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateDNSAccountListRequest.cs" />
     <Compile Include="V20201028\Models\DescribePrivateDNSAccountListResponse.cs" />
     <Compile Include="V20201028\Models\DescribePrivateZoneListRequest.cs" />
@@ -91,10 +103,14 @@
     <Compile Include="V20201028\Models\DescribeRequestDataRequest.cs" />
     <Compile Include="V20201028\Models\DescribeRequestDataResponse.cs" />
     <Compile Include="V20201028\Models\EndPointInfo.cs" />
+    <Compile Include="V20201028\Models\EndpointService.cs" />
     <Compile Include="V20201028\Models\Filter.cs" />
     <Compile Include="V20201028\Models\FlowUsage.cs" />
+    <Compile Include="V20201028\Models\ForwardIp.cs" />
     <Compile Include="V20201028\Models\ForwardRule.cs" />
     <Compile Include="V20201028\Models\MetricData.cs" />
+    <Compile Include="V20201028\Models\ModifyForwardRuleRequest.cs" />
+    <Compile Include="V20201028\Models\ModifyForwardRuleResponse.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneRecordRequest.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneRecordResponse.cs" />
     <Compile Include="V20201028\Models\ModifyPrivateZoneRequest.cs" />
@@ -103,9 +119,11 @@
     <Compile Include="V20201028\Models\ModifyPrivateZoneVpcResponse.cs" />
     <Compile Include="V20201028\Models\ModifyRecordsStatusRequest.cs" />
     <Compile Include="V20201028\Models\ModifyRecordsStatusResponse.cs" />
+    <Compile Include="V20201028\Models\OutboundEndpoint.cs" />
     <Compile Include="V20201028\Models\PrivateDNSAccount.cs" />
     <Compile Include="V20201028\Models\PrivateZone.cs" />
     <Compile Include="V20201028\Models\PrivateZoneRecord.cs" />
+    <Compile Include="V20201028\Models\RegionInfo.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
     <Compile Include="V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />
     <Compile Include="V20201028\Models\TagInfo.cs" />
