@@ -256,6 +256,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string NotifyMessage{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NotifyMaxCount")]
+        public ulong? NotifyMaxCount{ get; set; }
+
+        /// <summary>
         /// <p>And VoiceType field needs to select one, here is to use your own custom TTS, VoiceType is some built-in sound qualities</p>
         /// <ul>
         /// <li>Tencent TTS<br>
@@ -364,6 +370,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "EndFunctionDesc", this.EndFunctionDesc);
             this.SetParamSimple(map, prefix + "NotifyDuration", this.NotifyDuration);
             this.SetParamSimple(map, prefix + "NotifyMessage", this.NotifyMessage);
+            this.SetParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
             this.SetParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
         }
     }
