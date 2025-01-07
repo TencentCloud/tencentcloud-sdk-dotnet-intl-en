@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1048";
+       private const string sdkVersion = "SDK_NET_3.0.1049";
 
         /// <summary>
         /// Client constructor.
@@ -1051,6 +1051,31 @@ namespace TencentCloud.Ocr.V20181119
         public SmartStructuralOCRV2Response SmartStructuralOCRV2Sync(SmartStructuralOCRV2Request req)
         {
             return InternalRequestAsync<SmartStructuralOCRV2Response>(req, "SmartStructuralOCRV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="SmartStructuralProRequest"/></param>
+        /// <returns><see cref="SmartStructuralProResponse"/></returns>
+        public Task<SmartStructuralProResponse> SmartStructuralPro(SmartStructuralProRequest req)
+        {
+            return InternalRequestAsync<SmartStructuralProResponse>(req, "SmartStructuralPro");
+        }
+
+        /// <summary>
+        /// This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
+        /// 
+        /// A maximum of 10 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="SmartStructuralProRequest"/></param>
+        /// <returns><see cref="SmartStructuralProResponse"/></returns>
+        public SmartStructuralProResponse SmartStructuralProSync(SmartStructuralProRequest req)
+        {
+            return InternalRequestAsync<SmartStructuralProResponse>(req, "SmartStructuralPro")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
