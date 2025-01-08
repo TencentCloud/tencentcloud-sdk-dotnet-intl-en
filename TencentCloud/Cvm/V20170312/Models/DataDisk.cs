@@ -31,23 +31,24 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview] (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Value range: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD Disk <br /><li>LOCAL_NVME: Local NVME Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD Disk, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: HDD Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Cloud Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: ulTra SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
+        /// Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+        /// Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
         /// It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// Whether the data disk is destroyed with the Cloud Virtual Machine (CVM). Value range:
-        /// <li>true: Destroy the data disk when the CVM is destroyed. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
+        /// Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
+        /// 
+        /// <li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
         /// <li>
-        ///   false: Retain the data disk when the CVM is destroyed.<br />
+        ///   false: Retain the data disk when the CVM is terminated.<br />
         ///   Default value: true.<br />
         ///   This parameter is currently only used for the `RunInstances` API.
         /// </li>
@@ -77,7 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? Encrypt{ get; set; }
 
         /// <summary>
-        /// ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+        /// ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
         /// 
         /// Currently, this parameter is only used in the `RunInstances` API.
         /// Note: this field may return null, indicating that no valid values can be obtained.
