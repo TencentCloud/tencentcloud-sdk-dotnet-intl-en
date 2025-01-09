@@ -33,6 +33,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// SGP: Singapore
         /// JPN: Japan
         /// TWN:Taiwan
+        /// BGD:Bangladesh 
+        /// NGA:Nigeria
+        /// PAK:Pakistan
         /// AUTO: Automatic Identification
         /// </summary>
         [JsonProperty("Nationality")]

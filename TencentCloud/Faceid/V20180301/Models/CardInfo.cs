@@ -136,6 +136,41 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("JapanIDCard")]
         public JapanIDCard JapanIDCard{ get; set; }
 
+        /// <summary>
+        /// Bangladesh ID Card
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BangladeshIDCard")]
+        public BangladeshIDCard BangladeshIDCard{ get; set; }
+
+        /// <summary>
+        /// Nigeria ID Card
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NigeriaIDCard")]
+        public NigeriaIDCard NigeriaIDCard{ get; set; }
+
+        /// <summary>
+        /// Nigeria driving license
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NigeriaDrivingLicense")]
+        public NigeriaDrivingLicense NigeriaDrivingLicense{ get; set; }
+
+        /// <summary>
+        /// Pakistan ID Card
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PakistanIDCard")]
+        public PakistanIDCard PakistanIDCard{ get; set; }
+
+        /// <summary>
+        /// Pakistan driving license
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PakistanDrivingLicense")]
+        public PakistanDrivingLicense PakistanDrivingLicense{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +193,11 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "MacaoIDCard.", this.MacaoIDCard);
             this.SetParamObj(map, prefix + "TaiWanIDCard.", this.TaiWanIDCard);
             this.SetParamObj(map, prefix + "JapanIDCard.", this.JapanIDCard);
+            this.SetParamObj(map, prefix + "BangladeshIDCard.", this.BangladeshIDCard);
+            this.SetParamObj(map, prefix + "NigeriaIDCard.", this.NigeriaIDCard);
+            this.SetParamObj(map, prefix + "NigeriaDrivingLicense.", this.NigeriaDrivingLicense);
+            this.SetParamObj(map, prefix + "PakistanIDCard.", this.PakistanIDCard);
+            this.SetParamObj(map, prefix + "PakistanDrivingLicense.", this.PakistanDrivingLicense);
         }
     }
 }
