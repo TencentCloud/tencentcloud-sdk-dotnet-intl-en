@@ -244,6 +244,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string EndFunctionDesc{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TransferFunctionEnable")]
+        public bool? TransferFunctionEnable{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TransferItems")]
+        public AITransferItem[] TransferItems{ get; set; }
+
+        /// <summary>
         /// The duration after which the user hasn't spoken to trigger a notification, minimum 10 seconds, default 10 seconds
         /// </summary>
         [JsonProperty("NotifyDuration")]
@@ -345,6 +357,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("CustomTTSConfig")]
         public string CustomTTSConfig{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PromptVariables")]
+        public Variable[] PromptVariables{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -368,10 +386,13 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
             this.SetParamSimple(map, prefix + "EndFunctionEnable", this.EndFunctionEnable);
             this.SetParamSimple(map, prefix + "EndFunctionDesc", this.EndFunctionDesc);
+            this.SetParamSimple(map, prefix + "TransferFunctionEnable", this.TransferFunctionEnable);
+            this.SetParamArrayObj(map, prefix + "TransferItems.", this.TransferItems);
             this.SetParamSimple(map, prefix + "NotifyDuration", this.NotifyDuration);
             this.SetParamSimple(map, prefix + "NotifyMessage", this.NotifyMessage);
             this.SetParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
             this.SetParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
+            this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
         }
     }
 }
