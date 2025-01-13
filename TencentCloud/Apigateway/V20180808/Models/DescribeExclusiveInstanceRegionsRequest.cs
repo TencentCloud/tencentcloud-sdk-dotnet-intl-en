@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Ssl.V20191205.Models
+namespace TencentCloud.Apigateway.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteCertificateRequest : AbstractModel
+    public class DescribeExclusiveInstanceRegionsRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Certificate ID
-        /// </summary>
-        [JsonProperty("CertificateId")]
-        public string CertificateId{ get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("IsCheckResource")]
-        public bool? IsCheckResource{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
-            this.SetParamSimple(map, prefix + "IsCheckResource", this.IsCheckResource);
         }
     }
 }
