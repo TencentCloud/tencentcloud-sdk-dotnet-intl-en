@@ -25,28 +25,30 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Service error code. When the return value is "Success", it indicates that the liveness detection and face comparison succeeded. It is determined that they are the same person. When the return value is "FailedOperation.CompareLowSimilarity", it indicates that the liveness detection succeeded, and the face comparison similarity is lower than 70 points. It is determined that they are not the same person. For other error cases, please refer to Liveness Face Comparison (Pure API) Error Code (https://www.tencentcloud.com/document/product/1061/55390). 
-        /// Example Value: "Success".
+        /// Business Error Codes.
+        /// -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
+        /// -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
+        /// -For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// Description of business results. 
-        /// Example value: "Success"
+        /// The service result description
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// This value is valid when the "Result" parameter is "Success" or "FailedOperation.CompareLowSimilarity." 
-        /// This value indicates the similarity of face comparison. Value range: [0.00, 100.00]. The false pass rate for threshold 70 is 1 in 1,000, and the false pass rate for threshold 80 is 1 in 10,000. 
-        /// Example value: 80.00
+        /// This value indicates the similarity of face comparison. Value range: 0.00-100.00.
+        /// - The false acceptance rate for a threshold of 70 is 0.1%, and for a threshold of 80, it is 0.01%.
+        /// - This value is valid when the Result parameter is "Success" or "FailedOperation.CompareLowSimilarity".
         /// </summary>
         [JsonProperty("Sim")]
         public float? Sim{ get; set; }
 
         /// <summary>
+        /// The best screenshot photo from the video after verification, encoded in BASE64, in jpg format.
         /// The optimal screenshot of the video after verification is the value encoded by BASE64, jpg format. 
         /// Note: This field may return "null", indicating that no valid value can be obtained. 
         /// Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="

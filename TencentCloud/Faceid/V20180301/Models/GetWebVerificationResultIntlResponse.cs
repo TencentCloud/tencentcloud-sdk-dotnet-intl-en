@@ -26,7 +26,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// The final result of this verification. `0` indicates that the person is the same as that in the photo.
-        /// For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a>
+        /// For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorCode")]

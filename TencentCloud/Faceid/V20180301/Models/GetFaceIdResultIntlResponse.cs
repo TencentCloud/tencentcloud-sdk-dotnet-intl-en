@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// The return code of the verification result.
         /// 0: Succeeded.
         /// 1001: System error.
-        /// 1004: Liveness detection and face comparison failed.
+        /// 1004: Selfie verification comparison failed.
         /// 2004: The image passed in is too large or too small.
         /// 2012: Several faces were detected.
         /// 2013: No face was detected, or the face detected was incomplete.
@@ -59,7 +59,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Video{ get; set; }
 
         /// <summary>
-        /// The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
+        /// The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Similarity")]

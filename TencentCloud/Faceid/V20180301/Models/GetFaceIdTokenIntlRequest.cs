@@ -27,7 +27,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// The detection mode. Valid values:
         /// `liveness`: Liveness detection only.
-        /// `compare`: Liveness detection and face comparison.
+        /// `compare`: Selfie verification.
         /// Default value: `liveness`.
         /// </summary>
         [JsonProperty("CheckMode")]

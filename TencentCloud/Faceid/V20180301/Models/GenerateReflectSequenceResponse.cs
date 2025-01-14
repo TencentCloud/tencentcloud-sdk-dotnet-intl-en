@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
+        /// The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the eKYC process.
         /// </summary>
         [JsonProperty("ReflectSequenceUrl")]
         public string ReflectSequenceUrl{ get; set; }

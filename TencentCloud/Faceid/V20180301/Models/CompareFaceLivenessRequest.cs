@@ -25,43 +25,37 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Base64 value of photos used for face comparison. 
-        /// The size of image data encoded by Base64 shall not exceed 3M, only jpg and png are supported. 
-        /// Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-        /// Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+        /// Base64 string of the image for face comparison.
+        /// - The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+        /// - Please use the standard Base64 encoding method (with = padding). Refer to RFC4648 for the encoding specification.
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// Base64 value of videos used for face comparison. 
-        /// The size of videos data encoded by Base64 shall not exceed 8M, only mp4,avi,flv are supported. 
-        /// Please use standard Base64 encoding (use = for padding). Refer to RFC4648 for encoding specifications. 
-        /// Example values: "/9j/4AAQSk... (total length:61944)KiiK//2Q=="
+        /// Base64 string of the video for liveness detection.
+        /// - The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+        /// -Use standard Base64 encoding (with = padding), following RFC4648.
         /// </summary>
         [JsonProperty("VideoBase64")]
         public string VideoBase64{ get; set; }
 
         /// <summary>
-        /// The liveness detection type. Valid values: `ACTION`, and `SILENT`.
-        /// `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-        /// Example value: "SILENT"
+        /// Liveness detection type.
+        /// -Values:
+        /// ACTION is action mode.
+        /// SILENT is silent mode.
+        /// -Choose one of the two modes to pass in.
         /// </summary>
         [JsonProperty("LivenessType")]
         public string LivenessType{ get; set; }
 
         /// <summary>
-        /// When the "LivenessType" parameter is "ACTION", it must be specified.
-        /// It is used to control the action sequence. Action types: 
-        /// 1 (open mouth)
-        /// 2 (blink)
-        /// 3 (nod)
-        /// 4 (shake head). 
-        /// Select one or two from the four actions.
-        /// Example of passing single action parameter: "1".
-        /// Example of passing multiple action parameters: "4,2".
-        /// When the "LivenessType" parameter value is "SILENT", it shall be unspecified.
-        /// Example value: ""
+        /// Control the action sequence. Action types include: 1 (open mouth), 2 (blink), 3 (nod), 4 (shake head). Supports one or two actions.
+        /// -Required when the LivenessType parameter is set to ACTION.
+        /// -Single action example: "1".
+        /// -Multiple actions parameter passing example: "4,2".
+        /// -When the LivenessType parameter is set to SILENT, leave it blank.
         /// </summary>
         [JsonProperty("ValidateData")]
         public string ValidateData{ get; set; }

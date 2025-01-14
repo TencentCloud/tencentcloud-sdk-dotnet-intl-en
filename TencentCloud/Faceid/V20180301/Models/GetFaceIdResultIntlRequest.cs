@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+        /// The ID of the SDK-based selfie verification process, which is generated when the `GetFaceIdTokenIntl` API is called.	
         /// </summary>
         [JsonProperty("SdkToken")]
         public string SdkToken{ get; set; }

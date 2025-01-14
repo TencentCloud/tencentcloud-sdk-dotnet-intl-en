@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1053";
+       private const string sdkVersion = "SDK_NET_3.0.1054";
 
         /// <summary>
         /// Client constructor.
@@ -98,7 +98,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to apply for a token before calling the Identity Verification SDK service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+        /// This API is used to apply for a token before calling the eKYC SDK service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
         /// </summary>
         /// <param name="req"><see cref="ApplySdkVerificationTokenRequest"/></param>
         /// <returns><see cref="ApplySdkVerificationTokenResponse"/></returns>
@@ -108,7 +108,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to apply for a token before calling the Identity Verification SDK service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+        /// This API is used to apply for a token before calling the eKYC SDK service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
         /// </summary>
         /// <param name="req"><see cref="ApplySdkVerificationTokenRequest"/></param>
         /// <returns><see cref="ApplySdkVerificationTokenResponse"/></returns>
@@ -249,7 +249,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to generate an appropriate light sequence based on the information collected by the liveness comparison (reflection-based) SDK and pass the light sequence into the SDK to start the identity verification process.
+        /// This API is used to generate an appropriate light sequence based on the information collected by the liveness comparison (reflection-based) SDK and pass the light sequence into the SDK to start the eKYC process.
         /// The data generated with the SDK must be stored in COS, and the region of the COS bucket must be same as that of requests made with this API. We recommend that you pass resources with upload link APIs.
         /// </summary>
         /// <param name="req"><see cref="GenerateReflectSequenceRequest"/></param>
@@ -260,7 +260,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to generate an appropriate light sequence based on the information collected by the liveness comparison (reflection-based) SDK and pass the light sequence into the SDK to start the identity verification process.
+        /// This API is used to generate an appropriate light sequence based on the information collected by the liveness comparison (reflection-based) SDK and pass the light sequence into the SDK to start the eKYC process.
         /// The data generated with the SDK must be stored in COS, and the region of the COS bucket must be same as that of requests made with this API. We recommend that you pass resources with upload link APIs.
         /// </summary>
         /// <param name="req"><see cref="GenerateReflectSequenceRequest"/></param>
@@ -314,7 +314,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to apply for an SDK token before calling the liveness detection and face comparison SDK each time. The SDK token is used throughout the identity verification process and to get the verification result after the verification is completed. A token is valid for one identity verification process only.
+        /// This API is used to apply for an SDK token before calling the selfie verification SDK each time. The SDK token is used throughout the eKYC process and to get the verification result after the verification is completed. A token is valid for one eKYC process only.
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdTokenIntlRequest"/></param>
         /// <returns><see cref="GetFaceIdTokenIntlResponse"/></returns>
@@ -324,7 +324,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to apply for an SDK token before calling the liveness detection and face comparison SDK each time. The SDK token is used throughout the identity verification process and to get the verification result after the verification is completed. A token is valid for one identity verification process only.
+        /// This API is used to apply for an SDK token before calling the selfie verification SDK each time. The SDK token is used throughout the eKYC process and to get the verification result after the verification is completed. A token is valid for one eKYC process only.
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdTokenIntlRequest"/></param>
         /// <returns><see cref="GetFaceIdTokenIntlResponse"/></returns>
