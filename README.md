@@ -1,8 +1,8 @@
 # Overview
 
-Welcome to Tencent Cloud Software Development Kit (SDK) 3.0, a companion tool for the TencentCloud API 3.0 platform. All Tencent Cloud services and products will be connected to it in the future. The new SDK version is unified and features the same SDK usage, API call methods, error codes, and returned packet formats for different languages.
+Welcome to Tencent Cloud Software Development Kit (SDK), a companion tool for the TencentCloud API 3.0 platform.
 
-Tencent Cloud SDK for .NET helps .NET developers debug and use TencentCloud APIs with ease. This document describes Tencent Cloud SDK for .NET and how to quickly use it with code examples provided. 
+Tencent Cloud SDK for .NET helps .NET developers debug and use TencentCloud APIs with ease. This document describes Tencent Cloud SDK for .NET and how to quickly use it with code examples provided.
 
 # Dependent Environment
 
@@ -55,7 +55,7 @@ namespace TencentCloudExamples
                 Credential cred = new Credential {
                     SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
                     SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY")
-                };               
+                };
 
                 // Instantiate a client option (optional; skip if no special requirements are present)
                 ClientProfile clientProfile = new ClientProfile();
@@ -87,7 +87,7 @@ namespace TencentCloudExamples
                 // An attribute may be of a basic type or import another data structure.
                 // You are recommended to use the IDE for development where you can redirect to and view the documentation of each API and data structure easily.
                 DescribeInstancesRequest req = new DescribeInstancesRequest();
-              
+
                 // Settings of a basic parameter.
                 // This API allows setting the number of instances returned, which is specified as only one here.
                 // The SDK uses the pointer style to specify parameters, so even for basic parameters, you need to use pointers to assign values to them.
@@ -124,7 +124,6 @@ namespace TencentCloudExamples
                 // You can also take a single value
                 // You can view the definition of the return field in the API documentation at the official website or by redirecting to the definition of the response object
                 Console.WriteLine(resp.TotalCount);
-    
             }
             catch (Exception e)
             {
