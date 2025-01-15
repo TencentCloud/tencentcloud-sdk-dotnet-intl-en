@@ -28,7 +28,7 @@ namespace TencentCloud.Config.V20220802
 
        private const string endpoint = "config.tencentcloudapi.com";
        private const string version = "2022-08-02";
-       private const string sdkVersion = "SDK_NET_3.0.1054";
+       private const string sdkVersion = "SDK_NET_3.0.1055";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Config.V20220802
         public ListAggregateConfigRulesResponse ListAggregateConfigRulesSync(ListAggregateConfigRulesRequest req)
         {
             return InternalRequestAsync<ListAggregateConfigRulesResponse>(req, "ListAggregateConfigRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Account Group access the list of resources.
+        /// </summary>
+        /// <param name="req"><see cref="ListAggregateDiscoveredResourcesRequest"/></param>
+        /// <returns><see cref="ListAggregateDiscoveredResourcesResponse"/></returns>
+        public Task<ListAggregateDiscoveredResourcesResponse> ListAggregateDiscoveredResources(ListAggregateDiscoveredResourcesRequest req)
+        {
+            return InternalRequestAsync<ListAggregateDiscoveredResourcesResponse>(req, "ListAggregateDiscoveredResources");
+        }
+
+        /// <summary>
+        /// Account Group access the list of resources.
+        /// </summary>
+        /// <param name="req"><see cref="ListAggregateDiscoveredResourcesRequest"/></param>
+        /// <returns><see cref="ListAggregateDiscoveredResourcesResponse"/></returns>
+        public ListAggregateDiscoveredResourcesResponse ListAggregateDiscoveredResourcesSync(ListAggregateDiscoveredResourcesRequest req)
+        {
+            return InternalRequestAsync<ListAggregateDiscoveredResourcesResponse>(req, "ListAggregateDiscoveredResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
