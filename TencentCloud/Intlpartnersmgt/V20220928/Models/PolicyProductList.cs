@@ -25,67 +25,67 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Policy code.
+        /// Dealer policy code.
         /// </summary>
         [JsonProperty("PolicyCode")]
         public string PolicyCode{ get; set; }
 
         /// <summary>
-        /// Product code, if the return is *, any item under this level is included in the policy product scope.
+        /// Product level 1 code. If the return value is *, any item at this level is included in the policy product range.
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// Product name, if the return is *, any item under this level is included in the policy product scope.
+        /// Product level 1 name. If the return value is *, any item at this level is included in the policy product range.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// SubProduct code, if the return is *, any item under this level is included in the policy product scope.
+        /// Product level 2 code. If the return value is *, any item at this level is included in the policy product range.
         /// </summary>
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
         /// <summary>
-        /// SubProduct name, if the return is *, any item under this level is included in the policy product scope.
+        /// Product level 2 name. If the return value is *, any item at this level is included in the policy product range.
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }
 
         /// <summary>
-        /// Component type code, if the return is *, any item under this level is included in the policy product scope.
+        /// Product level 3 code. If the return value is *, any item at this level is included in the policy product range.
         /// </summary>
         [JsonProperty("ComponentTypeCode")]
         public string ComponentTypeCode{ get; set; }
 
         /// <summary>
-        /// Component type name, if the return is *, any item under this level is included in the policy product scope.
+        /// Product level 3 name. If the return value is *, any item at this level is included in the policy product range.
         /// </summary>
         [JsonProperty("ComponentTypeName")]
         public string ComponentTypeName{ get; set; }
 
         /// <summary>
-        /// Component code, if the return is *, any item under this level is included in the policy product scope.
+        /// Product level 4 code. If the return value is *, any item at this level is included in the policy product range.
         /// </summary>
         [JsonProperty("ComponentCode")]
         public string ComponentCode{ get; set; }
 
         /// <summary>
-        /// Component name, if the return is *, any item under this level is included in the policy product scope.
+        /// Product fourth-level name. If the return value is *, any item under this level is included in the policy product scope.
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
         /// <summary>
-        /// Policy effective date.
+        /// Policy effective time.
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// Policy expiration date.
+        /// Policy expiration time.
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }

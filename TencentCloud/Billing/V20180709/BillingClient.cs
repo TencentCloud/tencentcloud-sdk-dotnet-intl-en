@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1055";
+       private const string sdkVersion = "SDK_NET_3.0.1056";
 
         /// <summary>
         /// Client constructor.
@@ -520,6 +520,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeCostSummaryByResourceResponse DescribeCostSummaryByResourceSync(DescribeCostSummaryByResourceRequest req)
         {
             return InternalRequestAsync<DescribeCostSummaryByResourceResponse>(req, "DescribeCostSummaryByResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Querying orders
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDealsByCondRequest"/></param>
+        /// <returns><see cref="DescribeDealsByCondResponse"/></returns>
+        public Task<DescribeDealsByCondResponse> DescribeDealsByCond(DescribeDealsByCondRequest req)
+        {
+            return InternalRequestAsync<DescribeDealsByCondResponse>(req, "DescribeDealsByCond");
+        }
+
+        /// <summary>
+        /// Querying orders
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDealsByCondRequest"/></param>
+        /// <returns><see cref="DescribeDealsByCondResponse"/></returns>
+        public DescribeDealsByCondResponse DescribeDealsByCondSync(DescribeDealsByCondRequest req)
+        {
+            return InternalRequestAsync<DescribeDealsByCondResponse>(req, "DescribeDealsByCond")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

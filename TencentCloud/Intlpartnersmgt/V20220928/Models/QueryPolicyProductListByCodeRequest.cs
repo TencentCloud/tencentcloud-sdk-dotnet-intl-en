@@ -25,34 +25,46 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Policy code
+        /// Dealer policy code.
         /// </summary>
         [JsonProperty("PolicyCode")]
         public string PolicyCode{ get; set; }
 
         /// <summary>
-        /// Product code
+        /// Product level 1 code.
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// Product name
+        /// Product level 1 name.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Subproduct code
+        /// Product level 2 code.
         /// </summary>
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
         /// <summary>
-        /// Subproduct name
+        /// Product level 2 name.
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }
+
+        /// <summary>
+        /// Page parameter: current page number. The minimum value is 1.
+        /// </summary>
+        [JsonProperty("Page")]
+        public ulong? Page{ get; set; }
+
+        /// <summary>
+        /// Page parameter: Indicates the number of entries per page. Value range: [1, 200], default is 200.
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
             this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }
