@@ -26,7 +26,7 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// Operator. Valid values:
-        /// <li>`equals`: Equals</li>
+        /// <li>`equal`: Equal</li>
         /// <li>`notEquals`: Does not equal</li>
         /// <li>`exist`: Exists</li>
         /// <li>`notexist`: Does not exist</li>
