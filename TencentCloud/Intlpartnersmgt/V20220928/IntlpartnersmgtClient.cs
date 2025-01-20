@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1057";
+       private const string sdkVersion = "SDK_NET_3.0.1058";
 
         /// <summary>
         /// Client constructor.
@@ -305,6 +305,31 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeCustomerBillDetailResponse DescribeCustomerBillDetailSync(DescribeCustomerBillDetailRequest req)
         {
             return InternalRequestAsync<DescribeCustomerBillDetailResponse>(req, "DescribeCustomerBillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
+        /// 1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.
+        /// 2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeCustomerBillDownloadUrlResponse"/></returns>
+        public Task<DescribeCustomerBillDownloadUrlResponse> DescribeCustomerBillDownloadUrl(DescribeCustomerBillDownloadUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerBillDownloadUrlResponse>(req, "DescribeCustomerBillDownloadUrl");
+        }
+
+        /// <summary>
+        /// This API is used to get the URL for downloading the customer bill file by reseller. The download conditions are as follows:
+        /// 1. Detailed bills (billDetail and billDetailPack) can be downloaded starting from June 2022; resource bills (billResource and billResourcePack) can be downloaded starting from November 2023.
+        /// 2. Bill packages (billDetailPack and billResourcePack) can only be downloaded after billing.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeCustomerBillDownloadUrlResponse"/></returns>
+        public DescribeCustomerBillDownloadUrlResponse DescribeCustomerBillDownloadUrlSync(DescribeCustomerBillDownloadUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerBillDownloadUrlResponse>(req, "DescribeCustomerBillDownloadUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

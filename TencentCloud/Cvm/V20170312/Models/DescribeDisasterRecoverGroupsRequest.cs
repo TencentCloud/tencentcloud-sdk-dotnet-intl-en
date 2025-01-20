@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+        /// ID list of spread placement groups. You can operate up to 10 spread placement groups in each request.
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
