@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1058";
+       private const string sdkVersion = "SDK_NET_3.0.1059";
 
         /// <summary>
         /// Client constructor.
@@ -1001,6 +1001,33 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCRSync(RecognizeThaiIDCardOCRRequest req)
         {
             return InternalRequestAsync<RecognizeThaiIDCardOCRResponse>(req, "RecognizeThaiIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+        /// Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
+        /// 
+        /// A maximum of 5 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeThaiPinkCardRequest"/></param>
+        /// <returns><see cref="RecognizeThaiPinkCardResponse"/></returns>
+        public Task<RecognizeThaiPinkCardResponse> RecognizeThaiPinkCard(RecognizeThaiPinkCardRequest req)
+        {
+            return InternalRequestAsync<RecognizeThaiPinkCardResponse>(req, "RecognizeThaiPinkCard");
+        }
+
+        /// <summary>
+        /// This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+        /// Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
+        /// 
+        /// A maximum of 5 requests can be initiated per second for this API.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeThaiPinkCardRequest"/></param>
+        /// <returns><see cref="RecognizeThaiPinkCardResponse"/></returns>
+        public RecognizeThaiPinkCardResponse RecognizeThaiPinkCardSync(RecognizeThaiPinkCardRequest req)
+        {
+            return InternalRequestAsync<RecognizeThaiPinkCardResponse>(req, "RecognizeThaiPinkCard")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

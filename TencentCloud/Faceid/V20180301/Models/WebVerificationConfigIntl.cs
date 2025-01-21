@@ -133,6 +133,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("ActionList")]
         public string ActionList{ get; set; }
 
+        /// <summary>
+        /// Control liveness retry number.The value range is 1-99.
+        /// </summary>
+        [JsonProperty("LivenessRetryLimit")]
+        public long? LivenessRetryLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +157,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
             this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
+            this.SetParamSimple(map, prefix + "LivenessRetryLimit", this.LivenessRetryLimit);
         }
     }
 }
