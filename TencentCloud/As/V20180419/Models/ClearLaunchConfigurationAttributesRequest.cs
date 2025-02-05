@@ -46,7 +46,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-        /// Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+        /// Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
         /// </summary>
         [JsonProperty("ClearInstanceNameSettings")]
         public bool? ClearInstanceNameSettings{ get; set; }
@@ -65,6 +65,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ClearInstanceTags")]
         public bool? ClearInstanceTags{ get; set; }
 
+        /// <summary>
+        /// Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+        /// </summary>
+        [JsonProperty("ClearMetadata")]
+        public bool? ClearMetadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
             this.SetParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
             this.SetParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
+            this.SetParamSimple(map, prefix + "ClearMetadata", this.ClearMetadata);
         }
     }
 }

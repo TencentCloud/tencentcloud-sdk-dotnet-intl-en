@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1063</VersionPrefix>
+    <VersionPrefix>3.0.1064</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -302,6 +302,8 @@
     <Compile Include="V20190612\Models\DescribeSchedulesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeSnapshotByTimeOffsetTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkSecurityGroupRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeStreamLinkSecurityGroupResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="V20190612\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20190612\Models\DescribeTasksRequest.cs" />
@@ -506,6 +508,7 @@
     <Compile Include="V20190612\Models\ScheduleTask.cs" />
     <Compile Include="V20190612\Models\SchedulesInfo.cs" />
     <Compile Include="V20190612\Models\ScratchRepairConfig.cs" />
+    <Compile Include="V20190612\Models\SecurityGroupInfo.cs" />
     <Compile Include="V20190612\Models\SegmentRecognitionItem.cs" />
     <Compile Include="V20190612\Models\SegmentSpecificInfo.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />

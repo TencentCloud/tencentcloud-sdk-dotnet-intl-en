@@ -55,6 +55,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ReplaceMode")]
         public string ReplaceMode{ get; set; }
 
+        /// <summary>
+        /// Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+        /// </summary>
+        [JsonProperty("AutoUpdateInstanceTags")]
+        public bool? AutoUpdateInstanceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
             this.SetParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
             this.SetParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
+            this.SetParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
         }
     }
 }

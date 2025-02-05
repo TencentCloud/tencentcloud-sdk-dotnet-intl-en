@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Project ID of the launch configuration. The default project is used if it’s left blank.
+        /// Project ID of the launch configuration. The default project is used if it is left blank.
         /// Note that this project ID is not the same as the project ID of the scaling group. 
         /// </summary>
         [JsonProperty("ProjectId")]
@@ -200,6 +200,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
+        /// <summary>
+        /// Custom metadata.
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public Metadata Metadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +239,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
             this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
         }
     }
 }

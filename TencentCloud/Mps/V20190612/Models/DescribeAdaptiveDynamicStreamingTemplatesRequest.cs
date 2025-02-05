@@ -52,6 +52,8 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Whether it is an audio-only template. 0: video template. 1: audio-only template.
+        /// 
+        /// Default value: 0
         /// </summary>
         [JsonProperty("PureAudio")]
         public ulong? PureAudio{ get; set; }

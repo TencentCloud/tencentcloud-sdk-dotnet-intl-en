@@ -71,23 +71,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-        /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-        /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-        /// <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-        /// <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+        /// Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
         /// Default value: 0.
+        /// Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-        /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-        /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-        /// <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-        /// <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+        /// Maximum value of the video stream height (or short edge) in px. Value range: 0 and [128, 4,096].
+        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
         /// Default value: 0.
+        /// Note: If Codec is set to MV-HEVC, the maximum value can be 7680.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

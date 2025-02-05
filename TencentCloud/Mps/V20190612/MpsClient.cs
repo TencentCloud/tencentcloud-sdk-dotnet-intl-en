@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1063";
+       private const string sdkVersion = "SDK_NET_3.0.1064";
 
         /// <summary>
         /// Client constructor.
@@ -1043,6 +1043,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplatesSync(DescribeSnapshotByTimeOffsetTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeSnapshotByTimeOffsetTemplatesResponse>(req, "DescribeSnapshotByTimeOffsetTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query a security group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkSecurityGroupResponse"/></returns>
+        public Task<DescribeStreamLinkSecurityGroupResponse> DescribeStreamLinkSecurityGroup(DescribeStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamLinkSecurityGroupResponse>(req, "DescribeStreamLinkSecurityGroup");
+        }
+
+        /// <summary>
+        /// This API is used to query a security group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="DescribeStreamLinkSecurityGroupResponse"/></returns>
+        public DescribeStreamLinkSecurityGroupResponse DescribeStreamLinkSecurityGroupSync(DescribeStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamLinkSecurityGroupResponse>(req, "DescribeStreamLinkSecurityGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

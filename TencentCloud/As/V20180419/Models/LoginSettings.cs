@@ -26,9 +26,9 @@ namespace TencentCloud.As.V20180419.Models
         
         /// <summary>
         /// Instance login password. The password complexity requirements vary according to the operating system type. The details are as follows:
-        /// <li>The login password for Linux instances should contain 8 to 16 characters, including at least two types of the following characters: letters, digits, and special characters (such as ()`~!@#$%^&*-+=|{}[]:;',.?/).</li>
-        /// <li>The login password for Windows instances should contain 12 to 16 characters, including at least three types of the following characters: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+={}[]:;',.?/).</li>
-        /// If this parameter is not specified, the system will generate a random password and notify the user via the message center.
+        /// - For a Linux system, the password should contain 8 to 30 characters consisting of at least two of the four character types: lowercase letters, uppercase letters, digits, and special characters.
+        /// - For a Windows system, the password should contain 12 to 30 characters consisting of at least three of the four character types: lowercase letters, uppercase letters, digits, and special characters.
+        /// - If this parameter is not specified, the system will generate a random password and notify the user via the message centerSupported special characters: ( ) ` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

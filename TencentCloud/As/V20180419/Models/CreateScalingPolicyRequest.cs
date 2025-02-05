@@ -43,7 +43,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ScalingPolicyType{ get; set; }
 
         /// <summary>
-        /// The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+        /// The method to adjust the desired capacity after the alarm is triggered. It is only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
         /// </summary>
         [JsonProperty("AdjustmentType")]
         public string AdjustmentType{ get; set; }
@@ -64,18 +64,18 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? Cooldown{ get; set; }
 
         /// <summary>
-        /// Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+        /// Alarm monitoring metric. It is only available when `ScalingPolicyType` is `Simple`.
         /// </summary>
         [JsonProperty("MetricAlarm")]
         public MetricAlarm MetricAlarm{ get; set; }
 
         /// <summary>
-        /// Predefined monitoring item, which is applicable only to target tracking policies. Valid values:
-        /// <li>ASG_AVG_CPU_UTILIZATION: average CPU utilization.</li>
-        /// <li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth.</li>
-        /// <li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth.</li>
-        /// <li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth.</li>
-        /// <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth.</li>
+        /// Predefined monitoring item, applicable only to target tracking policies. Valid values:
+        /// <li>ASG_AVG_CPU_UTILIZATION: average CPU utilization</li>
+        /// <li>ASG_AVG_LAN_TRAFFIC_OUT: average outbound private network bandwidth</li>
+        /// <li>ASG_AVG_LAN_TRAFFIC_IN: average inbound private network bandwidth</li>
+        /// <li>ASG_AVG_WAN_TRAFFIC_OUT: average outbound public network bandwidth</li>
+        /// <li>ASG_AVG_WAN_TRAFFIC_IN: average inbound public network bandwidth</li>
         /// </summary>
         [JsonProperty("PredefinedMetricType")]
         public string PredefinedMetricType{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? TargetValue{ get; set; }
 
         /// <summary>
-        /// Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
+        /// Instance warm-up period (in seconds). It is only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600. Default value: 300.
         /// </summary>
         [JsonProperty("EstimatedInstanceWarmup")]
         public ulong? EstimatedInstanceWarmup{ get; set; }

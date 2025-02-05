@@ -199,6 +199,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
+        /// <summary>
+        /// Custom metadata.
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public Metadata Metadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +236,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
         }
     }
 }
