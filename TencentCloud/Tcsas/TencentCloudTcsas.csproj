@@ -1,0 +1,219 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{4FE02EAD-36EB-3BF7-AED6-3FB3FCFD4DB8}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1066</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDKIntlEN.Tcsas</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20250106\TcsasClient.cs" />
+    <Compile Include="V20250106\Models\AddTeamMemberRequest.cs" />
+    <Compile Include="V20250106\Models\AddTeamMemberResponse.cs" />
+    <Compile Include="V20250106\Models\ApprovalItem.cs" />
+    <Compile Include="V20250106\Models\BooleanInfo.cs" />
+    <Compile Include="V20250106\Models\ConfigureMNPPreviewRequest.cs" />
+    <Compile Include="V20250106\Models\ConfigureMNPPreviewResponse.cs" />
+    <Compile Include="V20250106\Models\CreateApplicationRequest.cs" />
+    <Compile Include="V20250106\Models\CreateApplicationResponse.cs" />
+    <Compile Include="V20250106\Models\CreateApplicationSensitiveAPIReq.cs" />
+    <Compile Include="V20250106\Models\CreateApplicationSensitiveAPIRequest.cs" />
+    <Compile Include="V20250106\Models\CreateApplicationSensitiveAPIResponse.cs" />
+    <Compile Include="V20250106\Models\CreateDomainParam.cs" />
+    <Compile Include="V20250106\Models\CreateGlobalDomainACLRequest.cs" />
+    <Compile Include="V20250106\Models\CreateGlobalDomainACLResponse.cs" />
+    <Compile Include="V20250106\Models\CreateGlobalDomainResp.cs" />
+    <Compile Include="V20250106\Models\CreateMNPApprovalRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNPApprovalResponse.cs" />
+    <Compile Include="V20250106\Models\CreateMNPDomainACLRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNPDomainACLResponse.cs" />
+    <Compile Include="V20250106\Models\CreateMNPRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNPResponse.cs" />
+    <Compile Include="V20250106\Models\CreateMNPSensitiveAPIPermissionApprovalRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNPSensitiveAPIPermissionApprovalResponse.cs" />
+    <Compile Include="V20250106\Models\CreateMNPVersionRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNPVersionResp.cs" />
+    <Compile Include="V20250106\Models\CreateMNPVersionResponse.cs" />
+    <Compile Include="V20250106\Models\CreatePresetKeyRequest.cs" />
+    <Compile Include="V20250106\Models\CreatePresetKeyResponse.cs" />
+    <Compile Include="V20250106\Models\CreateTeamMemberInfoReq.cs" />
+    <Compile Include="V20250106\Models\CreateTeamRequest.cs" />
+    <Compile Include="V20250106\Models\CreateTeamResponse.cs" />
+    <Compile Include="V20250106\Models\CreateUserRequest.cs" />
+    <Compile Include="V20250106\Models\CreateUserResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteApplicationRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteApplicationResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteApplicationSensitiveAPIRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteApplicationSensitiveAPIResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteGlobalDomainRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteGlobalDomainResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteMNPRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteMNPResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteTeamMemberRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteTeamMemberResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteTeamRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteTeamResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteUserRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationConfigFileRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationConfigFileResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationListData.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationResp.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationSensitiveAPIListData.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationSensitiveAPIListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationSensitiveAPIListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationSensitiveAPIListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeDomainInfoParam.cs" />
+    <Compile Include="V20250106\Models\DescribeGlobalDomainACLRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeGlobalDomainACLResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeGlobalDomainsListData.cs" />
+    <Compile Include="V20250106\Models\DescribeGlobalDomainsResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAllStageVersionsRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAllStageVersionsResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPApprovalListData.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPApprovalListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPApprovalListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPApprovalListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPCategoryRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPCategoryResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPDomainACLRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPDomainACLResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPListData.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPManagerDetailData.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPOfflinePackageURLRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPOfflinePackageURLResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPPreviewRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPPreviewResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPPreviewResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPReleasedVersionHistoryRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPReleasedVersionHistoryResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalData.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalListData.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionListData.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMPAllStageVersionsResp.cs" />
+    <Compile Include="V20250106\Models\DescribeRevertOnlineVersionPageResp.cs" />
+    <Compile Include="V20250106\Models\DescribeRoleListData.cs" />
+    <Compile Include="V20250106\Models\DescribeRoleListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeRoleListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeRoleListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamDetailResp.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamListInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamMemberInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamMemberListPageResp.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamMemberListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamMemberListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamPageResp.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeTeamResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeTempSecret4UploadFile2CosRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeTempSecret4UploadFile2CosResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeUserDetailResp.cs" />
+    <Compile Include="V20250106\Models\DescribeUserListData.cs" />
+    <Compile Include="V20250106\Models\DescribeUserListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeUserListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeUserListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeUserRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20250106\Models\DisableApplicationSensitiveAPIRequest.cs" />
+    <Compile Include="V20250106\Models\DisableApplicationSensitiveAPIResponse.cs" />
+    <Compile Include="V20250106\Models\DownloadApplicationConfigResp.cs" />
+    <Compile Include="V20250106\Models\EnableApplicationSensitiveAPIRequest.cs" />
+    <Compile Include="V20250106\Models\EnableApplicationSensitiveAPIResponse.cs" />
+    <Compile Include="V20250106\Models\GlobalDomainDeleteResp.cs" />
+    <Compile Include="V20250106\Models\GlobalDomainModifyRespResp.cs" />
+    <Compile Include="V20250106\Models\MNPTypeDefine.cs" />
+    <Compile Include="V20250106\Models\ModifyApplicationRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyApplicationResponse.cs" />
+    <Compile Include="V20250106\Models\ModifyGlobalDomainRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyGlobalDomainResponse.cs" />
+    <Compile Include="V20250106\Models\ModifyMNPDomainRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyMNPDomainResponse.cs" />
+    <Compile Include="V20250106\Models\ModifyMNPRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyMNPResponse.cs" />
+    <Compile Include="V20250106\Models\ModifyTeamMemberRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyTeamMemberResponse.cs" />
+    <Compile Include="V20250106\Models\ModifyTeamRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyTeamResponse.cs" />
+    <Compile Include="V20250106\Models\ModifyUserRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20250106\Models\PresetResp.cs" />
+    <Compile Include="V20250106\Models\ProcessMNPApprovalRequest.cs" />
+    <Compile Include="V20250106\Models\ProcessMNPApprovalResponse.cs" />
+    <Compile Include="V20250106\Models\ProcessMNPSensitiveAPIPermissionApprovalRequest.cs" />
+    <Compile Include="V20250106\Models\ProcessMNPSensitiveAPIPermissionApprovalResponse.cs" />
+    <Compile Include="V20250106\Models\QueryOnlineVersionResp.cs" />
+    <Compile Include="V20250106\Models\ReleaseMNPVersionRequest.cs" />
+    <Compile Include="V20250106\Models\ReleaseMNPVersionResponse.cs" />
+    <Compile Include="V20250106\Models\RemoveMNPRequest.cs" />
+    <Compile Include="V20250106\Models\RemoveMNPResponse.cs" />
+    <Compile Include="V20250106\Models\ResourceIdInfo.cs" />
+    <Compile Include="V20250106\Models\ResourceIdStringInfo.cs" />
+    <Compile Include="V20250106\Models\RollbackMNPVersionRequest.cs" />
+    <Compile Include="V20250106\Models\RollbackMNPVersionResponse.cs" />
+    <Compile Include="V20250106\Models\StringData.cs" />
+    <Compile Include="V20250106\Models\UploadFileTempSecret.cs" />
+  </ItemGroup>
+</Project>
