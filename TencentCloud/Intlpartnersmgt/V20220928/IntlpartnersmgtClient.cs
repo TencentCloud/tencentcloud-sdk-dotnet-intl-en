@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1066";
+       private const string sdkVersion = "SDK_NET_3.0.1067";
 
         /// <summary>
         /// Client constructor.
@@ -100,6 +100,31 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public AllocateCustomerCreditResponse AllocateCustomerCreditSync(AllocateCustomerCreditRequest req)
         {
             return InternalRequestAsync<AllocateCustomerCreditResponse>(req, "AllocateCustomerCredit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Description: This API is used by resellers to review applications to become sub-customers. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+        /// 
+        /// Callable roles: Reseller, Distributer, Second-level reseller
+        /// </summary>
+        /// <param name="req"><see cref="ApproveClientApplyRequest"/></param>
+        /// <returns><see cref="ApproveClientApplyResponse"/></returns>
+        public Task<ApproveClientApplyResponse> ApproveClientApply(ApproveClientApplyRequest req)
+        {
+            return InternalRequestAsync<ApproveClientApplyResponse>(req, "ApproveClientApply");
+        }
+
+        /// <summary>
+        /// Description: This API is used by resellers to review applications to become sub-customers. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+        /// 
+        /// Callable roles: Reseller, Distributer, Second-level reseller
+        /// </summary>
+        /// <param name="req"><see cref="ApproveClientApplyRequest"/></param>
+        /// <returns><see cref="ApproveClientApplyResponse"/></returns>
+        public ApproveClientApplyResponse ApproveClientApplySync(ApproveClientApplyRequest req)
+        {
+            return InternalRequestAsync<ApproveClientApplyResponse>(req, "ApproveClientApply")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -605,6 +630,31 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public QueryPartnerCreditResponse QueryPartnerCreditSync(QueryPartnerCreditRequest req)
         {
             return InternalRequestAsync<QueryPartnerCreditResponse>(req, "QueryPartnerCredit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Description: This API is used by resellers to query the list of sub-customers pending review. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+        /// 
+        /// Callable roles: Reseller, Distributer, Second-level reseller
+        /// </summary>
+        /// <param name="req"><see cref="QueryPendingClientsV2Request"/></param>
+        /// <returns><see cref="QueryPendingClientsV2Response"/></returns>
+        public Task<QueryPendingClientsV2Response> QueryPendingClientsV2(QueryPendingClientsV2Request req)
+        {
+            return InternalRequestAsync<QueryPendingClientsV2Response>(req, "QueryPendingClientsV2");
+        }
+
+        /// <summary>
+        /// Description: This API is used by resellers to query the list of sub-customers pending review. Note: This API is used to apply for the allowlist. If needed, please contact your business representative.
+        /// 
+        /// Callable roles: Reseller, Distributer, Second-level reseller
+        /// </summary>
+        /// <param name="req"><see cref="QueryPendingClientsV2Request"/></param>
+        /// <returns><see cref="QueryPendingClientsV2Response"/></returns>
+        public QueryPendingClientsV2Response QueryPendingClientsV2Sync(QueryPendingClientsV2Request req)
+        {
+            return InternalRequestAsync<QueryPendingClientsV2Response>(req, "QueryPendingClientsV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
