@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1067";
+       private const string sdkVersion = "SDK_NET_3.0.1068";
 
         /// <summary>
         /// Client constructor.
@@ -567,6 +567,31 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public QueryCreditQuotaResponse QueryCreditQuotaSync(QueryCreditQuotaRequest req)
         {
             return InternalRequestAsync<QueryCreditQuotaResponse>(req, "QueryCreditQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Description: This API is used for a sub-customer to real-time query its own total credit and remaining credit in USD.
+        /// 
+        /// Callable roles: Sub-customer
+        /// </summary>
+        /// <param name="req"><see cref="QueryCustomerBillingQuotaRequest"/></param>
+        /// <returns><see cref="QueryCustomerBillingQuotaResponse"/></returns>
+        public Task<QueryCustomerBillingQuotaResponse> QueryCustomerBillingQuota(QueryCustomerBillingQuotaRequest req)
+        {
+            return InternalRequestAsync<QueryCustomerBillingQuotaResponse>(req, "QueryCustomerBillingQuota");
+        }
+
+        /// <summary>
+        /// Description: This API is used for a sub-customer to real-time query its own total credit and remaining credit in USD.
+        /// 
+        /// Callable roles: Sub-customer
+        /// </summary>
+        /// <param name="req"><see cref="QueryCustomerBillingQuotaRequest"/></param>
+        /// <returns><see cref="QueryCustomerBillingQuotaResponse"/></returns>
+        public QueryCustomerBillingQuotaResponse QueryCustomerBillingQuotaSync(QueryCustomerBillingQuotaRequest req)
+        {
+            return InternalRequestAsync<QueryCustomerBillingQuotaResponse>(req, "QueryCustomerBillingQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
