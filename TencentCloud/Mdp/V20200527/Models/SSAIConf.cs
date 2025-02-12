@@ -37,6 +37,20 @@ namespace TencentCloud.Mdp.V20200527.Models
         public ConfigAliasesInfo[] ConfigAliases{ get; set; }
 
         /// <summary>
+        /// Whether to enable transparent transmission of advertising tags.
+        /// </summary>
+        [JsonProperty("AdMarkerPassthrough")]
+        public bool? AdMarkerPassthrough{ get; set; }
+
+        /// <summary>
+        /// How to process tags in advertisements, optional values: [1,2] 
+        /// 1: Process all SCTE-35 type tags - all (default) 
+        /// 2: SCTE-35enhanced, parse some types.
+        /// </summary>
+        [JsonProperty("SCTE35AdType")]
+        public ulong? SCTE35AdType{ get; set; }
+
+        /// <summary>
         /// Default advertising url.
         /// </summary>
         [JsonProperty("SlateAd")]
@@ -53,20 +67,6 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// </summary>
         [JsonProperty("DashMPDLocation")]
         public bool? DashMPDLocation{ get; set; }
-
-        /// <summary>
-        /// Whether to enable transparent transmission of advertising tags.
-        /// </summary>
-        [JsonProperty("AdMarkerPassthrough")]
-        public bool? AdMarkerPassthrough{ get; set; }
-
-        /// <summary>
-        /// How to process tags in advertisements, optional values: [1,2] 
-        /// 1: Process all SCTE-35 type tags - all (default) 
-        /// 2: SCTE-35enhanced, parse some types.
-        /// </summary>
-        [JsonProperty("SCTE35AdType")]
-        public ulong? SCTE35AdType{ get; set; }
 
         /// <summary>
         /// The type of tag that is regarded as an advertisement, optional values: [1,8]
@@ -92,6 +92,18 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("DeliveryRestrictions")]
         public ulong? DeliveryRestrictions{ get; set; }
 
+        /// <summary>
+        /// Source CDN prefix, needs to start with http:// or https://
+        /// </summary>
+        [JsonProperty("SourceCDNPrefix")]
+        public string SourceCDNPrefix{ get; set; }
+
+        /// <summary>
+        /// Advertising CDN prefix needs to start with http:// or https://
+        /// </summary>
+        [JsonProperty("AdCDNPrefix")]
+        public string AdCDNPrefix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,13 +112,15 @@ namespace TencentCloud.Mdp.V20200527.Models
         {
             this.SetParamSimple(map, prefix + "AdsUrl", this.AdsUrl);
             this.SetParamArrayObj(map, prefix + "ConfigAliases.", this.ConfigAliases);
+            this.SetParamSimple(map, prefix + "AdMarkerPassthrough", this.AdMarkerPassthrough);
+            this.SetParamSimple(map, prefix + "SCTE35AdType", this.SCTE35AdType);
             this.SetParamSimple(map, prefix + "SlateAd", this.SlateAd);
             this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
             this.SetParamSimple(map, prefix + "DashMPDLocation", this.DashMPDLocation);
-            this.SetParamSimple(map, prefix + "AdMarkerPassthrough", this.AdMarkerPassthrough);
-            this.SetParamSimple(map, prefix + "SCTE35AdType", this.SCTE35AdType);
             this.SetParamArraySimple(map, prefix + "AdTriggers.", this.AdTriggers);
             this.SetParamSimple(map, prefix + "DeliveryRestrictions", this.DeliveryRestrictions);
+            this.SetParamSimple(map, prefix + "SourceCDNPrefix", this.SourceCDNPrefix);
+            this.SetParamSimple(map, prefix + "AdCDNPrefix", this.AdCDNPrefix);
         }
     }
 }

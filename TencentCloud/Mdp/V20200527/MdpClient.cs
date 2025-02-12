@@ -28,7 +28,7 @@ namespace TencentCloud.Mdp.V20200527
 
        private const string endpoint = "mdp.tencentcloudapi.com";
        private const string version = "2020-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1068";
+       private const string sdkVersion = "SDK_NET_3.0.1069";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Mdp.V20200527
         public CreateStreamPackageLinearAssemblyProgramResponse CreateStreamPackageLinearAssemblyProgramSync(CreateStreamPackageLinearAssemblyProgramRequest req)
         {
             return InternalRequestAsync<CreateStreamPackageLinearAssemblyProgramResponse>(req, "CreateStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// CreateStreamPackageSSAIChannel
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSSAIChannelResponse"/></returns>
+        public Task<CreateStreamPackageSSAIChannelResponse> CreateStreamPackageSSAIChannel(CreateStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSSAIChannelResponse>(req, "CreateStreamPackageSSAIChannel");
+        }
+
+        /// <summary>
+        /// CreateStreamPackageSSAIChannel
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageSSAIChannelResponse"/></returns>
+        public CreateStreamPackageSSAIChannelResponse CreateStreamPackageSSAIChannelSync(CreateStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageSSAIChannelResponse>(req, "CreateStreamPackageSSAIChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -386,6 +407,27 @@ namespace TencentCloud.Mdp.V20200527
         public DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyProgramsSync(DeleteStreamPackageLinearAssemblyProgramsRequest req)
         {
             return InternalRequestAsync<DeleteStreamPackageLinearAssemblyProgramsResponse>(req, "DeleteStreamPackageLinearAssemblyPrograms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DeleteStreamPackageSSAIChannel
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSSAIChannelResponse"/></returns>
+        public Task<DeleteStreamPackageSSAIChannelResponse> DeleteStreamPackageSSAIChannel(DeleteStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSSAIChannelResponse>(req, "DeleteStreamPackageSSAIChannel");
+        }
+
+        /// <summary>
+        /// DeleteStreamPackageSSAIChannel
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageSSAIChannelResponse"/></returns>
+        public DeleteStreamPackageSSAIChannelResponse DeleteStreamPackageSSAIChannelSync(DeleteStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageSSAIChannelResponse>(req, "DeleteStreamPackageSSAIChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -642,6 +684,48 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
+        /// DescribeStreamPackageSSAIChannel
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIChannelResponse"/></returns>
+        public Task<DescribeStreamPackageSSAIChannelResponse> DescribeStreamPackageSSAIChannel(DescribeStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIChannelResponse>(req, "DescribeStreamPackageSSAIChannel");
+        }
+
+        /// <summary>
+        /// DescribeStreamPackageSSAIChannel
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIChannelResponse"/></returns>
+        public DescribeStreamPackageSSAIChannelResponse DescribeStreamPackageSSAIChannelSync(DescribeStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIChannelResponse>(req, "DescribeStreamPackageSSAIChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// DescribeStreamPackageSSAIChannels
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIChannelsResponse"/></returns>
+        public Task<DescribeStreamPackageSSAIChannelsResponse> DescribeStreamPackageSSAIChannels(DescribeStreamPackageSSAIChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIChannelsResponse>(req, "DescribeStreamPackageSSAIChannels");
+        }
+
+        /// <summary>
+        /// DescribeStreamPackageSSAIChannels
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIChannelsRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIChannelsResponse"/></returns>
+        public DescribeStreamPackageSSAIChannelsResponse DescribeStreamPackageSSAIChannelsSync(DescribeStreamPackageSSAIChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIChannelsResponse>(req, "DescribeStreamPackageSSAIChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query channel linear assembly Source information.
         /// </summary>
         /// <param name="req"><see cref="DescribeStreamPackageSourceRequest"/></param>
@@ -869,6 +953,27 @@ namespace TencentCloud.Mdp.V20200527
         public ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgramSync(ModifyStreamPackageLinearAssemblyProgramRequest req)
         {
             return InternalRequestAsync<ModifyStreamPackageLinearAssemblyProgramResponse>(req, "ModifyStreamPackageLinearAssemblyProgram")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ModifyStreamPackageSSAIChannel
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSSAIChannelResponse"/></returns>
+        public Task<ModifyStreamPackageSSAIChannelResponse> ModifyStreamPackageSSAIChannel(ModifyStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSSAIChannelResponse>(req, "ModifyStreamPackageSSAIChannel");
+        }
+
+        /// <summary>
+        /// ModifyStreamPackageSSAIChannel
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStreamPackageSSAIChannelRequest"/></param>
+        /// <returns><see cref="ModifyStreamPackageSSAIChannelResponse"/></returns>
+        public ModifyStreamPackageSSAIChannelResponse ModifyStreamPackageSSAIChannelSync(ModifyStreamPackageSSAIChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyStreamPackageSSAIChannelResponse>(req, "ModifyStreamPackageSSAIChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1068</VersionPrefix>
+    <VersionPrefix>3.0.1069</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,8 @@
     <Compile Include="V20200527\Models\CreateStreamPackageLinearAssemblyChannelResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageLinearAssemblyProgramRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageSSAIChannelRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageSSAIChannelResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageSourceLocationRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageSourceLocationResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageSourceRequest.cs" />
@@ -89,6 +91,8 @@
     <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyProgramResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyProgramsRequest.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageLinearAssemblyProgramsResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageSSAIChannelRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageSSAIChannelResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageSourceLocationRequest.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageSourceLocationResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageSourceRequest.cs" />
@@ -113,6 +117,10 @@
     <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramSchedulesResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramsRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageLinearAssemblyProgramsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSSAIChannelRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSSAIChannelResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSSAIChannelsRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSSAIChannelsResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSourceAlertsRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSourceAlertsResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSourceLocationAlertsRequest.cs" />
@@ -145,6 +153,8 @@
     <Compile Include="V20200527\Models\ModifyStreamPackageLinearAssemblyChannelResponse.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageLinearAssemblyProgramRequest.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageLinearAssemblyProgramResponse.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageSSAIChannelRequest.cs" />
+    <Compile Include="V20200527\Models\ModifyStreamPackageSSAIChannelResponse.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageSourceLocationRequest.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageSourceLocationResponse.cs" />
     <Compile Include="V20200527\Models\ModifyStreamPackageSourceRequest.cs" />
@@ -158,6 +168,7 @@
     <Compile Include="V20200527\Models\ProgramAlertCounts.cs" />
     <Compile Include="V20200527\Models\ProgramAlertInfos.cs" />
     <Compile Include="V20200527\Models\ProgramScheduleInfo.cs" />
+    <Compile Include="V20200527\Models\SSAIChannelInfo.cs" />
     <Compile Include="V20200527\Models\SSAIConf.cs" />
     <Compile Include="V20200527\Models\SegmentDeliverInfo.cs" />
     <Compile Include="V20200527\Models\SlateInfo.cs" />
